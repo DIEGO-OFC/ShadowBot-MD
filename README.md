@@ -97,6 +97,6 @@ ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
 
 
 ## `EDITOR Y PORPIETARIO DEL BOT` 
-<a href="https://github.com/BrunoSobrino"><img src="https://github.com/BrunoSobrino.png" width="300" height="300" alt="BrunoSobrino"/></a>
+<a href="https://github.com/DIEGO-OFC/DORRAT-BOT-MD"><img src="https://github.com/BrunoSobrino.png" width="300" height="300" alt="BrunoSobrino"/></a>
 
 `The Dorr∆t-bot _ By DIEGO OFC`
