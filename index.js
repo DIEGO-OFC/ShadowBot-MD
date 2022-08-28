@@ -14,7 +14,7 @@ const { say } = cfonts
 const rl = createInterface(process.stdin, process.stdout)
 
 say('DORR∆T - Bot\nWhatsApp Bot MD', {
-font: 'Safari',
+font: 'chrome',
 align: 'center',
 gradient: ['red', 'magenta']})
 say(`Bot creado por DIEGO-OFC`, {
