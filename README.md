@@ -37,8 +37,8 @@
 > pkg install ffmpeg -y
 > pkg install imagemagick -y
 > pkg install yarn
-> git clone https://github.com/BrunoSobrino/Mystic-termux
-> cd Mystic-termux
+> git clone https://github.com/DIEGO-OFC/DORRAT-TERMUX
+> cd DORRAT-termux
 > npm install 
 > yarn install 
 > npm install
@@ -50,7 +50,7 @@
 ```bash
 ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
 > cd 
-> cd Mystic-termux
+> cd DORRAT-termux
 > npm start
 ```
 
@@ -59,8 +59,8 @@ ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
 ```bash
 ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
 > cd 
-> cd Mystic-termux
-> rm -rf MysticSession
+> cd DORRAT-termux
+> rm -rf DORRATSESSION
 > npm start
 ```
 
