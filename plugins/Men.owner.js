@@ -155,7 +155,7 @@ let str = `
 
 `.trim()
 
-conn.sendHydrated(m.chat, str, wm, pp, 'https://github.com/Yovanihades1212/HADES-BOT-MDV2.git', '𝙶𝙸𝚃𝙷𝚄𝙱', null, null, [
+conn.sendHydrated(m.chat, str, wm, pp, 'https://github.com/DIEGO-OFC/DORRAT-BOT-MD', '📎𝙶𝙸𝚃𝙷𝚄𝙱', null, null, [
 
 ['𝐌𝐄𝐍𝐔', '/menu'],
 
