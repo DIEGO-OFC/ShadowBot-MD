@@ -220,123 +220,106 @@ let str = `
 └────ׂ─ׂ─ׂ─ׂ───
 
 ┌──「📑𝐋𝐎𝐆𝐎𝐒」─
-├❏📌${usedPrefix}logos <efecto <texto
-├❏🧧${usedPrefix}simpcard <@tag
-├❏🧨${usedPrefix}hornycard <@tag
-├❏📌${usedPrefix}lolice <@tag
-├❏🧧${usedPrefix}ytcomment <texto
-├❏🧨${usedPrefix}itssostupid
-├❏📌${usedPrefix}pixelar
-├❏🧨${usedPrefix}blur
+├➢📌${usedPrefix}logos <efecto <texto
+├➢🧧${usedPrefix}simpcard <@tag
+├➢🧨${usedPrefix}hornycard <@tag
+├➢📌${usedPrefix}lolice <@tag
+├➢🧧${usedPrefix}ytcomment <texto
+├➢🧨${usedPrefix}itssostupid
+├➢📌${usedPrefix}pixelar
+├➢🧨${usedPrefix}blur
 └────ׂ─ׂ─ׂ─ׂ───
 
-*<𝔽ℝ𝔸𝕊𝔼𝕊 𝕐 𝕋𝔼𝕏𝕋𝕆𝕊/>*
 
-° ඬ⃟🥀 _${usedPrefix}consejo_
-° ඬ⃟🥀 _${usedPrefix}fraseromantica_
-° ඬ⃟🥀 _${usedPrefix}historiaromantica_
+┌──「🌹𝐅𝐫𝐚𝐬𝐞𝐬 𝐲 𝐭𝐞𝐱𝐭𝐨𝐬」─
+├➢🥀 _${usedPrefix}consejo_
+├➢🥀 _${usedPrefix}fraseromantica_
+├➢🥀 _${usedPrefix}historiaromantica_
+└────ׂ─ׂ─ׂ─ׂ──
 
-*<ℝ𝔸ℕ𝔻𝕆𝕄/>*
+┌──「⛩️𝐀𝐍𝐈𝐌𝐄𝐒」─
+├➢🎎${usedPrefix}cristianoronaldo
+├➢🌃${usedPrefix}messi
+├➢💒${usedPrefix}meme
+├➢⛪${usedPrefix}itzy
+├➢🏰${usedPrefix}blackpink
+├➢🕌${usedPrefix}kpop <blackpink / exo / bts
+├➢🎑${usedPrefix}lolivid
+├➢⛩️${usedPrefix}loli
+├➢🎎${usedPrefix}navidad
+├➢🌃${usedPrefix}ppcouple
+├➢💒${usedPrefix}neko
+├➢⛪${usedPrefix}waifu
+├➢🏰${usedPrefix}akira
+├➢🕌${usedPrefix}akiyama
+├➢🎑${usedPrefix}anna
+├➢⛩️${usedPrefix}asuna
+├➢🎎${usedPrefix}ayuzawa
+├➢🌃${usedPrefix}boruto
+├➢💒${usedPrefix}chiho
+├➢⛪${usedPrefix}chitoge
+├➢🏰${usedPrefix}deidara
+├➢🕌${usedPrefix}erza
+├➢🎑${usedPrefix}elaina
+├➢⛩️${usedPrefix}eba
+├➢🎎${usedPrefix}emilia
+├➢🌃${usedPrefix}hestia
+├➢💒${usedPrefix}hinata
+├➢⛪${usedPrefix}inori
+├➢🏰${usedPrefix}isuzu
+├➢🕌${usedPrefix}itachi
+├➢🎑${usedPrefix}itori
+├➢⛩️${usedPrefix}kaga
+├➢🎎${usedPrefix}kagura
+├➢🌃${usedPrefix}kaori
+├➢💒${usedPrefix}keneki
+├➢⛪${usedPrefix}kotori
+├➢🏰${usedPrefix}kurumi
+├➢🕌${usedPrefix}madara
+├➢🎑${usedPrefix}mikasa
+├➢⛩️${usedPrefix}miku
+├➢🎎${usedPrefix}minato
+├➢🌃${usedPrefix}naruto
+├➢💒${usedPrefix}nezuko
+├➢⛪${usedPrefix}sagiri
+├➢⛪${usedPrefix}sasuke
+├➢🎑${usedPrefix}sakura
+├➢🌃${usedPrefix}cosplay
+└────ׂ─ׂ─ׂ─ׂ───
 
-° ඬ⃟👾 _${usedPrefix}cristianoronaldo_
-° ඬ⃟👾 _${usedPrefix}messi_
-° ඬ⃟👾 _${usedPrefix}meme_
-° ඬ⃟👾 _${usedPrefix}itzy_
-° ඬ⃟👾 _${usedPrefix}blackpink_
-° ඬ⃟👾 _${usedPrefix}kpop *<blackpink / exo / bts>*_
-° ඬ⃟👾 _${usedPrefix}lolivid_
-° ඬ⃟👾 _${usedPrefix}loli_
-° ඬ⃟👾 _${usedPrefix}navidad_
-° ඬ⃟👾 _${usedPrefix}ppcouple_
-° ඬ⃟👾 _${usedPrefix}wpmontaña_
-° ඬ⃟👾 _${usedPrefix}pubg_
-° ඬ⃟👾 _${usedPrefix}wpgaming_
-° ඬ⃟👾 _${usedPrefix}wpaesthetic_
-° ඬ⃟👾 _${usedPrefix}wpaesthetic2_
-° ඬ⃟👾 _${usedPrefix}wprandom_
-° ඬ⃟👾 _${usedPrefix}wallhp_
-° ඬ⃟👾 _${usedPrefix}wpvehiculo_
-° ඬ⃟👾 _${usedPrefix}wpmoto_
-° ඬ⃟👾 _${usedPrefix}coffee_
-° ඬ⃟👾 _${usedPrefix}pentol_
-° ඬ⃟👾 _${usedPrefix}caricatura_
-° ඬ⃟👾 _${usedPrefix}ciberespacio_
-° ඬ⃟👾 _${usedPrefix}technology_
-° ඬ⃟👾 _${usedPrefix}doraemon_
-° ඬ⃟👾 _${usedPrefix}hacker_
-° ඬ⃟👾 _${usedPrefix}planeta_
-° ඬ⃟👾 _${usedPrefix}randomprofile_
-° ඬ⃟👾 _${usedPrefix}neko_
-° ඬ⃟👾 _${usedPrefix}waifu_
-° ඬ⃟👾 _${usedPrefix}akira_
-° ඬ⃟👾 _${usedPrefix}akiyama_
-° ඬ⃟👾 _${usedPrefix}anna_
-° ඬ⃟👾 _${usedPrefix}asuna_
-° ඬ⃟👾 _${usedPrefix}ayuzawa_
-° ඬ⃟👾 _${usedPrefix}boruto_
-° ඬ⃟👾 _${usedPrefix}chiho_
-° ඬ⃟👾 _${usedPrefix}chitoge_
-° ඬ⃟👾 _${usedPrefix}deidara_
-° ඬ⃟👾 _${usedPrefix}erza_
-° ඬ⃟👾 _${usedPrefix}elaina_
-° ඬ⃟👾 _${usedPrefix}eba_
-° ඬ⃟👾 _${usedPrefix}emilia_
-° ඬ⃟👾 _${usedPrefix}hestia_
-° ඬ⃟👾 _${usedPrefix}hinata_
-° ඬ⃟👾 _${usedPrefix}inori_
-° ඬ⃟👾 _${usedPrefix}isuzu_
-° ඬ⃟👾 _${usedPrefix}itachi_
-° ඬ⃟👾 _${usedPrefix}itori_
-° ඬ⃟👾 _${usedPrefix}kaga_
-° ඬ⃟👾 _${usedPrefix}kagura_
-° ඬ⃟👾 _${usedPrefix}kaori_
-° ඬ⃟👾 _${usedPrefix}keneki_
-° ඬ⃟👾 _${usedPrefix}kotori_
-° ඬ⃟👾 _${usedPrefix}kurumi_
-° ඬ⃟👾 _${usedPrefix}madara_
-° ඬ⃟👾 _${usedPrefix}mikasa_
-° ඬ⃟👾 _${usedPrefix}miku_
-° ඬ⃟👾 _${usedPrefix}minato_
-° ඬ⃟👾 _${usedPrefix}naruto_
-° ඬ⃟👾 _${usedPrefix}nezuko_
-° ඬ⃟👾 _${usedPrefix}sagiri_
-° ඬ⃟👾 _${usedPrefix}sasuke_
-° ඬ⃟👾 _${usedPrefix}sakura_
-° ඬ⃟👾 _${usedPrefix}cosplay_
-
-*<ℂ𝕆𝕄𝔸ℕ𝔻𝕆𝕊 +𝟙𝟠/>*
-
-° ඬ⃟🔞 _${usedPrefix}pack_
-° ඬ⃟🔞 _${usedPrefix}pack2_
-° ඬ⃟🔞 _${usedPrefix}pack3_
-° ඬ⃟🔞 _${usedPrefix}videoxxx_
-° ඬ⃟🔞 _${usedPrefix}tiktokxxx_
-° ඬ⃟🔞 _${usedPrefix}tetas_
-° ඬ⃟🔞 _${usedPrefix}booty_
-° ඬ⃟🔞 _${usedPrefix}ecchi_
-° ඬ⃟🔞 _${usedPrefix}furro_
-° ඬ⃟🔞 _${usedPrefix}imagenlesbians_
-° ඬ⃟🔞 _${usedPrefix}panties_
-° ඬ⃟🔞 _${usedPrefix}pene_
-° ඬ⃟🔞 _${usedPrefix}porno_
-° ඬ⃟🔞 _${usedPrefix}porno2_
-° ඬ⃟🔞 _${usedPrefix}randomxxx_
-° ඬ⃟🔞 _${usedPrefix}pechos_
-° ඬ⃟🔞 _${usedPrefix}yaoi_
-° ඬ⃟🔞 _${usedPrefix}yaoi2_
-° ඬ⃟🔞 _${usedPrefix}yuri_
-° ඬ⃟🔞 _${usedPrefix}yuri2_
-° ඬ⃟🔞 _${usedPrefix}trapito_
-° ඬ⃟🔞 _${usedPrefix}hentai_
-° ඬ⃟🔞 _${usedPrefix}nsfwloli_
-° ඬ⃟🔞 _${usedPrefix}nsfworgy_
-° ඬ⃟🔞 _${usedPrefix}nsfwfoot_
-° ඬ⃟🔞 _${usedPrefix}nsfwass_
-° ඬ⃟🔞 _${usedPrefix}nsfwbdsm_
-° ඬ⃟🔞 _${usedPrefix}nsfwcum_
-° ඬ⃟🔞 _${usedPrefix}nsfwero_
-° ඬ⃟🔞 _${usedPrefix}nsfwfemdom_
-° ඬ⃟🔞 _${usedPrefix}nsfwglass_
+┌──「🔞𝐂𝐨𝐦𝐚𝐧𝐝𝐨𝐬 +𝟏𝟖」
+├➢🔞 _${usedPrefix}pack_
+├➢🔞 _${usedPrefix}pack2_
+├➢🔞 _${usedPrefix}pack3_
+├➢🔞 _${usedPrefix}videoxxx_
+├➢🔞 _${usedPrefix}tiktokxxx_
+├➢🔞 _${usedPrefix}tetas_
+├➢🔞 _${usedPrefix}booty_
+├➢🔞 _${usedPrefix}ecchi_
+├➢🔞 _${usedPrefix}furro_
+├➢🔞 _${usedPrefix}imagenlesbians_
+├➢🔞 _${usedPrefix}panties_
+├➢🔞 _${usedPrefix}pene_
+├➢🔞 _${usedPrefix}porno_
+├➢🔞 _${usedPrefix}porno2_
+├➢🔞 _${usedPrefix}randomxxx_
+├➢🔞 _${usedPrefix}pechos_
+├➢🔞 _${usedPrefix}yaoi_
+├➢🔞 _${usedPrefix}yaoi2_
+├➢🔞 _${usedPrefix}yuri_
+├➢🔞 _${usedPrefix}yuri2_
+├➢🔞 _${usedPrefix}trapito_
+├➢🔞 _${usedPrefix}hentai_
+├➢🔞 _${usedPrefix}nsfwloli_
+├➢🔞 _${usedPrefix}nsfworgy_
+├➢🔞 _${usedPrefix}nsfwfoot_
+├➢🔞 _${usedPrefix}nsfwass_
+├➢🔞 _${usedPrefix}nsfwbdsm_
+├➢🔞 _${usedPrefix}nsfwcum_
+├➢🔞 _${usedPrefix}nsfwero_
+├➢🔞 _${usedPrefix}nsfwfemdom_
+├➢🔞 _${usedPrefix}nsfwglass_
+└────ׂ─ׂ─ׂ─ׂ──
 
 *<𝔼𝔽𝔼ℂ𝕋𝕆𝕊 𝔻𝔼 𝔸𝕌𝔻𝕀𝕆𝕊/>*
 *- 𝚁𝙴𝚂𝙿𝙾𝙽𝙳𝙴 𝙰 𝚄𝙽 𝙰𝚄𝙳𝙸𝙾 𝙾 𝙽𝙾𝚃𝙰 𝙳𝙴 𝚅𝙾𝚉*
@@ -354,33 +337,33 @@ let str = `
 ° ඬ⃟🎤 _${usedPrefix}smooth_
 ° ඬ⃟🎤 _${usedPrefix}tupai_
 
-*<ℂℍ𝔸𝕋 𝔸ℕ𝕆ℕ𝕀𝕄𝕆/>*
+┌「◾𝐂𝐡𝐚𝐭 𝐚𝐧𝐨𝐧𝐢𝐦𝐨」
+├➢📳 _${usedPrefix}start_
+├➢📳 _${usedPrefix}next_
+├➢📳_${usedPrefix}leave_
+└────ׂ─ׂ─ׂ─ׂ──
 
-° ඬ⃟📳 _${usedPrefix}start_
-° ඬ⃟📳 _${usedPrefix}next_
-° ඬ⃟📳 _${usedPrefix}leave_
-
-*<𝔹𝕌𝕊ℂ𝔸𝔻𝕆ℝ𝔼𝕊/>*
-
-° ඬ⃟🔍 _${usedPrefix}stickersearch *<texto>*_
-° ඬ⃟🔍 _${usedPrefix}xnxxsearch *<texto>*_
-° ඬ⃟🔍 _${usedPrefix}animeinfo *<texto>*_
-° ඬ⃟🔍 _${usedPrefix}google *<texto>*_
-° ඬ⃟🔍 _${usedPrefix}letra *<texto>*_
-° ඬ⃟🔍 _${usedPrefix}wikipedia *<texto>*_
-° ඬ⃟🔍 _${usedPrefix}ytsearch *<texto>*_
-° ඬ⃟🔍 _${usedPrefix}apkdone *<texto>*_
-° ඬ⃟🔍 _${usedPrefix}apkgoogle *<texto>*_
-° ඬ⃟🔍 _${usedPrefix}apkmody *<texto>*_
-° ඬ⃟🔍 _${usedPrefix}apkshub *<texto>*_
-° ඬ⃟🔍 _${usedPrefix}happymod *<texto>*_
-° ඬ⃟🔍 _${usedPrefix}hostapk *<texto>*_
-° ඬ⃟🔍 _${usedPrefix}revdl *<texto>*_
-° ඬ⃟🔍 _${usedPrefix}toraccino *<texto>*_
-° ඬ⃟🔍 _${usedPrefix}uapkpro *<texto>*_
+┌「🔍𝐁𝐮𝐬𝐜𝐚𝐫」
+├➢🔍 _${usedPrefix}stickersearch *<texto>*_
+├➢🔍 _${usedPrefix}xnxxsearch *<texto>*_
+├➢🔍 _${usedPrefix}animeinfo *<texto>*_
+├➢🔍 _${usedPrefix}google *<texto>*_
+├➢🔍 _${usedPrefix}letra *<texto>*_
+├➢🔍 _${usedPrefix}wikipedia *<texto>*_
+├➢🔍 _${usedPrefix}ytsearch *<texto>*_
+├➢🔍 _${usedPrefix}apkdone *<texto>*_
+├➢🔍 _${usedPrefix}apkgoogle *<texto>*_
+├➢🔍 _${usedPrefix}apkmody *<texto>*_
+├➢🔍 _${usedPrefix}apkshub *<texto>*_
+├➢🔍 _${usedPrefix}happymod *<texto>*_
+├➢🔍 _${usedPrefix}hostapk *<texto>*_
+├➢🔍 _${usedPrefix}revdl *<texto>*_
+├➢🔍 _${usedPrefix}toraccino *<texto>*_
+├➢🔍 _${usedPrefix}uapkpro *<texto>*_
+└────ׂ─ׂ─ׂ─ׂ──
 
 ┌「🎵𝐀𝐔𝐃𝐈𝐎𝐒」
-├➢✅*- 𝙴𝚂𝙲𝚁𝙸𝙱𝙴 𝙻𝙰𝚂 𝚂𝙸𝙶𝚄𝙸𝙴𝙽𝚃𝙴𝚂 𝙿𝙰𝙻𝙰𝙱𝚁𝙰𝚂 𝙾 𝙵𝚁𝙰𝚂𝙴𝚂 𝚂𝙸𝙽 𝙽𝙸𝙽𝙶𝚄𝙽 𝙿𝚁𝙴𝙵𝙸𝙹𝙾 (#, /, *, .)* 
+├➢✅_𝙴𝚂𝙲𝚁𝙸𝙱𝙴 𝙻𝙰𝚂 𝚂𝙸𝙶𝚄𝙸𝙴𝙽𝚃𝙴𝚂 𝙿𝙰𝙻𝙰𝙱𝚁𝙰𝚂 𝙾 𝙵𝚁𝙰𝚂𝙴𝚂 𝚂𝙸𝙽 𝙽𝙸𝙽𝙶𝚄𝙽 𝙿𝚁𝙴𝙵𝙸𝙹𝙾 (#, /, *, .)
 ├➢✅_(𝑢𝑠𝑜 𝑠𝑖𝑛 𝑝𝑟𝑒𝑓𝑖𝑗𝑜)_
 ├➢▶️ _Quien es tu sempai botsito 7w7_
 ├➢▶️ _Te diagnostico con gay_
