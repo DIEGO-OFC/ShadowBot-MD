@@ -15,52 +15,54 @@ let str = `
 
 *[❕] ALGUNOS AUDIOS SON NUEVOS, SI VE ALGUN TIPO DE FALLA REPÓRTELO CON #reporte <texto>*
 
-° ඬ⃟▶️ _Quien es tu sempai botsito 7w7_
-° ඬ⃟▶️ _Te diagnostico con gay_
-° ඬ⃟▶️ _A nadie le importa_
-° ඬ⃟▶️ _Fiesta del admin_
-° ඬ⃟▶️ _Fiesta del administrador_ 
-° ඬ⃟▶️ _Vivan los novios_
-° ඬ⃟▶️ _Feliz cumpleaños_
-° ඬ⃟▶️ _Noche de paz_
-° ඬ⃟▶️ _Buenos dias_
-° ඬ⃟▶️ _Cambiate a Movistar 
-° ඬ⃟▶️ _Bienvenido_
-° ඬ⃟▶️ _Calla fan de bts_
-° ඬ⃟▶️ _Las reglas del grupo_
-° ඬ⃟▶️ _Buenos tardes_
-° ඬ⃟▶️ _Buenos noches_
-° ඬ⃟▶️ _Audio hentai_
-° ඬ⃟▶️ _Chica lgante_
-° ඬ⃟▶️ _Feliz navidad_
-° ඬ⃟▶️ _Vete a la vrg_
-° ඬ⃟▶️ _Pasa pack Bot_
-° ඬ⃟▶️ _Atencion grupo_
-° ඬ⃟▶️_Marica quien_
-° ඬ⃟▶️ _Murio el grupo_
-° ඬ⃟▶️ _Oh me vengo_
-° ඬ⃟▶️ _tio que rico_
-° ඬ⃟▶️ _Viernes_
-° ඬ⃟▶️ _Baneado_
-° ඬ⃟▶️ _Sexo_
-° ඬ⃟▶️ _Hola_
-° ඬ⃟▶️ _Un pato_
-° ඬ⃟▶️_Nyanpasu_
-° ඬ⃟▶️ _Te amo_
-° ඬ⃟▶️ _Yamete_
-° ඬ⃟▶️ _Bañate_
-° ඬ⃟▶️ _Es puto_
-° ඬ⃟▶️ _La biblia_
-° ඬ⃟▶️ _Onichan_
-° ඬ⃟▶️ _Mierda de Bot_
-° ඬ⃟▶️ _Siuuu_
-° ඬ⃟▶️ _Epico_
-° ඬ⃟▶️ _Shitpost_
-° ඬ⃟▶️ _Rawr_
-° ඬ⃟▶️ _wtf_
-° ඬ⃟▶️ _UwU_
-° ඬ⃟▶️ _:c_
-° ඬ⃟▶️ _a_
+┌「🎵𝐀𝐔𝐃𝐈𝐎𝐒」
+├➢▶️ _Quien es tu sempai botsito 7w7_
+├➢▶️ _Te diagnostico con gay_
+├➢▶️ _A nadie le importa_
+├➢▶️ _Fiesta del admin_
+├➢▶️ _Fiesta del administrador_ 
+├➢▶️ _Vivan los novios_
+├➢▶️ _Feliz cumpleaños_
+├➢▶️ _Noche de paz_
+├➢▶️ _Buenos dias_
+├➢▶️ _Cambiate a Movistar 
+├➢▶️ _Bienvenido_
+├➢▶️ _Calla fan de bts_
+├➢▶️ _Las reglas del grupo_
+├➢▶️ _Buenos tardes_
+├➢▶️ _Buenos noches_
+├➢▶️ _Audio hentai_
+├➢▶️ _Chica lgante_
+├➢▶️ _Feliz navidad_
+├➢▶️ _Vete a la vrg_
+├➢▶️ _Pasa pack Bot_
+├➢▶️ _Atencion grupo_
+├➢▶️_Marica quien_
+├➢▶️ _Murio el grupo_
+├➢▶️ _Oh me vengo_
+├➢▶️ _tio que rico_
+├➢▶️ _Viernes_
+├➢▶️ _Baneado_
+├➢▶️ _Sexo_
+├➢▶️ _Hola_
+├➢▶️ _Un pato_
+├➢▶️_Nyanpasu_
+├➢▶️ _Te amo_
+├➢▶️ _Yamete_
+├➢▶️ _Bañate_
+├➢▶️ _Es puto_
+├➢▶️ _La biblia_
+├➢▶️ _Onichan_
+├➢▶️ _Mierda de Bot_
+├➢▶️ _Siuuu_
+├➢▶️ _Epico_
+├➢▶️ _wtf_
+├➢▶️ _Shitpost_
+├➢▶️ _Rawr_
+├➢▶️ _UwU_
+├➢▶️ _:(
+├➢▶️ _a_
+└────ׂ─ׂ─ׂ─ׂ──
 `.trim()
 conn.sendHydrated(m.chat, str, wm, pp, 'https://github.com/DIEGO-OFC/DORRAT-BOT-MD', '📎𝙶𝙸𝚃𝙷𝚄𝙱', null, null, [
 ['𝙼𝙴𝙽𝚄 𝙿𝚁𝙸𝙽𝙲𝙸𝙿𝙰𝙻', '/menu']
