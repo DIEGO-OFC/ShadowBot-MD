@@ -60,8 +60,6 @@ readmore: readMore
 }
 text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
  
-    
-
 let str = `
 *╭━━━〔 †𝐃⃟𝕺𝐑⃯𝐑𝐇⃯𝚵𝐓᪣𝕭⃯𝚹⃯𝐓⃤† 〕━━━⬣*
 *┃ ▢ 𝙑𝙀𝙍𝙎𝙄𝙊𝙉 » ${vs}*
@@ -184,28 +182,29 @@ let str = `
 ├➢🗃️${usedPrefix}pptiktok <nombre de usuario
 ├➢🗂️${usedPrefix}igstalk <nombre de usuario
 ├➢📰${usedPrefix}tiktokstalk <nombre de usuario
+└────ׂ─ׂ─ׂ─ׂ──
+
+┌──「🏢𝐆𝐑𝐎𝐔𝐏」─
+├➢💎${usedPrefix}add <numero
+├➢📎${usedPrefix}kick <@tag
+├➢🖇️${usedPrefix}grupo <abrir / cerrar
+├➢🗄️${usedPrefix}promote <@tag
+├➢⛓️${usedPrefix}demote <@tag
+├➢💎${usedPrefix}banchat
+├➢📎${usedPrefix}unbanchat
+├➢🖇️admins *<texto>_ (𝑢𝑠𝑜 𝑠𝑖𝑛 𝑝𝑟𝑒𝑓𝑖𝑗𝑜)
+├➢🗄️${usedPrefix}demote <@tag
+├➢⛓️${usedPrefix}infogroup
+├➢💎${usedPrefix}link
+├➢📎${usedPrefix}setname <texto
+├➢🖇️${usedPrefix}setdesc <texto
+├➢🗄️${usedPrefix}invocar <texto
+├➢⛓️${usedPrefix}setwelcome <texto
+├➢💎${usedPrefix}setbye <texto
+├➢📎${usedPrefix}hidetag <texto
+├➢🖇️${usedPrefix}simular <welcome / bye / promote / demote>
 └────ׂ─ׂ─ׂ─ׂ───
 
-*<𝔾ℝ𝕌ℙ𝕆𝕊/>* 
-
-° ඬ⃟💎 _${usedPrefix}add *<numero>*_
-° ඬ⃟💎 _${usedPrefix}kick *<@tag>*_
-° ඬ⃟💎 _${usedPrefix}grupo *<abrir / cerrar>*_
-° ඬ⃟💎 _${usedPrefix}promote *<@tag>*_
-° ඬ⃟💎 _${usedPrefix}demote *<@tag>*_
-° ඬ⃟💎 _admins *<texto>*_ (𝑢𝑠𝑜 𝑠𝑖𝑛 𝑝𝑟𝑒𝑓𝑖𝑗𝑜)
-° ඬ⃟💎 _${usedPrefix}demote *<@tag>*_
-° ඬ⃟💎 _${usedPrefix}infogroup_
-° ඬ⃟💎 _${usedPrefix}link_
-° ඬ⃟💎 _${usedPrefix}destrava_
-° ඬ⃟💎 _${usedPrefix}quitarviruz_
-° ඬ⃟💎 _${usedPrefix}setname *<texto>*_
-° ඬ⃟💎 _${usedPrefix}setdesc *<texto>*_
-° ඬ⃟💎 _${usedPrefix}invocar *<texto>*_
-° ඬ⃟💎 _${usedPrefix}setwelcome *<texto>*_
-° ඬ⃟💎 _${usedPrefix}setbye *<texto>*_
-° ඬ⃟💎 _${usedPrefix}hidetag *<texto>*_
-° ඬ⃟💎 _${usedPrefix}fantasmas_
 
 *<ℂ𝕆ℕ𝕍𝔼ℝ𝕋𝕀𝔻𝕆ℝ𝔼𝕊/>*
 
