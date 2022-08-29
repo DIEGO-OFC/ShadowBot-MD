@@ -14,16 +14,16 @@
         "test": "node test.js",
         "test2": "nodemon index.js"
     },
-    "homepage": "https://github.com/BrunoSobrino/TheMystic-Bot-MD",
+    "homepage": "https://github.com/DIEGO-OFC/DORRAT-BOT-MD",
     "author": {
         "name": "DIEGO-OFC"
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/BrunoSobrino/TheMystic-Bot-MD.git"
+        "url": "git+https://github.com/DIEGO-OFC/DORRAT-BOT-MD.git"
     },
     "bugs": {
-        "url": "https://github.com/BrunoSobrino/TheMystic-Bot-MD/issues"
+        "url": "https://github.com/DIEGO-OFC/DORRAT-BOT-MD/issues"
     },
     "license": "GPL-3.0-or-later",
     "dependencies": {
