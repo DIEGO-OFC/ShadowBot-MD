@@ -94,6 +94,7 @@ global.fg = '☆━━━━━━━ ⚠️ 𝙵𝙰𝙻𝙻𝙾 | 𝙵𝙰𝙻
 global.fallo = fg
 global.mg = '═══════ ≫ ❗ 𝙻𝙾 𝚄𝚂𝙾 𝙼𝙰𝙻 ❗ ≪ ════════'
 global.mal = mg
+//---------------
 global.imagen1 = fs.readFileSync('./Menu2.jpg')
 global.imagen2 = fs.readFileSync('./src/nuevobot.jpg') 
 global.imagen3 = fs.readFileSync('./src/Pre Bot Publi.png')
