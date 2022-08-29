@@ -83,14 +83,16 @@ global.wait = '*[❗] Ƈᴀʀɢᴀɴᴅᴏ, ᴀɢᴜᴀʀᴅᴇ ᴜɴ ᴍᴏᴍ�
 //-------------------
 global.md = 'https://chat.whatsapp.com/CrsOmirjZNYKrvnQNT98Oo'
 global.dorramd = md
-//__________________
-global.ag = '╰⊱⚠️⊱ *𝘼𝘿𝙑𝙀𝙍𝙏𝙀𝙉𝘾𝙄𝘼 | 𝙒𝘼𝙍𝙉𝙄𝙉𝙂* ⊱⚠️⊱╮\n\n'
+//_____________________________________________
+
+global.ag = '━━━━━━━ ❎ 𝙰𝙳𝚅𝙴𝚁𝚃𝙴𝙽𝙲𝙸𝙰 | 𝚆𝙰𝚁𝙽𝙸𝙽𝙶 ❎ ━━━━━━━━━'
 global.advertencia = ag
 global.fg = '☆━━━━━━━ ⚠️ 𝙵𝙰𝙻𝙻𝙾 | 𝙵𝙰𝙻𝙻 ⚠️ ━━━━━━☆'
 global.fallo = fg
 global.mg = '═══════ ≫ ❗ 𝙻𝙾 𝚄𝚂𝙾 𝙼𝙰𝙻 ❗ ≪ ════════'
 global.mal = mg
-//----------------
+
+//---------------------------------------------
 global.imagen1 = fs.readFileSync('./Menu2.jpg')
 global.imagen2 = fs.readFileSync('./src/nuevobot.jpg') 
 global.imagen3 = fs.readFileSync('./src/Pre Bot Publi.png')
