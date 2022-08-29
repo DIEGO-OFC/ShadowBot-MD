@@ -209,29 +209,26 @@ let str = `
 ├➢/instalarbot
 └────ׂ─ׂ─ׂ─ׂ───
 
-*<ℂ𝕆ℕ𝕍𝔼ℝ𝕋𝕀𝔻𝕆ℝ𝔼𝕊/>*
+┌──「🎑𝐂𝐎𝐍𝐕𝐄𝐑𝐓𝐈𝐃𝐎𝐑𝐄𝐒」
+├➢🧧 _${usedPrefix}togifaud *<responde a un video>*_
+├➢🧧 _${usedPrefix}toimg *<responde a un sticker>*_
+├➢🧧 _${usedPrefix}tomp3 *<responde a un video / nota de voz>*_
+├➢🧧 _${usedPrefix}toptt *<responde a un video / audio>*_
+├➢🧧 _${usedPrefix}tovideo *<responde a un sticker>*_
+├➢🧧 _${usedPrefix}tourl *<responde a un video / imagen / audio>*_
+├➢🧧 _${usedPrefix}tts es *<texto>*_
+└────ׂ─ׂ─ׂ─ׂ───
 
-° ඬ⃟🧧 _${usedPrefix}togifaud *<responde a un video>*_
-° ඬ⃟🧧 _${usedPrefix}toimg *<responde a un sticker>*_
-° ඬ⃟🧧 _${usedPrefix}tomp3 *<responde a un video / nota de voz>*_
-° ඬ⃟🧧 _${usedPrefix}toptt *<responde a un video / audio>*_
-° ඬ⃟🧧 _${usedPrefix}tovideo *<responde a un sticker>*_
-° ඬ⃟🧧 _${usedPrefix}tourl *<responde a un video / imagen / audio>*_
-° ඬ⃟🧧 _${usedPrefix}tts es *<texto>*_
-
-*<𝔼𝔽𝔼ℂ𝕋𝕆𝕊 𝕐 𝕃𝕆𝔾𝕆𝕊/>*
-
-° ඬ⃟🖍️ _${usedPrefix}logos *<efecto> <texto>*_
-° ඬ⃟🖍️ _${usedPrefix}logocorazon *<texto>*_
-° ඬ⃟🖍️ _${usedPrefix}logochristmas *<texto>*_
-° ඬ⃟🖍️ _${usedPrefix}simpcard *<@tag>*_
-° ඬ⃟🖍️ _${usedPrefix}hornycard *<@tag>*_
-° ඬ⃟🖍️ _${usedPrefix}lolice *<@tag>*_
-° ඬ⃟🖍️ _${usedPrefix}ytcomment *<texto>*_
-° ඬ⃟🖍️ _${usedPrefix}phmaker *<opcion><responder a imagen>*_
-° ඬ⃟🖍️ _${usedPrefix}itssostupid_
-° ඬ⃟🖍️ _${usedPrefix}pixelar_
-° ඬ⃟🖍️ _${usedPrefix}blur_
+┌──「📑𝐋𝐎𝐆𝐎𝐒」─
+├❏📌${usedPrefix}logos <efecto <texto
+├❏🧧${usedPrefix}simpcard <@tag
+├❏🧨${usedPrefix}hornycard <@tag
+├❏📌${usedPrefix}lolice <@tag
+├❏🧧${usedPrefix}ytcomment <texto
+├❏🧨${usedPrefix}itssostupid
+├❏📌${usedPrefix}pixelar
+├❏🧨${usedPrefix}blur
+└────ׂ─ׂ─ׂ─ׂ───
 
 *<𝔽ℝ𝔸𝕊𝔼𝕊 𝕐 𝕋𝔼𝕏𝕋𝕆𝕊/>*
 
