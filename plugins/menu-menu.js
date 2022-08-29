@@ -473,38 +473,38 @@ _(𝑢𝑠𝑜 𝑠𝑖𝑛 𝑝𝑟𝑒𝑓𝑖𝑗𝑜)_
 ° ඬ⃟👽 _${usedPrefix}stickermarker *<efecto> <responder a imagen>*_
 ° ඬ⃟👽 _${usedPrefix}stickerfilter *<efecto> <responder a imagen>*_
 
-*<𝕆𝕎ℕ𝔼ℝ 𝕐 𝕄𝕆𝔻𝔼ℝ𝔸𝔻𝕆ℝ𝔼𝕊/>*
+┌──「💎𝐎𝐖𝐍𝐄𝐑 𝐁𝐎𝐓」─
+├➢👑${usedPrefix}cajafuerte
+├➢💸${usedPrefix}enable restrict
+├➢🧾${usedPrefix}disable restrict
+├➢📍${usedPrefix}enable autoread
+├➢🧑‍💻${usedPrefix}disable autoread
+├➢📞${usedPrefix}enable *anticall*_
+├➢📞${usedPrefix}disable *anticall*_
+├➢🏯${usedPrefix}enable public
+├➢🪩${usedPrefix}disable public
+├➢👑${usedPrefix}enable pconly
+├➢💸${usedPrefix}disable pconly
+├➢🧾${usedPrefix}enable gconly
+├➢📍${usedPrefix}disable gconly
+├➢🧑‍💻${usedPrefix}banchat2
+├➢🏯${usedPrefix}unbanchat2
+├➢🪩${usedPrefix}banuser <@tag>
+├➢👑${usedPrefix}unbanuser <@tag
+├➢💸${usedPrefix}banuser <@tag
+├➢🧾${usedPrefix}bc <texto
+├➢📍${usedPrefix}bcchats <texto
+├➢🧑‍💻${usedPrefix}bcgc <texto
+├➢🏯${usedPrefix}cleartpm
+├➢🪩${usedPrefix}restart
+├➢👑${usedPrefix}update
+├➢💸${usedPrefix}addprem <@tag>
+├➢🧾${usedPrefix}delprem <@tag
+├➢📍${usedPrefix}listprem_
+├➢🧑‍💻${usedPrefix}añadirdiamantes <@tag> <cantidad
+├➢🏯${usedPrefix}añadirxp <@tag> <cantidad
+└────ׂ─ׂ─ׂ─ׂ───
 
-° ඬ⃟👑 _${usedPrefix}cajafuerte_
-° ඬ⃟👑 _${usedPrefix}enable *restrict*_
-° ඬ⃟👑 _${usedPrefix}disable *restrict*_
-° ඬ⃟👑 _${usedPrefix}enable *autoread*_
-° ඬ⃟👑 _${usedPrefix}disable *autoread*_
-° ඬ⃟👑 _${usedPrefix}enable *public*_
-° ඬ⃟👑 _${usedPrefix}disable *public*_
-° ඬ⃟👑 _${usedPrefix}enable *pconly*_
-° ඬ⃟👑 _${usedPrefix}disable *pconly*_
-° ඬ⃟👑 _${usedPrefix}enable *gconly*_
-° ඬ⃟👑 _${usedPrefix}disable *gconly*_
-° ඬ⃟👑 _${usedPrefix}enable *anticall*_
-° ඬ⃟👑 _${usedPrefix}disable *anticall*_
-° ඬ⃟👑 _${usedPrefix}enable *antiprivado*_
-° ඬ⃟👑 _${usedPrefix}disable *antiprivado*_
-° ඬ⃟👑 _${usedPrefix}msg *<texto>*_
-° ඬ⃟👑 _${usedPrefix}banchat_
-° ඬ⃟👑 _${usedPrefix}unbanchat_
-° ඬ⃟👑 _${usedPrefix}banuser *<@tag>*_
-° ඬ⃟👑 _${usedPrefix}unbanuser *<@tag>*_
-° ඬ⃟👑 _${usedPrefix}banuser *<@tag>*_
-° ඬ⃟👑 _${usedPrefix}bc *<texto>*_
-° ඬ⃟👑 _${usedPrefix}bcchats *<texto>*_
-° ඬ⃟👑 _${usedPrefix}bcgc *<texto>*_
-° ඬ⃟👑 _${usedPrefix}cleartpm_
-° ඬ⃟👑 _${usedPrefix}restart_
-° ඬ⃟👑 _${usedPrefix}update_
-° ඬ⃟👑 _${usedPrefix}addprem *<@tag>*_
-° ඬ⃟👑 _${usedPrefix}delprem *<@tag>*_
-° ඬ⃟👑 _${usedPrefix}listprem_
 `.trim()
 conn.sendHydrated2(m.chat, str, wm, pp, 'https://github.com/DIEGO-OFC/DORRAT-BOT-MD', '📎𝙶𝙸𝚃𝙷𝚄𝙱', 'https://chat.whatsapp.com/CrsOmirjZNYKrvnQNT98Oo', '💎𝙶𝚁𝚄𝙿𝙾-𝙾𝙵𝙸𝙲𝙸𝙰𝙻💎', [
 ['🛡️ 𝗚𝗥𝗨𝗣𝗢𝗦 🛡️', '/grupos'],
