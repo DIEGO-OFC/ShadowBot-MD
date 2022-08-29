@@ -63,7 +63,6 @@ text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length
     
 
 let str = `
-*ミ💎 𝙷𝙾𝙻𝙰 ✨${name}✨, 𝙰𝚀𝚄𝙸 𝙴𝚂𝚃𝙰 𝙴𝙻 𝙼𝙴𝙽𝚄 𝙲𝙾𝙼𝙿𝙻𝙴𝚃𝙾 𝙳𝙴 DORR∆T - 𝙱𝙾𝚃 💎彡*
 
 *╭━━━〔 †𝐃⃟𝕺𝐑⃯𝐑𝐇⃯𝚵𝐓᪣𝕭⃯𝚹⃯𝐓⃤† 〕━━━⬣*
 *┆ ▢ 𝙑𝙀𝙍𝙎𝙄𝙊𝙉 » ${vs}*
@@ -71,6 +70,8 @@ let str = `
 *┆ ▢ 𝙏𝙄𝙀𝙈𝙋𝙊 𝘼𝘾𝙏𝙄𝙑𝙊 » ${uptime}*
 *┆ ▢ 𝙐𝙎𝙐𝘼𝙍𝙄𝙊𝙎 » ${Object.keys(global.db.data.users).length}*
 *╰*┅┅┅┅┅┅┅┅┅┅┅┅┅ *✧*
+
+
 
 *╭━〔*${name}*〕━━⬣*
 *┆🧰 EXPERIENCIA ➟ ${exp}*
