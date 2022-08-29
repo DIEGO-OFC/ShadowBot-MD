@@ -72,6 +72,8 @@ global.APIKeys = { // APIKey Here
   'https://violetics.pw': 'beta'
 }
 
+//______________________________________________
+
 global.vs = '1.2.15'
 global.version = vs
 // Sticker WM
@@ -83,6 +85,7 @@ global.wait = '*[❗] Ƈᴀʀɢᴀɴᴅᴏ, ᴀɢᴜᴀʀᴅᴇ ᴜɴ ᴍᴏᴍ�
 //-------------------
 global.md = 'https://chat.whatsapp.com/CrsOmirjZNYKrvnQNT98Oo'
 global.dorramd = md
+
 //_____________________________________________
 
 global.ag = '━━━━━━━ ❎ 𝙰𝙳𝚅𝙴𝚁𝚃𝙴𝙽𝙲𝙸𝙰 | 𝚆𝙰𝚁𝙽𝙸𝙽𝙶 ❎ ━━━━━━━━━'
@@ -91,19 +94,15 @@ global.fg = '☆━━━━━━━ ⚠️ 𝙵𝙰𝙻𝙻𝙾 | 𝙵𝙰𝙻
 global.fallo = fg
 global.mg = '═══════ ≫ ❗ 𝙻𝙾 𝚄𝚂𝙾 𝙼𝙰𝙻 ❗ ≪ ════════'
 global.mal = mg
-
-//---------------------------------------------
 global.imagen1 = fs.readFileSync('./Menu2.jpg')
 global.imagen2 = fs.readFileSync('./src/nuevobot.jpg') 
 global.imagen3 = fs.readFileSync('./src/Pre Bot Publi.png')
-
 global.keysZens = ['fiktod', 'c2459db922', 'BF39D349845E', '675e34de8a', '37CC845916', '0b917b905e6f', '6fb0eff124']
 global.keysxxx = keysZens[Math.floor(keysZens.length * Math.random())]
-
 global.lolkeysapi = ['85faf717d0545d14074659ad']
 
                  
-//⊱ ━━━━━.⋅ RPG ⋅.━━━━ ⊰
+//⊱ ━━━━━━━━━━━━━━━━━.⋅ RPG ⋅.━━━━━━━━ ⊰
 
 global.flaaa = [
 
