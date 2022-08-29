@@ -10,7 +10,7 @@ try {
 
 let vn = './media/menu.mp3'
 
-let pp = 'https://i.imgur.com/AYfkKZB.jpeg'
+let pp = './Menu2.jpg'
 
 let _package = JSON.parse(await promises.readFile(join(__dirname, '../package.json')).catch(_ => ({}))) || {}
 
