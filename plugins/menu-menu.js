@@ -431,46 +431,35 @@ let str = `
 ├➢▶️ _:(
 ├➢▶️ _a_
 └────ׂ─ׂ─ׂ─ׂ──
-*<ℍ𝔼ℝℝ𝔸𝕄𝕀𝔼ℕ𝕋𝔸𝕊/>*
 
-° ඬ⃟🛠️ _${usedPrefix}afk *<motivo>*_
-° ඬ⃟🛠️ _${usedPrefix}ocr *<responde a imagen>*_
-° ඬ⃟🛠️ _${usedPrefix}acortar *<enlace / link / url>*_
-° ඬ⃟🛠️ _${usedPrefix}calc *<operacion math>*_
-° ඬ⃟🛠️ _${usedPrefix}del *<respondre a mensaje del Bot>*_
-° ඬ⃟🛠️ _${usedPrefix}whatmusic *<responde a un audio>*_
-° ඬ⃟🛠️ _${usedPrefix}qrcode *<texto>*_
-° ඬ⃟🛠️ _${usedPrefix}readmore *<texto1| texto2>*_
-° ඬ⃟🛠️ _${usedPrefix}spamwa *<numero|texto|cantidad>*_
-° ඬ⃟🛠️ _${usedPrefix}styletext *<texto>*_
-° ඬ⃟🛠️ _${usedPrefix}traducir *<texto>*_
-° ඬ⃟🛠️ _${usedPrefix}nowa *<numero>*_
 
-*<𝕊𝕋𝕀ℂ𝕂𝔼ℝ𝕊/>*
+┌──「🛠️𝐇𝐄𝐑𝐑𝐀𝐌𝐈𝐄𝐍𝐓𝐀𝐒」─
+├➢🛠️ _${usedPrefix}afk *<motivo>*_
+├➢🛠️ _${usedPrefix}ocr *<responde a imagen>*_
+├➢🛠️ _${usedPrefix}acortar *<enlace / link / url>*_
+├➢🛠️ _${usedPrefix}calc *<operacion math>*_
+├➢🛠️ _${usedPrefix}del *<respondre a mensaje del Bot>*_
+├➢🛠️ _${usedPrefix}whatmusic *<responde a un audio>*_
+├➢🛠️ _${usedPrefix}qrcode *<texto>*_
+├➢🛠️ _${usedPrefix}readmore *<texto1| texto2>*_
+├➢🛠️ _${usedPrefix}spamwa *<numero|texto|cantidad>*_
+├➢🛠️ _${usedPrefix}styletext *<texto>*_
+├➢🛠️ _${usedPrefix}traducir *<texto>*_
+├➢🛠️ _${usedPrefix}nowa *<numero>*_
+└────ׂ─ׂ─ׂ─ׂ───
 
-° ඬ⃟👽 _${usedPrefix}sticker *<responder a imagen o video>*_
-° ඬ⃟👽 _${usedPrefix}sticker *<enlace / link / url>*_
-° ඬ⃟👽 _${usedPrefix}s *<responder a imagen o video>*_
-° ඬ⃟👽 _${usedPrefix}s *<enlace / link / url>*_
-° ඬ⃟👽 _${usedPrefix}emojimix *<emoji 1>&<emoji 2>*_
-° ඬ⃟👽 _${usedPrefix}scircle *<responder a imagen>*_
-° ඬ⃟👽 _${usedPrefix}sremovebg *<responder a imagen>*_
-° ඬ⃟👽 _${usedPrefix}semoji *<tipo> <emoji>*_
-° ඬ⃟👽 _${usedPrefix}attp *<texto>*_
-° ඬ⃟👽 _${usedPrefix}attp2 *<texto>*_
-° ඬ⃟👽 _${usedPrefix}attp3 *<texto>*_
-° ඬ⃟👽 _${usedPrefix}ttp *<texto>*_
-° ඬ⃟👽 _${usedPrefix}ttp2 *<texto>*_
-° ඬ⃟👽 _${usedPrefix}ttp3 *<texto>*_
-° ඬ⃟👽 _${usedPrefix}ttp4 *<texto>*_
-° ඬ⃟👽 _${usedPrefix}ttp5 *<texto>*_
-° ඬ⃟👽 _${usedPrefix}pat *<@tag>*_
-° ඬ⃟👽 _${usedPrefix}slap *<@tag>*_
-° ඬ⃟👽 _${usedPrefix}kiss *<@tag>*_
-° ඬ⃟👽 _${usedPrefix}dado_
-° ඬ⃟👽 _${usedPrefix}wm *<packname> <author>*_
-° ඬ⃟👽 _${usedPrefix}stickermarker *<efecto> <responder a imagen>*_
-° ඬ⃟👽 _${usedPrefix}stickerfilter *<efecto> <responder a imagen>*_
+┌──「🌌𝐒𝐓𝐈𝐂𝐊𝐄𝐑」─
+├➢🪩${usedPrefix}emojimix <emoji 1>&<emoji 2
+├➢🧩${usedPrefix}attp <texto
+├➢🪁${usedPrefix}ttp <texto
+├➢🃏${usedPrefix}pat <@tag
+├➢🌃${usedPrefix}slap <@tag
+├➢🏝️${usedPrefix}kiss <@tag
+├➢🪅${usedPrefix}dado
+├➢🧧${usedPrefix}wm <packname> <author
+├➢🪩${usedPrefix}stickermarker <efecto> <responder a imagen
+├➢🌃${usedPrefix}stickerfilter <efecto> <responder a imagen
+└────ׂ─ׂ─ׂ─ׂ───
 
 ┌──「💎𝐎𝐖𝐍𝐄𝐑 𝐁𝐎𝐓」─
 ├➢👑${usedPrefix}cajafuerte
