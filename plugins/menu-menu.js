@@ -147,43 +147,43 @@ let str = `
 └────ׂ─ׂ─ׂ─ׂ───
 
 ┌「🕋𝐏𝐑𝐄𝐍𝐃𝐄𝐑 𝐘 𝐀𝐏𝐀𝐆𝐀𝐑 」
-├❏🕋${usedPrefix}enable *welcome*_
-├❏📴${usedPrefix}disable *welcome*_
-├❏⚠️${usedPrefix}enable *modohorny*_
-├❏❎${usedPrefix}disable *_modohorny*
-├❏🏧${usedPrefix}enable *antilink*_
-├❏🕋${usedPrefix}disable *antilink*_
-├❏📴${usedPrefix}enable *antilink2*_
-├❏⚠️${usedPrefix}disable *antilink2*_
-├❏❎${usedPrefix}enable *detect*_
-├❏🏧${usedPrefix}disable *detect*_
-├❏🕋${usedPrefix}enable *audios*_
-├❏📴${usedPrefix}disable *audios*_
-├❏⚠️${usedPrefix}enable *autosticker*_
-├❏❎${usedPrefix}disable *autosticker*_
-├❏🛡️${usedPrefix}enable *antiviewonce*_ 
+├➢🕋${usedPrefix}enable *welcome*_
+├➢📴${usedPrefix}disable *welcome*_
+├➢⚠️${usedPrefix}enable *modohorny*_
+├➢❎${usedPrefix}disable *_modohorny*
+├➢🏧${usedPrefix}enable *antilink*_
+├➢🕋${usedPrefix}disable *antilink*_
+├➢📴${usedPrefix}enable *antilink2*_
+├➢⚠️${usedPrefix}disable *antilink2*_
+├➢❎${usedPrefix}enable *detect*_
+├➢🏧${usedPrefix}disable *detect*_
+├➢🕋${usedPrefix}enable *audios*_
+├➢📴${usedPrefix}disable *audios*_
+├➢⚠️${usedPrefix}enable *autosticker*_
+├➢❎${usedPrefix}disable *autosticker*_
+├➢🛡️${usedPrefix}enable *antiviewonce*_ 
 └────ׂ─ׂ─ׂ─ׂ───
 
 ┌─「💻𝐃𝐎𝐖𝐍𝐋𝐎𝐀𝐃𝐄𝐑」
-├❏📑${usedPrefix}facebook <enlace / link / url
-├❏🗃️${usedPrefix}instagram <enlace / link / url
-├❏🗂️${usedPrefix}mediafire <enlace / link / url
-├❏📰${usedPrefix}instagram <enlace / link / url
-├❏📇${usedPrefix}gitclone <enlace / link / url
-├❏📑${usedPrefix}tiktok <enlace / link / url
-├❏🗃️${usedPrefix}ytmp3 <enlace / link / url
-├❏🗂️${usedPrefix}ytmp4 <enlace / link / url
-├❏📰${usedPrefix}play.1 <texto / enlace / link / url
-├❏📇${usedPrefix}play.2 <texto / enlace / link / url
-├❏📑${usedPrefix}play <texto
-├❏🗃️${usedPrefix}spotify <texto
-├❏🗂️${usedPrefix}imagen <texto
-├❏📰${usedPrefix}pinteret <texto
-├❏📇${usedPrefix}wallpaper <texto
-├❏📑${usedPrefix}wallpaper2 <texto
-├❏🗃️${usedPrefix}pptiktok <nombre de usuario
-├❏🗂️${usedPrefix}igstalk <nombre de usuario
-├❏📰${usedPrefix}tiktokstalk <nombre de usuario
+├➢📑${usedPrefix}facebook <enlace / link / url
+├➢🗃️${usedPrefix}instagram <enlace / link / url
+├➢🗂️${usedPrefix}mediafire <enlace / link / url
+├➢📰${usedPrefix}instagram <enlace / link / url
+├➢📇${usedPrefix}gitclone <enlace / link / url
+├➢📑${usedPrefix}tiktok <enlace / link / url
+├➢🗃️${usedPrefix}ytmp3 <enlace / link / url
+├➢🗂️${usedPrefix}ytmp4 <enlace / link / url
+├➢📰${usedPrefix}play.1 <texto / enlace / link / url
+├➢📇${usedPrefix}play.2 <texto / enlace / link / url
+├➢📑${usedPrefix}play <texto
+├➢🗃️${usedPrefix}spotify <texto
+├➢🗂️${usedPrefix}imagen <texto
+├➢📰${usedPrefix}pinteret <texto
+├➢📇${usedPrefix}wallpaper <texto
+├➢📑${usedPrefix}wallpaper2 <texto
+├➢🗃️${usedPrefix}pptiktok <nombre de usuario
+├➢🗂️${usedPrefix}igstalk <nombre de usuario
+├➢📰${usedPrefix}tiktokstalk <nombre de usuario
 └────ׂ─ׂ─ׂ─ׂ───
 
 *<𝔾ℝ𝕌ℙ𝕆𝕊/>* 
