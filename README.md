@@ -12,7 +12,7 @@
 > LOS NUMEROS NO SON BOTS Y EN EL GRUPO NO SE PERMITEN NUMEROS-BOTS
 
 
-### `—◉ 🖍 LETRA DEL BOT 🖍`
+### `—◉ 📌 LETRA DEL BOT 📌`
 - PAGINA USADA PARA LA LETRA [Aqui](https://smiley.cool/es/weirdmaker.php)
   
 ### `—◉ 🌌 ACTIVAR EN REPLIT 🌌`
