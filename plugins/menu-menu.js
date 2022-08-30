@@ -78,6 +78,7 @@ let str = `
 *╭━〔 INFORMACIÓN DE DORR∆T-BOT 〕━⬣*
  ┃ 🔰 _${usedPrefix}grupos_
  ┃ 🔰 _${usedPrefix}estado_
+ ┃ 🔰 _${usedPrefix}instalarbot
  ┃ 🔰 _${usedPrefix}infobot_
  ┃ 🔰 _${usedPrefix}donar_
  ┃ 🔰 _${usedPrefix}grouplist_
