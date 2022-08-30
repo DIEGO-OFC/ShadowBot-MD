@@ -95,7 +95,7 @@ global.fallo = fg
 global.mg = '═══════ ≫ ❗ 𝙻𝙾 𝚄𝚂𝙾 𝙼𝙰𝙻 ❗ ≪ ════════'
 global.mal = mg
 global.dorre = 'DORRAT-BOT-MD'
-global.DORRA
+global.DORRA = dorre
 //---------------
 global.imagen1 = fs.readFileSync('./Menu2.jpg')
 global.imagen2 = fs.readFileSync('./src/nuevobot.jpg') 
