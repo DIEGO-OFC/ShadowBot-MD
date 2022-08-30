@@ -21,11 +21,11 @@
 
 
 
-### `—◉ ⚙️ AJUSTES ⚙️`
+### `—◉ 🛠️ AJUSTES 🛠️`
 - CLONAR EL REPOSITORIO [Aqui](https://github.com/DIEGO-OFC/DORRAT-BOT-MD/fork)
 - CAMBIAR NÚMERO DEL OWNER [Aqui](https://github.com/DIEGO-OFC/DORRAT-BOT-MD/blob/main/config.js)
 
-### `—◉ 👾 ACTIVAR EN TERMUX 👾` 
+### `—◉ 🔮 ACTIVAR EN TERMUX 🔮` 
 - ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
 ```bash
 > cd
