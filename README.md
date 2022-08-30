@@ -12,10 +12,10 @@
 > LOS NUMEROS NO SON BOTS Y EN EL GRUPO NO SE PERMITEN NUMEROS-BOTS
 
 
-### `—◉ 📌 LETRA DEL BOT 📌`
+### `—◉ 🌹 LETRA DEL BOT 🌹`
 - PAGINA USADA PARA LA LETRA [Aqui](https://smiley.cool/es/weirdmaker.php)
   
-### `—◉ 🌌 ACTIVAR EN REPLIT 🌌`
+### `—◉ 🛡️ ACTIVAR EN REPLIT 🛡️`
 
 [![Run on Repl.it](https://repl.it/badge/github/DIEGO-OFC/DORRAT-BOT-MD)](https://repl.it/github/DIEGO-OFC/DORRAT-BOT-MD)
 
