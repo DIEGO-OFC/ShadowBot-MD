@@ -25,6 +25,26 @@
 - CLONAR EL REPOSITORIO [Aqui](https://github.com/DIEGO-OFC/DORRAT-BOT-MD/fork)
 - CAMBIAR NÚMERO DEL OWNER [Aqui](https://github.com/DIEGO-OFC/DORRAT-BOT-MD/blob/main/config.js)
 
+### `—◉ 👾 ACTIVAR EN TERMUX 👾` 
+- ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
+```bash
+> cd
+> termux-setup-storage
+> apt update 
+> pkg upgrade 
+> pkg install git -y
+> pkg install nodejs -y
+> pkg install ffmpeg -y
+> pkg install imagemagick -y
+> pkg install yarn
+> git clone https://github.com/DIEGO-OFC/DORRAT-TERMUX
+> cd DORRAT-TERMUX
+> yarn install 
+> npm install
+> npm update
+> npm install 
+> npm start
+```
 ### `—◉ 📝 NOTAS 📝`
 - ES POSIBLE QUE EL BOT TENGA ALGUNAS FALLAS, SE IRAN SOLUCIONANDO CONFORME SE VAYAN DETECTANDO
 - SI VAS A EDITAR POR COMPLETO DEJA LOS CREDITOS DEL BOT 
