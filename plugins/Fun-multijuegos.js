@@ -111,7 +111,7 @@ conn.sendMessage(m.chat, t, m)
  
 let tt = {
 text: ss,
-footer: †𝐃⃟𝕺𝐑⃯𝐑𝐇⃯𝚵𝐓,
+footer: dorre,
 templateButtons: templateButtonsReplyMessage
 } 
 conn.sendMessage(m.chat, tt, m)
@@ -139,7 +139,7 @@ conn.sendMessage(m.chat, tt, m)
 ]
 let ttt = {
 text: sss,
-footer: gata,
+footer: dorre,
 templateButtons: templateButtonsReplyMessage
 } 
 conn.sendMessage(m.chat, ttt, m)
@@ -195,7 +195,7 @@ conn.sendMessage(m.chat, tttt, m)
 ]
 let tttt = {
 text: ssss,
-footer: †𝐃⃟𝕺𝐑⃯𝐑𝐇⃯𝚵𝐓᪣𝕭⃯𝚹⃯𝐓⃤,
+footer: dorre,
 templateButtons: templateButtonsReplyMessage
   } 
 conn.sendMessage(m.chat, tttt, m)  
