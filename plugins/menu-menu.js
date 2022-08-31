@@ -146,21 +146,25 @@ let str = `
 └────ׂ─ׂ─ׂ─ׂ───
 
 ┌「🕋𝐏𝐑𝐄𝐍𝐃𝐄𝐑 𝐘 𝐀𝐏𝐀𝐆𝐀𝐑 」
-├➢🕋${usedPrefix}enable *welcome*_
-├➢📴${usedPrefix}disable *welcome*_
-├➢⚠️${usedPrefix}enable *modohorny*_
+├➢❎${usedPrefix}enable *welcome*_
+├➢✅${usedPrefix}disable *welcome*_
+├➢✅${usedPrefix}enable *modohorny*_
 ├➢❎${usedPrefix}disable *_modohorny*
-├➢🏧${usedPrefix}enable *antilink*_
-├➢🕋${usedPrefix}disable *antilink*_
-├➢📴${usedPrefix}enable *antilink2*_
-├➢⚠️${usedPrefix}disable *antilink2*_
-├➢❎${usedPrefix}enable *detect*_
-├➢🏧${usedPrefix}disable *detect*_
-├➢🕋${usedPrefix}enable *audios*_
-├➢📴${usedPrefix}disable *audios*_
-├➢⚠️${usedPrefix}enable *autosticker*_
+├➢✅${usedPrefix}enable *antilink*_
+├➢❎${usedPrefix}disable *antilink*_
+├➢✅${usedPrefix}enable *antilink2*_
+├➢❎${usedPrefix}disable *antilink2*_
+├➢✅${usedPrefix}enable *detect*_
+├➢❎${usedPrefix}disable *detect*_
+├➢✅${usedPrefix}enable *audios*_
+├➢❎${usedPrefix}disable *audios*_
+├➢✅${usedPrefix}enable *autosticker*_
 ├➢❎${usedPrefix}disable *autosticker*_
-├➢🛡️${usedPrefix}enable *antiviewonce*_ 
+├➢✅${usedPrefix}enable *antiviewonce*_ 
+├➢✅${usedPrefix}enable *antitraba*_
+├➢❎${usedPrefix}disable *antitraba*_
+├➢✅${usedPrefix}enable *antiarabes*_
+├➢❎${usedPrefix}disable *antiarabes*_
 └────ׂ─ׂ─ׂ─ׂ───
 
 ┌─「💻𝐃𝐎𝐖𝐍𝐋𝐎𝐀𝐃𝐄𝐑」
