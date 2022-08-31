@@ -257,19 +257,6 @@ case 'antitraba':
           global.dfail('admin', m, conn)
           throw false
 }}
-              case 'anti+212':
-      case 'anti212':
-      case 'antiarab':
-      case 'antiarabes':
-      if (m.isGroup) {
-        if (!(isAdmin || isOwner)) {
-          global.dfail('admin', m, conn)
-          throw false
-      
-      }
-      chat.antiArab = isEnable
-        }
-      }
       chat.antiTraba = isEnable
       break
 default:
