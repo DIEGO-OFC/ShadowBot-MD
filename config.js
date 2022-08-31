@@ -3,16 +3,6 @@ import chalk from 'chalk'
 import { fileURLToPath } from 'url'
 import fs from 'fs'
 
-global.authFile = `DORRASESSION`
-const { state, saveState, saveCreds } = await useMultiFileAuthState(global.authFile)
-
-const connectionOptions = {
-printQRInTerminal: true,
-auth: state,
-logger: P({ level: 'silent'}),
-browser: ['DORR∆T-BOT-MD','Safari','1.0.0']
-}
-
 //cambia los números que sean propietarios 
 global.owner = [
   ['593959425714', '🔰  †𝐃⃟𝕺𝐑⃯𝐑𝐇⃯𝚵𝐓᪣𝕭⃯𝚹⃯𝐓⃤ - Creador 🔰', true],
