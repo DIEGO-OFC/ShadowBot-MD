@@ -106,7 +106,7 @@ global.timestamp.connect = new Date
 }
 if (global.db.data == null) loadDatabase()
 if (connection == 'open') {
-console.log(chalk.yellow('╭──────────────────✧°•°•···\n│\n│➢ 𝙱𝙾𝚃 𝙲𝙾𝙽𝙴𝙲𝚃𝙰𝙳𝙾 𝙲𝙾𝚁𝚁𝙴𝙲𝚃𝙰𝙼𝙴𝙽𝚃𝙴 ☑️\n│\n╰─────────────────────────────✧•°•°···'))}
+console.log(chalk.yellow('╭──────────────────────────────✧•°•°···\n│\n│➢ 𝙱𝙾𝚃 𝙲𝙾𝙽𝙴𝙲𝚃𝙰𝙳𝙾 𝙲𝙾𝚁𝚁𝙴𝙲𝚃𝙰𝙼𝙴𝙽𝚃𝙴 ☑️\n│\n╰─────────────────────────────✧•°•°···'))}
 }
 
 process.on('uncaughtException', console.error)
@@ -122,7 +122,7 @@ console.error(e)
 }
 if (restatConn) {
 const oldChats = global.conn.chats
-try { global.conn.ws.close() } catch { }
+try { global.conn.ws.close() } catch { } 
 conn.ev.removeAllListeners()
 global.conn = makeWASocket(connectionOptions, { chats: oldChats })
 isInit = true
