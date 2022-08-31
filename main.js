@@ -65,16 +65,6 @@ global.db.chain = chain(global.db.data)
 }
 loadDatabase()
 
-global.authFile = `DORRASESSION`
-const { state, saveState, saveCreds } = await useMultiFileAuthState(global.authFile)
-
-const connectionOptions = {
-printQRInTerminal: true,
-auth: state,
-logger: P({ level: 'silent'}),
-browser: ['DORR∆T-BOT-MD','Safari','1.0.0']
-}
-
 global.conn = makeWASocket(connectionOptions)
 conn.isInit = false
 
