@@ -256,7 +256,8 @@ case 'antitraba':
         if (!(isAdmin || isOwner)) {
           global.dfail('admin', m, conn)
           throw false
-case 'anti+212':
+}}
+              case 'anti+212':
       case 'anti212':
       case 'antiarab':
       case 'antiarabes':
@@ -264,7 +265,7 @@ case 'anti+212':
         if (!(isAdmin || isOwner)) {
           global.dfail('admin', m, conn)
           throw false
-        }
+      
       }
       chat.antiArab = isEnable
         }
