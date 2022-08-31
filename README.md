@@ -1,4 +1,4 @@
-# `💫 𝙳𝙾𝚁𝚁∆𝚃 - 𝙱𝚘𝚝 - MD 💫`
+# `💫 𝙳𝙾𝚁𝚁𝙰𝚃-𝙱𝙾𝚃-𝙼𝙳 💫`
 
 BOT COMPATIBLE CON WHATSAPP MULTIDIVICE 
 ### `—◉ 👑 DUDAS SOBRE EL BOT?, CONTACTANOS 👑`
