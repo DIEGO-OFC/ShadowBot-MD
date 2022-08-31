@@ -54,7 +54,7 @@ p.send(process.uptime())
 break }})
 p.on('exit', (_, code) => {
 isRunning = false
-console.error('❎ㅤOcurrio un error inesperado:', code)
+console.error('😔ㅤOcurrio un error Por favor arreglarlo:', code)
   
 p.process.kill()
 isRunning = false
