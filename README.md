@@ -55,7 +55,7 @@
 > npm install 
 > npm start
 ```
-### `—◉ ☑️ ACTIVAR EN CASO DE APAGARSE EN TERMUX ☑️`
+### `—◉ <img src="https://github.com/DIEGO-OFC/DORRAT-BOT-MD/blob/main/src/qrcode_30531084_.png" height="30px"> ACTIVAR EN CASO DE APAGARSE EN TERMUX ☑️`
 ```bash
 ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
 > cd 
