@@ -16,6 +16,7 @@
 ---------
 > LOS NUMEROS NO SON BOTS Y EN EL GRUPO NO SE PERMITEN NUMEROS-BOTS
 
+'𝐇𝐎𝐓𝐒 𝐏𝐀𝐑𝐀 𝐓𝐄𝐍𝐄𝐑 𝐄𝐋 𝐁𝐎𝐓 𝟐𝟒/𝟕'
 <p align="hihg">   
 <a href="https://portal.acidicnodes.com" target="_blank"> <img src="https://img.shields.io/badge/-AcidicNodes-%23E4405F?style=for-the-badge&logo=acidicnodes&logoColor=black" target="_blank"></a> <img src="https://github.com/siegrin/siegrin/blob/main/Assets/Handshake.gif" height="30px">
 <p align="hihg">   
