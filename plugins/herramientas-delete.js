@@ -1,6 +1,6 @@
 let handler = async (m, { conn, usedPrefix, command }) => {
 
-if (!m.quoted) throw `{mg}\nResponde al mensaje que desea eliminar`
+if (!m.quoted) throw `${mg}\nResponde al mensaje que desea eliminar`
 
 try {
 
