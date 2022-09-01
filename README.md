@@ -3,7 +3,7 @@
   <a href="https://github.com/DIEGO-OFC/DORRAT-BOT-MD"><img src="http://readme-typing-svg.herokuapp.com?font=mono&size=17&duration=4000&color=F7B11B&center=falso&vCenter=falso&lines=DORRAT+BOT+MD++%F0%9F%92%96;Gracias+por+visitar+este+repositorio.+%F0%9F%92%96" height="90px"
 </p> 
 
-`—◉ DUDAS SOBRE EL BOT? CONTACTANOS ✨`
+`—◉ DUDAS SOBRE EL BOT?, CONTACTANOS ✨`
 
 <a href="http://wa.me/593959425714" target="blank"><img src="https://img.shields.io/badge/DIEGO_OFC_CREADOR-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
 <a href="http://wa.me/5745582889" target="blank"><img src="https://img.shields.io/badge/Fazz_ofc_COLAB.1-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
