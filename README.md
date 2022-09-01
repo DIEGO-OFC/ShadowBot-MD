@@ -75,6 +75,6 @@ ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
 - EL ADD Y EL KICK PUEDEN OCASIONAR QUE EL NUMERO SE VAYA A SOPORTE POR ELLO SE ACTIVA CON #enable restrict 
 - DORRAT-BOT - TEAM NO SE HACE RESPONSABLE DEL USO, NUMEROS, PRIVACIDAD Y CONTENIDO MANDADO, USADO O GESTIONADO POR USTEDES O EL BOT
 ## `𝐄𝐃𝐈𝐓𝐎𝐑 𝐘 𝐏𝐎𝐑𝐏𝐈𝐄𝐓𝐀𝐑𝐈𝐎 𝐃𝐄𝐋 𝐁𝐎𝐓` 
-<a href="https://github.com/DIEGO-OFC/DORRAT-BOT-MD"><img src="https://github.com/DIEGO-OFC/DORRAT-BOT-MD.png" width="300" height="300" alt="DIEGO-OFC"/></a>
+<a href="https://github.com/DIEGO-OFC"><img src="https://github.com/DIEGO-OFC.png" width="300" height="300" alt="DIEGO-OFC"/></a>
 
 > The Dorr∆t-bot _ By DIEGO OFC
