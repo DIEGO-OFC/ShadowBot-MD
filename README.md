@@ -35,7 +35,7 @@
 - CLONAR EL REPOSITORIO [Aqui](https://github.com/DIEGO-OFC/DORRAT-BOT-MD/fork)
 - CAMBIAR NÚMERO DEL OWNER [Aqui](https://github.com/DIEGO-OFC/DORRAT-BOT-MD/blob/main/config.js)
 
-### <img src="https://github.com/DIEGO-OFC/DORRAT-BOT-MD/blob/main/src/unnamed.png" height="30px">𝐀𝐂𝐓𝐈𝐕𝐀𝐑 𝐄𝐍 𝐓𝐄𝐑𝐌𝐔𝐗
+### <img src="https://github.com/DIEGO-OFC/DORRAT-BOT-MD/blob/main/src/unnamed.png" height="30px"> 𝐀𝐂𝐓𝐈𝐕𝐀𝐑 𝐄𝐍 𝐓𝐄𝐑𝐌𝐔𝐗
 - ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
 ```bash
 > cd
