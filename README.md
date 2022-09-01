@@ -18,7 +18,7 @@
 <p align="hihg">   
 <a href="https://portal.acidicnodes.com" target="_blank"> <img src="https://img.shields.io/badge/-AcidicNodes-%23E4405F?style=for-the-badge&logo=acidicnodes&logoColor=black" target="_blank"></a> <img src="https://github.com/siegrin/siegrin/blob/main/Assets/Handshake.gif" height="30px">
 <p align="hihg">   
-<a href="https://dash.boxmineworld.com/login" target="_blank"> <img src="https://img.shields.io/badge/-Boxmine+world-%23E4405F?style=for-the-badge&logo=Boxmine+world&logoColor=black" target="_blank"></a> <img src="https://github.com/siegrin/siegrin/blob/main/Assets/Handshake.gif" height="30px">
+<a href="https://dash.boxmineworld.com/login" target="_blank"> <img src="https://img.shields.io/badge/-Boxmineworld-%23E4405F?style=for-the-badge&logo=Boxmineworld&logoColor=black" target="_blank"></a> <img src="https://github.com/siegrin/siegrin/blob/main/Assets/Handshake.gif" height="30px">
 
 ### `—◉ 🌹 LETRA DEL BOT 🌹`
 - PAGINA USADA PARA LA LETRA [Aqui](https://smiley.cool/es/weirdmaker.php)
