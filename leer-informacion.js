@@ -15,7 +15,8 @@
 //https://chat.whatsapp.com/CrsOmirjZNYKrvnQNT98Oo 
               //si necesitas ayuda unete al grupo oficial 
               // Grax por leer
-
+//*—◉ 𝚃𝚄𝚃𝙾𝚁𝙸𝙰𝙻 𝚃𝙴𝚁𝙼𝚄𝚇*:
+// https://youtu.be/DKo7PO2ta4o
 //*—◉ 𝙲𝙾𝙼𝙰𝙽𝙳𝙾𝚂 𝚃𝙴𝚁𝙼𝚄𝚇*
 // > cd
 // > termux-setup-storage
