@@ -118,8 +118,6 @@ export async function handler(chatUpdate) {
                     chat.antiToxic = false
                 if (!('antiTraba' in chat))
                     chat.antiTraba = false
-                 if (!('antiArab' in chat))
-                    chat.antiArab = false
                 if (!isNumber(chat.expired))
                     chat.expired = 0
             } else
@@ -139,7 +137,6 @@ export async function handler(chatUpdate) {
                     antiLink2: false,
                     antiviewonce: false,
                     antiToxic: false,
-                    antiArab: false,
                     antiTraba: false,
                     expired: 0,
                 }
