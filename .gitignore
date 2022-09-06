@@ -1,0 +1,9 @@
+#| Foldes |#
+
+node_modules
+DORRATSESSION 
+
+#| Files |#
+
+package-lock.json
+database.json
