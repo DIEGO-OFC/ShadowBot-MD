@@ -37,7 +37,7 @@ let buttonMessage= {
 'headerType': 6 }
 conn.sendMessage(m.chat, buttonMessage, { quoted: m })
 //let vcard = `BEGIN:VCARD\nVERSION:3.0\nN:;𝘿𝙞𝙚𝙜𝙤 𝙤𝙛𝙘 👑;;;\nFN:𝘿𝙞𝙚𝙜𝙤 𝙤𝙛𝙘 👑\nORG:𝘿𝙞𝙚𝙜𝙤 𝙤𝙛𝙘 👑\nTITLE:\nitem1.TEL;waid=593959425714:+593 95 942 5714\nitem1.X-ABLabel:𝘿𝙞𝙚𝙜𝙤 𝙤𝙛𝙘 👑\nX-WA-BIZ-DESCRIPTION:[❗] ᴄᴏɴᴛᴀᴄᴛᴀ ᴀ ᴇsᴛᴇ ɴᴜᴍ ᴘᴀʀᴀ ᴄᴏsᴀs ɪᴍᴘᴏʀᴛᴀɴᴛᴇs.\nX-WA-BIZ-NAME:𝑩𝒓𝒖𝒏𝒐 𝑺𝒐𝒃𝒓𝒊𝒏𝒐 👑\nEND:VCARD`
-//await conn.sendMessage(m.chat, { contacts: { displayName: 'Bruno Sobrino 👑', contacts: [{ vcard }] }}, {quoted: m})
+//await conn.sendMessage(m.chat, { contacts: { displayName: 'Diego ofc 👑', contacts: [{ vcard }] }}, {quoted: m})
 const data = global.owner.filter(([id, isCreator]) => id && isCreator)
 await conn.sendContact(m.chat, data.map(([id, name]) => [id, name]), m)
 }
