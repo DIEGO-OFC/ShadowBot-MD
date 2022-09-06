@@ -1,4 +1,4 @@
-//gracias por usar el bot, si quieres rescanear el código qr borra la carpeta DORRASESSION, DAR RESTAR O ESTART
+//gracias por usar el bot, si quieres rescanear el código qr borra la carpeta DORRATSESSION, DAR RESTAR O ESTART
 //número del bot oficial +573122695406
 //Si quieres cambiar los números owners ve a config.js
 //Creador: DIEGO-OFC número: +593959425714
