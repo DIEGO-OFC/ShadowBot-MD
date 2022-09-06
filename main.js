@@ -72,7 +72,7 @@ const connectionOptions = {
 printQRInTerminal: true,
 auth: state,
 logger: P({ level: 'silent'}),
-browser: ['DORRAT-BOT','Safari','1.0.0']
+browser: ['DORRAT-BOT','Firefox','1.0.0']
 }
 
 global.conn = makeWASocket(connectionOptions)
