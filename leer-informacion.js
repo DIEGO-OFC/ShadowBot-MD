@@ -34,3 +34,5 @@
 // > npm install
 // > npm update
 // > npm start
+
+//Cómo cambió el bot sin perder los diamantes y xp? Descarga la database.json y instala el nuevo bot, antes de encerderlo pones la database
