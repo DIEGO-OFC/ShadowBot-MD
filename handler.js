@@ -60,7 +60,31 @@ export async function handler(chatUpdate) {
                 if (!isNumber(user.money)) user.money = 0
                 if (!isNumber(user.limit)) user.limit = 10
                 if (!isNumber(user.lastclaim)) user.lastclaim = 0
-            } else
+ } else
+
+if (!user.registered) {		                    	 
+		    if (!('name' in user)) user.name = m.name
+                    if (!isNumber(user.age)) user.age = -1
+                    if (!isNumber(user.anggur)) user.anggur = 0
+                    if (!isNumber(user.apel)) user.apel = 0
+                    if (!isNumber(user.bibitanggur)) user.bibitanggur = 0
+                    if (!isNumber(user.bibitapel)) user.bibitapel = 0
+                    if (!isNumber(user.bibitjeruk)) user.bibitjeruk = 0
+                    if (!isNumber(user.bibitmangga)) user.bibitmangga = 0
+                    if (!isNumber(user.bibitpisang)) user.bibitpisang = 0
+                    if (!isNumber(user.emas)) user.emas = 0
+                    if (!isNumber(user.jeruk)) user.jeruk = 0
+                    if (!isNumber(user.kayu)) user.kayu = 0
+                    if (!isNumber(user.makanan)) user.makanan = 0
+                    if (!isNumber(user.mangga)) user.mangga = 0
+                    if (!isNumber(user.pisang)) user.pisang = 0
+                    if (!isNumber(user.premiumDate)) user.premiumDate = -1
+                    if (!isNumber(user.regTime)) user.regTime = -1
+                    if (!isNumber(user.semangka)) user.semangka = 0
+                    if (!isNumber(user.stroberi)) user.stroberi = 0
+                        
+	        }
+		
                 global.db.data.users[m.sender] = {
                     exp: 0,
                     limit: 10,
