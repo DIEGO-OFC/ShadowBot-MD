@@ -916,8 +916,9 @@ export async function handler(chatUpdate) {
 		    antiver: true,
                     antiLink: false,
                     antiLink2: false,
+                    antiTraba: false,
 		    reaction: true,
-                    viewonce: false,
+                    antiviewonce: false,
                     antitoxic: true,
                     expired: 0,
                 }
@@ -928,12 +929,14 @@ export async function handler(chatUpdate) {
                 if (!('autoread' in settings)) settings.autoread = false
                 if (!('restrict' in settings)) settings.restrict = false
 		if (!('temporal' in settings)) settings.temporal = false
+                if (!('antiPrivate' in settings)) settings.antiPrivate = false
 		if (!('antiCall' in settings)) settings.antiCall = false
             } else global.db.data.settings[this.user.jid] = {
                 self: false,
                 autoread: false,
                 restrict: false,
 		temporal: false,
+                antiPrivate: false,
 		antiCall: false
             }
         } catch (e) {
