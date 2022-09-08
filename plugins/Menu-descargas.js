@@ -210,7 +210,7 @@ let menu = `
 ┃🚀➺ _${usedPrefix}historia_
 ╰━━━━━━━━━━━━━━━━━━━⬣`.trim()
 
-conn.sendHydrated(m.chat, menu, wm, pp, 'https://github.com/GataNina-Li/GataBot-MD', '𝙂𝙖𝙩𝙖𝘽𝙤𝙩-𝙈𝘿', null, null, [
+conn.sendHydrated(m.chat, menu, wm, pp, 'https://github.com/DIEGO-OFC/DORRAT-BOT-MD', '𝑫𝑶𝑹𝑹𝑯∆𝑻=𝑩𝑶𝑻', null, null, [
 
 ['𝙈𝙚𝙣𝙪́ 𝙘𝙤𝙢𝙥𝙡𝙚𝙩𝙤 | 𝙁𝙪𝙡𝙡 𝙈𝙚𝙣𝙪 💫', '.allmenu'],
 
