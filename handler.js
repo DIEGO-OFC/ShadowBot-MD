@@ -930,11 +930,13 @@ export async function handler(chatUpdate) {
                 if (!('restrict' in settings)) settings.restrict = false
 		if (!('temporal' in settings)) settings.temporal = false
                 if (!('antiPrivate' in settings)) settings.antiPrivate = false
-		if (!('antiCall' in settings)) settings.antiCall = false
+		if (!('antiArab' in chat)) chat.antiArab = false
+if (!('antiCall' in settings)) settings.antiCall = false
             } else global.db.data.settings[this.user.jid] = {
                 self: false,
                 autoread: false,
                 restrict: false,
+                antiArab: false,
 		temporal: false,
                 antiPrivate: false,
 		antiCall: false
