@@ -1,5 +1,5 @@
 //quita los // para que funcione :)
-/let handler = m => m
+/*let handler = m => m
  handler.all = async function (m) {
  this.spam = this.spam ? this.spam : {}
  if (!(m.sender in this.spam)) {
@@ -7,7 +7,7 @@
  jid: await m.sender, 
  spam: 0,
  lastspam: 0
-}/
+}*/
 // this.spam[spaming.jid] = spaming
 //} else try {
 //this.spam[m.sender].spam += 1
