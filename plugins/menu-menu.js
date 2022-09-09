@@ -447,35 +447,41 @@ let str = `
 └────ׂ─ׂ─ׂ─ׂ───
 
 ┌──「💎𝐎𝐖𝐍𝐄𝐑 𝐁𝐎𝐓」─
-├➢👑${usedPrefix}cajafuerte
-├➢💸${usedPrefix}enable restrict
-├➢🧾${usedPrefix}disable restrict
-├➢📍${usedPrefix}enable autoread
-├➢🧑‍💻${usedPrefix}disable autoread
-├➢📞${usedPrefix}enable *anticall*_
-├➢📞${usedPrefix}disable *anticall*_
-├➢🏯${usedPrefix}enable public
-├➢🪩${usedPrefix}disable public
-├➢👑${usedPrefix}enable pconly
-├➢💸${usedPrefix}disable pconly
-├➢🧾${usedPrefix}enable gconly
-├➢📍${usedPrefix}disable gconly
-├➢🧑‍💻${usedPrefix}banchat2
-├➢🏯${usedPrefix}unbanchat2
-├➢🪩${usedPrefix}banuser <@tag>
-├➢👑${usedPrefix}unbanuser <@tag
-├➢💸${usedPrefix}banuser <@tag
-├➢🧾${usedPrefix}bc <texto
-├➢📍${usedPrefix}bcchats <texto
-├➢🧑‍💻${usedPrefix}bcgc <texto
-├➢🏯${usedPrefix}cleartpm
-├➢🪩${usedPrefix}restart
-├➢👑${usedPrefix}update
-├➢💸${usedPrefix}addprem <@tag>
-├➢🧾${usedPrefix}delprem <@tag
-├➢📍${usedPrefix}listprem_
-├➢🧑‍💻${usedPrefix}añadirdiamantes <@tag> <cantidad
-├➢🏯${usedPrefix}añadirxp <@tag> <cantidad
+├➢👑 > *<funcion>*
+├➢👑 => *<funcion>*
+├➢👑 $ *<funcion>*
+├➢👑 _${usedPrefix}cajafuerte_
+├➢👑 _${usedPrefix}blocklist_
+├➢👑 _${usedPrefix}enable *restrict*_
+├➢👑 _${usedPrefix}disable *restrict*_
+├➢👑 _${usedPrefix}enable *autoread*_
+├➢👑 _${usedPrefix}disable *autoread*_
+├➢👑 _${usedPrefix}enable *public*_
+├➢👑 _${usedPrefix}disable *public*_
+├➢👑 _${usedPrefix}enable *pconly*_
+├➢👑 _${usedPrefix}disable *pconly*_
+├➢👑 _${usedPrefix}enable *gconly*_
+├➢👑 _${usedPrefix}disable *gconly*_
+├➢👑 _${usedPrefix}enable *anticall*_
+├➢👑 _${usedPrefix}disable *anticall*_
+├➢👑 _${usedPrefix}enable *antiprivado*_
+├➢👑 _${usedPrefix}disable *antiprivado*_
+├➢👑 _${usedPrefix}msg *<texto>*_
+├➢👑 _${usedPrefix}banchat_
+├➢👑 _${usedPrefix}unbanchat_
+├➢👑 _${usedPrefix}banuser *<@tag>*_
+├➢👑 _${usedPrefix}unbanuser *<@tag>*_
+├➢👑 _${usedPrefix}banuser *<@tag>*_
+├➢👑 _${usedPrefix}bc *<texto>*_
+├➢👑 _${usedPrefix}bcchats *<texto>*_
+├➢👑 _${usedPrefix}bcgc *<texto>*_
+├➢👑 _${usedPrefix}cleartpm_
+├➢👑 _${usedPrefix}restart_
+├➢👑 _${usedPrefix}update_
+├➢👑 _${usedPrefix}traba1_ 
+├➢👑 _${usedPrefix}addprem *<@tag>*_
+├➢👑 _${usedPrefix}delprem *<@tag>*_
+├➢👑 _${usedPrefix}listprem_
 └────ׂ─ׂ─ׂ─ׂ───
 
 `.trim()
