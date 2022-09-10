@@ -933,13 +933,11 @@ export async function handler(chatUpdate) {
                 if (!('restrict' in settings)) settings.restrict = false
 		if (!('temporal' in settings)) settings.temporal = false
                 if (!('antiPrivate' in settings)) settings.antiPrivate = false
-		if (!('antiArab' in chat)) chat.antiArab = false
-if (!('antiCall' in settings)) settings.antiCall = false
+                if (!('antiCall' in settings)) settings.antiCall = false
             } else global.db.data.settings[this.user.jid] = {
                 self: false,
                 autoread: false,
-                restrict: false,
-                antiArab: false,
+                restrict: false,                
 		temporal: false,
                 antiPrivate: false,
 		antiCall: false
@@ -1254,7 +1252,7 @@ if (!('antiCall' in settings)) settings.antiCall = false
         } catch (e) {
             console.log(m, m.quoted, e)
         }
-        if (opts['autoread'])
+        /*if (opts['autoread'])
             //await this.chatRead(m.chat, m.isGroup ? m.sender : undefined, m.id || m.key.id).catch(() => { })
 		
 	await this.readMessages([m.key])
@@ -1263,7 +1261,7 @@ if (!('antiCall' in settings)) settings.antiCall = false
         if (!m.fromMem && m.text.match(/(has|ato|ido|ura|des|able|sub|izo|ita|con|.-.|._.|:)|:(|:v|v:|o.o|;v|v;|v':|:'v)/gi)) {
         let emot = pickRandom(["😺", "😸", "😹", "😻", "😼", "😽", "🙀", "😿", "😾", "🤩", "🥰", "😘", "😊", "🥳", "😏", "😳", "🥵", "🤯", "😱", "😨", "🤫", "🥴", "🤧", "🤑", "🤠", "🤖", "👾", "🎃", "👻", "🤡", "🤝", "💪", "👑", "😚", "🐱", "🐈", "🐆", "🐅", "💫", "⭐️", "🌟", "✨", "⚡️", "🌈", "☃️", "⛄️", "🌝", "🌛", "🌜", "🍓", "🍎", "🍭", "🍩", "🍫", "🍧", "🚀", "🚅", "🚄", "🎈", "🪄", "❤️", "🧡", "💛", "💚", "💙", "💜", "🖤", "🤍", "🤎", "💔", "❣️", "💕", "💞", "💓", "💗", "💖", "💘", "💝", "💟", "🌝", "😎", "👻", "🔥", "🖕", "🐦"])
         this.sendMessage(m.chat, { react: { text: emot, key: m.key }})}
-        function pickRandom(list) { return list[Math.floor(Math.random() * list.length)]}
+        function pickRandom(list) { return list[Math.floor(Math.random() * list.length)]}*/
 		
     }
 }
