@@ -68,6 +68,7 @@
         "translate-google-api": "^1.0.4",
         "url-regex-safe": "^3.0.0",
         "wa-sticker-formatter": "^4.3.2",
+        "knights-canvas": "github:hardiantojek93/knights-canvas",
         "yargs": "^17.3.1",
         "yt-search": "^2.10.3"
     }
