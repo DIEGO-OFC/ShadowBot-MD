@@ -893,6 +893,13 @@ export async function handler(chatUpdate) {
                 if (!('audios' in chat)) chat.audios = false                     
 		if (!('antiver' in chat)) chat.antiver = true                    
                 if (!('antiLink' in chat)) chat.antiLink = false                    
+                if (!('antiTiktok' in chat)) chat.antiTiktok = false
+		if (!('antiYoutube' in chat)) chat.antiYoutube = false
+		if (!('antiTelegram' in chat)) chat.antiTelegram = false
+		if (!('antiFacebook' in chat)) chat.antiFacebook = false
+		if (!('antiInstagram' in chat)) chat.antiInstagram = false
+		if (!('antiTwitter' in chat)) chat.antiInstagram = false
+		if (!('antifake' in chat)) chat.antifake = false
                 if (!('antiLink2' in chat)) chat.antiLink2 = false
 		if (!('reaction' in chat)) chat.reaction = true    
                 if (!('viewonce' in chat)) chat.viewonce = false                                 
@@ -918,6 +925,13 @@ export async function handler(chatUpdate) {
 		    antiver: true,
                     antiLink: false,
                     antiLink2: false,
+                    antiTiktok: false,
+		    antiYoutube: false,
+		    antiTelegram: false,
+		    antiFacebook: false,
+		    antiInstagram: false,
+		    antiTwitter: false,
+		    antifake: false,
                     antiTraba: false,
 		    reaction: true,
                     antiArab: false,
@@ -1252,6 +1266,7 @@ export async function handler(chatUpdate) {
         } catch (e) {
             console.log(m, m.quoted, e)
         }
+        //Quita los / y funcionaran las reacciones.
         /*if (opts['autoread'])
             //await this.chatRead(m.chat, m.isGroup ? m.sender : undefined, m.id || m.key.id).catch(() => { })
 		
