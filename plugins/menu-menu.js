@@ -146,8 +146,8 @@ let str = `
 └────ׂ─ׂ─ׂ─ׂ───
 
 ┌「🕋𝐏𝐑𝐄𝐍𝐃𝐄𝐑 𝐘 𝐀𝐏𝐀𝐆𝐀𝐑 」
-├➢❎${usedPrefix}enable *welcome*_
-├➢✅${usedPrefix}disable *welcome*_
+├➢✅${usedPrefix}enable *welcome*_
+├➢❎${usedPrefix}disable *welcome*_
 ├➢✅${usedPrefix}enable *modohorny*_
 ├➢❎${usedPrefix}disable *_modohorny*
 ├➢✅${usedPrefix}enable *antilink*_
@@ -497,7 +497,10 @@ let str = `
 ├➢👑 _${usedPrefix}delprem *<@tag>*_
 ├➢👑 _${usedPrefix}listprem_
 └────ׂ─ׂ─ׂ─ׂ───
+______________________
 
+𝐃𝐎𝐑𝐑𝐀𝐓-𝐁𝐎𝐓-𝐌𝐃 𝐁𝐘 𝐃𝐈𝐄𝐆𝐎-𝐎𝐅𝐂 
+_______________________
 `.trim()
 conn.sendHydrated2(m.chat, str, wm, pp, 'https://github.com/DIEGO-OFC/DORRAT-BOT-MD', '📎𝙶𝙸𝚃𝙷𝚄𝙱', 'https://chat.whatsapp.com/CrsOmirjZNYKrvnQNT98Oo', '💎𝙶𝚁𝚄𝙿𝙾-𝙾𝙵𝙸𝙲𝙸𝙰𝙻💎', [
 ['🛡️ 𝗚𝗥𝗨𝗣𝗢𝗦 🛡️', '/grupos'],
