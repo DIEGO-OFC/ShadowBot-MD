@@ -14,7 +14,7 @@
 [![blog](https://img.shields.io/badge/Grupo-Oficial-25D366?style=for-the-badge&logo=whatsapp&logoColor=white 
 )](https://chat.whatsapp.com/CrsOmirjZNYKrvnQNT98Oo)  <a href="https://chat.whatsapp.com/CrsOmirjZNYKrvnQNT98Oo"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/WhatsApp_logo-color-vertical.svg/1200px-WhatsApp_logo-color-vertical.svg.png" height="29px"></a>
 ---------
-> LOS NUMEROS NO SON BOTS Y EN EL GRUPO NO SE PERMITEN NUMEROS-BOTS
+> GRUPO OFICIAL DEL BOT PARA DIVERSIÓN :)
 
 𝐇𝐎𝐓𝐒 𝐏𝐀𝐑𝐀 𝐓𝐄𝐍𝐄𝐑 𝐄𝐋 𝐁𝐎𝐓 𝟐𝟒/𝟕
 <p align="hihg">   
