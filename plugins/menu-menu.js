@@ -1,6 +1,6 @@
 
 /*******************************************
-*ELLA NO TE AMA
+*              ELLA NO TE AMA
 /********************************************/
 import { xpRange } from '../lib/levelling.js'
 const { levelling } = '../lib/levelling.js'
