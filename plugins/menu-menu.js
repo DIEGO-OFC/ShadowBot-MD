@@ -1,6 +1,6 @@
 
 /*******************************************
-*              ELLA NO TE AMA
+*              DISEÑADO BY DIEGO-OFC 
 /********************************************/
 import { xpRange } from '../lib/levelling.js'
 const { levelling } = '../lib/levelling.js'
@@ -194,24 +194,26 @@ let str = `
 └────ׂ─ׂ─ׂ─ׂ──
 
 ┌──「🏢𝐆𝐑𝐎𝐔𝐏」─
+├➢💎${usedPrefix}advertencia <@tag
 ├➢💎${usedPrefix}add <numero
-├➢📎${usedPrefix}kick <@tag
-├➢🖇️${usedPrefix}grupo <abrir / cerrar
-├➢🗄️${usedPrefix}promote <@tag
-├➢⛓️${usedPrefix}demote <@tag
+├➢💎${usedPrefix}kick <@tag
+├➢💎${usedPrefix}grupo <abrir / cerrar
+├➢💎${usedPrefix}promote <@tag
+├➢💎${usedPrefix}demote <@tag
 ├➢💎${usedPrefix}banchat
-├➢📎${usedPrefix}unbanchat
-├➢🖇️admins *<texto>_ (𝑢𝑠𝑜 𝑠𝑖𝑛 𝑝𝑟𝑒𝑓𝑖𝑗𝑜)
-├➢🗄️${usedPrefix}demote <@tag
-├➢⛓️${usedPrefix}infogroup
+├➢💎${usedPrefix}unbanchat
+├➢💎admins *<texto>_ (𝑢𝑠𝑜 𝑠𝑖𝑛 𝑝𝑟𝑒𝑓𝑖𝑗𝑜)
+├➢💎${usedPrefix}demote <@tag
+├➢💎${usedPrefix}infogroup
 ├➢💎${usedPrefix}link
-├➢📎${usedPrefix}setname <texto
-├➢🖇️${usedPrefix}setdesc <texto
-├➢🗄️${usedPrefix}invocar <texto
-├➢⛓️${usedPrefix}setwelcome <texto
+├➢💎${usedPrefix}setname <texto
+├➢💎${usedPrefix}setdesc <texto
+├➢💎${usedPrefix}invocar <texto
+├➢💎${usedPrefix}setwelcome <texto
 ├➢💎${usedPrefix}setbye <texto
-├➢📎${usedPrefix}hidetag <texto
-├➢🖇️${usedPrefix}simular <welcome / bye / promote / demote>
+├➢💎${usedPrefix}hidetag <texto
+├➢💎${usedPrefix}simular <welcome / bye / promote / demote>
+├➢💎${usedPrefix}destraba 
 └────ׂ─ׂ─ׂ─ׂ───
 
 ┌──「🛡️𝐆𝐈𝐓𝐇𝐔𝐁」─
