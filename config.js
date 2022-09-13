@@ -105,7 +105,7 @@ global.keysxxx = keysZens[Math.floor(keysZens.length * Math.random())]
 global.lolkeysapi = ['85faf717d0545d14074659ad']
 
                  
-//⊱ ━━━━━━━━━━━━━━━━━.⋅ RPG ⋅.━━━━━━━━ ⊰
+//⊱__________________.⋅ RPG ⋅.________ ⊰
 
 global.flaaa = [
 
@@ -153,11 +153,7 @@ global.fgif = {
                               }
                              }
 
-
-
-
-
-//━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ ฅ^•ﻌ•^ฅ
+//_____________________________________
 
 global.multiplier = 999 // Cuanto más alto, más difícil subir de nivel | The higher, The harder levelup 
 
