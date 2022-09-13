@@ -213,7 +213,7 @@ global.rpg = {
       lion: '🦁 León : Lion',
       magicwand: '⚕️ Varita Mágica : Magic Wand',
       mana: '🪄 Hechizo : Spell',
-      money: '💰 DORRATCOINS : CatCoins',
+      money: '💰 DORRATCOINS : BotCoins',
       monyet: '🐒 Mono : Monkey',
       mythic: '🗳️ Caja Mítica : Mythic Box',
       panda: '🐼 Panda',
