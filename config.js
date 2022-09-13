@@ -197,7 +197,7 @@ global.rpg = {
       lion: '🦁 León : Lion',
       magicwand: '⚕️ Varita Mágica : Magic Wand',
       mana: '🪄 Hechizo : Spell',
-      money: '🐱 GataCoins : CatCoins',
+      money: '💰 DORRATCOINS : CatCoins',
       monyet: '🐒 Mono : Monkey',
       mythic: '🗳️ Caja Mítica : Mythic Box',
       panda: '🐼 Panda',
@@ -331,8 +331,8 @@ global.rpgshop = { //Tienda
       berlian: '♦️ Joya : Ruby',
       kyubi: '🌀 Magia : Magic',
       gold: '👑 Oro : Gold',
-      money: '🐱 GataCoins : CatCoins',
-      tiketcoin: '🎫 Gata Tickers',
+      money: '💰 DorratCoins : CatCoins',
+      tiketcoin: '🎫 DORRAT Tickers',
             
       potion: '🥤 Poción : Potion',
       aqua: '💧 Agua : Water',
@@ -415,7 +415,7 @@ global.rpgshopp = { //Tienda
       berlian: '♦️',
       kyubi: '🌀',
       gold: '👑',
-      money: '🐱',
+      money: '💰',
       tiketcoin: '🎫',
             
       potion: '🥤',
