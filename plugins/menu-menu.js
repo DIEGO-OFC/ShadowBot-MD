@@ -1,6 +1,6 @@
 
 /*******************************************
-*              DISEÑADO BY DIEGO-OFC 
+*         DORRAT-BOT-MD BY DIEGO-OFC 
 /********************************************/
 import { xpRange } from '../lib/levelling.js'
 const { levelling } = '../lib/levelling.js'
