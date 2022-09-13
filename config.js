@@ -73,7 +73,7 @@ global.APIKeys = { // APIKey Here
 
 //______________________________________________
 
-global.vs = '1.2.15'
+global.vs = '1.2.27'
 global.version = vs
 // Sticker WM
 global.packname = '(☞ﾟ∀ﾟ)☞'
