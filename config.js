@@ -1,6 +1,7 @@
 import { watchFile, unwatchFile } from 'fs'
 import chalk from 'chalk'
 import { fileURLToPath } from 'url'
+import moment from 'moment-timezone' 
 import fs from 'fs'
 
 //cambia los números que sean propietarios 
@@ -134,6 +135,23 @@ global.htka = '*☪ ••••̩̩͙⊰•⭑*'
 
 global.comienzo = '• • ◕◕════'
 global.fin = '════◕◕ • •'
+
+global.botdate = `⫹⫺ Date :  ${moment.tz('Asia/Jakarta').format('DD/MM/YY')}`
+global.bottime = `𝗧 𝗜 𝗠 𝗘 : ${moment.tz('Asia/Jakarta').format('HH:mm:ss')}`//America/Los_Angeles
+global.fgif = {
+            key: {
+                 participant : '0@s.whatsapp.net'},
+            message: { 
+                        "videoMessage": { 
+                        "title": wm,
+                        "h": `Hmm`,
+                        'seconds': '999999999', 
+                        'gifPlayback': 'true', 
+                        'caption': bottime,
+                        'jpegThumbnail': fs.readFileSync('./menu2.jpg')
+                               }
+                              }
+                             }
 
 
 
