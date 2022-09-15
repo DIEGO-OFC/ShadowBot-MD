@@ -6,6 +6,12 @@ _*${text.toUpperCase()}* *ES 🏳️‍🌈* *${(500).getRandom()}%* *GAY*_
 `.trim(), m, m.mentionedJid ? {
 mentions: m.mentionedJid
 } : {})}
+if (command == 'hetero') {
+conn.reply(m.chat, `
+_*${text.toUpperCase()}* *ES ☭* *${(500).getRandom()}%* *hetero*_
+`.trim(), m, m.mentionedJid ? {
+mentions: m.mentionedJid
+} : {})}
 if (command == 'lesbiana') {
 conn.reply(m.chat, `
 _*${text.toUpperCase()}* *ES 🏳️‍🌈* *${(500).getRandom()}%* *${command.replace('how', '').toUpperCase()}*_
@@ -67,7 +73,7 @@ _*${text.toUpperCase()}* *ES* *${(500).getRandom()}%* *${command.replace('how', 
 mentions: m.mentionedJid
 } : {})}         
 }
-handler.help = ['gay2', 'lesbiana', 'pajero', 'pajera', 'puto', 'puta', 'manco', 'manca', 'rata', 'prostituta', 'prostituto'].map(v => v + ' @tag | nombre')
+handler.help = ['gay2', 'lesbiana', 'pajero', 'pajera', 'puto', 'puta', 'manco', 'manca', 'rata', 'prostituta', 'prostituto', 'hetero'].map(v => v + ' @tag | nombre')
 handler.tags = ['calculator']
-handler.command = /^gay2|lesbiana|pajero|pajera|puto|puta|manco|manca|rata|prostituta|prostituto/i
+handler.command = /^gay2|lesbiana|pajero|pajera|puto|puta|manco|manca|rata|prostituta|prostituto|hetero/i
 export default handler
