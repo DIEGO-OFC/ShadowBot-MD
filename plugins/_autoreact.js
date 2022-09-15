@@ -9,9 +9,9 @@ key: m.key
   
 }
 handler.customPrefix = /(eng)/i
-handler.command = new RegExp*/
+handler.command = new RegExp
 
 
-   //export default handler
-//function pickRandom(list) {
-//return list[Math.floor(Math.random() * list.length)]} 
+export default handler
+function pickRandom(list) {
+return list[Math.floor(Math.random() * list.length)]}*/
