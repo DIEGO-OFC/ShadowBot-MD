@@ -6,6 +6,7 @@ if (!vid) throw '*[❗𝐈𝐍𝐅𝐎❗] 𝙻𝙾 𝚂𝙸𝙴𝙽𝚃𝙾, �
 try {
 let { title, description, thumbnail, videoId, durationH, viewH, publishedTime } = vid
 const url = 'https://www.youtube.com/watch?v=' + videoId
+//m.reply("[⚠️AVISO⚠️] por favor usar el /play sin ningún tipo de spam.")
 conn.sendHydrated(m.chat, `
 ╔═══════❰  *🔰*  ❱══════⬣
 ║ 𝙏𝙄𝙏𝙐𝙇𝙊 | 𝙏𝙄𝙏𝙇𝙀
