@@ -147,6 +147,8 @@ let str = `
 ├➢♟️${usedPrefix}topgays
 ├➢🏓${usedPrefix}topotakus
 ├➢🎲${usedPrefix}formarpareja
+├➢🔰${usedPrefix}formarpareja5 
+├➢🛡️${usedPrefix}amistad
 ├➢🪄${usedPrefix}verdad
 ├➢🎾${usedPrefix}reto
 └────ׂ─ׂ─ׂ─ׂ───
