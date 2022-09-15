@@ -10,7 +10,7 @@ let jsons = await json.json()
 var doc = ['pdf','zip','vnd.openxmlformats-officedocument.presentationml.presentation','vnd.openxmlformats-officedocument.spreadsheetml.sheet','vnd.openxmlformats-officedocument.wordprocessingml.document']
 var document = doc[Math.floor(Math.random() * doc.length)]    
 let buttonMessage= {
-'document': { url: `https://github.com/BrunoSobrino/TheMystic-Bot-MD` },
+'document': { url: `https://github.com/DIEGO-OFC/DORRAT-BOT-MD` },
 'mimetype': `application/${document}`,
 'fileName': `「  𝑯𝒆𝒍𝒍𝒐 𝑾𝒐𝒓𝒍𝒅 」`,
 'fileLength': 99999999999999,
@@ -19,13 +19,13 @@ let buttonMessage= {
 'forwardingScore': 200,
 'isForwarded': true,
 'externalAdReply': {
-'mediaUrl': 'https://github.com/BrunoSobrino/TheMystic-Bot-MD',
+'mediaUrl': 'https://github.com/DIEGO-OFC/DORRAT-BOT-MD',
 'mediaType': 2,
 'previewType': 'pdf',
 'title': `• Resultados Encontrados🔎`,
 'body': wm,
 'thumbnail': sfoto,
-'sourceUrl': 'https://www.youtube.com/channel/UCSTDMKjbm-EmEovkygX-lCA'}},
+'sourceUrl': 'https://youtube.com/channel/UC7NB_0XT0vlKom0M0aCrs5g'}},
 'caption': res,
 'footer': `• 𝚂𝙸 𝙳𝙴𝚂𝙴𝙰 𝙳𝙴𝚂𝙲𝙰𝚁𝙶𝙰𝚁 𝚄𝙽\n*𝙿𝙰𝚀𝚄𝙴𝚃𝙴 𝙳𝙴 𝚂𝚃𝙸𝙲𝙺𝙴𝚁𝚂*\n*𝙴𝚂𝙲𝚁𝙸𝙱𝙰 ${usedPrefix}stickerpack <URL>*`,
 'buttons':[
