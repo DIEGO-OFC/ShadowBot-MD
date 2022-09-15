@@ -128,13 +128,13 @@ let str = `
 
 💗 *¡HOLA | HI!* ${name}
 ╭━━〔 *${wm}* 〕━━⬣
-┃🧸🧸🧸🧸🧸🧸🧸🧸🧸 
+┃🌌🌌🌌🌌🌌🌌🌌🌌🌌
 ┃✪ *EXPERIENCIA | EXP ➺ ${exp}*
 ┃✪ *NIVEL | LEVEL ➺ ${level}*
 ┃┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 ┃✪ *FECHA ➺ ${week}, ${date}*
 ┃✪ *USUARIOS | USERS ➺ ${Object.keys(global.db.data.users).length}* 
-┃🧸🧸🧸🧸🧸🧸🧸🧸🧸 
+┃🌌🌌🌌🌌🌌🌌🌌🌌🌌
 ╰━━━━━━〔 🔰 *${vs}* 〕━━━━━━⬣
 
 ┌──「🌌𝐒𝐓𝐈𝐂𝐊𝐄𝐑」─
@@ -164,13 +164,13 @@ let str = `
 ├➢🌠 _${usedPrefix}stickerfilter *<efecto> <responder a imagen>*_ 
 └────ׂ─ׂ─ׂ─ׂ───`.trim()
 
-conn.sendHydrated2(m.chat, str, wm, pp, 'https://www.paypal.me/TheShadowBrokers133', '𝙿𝙰𝚈𝙿𝙰𝙻', 'https://github.com/BrunoSobrino/TheMystic-Bot-MD', '𝙶𝙸𝚃𝙷𝚄𝙱', [
+conn.sendHydrated2(m.chat, str, wm, pp, 'https://www.paypal.me/TheShadowBrokers133', '𝙿𝙰𝚈𝙿𝙰𝙻', 'https://github.com/DIEGO-OFC/DORRAT-BOT-MD', '𝙶𝙸𝚃𝙷𝚄𝙱', [
 
-['📮 𝙳𝙾𝙽𝙰𝚁 📮', '/donasi'],
+['💎 𝙶𝚁𝚄𝙿𝙾𝚂 𝙾𝙵𝙸𝙲𝙸𝙰𝙻𝙴𝚂 💎', '/grupos'],
 
-['🌹 𝙾𝚆𝙽𝙴𝚁 🌹', '/owner'],
+['🤴 𝙾𝚆𝙽𝙴𝚁S 🤴', '/owner'],
 
-['🐾 𝙸𝙽𝙵𝙾𝙱𝙾𝚃 🐾', '/infobot']
+['🔰 𝙸𝙽𝙵𝙾𝙱𝙾𝚃 🔰', '/infobot']
 
 ], m,)
 
