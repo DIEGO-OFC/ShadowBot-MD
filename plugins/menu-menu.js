@@ -1,6 +1,6 @@
 
-/*******************************************
-*         DORRAT-BOT-MD BY DIEGO-OFC 
+/********************************************
+*         DORRAT-BOT-MD BY DIEGO-OFC        *
 /********************************************/
 import { xpRange } from '../lib/levelling.js'
 const { levelling } = '../lib/levelling.js'
@@ -124,10 +124,12 @@ let str = `
 └────ׂ─ׂ─ׂ─ׂ───
 
 ┌──「🎮𝐆𝐀𝐌𝐄」─
+├➢🌠${usedPrefix}suitpvp @tag
 ├➢🎡${usedPrefix}mates <noob / easy / medium / hard / extreme /impossible /impossible2>
 ├➢🎪${usedPrefix}ppt <papel / tijera /piedra
 ├➢🎾${usedPrefix}prostituto <nombre / @tag
 ├➢⛳${usedPrefix}prostituta <nombre / @tag
+├➢⚓${usedPrefix}hetero <nombre / @tag
 ├➢🥌${usedPrefix}gay2 <nombre / @tag
 ├➢🪀${usedPrefix}lesbiana <nombre / @tag
 ├➢🔫${usedPrefix}pajero <nombre / @tag
