@@ -187,6 +187,7 @@ throw false
 global.opts['nyimak'] = isEnable
 break
 case 'autoread':
+case 'autovisto':
 isAll = true
 if (!isROwner) {
 global.dfail('rowner', m, conn)
