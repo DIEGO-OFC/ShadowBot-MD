@@ -89,16 +89,16 @@ text: `
 ╭─────────────────────❀\n│${ucapan()}\n│💚•.¸💚¸.• *${name}* •.¸💚¸.•💚\n╰─────────────────────
 
 ╔═══〔 *${wm}* 〕═══⬣
-║ ⏱️ ▢ *Hora actual | Current Time*	    
+║ ⏱️ ▢ *Hora*    
 ║ ⌚ ▢ ${time}   
 ║┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
-║ ⚡ ▢ *Activo durante | Active during* 
+║ ⚡ ▢ *Activo durante*
 ║ ⚡ ▢ ${uptime}
 ║┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 ║ 💎 ▢ *Versión de 𝑫𝑶𝑹𝑹𝑯∆𝑻=𝑩𝑶𝑻*
 ║ 💎 ▢ ${vs}
 ║┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
-║ 👥 ▢ *Usuario(s) | Users*
+║ 👥 ▢ *Usuario(s)*
 ║ 💫 ▢ ${Object.keys(global.db.data.users).length} 
 ║┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 ╚══════════════════⬣`, footer: `${wm}`, 
@@ -142,29 +142,29 @@ function ucapan() {
 
   const time = moment.tz('America/Los_Angeles').format('HH')  //America/Los_Angeles  Asia/Jakarta   America/Toronto
 
-  let res = "🌉Buenas madrugadas|Good early morning🌠"
+  let res = "🌉Buenas madrugadas"
 
   if (time >= 4) {
 
-    res = "🌇Buenos Días|Good Morning⛅"
+    res = "🌇Buenos Días"
 
   }
 
   if (time >= 11) {
 
-    res = "🏙️Buenas Tardes|Good Afternoon🌤️"
+    res = "🏙️Buenas Tardes"
 
   }
 
   if (time >= 15) {
 
-    res = "🌆Buenas tardes|Good Afternoon🌥️"
+    res = "🌆Buenas tardes"
 
   }
 
   if (time >= 17) {
 
-    res = "🌃Buenas noches|Good Evening💫"
+    res = "🌃Buenas noches"
 
   }
 
