@@ -45,6 +45,7 @@ setTimeout(resolve, 1000)
 }
 let muptime = clockString(_muptime)
 let uptime = clockString(_uptime)
+let { money} = global.db.data.users[m.sender]
 let totalreg = Object.keys(global.db.data.users).length
 let rtotalreg = Object.values(global.db.data.users).filter(user => user.registered == true).length
 let replace = {
