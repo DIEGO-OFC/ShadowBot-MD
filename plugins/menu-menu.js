@@ -13,6 +13,7 @@ let vn = './media/menu.mp3'
 let pp = './Menu2.jpg'
 let _package = JSON.parse(await promises.readFile(join(__dirname, '../package.json')).catch(_ => ({}))) || {}
 let { exp, limit, level, role } = global.db.data.users[m.sender]
+let {money} = global.db.data.users[m.sender]
 let { min, xp, max } = xpRange(level, global.multiplier)
 let name = await conn.getName(m.sender)
 let d = new Date(new Date + 3600000)
@@ -45,7 +46,6 @@ setTimeout(resolve, 1000)
 }
 let muptime = clockString(_muptime)
 let uptime = clockString(_uptime)
-let { money} = global.db.data.users[m.sender]
 let totalreg = Object.keys(global.db.data.users).length
 let rtotalreg = Object.values(global.db.data.users).filter(user => user.registered == true).length
 let replace = {
