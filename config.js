@@ -3,7 +3,6 @@ import chalk from 'chalk'
 import { fileURLToPath } from 'url'
 import moment from 'moment-timezone' 
 import fs from 'fs'
-import { generateWAMessageFromContent } from '@adiwajshing/baileys'
 
 //cambia los números que sean propietarios 
 global.owner = [
@@ -14,37 +13,11 @@ global.owner = [
   ['19786077075'],
   ['51936767238'],
   ['584125778026']
-] 
+
+] Lo
 global.suittag = ['593959425714'] 
-global.prems = ['584125778026'] 
-
-global.vs = '1.2.27'
-global.version = vs
-//------------- Sticker WM -----------
-global.packname = '(☞ﾟ∀ﾟ)☞'
-global.author = '†𝐃⃟𝕺𝐑⃯𝐑𝐇⃯𝚵𝐓᪣𝕭⃯𝚹⃯𝐓⃤'
-global.wm = '†𝐃⃟𝕺𝐑⃯𝐑𝐇⃯𝚵𝐓᪣𝕭⃯𝚹⃯𝐓⃤ | 𝘿𝙄𝙀𝙂𝙊-𝙊𝙁𝘾'
-global.igfg = '†𝐃⃟𝕺𝐑⃯𝐑𝐇⃯𝚵𝐓᪣𝕭⃯𝚹⃯𝐓⃤'
-global.wait = '*[❗] Ƈᴀʀɢᴀɴᴅᴏ, ᴀɢᴜᴀʀᴅᴇ ᴜɴ ᴍᴏᴍᴇɴᴛᴏ...*'
-//-------------------
-global.md = 'https://chat.whatsapp.com/CrsOmirjZNYKrvnQNT98Oo'
-global.dorramd = md
-
-//_____________________________________________
-
-global.ag = '━━━━━━━ ❎ 𝙰𝙳𝚅𝙴𝚁𝚃𝙴𝙽𝙲𝙸𝙰 | 𝚆𝙰𝚁𝙽𝙸𝙽𝙶 ❎ ━━━━━━━━━'
-global.advertencia = ag
-global.fg = '☆━━━━━━━ ⚠️ 𝙵𝙰𝙻𝙻𝙾 | 𝙵𝙰𝙻𝙻 ⚠️ ━━━━━━☆'
-global.fallo = fg
-global.mg = '══ ❎ 𝙻𝙾 𝚄𝚂𝙾 𝙼𝙰𝙻 ❎ ══'
-global.mal = mg
-global.dorre = 'DORRAT-BOT-MD'
-global.DORRA = dorre
-//---------------
-
-global.keysZens = ['fiktod', 'c2459db922', 'BF39D349845E', '675e34de8a', '37CC845916', '0b917b905e6f', '6fb0eff124']
-global.keysxxx = keysZens[Math.floor(keysZens.length * Math.random())]
-global.lolkeysapi = ['85faf717d0545d14074659ad']
+global.mods = [] 
+global.prems = [] 
 
 global.APIs = { // API Prefix
   // name: 'https://website'
@@ -98,14 +71,38 @@ global.APIKeys = { // APIKey Here
   'https://violetics.pw': 'beta'
 }
 
+//______________________________________________
+
+global.vs = '1.2.27'
+global.version = vs
+//------------- Sticker WM -----------
+global.packname = '(☞ﾟ∀ﾟ)☞'
+global.author = '†𝐃⃟𝕺𝐑⃯𝐑𝐇⃯𝚵𝐓᪣𝕭⃯𝚹⃯𝐓⃤'
+global.wm = '†𝐃⃟𝕺𝐑⃯𝐑𝐇⃯𝚵𝐓᪣𝕭⃯𝚹⃯𝐓⃤ | 𝘿𝙄𝙀𝙂𝙊-𝙊𝙁𝘾'
+global.igfg = '†𝐃⃟𝕺𝐑⃯𝐑𝐇⃯𝚵𝐓᪣𝕭⃯𝚹⃯𝐓⃤'
+global.wait = '*[❗] Ƈᴀʀɢᴀɴᴅᴏ, ᴀɢᴜᴀʀᴅᴇ ᴜɴ ᴍᴏᴍᴇɴᴛᴏ...*'
+//-------------------
+global.md = 'https://chat.whatsapp.com/CrsOmirjZNYKrvnQNT98Oo'
+global.dorramd = md
+
+//_____________________________________________
+
+global.ag = '━━━━━━━ ❎ 𝙰𝙳𝚅𝙴𝚁𝚃𝙴𝙽𝙲𝙸𝙰 | 𝚆𝙰𝚁𝙽𝙸𝙽𝙶 ❎ ━━━━━━━━━'
+global.advertencia = ag
+global.fg = '☆━━━━━━━ ⚠️ 𝙵𝙰𝙻𝙻𝙾 | 𝙵𝙰𝙻𝙻 ⚠️ ━━━━━━☆'
+global.fallo = fg
+global.mg = '══ ❎ 𝙻𝙾 𝚄𝚂𝙾 𝙼𝙰𝙻 ❎ ══'
+global.mal = mg
+global.dorre = 'DORRAT-BOT-MD'
+global.DORRA = dorre
+//---------------
 global.imagen1 = fs.readFileSync('./Menu2.jpg')
 global.imagen2 = fs.readFileSync('./src/nuevobot.jpg') 
 global.imagen3 = fs.readFileSync('./src/Pre Bot Publi.png')
-
-global.generateWAMessageFromContent = generateWAMessageFromContent
-
-global.mods = [] 
-
+global.keysZens = ['fiktod', 'c2459db922', 'BF39D349845E', '675e34de8a', '37CC845916', '0b917b905e6f', '6fb0eff124']
+global.keysxxx = keysZens[Math.floor(keysZens.length * Math.random())]
+global.lolkeysapi = ['85faf717d0545d14074659ad']
+                
 //⊱__________________.⋅ RPG ⋅.________ ⊰
 
 global.flaaa = [
@@ -502,10 +499,12 @@ global.rpgshopp = { //Tienda
     if (!results.length) return ''
     else return emotttt[results[0][0]]
   }
-}
+} Lo
+
 
 let file = fileURLToPath(import.meta.url)
 watchFile(file, () => {
-unwatchFile(file)
-console.log(chalk.redBright("Update 'config.js'"))
-import(`${file}?update=${Date.now()}`)})
+  unwatchFile(file)
+  console.log(chalk.redBright("Update 'config.js'"))
+  import(`${file}?update=${Date.now()}`)
+})
