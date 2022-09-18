@@ -30,7 +30,6 @@
         "@adiwajshing/baileys": "github:DIEGO-OFC/Baileys",
         "@bochilteam/scraper": "^3.0.0",
         "acrcloud": "^1.4.0",
-        "fg-ig": "^0.0.1",
         "awesome-phonenumber": "^2.68.0",
         "axios": "^0.24.0",
         "cfonts": "^2.10.0",
@@ -39,6 +38,7 @@
         "colors": "1.4.0",
         "emoji-api": "^1.0.2",
         "express": "^4.17.3",
+        "fg-ig": "^0.0.1",
         "file-type": "^17.1.1",
         "fluent-ffmpeg": "^2.1.2",
         "fs": "^0.0.1-security",
@@ -68,9 +68,7 @@
         "translate-google-api": "^1.0.4",
         "url-regex-safe": "^3.0.0",
         "wa-sticker-formatter": "^4.3.2",
-        "knights-canvas": "github:hardiantojek93/knights-canvas",
         "yargs": "^17.3.1",
         "yt-search": "^2.10.3"
     }
 }
-
