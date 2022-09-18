@@ -3,7 +3,6 @@ import chalk from 'chalk'
 import { fileURLToPath } from 'url'
 import moment from 'moment-timezone' 
 import fs from 'fs'
-import { generateWAMessageFromContent } from '@adiwajshing/baileys'
 
 //cambia los números que sean propietarios 
 global.owner = [
@@ -103,7 +102,7 @@ global.imagen3 = fs.readFileSync('./src/Pre Bot Publi.png')
 global.keysZens = ['fiktod', 'c2459db922', 'BF39D349845E', '675e34de8a', '37CC845916', '0b917b905e6f', '6fb0eff124']
 global.keysxxx = keysZens[Math.floor(keysZens.length * Math.random())]
 global.lolkeysapi = ['85faf717d0545d14074659ad']
-global.generateWAMessageFromContent = generateWAMessageFromContent                
+                
 //⊱__________________.⋅ RPG ⋅.________ ⊰
 
 global.flaaa = [
