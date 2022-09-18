@@ -499,7 +499,7 @@ global.rpgshopp = { //Tienda
     if (!results.length) return ''
     else return emotttt[results[0][0]]
   }
-} Lo
+} 
 
 
 let file = fileURLToPath(import.meta.url)
