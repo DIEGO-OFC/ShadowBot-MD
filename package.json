@@ -1,7 +1,7 @@
 {
-    "name": "DORR∆T-BOT-MD",
+    "name": "TheMystic-Bot-MD",
     "version": "1.0.0",
-    "description": "Subscribete al canal de YT Diegogameplays82",
+    "description": "Subscribete al canal de YT The Shadow Borkers",
     "main": "index.js",
     "type": "module",
     "directories": {
@@ -14,20 +14,20 @@
         "test": "node test.js",
         "test2": "nodemon index.js"
     },
-    "homepage": "https://github.com/DIEGO-OFC/DORRAT-BOT-MD",
+    "homepage": "https://github.com/BrunoSobrino/TheMystic-Bot-MD",
     "author": {
-        "name": "DIEGO-OFC"
+        "name": "BrunoSobrino"
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/DIEGO-OFC/DORRAT-BOT-MD.git"
+        "url": "git+https://github.com/BrunoSobrino/TheMystic-Bot-MD.git"
     },
     "bugs": {
-        "url": "https://github.com/DIEGO-OFC/DORRAT-BOT-MD/issues"
+        "url": "https://github.com/BrunoSobrino/TheMystic-Bot-MD/issues"
     },
     "license": "GPL-3.0-or-later",
     "dependencies": {
-        "@adiwajshing/baileys": "github:DIEGO-OFC/Baileys",
+        "@adiwajshing/baileys": "github:BrunoSobrino/baileys",
         "@bochilteam/scraper": "^3.0.0",
         "acrcloud": "^1.4.0",
         "awesome-phonenumber": "^2.68.0",
