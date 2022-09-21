@@ -363,6 +363,7 @@ let str = `
 └────ׂ─ׂ─ׂ─ׂ──
 
 ┌「🔍𝐁𝐮𝐬𝐜𝐚𝐫」
+├➢🔍 _${usedPrefix}playstore <*texto*>
 ├➢🔍 _${usedPrefix}stickersearch *<texto>*_
 ├➢🔍 _${usedPrefix}xnxxsearch *<texto>*_
 ├➢🔍 _${usedPrefix}animeinfo *<texto>*_
@@ -433,6 +434,7 @@ let str = `
 
 
 ┌──「🛠️𝐇𝐄𝐑𝐑𝐀𝐌𝐈𝐄𝐍𝐓𝐀𝐒」─
+├➢🛠️ _${usedPrefix}encuestas texto|texto 
 ├➢🛠️ _${usedPrefix}afk *<motivo>*_
 ├➢🛠️ _${usedPrefix}ocr *<responde a imagen>*_
 ├➢🛠️ _${usedPrefix}acortar *<enlace / link / url>*_
