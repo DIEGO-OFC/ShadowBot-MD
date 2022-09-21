@@ -538,7 +538,7 @@ handler.command = /^(menucompleto|allmenu|allm\?)$/i
 handler.register = true
 handler.exp = 50
 handler.fail = null
-
+m.react('✅')
 export default handler
 
 
