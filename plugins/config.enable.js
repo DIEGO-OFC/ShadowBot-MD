@@ -255,7 +255,7 @@ throw false
 }}
 chat.antiTraba = isEnable
 break
-case 'antiArab':
+case 'antiarabes':
 if (m.isGroup) {
 if (!(isAdmin || isOwner)) {
 global.dfail('admin', m, conn)
