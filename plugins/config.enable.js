@@ -60,8 +60,8 @@ footer: `┏━━━━━━━━━━━━━┓
 ┣ ඬ⃟ℹ️ _${usedPrefix}disable *antitoxic*_
 ┣ ඬ⃟ℹ️ _${usedPrefix}enable *antitraba*_
 ┣ ඬ⃟ℹ️ _${usedPrefix}disable *antitraba*_
-┣ ඬ⃟ℹ️ _${usedPrefix}enable *antifake*_
-┣ ඬ⃟ℹ️ _${usedPrefix}disable *antifake*_
+┣ ඬ⃟ℹ️ _${usedPrefix}enable *antiArab*_
+┣ ඬ⃟ℹ️ _${usedPrefix}disable *antiArab*_
 ┗━━━━━━━━━━━━━┛`,
 title: null,
 buttonText: "𝐒𝐄𝐋𝐄𝐂𝐂𝐈𝐎𝐍𝐄 𝐀𝐐𝐔𝐢",
