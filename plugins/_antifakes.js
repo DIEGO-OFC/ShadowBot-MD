@@ -15,7 +15,7 @@ if (m.sender.startsWith('265' || '265')) {
 global.db.data.users[m.sender].banned = true
 m.reply(`💥 Antifakes está activo para evitar spam\n\nHasta la próxima`)
 await conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')} 
-
+}
 if (m.sender.startsWith('92' || '92')) {
 global.db.data.users[m.sender].banned = true
 m.reply(`💥 Antifakes está activo para evitar spam\n\nHasta la próxima`)
