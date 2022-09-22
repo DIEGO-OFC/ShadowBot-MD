@@ -175,8 +175,8 @@ let str = `
 ├➢✅${usedPrefix}enable *antiviewonce*_ 
 ├➢✅${usedPrefix}enable *antitraba*_
 ├➢❎${usedPrefix}disable *antitraba*_
-├➢✅${usedPrefix}enable *antiarabes*_
-├➢❎${usedPrefix}disable *antiarabes*_
+├➢✅${usedPrefix}enable *antifake*_
+├➢❎${usedPrefix}disable *antifake*_
 └────ׂ─ׂ─ׂ─ׂ───
 
 ┌─「💻𝐃𝐎𝐖𝐍𝐋𝐎𝐀𝐃𝐄𝐑」
