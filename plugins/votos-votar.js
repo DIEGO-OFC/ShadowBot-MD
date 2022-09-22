@@ -33,7 +33,7 @@ ${upvote.map((v, i) => `• ${i + 1}.  @${v.split`@`[0]}`).join('\n')}
 *Total:* ${devote.length}
 ${devote.map((v, i) => `• ${i + 1}.  @${v.split`@`[0]}`).join('\n')}
 `
-conn.sendButton(m.chat, caption, wm, false, [['𝙵𝙰𝚅𝙾𝚁✅', `/${command}`], ['𝙲𝙾𝙽𝚃𝚁𝙰❌', `/${command}`]], fakemsg, { mentions: conn.parseMention(caption) })
+conn.sendButton(m.chat, caption, wm, false, [['𝙵𝙰𝚅𝙾𝚁✅', `/${command}`], ['𝙲𝙾𝙽𝚃𝚁𝙰❌', `/${command}`]], m, { mentions: conn.parseMention(caption) })
 } catch {
     m.reply('⚠️ *_𝐍𝐨 𝐚𝐡𝐢́ 𝐯𝐨𝐭𝐚𝐜𝐢𝐨𝐧𝐞𝐬 𝐚𝐜𝐭𝐢𝐯𝐚𝐬 𝐞𝐧 𝐞𝐬𝐭𝐞 𝐠𝐫𝐮𝐩𝐨 ._*')
   }
