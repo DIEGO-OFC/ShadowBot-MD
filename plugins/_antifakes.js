@@ -6,7 +6,7 @@ if (!m.isGroup) return !1
 let chat = global.db.data.chats[m.chat]
 
 if (isBotAdmin && chat.antifake) {
-		
+
 if (m.sender.startsWith('212' || '212')) {
    	global.db.data.users[m.sender].banned = false
 conn.reply('Antifake  Activado lo siento seras expulsado del grupo.😄')
