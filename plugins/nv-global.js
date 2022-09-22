@@ -240,6 +240,13 @@ let vn = './media/wtf.mp3'
 this.sendPresenceUpdate('recording', m.chat) 
 
 this.sendFile(m.chat, vn, 'error.mp3', null, m, true, {type: 'audioMessage', ptt: true})}    
+
+if (!chat.isBanned && chat.audios && m.text.match(/(no digas mamadas|no digas mamadas Mariyein|mamadas)/gi)) {   
+let vn = './media/mmds.mp3'
+this.sendPresenceUpdate('recording', m.chat) 
+
+this.sendFile(m.chat, vn, 'error.mp3', null, m, true, {type: 'audioMessage', ptt: true})}
+
     
 return !0 }
 export default handler
