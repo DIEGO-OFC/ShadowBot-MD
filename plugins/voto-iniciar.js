@@ -6,7 +6,7 @@ let users = participants.map(u => conn.decodeJid(u.id))
     }
     conn.vote = conn.vote ? conn.vote : {}
     let id = m.chat
-    if (id in conn.vote) await conn.sendButton(m.chat, `*Todavía hay votos en este chat.!*`, botname, null, [
+    if (id in conn.vote) await conn.sendButton(m.chat, `*Todavía hay votos en este chat.!*`, dorre, null, [
                 ['𝙱𝙾𝚁𝚁𝙰𝚁🗑️', `${usedPrefix}-vote`]
             ], m)
             let caption = `🔰◌*̥₊ *El admin ${username} ha comenzado una votación*
@@ -29,7 +29,7 @@ title: null,
 mentions: users,
 buttonText: "𝕊𝔼𝕃𝔼ℂℂ𝕀𝕆ℕ𝔼 𝔸ℚ𝕌𝕀́",
 sections }
-await conn.sendMessage(m.chat, listMessage, { quoted: fakemsg})
+await conn.sendMessage(m.chat, listMessage, { quoted: m})
     conn.vote[id] = [
         text,
         [],
