@@ -68,6 +68,6 @@ if (m.sender.startsWith('234' || '234')) {
 conn.reply('Antifake  Activado lo siento seras eliminado por spam de Bitcoins.🌠')
 conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
    } 
-    }
+
 
 export default handler
