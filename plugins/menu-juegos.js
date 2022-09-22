@@ -130,30 +130,31 @@ let str = `
 └────ׂ─ׂ─ׂ─ׂ───
 
 ┌──「🎮𝐆𝐀𝐌𝐄S」─
-├❏🎡${usedPrefix}mates <noob / easy / medium / hard / extreme /impossible /impossible2>
-├❏🎪${usedPrefix}ppt <papel / tijera /piedra
-├❏🎾${usedPrefix}prostituto <nombre / @tag
-├❏🏆${usedPrefix}suitpvp <nombre / @tag
-├❏⛳${usedPrefix}prostituta <nombre / @tag
-├❏🥌${usedPrefix}gay2 <nombre / @tag
-├❏🪀${usedPrefix}lesbiana <nombre / @tag
-├❏🔫${usedPrefix}pajero <nombre / @tag
-├❏🕹️${usedPrefix}pajera <nombre / @tag
-├❏🧩${usedPrefix}puto <nombre / @tag
-├❏🎮${usedPrefix}puta <nombre / @tag
-├❏🪁${usedPrefix}manco <nombre / @tag
-├❏🪃${usedPrefix}manca <nombre / @tag
-├❏🎱${usedPrefix}rata <nombre / @tag
-├❏🎯${usedPrefix}love <nombre / @tag
-├❏🏹${usedPrefix}doxear <nombre / @tag
-├❏🥏${usedPrefix}pregunta <texto
-├❏🛹${usedPrefix}slot <apuesta
-├❏🎳${usedPrefix}simi <texto
-├❏♟️${usedPrefix}topgays
-├❏🏓${usedPrefix}topotakus
-├❏🎲${usedPrefix}formarpareja
-├❏🪄${usedPrefix}verdad
-├❏🎾${usedPrefix}reto
+├➢💥${usedPrefix}suitpvp <@tag>
+├➢🎡${usedPrefix}mates <noob / easy / medium / hard / extreme /impossible /impossible2>
+├➢🎪${usedPrefix}ppt <papel / tijera /piedra
+├➢🎾${usedPrefix}prostituto <nombre / @tag
+├➢🏆${usedPrefix}suitpvp <nombre / @tag
+├➢⛳${usedPrefix}prostituta <nombre / @tag
+├➢🥌${usedPrefix}gay2 <nombre / @tag
+├➢🪀${usedPrefix}lesbiana <nombre / @tag
+├➢🔫${usedPrefix}pajero <nombre / @tag
+├➢🕹️${usedPrefix}pajera <nombre / @tag
+├➢🧩${usedPrefix}puto <nombre / @tag
+├➢🎮${usedPrefix}puta <nombre / @tag
+├➢🪁${usedPrefix}manco <nombre / @tag
+├➢🪃${usedPrefix}manca <nombre / @tag
+├➢🎱${usedPrefix}rata <nombre / @tag
+├➢🎯${usedPrefix}love <nombre / @tag
+├➢🏹${usedPrefix}doxear <nombre / @tag
+├➢🥏${usedPrefix}pregunta <texto
+├➢🛹${usedPrefix}slot <apuesta
+├➢🎳${usedPrefix}simi <texto
+├➢♟️${usedPrefix}topgays
+├➢🏓${usedPrefix}topotakus
+├➢🎲${usedPrefix}formarpareja
+├➢🪄${usedPrefix}verdad
+├➢🎾${usedPrefix}reto
 └────ׂ─ׂ─ׂ─ׂ───
 
 `.trim()
