@@ -128,7 +128,7 @@ let str = `
 └────ׂ─ׂ─ׂ─ׂ───
 
 ┌──「🎮𝐆𝐀𝐌𝐄」─
-├➢🌠${usedPrefix}suitpvp @tag
+├➢🌠${usedPrefix}suitpvp <@tag>
 ├➢🎡${usedPrefix}mates <noob / easy / medium / hard / extreme /impossible /impossible2>
 ├➢🎪${usedPrefix}ppt <papel / tijera /piedra
 ├➢🎾${usedPrefix}prostituto <nombre / @tag
@@ -202,6 +202,7 @@ let str = `
 └────ׂ─ׂ─ׂ─ׂ──
 
 ┌──「🏢𝐆𝐑𝐎𝐔𝐏」─
+├➢💎${usedPrefix}votar *<texto>*
 ├➢💎${usedPrefix}advertencia <@tag
 ├➢💎${usedPrefix}add <numero
 ├➢💎${usedPrefix}kick <@tag
