@@ -8,9 +8,6 @@ let handler = async (m, { conn, usedPrefix, usedPrefix: _p, __dirname, text }) =
 try {
 let vn = './media/menu.mp3'
 let pp = './Menu2.jpg'
-let { exp, limit, level, role } = global.db.data.users[m.sender]
-let { min, xp, max } = xpRange(level, global.multiplier)
-let { money, joincount } = global.db.data.users[m.sender]
 let img = await(await fetch('https://www.paidmembershipspro.com/wp-content/uploads/2017/07/PayPal-Express.png')).buffer()
 let d = new Date(new Date + 3600000)
 let locale = 'es'
@@ -31,14 +28,6 @@ let str = `
 *║ ▢ 𝐋𝐄𝐍𝐆𝐔𝐀𝐉𝐄 » 𝐄𝐒𝐏𝐀𝐍̃𝐎𝐋
 *║ ▢ 𝐔𝐒𝐔𝐀𝐑𝐈𝐎𝐒 » ${Object.keys(global.db.data.users).length}*
 *╚════════════════════════⬣
-
-*╭━〔*${name}*〕━━⬣*
-*┆🧰 EXPERIENCIA ➟ ${exp}*
-*┆💎 DIAMANTES ➟ ${limit}*
-*┆💰 DORRATCOINS ➟ ${money}*
-*┆⚓ RANGO ➟* ${role}*
-*┆🎟️ PREMIUM ➟* ${global.prem ? '✅' : '❌'}
-*╰*┅┅┅┅┅┅┅┅┅┅┅┅┅ *✧*
 
 *╭━〔 INFORMACIÓN DE DORR∆T-BOT 〕━⬣*
  ┃ 🔰 _${usedPrefix}grupos_
@@ -476,9 +465,9 @@ let str = `
  ━━━━━━━━━━━━━━━━━━━━━━━━━
 `.trim()
 let buttons = [
-{ buttonId: '#grupos', buttonText: { displayText: '🔰 𝙶𝚁𝚄𝙿𝙾𝚂 🔰' }, type: 1 },
-{ buttonId: '#owner', buttonText: { displayText: '🤴 𝙾𝚆𝙽𝙴𝚁 🤴' }, type: 1 }]
-//{ buttonId: '#infobot', buttonText: { displayText: '📦 𝙸𝙽𝙵𝙾𝙱𝙾𝚃 📦' }, type: 1 }]
+{ buttonId: '#donar', buttonText: { displayText: '📮 𝙳𝙾𝙽𝙰𝚁 📮' }, type: 1 },
+{ buttonId: '#owner', buttonText: { displayText: '🌹 𝙾𝚆𝙽𝙴𝚁 🌹' }, type: 1 }]
+//{ buttonId: '#infobot', buttonText: { displayText: '🐾 𝙸𝙽𝙵𝙾𝙱𝙾𝚃 🐾' }, type: 1 }]
 let buttonMessage = {
 image: imagen1,
 caption: str.trim(),
@@ -492,17 +481,17 @@ externalAdReply: {
 showAdAttribution: true,
 mediaType: 'VIDEO',
 mediaUrl: null,
-title: '👑 𝐃𝐎𝐑𝐑𝐀𝐓-𝐁𝐎𝐓-𝐌𝐃 👑',
+title: '👑 𝐓𝐇𝐄 𝐌𝐘𝐒𝐓𝐈𝐂 - 𝐁𝐎𝐓 👑',
 body: null,
 thumbnail: img,
-sourceUrl: `https://chat.whatsapp.com/CrsOmirjZNYKrvnQNT98Oo`
+sourceUrl: `https://www.paypal.me/TheShadowBrokers133`
 }}}
 conn.sendMessage(m.chat, buttonMessage, { quoted: m })
 //await conn.sendFile(m.chat, vn, 'menu.mp3', null, m, true, { type: 'audioMessage', ptt: true})
 } catch {
 conn.reply(m.chat, '*[❗𝐈𝐍𝐅𝐎❗] 𝙴𝙻 𝙼𝙴𝙽𝚄 𝚃𝙸𝙴𝙽𝙴 𝚄𝙽 𝙴𝚁𝚁𝙾𝚁 𝚈 𝙽𝙾 𝙵𝚄𝙴 𝙿𝙾𝚂𝙸𝙱𝙻𝙴 𝙴𝙽𝚅𝙸𝙰𝚁𝙻𝙾, 𝚁𝙴𝙿𝙾𝚁𝚃𝙴𝙻𝙾 𝙰𝙻 𝙿𝚁𝙾𝙿𝙸𝙴𝚃𝙰𝚁𝙸𝙾 𝙳𝙴𝙻 𝙱𝙾𝚃*', m)
 }}
-handler.command = /^(allmenu|menucompleto)$/i
+handler.command = /^(menu|menú|memu|memú|help|info|comandos|allmenu|2help|menu1.2|ayuda|commands|commandos|cmd)$/i
 handler.exp = 50
 handler.fail = null
 export default handler
