@@ -11,6 +11,7 @@ let handler = async (m, { conn, usedPrefix, usedPrefix: _p, __dirname, text }) =
 try {
 let vn = './media/menu.mp3'
 let pp = './Menu2.jpg'
+let img = await(await fetch('/.Menu2.jpg')).buffer()
 let _package = JSON.parse(await promises.readFile(join(__dirname, '../package.json')).catch(_ => ({}))) || {}
 let { exp, limit, level, role } = global.db.data.users[m.sender]
 let {money} = global.db.data.users[m.sender]
@@ -518,64 +519,39 @@ let str = `
 ┃𝐃𝐎𝐑𝐑𝐀𝐓-𝐁𝐎𝐓-𝐌𝐃 𝐁𝐘 𝐃𝐈𝐄𝐆𝐎-𝐎𝐅𝐂┃
  ━━━━━━━━━━━━━━━━━━━━━━━━━
 `.trim()
-conn.sendHydrated2(m.chat, str, wm, pp, 'https://github.com/DIEGO-OFC/DORRAT-BOT-MD', '📎𝙶𝙸𝚃𝙷𝚄𝙱', 'https://chat.whatsapp.com/CrsOmirjZNYKrvnQNT98Oo', '💎𝙶𝚁𝚄𝙿𝙾-𝙾𝙵𝙸𝙲𝙸𝙰𝙻💎', [
-['🛡️ 𝗚𝗥𝗨𝗣𝗢𝗦 🛡️', '/grupos'],
-['🤴 𝗢𝗪𝗡𝗘𝗥  🤴', '/owner'],
-['🔰 𝗜𝗡𝗙𝗢𝗕𝗢𝗧 🔰', '/infobot']
-], m,)
-//await conn.sendFile(m.chat, vn, 'menu.mp3', null, m, true, {
-//type: 'audioMessage', 
-//ptt: true})
-} catch (e) {
-
-conn.reply(m.chat, '${fg} 𝙴𝙻 𝙼𝙴𝙽𝚄 𝚃𝙸𝙴𝙽𝙴 𝚄𝙽 𝙴𝚁𝚁𝙾𝚁 𝚈 𝙽𝙾 𝙵𝚄𝙴 𝙿𝙾𝚂𝙸𝙱𝙻𝙴 𝙴𝙽𝚅𝙸𝙰𝚁𝙻𝙾, 𝚁𝙴𝙿𝙾𝚁𝚃𝙴𝙻𝙾 𝙰𝙻 𝙿𝚁𝙾𝙿𝙸𝙴𝚃𝙰𝚁𝙸𝙾 𝙳𝙴𝙻 𝙱𝙾𝚃*', m)
-
-throw e
-
+let buttons = [
+{ buttonId: '#grupos', buttonText: { displayText: '🔰 𝙶𝚁𝚄𝙿𝙾𝚂 🔰' }, type: 1 },
+{ buttonId: '#owner', buttonText: { displayText: '🤴 𝙾𝚆𝙽𝙴𝚁 🤴' }, type: 1 }]
+//{ buttonId: '#infobot', buttonText: { displayText: '📦 𝙸𝙽𝙵𝙾𝙱𝙾𝚃 📦' }, type: 1 }]
+let buttonMessage = {
+image: imagen1,
+caption: str.trim(),
+mentions: [m.sender],
+footer: `*${wm}*`,
+buttons: buttons,
+headerType: 4,
+contextInfo: {
+mentionedJid: [m.sender],
+externalAdReply: {
+showAdAttribution: true,
+mediaType: 'VIDEO',
+mediaUrl: null,
+title: '👑 𝐃𝐎𝐑𝐑𝐀𝐓-𝐁𝐎𝐓-𝐌𝐃 👑',
+body: null,
+thumbnail: img,
+sourceUrl: `https://chat.whatsapp.com/CrsOmirjZNYKrvnQNT98Oo`
+}}}
+conn.sendMessage(m.chat, buttonMessage, { quoted: m })
+//await conn.sendFile(m.chat, vn, 'menu.mp3', null, m, true, { type: 'audioMessage', ptt: true})
+} catch {
+conn.reply(m.chat, '*[❗𝐈𝐍𝐅𝐎❗] 𝙴𝙻 𝙼𝙴𝙽𝚄 𝚃𝙸𝙴𝙽𝙴 𝚄𝙽 𝙴𝚁𝚁𝙾𝚁 𝚈 𝙽𝙾 𝙵𝚄𝙴 𝙿𝙾𝚂𝙸𝙱𝙻𝙴 𝙴𝙽𝚅𝙸𝙰𝚁𝙻𝙾, 𝚁𝙴𝙿𝙾𝚁𝚃𝙴𝙻𝙾 𝙰𝙻 𝙿𝚁𝙾𝙿𝙸𝙴𝚃𝙰𝚁𝙸𝙾 𝙳𝙴𝙻 𝙱𝙾𝚃*', m)
 }}
-handler.help = ['menu', 'help', '?']
-handler.tags = ['main']
-handler.command = /^(menucompleto|allmenu|allm\?)$/i
-handler.register = true
+handler.command = /^(allmenu|menucompleto)$/i
 handler.exp = 50
 handler.fail = null
-
 export default handler
-
-
-
-const more = String.fromCharCode(8206)
-
-const readMore = more.repeat(4001)
-
 function clockString(ms) {
-
 let h = isNaN(ms) ? '--' : Math.floor(ms / 3600000)
-
 let m = isNaN(ms) ? '--' : Math.floor(ms / 60000) % 60
-
 let s = isNaN(ms) ? '--' : Math.floor(ms / 1000) % 60
-
 return [h, m, s].map(v => v.toString().padStart(2, 0)).join(':')}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
