@@ -483,7 +483,7 @@ mediaType: 'VIDEO',
 mediaUrl: null,
 title:'👑 𝐃𝐎𝐑𝐑𝐀𝐓-𝐁𝐎𝐓-𝐌𝐃 👑',
 body: null,
-thumbnail: img,
+thumbnail: null,
 sourceUrl: `https://chat.whatsapp.com/CrsOmirjZNYKrvnQNT98Oo`
 }}}
 conn.sendMessage(m.chat, buttonMessage, { quoted: m })
