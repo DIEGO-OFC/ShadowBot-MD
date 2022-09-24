@@ -27,10 +27,10 @@
 <p align="hihg">   
 <a href="https://portal.acidicnodes.com" target="_blank"> <img src="https://img.shields.io/badge/-AcidicNodes-%23E4405F?style=for-the-badge&logo=acidicnodes&logoColor=black" target="_blank"></a> <img src="https://github.com/DIEGO-OFC/DORRAT-BOT-MD/blob/main/galeria/acidicnodes.png" height="30px">
 <p align="hihg">   
-<a href="https://dash.boxmineworld.com/login" target="_blank"> <img src="https://img.shields.io/badge/-Boxmineworld-%23E4405F?style=for-the-badge&logo=Boxmineworld&logoColor=black" target="_blank"></a> <img src="https://github.com/DIEGO-OFC/DORRAT-BOT-MD/blob/main/src/Boxmine.png" height="30px">
+<a href="https://dash.boxmineworld.com/login" target="_blank"> <img src="https://img.shields.io/badge/-Boxmineworld-%23E4405F?style=for-the-badge&logo=Boxmineworld&logoColor=black" target="_blank"></a> <img src="https://github.com/DIEGO-OFC/DORRAT-BOT-MD/blob/main/galeria/Boxmine.png" height="30px">
 <p align="hihg">   
 <a href="https://www.mediafire.com/file/nbe32g0kjl99yul/Termux_0.119.1.apk/file
-" target="_blank"> <img src="https://img.shields.io/badge/-DESCARGAR_TERMUX-%23E4405F?style=for-the-badge&logo=DESCARGAR_TERMUX&logoColor=black" target="_blank"></a> <img src="https://github.com/DIEGO-OFC/DORRAT-BOT-MD/blob/main/src/unnamed.png" height="30px">
+" target="_blank"> <img src="https://img.shields.io/badge/-DESCARGAR_TERMUX-%23E4405F?style=for-the-badge&logo=DESCARGAR_TERMUX&logoColor=black" target="_blank"></a> <img src="https://github.com/DIEGO-OFC/DORRAT-BOT-MD/blob/main/galeria/unnamed.png" height="30px">
 
 ### `—◉ 🌹 LETRA DEL BOT 🌹`
 - PAGINA USADA PARA LA LETRA [Aqui](https://smiley.cool/es/weirdmaker.php)
@@ -43,7 +43,7 @@
 - CLONAR EL REPOSITORIO [Aqui](https://github.com/DIEGO-OFC/DORRAT-BOT-MD/fork)
 - CAMBIAR NÚMERO DEL OWNER [Aqui](https://github.com/DIEGO-OFC/DORRAT-BOT-MD/blob/main/config.js)
 
-### <img src="https://github.com/DIEGO-OFC/DORRAT-BOT-MD/blob/main/src/unnamed.png" height="30px"> 𝐀𝐂𝐓𝐈𝐕𝐀𝐑 𝐄𝐍 𝐓𝐄𝐑𝐌𝐔𝐗
+### <img src="https://github.com/DIEGO-OFC/DORRAT-BOT-MD/blob/main/galeria/unnamed.png" height="30px"> 𝐀𝐂𝐓𝐈𝐕𝐀𝐑 𝐄𝐍 𝐓𝐄𝐑𝐌𝐔𝐗
 - ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
 ```bash
 > cd
@@ -71,7 +71,7 @@ ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
 > npm start
 ```
 
-### —◉ 𝐎𝐁𝐓𝐄𝐍𝐄𝐑 𝐎𝐓𝐑𝐎 𝐂𝐎𝐃𝐈𝐆𝐎 𝐐𝐑 <img src="https://github.com/DIEGO-OFC/DORRAT-BOT-MD/blob/main/src/qrcode_30531084_.png" height="30px">
+### —◉ 𝐎𝐁𝐓𝐄𝐍𝐄𝐑 𝐎𝐓𝐑𝐎 𝐂𝐎𝐃𝐈𝐆𝐎 𝐐𝐑 <img src="https://github.com/DIEGO-OFC/DORRAT-BOT-MD/blob/main/galería/qrcode_30531084_.png" height="30px">
 - DETENER EL BOT DANDO CLICK EN EL SIMBOLO CTROL EN TERMUX MAS LA LETRA Z EN SU TECLADO MOVIL HASTA QUE SALGA ALGO EN VERDE SIMILAR A DORRAT-TERMUX $  
 ```bash
 ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
