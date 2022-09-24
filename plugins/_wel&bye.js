@@ -1,6 +1,6 @@
 let handler = async (m, { conn, text, usedPrefix, command, customPrefix }) => {
-let stikerwelgc = "./src/welgc.webp"
-let stikerbyegc = "./src/byegc.webp"
+let stikerwelgc = "./galeria/welgc.webp"
+let stikerbyegc = "./galeria/byegc.webp"
 if (command == 'welcomegc') {
 conn.sendFile(m.chat, stikerwelgc, null, { asSticker: true })
 }
