@@ -6,7 +6,7 @@
     "type": "module",
     "directories": {
         "lib": "lib",
-        "src": "src",
+        "galeria": "galeria",
         "plugins": "plugins"
     },
     "scripts": {
