@@ -5,7 +5,7 @@
 
 
 <p align="center">
-<img src="https://github.com/DIEGO-OFC/DORRAT-BOT-MD/blob/main/src/Pre%20Bot%20Publi.png" alt="DORRAT-BOT-MD" width="900"/>
+<img src="https://github.com/DIEGO-OFC/DORRAT-BOT-MD/blob/main/galeria/Pre%20Bot%20Publi.png" alt="DORRAT-BOT-MD" width="900"/>
 </p>
 
 `—◉ DUDAS SOBRE EL BOT?, CONTACTANOS ✨`
