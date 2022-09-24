@@ -71,7 +71,8 @@ ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
 > npm start
 ```
 
-### `—◉ 𝐎𝐁𝐓𝐄𝐍𝐄𝐑 𝐎𝐓𝐑𝐎 𝐂𝐎𝐃𝐈𝐆𝐎 𝐐𝐑 <img src="https://github.com/DIEGO-OFC/DORRAT-BOT-MD/blob/main/galeria/qrcode_30531084_.png" height="30px">`
+### `—◉ 𝐎𝐁𝐓𝐄𝐍𝐄𝐑 𝐎𝐓𝐑𝐎 𝐂𝐎𝐃𝐈𝐆𝐎 𝐐𝐑` <img src="https://github.com/DIEGO-OFC/DORRAT-BOT-MD/blob/main/galeria/qrcode_30531084_.png" height="30px">
+
 - DETENER EL BOT DANDO CLICK EN EL SIMBOLO CTROL EN TERMUX MAS LA LETRA Z EN SU TECLADO MOVIL HASTA QUE SALGA ALGO EN VERDE SIMILAR A DORRAT-TERMUX $  
 ```bash
 ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
