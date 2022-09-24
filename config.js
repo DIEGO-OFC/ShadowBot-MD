@@ -97,8 +97,8 @@ global.dorre = 'DORRAT-BOT-MD'
 global.DORRA = dorre
 //---------------
 global.imagen1 = fs.readFileSync('./Menu2.jpg')
-global.imagen2 = fs.readFileSync('./src/nuevobot.jpg') 
-global.imagen3 = fs.readFileSync('./src/Pre Bot Publi.png')
+global.imagen2 = fs.readFileSync('./galeria/nuevobot.jpg') 
+global.imagen3 = fs.readFileSync('./galeria/Pre Bot Publi.png')
 global.keysZens = ['fiktod', 'c2459db922', 'BF39D349845E', '675e34de8a', '37CC845916', '0b917b905e6f', '6fb0eff124']
 global.keysxxx = keysZens[Math.floor(keysZens.length * Math.random())]
 global.lolkeysapi = ['85faf717d0545d14074659ad']
