@@ -1,6 +1,4 @@
-/*BY 
-
-https://github.com/DIEGO-OFC*/
+/*BY https://github.com/DIEGO-OFC*/
 
 import fs from 'fs'
 import fetch from 'node-fetch'
