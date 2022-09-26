@@ -3,6 +3,7 @@
 *         DORRAT-BOT-MD BY DIEGO-OFC        *
 /********************************************/
 import fs, { promises } from 'fs'
+import { cpus as _cpus, totalmem, freemem } from 'os'
 import fetch from 'node-fetch'
 let handler = async (m, { conn, usedPrefix, usedPrefix: _p, __dirname, text }) => {
 try {
@@ -24,6 +25,8 @@ let str = `
 *║ ▢ 𝐕𝐄𝐑𝐒𝐈𝐎𝐍 » ${vs}*
 *║ ▢ 𝐅𝐄𝐂𝐇𝐀 » ${week}, ${date}*
 *║ ▢ 𝐓𝐈𝐄𝐌𝐏𝐎 𝐀𝐂𝐓𝐈𝐕𝐎 » ${uptime}*
+*║ ▢ 𝐑𝐀𝐌 » *⮕ RAM:* ${format(totalmem() - freemem())} / ${format(totalmem())}
+*⮕ FreeRAM:* ${format(freemem())}
 *║ ▢ 𝐋𝐈𝐁𝐑𝐀𝐑𝐘 » 𝐁𝐀𝐈𝐋𝐄𝐘𝐒-𝐌𝐃
 *║ ▢ 𝐋𝐄𝐍𝐆𝐔𝐀𝐉𝐄 » 𝐄𝐒𝐏𝐀𝐍̃𝐎𝐋
 *║ ▢ 𝐔𝐒𝐔𝐀𝐑𝐈𝐎𝐒 » ${Object.keys(global.db.data.users).length}*
