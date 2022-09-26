@@ -7,7 +7,7 @@ let handler = async (m, { text }) => {
   if (json.confirmed) m.reply(`
 🌏pais: ${text}
 ✅confirmados: ${json.confirmed.value}
-📉Sembuh : ${json.recovered.value}
+📉Curados : ${json.recovered.value}
 ☠️muertes : ${json.deaths.value}
 💌Info hace : ${json.lastUpdate}
 `.trim())
