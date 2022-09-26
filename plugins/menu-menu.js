@@ -33,8 +33,7 @@ let str = `
  ┃ 🔰 _${usedPrefix}grupos_
  ┃ 🔰 _${usedPrefix}estado_
  ┃ 🔰 _${usedPrefix}instalarbot
- ┃ 🔰 _${usedPrefix}infobot_
- ┃ 🔰 _${usedPrefix}donar_
+ ┃ 🔰 _${usedPrefix}infobot
  ┃ 🔰 _${usedPrefix}grouplist_
  ┃ 🔰 _${usedPrefix}owner_
  ┃ 🔰 _${usedPrefix}script_
@@ -148,6 +147,7 @@ let str = `
 └────ׂ─ׂ─ׂ─ׂ──
 
 ┌──「🏢𝐆𝐑𝐎𝐔𝐏」─
+├➢💎${usedPrefix}encuesta *<texto>
 ├➢💎${usedPrefix}votar *<texto>*
 ├➢💎${usedPrefix}advertencia <@tag
 ├➢💎${usedPrefix}add <numero
@@ -310,6 +310,7 @@ let str = `
 └────ׂ─ׂ─ׂ─ׂ──
 
 ┌「🔍𝐁𝐮𝐬𝐜𝐚𝐫」
+├➢🔍 _${usedPrefix}covid <*país*>
 ├➢🔍 _${usedPrefix}playstore <*texto*>
 ├➢🔍 _${usedPrefix}stickersearch *<texto>*_
 ├➢🔍 _${usedPrefix}xnxxsearch *<texto>*_
