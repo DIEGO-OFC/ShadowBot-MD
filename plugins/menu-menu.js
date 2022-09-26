@@ -3,7 +3,6 @@
 *         DORRAT-BOT-MD BY DIEGO-OFC        *
 /********************************************/
 import fs, { promises } from 'fs'
-import { cpus as _cpus, totalmem, freemem } from 'os'
 import fetch from 'node-fetch'
 let handler = async (m, { conn, usedPrefix, usedPrefix: _p, __dirname, text }) => {
 try {
