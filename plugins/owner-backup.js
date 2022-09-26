@@ -1,3 +1,7 @@
+/*BY 
+
+https://github.com/DIEGO-OFC*/
+
 import fs from 'fs'
 import fetch from 'node-fetch'
 let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
