@@ -1,6 +1,6 @@
-`🍁𝑫𝑶𝑹𝑹𝑨𝑻-𝑩𝑶𝑻-𝑴𝑫🍁`
+#`🍁 𝑫𝑶𝑹𝑹𝑨𝑻-𝑩𝑶𝑻-𝑴𝑫 🍁`
 <p align="center"> 
-  <a href="https://github.com/DIEGO-OFC/DORRAT-BOT-MD"><img src="http://readme-typing-svg.herokuapp.com?font=mono&size=17&duration=4000&color=F7B11B&center=falso&vCenter=falso&lines=DORRAT+BOT+MD++💫;Gracias+por+visitar+este+repositorio.+💥" height="90px"
+  <a href="https://github.com/DIEGO-OFC/DORRAT-BOT-MD"><img src="http://readme-typing-svg.herokuapp.com?font=mono&size=17&duration=4000&color=F7B11B&center=falso&vCenter=falso&lines=DORRAT+BOT+MD++🌠;Gracias+por+visitar+este+repositorio.+💥" height="90px"
 </p> 
 
 
@@ -23,7 +23,7 @@
 ---------
 > GRUPOS OFICIALES DEL BOT PARA LA DIVERSIÓN :)
 
-𝐇𝐎𝐓𝐒 𝐏𝐀𝐑𝐀 𝐓𝐄𝐍𝐄𝐑 𝐄𝐋 𝐁𝐎𝐓 𝟐𝟒/𝟕
+# 📦 `𝐇𝐎𝐓𝐒 𝐏𝐀𝐑𝐀 𝐓𝐄𝐍𝐄𝐑 𝐄𝐋 𝐁𝐎𝐓 𝟐𝟒/𝟕`
 <p align="hihg">   
 <a href="https://portal.acidicnodes.com" target="_blank"> <img src="https://img.shields.io/badge/-AcidicNodes-%23E4405F?style=for-the-badge&logo=acidicnodes&logoColor=black" target="_blank"></a> <img src="https://github.com/DIEGO-OFC/DORRAT-BOT-MD/blob/main/galeria/acidicnodes.png" height="30px">
 <p align="hihg">   
