@@ -16,7 +16,7 @@ let caption = `
 conn.reply(m.chat, caption, m, {
 contextInfo: { externalAdReply :{ mediaUrl: null, mediaType: 1, description: null, 
 title: '𝙳𝙴𝚂𝙲𝙰𝚁𝙶𝙰𝚁 𝙳𝙴 𝙼𝙴𝙳𝙸𝙰𝙵𝙸𝚁𝙴',
-body: 'ʙʏ ᴛʜᴇ ᴍʏsᴛɪᴄ ﹣ ʙᴏᴛ',         
+body: '𝑩𝒀 𝑫𝑶𝑹𝑹𝑨𝑻-𝑩𝑶𝑻-𝑴𝑫',         
 previewType: 0, thumbnail: fs.readFileSync("./Menu2.jpg"),
 sourceUrl: `https://github.com/DIEGO-OFC/DORRAT-BOT-MD`}}})
 conn.sendFile(m.chat, url, filename, '', m, null, { mimetype: ext, asDocument: true })
