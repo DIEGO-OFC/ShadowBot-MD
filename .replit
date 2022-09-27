@@ -1,1 +1,1 @@
-run = "npm i && node index.js --server"
+run = "npm i && node dorrat-inicio.js --server"
