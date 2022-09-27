@@ -429,6 +429,7 @@ let str = `
 ├➢👑 > *<funcion>*
 ├➢👑 => *<funcion>*
 ├➢👑 $ *<funcion>*
+├➢👑 _${usedPrefix}backup
 ├➢👑 _${usedPrefix}cajafuerte_
 ├➢👑 _${usedPrefix}blocklist_
 ├➢👑 _${usedPrefix}enable *restrict*_
