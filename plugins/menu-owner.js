@@ -127,6 +127,8 @@ let str = `
 ├❏👑${usedPrefix}cajafuerte
 ├❏💸${usedPrefix}enable restrict
 ├❏🧾${usedPrefix}disable restrict
+├❏📦${usedPrefix}backup
+├❏📵${usedPrefix}enable anticall
 ├❏📍${usedPrefix}enable autoread
 ├❏🧑‍💻${usedPrefix}disable autoread
 ├❏🏯${usedPrefix}enable public
