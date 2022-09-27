@@ -10,9 +10,9 @@
         "plugins": "plugins"
     },
     "scripts": {
-        "start": "node index.js",
+        "start": "node dorrat-inicio.js",
         "test": "node test.js",
-        "test2": "nodemon index.js"
+        "test2": "nodemon dorrat-inicio.js"
     },
     "homepage": "https://github.com/DIEGO-OFC/DORRAT-BOT-MD",
     "author": {
