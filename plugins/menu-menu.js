@@ -383,6 +383,7 @@ let str = `
 
 
 ┌──「🛠️𝐇𝐄𝐑𝐑𝐀𝐌𝐈𝐄𝐍𝐓𝐀𝐒」─
+├➢🛠️ _${usedPrefix}horario
 ├➢🛠️ _${usedPrefix}encuestas texto|texto 
 ├➢🛠️ _${usedPrefix}afk *<motivo>*_
 ├➢🛠️ _${usedPrefix}ocr *<responde a imagen>*_
