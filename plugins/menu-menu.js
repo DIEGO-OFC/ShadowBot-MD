@@ -40,8 +40,8 @@ let str = `
 *╭━〔 INFORMACIÓN DE DORR∆T-BOT 〕━⬣*
  ┃ 🔰 _${usedPrefix}grupos_
  ┃ 🔰 _${usedPrefix}estado_
- ┃ 🔰 _${usedPrefix}instalarbot
- ┃ 🔰 _${usedPrefix}infobot
+ ┃ 🔰 _${usedPrefix}instalarbot_
+ ┃ 🔰 _${usedPrefix}infobot_
  ┃ 🔰 _${usedPrefix}grouplist_
  ┃ 🔰 _${usedPrefix}owner_
  ┃ 🔰 _${usedPrefix}script_
@@ -60,7 +60,7 @@ let str = `
 ┃ *<UNE UN BOT A TU GRUPO/>*
 ║≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋
 ┣ ➱🤖 _${usedPrefix}join *link del grupo*_ 
-┣ ➱🛡️ minimo 30 miembros.
+┣ ➱🛡️ _*minimo 30 miembros*_
 ┗━━━━━━━━━━━━━┛
 
 ┌──「🌱𝐑𝐏𝐆」─
@@ -391,8 +391,8 @@ let str = `
 
 
 ┌──「🛠️𝐇𝐄𝐑𝐑𝐀𝐌𝐈𝐄𝐍𝐓𝐀𝐒」─
-├➢🛠️ _${usedPrefix}horario
-├➢🛠️ _${usedPrefix}encuestas texto|texto 
+├➢🛠️ _${usedPrefix}horario_
+├➢🛠️ _${usedPrefix}encuestas texto|texto_
 ├➢🛠️ _${usedPrefix}afk *<motivo>*_
 ├➢🛠️ _${usedPrefix}ocr *<responde a imagen>*_
 ├➢🛠️ _${usedPrefix}acortar *<enlace / link / url>*_
@@ -438,7 +438,7 @@ let str = `
 ├➢👑 > *<funcion>*
 ├➢👑 => *<funcion>*
 ├➢👑 $ *<funcion>*
-├➢👑 _${usedPrefix}backup
+├➢👑 _${usedPrefix}backup_
 ├➢👑 _${usedPrefix}cajafuerte_
 ├➢👑 _${usedPrefix}blocklist_
 ├➢👑 _${usedPrefix}enable *restrict*_
