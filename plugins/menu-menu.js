@@ -157,6 +157,7 @@ let str = `
 ┌──「🏢𝐆𝐑𝐎𝐔𝐏」─
 ├➢💎${usedPrefix}encuesta *<texto>
 ├➢💎${usedPrefix}votar *<texto>*
+├➢💎${usedPrefix}listadv
 ├➢💎${usedPrefix}advertencia <@tag
 ├➢💎${usedPrefix}add <numero
 ├➢💎${usedPrefix}kick <@tag
