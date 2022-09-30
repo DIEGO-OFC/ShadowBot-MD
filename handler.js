@@ -1268,8 +1268,7 @@ export async function handler(chatUpdate) {
         }
        
         if (opts['autoread'])
-        await this.chatRead(m.chat, m.isGroup ? m.sender : undefined, m.id || m.key.id).catch(() => { })
-		
+     	
 	await this.readMessages([m.key])
 	    
        /*if (!db.data.chats[m.chat].reaction && m.isGroup) throw 0
@@ -1309,7 +1308,7 @@ export async function participantsUpdate({ id, participants, action }) {
                         text = (action === 'add' ? (chat.sWelcome || this.welcome || conn.welcome || 'Welcome, @user!').replace('@subject', await this.getName(id)).replace('@desc', groupMetadata.desc?.toString() || '*𝙂𝙧𝙪𝙥𝙤 𝙂𝙚𝙣𝙞𝙖𝙡 | 𝘾𝙤𝙤𝙡 𝙂𝙧𝙤𝙪𝙥 😼*') :
                             (chat.sBye || this.bye || conn.bye || 'Bye, @user!')).replace('@user', await this.getName(user)) //.replace('@user', '@' + user.split('@')[0])
                             let apii = await this.getFile(pp)
-                            this.sendHydrated(id, text, groupMetadata.subject, apii.data, 'https://github.com/DIEGO-OFC/DORRAT-BOT-MD', '𝑫𝑶𝑹𝑹𝑯∆𝑻=𝑩𝑶𝑻', null, null, [
+                            this.sendHydrated(id, text, groupMetadata.subject, apii.data, 'https://github.com/DIEGO-OFC/DORRAT-BOT-MD', '𝐃𝐎𝐑𝐑𝐀𝐓-𝐁𝐎𝐓-𝐌𝐃', null, null, [
                             [(action == 'add' ? '𝐒𝐄 𝐔𝐍𝐈𝐎 🌠 | 𝐇𝐈!!' : '𝐒𝐄 𝐅𝐔𝐄 𝐔𝐍 𝐌𝐀𝐑𝐈𝐂𝐎𝐍 🏳️‍🌈 | 𝐋𝐄𝐒𝐁𝐈𝐀𝐍𝐀'), '.s'],    
                             ['⫹⫺ 𝐌𝐄𝐍𝐔', '/menu']
                             ], '', { mentions: [user]})
@@ -1355,16 +1354,15 @@ export async function groupsUpdate(groupsUpdate) {
 }
 
 export async function callUpdate(callUpdate) {
-    let isAnticall = global.db.data.settings[this.user.jid].antiCall  
+    let isAnticall = global.db.data.settings[this.user.jid].antiCall
     if (!isAnticall) return
-    for (let nk of callUpdate) { 
+    for (let nk of callUpdate) {
     if (nk.isGroup == false) {
     if (nk.status == "offer") {
-    let callmsg = await this.reply(nk.from, `𝙃𝙊𝙇𝘼 *@${nk.from.split('@')[0]}*, 𝙇𝘼𝙎 ${nk.isVideo ? '📲 𝙑𝙄𝘿𝙀𝙊𝙇𝙇𝘼𝙈𝘼𝘿𝘼𝙎' : '📞 𝙇𝙇𝘼𝙈𝘼𝘿𝘼𝙎'} 𝙉𝙊 𝙀𝙎𝙏𝘼𝙉 𝘼𝙐𝙏𝙊𝙍𝙄𝙕𝘼𝘿𝘼𝙎 𝙋𝙊𝙍 𝙇𝙊 𝙌𝙐𝙀 𝙏𝙀𝙉𝘿𝙍𝙀 𝙌𝙐𝙀 𝘽𝙇𝙊𝙌𝙐𝙀𝘼𝙍𝙏𝙀\n\n𝙎𝙄 𝙇𝙇𝘼𝙈𝘼𝙎𝙏𝙀 𝙋𝙊𝙍 𝘼𝘾𝘾𝙄𝘿𝙀𝙉𝙏𝙀 𝘾𝙊𝙈𝙐𝙉𝙄𝘾𝘼𝙏𝙀 𝘾𝙊𝙉 𝙇𝘼 𝙋𝙀𝙍𝙎𝙊𝙉𝘼 𝙋𝙍𝙊𝙋𝙄𝙀𝙏𝘼𝙍𝙄𝙊/𝘼 𝘿𝙀 𝙀𝙎𝙏𝙀 𝘽𝙊𝙏\n\n*${md}*\n\n𝙔𝙊𝙐 𝙃𝘼𝙑𝙀 ${nk.isVideo ? '📲 𝙈𝘼𝘿𝙀 𝙑𝙄𝘿𝙀𝙊 𝘾𝘼𝙇𝙇' : '📞 𝘾𝘼𝙇𝙇𝙀𝘿'} 𝙉𝙊𝙏 𝘼𝙇𝙇𝙊𝙒𝙀𝘿, 𝙎𝙊 𝙄'𝙈 𝙂𝙊𝙄𝙉𝙂 𝙏𝙊 𝘽𝙇𝙊𝘾𝙆 𝙄𝙏\n\n𝙄𝙁 𝙔𝙊𝙐 𝘾𝘼𝙇𝙇𝙀𝘿 𝘽𝙀𝘾𝘼𝙐𝙎𝙀 𝙊𝙁 𝘼𝙉 𝘼𝘾𝘾𝙄𝘿𝙀𝙉𝙏, 𝘾𝙊𝙉𝙏𝘼𝘾𝙏 𝙏𝙃𝙀 𝙋𝙀𝙍𝙎𝙊𝙉 𝙒𝙃𝙊 𝙈𝘼𝙉𝘼𝙂𝙀𝙎 𝙏𝙃𝙀 𝘽𝙊𝙏\n\n*${md}*`, false, { mentions: [nk.from] })
+    let callmsg = await this.reply(nk.from, `Hola *@${nk.from.split('@')[0]}*, las ${nk.isVideo ? 'videollamadas' : 'llamadas'} no están permitidas, serás bloqueado.\n-\nSi accidentalmente llamaste póngase en contacto con mi creador para que te desbloquee!`, false, { mentions: [nk.from] })
     //let data = global.owner.filter(([id, isCreator]) => id && isCreator)
     //await this.sendContact(nk.from, data.map(([id, name]) => [id, name]), false, { quoted: callmsg })
-    await this.updateBlockStatus(nk.from, 'block')
-    }}}}
+    await this.updateBlockStatus(nk.from, 'block') }}}}
 
 export async function deleteUpdate(message) {
 try {
