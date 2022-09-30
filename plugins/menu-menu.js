@@ -158,6 +158,7 @@ let str = `
 ├➢💎${usedPrefix}encuesta *<texto>
 ├➢💎${usedPrefix}votar *<texto>*
 ├➢💎${usedPrefix}listadv
+├➢💎${usedPrefix}deladvertencia <@tag
 ├➢💎${usedPrefix}advertencia <@tag
 ├➢💎${usedPrefix}add <numero
 ├➢💎${usedPrefix}kick <@tag
