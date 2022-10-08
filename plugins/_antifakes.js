@@ -1,4 +1,4 @@
-/*let handler = m => m
+let handler = m => m
 
 handler.before = async function (m) {
    if (m.sender.startsWith('234' || '234')) {
@@ -59,5 +59,5 @@ conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
    } 
     }
 
-export default handler*/
+export default handler
 
