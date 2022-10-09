@@ -39,7 +39,8 @@ let str = `
 *║ ▢ 𝐔𝐒𝐔𝐀𝐑𝐈𝐎𝐒 » ${Object.keys(global.db.data.users).length}*
 *╰══╡🔥⚡🔥⚡🔥⚡🔥╞══╯*
 
-*═〔* ${taguser} *〕⬣═*
+*═〔* info *〕⬣═*
+*║👤 NOMBRE: ${taguser}
 *║🧰 EXPERIENCIA ➟ ${exp}*
 *║⚓ RANGO ➟* ${role}
 *║💎 DIAMANTES ➟ ${limit}*
