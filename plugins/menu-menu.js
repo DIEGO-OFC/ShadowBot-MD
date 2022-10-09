@@ -15,6 +15,8 @@ let week = d.toLocaleDateString(locale, { weekday: 'long' })
 let date = d.toLocaleDateString(locale, { day: 'numeric', month: 'long', year: 'numeric' })
 let _uptime = process.uptime() * 1000
 let uptime = clockString(_uptime)
+let {money} = global.db.data.users[m.sender]
+let { exp, limit, level, role } = global.db.data.users[m.sender]
 let rtotalreg = Object.values(global.db.data.users).filter(user => user.registered == true).length 
 let more = String.fromCharCode(8206)
 let readMore = more.repeat(850)   
@@ -36,6 +38,13 @@ let str = `
 *║ ▢ 𝐋𝐄𝐍𝐆𝐔𝐀𝐉𝐄 » 𝐄𝐒𝐏𝐀𝐍̃𝐎𝐋*
 *║ ▢ 𝐔𝐒𝐔𝐀𝐑𝐈𝐎𝐒 » ${Object.keys(global.db.data.users).length}*
 *╰══╡🔥⚡🔥⚡🔥⚡🔥╞══╯*
+
+*═〔* ${taguser} *〕⬣═*
+*║🧰 EXPERIENCIA ➟ ${exp}*
+*║⚓ RANGO ➟* ${role}
+*║💎 DIAMANTES ➟ ${limit}*
+*║🪙 DORRAT-COINS ➟ ${money}*
+*╰══*═════════════ *✧*
 
 *╭━〔 INFORMACIÓN DE DORR∆T-BOT 〕━⬣*
  ┃ 🔰 _${usedPrefix}grupos_
