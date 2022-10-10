@@ -39,7 +39,7 @@ rows: [
 {title: "│⛩️│𝐀𝐍𝐈𝐌𝐄𝐒", description: "𝐂𝐨𝐦𝐚𝐧𝐝𝐨𝐬 𝐝𝐞 𝐚𝐧𝐢𝐦𝐞", rowId: `${usedPrefix}animemenu`},
 {title: "│🎇│𝐒𝐓𝐈𝐂𝐊𝐄𝐑𝐒", description: "𝚖𝚞𝚎𝚜𝚝𝚛𝚊 𝚕𝚊 𝚕𝚒𝚜𝚝𝚊 𝚙𝚊𝚛𝚊 𝚌𝚛𝚎𝚊 𝚜𝚝𝚒𝚌𝚔𝚎𝚛", rowId: `${usedPrefix}stickermenu`},
 {title: "│👻│𝐈𝐍𝐕𝐎𝐂𝐀𝐑 𝐀𝐋 𝐆𝐑𝐔𝐏𝐎", description: "𝙴𝚜𝚝𝚊 𝚘𝚙𝚌𝚒𝚘𝚗 𝚜𝚘𝚕𝚊𝚖𝚎𝚗𝚝𝚎 𝚎𝚜 𝚙𝚊𝚛𝚊 𝚊𝚍𝚖𝚒𝚗𝚒𝚜𝚝𝚛𝚊𝚍𝚘𝚛𝚎𝚜 𝚍𝚎𝚕 𝚐𝚛𝚞𝚙𝚘", rowId: `${usedPrefix}tagall`},
-{title: "│💎│𝐎𝐖𝐌𝐄𝐑 𝐁𝐎𝐓", description: "𝚖𝚞𝚎𝚜𝚝𝚛𝚊 𝚕𝚊 𝚕𝚒𝚜𝚝𝚊 𝚚𝚞𝚎 𝚜𝚘𝚕𝚘 𝚎𝚕 𝚙𝚛𝚘𝚙𝚒𝚎𝚝𝚊𝚛𝚒𝚘/𝚘𝚠𝚗𝚎𝚛 𝚙𝚞𝚎𝚍𝚎 ", rowId: `${usedPrefix}soloparaelpropietario`},
+{title: "│💎│𝐎𝐖𝐍𝐄𝐑 𝐁𝐎𝐓", description: "𝚖𝚞𝚎𝚜𝚝𝚛𝚊 𝚕𝚊 𝚕𝚒𝚜𝚝𝚊 𝚚𝚞𝚎 𝚜𝚘𝚕𝚘 𝚎𝚕 𝚙𝚛𝚘𝚙𝚒𝚎𝚝𝚊𝚛𝚒𝚘/𝚘𝚠𝚗𝚎𝚛 𝚙𝚞𝚎𝚍𝚎 ", rowId: `${usedPrefix}soloparaelpropietario`},
 {title: "│♠️│𝐀𝐂𝐓𝐈𝐕𝐀𝐑 𝐄𝐋 𝐑𝐄𝐒𝐓𝐑𝐈𝐂𝐓", description: "𝙴𝚜𝚝𝚊 𝚘𝚙𝚌𝚒𝚘𝚗 𝚜𝚘𝚕𝚊𝚖𝚎𝚗𝚝𝚎 𝚎𝚜 𝚙𝚊𝚛𝚊 𝚊𝚍𝚖𝚒𝚗𝚒𝚜𝚝𝚛𝚊𝚍𝚘𝚛𝚎𝚜 𝚍𝚎𝚕 𝚐𝚛𝚞𝚙𝚘 𝙰𝙲𝚃𝙸𝚅𝙰 𝙻𝙰𝚂 𝚁𝙴𝚂𝚃𝚁𝙸𝙲𝙲𝙸𝙾𝙽𝙴𝚂 𝙿𝙰𝚁𝙰 𝚂𝙰𝙲𝙰𝚁 𝙶𝙴𝙽𝚃𝙴 𝙳𝙴 𝙶𝚁𝚄𝙿𝙾𝚂", rowId: `${usedPrefix}enable restrict`},
 {title: "│♣️│𝐃𝐄𝐒𝐀𝐂𝐓𝐈𝐕𝐀𝐑 𝐄𝐋 𝐑𝐄𝐒𝐓𝐑𝐈𝐂𝐓", description: "𝙴𝚜𝚝𝚊 𝚘𝚙𝚌𝚒𝚘𝚗 𝚜𝚘𝚕𝚊𝚖𝚎𝚗𝚝𝚎 𝚎𝚜 𝚙𝚊𝚛𝚊 𝚊𝚍𝚖𝚒𝚗𝚒𝚜𝚝𝚛𝚊𝚍𝚘𝚛𝚎𝚜 𝚍𝚎𝚕 𝚐𝚛𝚞𝚙𝚘  𝙳𝙴𝚂𝙰𝙲𝚃𝙸𝚅𝙰 𝙻𝙰𝚂 𝚁𝙴𝚂𝚃𝚁𝙸𝙲𝙲𝙸𝙾𝙽𝙴𝚂 𝙿𝙰𝚁𝙰 𝚂𝙰𝙲𝙰𝚁 𝙶𝙴𝙽𝚃𝙴 𝙳𝙴 𝙶𝚁𝚄𝙿𝙾𝚂", rowId: `${usedPrefix}disable restrict`}, 
 {title: "│🪀│𝐀𝐂𝐓𝐈𝐕𝐀𝐑 𝐄𝐋 𝐀𝐍𝐓𝐈𝐋𝐈𝐍𝐊", description: "𝙴𝚜𝚝𝚊 𝚘𝚙𝚌𝚒𝚘𝚗 𝚜𝚘𝚕𝚊𝚖𝚎𝚗𝚝𝚎 𝚎𝚜 𝚙𝚊𝚛𝚊 𝚊𝚍𝚖𝚒𝚗𝚒𝚜𝚝𝚛𝚊𝚍𝚘𝚛𝚎𝚜 𝚍𝚎𝚕 𝚐𝚛𝚞𝚙𝚘 𝙰𝙲𝚃𝙸𝚅𝙰 𝙾𝙴𝙻 𝙰𝙽𝚃𝙸 𝙴𝙽𝙻𝙰𝙲𝙴𝚂 𝙳𝙴 𝙶𝚁𝚄𝙿𝙾𝚂 𝙳𝙴 𝚆𝙷𝙰𝚃𝚂𝙰𝙿𝙿", rowId: `${usedPrefix}enable antilink`},
@@ -93,7 +93,7 @@ text: `
 ║ ⚡ ▢ *Activo durante*
 ║ ⚡ ▢ ${uptime}
 ║┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
-║ 💎 ▢ *Versión de 𝑫𝑶𝑹𝑹𝑯∆𝑻=𝑩𝑶𝑻*
+║ 💎 ▢ *Versión de 𝐃𝐎𝐑𝐑𝐀𝐓-𝐁𝐎𝐓-𝐌𝐃*
 ║ 💎 ▢ ${vs}
 ║ 📦 ▢ ram 512 MB
 ║ 🔳 ▢ Library:
