@@ -455,6 +455,8 @@ let str = `
 ├➢👑 _${usedPrefix}backup_
 ├➢👑 _${usedPrefix}cajafuerte_
 ├➢👑 _${usedPrefix}blocklist_
+├➢👑 _${usedPrefix}block *<@tag>*
+├➢👑 _${usedPrefix}unblock *<@tag>*
 ├➢👑 _${usedPrefix}enable *restrict*_
 ├➢👑 _${usedPrefix}disable *restrict*_
 ├➢👑 _${usedPrefix}enable *autoread*_
