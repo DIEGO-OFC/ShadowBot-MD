@@ -1,14 +1,26 @@
-import { generateWAMessageFromContent } from '@adiwajshing/baileys'
-let handler = async (m, { conn, text, participants, isOwner, isAdmin }) => {
-let users = participants.map(u => conn.decodeJid(u.id))
-let q = m.quoted ? m.quoted : m || m.text || m.sender
-let c = m.quoted ? await m.getQuotedObj() : m.msg || m.text || m.sender
-let msg = conn.cMod(m.chat, generateWAMessageFromContent(m.chat, { [m.quoted ? q.mtype : 'extendedTextMessage']: m.quoted ? c.message[q.mtype] : { text: '' || c }}, { quoted: m, userJid: conn.user.id }), text || q.text, conn.user.jid, { mentions: users })
-await conn.relayMessage(m.chat, msg.message, { messageId: msg.key.id })
+let handler = async(m, { conn, text, participants }) => {
+const fkontak = {
+	"key": {
+    "participants":"0@s.whatsapp.net",
+		"remoteJid": "status@broadcast",
+		"fromMe": false,
+		"id": "Halo"
+	},
+	"message": {
+		"contactMessage": {
+			"vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`
+		}
+	},
+	"participant": "0@s.whatsapp.net"
 }
-handler.help = ['hidetag']
+     conn.sendMessage(m.chat, { text: text, mentions: participants.map(a => a.id) }, {quoted:fkontak})
+}
+handler.help = ['hidetag <pesan>']
 handler.tags = ['group']
-handler.command = /^(hidetag|notificar)$/i
+handler.command = /^(hidetag)$/i
+handler.register = true
+
 handler.group = true
 handler.admin = true
+
 export default handler
