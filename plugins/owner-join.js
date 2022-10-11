@@ -4,7 +4,7 @@ let handler = async (m, { conn, text, isMods, isOwner, isPrems }) => {
 let link = (m.quoted ? m.quoted.text ? m.quoted.text : text : text) || text
 let [_, code] = link.match(linkRegex) || []
 
-if (!code) throw '*[ ⚠️ 𝐀𝐋𝐄𝐑𝐓𝐀 ⚠️ ] 𝙻𝙸𝙽𝙺 𝙴𝚁𝚁𝙾𝙽𝙴𝙾 𝙾 𝙵𝙰𝙻𝚃𝙰𝙽𝚃𝙴*\n*👉🏻 𝙸𝙽𝙶𝚁𝙴𝚂𝙴 𝙴𝙻 𝙴𝙽𝙻𝙰𝙲𝙴 𝙳𝙴 𝚄𝙽 𝙶𝚁𝚄𝙿𝙾*\n\n*𝙴𝙹𝙴𝙼𝙿𝙻𝙾:*\n*#join https://chat.whatsapp.com/FwEUGxkvZD85fIIp0gKyFC*\n\n*[❗𝐈𝐍𝐅𝐎❗] 𝙽𝙾 𝚁𝙴𝚂𝙿𝙾𝙽𝙳𝙰 𝙰 𝙽𝙸𝙽𝙶𝚄𝙽 𝙼𝙴𝙽𝚂𝙰𝙹𝙴, 𝙿𝚄𝙴𝙳𝙴 𝙲𝙰𝚄𝚂𝙰𝚁 𝙸𝙽𝚃𝙴𝚁𝙵𝙴𝚁𝙴𝙽𝙲𝙸𝙰, 𝙴𝚂𝙲𝚁𝙸𝙱𝙰𝙻𝙾 𝚄𝙽𝙸𝙲𝙰𝙼𝙴𝙽𝚃𝙴 𝙲𝙾𝙼𝙾 𝙼𝙴𝙽𝚂𝙰𝙹𝙴 𝙽𝚄𝙴𝚅𝙾*'
+if (!code) throw '*[ ⚠️ 𝐀𝐋𝐄𝐑𝐓𝐀 ⚠️ ] 𝙻𝙸𝙽𝙺 𝙴𝚁𝚁𝙾𝙽𝙴𝙾 𝙾 𝙵𝙰𝙻𝚃𝙰𝙽𝚃𝙴*\n*👉🏻 𝙸𝙽𝙶𝚁𝙴𝚂𝙴 𝙴𝙻 𝙴𝙽𝙻𝙰𝙲𝙴 𝙳𝙴 𝚄𝙽 𝙶𝚁𝚄𝙿𝙾*\n\n*𝙴𝙹𝙴𝙼𝙿𝙻𝙾:*\n*#join https://chat.whatsapp.com/LlAbJM659dOBVJnxOIMl9h*\n\n*[❗𝐈𝐍𝐅𝐎❗] 𝙽𝙾 𝚁𝙴𝚂𝙿𝙾𝙽𝙳𝙰 𝙰 𝙽𝙸𝙽𝙶𝚄𝙽 𝙼𝙴𝙽𝚂𝙰𝙹𝙴, 𝙿𝚄𝙴𝙳𝙴 𝙲𝙰𝚄𝚂𝙰𝚁 𝙸𝙽𝚃𝙴𝚁𝙵𝙴𝚁𝙴𝙽𝙲𝙸𝙰, 𝙴𝚂𝙲𝚁𝙸𝙱𝙰𝙻𝙾 𝚄𝙽𝙸𝙲𝙰𝙼𝙴𝙽𝚃𝙴 𝙲𝙾𝙼𝙾 𝙼𝙴𝙽𝚂𝙰𝙹𝙴 𝙽𝚄𝙴𝚅𝙾*'
 
 if ( isPrems || isMods || isOwner || m.fromMe) {
 let res = await conn.groupAcceptInvite(code)
