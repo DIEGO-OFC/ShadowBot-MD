@@ -82,7 +82,7 @@ global.wm = '†𝐃⃟𝕺𝐑⃯𝐑𝐇⃯𝚵𝐓᪣𝕭⃯𝚹⃯𝐓⃤ | 
 global.igfg = '†𝐃⃟𝕺𝐑⃯𝐑𝐇⃯𝚵𝐓᪣𝕭⃯𝚹⃯𝐓⃤'
 global.wait = '*[❗] Ƈᴀʀɢᴀɴᴅᴏ, ᴀɢᴜᴀʀᴅᴇ ᴜɴ ᴍᴏᴍᴇɴᴛᴏ...*'
 //-------------------
-global.md = 'https://chat.whatsapp.com/CrsOmirjZNYKrvnQNT98Oo'
+global.md = 'https://chat.whatsapp.com/LlAbJM659dOBVJnxOIMl9h'
 global.dorramd = md
 
 //_____________________________________________
