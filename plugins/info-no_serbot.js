@@ -55,6 +55,6 @@ let buttonMessage= {
 {buttonId: `${usedPrefix}instalarbot`, buttonText: {displayText: '𝙸𝙽𝚂𝚃𝙰𝙻𝙰𝚁𝙱𝙾𝚃'}, type: 1}],
 'headerType': 6 }
 conn.sendMessage(m.chat, buttonMessage, { quoted: m })}
-handler.command = /^(jadibot|serbot|bots|subbots|getcode)/i
+handler.command = /^(porsiacasoxd)/i
 export default handler
 
