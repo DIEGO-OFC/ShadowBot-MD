@@ -14,6 +14,7 @@
 <a href="http://wa.me/573184314110" target="blank"><img src="https://img.shields.io/badge/Narsol_COLAB.2-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
 <a href="http://wa.me/595986674310" target="blank"><img src="https://img.shields.io/badge/viruzz_COLAB.3-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
 <a href="http://wa.me/51993138466" target="blank"><img src="https://img.shields.io/badge/DANI_COLAB.4-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
+<a href="http://wa.me/50246028932" target="blank"><img src="https://img.shields.io/badge/SinNombre_COLAB.9-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
 
 # `🔥GRUPOS OFICIALES`
 
