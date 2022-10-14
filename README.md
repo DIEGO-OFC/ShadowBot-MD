@@ -30,9 +30,9 @@
 
 <a href="http://wa.me/573122695406" target="blank"><img src="https://img.shields.io/badge/BOT-OFICIAL.1️⃣-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
 
-<a href="http://wa.me/5493534267295" target="blank"><img src="https://img.shields.io/badge/BOT-OFICIAL.2-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
+<a href="http://wa.me/5493534267295" target="blank"><img src="https://img.shields.io/badge/BOT-OFICIAL.2️⃣-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
 
-<a href="http://wa.me/51998364160" target="blank"><img src="https://img.shields.io/badge/BOT-OFICIAL.3-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
+<a href="http://wa.me/51998364160" target="blank"><img src="https://img.shields.io/badge/BOT-OFICIAL.3️⃣-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
 
 > [⚠️] USAR LOS BOTS SIN SPAM
 
