@@ -32,7 +32,7 @@ rows: [
 {title: "│🤴│𝐍𝐔𝐌𝐄𝐑𝐎 𝐃𝐄 𝐌𝐈 𝐂𝐑𝐄𝐀𝐃𝐎𝐑", description: "𝚖𝚞𝚎𝚜𝚝𝚛𝚊 𝚕𝚘𝚜 𝚗ú𝚖𝚎𝚛𝚘𝚜 𝚍𝚎 𝚖𝚒 𝚌𝚛𝚎𝚊𝚍𝚘𝚛", rowId: `${usedPrefix}creator`},  
 {title: "│🏓│𝐈𝐍𝐅𝐎𝐁𝐎𝐓", description: "𝚖𝚞𝚎𝚜𝚝𝚛𝚊 𝚕𝚊 𝚕𝚒𝚜𝚝𝚊 𝚍𝚎 𝚒𝚗𝚏𝚘𝚋𝚘𝚝", rowId: `${usedPrefix}infobot`},
 {title: "│☄️│𝐌𝐄𝐍𝐔 𝐂𝐎𝐌𝐏𝐋𝐄𝐓𝐎", description: "𝙼𝚞𝚎𝚜𝚝𝚛𝚊 𝚕𝚊 𝚕𝚒𝚜𝚝𝚊 𝚍𝚎 𝚖𝚎𝚗𝚞 𝚌𝚘𝚖𝚙𝚕𝚎𝚝𝚘", rowId: `${usedPrefix}allmenu`},
-{title: "│🤖│𝐆𝐑𝐔𝐏𝐎 𝐎𝐄𝐈𝐂𝐈𝐀𝐋 𝐃𝐄𝐋 𝐁𝐎𝐓", description: "𝚖𝚞𝚎𝚜𝚝𝚛𝚊 𝚕𝚘𝚜 𝚐𝚛𝚞𝚙𝚘𝚜 𝚘𝚏𝚒𝚌𝚒𝚊𝚕𝚎𝚜 𝚍𝚎𝚕 𝚋𝚘𝚝", rowId: `${usedPrefix}grupos`},
+{title: "│🤖│𝐆𝐑𝐔𝐏𝐎 𝐎𝐅𝐈𝐂𝐈𝐀𝐋 𝐃𝐄𝐋 𝐁𝐎𝐓", description: "𝚖𝚞𝚎𝚜𝚝𝚛𝚊 𝚕𝚘𝚜 𝚐𝚛𝚞𝚙𝚘𝚜 𝚘𝚏𝚒𝚌𝚒𝚊𝚕𝚎𝚜 𝚍𝚎𝚕 𝚋𝚘𝚝", rowId: `${usedPrefix}grupos`},
 {title: "│🖥️│𝐒𝐄𝐑 𝐒𝐔𝐁-𝐁𝐎𝐓", description: "𝙹𝙰𝙳𝙸𝙱𝙾𝚃 𝙼𝚄𝙻𝚃𝙸𝙳𝙸𝚅𝙸𝙲𝙴", rowId: `${usedPrefix}jadibot`},
 {title: "│🔰│𝐈𝐍𝐒𝐓𝐀𝐋𝐀𝐑-𝐃𝐎𝐑𝐑𝐀𝐓-𝐁𝐎𝐓", description: "INFORMACIÓN PARA INSTALAR A DORR∆T-BOT", rowId: `${usedPrefix}instalarbot`},
 {title: "│🌇│𝐀𝐂𝐓𝐈𝐕𝐀𝐑 𝐋𝐀 𝐁𝐈𝐄𝐍𝐕𝐄𝐍𝐈𝐃𝐀", description: "𝙴𝚜𝚝𝚊 𝚘𝚙𝚌𝚒𝚘𝚗 𝚜𝚘𝚕𝚊𝚖𝚎𝚗𝚝𝚎 𝚎𝚜 𝚙𝚊𝚛𝚊 𝚊𝚍𝚖𝚒𝚗𝚒𝚜𝚝𝚛𝚊𝚍𝚘𝚛𝚎𝚜 𝚍𝚎𝚕 𝚐𝚛𝚞𝚙𝚘", rowId: `${usedPrefix}enable welcome`},
