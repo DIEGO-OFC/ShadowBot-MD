@@ -1,7 +1,9 @@
-#| Foldes |#
+#| Folders |#
 
+.github
 node_modules
 DORRATSESSION 
+tmp
 jadibts
 pluginpilot
 
