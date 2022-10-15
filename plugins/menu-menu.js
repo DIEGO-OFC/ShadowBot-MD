@@ -167,6 +167,7 @@ let str = `
 └────ׂ─ׂ─ׂ─ׂ──
 
 ┌──「🏢𝐆𝐑𝐎𝐔𝐏」─
+├➢💎${usedPrefix}resetlink
 ├➢💎${usedPrefix}encuesta *<texto>
 ├➢💎${usedPrefix}votar *<texto>*
 ├➢💎${usedPrefix}listadv
