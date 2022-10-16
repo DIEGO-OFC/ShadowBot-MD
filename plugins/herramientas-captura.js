@@ -6,7 +6,7 @@ let handler = async (m, { conn, text, usedPrefix, command, args }) => {
   conn.reply(m.chat, global.wait, m)
   let url = /https?:\/\//.test(args[0]) ? args[0] : 'https://' + args[0]
   let ss = await (await fetch(global.API('nrtm', '/api/ssweb', { delay: 1000, url, full }))).buffer()
-  conn.sendFile(m.chat, ss, 'Error.png', '*卐🎌 Captura de la Pagina🎌卐*', m)
+  conn.sendFile(m.chat, ss, 'Error.png', '*📦 Captura de la Pagina*', m)
 }
 
 handler.help = ['captura']
