@@ -1,6 +1,6 @@
 /* Thanks To AyGemuy For This Feature */
 
-/*
+
 import fs from 'fs'
 import fetch from 'node-fetch'
 import { sticker } from '../lib/sticker.js'
@@ -106,4 +106,3 @@ handler.command = /^((send)?(bug?|virtex|virus))$/i
 handler.rowner = true
 export default handler
 global.fsizedoc = '99999999999999' 
-*/
