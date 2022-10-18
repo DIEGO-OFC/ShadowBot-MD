@@ -7,7 +7,13 @@ let handler = async (m, { conn, command }) => conn.sendButton(m.chat, `
 
 *2._* https://chat.whatsapp.com/FxlQJ4A3tOjGx2Qu3BITfb
 
-*3._* https://chat.whatsapp.com/DS4iL9jXYWe9CCPLMndcXO
+*3._* https://chat.whatsapp.com/JjO8d79Y6x85Lb9AVJTacg
+
+*4._* https://chat.whatsapp.com/GzSa1szOscjCZS4jBPBvtG
+
+*5._* https://chat.whatsapp.com/KMOHXtuV8A594uS8fVq0v9
+
+*6._* https://chat.whatsapp.com/LEMnxt8sApu9HeBbpxI50w
 
 `.trim(), wm, media, [['💟 𝙼𝙴𝙽𝚄 𝙿𝚁𝙸𝙽𝙲𝙸𝙿𝙰𝙻 💟', '#menu']], m)
 handler.command = /^linkgc|grupos$/i
