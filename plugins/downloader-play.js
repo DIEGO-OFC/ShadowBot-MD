@@ -4,7 +4,7 @@ let handler = async (m, { conn, command, text, usedPrefix }) => {
 let fkontak = { "key": { "participants":"0@s.whatsapp.net", "remoteJid": "status@broadcast", "fromMe": false, "id": "Halo" }, "message": { "contactMessage": { "vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD` }}, "participant": "0@s.whatsapp.net" }
 let grupos = [md]
 let dorrat = [imagen1, imagen2, imagen3, imagen4]
-let enlace = { contextInfo: { externalAdReply: {title: wm + ' 😎', body: 'support group' , sourceUrl: grupos.getRandom(), thumbnail: await(await fetch(gata.getRandom())).buffer() }}}
+let enlace = { contextInfo: { externalAdReply: {title: wm + ' 😎', body: 'support group' , sourceUrl: grupos.getRandom(), thumbnail: await(await fetch(dorrat.getRandom())).buffer() }}}
 let enlace2 = { contextInfo: { externalAdReply: { showAdAttribution: true, mediaUrl: yt, mediaType: 'VIDEO', description: '', title: wm, body: '🔮 𝐒𝐮𝐩𝐞𝐫 𝐃𝐨𝐫𝐫𝐚𝐭𝐁𝐨𝐭 - 𝐖𝐡𝐚𝐭𝐬𝐚𝐩𝐩 ', thumbnailUrl: await(await fetch(img)).buffer(), sourceUrl: yt }}}
 let dos = [enlace, enlace2]
 
