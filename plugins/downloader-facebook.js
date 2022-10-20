@@ -2,7 +2,7 @@ import fg from 'api-dylux'
 let handler = async (m, { conn, args, usedPrefix, command }) => {
  
  if (!args[0]) throw `[❗𝐈𝐍𝐅𝐎❗] 𝙸𝙽𝙶𝚁𝙴𝚂𝙴 𝚄𝙽 𝙻𝙸𝙽𝙺 𝙳𝙴 𝚄𝙽 𝚅𝙸𝙳𝙴𝙾 𝙳𝙴 𝙵𝙰𝙲𝙴𝙱𝙾𝙾𝙺\n\n📌 𝐄𝐉𝐄𝐌𝐏𝐋𝐎 :\n*${usedPrefix + command}* https://fb.watch/d7nB8-L-gR/`
-    m.react(rwait)
+    
    try {
   let res = await fg.fbdl(args[0])
   let vid = res.data[0].url
