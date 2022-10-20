@@ -9,7 +9,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
   let cal = res.data[0].quality   
   let te = `
 ┌─⊷ FBDL
-▢ *Calidad:* ${cal}
+📦 *Calidad:* ${cal}
 └───────────`
   conn.sendFile(m.chat, vid, 'fb.mp4', te, m)
   m.react(done)
