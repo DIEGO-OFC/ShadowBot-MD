@@ -167,14 +167,15 @@ let str = `
 └────ׂ─ׂ─ׂ─ׂ──
 
 ┌──「🏢𝐆𝐑𝐎𝐔𝐏」─
+├➢💎${usedPrefix}add *<número>*
+├➢💎${usedPrefix}kick <@tag
 ├➢💎${usedPrefix}resetlink
 ├➢💎${usedPrefix}encuesta *<texto>
 ├➢💎${usedPrefix}votar *<texto>*
 ├➢💎${usedPrefix}listadv
 ├➢💎${usedPrefix}deladvertencia <@tag
 ├➢💎${usedPrefix}advertencia <@tag
-├➢💎${usedPrefix}add <numero
-├➢💎${usedPrefix}kick <@tag
+├➢💎${usedPrefix}grouptime *<opcion> <tiempo>*_
 ├➢💎${usedPrefix}grupo <abrir / cerrar
 ├➢💎${usedPrefix}promote <@tag
 ├➢💎${usedPrefix}demote <@tag
