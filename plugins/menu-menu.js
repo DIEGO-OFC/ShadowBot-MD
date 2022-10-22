@@ -290,7 +290,6 @@ let str = `
 ├➢🔞 _${usedPrefix}panties_
 ├➢🔞 _${usedPrefix}pene_
 ├➢🔞 _${usedPrefix}porno_
-├➢🔞 _${usedPrefix}porno2_
 ├➢🔞 _${usedPrefix}randomxxx_
 ├➢🔞 _${usedPrefix}pechos_
 ├➢🔞 _${usedPrefix}yaoi_
@@ -411,6 +410,7 @@ let str = `
 ├➢🛠️ _${usedPrefix}encuestas texto|texto_
 ├➢🛠️ _${usedPrefix}afk *<motivo>*_
 ├➢🛠️ _${usedPrefix}ocr *<responde a imagen>*_
+├➢🛠️ _${usedPrefix}tamaño *<cantidad> <responde a imagen / video>*_
 ├➢🛠️ _${usedPrefix}acortar *<enlace / link / url>*_
 ├➢🛠️ _${usedPrefix}calc *<operacion math>*_
 ├➢🛠️ _${usedPrefix}del *<respondre a mensaje del Bot>*_
