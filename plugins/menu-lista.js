@@ -83,7 +83,7 @@ let name = await conn.getName(m.sender)
 //let name = conn.getName(m.sender)
 
 const listMessage = {
-//Pon tu cantidad de ram abajo.
+
 text: `
 ┏─────────────────────⬣\n│${ucapan()}\n│💚•.¸💚¸.• *${name}* •.¸💚¸.•💚\n┗───────────────────── ⳹
 
