@@ -19,7 +19,7 @@ let _uptime = process.uptime() * 1000
 let uptime = clockString(_uptime) 
 wm = global.wm
 vs = global.vs
-let { exp, limit, level, role } = global.db.data.users[m.sender]
+let { exp, limit, dorracoins, level, role } = global.db.data.users[m.sender]
 let { min, xp, max } = xpRange(level, global.multiplier)
 //let name = await conn.getName(m.sender)
 
