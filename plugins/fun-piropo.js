@@ -1,3 +1,5 @@
+//by https://github.com/DIEGO-OFC/DORRAT-BOT-MD
+
 let handler = async (m, { conn }) => {
 
 m.reply(global.piropo)
