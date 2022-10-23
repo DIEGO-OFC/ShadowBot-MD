@@ -6,8 +6,7 @@ let handler = async (m, { conn, text}) => {
 let hasil = Math.floor(Math.random() * 5000)
 
   m.reply(`
-*╔═════════════════════════════*\n
-➢ *"${pickRandom(global.piropo)}"*\n\n\t- *_By DIEGO-0FC©_*\n*╚═════════════════════════════*
+*╔═════════════════════════════*\n➢ *"${pickRandom(global.piropo)}"*\n - *_By DIEGO-0FC©_*\n*╚═════════════════════════════*
 `)
 }
 handler.tags = ['frases']
