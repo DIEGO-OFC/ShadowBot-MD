@@ -21,7 +21,7 @@ let handler = async(m, { conn, text, usedPrefix, command }) => {
 	return await conn.sendListM(m.chat, button, row, m)
 }
 handler.help = ['apkpure'].map(v => v + ' <query>')
-handler.tags = ['tools']
+handler.tags = ['buscador']
 handler.command = /^(apkpure)$/i
 handler.owner = false
 
