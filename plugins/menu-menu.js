@@ -228,6 +228,7 @@ let str = `
 
 
 ┌──「🌹𝐅𝐫𝐚𝐬𝐞𝐬 𝐲 𝐭𝐞𝐱𝐭𝐨𝐬」─
+├➢🥀 _${usedPrefix}piropo_
 ├➢🥀 _${usedPrefix}consejo_
 ├➢🥀 _${usedPrefix}fraseromantica_
 ├➢🥀 _${usedPrefix}historiaromantica_
