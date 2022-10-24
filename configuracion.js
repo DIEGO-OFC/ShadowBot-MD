@@ -72,7 +72,8 @@ global.APIKeys = { // APIKey Here
 }
 
 /* ______________________________________________ */
-
+global.creadorname = '𝐃𝐈𝐄𝐆𝐎-𝐎𝐅𝐂'
+global.creatorname = creadorname
 global.vs = '1.3.0'
 global.version = vs
 //------------- Sticker WM -----------
