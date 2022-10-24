@@ -16,7 +16,7 @@
 <a href="http://wa.me/51993138466" target="blank"><img src="https://img.shields.io/badge/DANI_COLAB.3-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
 <a href="http://wa.me/50246028932" target="blank"><img src="https://img.shields.io/badge/SinNombre_COLAB.4-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
 
-### `🔥GRUPOS OFICIALES`
+### `—◉ 🔥GRUPOS OFICIALES`
 
 [![blog](https://img.shields.io/badge/Grupo-Oficial-25D366?style=for-the-badge&logo=whatsapp&logoColor=white 
 )](https://chat.whatsapp.com/LlAbJM659dOBVJnxOIMl9h)  <a href="https://chat.whatsapp.com/LlAbJM659dOBVJnxOIMl9h"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/WhatsApp_logo-color-vertical.svg/1200px-WhatsApp_logo-color-vertical.svg.png" height="29px"></a>
@@ -26,7 +26,7 @@
 ---------
 > GRUPOS OFICIALES DEL BOT PARA LA DIVERSIÓN :)
 
-###`❤️BOTS OFICIALES`
+###`—◉ ❤️BOTS OFICIALES`
 
 <a href="http://wa.me/573122695406" target="blank"><img src="https://img.shields.io/badge/BOT-OFICIAL.1️⃣-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
 
@@ -36,7 +36,7 @@
 
 > [⚠️] USAR LOS BOTS SIN SPAM
 
-### `📦 𝐇𝐎𝐓𝐒 𝐏𝐀𝐑𝐀 𝐓𝐄𝐍𝐄𝐑 𝐄𝐋 𝐁𝐎𝐓 𝟐𝟒/𝟕`
+### `—◉ 📦 𝐇𝐎𝐓𝐒 𝐏𝐀𝐑𝐀 𝐓𝐄𝐍𝐄𝐑 𝐄𝐋 𝐁𝐎𝐓 𝟐𝟒/𝟕`
 
 <a href="https://dash.boxmineworld.com/login" target="_blank"> <img src="https://img.shields.io/badge/-Boxmineworld-%23E4405F?style=for-the-badge&logo=Boxmineworld&logoColor=black" target="_blank"></a> <img src="https://github.com/DIEGO-OFC/DORRAT-BOT-MD/blob/main/galeria/Boxmine.png" height="30px">
 <p align="hihg">   
