@@ -71,7 +71,7 @@ global.APIKeys = { // APIKey Here
   'https://violetics.pw': 'beta'
 }
 
-//______________________________________________
+/* ______________________________________________ */
 
 global.vs = '1.3.0'
 global.version = vs
@@ -85,7 +85,7 @@ global.wait = '*[❗] Ƈᴀʀɢᴀɴᴅᴏ, ᴀɢᴜᴀʀᴅᴇ ᴜɴ ᴍᴏᴍ�
 global.md = 'https://chat.whatsapp.com/LlAbJM659dOBVJnxOIMl9h'
 global.dorramd = md
 
-//_____________________________________________
+/* _____________________________________________ */
 
 global.ag = '━━━━━━━ ❎ 𝙰𝙳𝚅𝙴𝚁𝚃𝙴𝙽𝙲𝙸𝙰 | 𝚆𝙰𝚁𝙽𝙸𝙽𝙶 ❎ ━━━━━━━━━'
 global.advertencia = ag
@@ -96,7 +96,7 @@ global.mal = mg
 global.dorre = 'DORRAT-BOT-MD'
 global.DORRA = dorre
 
-//Imagenes___________________
+/* Imagenes___________________ */
 global.imagen1 = fs.readFileSync('./Menu2.jpg')
 global.imagen2 = fs.readFileSync('./galeria/nuevobot.jpg') 
 global.imagen3 = fs.readFileSync('./galeria/Pre Bot Publi.png')
@@ -106,7 +106,7 @@ global.keysZens = ['fiktod', 'c2459db922', 'BF39D349845E', '675e34de8a', '37CC84
 global.keysxxx = keysZens[Math.floor(keysZens.length * Math.random())]
 global.lolkeysapi = ['85faf717d0545d14074659ad']
                 
-//⊱__________________.⋅ RPG ⋅.________ ⊰
+/* ⊱__________________.⋅ RPG ⋅.________ ⊰ */
 
 global.flaaa = [
 
@@ -154,7 +154,7 @@ global.fgif = {
                               }
                              }
 
-//_____________________________________
+/* _____________________________________ */
 
 global.multiplier = 999 // Cuanto más alto, más difícil subir de nivel | The higher, The harder levelup 
 
