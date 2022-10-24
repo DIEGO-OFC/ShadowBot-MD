@@ -26,7 +26,7 @@
 ---------
 > GRUPOS OFICIALES DEL BOT PARA LA DIVERSIÓN :)
 
-###`—◉ ❤️BOTS OFICIALES`
+### `—◉ ❤️BOTS OFICIALES`
 
 <a href="http://wa.me/573122695406" target="blank"><img src="https://img.shields.io/badge/BOT-OFICIAL.1️⃣-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
 
