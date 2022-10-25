@@ -4,6 +4,8 @@ const { levelling } = '../lib/levelling.js'
 import moment from 'moment-timezone'
 let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isROwner }) => {
 let locale = 'es'
+let fkontak = { "key": { "participants":"0@s.whatsapp.net", "remoteJid": "status@broadcast", "fromMe": false, "id": "Halo" }, "message": { "contactMessage": { "vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD` }}, "participant": "0@s.whatsapp.net" }
+let taguser = '@' + m.sender.split("@s.whatsapp.net")[0]
 let d = new Date(new Date + 3600000)
 let time = d.toLocaleTimeString(locale, {
       hour: 'numeric',
@@ -83,7 +85,7 @@ let name = await conn.getName(m.sender)
 const listMessage = {
       
 text: `
-┏─────────────────────⬣\n│${ucapan()}\n│💚•.¸💚¸.• *${name}* •.¸💚¸.•💚\n┗───────────────────── ⳹
+┏─────────────────────⬣\n│${ucapan()}\n│💚•.¸💚¸.• *${taguser}* •.¸💚¸.•💚\n┗───────────────────── ⳹
 
 ╔═══〔 *${wm}* 〕═══⬣
 ║ ⏱️ ▢ *Hora*    
@@ -109,7 +111,8 @@ buttonText: "🔰 𝗦𝗘𝗟𝗘𝗖𝗖𝗜𝗢𝗡𝗘 𝗔𝗤𝗨𝗜 🔰
 
 sections }
 
-await conn.sendMessage(m.chat, listMessage)
+await conn.sendMessage(m.chat, listMessage, {quoted: fkontak})	
+
 
 }
 
