@@ -8,7 +8,7 @@ let gPlay = await json.json()
 let lol = await fetch(`https://api.lolhuman.xyz/api/translate/auto/es?apikey=85faf717d0545d14074659ad&text=${gPlay.descripcion}`)
 let loll = await lol.json()
 let dorrat = loll.result.translated
-if (!gPlay.titulo) return m.reply(`[ ! ] Sin resultados`)
+if (!gPlay.titulo) return m.reply(`[❗] Sin resultados`)
 conn.sendMessage(m.chat,{image:{url: gPlay.imagen},caption:`🔍 Resultado: ${gPlay.titulo}
 📦 Identificador: ${gPlay.id}
 ⚜️ Link: ${gPlay.link}
