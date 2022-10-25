@@ -22,6 +22,6 @@ await conn.sendFile(m.chat, ss, 'error.png', url + '\n\n' + msg, m)
 m.reply(msg)
 }}
 handler.help = ['google', 'googlef'].map(v => v + ' <pencarian>')
-handler.tags = ['internet']
+handler.tags = ['search']
 handler.command = /^googlef?$/i
 export default handler
