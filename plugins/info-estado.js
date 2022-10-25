@@ -23,7 +23,7 @@ conn.sendHydrated(m.chat, estado, wm, picture, 'https://github.com/DIEGO-OFC/DOR
 ], m)}
 
 handler.help = ['estado']
-handler.tags = ['bot']
+handler.tags = ['info']
 handler.command = /^(estado|status|estate|state|stado|stats)$/i
 export default handler
 
