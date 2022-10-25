@@ -32,6 +32,6 @@ m.reply('*[❗𝐈𝐍𝐅𝐎❗] 𝙴𝚁𝚁𝙾𝚁, 𝙿𝙾𝚁 𝙵𝙰�
 console.log(e)
 }}
 handler.help = ['lirik','letra'].map(v => v + ' <Apa>')
-handler.tags = ['internet']
+handler.tags = ['search']
 handler.command = /^(lirik|lyrics|lyric|letra)$/i
 export default handler
