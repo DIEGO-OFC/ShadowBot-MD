@@ -213,7 +213,7 @@ this.sendPresenceUpdate('recording', m.chat)
 this.sendFile(m.chat, vn, 'error.mp3', null, m, true, {type: 'audioMessage', ptt: true})}
   
 if (!chat.isBanned && chat.audios && m.text.match(/(bienvenido|welcome)/gi)) {   
-let vn = './media/Bienvenido.mp3'
+let vn = './media/bienvenido.mp3'
 this.sendPresenceUpdate('recording', m.chat) 
 
 this.sendFile(m.chat, vn, 'error.mp3', null, m, true, {type: 'audioMessage', ptt: true})}
