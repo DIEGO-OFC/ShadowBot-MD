@@ -41,6 +41,6 @@ let animeingfo = `✨ *Titulo:* ${title}
 conn.sendFile(m.chat, image_url, '', animeingfo, m)
 }}
 handler.help = ['animeinfo <anime>']
-handler.tags = ['internet']
+handler.tags = ['search']
 handler.command = /^(animeinfo)$/i
 export default handler
