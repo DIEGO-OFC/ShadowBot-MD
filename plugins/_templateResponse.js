@@ -49,7 +49,7 @@ export async function all(m, chatUpdate) {
             let isId = comandos.command instanceof RegExp ? // RegExp Mode?
                 comandos.command.test(command) :
                 Array.isArray(comandos.command) ? // Array?
-                    plugin.command.some(cmd => cmd instanceof RegExp ? // RegExp in Array?
+                    comandos.command.some(cmd => cmd instanceof RegExp ? // RegExp in Array?
                         cmd.test(command) :
                         cmd === command
                     ) :
