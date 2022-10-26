@@ -14,21 +14,21 @@ export async function all(m, chatUpdate) {
     let id = m.message.buttonsResponseMessage?.selectedButtonId || m.message.templateButtonReplyMessage?.selectedId || m.message.listResponseMessage?.singleSelectReply?.selectedRowId
     let text = m.message.buttonsResponseMessage?.selectedDisplayText || m.message.templateButtonReplyMessage?.selectedDisplayText || m.message.listResponseMessage?.title
     let isIdMessage = false, usedPrefix
-    for (let name in global.plugins) {
-        let plugin = global.plugins[name]
-        if (!plugin)
+    for (let name in global.comandos) {
+        let comandos = global.comandos[name]
+        if (!comandos)
             continue
-        if (plugin.disabled)
+        if (comandos.disabled)
             continue
         if (!opts['restrict'])
-            if (plugin.tags && plugin.tags.includes('admin'))
+            if (comandos.tags && comandos.tags.includes('admin'))
                 continue
-        if (typeof plugin !== 'function')
+        if (typeof comandos !== 'function')
             continue
-        if (!plugin.command)
+        if (!comandos.command)
             continue
         const str2Regex = str => str.replace(/[|\\{}()[\]^$+*?.]/g, '\\$&')
-        let _prefix = plugin.customPrefix ? plugin.customPrefix : this.prefix ? this.prefix : global.prefix
+        let _prefix = comandos.customPrefix ? comandos.customPrefix : this.prefix ? this.prefix : global.prefix
         let match = (_prefix instanceof RegExp ? // RegExp Mode?
             [[_prefix.exec(id), _prefix]] :
             Array.isArray(_prefix) ? // Array?
@@ -46,15 +46,15 @@ export async function all(m, chatUpdate) {
             let noPrefix = id.replace(usedPrefix, '')
             let [command] = noPrefix.trim().split` `.filter(v => v)
             command = (command || '').toLowerCase()
-            let isId = plugin.command instanceof RegExp ? // RegExp Mode?
+            let isId = comandos.command instanceof RegExp ? // RegExp Mode?
                 plugin.command.test(command) :
                 Array.isArray(plugin.command) ? // Array?
                     plugin.command.some(cmd => cmd instanceof RegExp ? // RegExp in Array?
                         cmd.test(command) :
                         cmd === command
                     ) :
-                    typeof plugin.command === 'string' ? // String?
-                        plugin.command === command :
+                    typeof comandos.command === 'string' ? // String?
+                        Comandos.command === command :
                         false
             if (!isId)
                 continue
