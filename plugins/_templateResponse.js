@@ -47,8 +47,8 @@ export async function all(m, chatUpdate) {
             let [command] = noPrefix.trim().split` `.filter(v => v)
             command = (command || '').toLowerCase()
             let isId = comandos.command instanceof RegExp ? // RegExp Mode?
-                plugin.command.test(command) :
-                Array.isArray(plugin.command) ? // Array?
+                comandos.command.test(command) :
+                Array.isArray(comandos.command) ? // Array?
                     plugin.command.some(cmd => cmd instanceof RegExp ? // RegExp in Array?
                         cmd.test(command) :
                         cmd === command
