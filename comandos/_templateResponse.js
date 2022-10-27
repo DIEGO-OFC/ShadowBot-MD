@@ -1,0 +1,79 @@
+const {
+    proto,
+    generateWAMessage,
+    areJidsSameUser
+} = (await import('@adiwajshing/baileys')).default
+
+export async function all(m, chatUpdate) {
+    if (m.isBaileys)
+        return
+    if (!m.message)
+        return
+    if (!(m.message.buttonsResponseMessage || m.message.templateButtonReplyMessage || m.message.listResponseMessage))
+        return
+    let id = m.message.buttonsResponseMessage?.selectedButtonId || m.message.templateButtonReplyMessage?.selectedId || m.message.listResponseMessage?.singleSelectReply?.selectedRowId
+    let text = m.message.buttonsResponseMessage?.selectedDisplayText || m.message.templateButtonReplyMessage?.selectedDisplayText || m.message.listResponseMessage?.title
+    let isIdMessage = false, usedPrefix
+    for (let name in global.comandos) {
+        let comandos = global.comandos[name]
+        if (!comandos)
+            continue
+        if (comandos.disabled)
+            continue
+        if (!opts['restrict'])
+            if (comandos.tags && comandos.tags.includes('admin'))
+                continue
+        if (typeof comandos !== 'function')
+            continue
+        if (!comandos.command)
+            continue
+        const str2Regex = str => str.replace(/[|\\{}()[\]^$+*?.]/g, '\\$&')
+        let _prefix = comandos.customPrefix ? comandos.customPrefix : this.prefix ? this.prefix : global.prefix
+        let match = (_prefix instanceof RegExp ? // RegExp Mode?
+            [[_prefix.exec(id), _prefix]] :
+            Array.isArray(_prefix) ? // Array?
+                _prefix.map(p => {
+                    let re = p instanceof RegExp ? // RegExp in Array?
+                        p :
+                        new RegExp(str2Regex(p))
+                    return [re.exec(id), re]
+                }) :
+                typeof _prefix === 'string' ? // String?
+                    [[new RegExp(str2Regex(_prefix)).exec(id), new RegExp(str2Regex(_prefix))]] :
+                    [[[], new RegExp]]
+        ).find(p => p[1])
+        if ((usedPrefix = (match[0] || '')[0])) {
+            let noPrefix = id.replace(usedPrefix, '')
+            let [command] = noPrefix.trim().split` `.filter(v => v)
+            command = (command || '').toLowerCase()
+            let isId = comandos.command instanceof RegExp ? // RegExp Mode?
+                comandos.command.test(command) :
+                Array.isArray(comandos.command) ? // Array?
+                    comandos.command.some(cmd => cmd instanceof RegExp ? // RegExp in Array?
+                        cmd.test(command) :
+                        cmd === command
+                    ) :
+                    typeof comandos.command === 'string' ? // String?
+                        Comandos.command === command :
+                        false
+            if (!isId)
+                continue
+            isIdMessage = true
+        }
+}
+    let messages = await generateWAMessage(m.chat, { text: isIdMessage ? id : text, mentions: m.mentionedJid }, {
+        userJid: this.user.id,
+        quoted: m.quoted && m.quoted.fakeObj
+    })
+    messages.key.fromMe = areJidsSameUser(m.sender, this.user.id)
+    messages.key.id = m.key.id
+    messages.pushName = m.name
+    if (m.isGroup)
+        messages.key.participant = messages.participant = m.sender
+    let msg = {
+        ...chatUpdate,
+        messages: [proto.WebMessageInfo.fromObject(messages)].map(v => (v.conn = this, v)),
+        type: 'append'
+    }
+    this.ev.emit('messages.upsert', msg)
+}
