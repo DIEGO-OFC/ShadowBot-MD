@@ -3,6 +3,7 @@ import chalk from 'chalk'
 import { fileURLToPath } from 'url'
 import moment from 'moment-timezone' 
 import fs from 'fs'
+import { en, es, id, ar, pt } from './lib/idiomas/total-idiomas.js'
 
 //cambia los números que sean propietarios 
 global.owner = [
@@ -70,6 +71,15 @@ global.APIKeys = { // APIKey Here
   'https://anabotofc.herokuapp.com/': 'AnaBot',
   'https://violetics.pw': 'beta'
 }
+
+// _______________ IDIOMA : LENGUAJE _______________
+//Agrega el Idioma que quieres que tenga GataBot-MD
+//Add the language you want GataBot-MD to have
+//  es = Español       //  id = Bahasa Indonesia
+//  en = English       //  pt = Português 
+//  ar = عرب  
+
+global.lenguajeGB = es //Idioma de †𝐃⃟𝕺𝐑⃯𝐑𝐇⃯𝚵𝐓᪣𝕭⃯𝚹⃯𝐓⃤, Ejemplo: es | en | pt ....
 
 /* ______________________________________________ */
 global.creadorname = '𝐃𝐈𝐄𝐆𝐎-𝐎𝐅𝐂'
