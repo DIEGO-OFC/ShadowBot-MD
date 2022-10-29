@@ -45,7 +45,7 @@ rows: [
 {title: lenguajeGB['smsLista13'](), rowId: `${usedPrefix}rpgmenu`},
 {title: lenguajeGB['smsLista14'](), rowId:  `${usedPrefix}buyall`}
 ]},{	
-title: comienzo + ' 🌟 𝐌𝐄𝐍𝐔𝐒 ' + fin,
+title: comienzo + ' ' + lenguajeGB['smsLista15']() + ' ' + fin,
 rows: [
 {title: "📦 𝐌𝐄𝐍𝐔 𝐃𝐄 𝐃𝐄𝐒𝐂𝐀𝐑𝐆𝐀𝐒", rowId: `${usedPrefix}descargasmenu`},
 {title: "🎧 𝐌𝐄𝐍𝐔 𝐀𝐔𝐃𝐈𝐎𝐒", rowId: `${usedPrefix}audios`},  
