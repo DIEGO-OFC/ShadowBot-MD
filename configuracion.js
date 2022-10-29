@@ -73,8 +73,8 @@ global.APIKeys = { // APIKey Here
 }
 
 // _______________ IDIOMA : LENGUAJE _______________
-//Agrega el Idioma que quieres que tenga GataBot-MD
-//Add the language you want GataBot-MD to have
+//Agrega el Idioma que quieres que tenga DorratBot-MD
+//Add the language you want DorratBot-MD to have
 //  es = Español       //  id = Bahasa Indonesia
 //  en = English       //  pt = Português 
 //  ar = عرب  
