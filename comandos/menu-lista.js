@@ -42,8 +42,8 @@ rows: [
 {title: lenguajeGB['smsLista10'](), rowId: `${usedPrefix}minar`},
 {title: lenguajeGB['smsLista11'](), rowId: `${usedPrefix}work`},
 {title: lenguajeGB['smsLista12'](), rowId: `${usedPrefix}bal`},
-{title: lenguajeGB['smsLista13'](),:rowId: `${usedPrefix}rpgmenu`},
-{title: lenguajeGB['smsLista14'](),:rowId:  `${usedPrefix}buyall`}
+{title: lenguajeGB['smsLista13'](), rowId: `${usedPrefix}rpgmenu`},
+{title: lenguajeGB['smsLista14'](), rowId:  `${usedPrefix}buyall`}
 ]},{	
 title: comienzo + ' 🌟 𝐌𝐄𝐍𝐔𝐒 ' + fin,
 rows: [
