@@ -39,7 +39,7 @@ rows: [
 title: comienzo + ' ' + lenguajeGB['smsLista8']() + ' ' + fin,
 rows: [
 {title: lenguajeGB['smsLista9'](),  rowId: `${usedPrefix}lb`},
-{title: lenguajeGB['smsLista10'](), rowId: ${usedPrefix}minar},
+{title: lenguajeGB['smsLista10'](), rowId: `${usedPrefix}minar`},
 {title: lenguajeGB['smsLista11'](), rowId: `${usedPrefix}work`},
 {title: lenguajeGB['smsLista12'](), rowId: `${usedPrefix}bal`},
 {title: lenguajeGB['smsLista13'](),:rowId: `${usedPrefix}rpgmenu`},
