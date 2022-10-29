@@ -48,8 +48,8 @@ rows: [
 title: comienzo + ' ' + lenguajeGB['smsLista15']() + ' ' + fin,
 rows: [
 {title: lenguajeGB['smsLista16'](), rowId: `${usedPrefix}descargasmenu`},
-{title: "🎧 𝐌𝐄𝐍𝐔 𝐀𝐔𝐃𝐈𝐎𝐒", rowId: `${usedPrefix}audios`},  
-{title: "🎮 𝐌𝐄𝐍𝐔 𝐉𝐔𝐄𝐆𝐎𝐒", rowId: `${usedPrefix}juegosdelgrupo`},
+{title: lenguajeGB['smsLista17'](), rowId:`${usedPrefix}audios`},  
+{title: lenguajeGB['smsLista18'](), rowId: `${usedPrefix}juegosdelgrupo`},
  {title: "🔰 𝐌𝐄𝐍𝐔 𝐒𝐓𝐈𝐂𝐊𝐄𝐑𝐒", rowId: `${usedPrefix}stickermenu`},
  {title: "🏛 𝐌𝐄𝐍𝐔 𝐀𝐍𝐈𝐌𝐄", rowId: `${usedPrefix}animemenu`},
  {title: "👑 𝐌𝐄𝐍𝐔 𝐎𝐖𝐍𝐄𝐑", rowId: `${usedPrefix}soloparaelpropietario`},  
