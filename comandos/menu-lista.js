@@ -36,7 +36,7 @@ rows: [
 {title: lenguajeGB['smsLista7'](), rowId:`${usedPrefix}instalarbot`}
 
 ]},{
-title: comienzo + ' 💲 𝐌𝐄𝐍𝐔 𝐄𝐂𝐎𝐍𝐎𝐌𝐈𝐀 💲' + fin,
+title: comienzo + ' ' + lenguajeGB['smsLista8']() + ' ' + fin,
 rows: [
 {title: "🏆 𝐓𝐀𝐁𝐋𝐀 𝐂𝐋𝐀𝐒𝐈𝐅𝐈𝐂𝐀𝐓𝐎𝐑𝐈𝐀", rowId: `${usedPrefix}lb`},
 {title: "⛏️ 𝐌𝐈𝐍𝐀𝐑", rowId: `${usedPrefix}minar`},
