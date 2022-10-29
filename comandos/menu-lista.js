@@ -28,7 +28,7 @@ let { min, xp, max } = xpRange(level, global.multiplier)
 const sections = [{
 title: comienzo + ' ' + lenguajeGB['smsLista1']() + ' ' + fin,
 rows: [
-{title: lenguajeGB['smsLista2'](), rowId: rowId: `${usedPrefix}creator`},  
+{title: lenguajeGB['smsLista2'](), rowId:`${usedPrefix}creator`},  
 {title: lenguajeGB['smsLista3'](), rowId:`${usedPrefix}infobot`},
 {title: lenguajeGB['smsLista4'](), rowId:`${usedPrefix}allmenu`},
 {title: lenguajeGB['smsLista5'](), rowId:`${usedPrefix}grupos`},
