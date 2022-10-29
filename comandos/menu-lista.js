@@ -38,12 +38,12 @@ rows: [
 ]},{
 title: comienzo + ' ' + lenguajeGB['smsLista8']() + ' ' + fin,
 rows: [
-{title: lenguajeGB['smsLista9'](), rowId: `${usedPrefix}lb`},
+{title: lenguajeGB['smsLista9'](),  rowId: `${usedPrefix}lb`},
 {title: lenguajeGB['smsLista10'](), rowId: ${usedPrefix}minar},
-{title: lenguajeGB['smsLista11'](), `${usedPrefix}work`},
-{title: lenguajeGB['smsLista12'](),`${usedPrefix}bal`},
-{title: lenguajeGB['smsLista13'](),: `${usedPrefix}rpgmenu`},
-{title: "💎 𝐂𝐎𝐌𝐏𝐑𝐀𝐑 𝐃𝐈𝐀𝐌𝐀𝐍𝐓𝐄𝐒", rowId: `${usedPrefix}buyall`}
+{title: lenguajeGB['smsLista11'](), rowId: `${usedPrefix}work`},
+{title: lenguajeGB['smsLista12'](), rowId: `${usedPrefix}bal`},
+{title: lenguajeGB['smsLista13'](),:rowId: `${usedPrefix}rpgmenu`},
+{title: lenguajeGB['smsLista14'](),:rowId:  `${usedPrefix}buyall`}
 ]},{	
 title: comienzo + ' 🌟 𝐌𝐄𝐍𝐔𝐒 ' + fin,
 rows: [
