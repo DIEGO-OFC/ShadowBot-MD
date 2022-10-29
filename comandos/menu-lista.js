@@ -52,8 +52,8 @@ rows: [
 {title: lenguajeGB['smsLista18'](), rowId: `${usedPrefix}juegosdelgrupo`},
 {title: lenguajeGB['smsLista19'](), rowId: `${usedPrefix}stickermenu`},
 {title: lenguajeGB['smsLista20'](), rowId:`${usedPrefix}animemenu`},
- {title: "👑 𝐌𝐄𝐍𝐔 𝐎𝐖𝐍𝐄𝐑", rowId: `${usedPrefix}soloparaelpropietario`},  
-{title: "🔞 𝐌𝐄𝐍𝐔 +18", rowId: `${usedPrefix}hornymenu`}
+{title: lenguajeGB['smsLista21'](), rowId:`${usedPrefix}soloparaelpropietario`},  
+{title: lenguajeGB['smsLista22'](), rowId: `${usedPrefix}hornymenu`}
 ]},{	
 title: comienzo + '🗂️ 𝐄𝐍𝐀𝐁𝐋𝐄/𝐃𝐈𝐒𝐀𝐁𝐋𝐄 ' + fin,
 rows: [
