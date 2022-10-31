@@ -7,7 +7,7 @@ let handler = async (m, { conn, args, usedPrefix, command, text }) => {
     let { version, updated, developer, id, requirements, installed } = json.info
     let pp = await (await fetch('https://telegra.ph/file/e867ad919a98764a4d719.jpg')).buffer()
     let info = `*📦 • Versión:* ${version}\n*📅 • Actualización:* ${updated}\n*👑 • Desarrollador:* ${developer}\n*ℹ️ • ID:* ${id}\n*📱 • Android:* ${requirements}\n*🛡️ • Instalada:* ${installed}`
-    await conn.sendNyanCat(m.chat, `${info}\n\n${global.wait}`, pp, `• Downloader Play Store 💎`, me, script, m)
+    await conn.sendNyanCat(m.chat, `${info}\n\n${global.wait}`, pp, `• Downloader Play Store 💎`, wm, 'https://github.com/DIEGO-OFC/DORRAT-BOT-MD', m)
     
 conn.sendMessage(m.chat, { document: { url: `${json.apkdownload}` }, mimetype: 'application/videos.android.package-archive', fileName: `${text}.apk` }, { quoted: m })
 } catch { m.reply('⚠️ *_Resultados no encontrados._*') }
@@ -15,8 +15,4 @@ conn.sendMessage(m.chat, { document: { url: `${json.apkdownload}` }, mimetype: '
 handler.help = ['apkdl *<nombre de apk>*']
 handler.tags = ['downloader']
 handler.command = ['dlapk', 'apkdl'] 
-handler.register = true
-
-handler.limit = true
-
 export default handler
