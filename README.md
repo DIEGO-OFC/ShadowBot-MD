@@ -32,8 +32,6 @@
 
 <a href="http://wa.me/5493534267295" target="blank"><img src="https://img.shields.io/badge/BOT-OFICIAL.2️⃣-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
 
-<a href="http://wa.me/51998364160" target="blank"><img src="https://img.shields.io/badge/BOT-OFICIAL.3️⃣-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
-
 > [⚠️] USAR LOS BOTS SIN SPAM
 
 ### `—◉ 📦 𝐇𝐎𝐓𝐒 𝐏𝐀𝐑𝐀 𝐓𝐄𝐍𝐄𝐑 𝐄𝐋 𝐁𝐎𝐓 𝟐𝟒/𝟕`
