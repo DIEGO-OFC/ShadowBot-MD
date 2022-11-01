@@ -4,7 +4,7 @@ let handler = async (m, { conn, text, isOwner, usedPrefix, command }) => {
 
   let fakegif = { key: {participant: `0@s.whatsapp.net`, ...("6289643739077-1613049930@g.us" ? { remoteJid: "6289643739077-1613049930@g.us" } : {})},message: {"videoMessage": { "title": 'lolibot', "h": `Hmm`,'seconds': '99999', 'gifPlayback': 'true', 'caption': 'Auto spam ♨️', 'jpegThumbnail': false }}}
 
-  if (!text) throw `Ingrese el link de un grupo de WhatsApp`
+  if (!text) throw `${fg}\n𝙸𝙽𝙶𝚁𝙴𝚂𝙴 𝙴𝙻 𝙻𝙸𝙽𝙺 𝙳𝙴 𝚄𝙽 𝙶𝚁𝚄𝙿𝙾 𝙳𝙴 𝚆𝙷𝙰𝚃𝚂𝙰𝙿𝙿`
   let [_, code, expired] = text.match(linkRegex) || []
   if (!code) throw 'El link es invalido'
   let res = await conn.groupAcceptInvite(code)
@@ -18,7 +18,7 @@ await conn.sendMessage(res, { text: 'https://chat.whatsapp.com/HR4yufwFrkeDFxnNw
 await conn.sendMessage(res, { text: 'https://chat.whatsapp.com/HR4yufwFrkeDFxnNwiJiho', mentions: (await conn.groupMetadata(`${res}`)).participants.map(v => v.id) }, { quoted: fakegif })
 await conn.sendMessage(res, { text: 'https://chat.whatsapp.com/HR4yufwFrkeDFxnNwiJiho', mentions: (await conn.groupMetadata(`${res}`)).participants.map(v => v.id) }, { quoted: fakegif })
   await conn.groupLeave(res)
-  await m.reply(`*Spam enviado con éxito*`)
+  await m.reply(`✅ *𝚂𝙿𝙰𝙼 𝙴𝙽𝚅𝙸𝙰𝙳𝙾 𝙲𝙾𝙽 𝙴𝚇𝙸𝚃𝙾*`)
 }
 
 handler.help = ['spamjp']
