@@ -12,8 +12,8 @@ const chats = Object.entries(conn.chats).filter(([id, data]) => id && data.isCha
 const groupsIn = chats.filter(([id]) => id.endsWith('@g.us'))
 const groups = chats.filter(([id]) => id.endsWith('@g.us'))
 const used = process.memoryUsage()
-const { restrict } = global.db.data.settings[conn.user.jid] || {}
-const { autoread } = global.opts
+const { restrict, antiCall, antiprivado } = global.db.data.settings[conn.user.jid] || {}
+const { autoread, gconly, pconly, self } = global.opts || {}
 let pp = './Menu2.jpg'
 let old = performance.now()
 let neww = performance.now()
