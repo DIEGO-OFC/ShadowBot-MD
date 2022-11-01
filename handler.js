@@ -1112,6 +1112,11 @@ export async function handler(chatUpdate) {
                     if (name != 'owner-unbanuser.js' && user?.banned)
                         return
                 }
+                let hl = _prefix 
+                let adminMode = global.db.data.chats[m.chat].adminMode
+                let mystica = `${comandos.botAdmin || comandos.admin || comandos.group || comandos || noPrefix || hl ||  m.text.slice(0, 1) == hl || comandos.command}`
+                if (adminMode && !isOwner && !isROwner && m.isGroup && !isAdmin && mystica) return   
+
                 if (comandos.rowner && comandos.owner && !(isROwner || isOwner)) { // Both Owner
                     fail('owner', m, this)
                     continue
