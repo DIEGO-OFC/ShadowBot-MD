@@ -907,6 +907,7 @@ export async function handler(chatUpdate) {
 		if (!('reaction' in chat)) chat.reaction = true    
                 if (!('viewonce' in chat)) chat.viewonce = false                                 
                 if (!('antitoxic' in chat)) chat.antitoxic = true
+                if (!('modoadmin' in chat)) chat.modoadmin = false
                 if (!('antiArab' in chat)) chat.antiArab = false
                 if (!('antiTraba' in chat)) chat.antiTraba = false                   
                 if (!isNumber(chat.expired)) chat.expired = 0
@@ -936,6 +937,7 @@ export async function handler(chatUpdate) {
 		    antiTwitter: false,
 		    antifake: false,
                     antiTraba: false,
+                    modoadmin: false,
 		    reaction: true,
                     antiArab: false,
                     antiviewonce: false,
@@ -955,6 +957,7 @@ export async function handler(chatUpdate) {
                 self: false,
                 autoread: false,
                 restrict: false,                
+                modejadibot: true,
 		temporal: false,
                 antiPrivate: false,
 		antiCall: false
