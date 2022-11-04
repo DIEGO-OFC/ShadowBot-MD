@@ -59,7 +59,7 @@ let texto = ''
 for (let reward of Object.keys(recompensas)) {
     if (!(reward in user)) continue
     user[reward] += recompensas[reward]
-texto += `+${recompensas[reward]})
+texto += `+${recompensas[reward]} ${global.rpgshop.emoticon(reward)}\n`}
 
 conn.sendHydrated(m.chat, `*${premium ? '🎟️ Recompensa Premium' : '🆓 Recompensa Gratis'}*\n*${minar}*\n*${limit} ${global.rpgshop.emoticon('limit')}*`,`🍁 𝗕 𝗢 𝗡 𝗢\n` + texto + `\n\n🎟️ 𝗣 𝗥 𝗘 𝗠 𝗜 𝗨 𝗠 ⇢ ${premium ? '✅' : '❌'}\n${wm}`, pp, md, '𝐃𝐎𝐑𝐑𝐀𝐓-𝐁𝐎𝐓-𝐌𝐃', null, null, [
 ['𝙈𝙞𝙣𝙖𝙧 𝙀𝙓𝙋 ⚡', `.minar`],
