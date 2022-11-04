@@ -97,7 +97,7 @@ let time = global.db.data.users[m.sender].lastberburu + 1500000 //15 Minutos
 if (new Date - global.db.data.users[m.sender].lastberburu > 1500000) { 	
 
 setTimeout(() => {
-conn.sendHydrated(m.chat, hsl, wm, null, md, `𝙂𝙖𝙩𝙖𝘽𝙤𝙩-𝙈𝘿`, null, null, [
+conn.sendHydrated(m.chat, hsl, wm, null, md, `𝘿𝙤𝙧𝙧𝙖𝙩𝘽𝙤𝙩-𝙈𝘿`, null, null, [
 [null, null]], null)}, 20000)
 	        
 setTimeout(() => {
