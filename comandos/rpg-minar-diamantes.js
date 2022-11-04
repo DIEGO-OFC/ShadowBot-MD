@@ -32,7 +32,7 @@ let minar = `${pickRandom(['Que pro 😎 has minado',
 '👾 Gracias a que has minado tus ingresos suman',
 'Felicidades!! Ahora tienes','⛏️⛏️⛏️ Obtienes'])}`
 
-let pp = 'https://us.123rf.com/450wm/emojiimage/emojiimage1802/emojiimage180200332/95468325-mont%C3%B3n-de-piedras-preciosas-diamantes-azules-brillantes-concepto-de-joyas-caras-s%C3%ADmbolo-de-riqueza-d.jpg?ver=6'
+let pp = './Menu2.jpg'
 
 let kyubi = `${pickRandom([0, 1, 3, 1, 2])}` * 1
 let kyubipremium = `${pickRandom([2, 3, 5, 9, 10, 7])}` * 1
