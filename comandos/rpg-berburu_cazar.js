@@ -92,12 +92,13 @@ let hsl = `
 		global.db.data.users[m.sender].babi += rbrb11
 		global.db.data.users[m.sender].ayam += rbrb12
 	
-let time = global.db.data.users[m.sender].lastberburu + 1500000 //15 Minutos
-//if (new Date - global.db.data.users[m.sender].lastberburu > 100000)
-if (new Date - global.db.data.users[m.sender].lastberburu > 1500000) { 	
+let time = global.db.data.users[m.sender].lastberburu + 2700000 //45 Minutos
+if (new Date - global.db.data.users[m.sender].lastberburu < 2700000) return conn.sendButton(m.chat, `𝙿𝙾𝚁 𝙵𝙰𝚅𝙾𝚁 𝙳𝙴𝚂𝙲𝙰𝙽𝚂𝙰 𝚄𝙽 𝙼𝙾𝙼𝙴𝙽𝚃𝙾 𝙿𝙰𝚁𝙰 𝚂𝙴𝙶𝚄𝙸𝚁 𝙲𝙰𝚉𝙰𝙽𝙳𝙾`, `⫹⫺ 𝚃𝙸𝙴𝙼𝙿𝙾 ${clockString(time - new Date())}\n${wm}`, null, [
+['🏞️ 𝙰𝙽𝙸𝙼𝙰𝙻𝙴𝚂 𝙲𝙰𝙿𝚃𝚄𝚁𝙰𝙳𝙾𝚂 ', '.kandang'],
+[`🎒 𝙸𝙽𝚅𝙴𝙽𝚃𝙰𝙴𝚁𝙸𝙾`, `.inventario`]], fkontak, m)	
 
 setTimeout(() => {
-conn.sendHydrated(m.chat, hsl, wm, null, md, `𝘿𝙤𝙧𝙧𝙖𝙩𝘽𝙤𝙩-𝙈𝘿`, null, null, [
+conn.sendHydrated(m.chat, hsl, wm, null, md, `𝘿𝙤𝙧𝙧𝙖𝙩-𝘽𝙤𝙩-𝙈𝘿`, null, null, [
 [null, null]], null)}, 20000)
 	        
 setTimeout(() => {
@@ -116,15 +117,15 @@ setTimeout(() => {
 conn.sendHydrated(m.chat, `${conn.getName(m.sender)} *${['Buscando implementos de caza...','Alistando todo para la caza!!','Estableciendo Lugar de la Caza...','PREPARANDO LUGAR DE CAZA!!'].getRandom()}*`, wm, null, null, null, null, null, [
 [null, null]], null)}, 0)	
 user.lastberburu = new Date * 1	
-} else conn.sendButton(m.chat, `𝙋𝙊𝙍 𝙁𝘼𝙑𝙊𝙍 𝘿𝙀𝙎𝘾𝘼𝙉𝙎𝘼 𝙐𝙉 𝙈𝙊𝙈𝙀𝙉𝙏𝙊 𝙋𝘼𝙍𝘼 𝙇𝙐𝙀𝙂𝙊 𝙎𝙀𝙂𝙐𝙄𝙍 𝘾𝘼𝙕𝘼𝙉𝘿𝙊\n\n𝙋𝙇𝙀𝘼𝙎𝙀 𝙍𝙀𝙎𝙏 𝘼 𝙈𝙊𝙈𝙀𝙉𝙏 𝘼𝙉𝘿 𝙏𝙃𝙀𝙉 𝘾𝙊𝙉𝙏𝙄𝙉𝙐𝙀 𝙃𝙐𝙉𝙏𝙄𝙉𝙂`, `⫹⫺ 𝙏𝙄𝙀𝙈𝙋𝙊 : 𝙏𝙄𝙈𝙀 ${clockString(time - new Date())}\n${wm}`, null, [
-['🛕 𝘼𝙣𝙞𝙢𝙖𝙡𝙚𝙨 𝘾𝙖𝙥𝙩𝙪𝙧𝙖𝙙𝙤𝙨 ', '.kandang'],
-[`🎒 𝙄𝙣𝙫𝙚𝙣𝙩𝙖𝙧𝙞𝙤 | 𝙄𝙣𝙫𝙚𝙣𝙩𝙤𝙧𝙮`, `.inventario`]], fkontak, m)							     
+//} else conn.sendButton(m.chat, `𝙿𝙾𝚁 𝙵𝙰𝚅𝙾𝚁 𝙳𝙴𝚂𝙲𝙰𝙽𝚂𝙰 𝚄𝙽 𝙼𝙾𝙼𝙴𝙽𝚃𝙾 𝙿𝙰𝚁𝙰 𝚂𝙴𝙶𝚄𝙸𝚁 𝙲𝙰𝚉𝙰𝙽𝙳𝙾`, `⫹⫺ 𝚃𝙸𝙴𝙼𝙿𝙿 ${msToTime(time - new Date())}\n${wm}`, null, [
+//['🏞️ 𝙰𝙽𝙸𝙼𝙰𝙻𝙴𝚂 𝙲𝙰𝙿𝚃𝚄𝚁𝙰𝙳𝙾𝚂 ', '.kandang'],
+//[`🎒 𝙸𝙽𝚅𝙴𝙽𝚃𝙰𝚁𝙸𝙾`, `.inventario`]], fkontak, m)							     
 	
 }
 handler.help = ['berburu']
 handler.tags = ['rpg']
 handler.command = /^(hunt|berburu|caza(r)?)$/i
-handler.group = true
+//handler.group = true
 export default handler
 
 function clockString(ms) {
@@ -136,14 +137,14 @@ function clockString(ms) {
 }
 
 /*function msToTime(duration) {
-  var milliseconds = parseInt((duration % 1000) / 100),
-    seconds = Math.floor((duration / 1000) % 60),
-    minutes = Math.floor((duration / (1000 * 60)) % 60),
-    hours = Math.floor((duration / (1000 * 60 * 60)) % 24)
+var milliseconds = parseInt((duration % 1000) / 100),
+seconds = Math.floor((duration / 1000) % 60),
+minutes = Math.floor((duration / (1000 * 60)) % 60),
+hours = Math.floor((duration / (1000 * 60 * 60)) % 24)
 
-  hours = (hours < 10) ? "0" + hours : hours
-  minutes = (minutes < 10) ? "0" + minutes : minutes
-  seconds = (seconds < 10) ? "0" + seconds : seconds
+hours = (hours < 10) ? "0" + hours : hours
+minutes = (minutes < 10) ? "0" + minutes : minutes
+seconds = (seconds < 10) ? "0" + seconds : seconds
 
-  return minutes + " Minuto(s) " + seconds + " Segundo(s)"
-}*/
+return minutes + " m y " + seconds + " s " 
+}  */
