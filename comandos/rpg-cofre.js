@@ -10,7 +10,6 @@ let expp = Math.floor(Math.random() * 5000)
 
   global.db.data.users[m.sender].dorracoins  += dorracoins
   global.db.data.users[m.sender].limit += dia
-  global.db.data.users[m.sender].money += mystic
   global.db.data.users[m.sender].joincount += tok
   global.db.data.users[m.sender].exp += expp
   
