@@ -265,6 +265,14 @@ if (!(isAdmin || isOwner)) {
 global.dfail('admin', m, conn)
 throw false
 }}
+case 'temporal':
+isAll = true
+if (!isOwner) {
+global.dfail('owner', m, conn)
+throw false
+}
+bot.temporal = isEnable
+break
 chat.antiToxic = isEnable
 break
 case 'antitraba':
