@@ -5,7 +5,7 @@ let handler = async (m, { conn, args, usedPrefix, command, isPrems, isOwner, isR
 let fkontak = { "key": { "participants":"0@s.whatsapp.net", "remoteJid": "status@broadcast", "fromMe": false, "id": "Halo" }, "message": { "contactMessage": { "vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD` }}, "participant": "0@s.whatsapp.net" }
 let grupos = [md]
 let gata = [imagen1, imagen4]
-let dos = [enlace, enlace2]  
+let dos = [md]  
 
 let texto0 = `${ag}𝙈𝙄 𝘾𝙍𝙀𝘼𝘿𝙊𝙍(𝘼) 𝙃𝘼 𝙍𝙀𝙎𝙏𝙍𝙄𝙉𝙂𝙄𝘿𝙊 𝙀𝙎𝙏𝘼 𝙁𝙐𝙉𝘾𝙄𝙊𝙉 𝘿𝙀 𝙄𝙉𝙂𝙍𝙀𝙎𝘼𝙍 𝙀𝙇 𝘽𝙊𝙏 𝙏𝙀𝙈𝙋𝙊𝙍𝘼𝙇𝙈𝙀𝙉𝙏𝙀 𝘼 𝙂𝙍𝙐𝙋𝙊𝙎 𝙑𝙐𝙀𝙇𝙑𝘼 𝙈𝘼𝙎 𝙏𝘼𝙍𝘿𝙀 𝙊 𝙐𝙎𝙀 𝙇𝘼 𝙁𝙐𝙉𝘾𝙄𝙊𝙉 *${usedPrefix}serbot*`
 let texto1 = `${mg}𝙐𝙎𝙀 𝙀𝙇 𝘾𝙊𝙈𝘼𝙉𝘿𝙊 𝘾𝙊𝙈𝙊 𝙀𝙎𝙏𝙀 𝙀𝙅𝙀𝙈𝙋𝙇𝙊\n*${usedPrefix + command} enlace de Grupo y Número de Token(s)*\n*${usedPrefix + command} ${grupos.getRandom()} 3*\n\n*3* 𝙏𝙊𝙆𝙀𝙉 🪙 = *30* 𝙈𝙄𝙉𝙐𝙏𝙊𝙎`
