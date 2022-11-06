@@ -96,6 +96,10 @@ global.wait = '*[❗] Ƈᴀʀɢᴀɴᴅᴏ, ᴀɢᴜᴀʀᴅᴇ ᴜɴ ᴍᴏᴍ�
 global.md = 'https://chat.whatsapp.com/LlAbJM659dOBVJnxOIMl9h'
 global.dorramd = md
 
+global.yt = 'http://youtube.com/@diegogameplays82'
+global.youtube = yt
+
+
 /* _____________________________________________ */
 
 global.ag = '━━━━━━━ ❎ 𝙰𝙳𝚅𝙴𝚁𝚃𝙴𝙽𝙲𝙸𝙰 | 𝚆𝙰𝚁𝙽𝙸𝙽𝙶 ❎ ━━━━━━━━━'
