@@ -18,7 +18,7 @@ let texto6 = `${fg}𝙈𝘼𝙓𝙄𝙈𝙊 *3* 𝙏𝙊𝙆𝙀𝙉(𝙎) 𝙋�
 let texto7 = `✅ 𝙎𝙀 𝙃𝘼 𝙐𝙉𝙄𝘿𝙊 𝘿𝙊𝙍𝙍𝘼𝙏 𝘼𝙇 𝙂𝙍𝙐𝙋𝙊`
 
 let img1 = './Menu2.jpg'
-let img2 = './galería/menudorrat3.jpg'
+let img2 = './Menu2.jpg'
 
 if (!global.db.data.settings[conn.user.jid].temporal) return conn.sendButton( m.chat, wm, texto0, null, [[`🛡️ 𝙎𝙊𝙇𝙄𝘾𝙄𝙏𝘼𝙍 𝘾𝙊𝙈𝘼𝙉𝘿𝙊`, `.reporte *Quiero unir a dorratBot en mí Grupo. Por favor Active la función #botemporal*`], [`🍀 𝙈 𝙀 𝙉 𝙐`, `.menu`]], fkontak, m) 
 
@@ -82,7 +82,7 @@ let data = (await conn.onWhatsApp(jid))[0] || {}
                 
 } conn.sendButton(m.chat, '', wm, null, [['Creador', `/creador`], ['𝙑𝙤𝙡𝙫𝙚𝙧 𝙖𝙡 𝙈𝙚𝙣𝙪́ | 𝘽𝙖𝙘𝙠 𝙩𝙤 𝙈𝙚𝙣𝙪 ☘️', '/menu']], m, res) })}
 } catch (e) {
-await conn.reply(m.chat, `${fg}\`\`\`POSIBLES CAUSAS
+await conn.reply(m.chat, `${fg}\n`\`\`POSIBLES CAUSAS
 - El enlace esta incorrecto o caducado.
 - No me puedo unir si previamente me han eliminado del Grupo.
 - El Grupo esta Lleno, por ende no puedo unirme.
