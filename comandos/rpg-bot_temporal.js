@@ -2,7 +2,6 @@ let linkRegex = /chat.whatsapp.com\/([0-9A-Za-z]{20,24})/i
 import fetch from 'node-fetch';
 
 let handler = async (m, { conn, args, usedPrefix, command, isPrems, isOwner, isROwner}) => {
-try {
 let fkontak = { "key": { "participants":"0@s.whatsapp.net", "remoteJid": "status@broadcast", "fromMe": false, "id": "Halo" }, "message": { "contactMessage": { "vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD` }}, "participant": "0@s.whatsapp.net" }
 let grupos = [md]
 let gata = [imagen1, imagen4]
@@ -84,15 +83,6 @@ let data = (await conn.onWhatsApp(jid))[0] || {}
     conn.reply(m.chat, `@${m.sender.split`@`[0]} adicional ${conn.user.name} a ${await conn.getName(res)}\njid: ${res}, el bot se apagará a tiempo: ${msToDate(global.db.data.chats[res].expired - now)}`, data.jid, m)
                 
 } conn.sendButton(m.chat, '', wm, null, [['Creadora', `/creadora`], ['𝙑𝙤𝙡𝙫𝙚𝙧 𝙖𝙡 𝙈𝙚𝙣𝙪́ | 𝘽𝙖𝙘𝙠 𝙩𝙤 𝙈𝙚𝙣𝙪 ☘️', '/menu']], m, res) })}
-} catch (e) {
-await conn.reply(m.chat, `${fg}\nPOSIBLES CAUSAS
-- El enlace esta incorrecto o caducado.
-
-- No me puedo unir si previamente me han eliminado del Grupo.
-
-- El Grupo esta Lleno, por ende no puedo unirme.
-\`\`\``, m)
-console.log(e)}
 }
 handler.help = ['temporal', 'tiempo']
 handler.command = ['bottemporal', 'botemporal', 'addbot', 'botadd']
