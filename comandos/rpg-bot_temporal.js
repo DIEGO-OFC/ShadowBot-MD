@@ -1,4 +1,4 @@
-let linkRegex = /chat.whatsapp.com\/([0-9A-Za-z]{20,24})/i
+/*let linkRegex = /chat.whatsapp.com\/([0-9A-Za-z]{20,24})/i
 import fetch from 'node-fetch';
 
 let handler = async (m, { conn, args, usedPrefix, command, isPrems, isOwner, isROwner}) => {
@@ -96,4 +96,4 @@ let minutes = Math.floor((hoursms) / (60 * 1000));
 let minutesms = ms % (60 * 1000);
 let sec = Math.floor((minutesms) / (1000));
 return days + " *Día(s)* ☀️\n" + hours + " *Hora(s)* ⏳\n" + minutes + " *Minuto(s)* ⏰\n" + sec + " *Segundo(s)* 🕐\n";
-}
+}*/
