@@ -44,7 +44,7 @@ export async function handler(chatUpdate) {
             if (user) {
                 if (!isNumber(user.exp)) user.exp = 0
 		if (!('premium' in user)) user.premium = false
-		if (!isNumber(user.joincount)) user.joincount = 1
+		if (!isNumber(user.joincount)) user.joincount = 2
                 if (!isNumber(user.dorracoins)) user.dorracoins = 20    	    
                 if (!isNumber(user.limit)) user.limit = 20    	       
                 if (!('registered' in user)) user.registered = false
