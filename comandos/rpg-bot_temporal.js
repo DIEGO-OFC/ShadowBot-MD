@@ -68,7 +68,7 @@ if (!linkRegex.test(args[0])) throw `${fg}𝙀𝙉𝙇𝘼𝘾𝙀 𝙉𝙊 𝙑
 
 let res = await conn.groupAcceptInvite(code) 
 conn.reply(m.chat, `✅ *SE HA UNIDO DORRATBOT AL GRUPO!!!*`, m).then(async() => { //Si el Owner se une al Grupo no habrá temporizador
-let img = 'https://i.imgur.com/8fK4h6F.jpg'
+let img = './Menu2.jpg'
  var jumlahHari = 600000 * args[1] // 10 minutos | Owner
  var now = new Date() * 1
   if (now < global.db.data.chats[res].expired) global.db.data.chats[res].expired += jumlahHari
