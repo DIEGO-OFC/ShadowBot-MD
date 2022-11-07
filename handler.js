@@ -626,7 +626,7 @@ export async function handler(chatUpdate) {
                     jeruk: 0,
                     job: 'Pengangguran',
 		    joincount: 2,
-                    Joindorracoins 1,
+                    Joindorracoins: 1,
                     joinlimit: 1,
                     judilast: 0,
                     kaleng: 0,
