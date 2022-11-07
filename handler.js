@@ -73,8 +73,10 @@ export async function handler(chatUpdate) {
                         
 	        }
 		                    		    
+      
+       	                    		    
           if (!isNumber(user.afk)) user.afk = -1
-	      if (!('autolevelup' in user))  user.autolevelup = false
+	      //if (!('autolevelup' in user))  user.autolevelup = true
 	      if (!('role' in user)) user.role = 'Novato'
               if (!isNumber(user.agility)) user.agility = 0
               if (!isNumber(user.anakanjing)) user.anakanjing = 0
@@ -148,7 +150,7 @@ export async function handler(chatUpdate) {
               if (!isNumber(user.crystal)) user.crystal = 0
               if (!isNumber(user.cumi)) user.cumi = 0
               if (!isNumber(user.cupon)) user.cupon = 0
-              if (!isNumber(user.diamond)) user.diamond = 0
+              if (!isNumber(user.diamond)) user.diamond = 3
               if (!isNumber(user.dog)) user.dog = 0
               if (!isNumber(user.dogexp)) user.dogexp = 0
               if (!isNumber(user.doglastfeed)) user.doglastfeed = 0
@@ -166,6 +168,7 @@ export async function handler(chatUpdate) {
 	      if (!isNumber(user.eleksirb)) user.eleksirb = 0
 	      if (!isNumber(user.emasbatang)) user.emasbatang = 0
 	      if (!isNumber(user.emasbiasa)) user.emasbiasa = 0
+	      if (!isNumber(user.fideos)) user.fideos = 0    
               if (!isNumber(user.fishingrod)) user.fishingrod = 0
               if (!isNumber(user.fishingroddurability)) user.fishingroddurability = 0
               if (!isNumber(user.fortress)) user.fortress = 0
@@ -288,6 +291,7 @@ export async function handler(chatUpdate) {
               if (!isNumber(user.lastgojek)) user.lastgojek = 0
               if (!isNumber(user.lastgrab)) user.lastgrab = 0
               if (!isNumber(user.lasthourly)) user.lasthourly = 0
+	      if (!isNumber(user.halloween)) user.halloween = 0
               if (!isNumber(user.lasthunt)) user.lasthunt = 0
               if (!isNumber(user.lastIstigfar)) user.lastIstigfar = 0
               if (!isNumber(user.lastjb)) user.lastjb = 0
@@ -308,6 +312,7 @@ export async function handler(chatUpdate) {
               if (!isNumber(user.lastngojek)) user.lastngojek = 0
               if (!isNumber(user.lastopen)) user.lastopen = 0
               if (!isNumber(user.lastpekerjaan)) user.lastpekerjaan = 0
+	      if (!isNumber(user.lastpago)) user.lastpago = 0 
               if (!isNumber(user.lastpotionclaim)) user.lastpotionclaim = 0
               if (!isNumber(user.lastrampok)) user.lastrampok = 0
               if (!isNumber(user.lastramuanclaim)) user.lastramuanclaim = 0
@@ -332,7 +337,6 @@ export async function handler(chatUpdate) {
               if (!isNumber(user.lelebakar)) user.lelebakar = 0
               if (!isNumber(user.leleg)) user.leleg = 0
               if (!isNumber(user.level)) user.level = 0
-              if (!isNumber(user.dorracoins)) user.dorracoins = 20
               if (!isNumber(user.limit)) user.limit = 20
               if (!isNumber(user.limitjoinfree)) user.limitjoinfree = 1
               if (!isNumber(user.lion)) user.lion = 0
@@ -351,7 +355,7 @@ export async function handler(chatUpdate) {
               if (!isNumber(user.makananserigala)) user.makananserigala = 0
               if (!isNumber(user.mana)) user.mana = 0
               if (!isNumber(user.mangga)) user.mangga = 0
-              if (!isNumber(user.money)) user.money = 0
+              if (!isNumber(user.money)) user.money = 500
               if (!isNumber(user.monyet)) user.monyet = 0
               if (!isNumber(user.mythic)) user.mythic = 0
               if (!isNumber(user.naga)) user.naga = 0
@@ -473,7 +477,7 @@ export async function handler(chatUpdate) {
               if (!user.job) user.job = 'Desempleo'
               if (!user.premium) user.premium = false
               if (!user.premium) user.premiumTime = 0
-              if (!user.rtrofi) user.rtrofi = 'Bronce'
+              if (!user.rtrofi) user.rtrofi = 'Bronce'     
                                                    		                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
             } else
                 global.db.data.users[m.sender] = {
