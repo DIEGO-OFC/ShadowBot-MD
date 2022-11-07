@@ -19,8 +19,10 @@ global.suittag = ['593959425714']
 global.mods = ['595986674310'] 
 global.prems = [] 
 
-global.APIs = { // API Prefix
-  // name: 'https://website'
+global.APIs = { // API Prefix. 
+  
+//⊱ ━━━━━.⋅ name: 'https://website' ⋅.━━━━ ⊰
+  aria: 'https://ariarestapii.herokuapp.com',
   amel: 'https://melcanz.com',
   bx: 'https://bx-hunter.herokuapp.com',
   nrtm: 'https://nurutomo.herokuapp.com',
@@ -48,8 +50,9 @@ global.APIs = { // API Prefix
   ana: 'https://anabotofc.herokuapp.com/',
   kanx: 'https://kannxapi.herokuapp.com/',
   dhnjing: 'https://dhnjing.xyz',
-  violetics: 'https://violetics.pw'
+  'https://violetics.pw': 'beta'
 },
+
 global.APIKeys = { // APIKey Here
   // 'https://website': 'apikey'
   'https://api-alc.herokuapp.com': 'ConfuMods',
