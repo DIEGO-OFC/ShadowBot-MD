@@ -20,9 +20,7 @@ global.mods = ['595986674310']
 global.prems = [] 
 
 global.APIs = { // API Prefix. 
-  
-//⊱ ━━━━━.⋅ name: 'https://website' ⋅.━━━━ ⊰
-  aria: 'https://ariarestapii.herokuapp.com',
+/ name: 'https://website'
   amel: 'https://melcanz.com',
   bx: 'https://bx-hunter.herokuapp.com',
   nrtm: 'https://nurutomo.herokuapp.com',
@@ -50,7 +48,7 @@ global.APIs = { // API Prefix.
   ana: 'https://anabotofc.herokuapp.com/',
   kanx: 'https://kannxapi.herokuapp.com/',
   dhnjing: 'https://dhnjing.xyz',
-  'https://violetics.pw': 'beta'
+  violetics: 'https://violetics.pw'
 },
 
 global.APIKeys = { // APIKey Here
