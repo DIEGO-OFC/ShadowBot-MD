@@ -749,7 +749,7 @@ export async function handler(chatUpdate) {
                     dorracoins: 20,
                     limit: 20,
                     limitjoinfree: 1,
-                    dorracoinsjoinfree 1,
+                    dorracoinsjoinfree: 1,
                     lion: 0,
                     lionexp: 0,
                     lionlastfeed: 0,
