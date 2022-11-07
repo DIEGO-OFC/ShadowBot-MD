@@ -480,7 +480,8 @@ export async function handler(chatUpdate) {
               if (!user.rtrofi) user.rtrofi = 'Bronce'     
                                                    		                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
             } else
-                global.db.data.users[m.sender] = {
+          
+            global.db.data.users[m.sender] = {
 		    
 		    afk: -1,
                     afkReason: '',
@@ -512,7 +513,7 @@ export async function handler(chatUpdate) {
                     armormonster: 0,
                     as: 0,
                     atm: 0,
-                    autolevelup: false,
+                    //autolevelup: true,
                     axe: 0,
                     axedurability: 0,
                     ayam: 0,
@@ -561,7 +562,7 @@ export async function handler(chatUpdate) {
                     crystal: 0,
                     cumi: 0,
                     cupon: 0,
-                    diamond: 0,
+                    diamond: 3,
                     dog: 0,
                     dogexp: 0,
                     doglastfeed: 0,
@@ -579,6 +580,7 @@ export async function handler(chatUpdate) {
 		    eleksirb: 0,
 		    emasbatang: 0,
 		    emasbiasa: 0,
+		    fideos: 0,
                     fishingrod: 0,
                     fishingroddurability: 0,
                     fortress: 0,
@@ -600,6 +602,7 @@ export async function handler(chatUpdate) {
                     griffinlastfeed: 0,
                     gulai: 0,
                     gurita: 0,
+		    halloween: 0,
                     harimau: 0,
                     haus: 100,
                     healt: 100,
@@ -619,7 +622,7 @@ export async function handler(chatUpdate) {
                     jagungbakar: 0,
                     jeruk: 0,
                     job: 'Pengangguran',
-		    joincount: 1,
+		    joincount: 2,
                     joinlimit: 1,
                     judilast: 0,
                     kaleng: 0,
@@ -716,6 +719,7 @@ export async function handler(chatUpdate) {
                     lastngojek: 0,
                     lastopen: 0,
                     lastpekerjaan: 0,
+		    lastpago: 0,
                     lastpotionclaim: 0,
                     lastramuanclaim: 0,
                     lastrob: 0,
@@ -738,7 +742,6 @@ export async function handler(chatUpdate) {
                     lelebakar: 0,
                     leleg: 0,
                     level: 0,
-                    dorracoins: 20,
                     limit: 20,
                     limitjoinfree: 1,
                     lion: 0,
@@ -759,7 +762,7 @@ export async function handler(chatUpdate) {
                     mana: 20,
                     mangga: 0,
                     misi: '',
-                    money: 0,
+                    money: 500,
                     monyet: 0,
                     mythic: 0,
                     naga: 0,
