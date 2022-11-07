@@ -19,8 +19,8 @@ global.suittag = ['593959425714']
 global.mods = ['595986674310'] 
 global.prems = [] 
 
-global.APIs = { // API Prefix. 
-/ name: 'https://website'
+global.APIs = { // API Prefix
+  // name: 'https://website'
   amel: 'https://melcanz.com',
   bx: 'https://bx-hunter.herokuapp.com',
   nrtm: 'https://nurutomo.herokuapp.com',
