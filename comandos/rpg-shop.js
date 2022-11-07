@@ -207,7 +207,7 @@ ${Object.keys(listItems).map((v) => {
 *» ${usedPrefix}${command} potion 5*
 `.trim())
 )
-    image = (command.toLowerCase() == 'buy' ?
+    imagen1 = (command.toLowerCase() == 'buy' ?
 (imgr + 'COMPRAR : BUY') : 
 (imgr + 'VENDER : SELL')
 )
@@ -225,7 +225,7 @@ const item = (args[0] || '').toLowerCase()
 const total = Math.floor(isNumber(args[1]) ? Math.min(Math.max(parseInt(args[1]), 1), Number.MAX_SAFE_INTEGER) : 1) * 1
 let premium = user.premium
 
-if (!listItems[item]) return conn.sendButton(m.chat, text, footer, image, buttons, m)
+if (!listItems[item]) return conn.sendButton(m.chat, text, footer, imagen1, buttons, m)
 if (command.toLowerCase() == 'buy') {
 let paymentMethod = Object.keys(listItems[item]).find(v => v in user)
 if (user[paymentMethod] < listItems[item][paymentMethod] * total) return conn.sendButton(m.chat,
