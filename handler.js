@@ -211,6 +211,7 @@ export async function handler(chatUpdate) {
               if (!isNumber(user.jagung)) user.jagung = 0
               if (!isNumber(user.jagungbakar)) user.jagungbakar = 0
               if (!isNumber(user.jeruk)) user.jeruk = 0
+              if (!isNumber(user.joindorracoins)) user.joindorracoins = 1
               if (!isNumber(user.joinlimit)) user.joinlimit = 1
               if (!isNumber(user.judilast)) user.judilast = 0
               if (!isNumber(user.kaleng)) user.kaleng = 0
@@ -337,8 +338,10 @@ export async function handler(chatUpdate) {
               if (!isNumber(user.lelebakar)) user.lelebakar = 0
               if (!isNumber(user.leleg)) user.leleg = 0
               if (!isNumber(user.level)) user.level = 0
+              if (!isNumber(user.dorracoins)) user.dorracoins = 20
               if (!isNumber(user.limit)) user.limit = 20
               if (!isNumber(user.limitjoinfree)) user.limitjoinfree = 1
+              if (!isNumber(user.dorracoinsjoinfree)) user.dorracoinsjoinfree = 1
               if (!isNumber(user.lion)) user.lion = 0
               if (!isNumber(user.lionexp)) user.lionexp = 0
               if (!isNumber(user.lionlastfeed)) user.lionlastfeed = 0
@@ -623,6 +626,7 @@ export async function handler(chatUpdate) {
                     jeruk: 0,
                     job: 'Pengangguran',
 		    joincount: 2,
+                    Joindorracoins 1,
                     joinlimit: 1,
                     judilast: 0,
                     kaleng: 0,
@@ -742,8 +746,10 @@ export async function handler(chatUpdate) {
                     lelebakar: 0,
                     leleg: 0,
                     level: 0,
+                    dorracoins: 20,
                     limit: 20,
                     limitjoinfree: 1,
+                    dorracoinsjoinfree 1,
                     lion: 0,
                     lionexp: 0,
                     lionlastfeed: 0,
