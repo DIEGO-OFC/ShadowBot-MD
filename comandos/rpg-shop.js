@@ -1,4 +1,4 @@
- import fetch from 'node-fetch'
+import fetch from 'node-fetch'
 let handler = async (m, { command, conn, usedPrefix, args }) => {
 let user = global.db.data.users[m.sender]
 let fkontak = { "key": { "participants":"0@s.whatsapp.net", "remoteJid": "status@broadcast", "fromMe": false, "id": "Halo" }, "message": { "contactMessage": { "vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD` }}, "participant": "0@s.whatsapp.net" 
@@ -179,10 +179,9 @@ ${htki} *VENDER* ${htka}
     footer = (command.toLowerCase() == 'buy' ?
 (`
 🔖 𝙻𝙸𝚂𝚃𝙰 𝙳𝙴 𝙰𝚁𝚃𝙸𝙲𝚄𝙻𝙾𝚂 : 
-${Object.keys(listItems).map((v) => {
         let paymentMethod = Object.keys(listItems[v]).find(v => v in user)
         return `*» 1 ⇢ ${global.rpgshop.emoticon(v)}*\n*Cuesta:* ${listItems[v][paymentMethod]} ${global.rpgshop.emoticon(paymentMethod)}\n*Compra* ${global.rpgshopp.emoticon(v)} Usando ${usedPrefix + command} ${v} *Cantidad*\n*---------------------------------------------------*\n`.trim()
-    }).join('\n')}
+    }).join('\n')
 🏆 𝙴𝙹𝙴𝙼𝙿𝙻𝙾 𝙳𝙴 𝙲𝙾𝙼𝙿𝚁𝙰𝚁
 *Use el comando de la siguiente forma:*
 *» ${usedPrefix}${command} (articulo) (cantidad)*
@@ -193,11 +192,10 @@ ${Object.keys(listItems).map((v) => {
 `.trim()) : 
 (`
 
-🔖 𝙻𝙸𝚂𝚃𝙰 𝙳𝙴 𝙰𝚁𝚃𝙸𝙲𝚄𝙻𝙾𝚂 :
-${Object.keys(listItems).map((v) => {
+🔖 𝙻𝙸𝚂𝚃𝙰 𝙳𝙴 𝙰𝚁𝚃𝙸𝙲𝚄𝙻𝙾
         let paymentMethod = Object.keys(listItems[v]).find(v => v in user)
         return `*» 1 ⇢ ${global.rpgshop.emoticon(v)}*\n*Ganancia:* ${listItems[v][paymentMethod]} ${global.rpgshop.emoticon(paymentMethod)}\n*Venda* ${global.rpgshopp.emoticon(v)} Usando ${usedPrefix + command} ${v} *Cantidad*\n*---------------------------------------------------*\n`.trim()
-    }).join('\n')}
+    }).join('\n')
 ✨ 𝙴𝙹𝙴𝙼𝙿𝙻𝙾 𝙿𝙰𝚁𝙰 𝚅𝙴𝙽𝙳𝙴𝚁
 *Use el comando de la siguiente forma:*
 *» ${usedPrefix}${command} (articulo) (cantidad)*
