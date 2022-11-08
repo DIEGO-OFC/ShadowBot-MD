@@ -179,9 +179,10 @@ ${htki} *VENDER* ${htka}
     footer = (command.toLowerCase() == 'buy' ?
 (`
 🔖 𝙻𝙸𝚂𝚃𝙰 𝙳𝙴 𝙰𝚁𝚃𝙸𝙲𝚄𝙻𝙾𝚂 : 
+${Object.keys(listItems).map((v) => {
         let paymentMethod = Object.keys(listItems[v]).find(v => v in user)
         return `*» 1 ⇢ ${global.rpgshop.emoticon(v)}*\n*Cuesta:* ${listItems[v][paymentMethod]} ${global.rpgshop.emoticon(paymentMethod)}\n*Compra* ${global.rpgshopp.emoticon(v)} Usando ${usedPrefix + command} ${v} *Cantidad*\n*---------------------------------------------------*\n`.trim()
-    }).join('\n')
+    }).join('\n')}
 🏆 𝙴𝙹𝙴𝙼𝙿𝙻𝙾 𝙳𝙴 𝙲𝙾𝙼𝙿𝚁𝙰𝚁
 *Use el comando de la siguiente forma:*
 *» ${usedPrefix}${command} (articulo) (cantidad)*
@@ -193,9 +194,10 @@ ${htki} *VENDER* ${htka}
 (`
 
 🔖 𝙻𝙸𝚂𝚃𝙰 𝙳𝙴 𝙰𝚁𝚃𝙸𝙲𝚄𝙻𝙾
+${Object.keys(listItems).map((v) => {
         let paymentMethod = Object.keys(listItems[v]).find(v => v in user)
         return `*» 1 ⇢ ${global.rpgshop.emoticon(v)}*\n*Ganancia:* ${listItems[v][paymentMethod]} ${global.rpgshop.emoticon(paymentMethod)}\n*Venda* ${global.rpgshopp.emoticon(v)} Usando ${usedPrefix + command} ${v} *Cantidad*\n*---------------------------------------------------*\n`.trim()
-    }).join('\n')
+    }).join('\n')}
 ✨ 𝙴𝙹𝙴𝙼𝙿𝙻𝙾 𝙿𝙰𝚁𝙰 𝚅𝙴𝙽𝙳𝙴𝚁
 *Use el comando de la siguiente forma:*
 *» ${usedPrefix}${command} (articulo) (cantidad)*
