@@ -179,6 +179,84 @@ global.fgif = {
 
 global.multiplier = 999 // Cuanto más alto, más difícil subir de nivel | The higher, The harder levelup 
 
+global.rpgshopp = { //Tienda
+  emoticon(string) {
+    string = string.toLowerCase()
+    let emotttt = {
+      exp: '⚡',
+      limit: '💎',
+      diamond: '💎+',
+      joincount: '🪙',
+      emerald: '💚',
+      berlian: '♦️',
+      kyubi: '🌀',
+      gold: '👑',
+      dorracoins: '🔰',
+      tiketcoin: '🎫',
+      stamina: '✨',
+      potion: '🥤',
+      aqua: '💧',
+      trash: '🗑',
+      wood: '🪵',
+      rock: '🪨',
+      batu: '🥌',
+      string: '🕸️',
+      iron: '⛓️',
+      coal: '⚱️',
+      botol: '🍶',
+      kaleng: '🥫',
+      kardus: '🪧',
+      eleksirb: '💡',
+      emasbatang: '〽️',
+      emasbiasa: '🧭',
+      rubah: '🦊🌫️',
+      sampah: '🗑🌫️',
+      serigala: '🐺🌫️',
+      kayu: '🛷',
+      sword: '⚔️',
+      umpan: '🪱', 
+      healtmonster: '💵',
+      emas: '🪅',
+      pancingan: '🪝',
+      pancing: '🎣',
+      common: '📦',
+      uncoommon: '🥡',
+      mythic: '🗳️',
+      pet: '📫',//?
+      gardenboxs: '💐',//?
+      legendary: '🎁',
+      anggur: '🍇',
+      apel: '🍎',
+      jeruk: '🍊',
+      mangga: '🥭',
+      pisang: '🍌',
+      bibitanggur: '🌾🍇',
+      bibitapel: '🌾🍎',
+      bibitjeruk: '🌾🍊',
+      bibitmangga: '🌾🥭',
+      bibitpisang: '🌾🍌',
+      centaur: '🐐',
+      griffin: '🦅',
+      kucing: '🐈',
+      naga: '🐉',
+      fox: '🦊',
+      kuda: '🐎',
+      phonix: '🕊️',
+      wolf: '🐺',
+      anjing: '🐶',
+      petFood: '🍖', //?
+      makanancentaur: '🐐🥩',
+      makanangriffin: '🦅🥩',
+      makanankyubi: '🌀🥩',
+      makanannaga: '🐉🥩',
+      makananpet: '🍱🥩',
+      makananphonix: '🕊️🥩'  
+    }
+    let results = Object.keys(emotttt).map(v => [v, new RegExp(v, 'gi')]).filter(v => v[1].test(string))
+    if (!results.length) return ''
+    else return emotttt[results[0][0]]
+  }
+}
 
 let file = fileURLToPath(import.meta.url)
 watchFile(file, () => {
