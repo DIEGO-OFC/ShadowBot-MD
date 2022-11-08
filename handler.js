@@ -1116,7 +1116,7 @@ export async function handler(chatUpdate) {
 
                 if (!isAccept)
                     continue
-                m.plugin = name
+                m.comandos = name
                 if (m.chat in global.db.data.chats || m.sender in global.db.data.users) {
                     let chat = global.db.data.chats[m.chat]
                     let user = global.db.data.users[m.sender]
