@@ -5,7 +5,7 @@ let fkontak = { "key": { "participants":"0@s.whatsapp.net", "remoteJid": "status
 }
 let grupos = [md, yt]
 let gata = [imagen1, imagen4]
-let dos = [md]
+let dos = [md, yt]
 
 const items = {
    buy: {
