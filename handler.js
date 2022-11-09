@@ -1127,8 +1127,8 @@ export async function handler(chatUpdate) {
                 }
                 let hl = _prefix 
                 let adminMode = global.db.data.chats[m.chat].modoadmin
-                let mystica = `${comandos.botAdmin || comandos.admin || comandos.group || comandos || noPrefix || hl ||  m.text.slice(0, 1) == hl || comandos.command}`
-                if (adminMode && !isOwner && !isROwner && m.isGroup && !isAdmin && mystica) return   
+                let dorrat = `${comandos.botAdmin || comandos.admin || comandos.group || comandos || noPrefix || hl ||  m.text.slice(0, 1) == hl || comandos.command}`
+                if (adminMode && !isOwner && !isROwner && m.isGroup && !isAdmin && dorrat) return   
 
                 if (comandos.rowner && comandos.owner && !(isROwner || isOwner)) { // Both Owner
                     fail('owner', m, this)
