@@ -34,6 +34,7 @@ export async function handler(chatUpdate) {
         if (!m)
             return
         m.exp = 0
+        m.dorracoins = false
         m.limit = false
         try {
             // TODO: use loop to insert data instead of this
