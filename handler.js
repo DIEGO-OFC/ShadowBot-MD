@@ -1180,7 +1180,7 @@ export async function handler(chatUpdate) {
                     continue // Limit habis
                 }
 if (!isPrems && comandos.dorracoins && global.db.data.users[m.sender].dorracoins < comandos.dorracoins * 1) {
-                    this.reply(m.chat, `${ag}\n𝙉𝙊 𝙏𝙄𝙀𝙉𝙀 𝘿𝙊𝙍𝙍𝘼𝙏𝘾𝙊𝙄𝙉𝙎 🪙`, m)
+                    this.reply(m.chat, `${ag}\n\n𝙉𝙊 𝙏𝙄𝙀𝙉𝙀 𝘿𝙊𝙍𝙍𝘼𝙏𝘾𝙊𝙄𝙉𝙎 🪙`, m)
                     continue // Limit habis
 
 }
