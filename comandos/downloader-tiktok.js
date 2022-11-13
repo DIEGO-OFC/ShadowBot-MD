@@ -37,7 +37,4 @@ let res = await (await fetch(`https://www.tiktok.com/node/share/video/${id[3]}/$
 return res?.seoProps?.metaParams}
 async function shortUrl(url) {
 return await (await fetch(`https://tinyurl.com/api-create.php?url=${url}`)).text()}
-Footer
-© 2022 GitHub, Inc.
-Footer navigation
 
