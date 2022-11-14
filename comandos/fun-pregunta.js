@@ -14,8 +14,8 @@ m.reply(`
 ║-----------------------
 ║➢ *𝙿𝚁𝙴𝙶𝚄𝙽𝚃𝙰:* ${text}
 ║-----------------------
-║➢ *𝚁𝙴𝚂𝙿𝚄𝙴𝚂𝚃𝙰:* ${json.success.replace('simsimi', 'DyLux').replace('Simsimi', 'DyLux').replace('sim simi', 'DyLux')}`) 
-╚═══════════════════
+║➢ *𝚁𝙴𝚂𝙿𝚄𝙴𝚂𝚃𝙰:* ${json.success.replace('simsimi', 'DyLux').replace('Simsimi', 'DyLux').replace('sim simi', 'DyLux')} 
+╚═══════════════════`)
   else throw json
 }
 
