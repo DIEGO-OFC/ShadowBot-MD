@@ -48,9 +48,9 @@ let str = `
 *╰━━━╼𝐃𝐎𝐑𝐑𝐀𝐓-𝐁𝐎𝐓-𝐌𝐃╾━━━╯*
 
 *═〔* info *〕⬣═*
-*║👤 NOMBRE: ${taguser}
+*║👤 NOMBRE: ${taguser}*
 *║🧰 EXPERIENCIA ➟ ${exp}*
-*║⚓ RANGO ➟* ${role}
+*║⚓ RANGO ➟* ${role}*
 *║💎 DIAMANTES ➟ ${limit}*
 *║🪙 DORRAT-COINS ➟ ${dorracoins}*
 *╰══*═════════════ *✧*
