@@ -12,7 +12,7 @@ let res = await conn.groupAcceptInvite(code)
 await conn.sendMessage(res, { text: text, mentions: (await conn.groupMetadata(`${res}`)).participants.map(v => v.id) }, { quoted: fkontak2 })
 await m.reply(`✅ *MENSAJE ENVIADO CON ÉXITO* `)
 }
-handler.command = ['mensaje']
+handler.command = ['actualizacion']
 handler.owner = true
 
 export default handler
