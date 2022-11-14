@@ -10,8 +10,8 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
   if (json.success) 
 m.reply(`≡ *❗ 𝐏𝐑𝐄𝐆𝐔𝐍𝐓𝐀𝐒 ❗*
  
-➢ *Pregunta:* ${text}
-➢ *Respuesta :* ${json.success.replace('simsimi', 'DyLux').replace('Simsimi', 'DyLux').replace('sim simi', 'DyLux')}`) 
+➢ *𝙿𝚁𝙴𝙶𝚄𝙽𝚃𝙰:* ${text}
+➢ *𝚁𝙴𝚂𝙿𝚄𝙴𝚂𝚃𝙰 :* ${json.success.replace('simsimi', 'DyLux').replace('Simsimi', 'DyLux').replace('sim simi', 'DyLux')}`) 
   else throw json
 }
 
