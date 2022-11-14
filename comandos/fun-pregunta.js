@@ -8,8 +8,7 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
   let res = await fetch(`https://api.simsimi.net/v2/?text=${text}&lc=es`)
   let json = await res.json()
   if (json.success) 
-m.reply(`
-╔═══════════════════
+m.reply(`╔═══════════════════
 ║≡ *❗ 𝐏𝐑𝐄𝐆𝐔𝐍𝐓𝐀𝐒 ❗*
 ║-----------------------
 ║➢ *𝙿𝚁𝙴𝙶𝚄𝙽𝚃𝙰:* ${text}
