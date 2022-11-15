@@ -1,4 +1,4 @@
-/*import daily from './rpg-daily.js' 
+import daily from './rpg-daily.js' 
 import weekly from './rpg-weekly.js'
 import monthly from './rpg-monthly.js'
 import adventure from './rpg-adventure.js'
@@ -1611,4 +1611,4 @@ function clockString(ms) {
   let m = isNaN(ms) ? '--' : Math.floor(ms / 60000) % 60
   let s = isNaN(ms) ? '--' : Math.floor(ms / 1000) % 60
   return ['*│ 𝗡𝗨𝗘𝗩𝗔 𝗠𝗜𝗦𝗜𝗢𝗡 𝗘𝗡 : 𝗠𝗜𝗦𝗦𝗜𝗢𝗡*\n*│* ', ye, ' *🗓️ Años : Year*\n', '*│* ', mo, ' *⛅ Mes : Month*\n', '*│* ', d, ' *☀️ Días : Days*\n', '*│* ', h, ' *⏰ Horas : Hours*\n', '*│* ', m, ' *🕐 Minutos : Minutes*\n', '*│* ', s, ' *⏱️ Segundos : Seconds*\n*│*'].map(v => v.toString().padStart(2, 0)).join('')
-}*/
+}
