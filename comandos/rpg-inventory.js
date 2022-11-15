@@ -638,7 +638,7 @@ let token = member.joincount
 let dia = member.limit
 let tiketm = member.healtmonster
 
-let sortedmoney = Object.entries(global.db.data.users).sort((a, b) => b[1].money - a[1].money)
+    let sorteddorracoins = Object.entries(global.db.data.users).sort((a, b) => b[1].dorracoins - a[1].dorracoins)
     let sortedlevel = Object.entries(global.db.data.users).sort((a, b) => b[1].level - a[1].level)
     let sorteddiamond = Object.entries(global.db.data.users).sort((a, b) => b[1].diamond - a[1].diamond)
     let sortedpotion = Object.entries(global.db.data.users).sort((a, b) => b[1].potion - a[1].potion)
