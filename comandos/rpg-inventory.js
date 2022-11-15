@@ -190,7 +190,7 @@ let fgif = {
                         'seconds': '999999999', 
                         'gifPlayback': 'true', 
                         'caption': bottime,
-                        'jpegThumbnail': fs.readFileSync('./galería/menudorrat3.jpg')
+                        'jpegThumbnail': fs.readFileSync('./galería/menudorra3.jpg')
                                }
                               }
                              }
