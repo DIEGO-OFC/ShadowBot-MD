@@ -3,7 +3,7 @@ let handler = async (m, { isPrems, conn }) => {
 let fkontak = { "key": { "participants":"0@s.whatsapp.net", "remoteJid": "status@broadcast", "fromMe": false, "id": "Halo" }, "message": { "contactMessage": { "vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD` }}, "participant": "0@s.whatsapp.net" 
 }
 let grupos = [md, yt]
-let gata = [imagen1, imagen2]
+let dorrat = [imagen1, imagen2]
 let dos = [md]    
 
 let user = global.db.data.users[m.sender]
@@ -53,7 +53,7 @@ let text = `
 ┃ *${premium ? '🎟️ Recompensa Premium' : '🆓 Recompensa Gratis'}*
 ╰━━💫━🌈━🌛━━⬣`
 
-await conn.sendButton(m.chat, text, texto + `\n\n🎟️ 𝗣 𝗥 𝗘 𝗠 𝗜 𝗨 𝗠 ⇢ ${premium ? '✅' : '❌'}\n${wm}`, gata.getRandom(), [['🌅 𝙀𝙉𝙏𝙍𝙀𝙂𝘼 𝘿𝙀𝙇 𝙈𝙀𝙎 | 𝙈𝙊𝙉𝙏𝙃 🌠', '/monthly'], ['📍 𝙑𝙤𝙡𝙫𝙚𝙧 𝙖𝙡 𝙈𝙚𝙣𝙪́', '/menu']], m, md)  
+await conn.sendButton(m.chat, text, texto + `\n\n🎟️ 𝗣 𝗥 𝗘 𝗠 𝗜 𝗨 𝗠 ⇢ ${premium ? '✅' : '❌'}\n${wm}`, dorrat.getRandom(), [['🌅 𝙀𝙉𝙏𝙍𝙀𝙂𝘼 𝘿𝙀𝙇 𝙈𝙀𝙎 | 𝙈𝙊𝙉𝙏𝙃 🌠', '/monthly'], ['📍 𝙑𝙤𝙡𝙫𝙚𝙧 𝙖𝙡 𝙈𝙚𝙣𝙪́', '/menu']], m, md)  
 user.lastweekly = new Date * 1
 }
 handler.command = ['weekly', 'semana', 'semanal', 'cadasemana', 'entregasemanal'] 
