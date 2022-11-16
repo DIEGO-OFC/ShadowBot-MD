@@ -26,7 +26,8 @@ m.reply(`╭──────────────────
 │⏱️ 𝐂𝐀𝐑𝐆𝐀𝐍𝐃𝐎 𝐌𝐄𝐍𝐔... 
 ╰──────────────────`)
 //no me roben la decoracion, no tengo creatividad
-let str = `
+
+let menuA = `
 *╭━━❍𝐃𝐎𝐑𝐑𝐀𝐓-𝐁𝐎𝐓-𝐌𝐃❍━━╮*
 *┃ ╭━━━━━━━━━━━━━━━━╮*
 *┃ ┃ ╭┈────────────╮*
@@ -46,8 +47,9 @@ let str = `
 *┃┃ ▢ 𝐋𝐄𝐍𝐆𝐔𝐀𝐉𝐄 » 𝐄𝐒𝐏𝐀𝐍̃𝐎𝐋*
 *┃┃ ▢ 𝐔𝐒𝐔𝐀𝐑𝐈𝐎𝐒 » ${Object.keys(global.db.data.users).length}*
 *┃╰━━━━━━━━━━━━━━━━╾•*
-*╰━━━╼𝐃𝐎𝐑𝐑𝐀𝐓-𝐁𝐎𝐓-𝐌𝐃╾━━━╯*
+*╰━━━╼𝐃𝐎𝐑𝐑𝐀𝐓-𝐁𝐎𝐓-𝐌𝐃╾━━━╯*`.trim()
 
+let menuB = `
 *═〔 INFO DEL USUARIO 〕⬣═*
 *║👤 NOMBRE: ${taguser}*
 *║🧰 EXPERIENCIA ➟ ${exp}*
@@ -510,32 +512,15 @@ let str = `
 ┃𝐃𝐎𝐑𝐑𝐀𝐓-𝐁𝐎𝐓-𝐌𝐃 𝐁𝐘 𝐃𝐈𝐄𝐆𝐎-𝐎𝐅𝐂┃
  ━━━━━━━━━━━━━━━━━━━━━━━━━
 `.trim()
-let buttons = [
-{ buttonId: '#grupos', buttonText: { displayText: '🔰 𝙶𝚁𝚄𝙿𝙾𝚂 🔰' }, type: 1 },
-{ buttonId: '#owner', buttonText: { displayText: '🤴 𝙾𝚆𝙽𝙴𝚁 🤴' }, type: 1 }]
-//{ buttonId: '#infobot', buttonText: { displayText: '📦 𝙸𝙽𝙵𝙾𝙱𝙾𝚃 📦' }, type: 1 }]
-let buttonMessage = {
-image: imagen4,
-caption: str.trim(),
-mentions: [m.sender],
-footer: `*${wm}*`,
-buttons: buttons,
-headerType: 4,
-contextInfo: {
-mentionedJid: [m.sender],
-externalAdReply: {
-showAdAttribution: true,
-mediaType: 'VIDEO',
-mediaUrl: null,
-title:'👑 𝐃𝐎𝐑𝐑𝐀𝐓-𝐁𝐎𝐓-𝐌𝐃 👑',
-body: null,
-thumbnail: null,
-sourceUrl: `https://chat.whatsapp.com/LlAbJM659dOBVJnxOIMl9h`
-}}}
-conn.sendMessage(m.chat, buttonMessage, { quoted: m })
-//await conn.sendFile(m.chat, vn, 'menu.mp3', null, m, true, { type: 'audioMessage', ptt: true})
-} catch {
-conn.reply(m.chat, '*[❗𝐈𝐍𝐅𝐎❗] 𝙴𝙻 𝙼𝙴𝙽𝚄 𝚃𝙸𝙴𝙽𝙴 𝚄𝙽 𝙴𝚁𝚁𝙾𝚁 𝚈 𝙽𝙾 𝙵𝚄𝙴 𝙿𝙾𝚂𝙸𝙱𝙻𝙴 𝙴𝙽𝚅𝙸𝙰𝚁𝙻𝙾, 𝚁𝙴𝙿𝙾𝚁𝚃𝙴𝙻𝙾 𝙰𝙻 𝙿𝚁𝙾𝙿𝙸𝙴𝚃𝙰𝚁𝙸𝙾 𝙳𝙴𝙻 𝙱𝙾𝚃*', m)
+await conn.sendButtonVid(m.chat, pp, menuA, menuB, lenguajeGB.smsBotonM1(), '.menu', '🎧 ' + lenguajeGB.smsTex16() + ' 🎧', '/audios', lenguajeGB.smsBotonM3(), '#inventario', fkontak, adReply)
+*/await conn.sendFile(m.chat, vn, 'menu.mp3', null, m, true, {
+type: 'audioMessage', 
+ptt: true})*/
+	
+} catch (e) {
+await conn.sendButton(m.chat, `\n${wm}`, lenguajeGB['smsMalError3']() + '#report ' + usedPrefix + command, null, [[lenguajeGB.smsMensError1(), `#reporte ${lenguajeGB['smsMensError2']()} *${usedPrefix + command}*`]], m)
+console.log(`❗❗ ${lenguajeGB['smsMensError2']()} ${usedPrefix + command} ❗❗`)
+console.log(e)	
 }}
 handler.command = /^(menucompleto|menu completo|allmenu)$/i
 handler.exp = 50
