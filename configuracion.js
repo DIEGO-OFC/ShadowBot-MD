@@ -118,7 +118,7 @@ global.imagen1 = fs.readFileSync('./Menu2.jpg')
 global.imagen2 = fs.readFileSync('./galeria/nuevobot.jpg') 
 global.imagen3 = fs.readFileSync('./galeria/Pre Bot Publi.png')
 global.imagen4 = fs.readFileSync('./galeria/menudorrat3.jpg')
-
+global.dorratMenu = [imagen1, imagen4]
 global.Key360 = ['964f-0c75-7afc'] //keys ephoto360
 global.keysZens = ['fiktod', 'c2459db922', 'BF39D349845E', '675e34de8a', '37CC845916', '0b917b905e6f', '6fb0eff124']
 global.keysxxx = keysZens[Math.floor(keysZens.length * Math.random())]
