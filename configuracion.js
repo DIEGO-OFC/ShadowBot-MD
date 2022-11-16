@@ -100,6 +100,7 @@ global.dorramd = md
 
 global.yt = 'http://youtube.com/@diegogameplays82'
 global.youtube = yt
+global.DorrafotoMenu = ['./galería/Menudorrat3.jpg', './Menu2.jpg']
 
 
 /* _____________________________________________ */
