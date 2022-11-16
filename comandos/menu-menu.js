@@ -56,7 +56,7 @@ let menuA = `
 
 let menuB = `
 *═〔 INFO DEL USUARIO 〕⬣═*
-*║👤 NOMBRE: ${taguser}*
+*║👤 NOMBRE: ${username}*
 *║🧰 EXPERIENCIA ➟ ${exp}*
 *║⚓ RANGO ➟* ${role}*
 *║💎 DIAMANTES ➟ ${limit}*
