@@ -513,7 +513,7 @@ let menuB = `
  ━━━━━━━━━━━━━━━━━━━━━━━━━
 `.trim()
 await conn.sendButtonVid(m.chat, pp, menuA, menuB, lenguajeGB.smsBotonM1(), '.menu', '🎧 ' + lenguajeGB.smsTex16() + ' 🎧', '/audios', lenguajeGB.smsBotonM3(), '#inventario', fkontak, adReply)
-*/await conn.sendFile(m.chat, vn, 'menu.mp3', null, m, true, {
+/*await conn.sendFile(m.chat, vn, 'menu.mp3', null, m, true, {
 type: 'audioMessage', 
 ptt: true})*/
 	
