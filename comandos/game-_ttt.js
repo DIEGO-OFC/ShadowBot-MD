@@ -1,8 +1,24 @@
+
 import { format } from 'util'
 let debugMode = !1
-let winScore = 4999
-let playScore = 99
+//let winScore = 4999
+//let playScore = 99
 export async function before(m) {
+const fkontak = {
+	"key": {
+    "participants":"0@s.whatsapp.net",
+		"remoteJid": "status@broadcast",
+		"fromMe": false,
+		"id": "Halo"
+	},
+	"message": {
+		"contactMessage": {
+			"vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`
+		}
+	},
+	"participant": "0@s.whatsapp.net"
+}
+
 let ok
 let isWin = !1
 let isTie = !1
@@ -10,7 +26,7 @@ let isSurrender = !1
 this.game = this.game ? this.game : {}
 let room = Object.values(this.game).find(room => room.id && room.game && room.state && room.id.startsWith('tictactoe') && [room.game.playerX, room.game.playerO].includes(m.sender) && room.state == 'PLAYING')
 if (room) {
-if (!/^([1-9]|(me)?nyerah|\rendirse\|rendirse|RENDIRSE|surr?ender)$/i.test(m.text)) 
+if (!/^([1-9]|(me)?nyerah|\rendirse\|rendirse|RENDIRSE|SALIR|salir|Salir|out|OUT|Out|surr?ender)$/i.test(m.text)) 
 return !0
 isSurrender = !/^[1-9]$/.test(m.text)
 if (m.sender !== room.game.currentTurn) { 
@@ -47,32 +63,57 @@ O: '⭕',
 9: '9️⃣',
 }[v]})
 if (isSurrender) {
+        
 room.game._currentTurn = m.sender === room.game.playerX
 isWin = true }
+        
+let dia = Math.floor(Math.random() * 2)
+let tok = Math.floor(Math.random() * 2)
+let dorrat = Math.floor(Math.random() * 10)
+let expp = Math.floor(Math.random() * 10)
+
+let dia2 = Math.floor(Math.random() * 15)
+let tok2 = Math.floor(Math.random() * 10)
+let dorrat2 = Math.floor(Math.random() * 1500)
+let expp2 = Math.floor(Math.random() * 2500)  
+
 let winner = isSurrender ? room.game.currentTurn : room.game.winner
 let str = `
-🎮 𝐓𝐑𝐄𝐒 𝐄𝐍 𝐑𝐀𝐘𝐀 🎮
-
+🫂 𝙹𝚄𝙶𝙰𝙳𝙾𝚁𝙴𝚂
+*═════════*
 ❎ = @${room.game.playerX.split('@')[0]}
 ⭕ = @${room.game.playerO.split('@')[0]}
-
-        ${arr.slice(0, 3).join('')}
-        ${arr.slice(3, 6).join('')}
-        ${arr.slice(6).join('')}
-
-${isWin ? `@${(isSurrender ? room.game.currentTurn : room.game.winner).split('@')[0]} 𝙶𝙰𝙽𝙰𝚂𝚃𝙴 🥳, 𝚃𝙴 𝙻𝙻𝙴𝚅𝙰𝚂 +4999 𝚎𝚡𝚙` : isTie ? '𝙴𝙻 𝙹𝚄𝙴𝙶𝙾 𝚃𝙴𝚁𝙸𝙽𝙾 𝙴𝙽 𝙴𝙼𝙿𝙰𝚃𝙴 😐' : `𝚃𝚄𝚁𝙽𝙾 𝙳𝙴 @${room.game.currentTurn.split('@')[0]}`}
+*═════════*
+     ${arr.slice(0, 3).join('')}
+     ${arr.slice(3, 6).join('')}
+     ${arr.slice(6).join('')}
+*═════════*
+${isWin ? `@${(isSurrender ? room.game.currentTurn : room.game.winner).split('@')[0]} 😎🏆 *GANASTE!!*\n*POR HABER GANADO OBTIENES*\n\n💎 *${dia2} Diamantes*\n☯️ *${tok2} Tokens*\n🪙 *${dorrat2} DorratCoins*\n⚡ *${expp2} Exp*` : isTie ? `*EMPATE!!* 🤨\n*POR TERMINAR EN EMPATE AMBOS OBTIENEN*\n\n💎 *${dia} Diamantes*\n☯️ *${tok} Tokens*\n🪙 *${dorrat} DorratCoins*\n⚡ *${expp} Exp*` : `🪄 *TURNO DE* @${room.game.currentTurn.split('@')[0]}`}
 `.trim()
 let users = global.db.data.users
 if ((room.game._currentTurn ^ isSurrender ? room.x : room.o) !== m.chat)
 room[room.game._currentTurn ^ isSurrender ? 'x' : 'o'] = m.chat
 if (room.x !== room.o)
-await this.sendMessage(room.x, { text: str, mentions: this.parseMention(str)}, { quoted: m })
-await this.sendMessage(room.o, { text: str, mentions: this.parseMention(str)}, { quoted: m })
+await this.sendMessage(room.x, { text: str, mentions: this.parseMention(str)}, { quoted: fkontak, m })
+await this.sendMessage(room.o, { text: str, mentions: this.parseMention(str)}, { quoted: fkontak, m })
+        
 if (isTie || isWin) {
-users[room.game.playerX].exp += playScore
-users[room.game.playerO].exp += playScore
+users[room.game.playerX].limit += dia //empate
+users[room.game.playerX].joincount += tok
+users[room.game.playerX].dorracoins += dorrat
+users[room.game.playerX].exp += expp
+        
+users[room.game.playerO].limit += dia //empate
+users[room.game.playerO].joincount += tok
+users[room.game.playerO].dorracoins += dorrat
+users[room.game.playerO].exp += expp 
+        
 if (isWin)
-users[winner].exp += winScore - playScore
+users[winner].limit += dia2 //Ganador
+users[winner].joincount += tok2
+users[winner].dorracoins += dorrat2
+users[winner].exp += expp2
+        
 if (debugMode)
 m.reply('[DEBUG]\n' + format(room))
 delete this.game[room.id]}}
