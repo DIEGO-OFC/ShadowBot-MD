@@ -519,7 +519,7 @@ await conn.sendButtonVid(m.chat, pp, menuA, menuB, lenguajeGB.smsBotonM1(), '.me
 /*await conn.sendFile(m.chat, vn, 'menu.mp3', null, m, true, {
 type: 'audioMessage', 
 ptt: true})*/
-}
+}}
 handler.command = /^(menucompleto|menu completo|allmenu)$/i
 handler.exp = 50
 handler.fail = null
