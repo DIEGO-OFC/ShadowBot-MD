@@ -67,7 +67,7 @@ game: new TicTacToe(m.sender, 'o'),
 state: 'WAITING' }
         
 if (text) room.name = text     
-let imgplay = `./galería/menudorrat3.jpg`
+let imgplay = `https://img.freepik.com/vector-premium/juego-tres-raya-icono-contorno-lineal-neon_7280-2422.jpg`
 conn.sendButton(m.chat, `📍 𝐓𝐑𝐄𝐒 𝐄𝐍 𝐑𝐀𝐘𝐀 | 𝐋𝐀 𝐕𝐈𝐄𝐉𝐀
 
 ➢ 𝙴𝚂𝙿𝙴𝚁𝙰𝙽𝙳𝙾 𝙰𝙻 𝚂𝙴𝙶𝚄𝙽𝙳𝙾 𝙹𝚄𝙶𝙰𝙳𝙾𝚁 𝙿𝚄𝙴𝙳𝙴 𝙴𝙽𝚃𝚁𝙰𝚁 𝙲𝙾𝙽 𝙴𝙻 𝙱𝙾𝚃𝙾𝙽 𝙳𝙴 𝙰𝙱𝙰𝙹𝙾 𝙾 𝙴𝙻 𝙲𝙾𝙼𝙰𝙽𝙳𝙾 *${usedPrefix + command} ${text}*
