@@ -69,12 +69,12 @@ isWin = true }
         
 let dia = Math.floor(Math.random() * 2)
 let tok = Math.floor(Math.random() * 2)
-let dorrat = Math.floor(Math.random() * 10)
+let dorrat = Math.floor(Math.random() * 2)
 let expp = Math.floor(Math.random() * 10)
 
 let dia2 = Math.floor(Math.random() * 15)
 let tok2 = Math.floor(Math.random() * 10)
-let dorrat2 = Math.floor(Math.random() * 1500)
+let dorrat2 = Math.floor(Math.random() * 10)
 let expp2 = Math.floor(Math.random() * 2500)  
 
 let winner = isSurrender ? room.game.currentTurn : room.game.winner
