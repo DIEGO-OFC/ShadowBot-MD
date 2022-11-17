@@ -45,7 +45,7 @@ o: '',
 game: new TicTacToe(m.sender, 'o'),
 state: 'WAITING' }
 if (text) room.name = text     
-let imgplay = `https://cope-cdnmed.agilecontent.com/resources/jpg/8/9/1590140413198.jpg`
+let imgplay = './galería/menudorrat3.jpg'
 conn.sendButton(m.chat, `📍 𝐓𝐑𝐄𝐒 𝐄𝐍 𝐑𝐀𝐘𝐀 | 𝐋𝐀 𝐕𝐈𝐄𝐉𝐀
 
 ➢ 𝙴𝚂𝙿𝙴𝚁𝙰𝙽𝙳𝙾 𝙰𝙻 𝚂𝙴𝙶𝚄𝙽𝙳𝙾 𝙹𝚄𝙶𝙰𝙳𝙾𝚁 𝙿𝚄𝙴𝙳𝙴 𝙴𝙽𝚃𝚁𝙰𝚁 𝙲𝙾𝙽 𝙴𝙻 𝙱𝙾𝚃𝙾𝙽 𝙳𝙴 𝙰𝙱𝙰𝙹𝙾 𝙾 𝙴𝙻 𝙲𝙾𝙼𝙰𝙽𝙳𝙾 *${usedPrefix + command} ${text}*
