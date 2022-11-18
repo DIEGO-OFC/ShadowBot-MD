@@ -14,7 +14,7 @@ const cartera = {
     economia: {
     exp: true,
     limit: true,
-    dorracoin: true,
+    dorracoins: true,
   },
 }
 const recursos = Object.keys(cartera.economia).map(v => user[v] && `*${global.rpgshop.emoticon(v)} ⇢ ${user[v]}*`).filter(v => v).join('\n').trim()
