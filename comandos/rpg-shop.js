@@ -11,7 +11,7 @@ const items = {
    buy: {
         exp: { eleksirb: 3 },
         limit: { exp: 400 },
-        dorracoins: { limit: 10 },
+        dorracoins: { limit: 15 },
         diamond: { berlian: 5 },
         joincount: { limit: 15 },
         emerald: { emasbatang: 5 },
