@@ -10,7 +10,7 @@ let dos = [md, yt]
 const items = {
    buy: {
         exp: { eleksirb: 3 },
-        limit: { exp: 1000 },
+        limit: { exp: 400 },
         dorracoins: { limit: 1 },
         diamond: { berlian: 5 },
         joincount: { limit: 15 },
