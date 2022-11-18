@@ -86,7 +86,7 @@ global.lenguajeGB = es //Idioma de †𝐃⃟𝕺𝐑⃯𝐑𝐇⃯𝚵𝐓᪣�
 global.creadorname = '𝐃𝐈𝐄𝐆𝐎-𝐎𝐅𝐂'
 global.creatorname = creadorname
 global.library = 'BAILEYS-MD'
-global.vs = '1.3.0'
+global.vs = '1.3.7'
 global.version = vs
 //------------- Sticker WM -----------
 global.packname = '(☞ﾟ∀ﾟ)☞'
