@@ -215,7 +215,7 @@ conn.logger.error(`error require plugin '${filename}\n${format(e)}'`)
 global.comandos = Object.fromEntries(Object.entries(global.comandos).sort(([a], [b]) => a.localeCompare(b)))
 }}}
 Object.freeze(global.reload)
-watch(pluginFolder, global.reload)
+watch(comandosFolder, global.reload)
 await global.reloadHandler()
 async function _quickTest() {
 let test = await Promise.all([
