@@ -26,5 +26,6 @@ console.log(e)
 }}
 handler.help = ['mediafire'].map(v => v + ' <url>')
 handler.tags = ['downloader']
+handler.dorracoins = 1
 handler.command = /^(mediafire|mediafiredl|dlmediafire)$/i
 export default handler
