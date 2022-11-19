@@ -77,6 +77,14 @@ browser: ['Dorrat-Bot','Firefox','1.0.0']
 }
 
 global.conn = makeWASocket(connectionOptions)
+/* Solucion mensajes en espera */
+//global.conn = makeWASocket({ ...connectionOptions, ...opts.connectionOptions,
+//getMessage: async (key) => (
+//opts.store.loadMessage(/** @type {string} */(key.remoteJid), key.id) ||
+//opts.store.loadMessage(/** @type {string} */(key.id)) || {}
+//).message || { conversation: 'Please send messages again' },
+//})
+
 conn.isInit = false
 
 if (!opts['test']) {
