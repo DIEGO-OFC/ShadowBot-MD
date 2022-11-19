@@ -101,11 +101,13 @@ let menuB = `
 ├➢🪙${usedPrefix}balance
 ├➢🪙${usedPrefix}claim
 ├➢🪙${usedPrefix}top
+├➢🪙${usedPrefix}cartera
 ├➢🪙${usedPrefix}inventory 
 ├➢🪙${usedPrefix}levelup
 ├➢🪙${usedPrefix}myns
 ├➢🪙${usedPrefix}perfil
 ├➢🪙${usedPrefix}work
+├➢🪙${usedPrefix}rob <@tag
 ├➢🪙${usedPrefix}minar
 ├➢🪙${usedPrefix}buy
 ├➢🪙${usedPrefix}minardiamantes 
