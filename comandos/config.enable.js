@@ -50,6 +50,10 @@ footer: `┏━━━━━━━━━━━━━┓
 ┣ ඬ⃟ℹ️ _${usedPrefix}disable *gconly*_
 ┣ ඬ⃟ℹ️ _${usedPrefix}enable *autoread*_
 ┣ ඬ⃟ℹ️ _${usedPrefix}disable *autoread*_
+┣ ඬ⃟ℹ️ _${usedPrefix}enable *temporal*_
+┣ ඬ⃟ℹ️ _${usedPrefix}disable *temporal*
+┣ ඬ⃟ℹ️ _${usedPrefix}enable *simi*_
+┣ ඬ⃟ℹ️ _${usedPrefix}disable *Simi*_
 ┣ ඬ⃟ℹ️ _${usedPrefix}enable *audios*_
 ┣ ඬ⃟ℹ️ _${usedPrefix}disable *audios*_
 ┣ ඬ⃟ℹ️ _${usedPrefix}enable *antiviewonce*_
