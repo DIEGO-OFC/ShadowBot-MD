@@ -96,20 +96,22 @@ let menuB = `
 └────ׂ─ׂ─ׂ─ׂ───
 
 ┌──「🌱𝐑𝐏𝐆」─
-├➢🪴${usedPrefix}aventura
-├➢🪴${usedPrefix}balance
-├➢💐${usedPrefix}claim
-├➢🌱${usedPrefix}top
-├➢🥀${usedPrefix}levelup
-├➢🍃${usedPrefix}myns
-├➢🪴${usedPrefix}perfil
-├➢💐${usedPrefix}work
-├➢🌱${usedPrefix}minar
-├➢🥀${usedPrefix}buy
-├➢🍃${usedPrefix}buyall
-├➢🪴${usedPrefix}transfer <tipo> <cantidad> <@tag
-├➢🌱${usedPrefix}verificar
-├➢🌱${usedPrefix}unreg <numero de serie>
+├➢🪙${usedPrefix}aventura
+├➢🪙${usedPrefix}balance
+├➢🪙${usedPrefix}claim
+├➢🪙${usedPrefix}top
+├➢🪙${usedPrefix}inventory 
+├➢🪙${usedPrefix}levelup
+├➢🪙${usedPrefix}myns
+├➢🪙${usedPrefix}perfil
+├➢🪙${usedPrefix}work
+├➢🪙${usedPrefix}minar
+├➢🪙${usedPrefix}buy
+├➢🪙${usedPrefix}minardiamantes 
+├➢🪙${usedPrefix}minardorracoins 
+├➢🪙${usedPrefix}transfer <tipo> <cantidad> <@tag
+├➢🪙${usedPrefix}verificar
+├➢🪙${usedPrefix}unreg <numero de serie>
 └────ׂ─ׂ─ׂ─ׂ───
 
 ┌──「🎮𝐆𝐀𝐌𝐄」─
