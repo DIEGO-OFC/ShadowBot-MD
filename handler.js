@@ -926,7 +926,7 @@ export async function handler(chatUpdate) {
                 if (!('modoadmin' in chat)) chat.modoadmin = false
                 if (!('antiArab' in chat)) chat.antiArab = false
                 if (!('antiTraba' in chat)) chat.antiTraba = false  
-                if (!('simi' in chat)) chat.simi = false        .         
+                if (!('simi' in chat)) chat.simi = false         
                 if (!isNumber(chat.expired)) chat.expired = 0
                     
             } else
