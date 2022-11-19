@@ -96,6 +96,7 @@ let menuB = `
 └────ׂ─ׂ─ׂ─ׂ───
 
 ┌──「🌱𝐑𝐏𝐆」─
+├➢🪙${usedPrefix}cazar
 ├➢🪙${usedPrefix}aventura
 ├➢🪙${usedPrefix}balance
 ├➢🪙${usedPrefix}claim
