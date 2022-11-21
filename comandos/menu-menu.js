@@ -173,7 +173,7 @@ let menuB = `
 ├➢✅${usedPrefix}enable *modoadmin*_
 ├➢❎${usedPrefix}disable *modoadmin*_
 ├➢✅${usedPrefix}enable *temporal*_
-├➢✅${usedPrefix}disable *temporal*_
+├➢❎${usedPrefix}disable *temporal*_
 └────ׂ─ׂ─ׂ─ׂ───
 
 ┌─「💻𝐃𝐎𝐖𝐍𝐋𝐎𝐀𝐃𝐄𝐑」
