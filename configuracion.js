@@ -90,7 +90,7 @@ global.library = 'BAILEYS-MD'
 global.vs = '1.3.7'
 global.version = vs
 //------------- Sticker WM -----------
-global.packname = `👑 ➢ Owner:\n📅 ❑ Día:\n🕒 ➢ Hora:\n🗓️ ➢ Fecha:\n☯️ ➢ By:`
+global.packname = `👑 ➢ Owner:\n📅 ➢ Día:\n🕒 ➢ Hora:\n🗓️ ➢ Fecha:\n☯️ ➢ By:`
 global.author = `𝙳𝙸𝙴𝙶𝙾-𝙾𝙵𝙲\n▸ ${day}\n▸ ${temp}\n▸ ${fec}\n▸ ${igfg}`
 //_______tiempp de stickers______________
 global.day = d.toLocaleDateString(locale, { weekday: 'long' })
