@@ -56,7 +56,7 @@ ${sortedDorracoins.slice(0, len).map(({ jid, dorracoins }, i) => `${i + 1}. ${pa
 `.trim()
  //await m.reply(text, null, { mentions: conn.parseMention(text) })
 await conn.sendButton(m.chat, wm, text, null, [
-['𝙈𝙚𝙣𝙪 𝙅𝙪𝙚𝙜𝙤𝙨 🎡', '#juegosmenu'], 
+['𝙈𝙚𝙣𝙪 𝙅𝙪𝙚𝙜𝙤𝙨 🎡', '#juegosdelgrupo'], 
 ['𝙍𝙖𝙣𝙜𝙤𝙨 🚹', '#rol']], m, { mentions: conn.parseMention(text) })   
 }
 handler.help = ['top']
