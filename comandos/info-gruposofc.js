@@ -10,7 +10,7 @@ let handler = async (m, { conn, command }) => conn.sendButton(m.chat, `
 ┃ ╰━━━━━━━━━━━━━━━━╯
 ╰━━━𝐆𝐑𝐔𝐏𝐎𝐒-𝐎𝐅𝐈𝐂𝐈𝐀𝐋𝐄𝐒╾━━━╯
 
-╭━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╾•
+╭━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╾•
 │⃟•╾1: https://chat.whatsapp.com/LlAbJM659dOBVJnxOIMl9h
 
 │⃟•╾2: https://chat.whatsapp.com/FxlQJ4A3tOjGx2Qu3BITfb
@@ -22,7 +22,7 @@ let handler = async (m, { conn, command }) => conn.sendButton(m.chat, `
 │⃟•╾5: https://chat.whatsapp.com/KMOHXtuV8A594uS8fVq0v9
 
 │⃟•╾6: https://chat.whatsapp.com/LEMnxt8sApu9HeBbpxI50w
-╰━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╯
+╰━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╯
 `.trim(), wm, media, [['💟 𝙼𝙴𝙽𝚄 𝙿𝚁𝙸𝙽𝙲𝙸𝙿𝙰𝙻 💟', '#menu']], m)
 handler.command = /^linkgc|grupos$/i
 export default handler
