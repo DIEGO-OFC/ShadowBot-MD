@@ -8,7 +8,7 @@ return {...value, jid: key}
    let sortedLim = users.map(toNumber('limit')).sort(sort('limit'))
     let sortedLevel = users.map(toNumber('level')).sort(sort('level'))
      let sortedRole = users.map(toNumber('role')).sort(sort('role'))
-      let sortedDorracoins = users.map(toNumber('money')).sort(sort('money'))
+      let sortedDorracoins = users.map(toNumber('dorracoins')).sort(sort('dorracoins'))
        let sortedJoincount = users.map(toNumber('joincount')).sort(sort('joincount'))
         let sortedPremium = users.map(toNumber('premium')).sort(sort('premium'))
        
@@ -17,7 +17,7 @@ return {...value, jid: key}
        let usersLim = sortedLim.map(enumGetKey)
         let usersLevel = sortedLevel.map(enumGetKey)
          let usersRole = sortedRole.map(enumGetKey)
-          let usersDorracoins = sortedMoney.map(enumGetKey)
+          let usersDorracoins = sortedDorracoins.map(enumGetKey)
            let usersJoincount = sortedJoincount.map(enumGetKey)
             let usersPremium = sortedPremium.map(enumGetKey)
            
