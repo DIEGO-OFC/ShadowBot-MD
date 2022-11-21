@@ -90,12 +90,14 @@ global.library = 'BAILEYS-MD'
 global.vs = '1.3.7'
 global.version = vs
 //------------- Sticker WM -----------
+global.pm = new Date(new Date + 3600000)
+global.locale = 'es'
 global.packname = `👑 ➢ Owner:\n📅 ➢ Día:\n🕒 ➢ Hora:\n🗓️ ➢ Fecha:\n☯️ ➢ By:`
 global.author = `𝙳𝙸𝙴𝙶𝙾-𝙾𝙵𝙲\n▸ ${day}\n▸ ${temp}\n▸ ${fec}\n▸ ${igfg}`
 //_______tiempp de stickers______________
-global.day = d.toLocaleDateString(locale, { weekday: 'long' })
-global.temp = d.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true })
-global.fec = d.toLocaleDateString('es', { day: 'numeric', month: 'numeric', year: 'numeric' })
+global.day = pm.toLocaleDateString(locale, { weekday: 'long' })
+global.temp = pm.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true })
+global.fec = pm.toLocaleDateString('es', { day: 'numeric', month: 'numeric', year: 'numeric' })
 //_______________
 global.wm = '†𝐃⃟𝕺𝐑⃯𝐑𝐇⃯𝚵𝐓᪣𝕭⃯𝚹⃯𝐓⃤ | 𝘿𝙄𝙀𝙂𝙊-𝙊𝙁𝘾'
 global.igfg = '†𝐃⃟𝕺𝐑⃯𝐑𝐇⃯𝚵𝐓᪣𝕭⃯𝚹⃯𝐓⃤'
