@@ -75,13 +75,13 @@ let menuB = `
 ├➢_Bot_ (𝑢𝑠𝑜 𝑠𝑖𝑛 𝑝𝑟𝑒𝑓𝑖𝑗𝑜)
 └────ׂ─ׂ─ׂ─ׂ───
 
-*╭━〔 REPORTAR COMANDO 〕━⬣*
-┃ *Reporta con este comando de haber*
-┃ *Fallas para poder Solucionar!!*
-┃┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
-┃_${usedPrefix}reporte *texto*_
-┃_${usedPrefix}report *texto*_
-*╰━━━━━━━━━━━━⬣*
+┌──「🌱𝐑𝐄𝐏𝐎𝐑𝐓𝐀𝐑-𝐂𝐎𝐌𝐀𝐍𝐃𝐎」─
+├➢*Reporta con este comando de haber*
+├➢*Fallas para poder Solucionar!!*
+├┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
+├➢_${usedPrefix}reporte *texto*_
+├➢_${usedPrefix}report *texto*_
+*└────ׂ─ׂ─ׂ─ׂ───*
 
 ┏━━━━━━━━━━━━━┓
 ┃ *<UNE UN BOT A TU GRUPO/>*
