@@ -92,7 +92,6 @@ global.version = vs
 
 //_______tiempp de stickers______________
 global.d = new Date(new Date + 3600000)
-
 global.locale = 'es'
 global.dia = d.toLocaleDateString(locale, { weekday: 'long' })
 global.fecha = d.toLocaleDateString('es', { day: 'numeric', month: 'numeric', year: 'numeric' })
@@ -115,10 +114,7 @@ global.youtube = yt
 //Menu
 global.DorrafotoMenu = ['./galería/dorratmini.mp4']
 global.menulinks = [md, yt]
-
-
 /* _____________________________________________ */
-
 global.ag = '━━━ ❎ 𝙰𝙳𝚅𝙴𝚁𝚃𝙴𝙽𝙲𝙸𝙰 ❎ ━━━'
 global.advertencia = ag
 global.fg = '☆━━━━ ⚠️ 𝙵𝙰𝙻𝙻𝙾 ⚠️ ━━━☆'
