@@ -57,7 +57,7 @@ _- Al hacer uso de ciertos comandos que tengan como objetivo socavar la incomodi
 *CUENTA OFICIAL DE ASISTENCIA - WHATSAPP*
 ~ _Solo en esta Cuenta Respondo si tiene Dudas, Preguntas o Necesita Ayuda sobre DorratBot, También puede Comunicarse en Caso de Temas de Colaboración_
 *Wa.me/593959425714*
-*~ Muchas Gracias Por tomarte el tiempo en informate sobre DorratBot
+*~ Muchas Gracias Por tomarte el tiempo en informate sobre DorratBot`.trim()
 
 await conn.sendButtonVid(m.chat, pp, Terminos, lenguajeGB.smsBotonM1(), '.menu', '🎧 ' + lenguajeGB.smsTex16() + ' 🎧', '/audios', lenguajeGB.smsBotonM3(), '#inventario', fkontak, adReply)
 handler.customPrefix = /terminos|términos|términos, condiciones y privacidad|terminos, condiciones y privacidad|términos y condiciones y privacidad|terminosycondicionesyprivacidad|terminosycondiciones|terminos y condiciones y privacidad|terminos y condiciones|terminos y condiciones|terminos de uso|Terminos de uso|Terminó se uso|términos de uso|Términos de uso|Términos y condiciones/i
