@@ -2,7 +2,7 @@
     "name": "DORRAT-BOT-MD",
     "version": "1.0.0",
     "description": "Subscribete al canal de YT DIEGOGAMEPLAYS82",
-    "main": "inicio-index.js",
+    "main": "index-inicio.js",
     "type": "module",
     "directories": {
         "lib": "lib",
@@ -10,9 +10,9 @@
         "comandos": "comandos"
     },
     "scripts": {
-        "start": "node dorrat-inicio.js",
+        "start": "node index-inicio.js",
         "test": "node test.js",
-        "test2": "nodemon dorrat-inicio.js"
+        "test2": "nodemon index-inicio.js"
     },
     "homepage": "https://github.com/DIEGO-OFC/DORRAT-BOT-MD",
     "author": {
