@@ -16,4 +16,4 @@ COPY . .
 
 EXPOSE 5000
 
-CMD ["node", "dorrat-inicio.js"]
+CMD ["node", "index-inicio.js"]
