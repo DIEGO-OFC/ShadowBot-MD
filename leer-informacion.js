@@ -4,7 +4,7 @@ Si quieres cambiar los números owners ve a configuracion.js
 Creador: DIEGO-OFC número: +593959425714
 Error en la consola? Repórtalo al número +593959425714
 puedes editar el bot como tu quieras!
-host recomendados; boxmineworld.com acidicnodes.com o termux 
+host recomendados; boxmineworld.com o termux 
 si deseas ayuda o soporte unete al grupo oficial o escribe al numero del creador 
 en este github siempre van a tener actualizaciones 
 NO ME HAGO RESPONSABLE DEL MAL USO QUE PUEDA TENER EL BOT 
