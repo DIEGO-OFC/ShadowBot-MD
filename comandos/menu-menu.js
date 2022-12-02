@@ -441,6 +441,7 @@ let menuB = `
 
 
 ┌──「🛠️𝐇𝐄𝐑𝐑𝐀𝐌𝐈𝐄𝐍𝐓𝐀𝐒」─
+├➢_${usedPrefix}morse *<texto>*
 ├➢_${usedPrefix}captura *<link de la página>*_
 ├➢_${usedPrefix}horario_
 ├➢_${usedPrefix}encuestas texto|texto_
