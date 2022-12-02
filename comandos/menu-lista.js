@@ -102,7 +102,7 @@ text: `
 ║ 👥 ▢ *Usuario(s)*
 ║ 💫 ▢ ${Object.keys(global.db.data.users).length} 
 ║┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
-╚══════════════════⬣`, footer: `${wm}`, 
+╚══════════════════⬣`, footer: `*${lenguajeGB['smsPareja']()} ➺ ${pareja ? `${name} 😍 ${conn.getName(pareja)}` : `🙂 ${lenguajeGB['smsResultPareja']()}`}*`, 
 //${name} ${ucapan()}
 
 title: null,
