@@ -104,7 +104,7 @@ text: `
 ║ 👥 ▢ *Usuario(s)*
 ║ 💫 ▢ ${Object.keys(global.db.data.users).length} 
 ║┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
-╚══════════════════⬣`, footer: `*${lenguajeGB['smsPareja']()} ➺ ${pareja ? `${name} 😍 ${conn.getName(pareja)}` : `🙂 ${lenguajeGB['smsResultPareja']()}`}*`, 
+╚══════════════════⬣`, footer: `*${lenguajeGB['smsPareja']()} ➢ ${pareja ? `${name} 😍 ${conn.getName(pareja)}` : `🙂 ${lenguajeGB['smsResultPareja']()}`}*`, 
 //${name} ${ucapan()}
 
 title: null,
