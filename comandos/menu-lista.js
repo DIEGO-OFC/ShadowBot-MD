@@ -32,6 +32,7 @@ title: comienzo + ' ' + lenguajeGB['smsLista1']() + ' ' + fin,
 rows: [
 {title: lenguajeGB['smsLista2'](), rowId:`${usedPrefix}creator`},  
 {title: lenguajeGB['smsLista3'](), rowId:`${usedPrefix}infobot`},
+{title: lenguajeGB['smsDonar'](), rowId:`${usedPrefix}donar`},
 {title: lenguajeGB['smsLista4'](), rowId:`${usedPrefix}allmenu`},
 {title: lenguajeGB['smsLista5'](), rowId:`${usedPrefix}grupos`},
 {title: lenguajeGB['smsLista6'](), rowId:`${usedPrefix}jadibot`},
