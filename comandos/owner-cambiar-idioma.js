@@ -1,6 +1,6 @@
 import translate from '@vitalets/google-translate-api'
 import * as fs from 'fs'
-import { es, en, id, ar, pt } from '../lib/idiomas/total-idiomas.js'
+import { es, en, pt } from '../lib/idiomas/total-idiomas.js'
 
 let handler = async (m, { conn, args, usedPrefix, command }) => {
 let fkontak = { "key": { "participants":"0@s.whatsapp.net", "remoteJid": "status@broadcast", "fromMe": false, "id": "Halo" }, "message": { "contactMessage": { "vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD` }}, "participant": "0@s.whatsapp.net" }
@@ -21,14 +21,6 @@ await conn.sendButton(m.chat, lenguajeGB['smsAvisoEG']() + idioma.text + '\n' + 
 global.lenguajeGB = en
 await conn.sendButton(m.chat, lenguajeGB['smsAvisoEG']() + idioma.text + '\n' + 'დ ```English```', wm, null, [[`☘️ 𝗠 𝗘 𝗡 𝗨`, `${usedPrefix}menu`]], fkontak, m)
   
-}else if (args[0] == 'id'){
-global.lenguajeGB = id
-await conn.sendButton(m.chat, lenguajeGB['smsAvisoEG']() + idioma.text + '\n' + 'დ ```Bahasa Indonesia```', wm, null, [[`☘️ 𝗠 𝗘 𝗡 𝗨`, `${usedPrefix}menu`]], fkontak, m)
-  
-}else if (args[0] == 'ar'){
-global.lenguajeGB = ar
-await conn.sendButton(m.chat, lenguajeGB['smsAvisoEG']() + idioma.text + '\n' + 'დ ```عرب```', wm, null, [[`☘️ 𝗠 𝗘 𝗡 𝗨`, `${usedPrefix}menu`]], fkontak, m)
-  
 }else if (args[0] == 'pt'){
 global.lenguajeGB = pt
 await conn.sendButton(m.chat, lenguajeGB['smsAvisoEG']() + idioma.text + '\n' + 'დ ```Português```', wm, null, [[`☘️ 𝗠 𝗘 𝗡 𝗨`, `${usedPrefix}menu`]], fkontak, m)
@@ -39,16 +31,12 @@ title: '✨ IDIOMAS DISPONIBLES : AVAILABLE LANGUAGES ✨',
 rows: [
 {title: "👑 Español", rowId: `${usedPrefix + command} es`},
 {title: "👑 English", rowId: `${usedPrefix + command} en`},
-{title: "👑 Bahasa Indonesia", rowId: `${usedPrefix + command} id`},
-{title: "👑 عرب", rowId: `${usedPrefix + command} ar`},
 {title: "👑 Português", rowId: `${usedPrefix + command} pt`}]}]
 
 const listMessage = {
 text: idioma2.text + '\n\n' + idioma3.text,
 footer: `✦ Español = ${usedPrefix + command} es
 ✦ English = ${usedPrefix + command} en
-✦ Bahasa Indonesia = ${usedPrefix + command} id
-✦ عرب = ${usedPrefix + command} ar
 ✦ Português = ${usedPrefix + command} pt\n\n` + wm,
 title: `${htki} Idioma : Language 🌎`,
 buttonText: `Seleccionar : Select`,
