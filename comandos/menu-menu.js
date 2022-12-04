@@ -533,10 +533,23 @@ let menuB = `
  ━━━━━━━━━━━━━━━━━━━━━━━━━
 `.trim()
 await conn.sendButtonVid(m.chat, pp, menuA, menuB, lenguajeGB.smsBotonM1(), '.menu', '🎧 ' + lenguajeGB.smsTex16() + ' 🎧', '/audios', lenguajeGB.smsBotonM3(), '#inventario', fkontak, adReply)
-/*await conn.sendFile(m.chat, vn, 'menu.mp3', null, m, true, {
-type: 'audioMessage', 
-ptt: true})*/
-} catch {
+} 
+const sections = [
+{
+title: `prueba`,
+rows: [
+{title: "➥🔊 prueba", description: null, rowId: `pruena`},
+]}, ]
+const listMessage = {
+text: `prueba`,
+footer: `prueba
+${wm}`,
+title: null,
+buttonText: "prueba.", 
+sections }
+conn.sendMessage(m.chat, listMessage)
+
+catch {
 conn.reply(m.chat, '*[❗𝐈𝐍𝐅𝐎❗] 𝙴𝙻 𝙼𝙴𝙽𝚄 𝚃𝙸𝙴𝙽𝙴 𝚄𝙽 𝙴𝚁𝚁𝙾𝚁 𝚈 𝙽𝙾 𝙵𝚄𝙴 𝙿𝙾𝚂𝙸𝙱𝙻𝙴 𝙴𝙽𝚅𝙸𝙰𝚁𝙻𝙾, 𝚁𝙴𝙿𝙾𝚁𝚃𝙴𝙻𝙾 𝙰𝙻 𝙿𝚁𝙾𝙿𝙸𝙴𝚃𝙰𝚁𝙸𝙾 𝙳𝙴𝙻 𝙱𝙾𝚃*', m)
 }}
 handler.command = /^(menucompleto|menu completo|allmenu)$/i
