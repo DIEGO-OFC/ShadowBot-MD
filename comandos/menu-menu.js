@@ -538,7 +538,7 @@ const sections = [
 title: `𝐈𝐍𝐅𝐎𝐑𝐌𝐀𝐂𝐈𝐎𝐍`,
 rows: [
 {title: "➢ grupos", description: "muestra los grupos del bot", rowId: `${usedPrefix}grupos`},
-{title: "➢ estado", description: "para ver el estado del bot", rowId: `${usedprefix}estado`},
+{title: "➢ estado", description: "para ver el estado del bot", rowId: `${usedPrefix}estado`},
 {title: "➢ terminos", description: "para leer los términos y condiciones del bot", rowId: `${usedPrefix}términos`},
 ]}, ]
 const listMessage = {
