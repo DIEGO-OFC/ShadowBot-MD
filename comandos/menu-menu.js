@@ -537,7 +537,7 @@ const sections = [
 {
 title: `𝐈𝐍𝐅𝐎𝐑𝐌𝐀𝐂𝐈𝐎𝐍`,
 rows: [
-{title: "➢ grupos", description: "muestra los grupos del bot", rowId: `${usedPrefix + command} grupos`},
+{title: "➢ grupos", description: "muestra los grupos del bot", rowId: `${usedPrefix + command}grupos`},
 ]}, ]
 const listMessage = {
 text: `𝙳𝙸𝙴𝙶𝙾-𝙾𝙵𝙲 | 𝙳𝙾𝚁𝚁𝙰𝚃-𝙱𝙾𝚃-𝙼𝙳`,
