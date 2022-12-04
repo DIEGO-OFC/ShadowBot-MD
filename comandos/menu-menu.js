@@ -532,7 +532,7 @@ let menuB = `
  ━━━━━━━━━━━━━━━━━━━━━━━━━
 `.trim()
 await conn.sendButtonVid(m.chat, pp, menuA, menuB, lenguajeGB.smsBotonM1(), '.menu', '🎧 ' + lenguajeGB.smsTex16() + ' 🎧', '/audios', lenguajeGB.smsBotonM3(), '#inventario', fkontak, adReply)
-} 
+
 const sections = [
 {
 title: `prueba`,
@@ -548,7 +548,7 @@ buttonText: "prueba.",
 sections }
 
 await conn.sendMessage(m.chat, listMessage, {quoted: fkontak})	
-
+}
 
 handler.command = /^(menucompleto|menu completo|allmenu)$/i
 handler.exp = 50
