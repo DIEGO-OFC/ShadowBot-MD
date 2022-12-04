@@ -5,7 +5,7 @@
 import moment from 'moment-timezone'
 import fs, { promises } from 'fs'
 import fetch from 'node-fetch'
-let handler = async (m, { conn, usedPrefix, usedPrefix: _p, __dirname, text }) => {
+let handler = async (m, { conn, usedPrefix, command, args, usedPrefix: _p, __dirname, isOwner, text, isAdmin, isROwner }) => {
 let vn = './media/menu.mp3'
 let d = new Date(new Date + 3600000)
 let locale = 'es'
