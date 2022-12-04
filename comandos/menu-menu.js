@@ -537,18 +537,18 @@ const sections = [
 {
 title: `𝐈𝐍𝐅𝐎𝐑𝐌𝐀𝐂𝐈𝐎𝐍`,
 rows: [
-{title: "➢ grupos", description: "muestra los grupos del bot", rowId: `${usedPrefix}grupos`},
-{title: "➢ estado", description: "para ver el estado del bot", rowId: `${usedPrefix}estado`},
-{title: "➢ terminos", description: "para leer los términos y condiciones del bot", rowId: `${usedPrefix}términos`},
-{title: "➢ instalarbot", description: "información para instalar al bot", rowId: `${usedPrefix}instalarbot`},
-{title: "➢ infobot", description: "info del bot", rowId: `${usedPrefix}infobot`},
+{title: "/grupos", description: "muestra los grupos del bot", rowId: `${usedPrefix}grupos`},
+{title: "/estado", description: "para ver el estado del bot", rowId: `${usedPrefix}estado`},
+{title: "/terminos", description: "para leer los términos y condiciones del bot", rowId: `${usedPrefix}términos`},
+{title: "/instalarbot", description: "información para instalar al bot", rowId: `${usedPrefix}instalarbot`},
+{title: "/infobot", description: "informacion del bot", rowId: `${usedPrefix}infobot`},
 ]}, ]
 const listMessage = {
 text: `𝙳𝙸𝙴𝙶𝙾-𝙾𝙵𝙲 | 𝙳𝙾𝚁𝚁𝙰𝚃-𝙱𝙾𝚃-𝙼𝙳`,
 footer: `𝙼𝙴𝙽𝚄 𝙳𝙴𝚂𝙿𝙻𝙴𝙶𝙰𝙱𝙻𝙴
 ${wm}`,
 title: null,
-buttonText: "prueba.", 
+buttonText: "selecionar", 
 sections }
 
 await conn.sendMessage(m.chat, listMessage, {quoted: fkontak})	
