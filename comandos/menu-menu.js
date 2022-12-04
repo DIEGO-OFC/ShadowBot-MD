@@ -538,6 +538,8 @@ const sections = [
 title: `𝐈𝐍𝐅𝐎𝐑𝐌𝐀𝐂𝐈𝐎𝐍`,
 rows: [
 {title: "➢ grupos", description: "muestra los grupos del bot", rowId: `${usedPrefix + command}grupos`},
+{title: "➢ estado", description: "para ver el estado del bot", rowId: `${usedPrefix + command}estado`},
+{title: "➢ terminos", description: "para leer los términos y condiciones del bot", rowId: `${usedPrefix + command}términos`},
 ]}, ]
 const listMessage = {
 text: `𝙳𝙸𝙴𝙶𝙾-𝙾𝙵𝙲 | 𝙳𝙾𝚁𝚁𝙰𝚃-𝙱𝙾𝚃-𝙼𝙳`,
