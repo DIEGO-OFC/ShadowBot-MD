@@ -535,13 +535,13 @@ await conn.sendButtonVid(m.chat, pp, menuA, menuB, lenguajeGB.smsBotonM1(), '.me
 
 const sections = [
 {
-title: `prueba`,
+title: `𝐈𝐍𝐅𝐎𝐑𝐌𝐀𝐂𝐈𝐎𝐍`,
 rows: [
-{title: "➥🔊 prueba", description: null, rowId: `pruena`},
+{title: "➢ grupos", description: "muestra los grupos del bot", rowId: `${usedPrefix + command} grupos`},
 ]}, ]
 const listMessage = {
-text: `prueba`,
-footer: `prueba
+text: `𝙳𝙸𝙴𝙶𝙾-𝙾𝙵𝙲 | 𝙳𝙾𝚁𝚁𝙰𝚃-𝙱𝙾𝚃-𝙼𝙳`,
+footer: `𝙼𝙴𝙽𝚄 𝙳𝙴𝚂𝙿𝙻𝙴𝙶𝙰𝙱𝙻𝙴
 ${wm}`,
 title: null,
 buttonText: "prueba.", 
