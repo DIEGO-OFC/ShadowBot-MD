@@ -200,7 +200,10 @@ let menuB = `
 
 ┌──「🏢𝐆𝐑𝐎𝐔𝐏」─
 ├➢${usedPrefix}add *<número>*
-├➢${usedPrefix}kick <@tag
+├➢${usedPrefix}kick *<@tag>*_
+├➢${usedPrefix}kick2 *<@tag>*_
+├➢${usedPrefix}listanum *<texto>*_
+├➢${usedPrefix}kicknum *<texto>*_
 ├➢${usedPrefix}resetlink
 ├➢${usedPrefix}encuesta *<texto>
 ├➢${usedPrefix}votar *<texto>*
