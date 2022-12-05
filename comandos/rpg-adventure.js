@@ -1,5 +1,7 @@
 import fetch from 'node-fetch'
-
+import fs from 'fs'
+import { promises } from 'fs'
+import { join } from 'path'
 const cooldown = 300000 //3 minutos
 let handler = async (m, { usedPrefix, conn }) => {
 try {
@@ -71,7 +73,7 @@ ${cmenua}`
 ], fkontak, m)
     user.lastadventure = new Date * 1
 }
-} catch {
+ catch {
 conn.reply(m.chat, '*[❗𝐈𝐍𝐅𝐎❗] 𝙾𝙲𝚄𝚁𝚁𝙸𝙾 𝚄𝙽 𝙴𝚁𝚁𝙾𝚁, 𝙸𝙽𝚃𝙴𝙽𝚃𝙰𝙻𝙾 𝙳𝙴 𝙽𝚄𝙴𝚅𝙾, 𝚂𝙴𝙶𝚄𝚁𝙾 𝙻𝙰 𝙰𝙿𝙸 𝙽𝙾 𝙶𝙴𝙽𝙴𝚁𝙾 𝙻𝙰 𝙸𝙼𝙰𝙶𝙴𝙽*', m)
 }}
 handler.help = ['adventure']
