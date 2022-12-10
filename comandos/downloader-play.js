@@ -121,7 +121,7 @@ handler.tags = ['downloader']
 handler.command = /^play2?$/i
 handler.exp = 20
 // handler.register = true
-handler.dorracoins = 1
+handler.dorracoins = 5
 //handler.limit = 1
 export default handler*/
 
