@@ -344,6 +344,7 @@ let menuB = `
 ├➢_${usedPrefix}nsfwero_
 ├➢_${usedPrefix}nsfwfemdom_
 ├➢_${usedPrefix}nsfwglass_
+├➢_${usedPrefix}hentaipdf *<texto>*_
 └────ׂ─ׂ─ׂ─ׂ──
 
 ┌──「𝐄𝐟𝐞𝐜𝐭𝐨𝐬 𝐝𝐞 𝐚𝐮𝐝𝐢𝐨𝐬」
