@@ -1592,7 +1592,7 @@ await conn.sendButton(m.chat, `*𝗣𝗥𝗘𝗠𝗜𝗨𝗠 ${user.premium ? "�
 ['𝙈𝙚𝙣𝙪 𝘼𝙫𝙚𝙣𝙩𝙪𝙧𝙖 | 𝙍𝙋𝙂 💗', '.rpgmenu']], fkontak, m)}
 
 }
-} catch {
+ catch {
 conn.reply(m.chat, '*[❗𝐈𝐍𝐅𝐎❗] 𝐎𝐂𝐔𝐑𝐑𝐈𝐎 𝐔𝐍 𝐄𝐑𝐑𝐎𝐑, 𝐈𝐍𝐓𝐄𝐍𝐓𝐀𝐋𝐎 𝐃𝐄 𝐍𝐔𝐄𝐕𝐎*', m)}}
 handler.help = ['inventory', 'inv']
 handler.tags = ['rpg']
