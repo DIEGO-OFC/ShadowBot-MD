@@ -1348,7 +1348,7 @@ export async function participantsUpdate({ id, participants, action }) {
                             (chat.sBye || this.bye || conn.bye || 'Bye, @user!')).replace('@user', await this.getName(user)) //.replace('@user', '@' + user.split('@')[0])
                             let apii = await this.getFile(pp)
                             this.sendHydrated(id, text, groupMetadata.subject, apii.data, 'https://github.com/DIEGO-OFC/DORRAT-BOT-MD', '𝐃𝐎𝐑𝐑𝐀𝐓-𝐁𝐎𝐓-𝐌𝐃', null, null, [
-                            [(action == 'add' ? '𝐒𝐄 𝐔𝐍𝐈𝐎 🌠 | 𝐇𝐈!!' : '𝐒𝐄 𝐅𝐔𝐄 𝐔𝐍 𝐌𝐀𝐑𝐈𝐂𝐎𝐍 🏳️‍🌈 | 𝐋𝐄𝐒𝐁𝐈𝐀𝐍𝐀'), '.s'],    
+                            [(action == 'add' ? '𝐒𝐄 𝐔𝐍𝐈𝐎 🌠 | 𝐇𝐈!!' : '𝐒𝐄 𝐅𝐔𝐄 𝐔𝐍 𝐑𝐀𝐍𝐃𝐎𝐌 😂'), '.s'],    
                             ['⫹⫺ 𝐌𝐄𝐍𝐔', '/menu']
                             ], '', { mentions: [user]})
                            }
