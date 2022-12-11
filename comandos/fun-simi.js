@@ -1,12 +1,17 @@
 import fetch from 'node-fetch'
 let handler = async (m, { text, usedPrefix, command }) => {
-
-if (!text) throw `*[❗] 𝙸𝙽𝙶𝚁𝙴𝚂𝙴 𝚄𝙽 𝚃𝙴𝚇𝚃𝙾 𝙿𝙰𝚁𝙰 𝙷𝙰𝙱𝙻𝙰𝚁 𝙲𝙾𝙽 𝚂𝙸𝙼𝚂𝙸𝙼𝙸 𝙾 𝙴𝙻 𝙱𝙾𝚃*\n\n*𝙴𝙹𝙴𝙼𝙿𝙻𝙾: ${usedPrefix + command} Hola bot*`
-let res = await fetch(`https://api.simsimi.net/v2/?text=${text}&lc=es`)
+let name = await conn.getName(m.sender)
+if (!text) {
+ conn.reply(m.chat, `Hola *@${m.sender.split`@`[0]}* Quieres charlar un rato? \nResponde con *${usedPrefix + command}* (tu mensaje) \n\n*_📌 Ejemplo :_* *${usedPrefix + command}* Hola bot`, m, { mentions: [m.sender] })
+ throw false
+ }
+let res = await fetch(global.API('https://api.simsimi.net', '/v2/', { text: encodeURIComponent(text), lc: "es" }, ''))
 let json = await res.json()
-m.reply(json.success)}
-m.reply(json.success)}}
+if (json.success) m.reply(json.success)
+else throw json }
 handler.help = ['simi', 'bot'].map(v => v + ' <teks>')
 handler.tags = ['fun']
 handler.command = /^((sim)?simi|bot|alexa|cortana)$/i
+handler.register = true
+
 export default handler
