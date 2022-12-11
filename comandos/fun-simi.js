@@ -5,7 +5,7 @@ if (!text) throw `*[❗] 𝙸𝙽𝙶𝚁𝙴𝚂𝙴 𝚄𝙽 𝚃𝙴𝚇𝚃�
 let res = await fetch(`https://api.simsimi.net/v2/?text=${text}&lc=es`)
 let json = await res.json()
 m.reply(json.success)}
-m.reply(json.success)}
+m.reply(json.success)}}
 handler.help = ['simi', 'bot'].map(v => v + ' <teks>')
 handler.tags = ['fun']
 handler.command = /^((sim)?simi|bot|alexa|cortana)$/i
