@@ -1,7 +1,7 @@
 let handler = async (m, { conn }) => {
 try {
-let pp = await(await fetch('https://telegra.ph/file/84f310731f91d1a75033a.jpg')).buffer()
-let img = imagen4
+let pp = imagen4
+let img = imagen5
 let _uptime = process.uptime() * 1000
 let uptime = clockString(_uptime)
 let taguser = '@' + m.sender.split("@s.whatsapp.net")[0]
