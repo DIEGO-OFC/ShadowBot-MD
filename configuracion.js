@@ -129,6 +129,7 @@ global.imagen1 = fs.readFileSync('./Menu2.jpg')
 global.imagen2 = fs.readFileSync('./galeria/nuevobot.jpg') 
 global.imagen3 = fs.readFileSync('./galeria/Pre Bot Publi.png')
 global.imagen4 = fs.readFileSync('./galeria/menudorrat3.jpg')
+global.imagen5 = fs.readFileSync('./galeria/menudorrat5.png')
 global.video1 = fs.readFileSync('./galeria/dorratmini.mp4')
 global.dorratMenu = [imagen1, imagen4]
 global.pdoc = ['application/vnd.openxmlformats-officedocument.presentationml.presentation', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'application/vnd.ms-excel', 'application/msword', 'application/pdf', 'text/rtf']
