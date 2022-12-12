@@ -1,7 +1,7 @@
 let handler = async (m, { conn }) => {
 try {
 let pp = imagen4
-let img = await(await fetch('https://github.com/DIEGO-OFC.png')).buffer()
+let img = await(await fetch('https://github.com/DIEGO-OFC.jpg')).buffer()
 let _uptime = process.uptime() * 1000
 let uptime = clockString(_uptime)
 let taguser = '@' + m.sender.split("@s.whatsapp.net")[0]
@@ -19,7 +19,7 @@ conn.sendMessage(m.chat, buttonMessage, { quoted: m })
 } catch {
 let _uptime = process.uptime() * 1000
 let uptime = clockString(_uptime)    
-throw `*🤖 TIEMPO ACTIVO: ${uptime} ┃ 👑 BY DIEGO-OFC ┃ 🔗 PAGINA OFC: https://sites.google.com/view/dorratbotmd/inicio*`}}
+throw `*🤖 TIEMPO ACTIVO:* ${uptime} ┃ 👑 BY DIEGO-OFC ┃ 🔗 PAGINA OFC: https://sites.google.com/view/dorratbotmd/inicio`}}
 handler.help = ['estado']
 handler.tags = ['main']
 handler.command = /^(estado|status|estate|state|stado|stats|runtime|uptime)$/i
