@@ -1,7 +1,7 @@
 let handler = async (m, { conn }) => {
 try {
 let pp = imagen4
-let img = await(await fetch('https://github.com/DIEGO-OFC.jpg')).buffer()
+let img = imagen4
 let _uptime = process.uptime() * 1000
 let uptime = clockString(_uptime)
 let taguser = '@' + m.sender.split("@s.whatsapp.net")[0]
