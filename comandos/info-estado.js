@@ -10,7 +10,7 @@ let str = `╔═[ *∆.𝑫𝑶𝑹𝑹𝑯∆𝑻-𝑩𝑶𝑻.∆* ]
 ║
 ║ *=➢ 🤖 TIEMPO ACTIVO:* ${uptime}
 ║ *=➢ 👑 CREADOR: DIEGO-OFC*
-║ *=➢ 🔗 PAGINA OFICIAL: https://sites.google.com/view/dorratbotmd/inicio
+║ *=➢ 🔗 PAGINA OFICIAL:* https://sites.google.com/view/dorratbotmd/inicio
 ╚════════════════`.trim()
 let buttons = [{ buttonId: '#menu', buttonText: { displayText: ' 𝙼𝙴𝙽𝚄 𝙿𝚁𝙸𝙽𝙲𝙸𝙿𝙰𝙻 ✅' }, type: 1 }]
 let buttonMessage = { image: pp, caption: str.trim(), mentions: [m.sender], footer: global.wm, buttons: buttons, headerType: 4, contextInfo: { mentionedJid: [m.sender], externalAdReply: { showAdAttribution: true, mediaType: 'VIDEO', mediaUrl: null, title: 'PÁGINA OFICIAL', body: 'BY @DIEGO-OFC', thumbnail: img, sourceUrl: `https://sites.google.com/view/dorratbotmd/inicio`}}}
