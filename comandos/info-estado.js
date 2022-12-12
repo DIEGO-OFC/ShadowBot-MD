@@ -8,10 +8,9 @@ let taguser = '@' + m.sender.split("@s.whatsapp.net")[0]
 let str = `╔═[ *∆.𝑫𝑶𝑹𝑹𝑯∆𝑻-𝑩𝑶𝑻.∆* ]
 ║ *➤ 𝙷𝙾𝙻𝙰 ${taguser}*
 ║
-║ *=➢ミ🤖 𝙴𝚂𝚃𝙰𝙳𝙾 𝙳𝙴𝙻 𝙱𝙾𝚃 🤖彡*
-║ *=➢ 𝙱𝙾𝚃 𝙰𝙲𝚃𝙸𝚅𝙾 ✅*
-║ *=➢ 𝙱𝙾𝚃 𝙳𝙴 𝚄𝚂𝙾 𝙿𝚄𝙱𝙻𝙸𝙲𝙾 ✅*
-║ *=➢ 𝚃𝙸𝙴𝙼𝙿𝙾 𝙰𝙲𝚃𝙸𝚅𝙾:* ${uptime}
+║ *=➢ 🤖 TIEMPO ACTIVO:* ${uptime}
+║ *=➢ 👑 CREADOR: DIEGO-OFC*
+║ *=➢ 🔗 PAGINA OFICIAL: https://sites.google.com/view/dorratbotmd/inicio
 ╚════════════════`.trim()
 let buttons = [{ buttonId: '#menu', buttonText: { displayText: ' 𝙼𝙴𝙽𝚄 𝙿𝚁𝙸𝙽𝙲𝙸𝙿𝙰𝙻 ✅' }, type: 1 }]
 let buttonMessage = { image: pp, caption: str.trim(), mentions: [m.sender], footer: global.wm, buttons: buttons, headerType: 4, contextInfo: { mentionedJid: [m.sender], externalAdReply: { showAdAttribution: true, mediaType: 'VIDEO', mediaUrl: null, title: 'PÁGINA OFICIAL', body: 'BY @DIEGO-OFC', thumbnail: img, sourceUrl: `https://sites.google.com/view/dorratbotmd/inicio`}}}
