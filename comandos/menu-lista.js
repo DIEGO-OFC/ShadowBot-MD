@@ -110,7 +110,7 @@ text: `
 
 title: null,
 
-buttonText: "selección | selección ✅", 
+buttonText: "*selección | selección ✅*", 
 
 sections }
 
