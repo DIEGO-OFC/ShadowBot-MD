@@ -60,21 +60,21 @@ rows: [
 ]},{	
 title: comienzo + '🗂️ ENABLE/DISABLE ' + fin,
 rows: [
-{title: "|🕋| ENABLE MENU COMPLETO", rowId: `${usedPrefix}enable`},  
-{title: "|✨| ENABLE WELCOME", rowId: `${usedPrefix}enable welcome`},
-{title: "|✨| DISABLE WELCOME", rowId: `${usedPrefix}disable welcome`},
-{title: "|🔗| ENABLE ANTILINK", rowId: `${usedPrefix}enable antilink`},  
-{title: "|🔗| DISABLE ANTILINK", rowId: `${usedPrefix}disable antilink`},
-{title: "|🧬| ENABLE ANTIARABES", rowId: `${usedPrefix}enable antiarabes`},    
-{title: "|🧬| DISABLE ANTIARABES", rowId: `${usedPrefix}disable antiarabes`},
-{title: "|🥵| ENABLE MODOHORNY", rowId: `${usedPrefix}enable modohorny`},
-{title: "|🥵| DISABLE MODOHORNY", rowId: `${usedPrefix}disable modohorny`},
-{title: "|⛔| ENABLE RESTRICT", rowId: `${usedPrefix}enable restrict`},
-{title: "|⛔| DISABLE RESTRICT", rowId: `${usedPrefix}disable restrict`},
-{title: "|📵| ENABLE ANTILLAMADA", rowId: `${usedPrefix}enable anticall`},
-{title: "|📵| DISABLE ANTILLAMADA", rowId: `${usedPrefix}disable anticall`},   
-{title: "|🎵| ENABLE AUDIOS", rowId: `${usedPrefix}enable audios`},
-{title: "|🎵| DISABLE AUDIOS", rowId: `${usedPrefix}disable audios`}
+{title: "│🕋│ENABLE MENU COMPLETO", rowId: `${usedPrefix}enable`},  
+{title: "│✨│ENABLE WELCOME", rowId: `${usedPrefix}enable welcome`},
+{title: "│✨│DISABLE WELCOME", rowId: `${usedPrefix}disable welcome`},
+{title: "│🔗│ENABLE ANTILINK", rowId: `${usedPrefix}enable antilink`},  
+{title: "│🔗│DISABLE ANTILINK", rowId: `${usedPrefix}disable antilink`},
+{title: "│🧬│ENABLE ANTIARABES", rowId: `${usedPrefix}enable antiarabes`},    
+{title: "│🧬│DISABLE ANTIARABES", rowId: `${usedPrefix}disable antiarabes`},
+{title: "│🥵│ENABLE MODOHORNY", rowId: `${usedPrefix}enable modohorny`},
+{title: "│🥵│DISABLE MODOHORNY", rowId: `${usedPrefix}disable modohorny`},
+{title: "│⛔│ENABLE RESTRICT", rowId: `${usedPrefix}enable restrict`},
+{title: "│⛔│DISABLE RESTRICT", rowId: `${usedPrefix}disable restrict`},
+{title: "│📵│ENABLE ANTILLAMADA", rowId: `${usedPrefix}enable anticall`},
+{title: "│📵│DISABLE ANTILLAMADA", rowId: `${usedPrefix}disable anticall`},   
+{title: "│🎵│ENABLE AUDIOS", rowId: `${usedPrefix}enable audios`},
+{title: "│🎵│DISABLE AUDIOS", rowId: `${usedPrefix}disable audios`}
 ]}]
 
 
