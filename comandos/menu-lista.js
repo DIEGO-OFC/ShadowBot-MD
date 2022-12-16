@@ -102,7 +102,7 @@ text: `
 ║ 🔳 ▢ *Librería | library:*
 ║ 🖥️ ▢ ${library}
 ║┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
-║ 👥 ▢ *Usuario(s) | users*
+║ 👥 ▢ *Usuario(s) | users:*
 ║ 💫 ▢ ${Object.keys(global.db.data.users).length} 
 ║┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 ╚══════════════════⬣`, footer: `*${lenguajeGB['smsPareja']()} ➢ ${pareja ? `${name} 😍 ${conn.getName(pareja)}` : `🙂 ${lenguajeGB['smsResultPareja']()}`}*`, 
@@ -110,7 +110,7 @@ text: `
 
 title: null,
 
-buttonText: "🔰 𝗦𝗘𝗟𝗘𝗖𝗖𝗜𝗢𝗡𝗘 𝗔𝗤𝗨𝗜 🔰", 
+buttonText: "selección | selección ✅", 
 
 sections }
 
