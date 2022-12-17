@@ -9,7 +9,6 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
   let username = conn.getName(m.sender)
   try {
   
-    m.reply(`*⏱️ creando sticker, por favor espera, no abuse de este comando, ya que anda lento*`)	
     let q = m.quoted ? m.quoted : m
     let mime = (q.msg || q).mimetype || q.mediaType || ''
     if (/webp|image|video/g.test(mime)) {
@@ -22,6 +21,8 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
       } catch (e) {
         console.error(e)
       } finally {
+
+      m.reply(`*⏱️ creando sticker, por favor espera, no abuse de este comando, ya que anda lento*`)	
       await conn.sendNyanCat(m.chat, global.wait, adnyancat, adsticker, null, script, m) 
         if (!stiker) {
           if (/webp/g.test(mime)) out = await webp2png(img)
