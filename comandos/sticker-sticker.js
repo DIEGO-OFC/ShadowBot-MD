@@ -5,7 +5,8 @@ import uploadImage from '../lib/uploadImage.js'
 import { webp2png } from '../lib/webp2mp4.js'
 
 let handler = async (m, { conn, args, usedPrefix, command }) => {
-  let stiker = false
+ m.reply(`⏱️ creando sticker, por favor espera, no abuse de este comando, ya que anda lento`)
+ let stiker = false
   let username = conn.getName(m.sender)
   try {
   	
