@@ -22,7 +22,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
         console.error(e)
       } finally {
 
-        await conn.sendNyanCat(m.chat, global.wait, imagen5, adsticker, null, script, m) 
+        await conn.sendNyanCat(m.chat, global.wait, imagen5, wm, null, md, m) 
         if (!stiker) {
           if (/webp/g.test(mime)) out = await webp2png(img)
           else if (/image/g.test(mime)) out = await uploadImage(img)
