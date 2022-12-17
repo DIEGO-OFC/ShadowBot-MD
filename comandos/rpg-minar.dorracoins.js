@@ -9,8 +9,8 @@ let time = global.db.data.users[m.sender].lastdiamantes + 600000
 if (new Date - global.db.data.users[m.sender].lastdiamantes < 600000) throw `*💟 Vuelva en ${msToTime(time - new Date())} para continuar minando ⛏️*`  
 
 conn.sendHydrated(m.chat, `*${minar} ${d} DORRAT-COINS*`, wm, pp, md, '𝘿𝙤𝙧𝙧𝙖𝙩𝘽𝙤𝙩-𝙈𝘿', null, null, [
-['*MINAR EXP* ⚡', `.minar`],
-['*GRUPOS OFICIALES* 👑', `.grupos`],
+['𝗠𝗜𝗡𝗔𝗥 𝗘𝗫𝗣 ⚡', `.minar`],
+['𝗚𝗥𝗨𝗣𝗢 𝗢𝗙𝗜𝗖𝗜𝗔𝗟𝗘𝗦 👑', `.grupos`],
 ], m,)
 global.db.data.users[m.sender].lastdiamantes = new Date * 1  
   
