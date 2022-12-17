@@ -78,8 +78,8 @@ let menuB = `
 ├➢ _*Reporta con este comando de haber*_
 ├➢ _*Fallas para poder Solucionar!!*_
 ├┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
-├➢_${usedPrefix}reporte *texto*_
-├➢_${usedPrefix}report *texto*_
+├➢ _${usedPrefix}reporte *texto*_
+├➢ _${usedPrefix}report *texto*_
 *└────ׂ─ׂ─ׂ─ׂ───*
 
 ┏━━━━━━━━━━━━━┓
