@@ -63,15 +63,15 @@ let menuB = `
 *╰══*═════════════ *✧*
 
 ┌──「📦𝐈𝐍𝐅𝐎𝐑𝐌𝐀𝐂𝐈𝐎𝐍」─
-├➢_${usedPrefix}grupos_
-├➢_${usedPrefix}estado_
-├➢_${usedPrefix}terminos_
-├➢_${usedPrefix}instalarbot_
-├➢_${usedPrefix}infobot_
-├➢_${usedPrefix}grouplist_
-├➢_${usedPrefix}owner_
-├➢_${usedPrefix}script_
-├➢_Bot_ (𝑢𝑠𝑜 𝑠𝑖𝑛 𝑝𝑟𝑒𝑓𝑖𝑗𝑜)
+├➢ _${usedPrefix}grupos_
+├➢ _${usedPrefix}estado_
+├➢ _${usedPrefix}terminos_
+├➢ _${usedPrefix}instalarbot_
+├➢ _${usedPrefix}infobot_
+├➢ _${usedPrefix}grouplist_
+├➢ _${usedPrefix}owner_
+├➢ _${usedPrefix}script_
+├➢ _Bot_ (𝑢𝑠𝑜 𝑠𝑖𝑛 𝑝𝑟𝑒𝑓𝑖𝑗𝑜)
 └────ׂ─ׂ─ׂ─ׂ───
 
 ┌──「❗ *REPORTAR COMANDO* 」─
