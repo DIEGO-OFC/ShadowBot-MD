@@ -5,11 +5,11 @@ import uploadImage from '../lib/uploadImage.js'
 import { webp2png } from '../lib/webp2mp4.js'
 
 let handler = async (m, { conn, args, usedPrefix, command }) => {
- m.reply(`⏱️ creando sticker, por favor espera, no abuse de este comando, ya que anda lento`)
- let stiker = false
+  let stiker = false
   let username = conn.getName(m.sender)
   try {
-  	
+  
+    m.reply(`*⏱️ creando sticker, por favor espera, no abuse de este comando, ya que anda lento*`)	
     let q = m.quoted ? m.quoted : m
     let mime = (q.msg || q).mimetype || q.mediaType || ''
     if (/webp|image|video/g.test(mime)) {
