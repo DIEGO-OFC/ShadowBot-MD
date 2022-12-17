@@ -20,9 +20,11 @@ if (m.isGroup) who = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted
 else who = m.chat
 let user = global.db.data.users[who]
 if (!who) throw `${mg}𝐄𝐓𝐈𝐐𝐔𝐄𝐓𝐄 𝐋𝐀 𝐏𝐄𝐑𝐒𝐎𝐍𝐀 𝐐𝐔𝐄 𝐕𝐀 𝐑𝐄𝐂𝐈𝐁𝐈𝐑 𝐀𝐃𝐕𝐄𝐑𝐓𝐄𝐍𝐂𝐈𝐀𝐒 ⚠️\n\n𝐓𝐀𝐆 𝐓𝐇𝐄 𝐏𝐄𝐑𝐒𝐎𝐍 𝐖𝐇𝐎 𝐖𝐈𝐋 𝐑𝐄𝐂𝐄𝐈𝐕𝐄 𝐓𝐇𝐄 𝐖𝐀𝐑𝐍𝐈𝐍𝐆⚠️\n\n𝙀𝙅𝙀𝙈𝙋𝙇𝙊 | 𝙀𝙓𝘼𝙈𝙋𝙇𝙀\n*${usedPrefix + command} @tag*`
+let txt = text.replace('@' + who.split`@`[0], '').trim()
+if (!txt) return conn.reply(m.chat, `${mg}*ESCRIBA EL MOTIVO DE LA ADVERTENCIA*\n` + `*${usedPrefix + command} @${who.split`@`[0]} *Motivo*`, fkontak, m)  
 user.warn += 1
   
-await conn.sendButton(m.chat,`${user.warn == 1 ? `*@${who.split`@`[0]}*` : `*@${who.split`@`[0]}*`} 𝙍𝙀𝘾𝙄𝘽𝙄𝙊 𝙐𝙉𝘼 𝘼𝘿𝙑𝙀𝙉𝙏𝙀𝙉𝘾𝙄𝘼 𝙀𝙉 𝙀𝙎𝙏𝙀 𝙂𝙍𝙐𝙋𝙊!!\n\n𝙄 𝙍𝙀𝘾𝙀𝙄𝙑𝙀𝘿 𝘼 𝙒𝘼𝙍𝙉𝙄𝙉𝙂 𝙄𝙉 𝙏𝙃𝙄𝙎 𝙂𝙍𝙊𝙐𝙋!!`, `*ADVERTENCIA : WARNING*\n⚠️ *${user.warn}/4*\n\n${wm}`, pp, [
+await conn.sendButton(m.chat,`${user.warn == 1 ? `*@${who.split`@`[0]}*` : `*@${who.split`@`[0]}*`} 𝙍𝙀𝘾𝙄𝘽𝙄𝙊 𝙐𝙉𝘼 𝘼𝘿𝙑𝙀𝙉𝙏𝙀𝙉𝘾𝙄𝘼 𝙀𝙉 𝙀𝙎𝙏𝙀 𝙂𝙍𝙐𝙋𝙊!!\n\n𝙄 𝙍𝙀𝘾𝙀𝙄𝙑𝙀𝘿 𝘼 𝙒𝘼𝙍𝙉𝙄𝙉𝙂 𝙄𝙉 𝙏𝙃𝙄𝙎 𝙂𝙍𝙊𝙐𝙋!!\n\n🫵 *${text}*`, `*ADVERTENCIA : WARNING*\n⚠️ *${user.warn}/4*\n\n${wm}`, pp, [
 [`😐 𝙇𝙊 𝙎𝙄𝙀𝙉𝙏𝙊`, '.ok'],
 ['💫 𝗕𝗮𝗹𝗮𝗻𝗰𝗲', '.balance'],
 ['🔰 𝙈𝙀𝙉𝙐', '/menu']], false, { mentions: [who] }) //[m.sender]
