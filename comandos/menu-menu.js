@@ -74,9 +74,9 @@ let menuB = `
 ├➢_Bot_ (𝑢𝑠𝑜 𝑠𝑖𝑛 𝑝𝑟𝑒𝑓𝑖𝑗𝑜)
 └────ׂ─ׂ─ׂ─ׂ───
 
-┌──「❗𝐑𝐄𝐏𝐎𝐑𝐓𝐀𝐑-𝐂𝐎𝐌𝐀𝐍𝐃𝐎」─
-├➢*Reporta con este comando de haber*
-├➢*Fallas para poder Solucionar!!*
+┌──「❗ *REPORTAR COMANDO* 」─
+├➢ _*Reporta con este comando de haber*_
+├➢ _*Fallas para poder Solucionar!!*_
 ├┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 ├➢_${usedPrefix}reporte *texto*_
 ├➢_${usedPrefix}report *texto*_
