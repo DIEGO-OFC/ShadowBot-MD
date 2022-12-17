@@ -5,4 +5,5 @@ conn.sendButton(m.chat, `_${command}_`.trim(), wm, url, [['🔄 𝚂𝙸𝙶𝚄
 handler.help = ['meme']
 handler.tags = ['random']
 handler.command = /^(meme|memes)$/i
+handler.limit = 3
 export default handler
