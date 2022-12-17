@@ -8,7 +8,6 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
   let stiker = false
   let username = conn.getName(m.sender)
   try {
-      m.reply(`*⏱️ creando sticker, por favor espera, no abuse de este comando, ya que anda lento*`)	
     let q = m.quoted ? m.quoted : m
     let mime = (q.msg || q).mimetype || q.mediaType || ''
     if (/webp|image|video/g.test(mime)) {
