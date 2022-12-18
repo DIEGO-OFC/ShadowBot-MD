@@ -1,7 +1,7 @@
 import { youtubeSearch } from '@bochilteam/scraper'
 import fetch from 'node-fetch'
 let handler = async (m, { conn, command, text, usedPrefix }) => {
-if (!text) throw `*[❗𝐈𝐍𝐅𝐎❗] NOMBRE DE LA CANCION FALTANTE, POR FAVOR INGRESE EL COMANDO MAS EL NOMBRE/TITULO DE UNA CANCIÓN*\n\n*➢ EJEMPLO:*\n*${usedPrefix + command} Phonk*`
+if (!text) throw `*[❕𝐈𝐍𝐅𝐎❕] NOMBRE DE LA CANCION FALTANTE, POR FAVOR INGRESE EL COMANDO MAS EL NOMBRE/TITULO DE UNA CANCIÓN*\n\n*➢ EJEMPLO:*\n*${usedPrefix + command} Phonk*`
 try {
 let vid = (await youtubeSearch(text)).video[0]
 let { title, description, thumbnail, videoId, durationH, viewH, publishedTime } = vid
@@ -48,7 +48,7 @@ const buttonMessage = { image: {url: thumbnail}, caption: capt, footer: '*ᴇɴ�
 let msg = await conn.sendMessage(m.chat, buttonMessage, { quoted: m })
 conn.sendMessage(m.chat, { audio: { url: aud }, mimetype: 'audio/mp4', fileName: `${title}.mp3`}, {quoted: msg})
 } catch {  
-throw '*ERROR, POR FAVOR INTÉNTELO DE NUEVO*'}}}
+throw '*[❕] ERROR, POR FAVOR INTÉNTELO DE NUEVO*'}}}
 handler.help = ['play', 'play2'].map(v => v + ' <pencarian>')
 handler.tags = ['downloader']
 handler.command = /^play2?$/i
