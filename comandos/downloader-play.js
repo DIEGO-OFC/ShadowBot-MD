@@ -10,8 +10,8 @@ var doc = ['pdf','zip','vnd.openxmlformats-officedocument.presentationml.present
 var document = doc[Math.floor(Math.random() * doc.length)]
 const buttons = [
 { buttonId: `#ytmp3 ${urll}`, buttonText: { displayText: '🎶 𝗔𝗨𝗗𝗜𝗢 🎶' }, type: 1 },
-{ buttonId: `#ytmp4 ${urll}`, buttonText: { displayText: '🎥 𝗩𝗜𝗗𝗘𝗢 🎥' }, type: 1 },
-{ buttonId: `#playlist ${text}`, buttonText: { displayText: '📋 𝗠𝗔𝗦 𝗥𝗘𝗦𝗨𝗟𝗧𝗔𝗗𝗢𝗦  📋' }, type: 1 }, ]    
+{ buttonId: `#ytmp4 ${urll}`, buttonText: { displayText: '🎦 𝗩𝗜𝗗𝗘𝗢 🎦' }, type: 1 },
+{ buttonId: `#playlist ${text}`, buttonText: { displayText: '🔍 𝗠𝗔𝗦 𝗥𝗘𝗦𝗨𝗟𝗧𝗔𝗗𝗢𝗦  🔍' }, type: 1 }, ]    
 let texto1 = `
 ╔═══════❰  *🔰*  ❱══════⬣
 ║ *TITULO | TITLE*
