@@ -1,7 +1,7 @@
 import { youtubeSearch } from '@bochilteam/scraper'
 import fetch from 'node-fetch'
 let handler = async (m, { conn, command, text, usedPrefix }) => {
-if (!text) throw `*[❗𝐈𝐍𝐅𝐎❗] NOMBRE DE LA CANCION FALTANTE, POR FAVOR INGRESE EL COMANDO MAS EL NOMBRE/TITULO DE UNA CANCIÓN*\n\n*➢ EJEMPLO:*\n*${usedPrefix + command} Phonk *`
+if (!text) throw `*[❗𝐈𝐍𝐅𝐎❗] NOMBRE DE LA CANCION FALTANTE, POR FAVOR INGRESE EL COMANDO MAS EL NOMBRE/TITULO DE UNA CANCIÓN*\n\n*➢ EJEMPLO:*\n*${usedPrefix + command} Phonk*`
 try {
 let vid = (await youtubeSearch(text)).video[0]
 let { title, description, thumbnail, videoId, durationH, viewH, publishedTime } = vid
