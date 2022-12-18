@@ -112,7 +112,6 @@ const listMessage = {
 }
 
 await conn.sendMessage(m.chat, listMessage, {quoted: fkontak})
-await conn.sendMessage(m.chat, listMessage, {quoted: fkontak})
 } catch {
 try {
 let vid2 = await (await fetch(`https://api.lolhuman.xyz/api/ytsearch?apikey=${lolkeysapi}&query=${text}`)).json()
@@ -121,8 +120,8 @@ const url = 'https://www.youtube.com/watch?v=' + videoId
 let ytLink = await fetch(`https://api.lolhuman.xyz/api/ytplay2?apikey=${lolkeysapi}&query=${text}`)
 let jsonn = await ytLink.json()
 let aud = await jsonn.result.audio
-let capt = `ও 𝙏𝙄𝙏𝙐𝙇𝙊 | 𝙏𝙄𝙏𝙇𝙀: ${title}\nও 𝙋𝙐𝘽𝙇𝙄𝘾𝘼𝘿𝙊 | 𝙋𝙐𝘽𝙇𝙄𝙎𝙃𝙀𝘿: ${published}\nও 𝙑𝙄𝙎𝙏𝘼𝙎 | 𝙑𝙄𝙀𝙒𝙎: ${views}`
-const buttons = [{buttonId: `#playlist ${title}`, buttonText: {displayText: '𓃠 𝗠 𝗔 𝗦   𝗥 𝗘 𝗦 𝗨 𝗟 𝗧 𝗔 𝗗 𝗢 𝗦'}, type: 1}]
+let capt = `➢ *TITULO:* ${title}\n➢ *PUBLICADO:* ${published}\n➢ *VISTAS:* ${views}`
+const buttons = [{buttonId: `#playlist ${title}`, buttonText: {displayText: '⏱️ *MAS RESULTADOS*'}, type: 1}]
 const buttonMessage = { image: {url: thumbnail}, caption: capt, footer: '*ᴇɴᴠɪᴀɴᴅᴏ ᴀᴜᴅɪᴏ, ᴀɢᴜᴀʀᴅᴇ ᴜɴ ᴍᴏᴍᴇɴᴛᴏ...*', buttons: buttons, headerType: 4 }
 let msg = await conn.sendMessage(m.chat, buttonMessage, { quoted: m })
 conn.sendMessage(m.chat, { audio: { url: aud }, mimetype: 'audio/mp4', fileName: `${title}.mp3`}, {quoted: msg})
