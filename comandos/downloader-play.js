@@ -14,22 +14,22 @@ const buttons = [
 { buttonId: `#playlist ${text}`, buttonText: { displayText: '📋 𝗠𝗔𝗦 𝗥𝗘𝗦𝗨𝗟𝗧𝗔𝗗𝗢𝗦  📋' }, type: 1 }, ]    
 let texto1 = `*◉—⌈🔊 𝐘𝐎𝐔𝐓𝐔𝐁𝐄 𝐏𝐋𝐀𝐘 🔊⌋—◉*\n
 ╔═══════❰  *🔰*  ❱══════⬣
-║ 𝑻𝑰𝑻𝑼𝑳𝑶 | 𝑻𝑰𝑻𝑳𝑬
+║ *TITULO | TITLE*
 ║ ${title}
 ║┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
-║ 𝑫𝑬𝑺𝑪𝑹𝑰𝑻𝑪𝑰𝑶𝑵 | 𝑫𝑬𝑺𝑪𝑹𝑰𝑷𝑻𝑰𝑶𝑵
+║ *DESCRIPCIÓN  | DESCRIPTION*
 ║ ${description}
 ║┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
-║ 𝑷𝑼𝑩𝑳𝑰𝑪𝑨𝑫𝑶 | 𝑷𝑼𝑩𝑳𝑰𝑺𝑯𝑬
+║ *PUBLICADO | PUBLISHE*
 ║ ${publishedTime}
 ║┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
-║ 𝑫𝑼𝑹𝑨𝑪𝑰𝑶𝑵 | 𝑫𝑼𝑹𝑨𝑻𝑰𝑶𝑵
+║ *DURACION | DURATION*
 ║ ${durationH}
 ║┈┈┈┈┈┈┈┈┈┈┈┈┈┈
-║ 𝑽𝑰𝑺𝑻𝑨𝑺 | 𝑽𝑰𝑬𝑾𝑺
+║ *VISTAS | VIEWS*
 ║ ${viewH}
 ║┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
-║ 𝑼𝑹𝑳
+║ *URL*
 ║ ${urll}
 ╚═══════❰ *${vs}* ❱══════⬣`.trim()
 let buttonMessage = { "document": { url: "https://wa.me/593959425715" }, "fileName": '➢ 🗂️ ʀᴇᴘʀᴏᴅᴜᴄᴛᴏʀ ᴅᴇ ʏᴏᴜᴛᴜʙᴇ', "mimetype": 'application/vnd.ms-excel', "caption": texto1, "fileLength": '99999999999999', "mentions": [m.sender], "footer": wm, "buttons": buttons, "headerType": 4, contextInfo: { "mentionedJid": [m.sender], "externalAdReply": { "showAdAttribution": true, "title": `${title}`, "mediaType": 2, "previewType": "VIDEO", "thumbnail": await (await fetch(thumbnail)).buffer(), "mediaUrl": `${urll}`, "sourceUrl": `https://github.com/DIEGO-OFC/DORRAT-BOT-MD` }}} 
