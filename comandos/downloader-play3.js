@@ -6,14 +6,26 @@ if (!vid) throw '*[❗𝐈𝐍𝐅𝐎❗] 𝙻𝙾 𝚂𝙸𝙴𝙽𝚃𝙾, �
 try {
 let { title, description, thumbnail, videoId, durationH, viewH, publishedTime } = vid
 const url = 'https://www.youtube.com/watch?v=' + videoId
-conn.sendHydrated(m.chat, `
-*◉— 𝐏𝐋𝐀𝐘 𝐃𝐎𝐂𝐔𝐌𝐄𝐍𝐓 —◉*
-
-📌 *𝚃𝙸𝚃𝚄𝙻𝙾:* ${title}
-📇 *𝙳𝙴𝚂𝙲𝚁𝙸𝙿𝙲𝙸𝙾𝙽:* ${description}
-📆 *𝙿𝚄𝙱𝙻𝙸𝙲𝙰𝙳𝙾:* ${publishedTime}
-⌚ *𝙳𝚄𝚁𝙰𝙲𝙸𝙾𝙽:* ${durationH}
-👀 *𝚅𝙸𝚂𝚃𝙰𝚂:* ${viewH}
+conn.sendHydrated(m.chat, `\n*◉— 𝐏𝐋𝐀𝐘 𝐃𝐎𝐂𝐔𝐌𝐄𝐍𝐓 —◉*
+╔═══════❰  *🔰*  ❱══════⬣
+║ *TITULO | TITLE*
+║ ${title}
+║┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
+║ *DESCRIPCIÓN  | DESCRIPTION*
+║ ${description}
+║┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
+║ *PUBLICADO | PUBLISHE*
+║ ${publishedTime}
+║┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
+║ *DURACION | DURATION*
+║ ${durationH}
+║┈┈┈┈┈┈┈┈┈┈┈┈┈┈
+║ *VISTAS | VIEWS*
+║ ${viewH}
+║┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
+║ *URL*
+║ ${urll}
+╚═══════❰ *${vs}* ❱══════⬣
 `.trim(), author, thumbnail, `${url}`, '𝚄𝚁𝙻', null, null, [
 ['𝐀𝐔𝐃𝐈𝐎', `${usedPrefix}yta.2 ${url}`],
 ['𝐕𝐈𝐃𝐄𝐎', `${usedPrefix}ytv.2 ${url}`]
