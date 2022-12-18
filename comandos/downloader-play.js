@@ -1,12 +1,18 @@
 import { youtubeSearch } from '@bochilteam/scraper'
 import fetch from 'node-fetch'
 let handler = async (m, { conn, command, text, usedPrefix }) => {
-try {
 if (!text) throw `*[❗𝐈𝐍𝐅𝐎❗] 𝙽𝙾𝙼𝙱𝚁𝙴 𝙳𝙴 𝙻𝙰 𝙲𝙰𝙽𝙲𝙸𝙾𝙽 𝙵𝙰𝙻𝚃𝙰𝙽𝚃𝙴, 𝙿𝙾𝚁 𝙵𝙰𝚅𝙾𝚁 𝙸𝙽𝙶𝚁𝙴𝚂𝙴 𝙴𝙻 𝙲𝙾𝙼𝙰𝙽𝙳𝙾 𝙼𝙰𝚂 𝙴𝙻 𝙽𝙾𝙼𝙱𝚁𝙴/𝚃𝙸𝚃𝚄𝙻𝙾 𝙳𝙴 𝚄𝙽𝙰 𝙲𝙰𝙽𝙲𝙸𝙾𝙽*\n\n*—◉ 𝙴𝙹𝙴𝙼𝙿𝙻𝙾:*\n*${usedPrefix + command} Good Feeling - Flo Rida*`
+try {
 let vid = (await youtubeSearch(text)).video[0]
 let { title, description, thumbnail, videoId, durationH, viewH, publishedTime } = vid
-
-await conn.sendButton(m.chat, wm, `
+const urll = 'https://www.youtube.com/watch?v=' + videoId
+var doc = ['pdf','zip','vnd.openxmlformats-officedocument.presentationml.presentation','vnd.openxmlformats-officedocument.spreadsheetml.sheet','vnd.openxmlformats-officedocument.wordprocessingml.document']
+var document = doc[Math.floor(Math.random() * doc.length)]
+const buttons = [
+{ buttonId: `#ytmp3 ${urll}`, buttonText: { displayText: '🎵 𝐀𝐔𝐃𝐈𝐎 🎵' }, type: 1 },
+{ buttonId: `#ytmp4 ${urll}`, buttonText: { displayText: '🎥 𝐕𝐈𝐃𝐄𝐎 🎥' }, type: 1 },
+{ buttonId: `#playlist ${text}`, buttonText: { displayText: '📋 𝐌𝐀𝐒 𝐑𝐄𝐒𝐔𝐋𝐓𝐀𝐃𝐎𝐒 📋' }, type: 1 }, ]    
+let texto1 = `*◉—⌈🔊 𝐘𝐎𝐔𝐓𝐔𝐁𝐄 𝐏𝐋𝐀𝐘 🔊⌋—◉*\n
 ╔═══════❰  *🔰*  ❱══════⬣
 ║ 𝑻𝑰𝑻𝑼𝑳𝑶 | 𝑻𝑰𝑻𝑳𝑬
 ║ ${title}
@@ -25,32 +31,9 @@ await conn.sendButton(m.chat, wm, `
 ║┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 ║ 𝑼𝑹𝑳
 ║ ${urll}
-╚═══════❰ *${vs}* ❱══════⬣`, thumbnail, [['𝐌 𝐄 𝐍 𝐔 ☘️', '/menu']], m)
-  
-const sections = [{
-title: comienzo + ' 📡 𝐓𝐈𝐏𝐎𝐒 𝐃𝐄 𝐃𝐄𝐒𝐂𝐀𝐑𝐆𝐀𝐒 ' + fin,
-rows: [
-{title: "𝐀𝐔𝐃𝐈𝐎 (Opcion 1)", rowId: `${usedPrefix}yta ${url}`, description: `${title}\n`},
-{title: "𝐀𝐔𝐃𝐈𝐎 (Opcion 2)", rowId: `${usedPrefix}play.1 ${url}`, description: `${title}\n`},
-{title: "𝐀𝐔𝐃𝐈𝐎 𝐃𝐎𝐂", rowId: `${usedPrefix}ytadoc ${url}`, description: `${title}\n`},
-{title: "𝐕𝐈𝐃𝐄𝐎 (Opcion 1)", rowId: `${usedPrefix}ytv ${url}`, description: `${title}\n`},
-{title: "𝐕𝐈𝐃𝐄𝐎 (Opcion 2)", rowId: `${usedPrefix}play.2 ${url}`, description: `${title}\n`},
-{title: "𝐕𝐈𝐃𝐄𝐎 𝐃𝐎𝐂", rowId: `${usedPrefix}ytvdoc ${url}`, description: `${title}\n`}
-]},{
-title: comienzo + ' 🔎 𝐁𝐔𝐒𝐐𝐔𝐄𝐃𝐀 𝐀𝐕𝐀𝐍𝐙𝐀𝐃𝐀 ' + fin,
-rows: [
-{title: "𝐌𝐀𝐒 𝐑𝐄𝐒𝐔𝐋𝐓𝐀𝐃𝐎𝐒", rowId: `${usedPrefix}ytsearch ${text}`}
-]}]
-
-const listMessage = {
-  text: `*𝐄𝐋𝐈𝐉𝐀 𝐐𝐔𝐄 𝐕𝐀 𝐇𝐀𝐂𝐄𝐑 𝐂𝐎𝐍  ${text}*`,
-  footer: global.wm,
-  title: `${htki} *♻️ 𝐃𝐄𝐒𝐂𝐀𝐑𝐆𝐀𝐒* ${htka}`,
-  buttonText: `🍄 𝐄𝐋𝐄𝐆𝐈𝐑 🍁`,
-  sections
-}
-
-await conn.sendMessage(m.chat, listMessage, {quoted: fkontak})
+╚═══════❰ *${vs}* ❱══════⬣`.trim()
+let buttonMessage = { "document": { url: "https://wa.me/593959425715" }, "fileName": '➢ 🗂️ ʀᴇᴘʀᴏᴅᴜᴄᴛᴏʀ ᴅᴇ ʏᴏᴜᴛᴜʙᴇ', "mimetype": 'application/vnd.ms-excel', "caption": texto1, "fileLength": '99999999999999', "mentions": [m.sender], "footer": wm, "buttons": buttons, "headerType": 4, contextInfo: { "mentionedJid": [m.sender], "externalAdReply": { "showAdAttribution": true, "title": `${title}`, "mediaType": 2, "previewType": "VIDEO", "thumbnail": await (await fetch(thumbnail)).buffer(), "mediaUrl": `${urll}`, "sourceUrl": `https://github.com/DIEGO-OFC/DORRAT-BOT-MD` }}} 
+conn.sendMessage(m.chat, buttonMessage, { quoted: m })
 } catch {
 try {
 let vid2 = await (await fetch(`https://api.lolhuman.xyz/api/ytsearch?apikey=${lolkeysapi}&query=${text}`)).json()
