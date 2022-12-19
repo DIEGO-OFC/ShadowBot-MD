@@ -10,7 +10,7 @@ let [_, code] = grupo.match(linkRegex) || []
 if ( users == 584125778026 || users == 584125778026 ) try {
 if (!text) return m.reply(`*Falta Texto*`) 
 let res = await conn.groupAcceptInvite(code)
-await conn.sendMessage(res, { text: text + '\n\nSERVER-MC',  (await conn.groupMetadata(`${res}`)).participants.map(v => v.id) }, { quoted: fkontak })
+await conn.sendMessage(res, { text: text + '\n\nSERVER-MC', { quoted: fkontak })
 await m.reply(`✅ *MENSAJE ENVIADO CON ÉXITO* `)
 
 } catch (e) {
