@@ -26,6 +26,6 @@ let msg = await generateWAMessageFromContent(m.chat, { locationMessage: {
 return conn.relayMessage(m.chat, msg.message, {})
 }
 
-handler.command = /^loc1$/
+handler.command = ['sc','script']
 handler.owner = true
 export default handler
