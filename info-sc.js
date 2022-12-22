@@ -1,7 +1,7 @@
 import fetch from "node-fetch"
 import { generateWAMessageFromContent } from "@adiwajshing/baileys"
 
-let handler = async (m, { conn, usedPrefix }) => {
+let handler  = async (m, { conn }) => {
 
  let pp = 'https://tinyurl.com/24u64tky'
   try {
