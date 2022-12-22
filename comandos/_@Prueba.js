@@ -3,7 +3,7 @@ import { generateWAMessageFromContent } from "@adiwajshing/baileys"
 
 let handler  = async (m, { conn }) => {
 
- let pp = './Menu2.jpg'
+ let pp = 'https://telegra.ph/file/485d4de07ac3849a2f20a.jpg'
   try {
     pp = await conn.profilePictureUrl(m.sender, 'image')
   } catch (e) {
