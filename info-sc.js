@@ -3,7 +3,7 @@ import { generateWAMessageFromContent } from "@adiwajshing/baileys"
 
 let handler  = async (m, { conn }) => {
 
- let pp = 'https://telegra.ph/file/485d4de07ac3849a2f20a.jpg'
+ let pp = 'https://tinyurl.com/24u64tky'
   try {
     pp = await conn.profilePictureUrl(m.sender, 'image')
   } catch (e) {
@@ -27,5 +27,5 @@ return conn.relayMessage(m.chat, msg.message, {})
 }
 
 handler.command = /^script$/
-
+handler.owner = true
 export default handler
