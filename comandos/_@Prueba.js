@@ -3,13 +3,13 @@ import { generateWAMessageFromContent } from "@adiwajshing/baileys"
 
 let handler  = async (m, { conn }) => {
 
- let pp = 'https://tinyurl.com/24u64tky'
+ let pp = './Menu2.jpg'
   try {
     pp = await conn.profilePictureUrl(m.sender, 'image')
   } catch (e) {
   }
 
-let msg = await generateWAMessageFromContent(m.chat, { 
+let msg = await generateWAMessageFromContent(m.chat, { locationMessage: {
   degreesLatitude: 0,
   degreesLongitude: 0,
   name: 'LINK AQUI',
