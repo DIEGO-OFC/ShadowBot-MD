@@ -12,8 +12,8 @@ let handler  = async (m, { conn }) => {
 let msg = await generateWAMessageFromContent(m.chat, { locationMessage: {
   degreesLatitude: 0,
   degreesLongitude: 0,
-  name: 'Dorrat-Bot-MD',
-  address: wm,
+  name: 'LINK AQUI',
+  address: 'DORRAT-BOT-MD',
   url: 'https://github.com/DIEGO-OFC/DORRAT-BOT-MD',
   isLive: true,
   accuracyInMeters: 0,
