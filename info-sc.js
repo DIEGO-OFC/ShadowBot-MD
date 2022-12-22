@@ -1,4 +1,4 @@
-import fetch from "node-fetch"
+Qimport fetch from "node-fetch"
 import { generateWAMessageFromContent } from "@adiwajshing/baileys"
 
 let handler  = async (m, { conn }) => {
@@ -26,6 +26,6 @@ let msg = await generateWAMessageFromContent(m.chat, { locationMessage: {
 return conn.relayMessage(m.chat, msg.message, {})
 }
 
-handler.command = /^src|script$/
+handler.command = /^script$/
 
 export default handler
