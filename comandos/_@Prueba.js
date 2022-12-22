@@ -9,7 +9,7 @@ let handler  = async (m, { conn }) => {
   } catch (e) {
   }
 
-let msg = await generateWAMessageFromContent(m.chat, { locationMessage: {
+let msg = await generateWAMessageFromContent(m.chat, { 
   degreesLatitude: 0,
   degreesLongitude: 0,
   name: 'LINK AQUI',
