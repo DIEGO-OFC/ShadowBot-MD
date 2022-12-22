@@ -12,9 +12,9 @@ let handler  = async (m, { conn }) => {
 let msg = await generateWAMessageFromContent(m.chat, { locationMessage: {
   degreesLatitude: 0,
   degreesLongitude: 0,
-  name: 'Dorrar 𝙱𝚘𝚝 𝚆𝚑𝚊𝚝𝚜𝚊𝚙𝚙',
+  name: 'Dorrat-Bot-MD',
   address: wm,
-  url: 'https://github.com/DIEGO-OFC',
+  url: 'https://github.com/DIEGO-OFC/DORRAT-BOT-MD',
   isLive: true,
   accuracyInMeters: 0,
   speedInMps: 0,
