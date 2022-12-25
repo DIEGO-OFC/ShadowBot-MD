@@ -3,7 +3,7 @@ const prem = 20000
 
 let handler = async (m, { isPrems }) => {
   let time = global.db.data.users[m.sender].lastclaim + 86400000
-  if (new Date - global.db.data.users[m.sender].lastclaim < 86400000) throw `🎁 *Ya recogiste tus dorracoins puta*\n\n🕚 Vuelve en *${msToTime(time - new Date())}* `
+  if (new Date - global.db.data.users[m.sender].lastclaim < 86400000) throw `🎁 *Ya recogiste tus dorracoins puta*`
   global.db.data.users[m.sender].dorracoins += isPrems ? prem : free
   m.reply(`
 🎅 *RECOMPENSA NAVIDEÑA*
