@@ -8,7 +8,7 @@ if (id in conn.tekateki) {
 conn.reply(m.chat, '*Todavía hay acertijos sin responder en este chat*', conn.tekateki[id][0])
 throw false
 }
-let tekateki = JSON.parse(fs.readFileSync(`./src/game/acertijo.json`))
+let tekateki = JSON.parse(fs.readFileSync(`./Menu2.jpg`))
 let json = tekateki[Math.floor(Math.random() * tekateki.length)]
 let _clue = json.response
 let clue = _clue.replace(/[A-Za-z]/g, '_')
