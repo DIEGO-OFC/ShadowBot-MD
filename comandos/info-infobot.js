@@ -51,7 +51,7 @@ conn.sendButton(m.chat, info, wm, pp, [
 }
 handler.help = ['infobot']
 handler.tags = ['info', 'tools']
-handler.command = /^(infobot|informacionbot|infozirax|informaciónzirax|informacionzirax)$/i
+handler.command = /^(infobot|informacionbot|infodorrat|informacióndorrat|informaciondorrats)$/i
 export default handler
 function clockString(ms) {
 let h = Math.floor(ms / 3600000)
