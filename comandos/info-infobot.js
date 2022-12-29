@@ -42,10 +42,10 @@ let info = `
 ╠
 ╠═〘 𝐃⃟𝕺𝐑⃯𝐑𝐇⃯𝚵𝐓᪣𝕭⃯𝚹⃯𝐓⃤ 〙 ═
 `.trim() 
-conn.sendHydrated(m.chat, info, wm, pp, 'https://github.com/DIEGO-OFC/DORRAT-BOT-MD', '𝘿𝙤𝙧𝙧𝙖𝙩𝘽𝙤𝙩-𝙈𝘿', null, null, [
+conn.sendButton(m.chat, info, wm, pp, [
 ['📦 𝙂𝙍𝙐𝙋𝙊𝙎', '#grupos'],
 ['🛡️ 𝙑𝙤𝙡𝙫𝙚𝙧 𝙖𝙡 𝙈𝙚𝙣𝙪́', '.menu']
-], m,)
+], m)
 
 //conn.reply(m.chat, info, m)
 }
