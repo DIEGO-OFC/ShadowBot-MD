@@ -99,8 +99,8 @@ global.mes = d.toLocaleDateString('es', { month: 'long' })
 global.año = d.toLocaleDateString('es', { year: 'numeric' })
 global.tiempo = d.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true })
 //------------- Sticker WM -----------
-global.packname = `*👑 ➢ Owner:\n📅 ➢ Día:\n🕒 ➢ Hora:\n🗓️ ➢ Fecha:\n☯️ ➢ By:*`
-global.author = `▸ 𝙳𝙸𝙴𝙶𝙾-𝙾𝙵𝙲\n▸ ${dia}\n▸ ${tiempo}\n▸ ${fecha}\n▸ 𝐃𝐎𝐑𝐑𝐀𝐓-𝐁𝐎𝐓-𝐌𝐃`
+global.packname = `👑 ➢ Owner:\n📅 ➢ Día:\n🕒 ➢ Hora:\n🗓️ ➢ Fecha:\n☯️ ➢ By:`
+global.author = `• 𝙳𝙸𝙴𝙶𝙾-𝙾𝙵𝙲\n• ${dia}\n• ${tiempo}\n• ${fecha}\n• 𝐃𝐎𝐑𝐑𝐀𝐓-𝐁𝐎𝐓-𝐌𝐃`
 //_______________
 global.wm = '*𝑫𝑶𝑹𝑹𝑨𝑻-𝑩𝑶𝑻 | 𝑫𝑰𝑬𝑮𝑶-𝑶𝑭𝑪*'
 global.igfg = '*𝑫𝑶𝑹𝑹𝑨𝑻-𝑩𝑶𝑻*'
