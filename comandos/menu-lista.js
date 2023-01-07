@@ -30,6 +30,7 @@ let { min, xp, max } = xpRange(level, global.multiplier)
 const sections = [{
 title: comienzo + ' ' + lenguajeGB['smsLista1']() + ' ' + fin,
 rows: [
+{title: "│🌐│MINECRAFT-SERVER", rowId:`${usedPrefix}mc-server`},  
 {title: lenguajeGB['smsLista2'](), rowId:`${usedPrefix}creator`},  
 {title: lenguajeGB['smsLista3'](), rowId:`${usedPrefix}infobot`},
 {title: lenguajeGB['smsDonar'](), rowId:`${usedPrefix}donar`},
