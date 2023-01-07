@@ -83,6 +83,14 @@ let menuB = `
 *└────ׂ─ׂ─ׂ─ׂ───*
 
 ┏━━━━━━━━━━━━━┓
+┃ *<MINECRAFT SERVER/>*
+║≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋
+┣ • *IP: eu1.soluruse.com
+┣ • *PUERTO: 10000*
+┣ • *BEDROCK Y JAVA*
+┗━━━━━━━━━━━━━┛
+
+┏━━━━━━━━━━━━━┓
 ┃ *<UNE UN BOT A TU GRUPO/>*
 ║≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋
 ┣ ➱_${usedPrefix}join *link del grupo*_ 
