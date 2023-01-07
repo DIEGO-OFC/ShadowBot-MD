@@ -1,4 +1,4 @@
-//creado por https://github.com/DIEGO-OFC/DORRAT-BOT-MD
+//creado por https://github.com/DIEGO-OFC
 
 
 import { randomBytes } from 'crypto'
