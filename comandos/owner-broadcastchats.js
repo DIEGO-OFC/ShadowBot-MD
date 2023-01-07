@@ -1,3 +1,6 @@
+//creado por https://github.com/DIEGO-OFC/DORRAT-BOT-MD
+
+
 import { randomBytes } from 'crypto'
 
 let handler = async (m, { conn, text }) => {
