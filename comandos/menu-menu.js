@@ -85,8 +85,8 @@ let menuB = `
 ┏━━━━━━━━━━━━━┓
 ┃ *<MINECRAFT SERVER/>*
 ║≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋
-┣ • *IP: eu1.soluruse.com*
-┣ • *PUERTO: 10000*
+┣ • *IP: nodo5.boxmineworld.com*
+┣ • *PUERTO: 4003*
 ┣ • *BEDROCK Y JAVA*
 ┗━━━━━━━━━━━━━┛
 
