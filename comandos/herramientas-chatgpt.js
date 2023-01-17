@@ -1,3 +1,4 @@
+handler.dorracoins = 1
 import fetch from 'node-fetch'
 let handler = async (m, { text, usedPrefix, command }) => {
 if (!text) throw `*[❕] INGRESE UN TEXTO/ORDEN PARA EJECUTAR LA FUNCIÓN CHATGPT*\n\n*❍ EJEMPLO DE PETICIONES Y ORDENES*\n*❍ ${usedPrefix + command} Reflexion sobre la serie Merlina 2022 de netflix*\n*❍ ${usedPrefix + command} Codigo en JS para un juego de cartas*`
@@ -9,5 +10,4 @@ m.reply(`${hasil.result}`.trim())
 throw `*[❕] ERROR, INTENTA DE NUEVO*`
 }}
 handler.command = ['openai', 'chatgpt', 'ia', 'robot']
-handler.dorracoins = 1
 export default handler
