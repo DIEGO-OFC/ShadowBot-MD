@@ -5,7 +5,7 @@ if (!text) throw `*[❕] INGRESE UN TEXTO/ORDEN PARA EJECUTAR LA FUNCIÓN CHATGP
 try {
 let tiores = await fetch(`https://api.lolhuman.xyz/api/openai?apikey=${lolkeysapi}&text=${text}&user=user-unique-id`)
 let hasil = await tiores.json()
-m.reply(`${hasil.result}`.trim())
+mconn.fakeReply(`${hasil.result}`,'0@s.whatsapp.net', '*🔥 THE DORRAT - BOT 🔥*', 'status@broadcast'.trim())
 } catch {
 throw `*[❕] ERROR, INTENTA DE NUEVO*`
 }}
