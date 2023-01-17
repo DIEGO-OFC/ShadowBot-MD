@@ -10,4 +10,5 @@ m.reply(`${hasil.result}`.trim())
 throw `*[❕] ERROR, INTENTA DE NUEVO*`
 }}
 handler.command = ['openai', 'chatgpt', 'ia', 'robot']
+handler.dorracoins = 1
 export default handler
