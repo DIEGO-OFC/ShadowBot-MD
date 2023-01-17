@@ -6,7 +6,7 @@ try {
 m.reply(`*⏰ Cargando, espere un momento*`)
 let tiores = await fetch(`https://api.lolhuman.xyz/api/openai?apikey=${lolkeysapi}&text=${text}&user=user-unique-id`)
 let hasil = await tiores.json()
-m.reply(`${hasil.result}`).trim())
+m.reply(`${hasil.result}`.trim())
 } catch {
 throw `*[❕] ERROR, INTENTA DE NUEVO*`
 }}
