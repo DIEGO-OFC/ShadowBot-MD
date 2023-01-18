@@ -7,8 +7,7 @@ let handler = async (m, { conn, command, text, usedPrefix }) => {
   let { title, description, thumbnail, videoId, durationH, viewH, publishedTime } = vid
   const url = 'https://www.youtube.com/watch?v=' + videoId
 
-  let captvid = `╭──── 〔 Y O U T U B E 〕 ─⬣
-╔═══════❰  *🔰*  ❱══════⬣
+  let captvid = `╔═══════❰  *🔰*  ❱══════⬣
 ║ *TITULO | TITLE*
 ║ ${title}
 ║┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
@@ -28,8 +27,7 @@ let handler = async (m, { conn, command, text, usedPrefix }) => {
 ║ ${vid.url}
 ╚═══════❰ *${vs}* ❱══════⬣
 ╰────────⬣`
-  conn.sendButton(m.chat, `╭──── 〔 Y O U T U B E 〕 ─⬣
-╔═══════❰  *🔰*  ❱══════⬣
+  conn.sendButton(m.chat, `╔═══════❰  *🔰*  ❱══════⬣
 ║ *TITULO | TITLE*
 ║ ${title}
 ║┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
@@ -47,7 +45,7 @@ let handler = async (m, { conn, command, text, usedPrefix }) => {
 ║┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 ║ *URL*
 ║ ${vid.url}
-╚═══════❰ *${vs}* ❱══════⬣`, author.trim(), await( await conn.getFile(thumbnail)).data, ['📽VIDEO', `${usedPrefix}getvid ${url} 360`], false, { quoted: m, 'document': { 'url':'https://wa.me/12522518391' },
+╚═══════❰ *${vs}* ❱══════⬣`, author.trim(), await( await conn.getFile(thumbnail)).data, ['📽VIDEO', `${usedPrefix}getvid ${url} 360`], false, { quoted: m, 'document': { 'https://github.com/DIEGO-OFC/DORRAT-BOT-MD' },
 'mimetype': global.dpdf,
 'fileName': `𝕐𝕠𝕦𝕋𝕦𝕓𝕖`,
 'fileLength': 666666666666666,
@@ -85,7 +83,7 @@ thumbnail: await(await conn.getFile(thumbnail)).data
 handler.help = ['play'].map(v => v + ' <pencarian>')
 handler.tags = ['downloader']
 handler.command = /^play$/i
-handler.dorracoins = 1
+handler.dorracoins = 5
 handler.exp = 0
 
 
