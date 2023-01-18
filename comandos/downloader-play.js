@@ -6,8 +6,7 @@ let handler = async (m, { conn, command, text, usedPrefix }) => {
   let { title, description, thumbnail, videoId, durationH, viewH, publishedTime } = vid
   const url = 'https://www.youtube.com/watch?v=' + videoId
 
-  let captvid = `
-╔═══════❰  *🔰*  ❱══════⬣
+  let captvid = `╔═══════❰  *🔰*  ❱══════⬣
 ║ *TITULO | TITLE*
 ║ ${title}
 ║┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
@@ -27,8 +26,7 @@ let handler = async (m, { conn, command, text, usedPrefix }) => {
 ║ ${vid.url}
 ╚═══════❰ *${vs}* ❱══════⬣
 ╰────────⬣`
-  conn.sendButton(m.chat, `
-╔═══════❰  *🔰*  ❱══════⬣
+  conn.sendButton(m.chat, `╔═══════❰  *🔰*  ❱══════⬣
 ║ *TITULO | TITLE*
 ║ ${title}
 ║┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
@@ -55,7 +53,7 @@ mediaType:  2,
 mediaUrl: `${url}`,
 title: `⏰ Enviando audio`,
 body: wm,
-sourceUrl: 'http://wa.me/12522518391', thumbnail: await ( await conn.getFile(thumbnail)).data
+sourceUrl: 'https://github.com/DIEGO-OFC/DORRAT-BOT-MD', thumbnail: await ( await conn.getFile(thumbnail)).data
   }
  } 
 })
