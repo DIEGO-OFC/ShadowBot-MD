@@ -3,11 +3,11 @@ import fs from 'fs'
 import { createHash } from 'crypto'
 import PhoneNumber from 'awesome-phonenumber'
 import fetch from 'node-fetch'
+let handler = async (m, { conn, usedPrefix, participants }) => {
 let { dorracoins, joincount } = global.db.data.users[m.sender]
 let { exp, limit, level, role } = global.db.data.users[m.sender]
 let { min, xp, max } = xpRange(level, global.multiplier)
 let rtotalreg = Object.values(global.db.data.users).filter(user => user.registered == true).length 
-let handler = async (m, { conn, usedPrefix, participants }) => {
 let pp = './Menu2.jpg'
 let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
 if (!(who in global.db.data.users)) throw `El usuario que está mencionando no está registrado en mi base de datos`
