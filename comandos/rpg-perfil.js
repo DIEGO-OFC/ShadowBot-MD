@@ -24,10 +24,12 @@ let str = `
 *⚔️ NOMBRE:* ${username} ${registered ? '(' + name + ') ': ''}
 *#️⃣ NUMERO:* ${PhoneNumber('+' + who.replace('@s.whatsapp.net', '')).getNumber('international')}
 *🔗 LINK:* wa.me/${who.split`@`[0]}${registered ? '\n*𝙴𝙳𝙰𝙳:* ' + age + ' años' : ''}
+*🎖️ NIVEL:* ${level}
+*⚓ RANGO:* ${role}
 *🔰 DORRATCOINS*: ${dorracoins}
 *🎉 EXPERIENCIA/XP:* ${xp}
 *☯️ TOKENS:* ${joincount}
-*💎 DIAMANTES:* ${limit} 𝚄𝚂𝙾𝚂
+*💎 DIAMANTES:* ${limit}
 *📦 REGISTRADO:* ${registered ? 'Si': 'No'}
 *💳 PREMIUM:* ${prem ? 'Si' : 'No'}
 *❕ NUMERO DE SERIE:* 
