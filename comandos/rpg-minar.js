@@ -1,9 +1,9 @@
 let handler = async (m, { conn, isPrems}) => {
 let hasil = Math.floor(Math.random() * 1000)
 let time = global.db.data.users[m.sender].lastmiming + 600000
-if (new Date - global.db.data.users[m.sender].lastmiming < 600000) throw `*[ ⏲️ ] 𝙴𝚜𝚙𝚎𝚛𝚊 ${msToTime(time - new Date())} 𝚙𝚊𝚛𝚊 𝚟𝚘𝚕𝚟𝚎𝚛 𝚊 𝚖𝚒𝚗𝚊𝚛*`  
+if (new Date - global.db.data.users[m.sender].lastmiming < 600000) throw `*⏰ Espera ${msToTime(time - new Date())} Para volver a minar*`  
 let info = `
-*[ 🎉 ] Genial minaste ${hasil} XP*`.trim()
+*[ ⛏️ ] Genial minaste ${hasil} XP*`.trim()
 global.db.data.users[m.sender].lastmiming = new Date * 1
 
 conn.fakeReply(m.chat, info, '0@s.whatsapp.net', '*🔥 THE DORRAT - BOT 🔥*', 'status@broadcast')
