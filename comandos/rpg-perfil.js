@@ -21,14 +21,16 @@ let username = conn.getName(who)
 let prem = global.prems.includes(who.split`@`[0])
 let sn = createHash('md5').update(who).digest('hex')
 let str = `
-*NOMBRE:* ${username} ${registered ? '(' + name + ') ': ''}
-*NUMERO:* ${PhoneNumber('+' + who.replace('@s.whatsapp.net', '')).getNumber('international')}
-*LINK:* wa.me/${who.split`@`[0]}${registered ? '\n*𝙴𝙳𝙰𝙳:* ' + age + ' años' : ''}
-*DORRACOINS*: ${dorracoins}
-*LIMITE:* ${limit} 𝚄𝚂𝙾𝚂
-*REGISTRADO:* ${registered ? 'Si': 'No'}
-*PREMIUM:* ${prem ? 'Si' : 'No'}
-*NUMERO DE SERIE:* 
+*⚔️ NOMBRE:* ${username} ${registered ? '(' + name + ') ': ''}
+*#️⃣ NUMERO:* ${PhoneNumber('+' + who.replace('@s.whatsapp.net', '')).getNumber('international')}
+*🔗 LINK:* wa.me/${who.split`@`[0]}${registered ? '\n*𝙴𝙳𝙰𝙳:* ' + age + ' años' : ''}
+*🔰 DORRATCOINS*: ${dorracoins}
+*🎉 EXPERIENCIA/XP:* ${xp}
+*☯️ TOKENS:* ${joincount}
+*💎 DIAMANTES:* ${limit} 𝚄𝚂𝙾𝚂
+*📦 REGISTRADO:* ${registered ? 'Si': 'No'}
+*💳 PREMIUM:* ${prem ? 'Si' : 'No'}
+*❕ NUMERO DE SERIE:* 
 ${sn}`
 conn.sendButton(m.chat, str, author, pp, [['🔰 MENU PRINCIPAL', '/menu']], m)
 }}
