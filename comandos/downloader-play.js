@@ -82,6 +82,7 @@ thumbnail: await(await conn.getFile(thumbnail)).data
 handler.help = ['play'].map(v => v + ' <pencarian>')
 handler.tags = ['downloader']
 handler.command = /^play$/i
+handler.dorracoind = 5
 
 handler.exp = 0
 handler.limit = true
