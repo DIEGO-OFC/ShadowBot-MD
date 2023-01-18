@@ -6,7 +6,8 @@ let handler = async (m, { conn, command, text, usedPrefix }) => {
   let { title, description, thumbnail, videoId, durationH, viewH, publishedTime } = vid
   const url = 'https://www.youtube.com/watch?v=' + videoId
 
-  let captvid = `╔═══════❰  *🔰*  ❱══════⬣
+  let captvid = `
+╔═══════❰  *🔰*  ❱══════⬣
 ║ *TITULO | TITLE*
 ║ ${title}
 ║┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
@@ -26,7 +27,8 @@ let handler = async (m, { conn, command, text, usedPrefix }) => {
 ║ ${vid.url}
 ╚═══════❰ *${vs}* ❱══════⬣
 ╰────────⬣`
-  conn.sendButton(m.chat, `╔═══════❰  *🔰*  ❱══════⬣
+  conn.sendButton(m.chat, `
+╔═══════❰  *🔰*  ❱══════⬣
 ║ *TITULO | TITLE*
 ║ ${title}
 ║┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
