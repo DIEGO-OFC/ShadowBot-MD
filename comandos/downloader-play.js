@@ -46,7 +46,7 @@ let handler = async (m, { conn, command, text, usedPrefix }) => {
 ║┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 ║ *URL*
 ║ ${vid.url}
-╚═══════❰ *${vs}* ❱══════⬣`, author.trim(), await( await conn.getFile(thumbnail)).data, ['📽VIDEO', `${usedPrefix}getvid ${url} 360`], false, { quoted: m, 'document': { 'https://github.com/DIEGO-OFC/DORRAT-BOT-MD' },
+╚═══════❰ *${vs}* ❱══════⬣`, author.trim(), await( await conn.getFile(thumbnail)).data, ['📽VIDEO', `${usedPrefix}getvid ${url} 360`], false, { quoted: m, 'document': { `https://github.com/DIEGO-OFC/DORRAT-BOT-MD` },
 'mimetype': global.dpdf,
 'fileName': `𝕐𝕠𝕦𝕋𝕦𝕓𝕖`,
 'fileLength': 666666666666666,
