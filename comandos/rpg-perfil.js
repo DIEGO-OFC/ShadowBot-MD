@@ -1,5 +1,4 @@
 import { xpRange } from '../lib/levelling.js'
-const { levelling } = '../lib/levelling.js'
 import { createHash } from 'crypto'
 import PhoneNumber from 'awesome-phonenumber'
 import fetch from 'node-fetch'
