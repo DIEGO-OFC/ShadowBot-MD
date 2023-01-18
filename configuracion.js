@@ -194,6 +194,7 @@ string = string.toLowerCase()
     let emot = {
       level: '🧬 Nivel',
       limit: '💎 Diamante',
+      bitcoins: '🏵️ BitCoins',
       dorracoins: '🪙 DorratCoins',
       exp: '⚡ Experiencia',
       bank: '🏦 Banco',
@@ -287,6 +288,7 @@ string = string.toLowerCase()
     let emott = {
       level: '🧬',
       limit: '💎',
+      bitcoins: '🏵️',
       dorracoins: '🪙 DorratCoins',
       exp: '⚡',
       bank: '🏦',
@@ -380,6 +382,7 @@ string = string.toLowerCase()
     let emottt = {
       exp: '⚡ Experiencia',
       limit: '💎 Diamante',
+      bitcoins: '🏵️ BitCoins',
       dorracoins: '🪙 DorratCoins',
       diamond: '💎 Diamante',
       joincount: '☯️ Token',
@@ -458,6 +461,7 @@ global.rpgshopp = { //Tienda
       exp: '⚡',
       limit: '💎',
       diamond: '💎+',
+      bitcoins: '🏵️',
       dorracoins: '🪙',
       joincount: '☯️',
       emerald: '💚',
