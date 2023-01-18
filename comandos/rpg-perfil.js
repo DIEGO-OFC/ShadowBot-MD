@@ -30,7 +30,7 @@ let str = `
 *PREMIUM:* ${prem ? 'Si' : 'No'}
 *NUMERO DE SERIE:* 
 ${sn}`
-con.reply(m.chat, str, author, pp, m)
+conn.reply(m.chat, str, author, pp, m)
 //conn.sendButton(m.chat, str, author, pp, [['𝙼𝙴𝙽𝚄 𝙿𝚁𝙸𝙽𝙲𝙸𝙿𝙰𝙻', '/menu']], m)
 }}
 handler.help = ['profile [@user]']
