@@ -35,6 +35,7 @@ export async function handler(chatUpdate) {
             return
         m.exp = 0
         m.dorracoins = false
+        m.bitcoins = false
         m.limit = false
         try {
             // TODO: use loop to insert data instead of this
@@ -46,6 +47,7 @@ export async function handler(chatUpdate) {
                 if (!isNumber(user.exp)) user.exp = 0
 		if (!('premium' in user)) user.premium = false
 		if (!isNumber(user.joincount)) user.joincount = 2
+                if (!isNumber(user.bitcoins)) user.bitcoins = 10
                 if (!isNumber(user.dorracoins)) user.dorracoins = 20    	    
                 if (!isNumber(user.limit)) user.limit = 20    	       
                 if (!('registered' in user)) user.registered = false
@@ -341,6 +343,7 @@ export async function handler(chatUpdate) {
               if (!isNumber(user.leleg)) user.leleg = 0
               if (!isNumber(user.level)) user.level = 0
               if (!isNumber(user.dorracoins)) user.dorracoins = 20
+              if (!isNumber(user.bitcoins)) user.bitcoins = 10
               if (!isNumber(user.limit)) user.limit = 20
               if (!isNumber(user.limitjoinfree)) user.limitjoinfree = 1
               if (!isNumber(user.dorracoinsjoinfree)) user.dorracoinsjoinfree = 1
@@ -749,6 +752,7 @@ export async function handler(chatUpdate) {
                     lelebakar: 0,
                     leleg: 0,
                     level: 0,
+                    bitcoins: 10,
                     dorracoins: 20,
                     limit: 20,
                     limitjoinfree: 1,
