@@ -12,9 +12,9 @@ global.owner = [
   ['573184314110', '🔰 𝐃𝐎𝐑𝐑𝐀𝐓∆𝐁𝐎𝐓 - 𝙲𝙾𝙻𝙻𝙰𝙱𝙾𝚁𝙰𝚃𝙾𝚁 3 🔰', true],
   ['50246028932', '🔰  𝐃𝐎𝐑𝐑𝐀𝐓∆𝐁𝐎𝐓 - 𝙲𝙾𝙻𝙻𝙰𝙱𝙾𝚁𝙰𝚃𝙾𝚁 4 🔰', true],
   ['51936767238'],
-  //['593968585383'], DEJEN ESTO ASÍ POR AHORA POR FAVOR
   ['51957041866'],
-  ['584125778026']
+  ['584125778026'],
+  ['595986674310']
 
 ] 
 global.suittag = ['593959425714'] 
@@ -74,14 +74,8 @@ global.APIKeys = { // APIKey Here
   'https://violetics.pw': 'beta'
 }
 
-// _______________ IDIOMA : LENGUAJE _______________
-//Agrega el Idioma que quieres que tenga DorratBot-MD
-//Add the language you want DorratBot-MD to have
-//  es = Español       //  id = Bahasa Indonesia
-//  en = English       //  pt = Português 
-//  ar = عرب  
 
-global.lenguajeGB = es //Idioma de †𝐃⃟𝕺𝐑⃯𝐑𝐇⃯𝚵𝐓᪣𝕭⃯𝚹⃯𝐓⃤, Ejemplo: es | en | pt ....
+global.lenguajeGB = es
 
 /* ______________________________________________ */
 global.creadorname = '𝐃𝐈𝐄𝐆𝐎-𝐎𝐅𝐂'
