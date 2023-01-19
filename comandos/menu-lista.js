@@ -4,6 +4,7 @@ const { levelling } = '../lib/levelling.js'
 import moment from 'moment-timezone'
 let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isROwner }) => {
 let locale = 'es'
+let { dorracoins } = global.db.data.users[m.sender]
 let fkontak = { "key": { "participants":"0@s.whatsapp.net", "remoteJid": "status@broadcast", "fromMe": false, "id": "Halo" }, "message": { "contactMessage": { "vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD` }}, "participant": "0@s.whatsapp.net" }
 let taguser = await conn.getName(m.sender)
 let d = new Date(new Date + 3600000)
@@ -93,6 +94,9 @@ text: `
 *┃ 🏵️ ▢ ${ucapan()}*
 *┃┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈*
 *┃ 🔰 ▢ ${taguser}*
+*┃┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈*
+*┃ 🪙 ▢ DORRAT-COINS*
+*┃ 🪙 ▢ ${dorracoins}*
 *┃┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈*
 *┃ ⏱️ ▢ Hora:*
 *┃ ⌚ ▢ ${time}*   
