@@ -2,6 +2,7 @@ import { youtubeSearch, youtubedl, youtubedlv2, youtubedlv3 } from '@bochilteam/
 let handler = async (m, { conn, command, text, usedPrefix }) => {
   if (!text) throw `*[❕𝐈𝐍𝐅𝐎❕] NOMBRE DE LA CANCION FALTANTE, POR FAVOR INGRESE EL COMANDO MAS EL NOMBRE/TITULO DE UNA CANCIÓN*\n\n*➢ EJEMPLO:*\n*${usedPrefix + command} Phonk*`
   let vid = (await youtubeSearch(text)).video[0]
+  try {
   if (!vid) throw '*El video no se encontró, intente ingresar el nombre original de la canción o video*'
   let { title, description, thumbnail, videoId, durationH, viewH, publishedTime } = vid
   const url = 'https://www.youtube.com/watch?v=' + videoId
@@ -78,7 +79,8 @@ thumbnail: await(await conn.getFile(thumbnail)).data
   }
 
   return conn.sendMessage(m.chat, doc, { quoted: m })
-	}
+	} catch {  
+throw '*[❗𝐈𝐍𝐅𝐎❗] 𝙴𝚁𝚁𝙾𝚁, 𝙿𝙾𝚁 𝙵𝙰𝚅𝙾𝚁 𝚅𝚄𝙴𝙻𝚅𝙰 𝙰 𝙸𝙽𝚃𝙴𝙽𝚃𝙰𝚁𝙻𝙾*'}}}
 handler.help = ['play'].map(v => v + ' <pencarian>')
 handler.tags = ['downloader']
 handler.command = /^play$/i
