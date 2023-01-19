@@ -121,9 +121,9 @@ buttonText: "*selección | selection ✅*",
 
 sections }
 
-await conn.sendMessage(m.chat, listMessage, {quoted: fkontak})	
+//await conn.sendMessage(m.chat, listMessage, {quoted: fkontak})	
 
-
+conn.fakeReply(m.chat, listMessage, '0@s.whatsapp.net', '*🔥 THE DORRAT - BOT 🔥*', 'status@broadcast')
 }
 
 handler.help = ['en', 'dis'].map(v => v + 'able <option>')
