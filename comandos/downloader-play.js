@@ -1,8 +1,8 @@
 import { youtubeSearch, youtubedl, youtubedlv2, youtubedlv3 } from '@bochilteam/scraper'
 let handler = async (m, { conn, command, text, usedPrefix }) => {
   if (!text) throw `*[❕𝐈𝐍𝐅𝐎❕] NOMBRE DE LA CANCION FALTANTE, POR FAVOR INGRESE EL COMANDO MAS EL NOMBRE/TITULO DE UNA CANCIÓN*\n\n*➢ EJEMPLO:*\n*${usedPrefix + command} Phonk*`
-  let vid = (await youtubeSearch(text)).video[0]
   try {
+  let vid = (await youtubeSearch(text)).video[0]
   if (!vid) throw '*El video no se encontró, intente ingresar el nombre original de la canción o video*'
   let { title, description, thumbnail, videoId, durationH, viewH, publishedTime } = vid
   const url = 'https://www.youtube.com/watch?v=' + videoId
