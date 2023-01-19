@@ -100,7 +100,7 @@ global.wm = '𝑫𝑶𝑹𝑹𝑨𝑻-𝑩𝑶𝑻 | 𝑫𝑰𝑬𝑮𝑶-𝑶�
 global.igfg = '𝑫𝑶𝑹𝑹𝑨𝑻-𝑩𝑶𝑻'
 global.wait = '*[❕] CARGANDO POR FAVOR ESPERA...*'
 //-------------------
-global.md = 'https://chat.whatsapp.com/LlAbJM659dOBVJnxOIMl9h'
+global.md = 'https://chat.whatsapp.com/JOkFXt2T0kNFN0vkiModTx'
 global.dorramd = md
 
 global.yt = 'http://youtube.com/@diegogameplays82'
