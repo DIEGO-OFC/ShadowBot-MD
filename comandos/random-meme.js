@@ -10,7 +10,7 @@ handler.help = ['meme']
 handler.tags = ['random']
 handler.command = /^(meme|memes)$/i
 handler.limit = 3
-handler.command = /^(waifu)$/i
+
 export default handler 
 
 
