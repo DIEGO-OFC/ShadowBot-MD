@@ -22,6 +22,7 @@ let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? c
 let mentionedJid = [who]
 let username = conn.getName(who)
 let imagenMEnu = ['https://i.imgur.com/1qOn8Vw.jpg', 'https://i.imgur.com/vExxeYz.jpg']
+Let db = './galería/menudorrat3.jpg'
 let pp = './galeria/dorratmini.mp4'
 let fkontak = { "key": { "participants":"0@s.whatsapp.net", "remoteJid": "status@broadcast", "fromMe": false, "id": "Halo" }, "message": { "contactMessage": { "vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD` }}, "participant": "0@s.whatsapp.net" }
 let fsizedoc = '1'.repeat(10)
@@ -543,8 +544,9 @@ let menuB = `
 ┃𝐃𝐎𝐑𝐑𝐀𝐓-𝐁𝐎𝐓-𝐌𝐃 𝐁𝐘 𝐃𝐈𝐄𝐆𝐎-𝐎𝐅𝐂┃
  ━━━━━━━━━━━━━━━━━━━━━━━━━
 `.trim()
-await conn.sendButtonVid(m.chat, pp, menuA, menuB, lenguajeGB.smsBotonM1(), '.donar', '🎧 ' + lenguajeGB.smsTex16() + ' 🎧', '/audios', fkontak, adReply)
-
+conn.sendButton(m.chat, menuA, menuB, db, [
+['𝗠𝗘𝗡𝗨 𝗔𝗨𝗗𝗜𝗢𝗦', `#audios`],
+['𝗚𝗥𝗨𝗣𝗢𝗦', `#grupos`]], m)
 const sections = [
 {
 title: `𝐈𝐍𝐅𝐎𝐑𝐌𝐀𝐂𝐈𝐎𝐍`,
