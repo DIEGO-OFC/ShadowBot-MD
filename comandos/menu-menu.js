@@ -546,8 +546,8 @@ let menuB = `
 `.trim()
 conn.sendButton(m.chat, menuA, menuB, db, [
 ['𝗠𝗘𝗡𝗨 𝗔𝗨𝗗𝗜𝗢𝗦', `#audios`],
-['𝗚𝗥𝗨𝗣𝗢𝗦', `#grupos`]], m)
-const sections = [
+['𝗚𝗥𝗨𝗣𝗢𝗦', `#grupos`]], m)}
+/*const sections = [
 {
 title: `𝐈𝐍𝐅𝐎𝐑𝐌𝐀𝐂𝐈𝐎𝐍`,
 rows: [
@@ -568,7 +568,7 @@ title: null,
 buttonText: "selecionar", 
 sections }
 
-/*await conn.sendMessage(m.chat, listMessage, {quoted: fkontak})	
+await conn.sendMessage(m.chat, listMessage, {quoted: fkontak})	
 }*/
 
 handler.command = /^(menucompleto|menu completo|allmenu)$/i
