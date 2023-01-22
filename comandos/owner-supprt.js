@@ -13,7 +13,7 @@ let handler = async (m, { conn, text, usedPrefix }) => {
            mentionedJid: [m.sender]
         
       }
-}
+}}}
 
 handler.command = /^(msupp|msoporte)$/i
 handler.owner = false
