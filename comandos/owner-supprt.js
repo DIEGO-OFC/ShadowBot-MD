@@ -6,9 +6,9 @@ import MessageType from '@adiwajshing/baileys'
 let handler = async (m, { conn, text, usedPrefix }) => {
     let [n, mes] = text.split('|')
     try {
-        if (!n) throw iya
-        if (n.startsWith('08')) throw iya
-        if (!mes) throw iya
+        if (!n) throw 
+        if (n.startsWith('08')) throw 
+        if (!mes) throw 
         if (mes.length > 200) throw 'Máximo 200 caracteres!'
         if (mes) {
             let n1 = n1.replace('-', '')
