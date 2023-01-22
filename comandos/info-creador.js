@@ -49,7 +49,7 @@ const sections = [
 const listMessage = {
   text: `${comienzo} *OWNER INFO* ${fin}`,
   footer: wm,
-  title: null,
+  title: `\n❍ mirar la info completa de los creadores`,
   buttonText: "seleccione aqui",
   sections
 }
