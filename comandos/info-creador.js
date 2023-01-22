@@ -1,47 +1,96 @@
-let handler = async (m, { conn, usedPrefix }) => {
-var doc = ['pdf','zip','vnd.openxmlformats-officedocument.presentationml.presentation','vnd.openxmlformats-officedocument.spreadsheetml.sheet','vnd.openxmlformats-officedocument.wordprocessingml.document']
-var document = doc[Math.floor(Math.random() * doc.length)]    
-let text = `
-*—◉ 𝙴𝙻 𝙽𝚄𝙼𝙴𝚁𝙾 𝙳𝙴 𝙼𝙸 𝙲𝚁𝙴𝙰𝙳𝙾𝚁 𝙴𝚂 wa.me/593959425714*
+let { MessageType } = (await import('@adiwajshing/baileys')).default
 
-*—◉ 𝙴𝙻 𝙽𝚄𝙼𝙴𝚁𝙾 𝙳𝙴𝙻 𝙲𝙾𝙻𝙰𝙱𝙾𝚁𝙰𝙳𝙾𝚁 𝟷 𝙴𝚂 wa.me/573184314110*
+let handler  = async (m, { conn, command, args, usedPrefix, DevMode }) => {
+  let type = (args[0] || '').toLowerCase()
+  let _type = (args[0] || '').toLowerCase()
 
-*—◉ 𝙴𝙻 𝙽𝚄𝙼𝙴𝚁𝙾 𝙳𝙴𝙻 𝙲𝙾𝙻𝙰𝙱𝙾𝚁𝙰𝙳𝙾𝚁 2 𝙴𝚂 wa.me/51993138466*
+//------- Nombre
+  let nowner = ``
+  let teksnomor = `
+• @${wm.split`@`[0]} •
+------- ${wm} -------
+`
 
-*—◉ 𝙴𝙻 𝙽𝚄𝙼𝙴𝚁𝙾 𝙳𝙴𝙻 𝙲𝙾𝙻𝙰𝙱𝙾𝚁𝙰𝙳𝙾𝚁 3 𝙴𝚂 wa.me/595986674310*
+//------------ BIO
+let ppown = await conn.profilePictureUrl(nomorown + '@s.whatsapp.net', 'image').catch(_ => hwaifu[1]) 
+let teksbio = `
+*- - sᴋɪʟʟs: - -* 
+> JavaScript [70.7%]
+> Python [11.4%]
+> CSS [4.1%]
+> Html [0.9%]
+> Recode [76.8%]
+> Create Webs [88.9%]
 
-*—◉ 𝙴𝙻 𝙽𝚄𝙼𝙴𝚁𝙾 𝙳𝙴 𝙼𝙸 𝙲𝙾𝙻𝙰𝙱𝙾𝚁𝙰𝙳𝙾𝚁𝙰 4 𝙴𝚂 wa.me/51928078536*
-`.trim()   
-let buttonMessage= {
-'document': { url: `https://github.com/DIEGO-OFC/DORRAT-BOT-MD` },
-'mimetype': `application/${document}`,
-'fileName': `「  𝑫𝑶𝑹𝑹𝑯∆𝑻=𝑩𝑶𝑻 」`,
-'fileLength': 99999999999999,
-'pageCount': 200,
-'contextInfo': {
-'forwardingScore': 200,
-'isForwarded': true,
-'externalAdReply': {
-'mediaUrl': 'https://github.com/DIEGO-OFC/DORRAT-BOT-MD',
-'mediaType': 2,
-'previewType': 'pdf',
-'title': 'ᴇʟ ᴍᴇᴊᴏʀ ʙᴏᴛ ᴅᴇ ᴡʜᴀᴛsᴀᴘᴘ⁩',
-'body': wm,
-'thumbnail': imagen1,
-'sourceUrl': 'https://youtube.com/channel/UC7NB_0XT0vlKom0M0aCrs5g' }},
-'caption': text,
-'footer': wm,
-'buttons':[
-{buttonId: `${usedPrefix}menu`, buttonText: {displayText: '⚜️𝙼𝙴𝙽𝚄⚜️'}, type: 1}, 
-{buttonId: `${usedPrefix}instalarbot`, buttonText: {displayText: '𝙸𝙽𝚂𝚃𝙰𝙻𝙰𝚁𝙱𝙾𝚃🌠'}, type: 1}],
-'headerType': 6 }
-conn.sendMessage(m.chat, buttonMessage, { quoted: m })
-//let vcard = `BEGIN:VCARD\nVERSION:3.0\nN:;𝘿𝙞𝙚𝙜𝙤 𝙤𝙛𝙘 👑;;;\nFN:𝘿𝙞𝙚𝙜𝙤 𝙤𝙛𝙘 👑\nORG:𝘿𝙞𝙚𝙜𝙤 𝙤𝙛𝙘 👑\nTITLE:\nitem1.TEL;waid=593959425714:+593 95 942 5714\nitem1.X-ABLabel:𝘿𝙞𝙚𝙜𝙤 𝙤𝙛𝙘 👑\nX-WA-BIZ-DESCRIPTION:[❗] ᴄᴏɴᴛᴀᴄᴛᴀ ᴀ ᴇsᴛᴇ ɴᴜᴍ ᴘᴀʀᴀ ᴄᴏsᴀs ɪᴍᴘᴏʀᴛᴀɴᴛᴇs.\nX-WA-BIZ-NAME:𝑩𝒓𝒖𝒏𝒐 𝑺𝒐𝒃𝒓𝒊𝒏𝒐 👑\nEND:VCARD`
-//await conn.sendMessage(m.chat, { contacts: { displayName: 'Diego ofc 👑', contacts: [{ vcard }] }}, {quoted: m})
-const data = global.owner.filter(([id, isCreator]) => id && isCreator)
-await conn.sendContact(m.chat, data.map(([id, name]) => [id, name]), m)
+───────[ SOSIAL MEDIA ]───────
+
+✅ *Nombre: DIEGO-OFC*
+🐈 *Github:* https://github.com/DIEGO-OFC/DORRAT-BOT-MD
+🥏 *Whatsapp* wa.me/972529277520
+
+`
+  let teks = ' '
+const sections = [
+   {
+	title: ` OWNER`,
+	rows: [
+	    {title: "📱 • Información de los owner", rowId: "infowner"},
+	{title: "🎨 • Biodata", rowId: ".owner bio"},
+	{title: "🌐 • Website", rowId: ".website"},
+	{title: "🌎 • Script", rowId: ".sc"},
+	{title: "🏮 • Youtube", rowId: ".yt"},
+	]
+    },{
+	title: `${htjava} update  –––––––·•`,
+	rows: [
+	    {title: "💹 • Donar", rowId: ".donar"},
+	{title: "🔖 • Grupos", rowId: ".grupos"},
+	{title: "🌟 • Premium", rowId: ".premium"},
+	]
+  },
+]
+
+const listMessage = {
+  text: teks,
+  footer: null,
+  title: `${htki} *OWNER | CREADOR* ${htka}`,
+  buttonText: "Seleciona Aqui",
+  sections
 }
-handler.help = ['owner', 'creator']
-handler.tags = ['info']
-handler.command = /^(owner|creator|creador|propietario)$/i
+
+  try {
+    if (/(creator|owner)/i.test(command)) {
+      const count = args[1] && args[1].length > 0 ? Math.min(99999999, Math.max(parseInt(args[1]), 1)) : !args[1] || args.length < 3 ? 1 : Math.min(1, count)
+        switch (type) {
+          case 'nomor':
+          conn.reply(m.chat, wm, m, { contextInfo: { mentionedJid: [nowner] }})
+            break
+            case 'bio':
+          conn.sendHydrated(m.chat, teksbio, wm, ppown, "https://wa.me/972529277520 💬 ᴄʜᴀᴛs", null,null, [["Grupos", '.grupos'], [null, null],[null,null]], m)
+            break
+            
+          default:
+            return await conn.sendMessage(m.chat, listMessage, { quoted: m, contextInfo: { mentionedJid: [m.sender] }})
+        }
+    } else if (/aoaooaoaooaoa/i.test(command)) {
+      const count = args[2] && args[2].length > 0 ? Math.min(99999999, Math.max(parseInt(args[2]), 1)) : !args[2] || args.length < 4 ? 1 :Math.min(1, count)
+      switch (_type) {
+        case 't':
+          break
+        case '':
+          break
+
+        default:
+          return conn.sendButton( m.chat, caption, wm, null, [`⋮☰ Menu`, `.menu`], m)
+      }
+    }
+  } catch (err) {
+    m.reply("Error\n\n\n" + err.stack)
+  }
+}
+
+handler.help = ['owner', 'creaor']
+handler.tags = ['main', 'info']
+handler.command = /^(owner|creator)/i
+
 export default handler
