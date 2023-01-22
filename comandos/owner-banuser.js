@@ -9,9 +9,8 @@ let txt = text.replace('@' + who.split`@`[0], '').trim()
 if (!txt) return conn.reply(m.chat, `[❕] Ingresé la razón del baneo`, m)
 let users = global.db.data.users
 users[who].banned = true
-conn.sendButton(m.chat `✅ USUARIO BANEADO\nBANEADO @${who.split`@`[0]}*`} RAZON ${text}`, wm,  pp,
-[
-['𝙼𝙴𝙽𝚄', `#menusimple`]], m)}}
+conn.sendButton(m.chat `✅ USUARIO BANEADO\nBANEADO @${who.split`@`[0]}*`} RAZON ${text}`, wm,  pp,[
+['𝙼𝙴𝙽𝚄', `#menusimple`]], m)}
 handler.help = ['banuser']
 handler.tags = ['owner']
 handler.command = /^banuser$/i
