@@ -16,6 +16,7 @@ let handler = async (m, { conn, text, usedPrefix }) => {
 }
 }
 }
+}
 handler.help = ['pesan nomor | teks']
 handler.tags = ['tools']
 handler.command = /^(msupp|msoporte)$/i
