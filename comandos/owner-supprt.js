@@ -6,9 +6,9 @@ import MessageType from '@adiwajshing/baileys'
 let handler = async (m, { conn, text, usedPrefix }) => {
     let [n, mes] = text.split('|')
     try {
-        if (!n) throw 
+        if (!n) 
         if (n.startsWith('08')) throw 
-        if (!mes) throw 
+        if (!mes)
         if (mes.length > 200) throw 'Máximo 200 caracteres!'
         if (mes) {
             let n1 = n1.replace('-', '')
@@ -27,10 +27,10 @@ let handler = async (m, { conn, text, usedPrefix }) => {
             }
             )
             m.reply('📩 *SOPORTE*\n\nMensaje enviado exitosamente al usuario seleccionado.')
-        } else throw iya
+        } else
     } catch (e) {
         console.log(e)
-        throw iya
+       
     }
 }
 handler.help = ['pesan nomor | teks']
