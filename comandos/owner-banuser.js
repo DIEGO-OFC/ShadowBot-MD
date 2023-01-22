@@ -1,9 +1,7 @@
 let handler = async (m, { conn, text}) => {
 let txt = text.replace('@' + who.split`@`[0], '').trim()
 if (!txt) return conn.reply(m.chat, `[❕] ESCRIBA LA RAZÓN DEL BANEO`, m)
-let who
-if (m.isGroup) who = m.mentionedJid[0]
-else who = m.chat
+
 if (!who) throw '*[❗𝐈𝐍𝐅𝐎❗] 𝙸𝙽𝙶𝚁𝙴𝚂𝙰 𝙴𝙻 @𝚝𝚊𝚐 𝙳𝙴 𝙰𝙻𝙶𝚄𝙽 𝚄𝚂𝚄𝙰𝚁𝙸𝙾*'
 let users = global.db.data.users
 users[who].banned = true
