@@ -4,7 +4,6 @@
 import MessageType from '@adiwajshing/baileys'
 
 let handler = async (m, { conn, text, usedPrefix }) => {
-    let iya = `*DORRAT-BOT-MD | STAFF*\n\nPara enviar un mensaje a un usuario escribe */sm (número|mensaje)*\n\n_Ejemplo: ${usedPrefix}sm 589999999|hola_`
     let [n, mes] = text.split('|')
     try {
         if (!n) throw iya
