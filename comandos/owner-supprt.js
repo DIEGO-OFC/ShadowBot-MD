@@ -1,6 +1,7 @@
 //desarrollado por https://github.com/DIEGO-OFC
 
 
+
 import MessageType from '@adiwajshing/baileys'
 
 let handler = async (m, { conn, text, usedPrefix }) => {
