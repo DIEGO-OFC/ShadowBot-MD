@@ -5,14 +5,13 @@ let handler  = async (m, { conn, command, args, usedPrefix, DevMode }) => {
   let _type = (args[0] || '').toLowerCase()
 
 //------- Nombre
-  let nowner = `1111111111`
-  let teksnomor = `xd`
+  let nowner = `${wm.split`@`[0]}@s.whatsapp.net`
+  let teksnomor = `
 • @${wm.split`@`[0]} •
 ------- ${wm} -------
 `
 
-/*------------ BIO*/
-
+//------------ BIO
 let teksbio = `
 *- - sᴋɪʟʟs: - -* 
 > JavaScript [70.7%]
@@ -24,9 +23,9 @@ let teksbio = `
 
 ───────[ SOSIAL MEDIA ]───────
 
-✅ *Nombre: DIEGO-OFC*
-🐈 *Github:* https://github.com/DIEGO-OFC/DORRAT-BOT-MD
-🥏 *Whatsapp* wa.me/972529277520
+✅ *NOMBRE:*DIEGO-OFC*
+🐈 *Github:* ${md}
+🥏 *Whatsapp* wa.me/
 
 `
   let teks = ' '
@@ -34,7 +33,7 @@ const sections = [
    {
 	title: ` OWNER`,
 	rows: [
-	    {title: "📱 • Información de los owner", rowId: "infowner"},
+	    {title: "📱 • Nombre", rowId: ".owner nomor"},
 	{title: "🎨 • Biodata", rowId: ".owner bio"},
 	{title: "🌐 • Website", rowId: ".website"},
 	{title: "🌎 • Script", rowId: ".sc"},
@@ -43,7 +42,7 @@ const sections = [
     },{
 	title: `${htjava} update  –––––––·•`,
 	rows: [
-	    {title: "💹 • Donar", rowId: ".donar"},
+	    {title: "💹 • Donas", rowId: ".donas"},
 	{title: "🔖 • Grupos", rowId: ".grupos"},
 	{title: "🌟 • Premium", rowId: ".premium"},
 	]
@@ -53,8 +52,8 @@ const sections = [
 const listMessage = {
   text: teks,
   footer: null,
-  title: `${htki} *OWNER | CREADOR* ${htka}`,
-  buttonText: "Seleciona Aqui",
+  title: `${htki} *OWNER* ${htka}`,
+  buttonText: "Click aqui",
   sections
 }
 
