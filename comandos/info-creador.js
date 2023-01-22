@@ -12,6 +12,7 @@ let handler  = async (m, { conn, command, args, usedPrefix, DevMode }) => {
 `
 
 /*------------ BIO*/
+
 let teksbio = `
 *- - sᴋɪʟʟs: - -* 
 > JavaScript [70.7%]
