@@ -33,7 +33,7 @@ const sections = [
    {
 	title: ` OWNER`,
 	rows: [
-	    {title: "📱 • Nombre", rowId: ".owner nomor"},
+	    {title: "📱 • Número owner", rowId: ".infoowner"},
 	{title: "🎨 • Biodata", rowId: ".owner bio"},
 	{title: "🌐 • Website", rowId: ".website"},
 	{title: "🌎 • Script", rowId: ".sc"},
@@ -42,7 +42,7 @@ const sections = [
     },{
 	title: `${htjava} update  –––––––·•`,
 	rows: [
-	    {title: "💹 • Donas", rowId: ".donas"},
+	    {title: "💹 • Donar", rowId: ".donar"},
 	{title: "🔖 • Grupos", rowId: ".grupos"},
 	{title: "🌟 • Premium", rowId: ".premium"},
 	]
