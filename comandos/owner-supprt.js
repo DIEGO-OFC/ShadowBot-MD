@@ -21,7 +21,7 @@ let handler = async (m, { conn, text, usedPrefix }) => {
             conn.reply('${n3}@s.whatsapp.net',teks, MessageType.text,  {
            contextInfo: {
            mentionedJid: [m.sender]
-            /*conn.sendMessage(`${n3}@s.whatsapp.net`, teks, MessageType.text, {
+            /*conn.sendMessage(`${n2}@s.whatsapp.net`, teks, MessageType.text, {
                 contextInfo: {
                     mentionedJid: [m.sender]*/
                 }
