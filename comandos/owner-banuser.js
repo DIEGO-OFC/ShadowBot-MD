@@ -1,6 +1,6 @@
 let handler = async (m, { conn, text}) => {
 let txt = text.replace('@' + who.split`@`[0], '').trim()
-if (!txt) return conn.reply(m.chat, `[❕] ESCRIBA LA RAZÓN DEL BANEO, m`)
+if (!txt) return conn.reply(m.chat, `[❕] ESCRIBA LA RAZÓN DEL BANEO`, m)
 let who
 if (m.isGroup) who = m.mentionedJid[0]
 else who = m.chat
