@@ -1,8 +1,7 @@
 let handler = async (m, { conn, text}) => {
 let who
 let pp = './Menu2.jpg'
-let ban = `✅ USUARIO BANEADO\nBANEADO: @${who.split`@`[0]}*`}\nRAZON: *${text}*
-`.trim()
+let ban = `✅ USUARIO BANEADO\nBANEADO: @${who.split`@`[0]}*`}\nRAZON: ${text}`.trim()
 if (m.isGroup) who = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text
 else who = m.chat
 let user = global.db.data.users[who]
