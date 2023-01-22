@@ -5,7 +5,7 @@ let handler  = async (m, { conn, command, args, usedPrefix, DevMode }) => {
   let _type = (args[0] || '').toLowerCase()
 
 //------- Nombre
-let pp = ./Menu2.jpg'
+let pp = './Menu2.jpg'
   let nowner = `${wm.split`@`[0]}@s.whatsapp.net`
   let teksnomor = `
 • @${wm.split`@`[0]} •
