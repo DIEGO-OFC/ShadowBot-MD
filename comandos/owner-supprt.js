@@ -16,9 +16,6 @@ let handler = async (m, { conn, text, usedPrefix }) => {
             )
             m.reply('📩 *SOPORTE*\n\nMensaje enviado exitosamente al usuario seleccionado.')
         } else
-    } catch (e) {
-        console.log(e)
-       
     }
 }
 handler.help = ['pesan nomor | teks']
