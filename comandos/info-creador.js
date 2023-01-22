@@ -24,7 +24,7 @@ let teksbio = `
 ───────[ SOSIAL MEDIA ]───────
 
 ✅ *NOMBRE:*DIEGO-OFC*
-🐈 *Github:* ${md}
+🐈 *Github:* https://github.com/DIEGO-OFC/DORRAT-BOT-MD
 🥏 *Whatsapp* wa.me/
 
 `
