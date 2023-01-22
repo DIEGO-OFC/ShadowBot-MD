@@ -1,7 +1,6 @@
 let handler = async (m, { conn, text, command, usedPrefix }) => {//prems 
 
 let who
-let db = `✅ USUARIO BANEADO\nBANEADO @${who.split`@`[0]}`
 let pp = './galería/menudorrat3.jpg'
 if (m.isGroup) who = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text
 else who = m.chat
@@ -11,7 +10,7 @@ let txt = text.replace('@' + who.split`@`[0], '').trim()
 if (!txt) return conn.reply(m.chat, `[❕] Ingresé la razón del baneo`, m)
 let users = global.db.data.users
 users[who].banned = true
-await conn.sendButton(m.chat, db, wm,  pp,[
+await conn.sendButton(m.chat, `✅ USUARIO BANEADO\nBANEADO @${who.split`@`[0]}`, wm,  pp,[
 ['𝙼𝙴𝙽𝚄', `#menusimple`]], m)}
 handler.help = ['banuser']
 handler.tags = ['owner']
