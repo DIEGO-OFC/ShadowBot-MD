@@ -14,19 +14,17 @@ let pp = './Menu2.jpg'
 
 //------------ BIO
 let teksbio = `
-*- - sᴋɪʟʟs: - -* 
-> JavaScript [70.7%]
-> Python [11.4%]
-> CSS [4.1%]
-> Html [0.9%]
-> Recode [76.8%]
-> Create Webs [88.9%]
+*—◉ 𝙴𝙻 𝙽𝚄𝙼𝙴𝚁𝙾 𝙳𝙴 𝙼𝙸 𝙲𝚁𝙴𝙰𝙳𝙾𝚁 𝙴𝚂 wa.me/593959425714*
+*—◉ 𝙴𝙻 𝙽𝚄𝙼𝙴𝚁𝙾 𝙳𝙴𝙻 𝙲𝙾𝙻𝙰𝙱𝙾𝚁𝙰𝙳𝙾𝚁 𝟷 𝙴𝚂 wa.me/573184314110*
+*—◉ 𝙴𝙻 𝙽𝚄𝙼𝙴𝚁𝙾 𝙳𝙴𝙻 𝙲𝙾𝙻𝙰𝙱𝙾𝚁𝙰𝙳𝙾𝚁 2 𝙴𝚂 wa.me/51993138466*
+*—◉ 𝙴𝙻 𝙽𝚄𝙼𝙴𝚁𝙾 𝙳𝙴𝙻 𝙲𝙾𝙻𝙰𝙱𝙾𝚁𝙰𝙳𝙾𝚁 3 𝙴𝚂 wa.me/595986674310*
+*—◉ 𝙴𝙻 𝙽𝚄𝙼𝙴𝚁𝙾 𝙳𝙴 𝙼𝙸 𝙲𝙾𝙻𝙰𝙱𝙾𝚁𝙰𝙳𝙾𝚁𝙰 4 𝙴𝚂 wa.me/51928078536*
 
-───────[ SOSIAL MEDIA ]───────
+───────[ INFORMACIÓN DEL BOT ]───────
 
-✅ *NOMBRE:*DIEGO-OFC*
+✅ *NOMBRE:*DORRAT-BOT-MD*
 🐈 *Github:* https://github.com/DIEGO-OFC/DORRAT-BOT-MD
-🥏 *Whatsapp* wa.me/
+🥏 *Whatsapp* wa.me/972529277520
 
 `
   let teks = ' '
@@ -34,11 +32,10 @@ const sections = [
    {
 	title: ` OWNER`,
 	rows: [
-	    {title: "📱 • Número owner", rowId: ".infoowner"},
-	{title: "🎨 • Biodata", rowId: ".owner bio"},
-	{title: "🌐 • Website", rowId: ".website"},
-	{title: "🌎 • Script", rowId: ".sc"},
-	{title: "🏮 • Youtube", rowId: ".yt"},
+	    {title: "|🔰| INFORMACION COMPLETA", rowId: ".owner bio"},
+	{title: "|🛡️| ESTADO DEL BOT", rowId: ".estado"},
+	{title: "|📦| MINECRAFT SERVER", rowId: ".mc-server"},
+	{title: "|ℹ️| SCRIPT", rowId: ".sc"}
 	]
     },{
 	title: `${htjava} update  –––––––·•`,
