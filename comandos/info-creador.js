@@ -18,11 +18,10 @@ let teksbio = `
 *—◉ 𝙴𝙻 𝙽𝚄𝙼𝙴𝚁𝙾 𝙳𝙴𝙻 𝙲𝙾𝙻𝙰𝙱𝙾𝚁𝙰𝙳𝙾𝚁 𝟷 𝙴𝚂 wa.me/573184314110*
 *—◉ 𝙴𝙻 𝙽𝚄𝙼𝙴𝚁𝙾 𝙳𝙴𝙻 𝙲𝙾𝙻𝙰𝙱𝙾𝚁𝙰𝙳𝙾𝚁 2 𝙴𝚂 wa.me/51993138466*
 *—◉ 𝙴𝙻 𝙽𝚄𝙼𝙴𝚁𝙾 𝙳𝙴𝙻 𝙲𝙾𝙻𝙰𝙱𝙾𝚁𝙰𝙳𝙾𝚁 3 𝙴𝚂 wa.me/595986674310*
-*—◉ 𝙴𝙻 𝙽𝚄𝙼𝙴𝚁𝙾 𝙳𝙴 𝙼𝙸 𝙲𝙾𝙻𝙰𝙱𝙾𝚁𝙰𝙳𝙾𝚁𝙰 4 𝙴𝚂 wa.me/51928078536*
 
 ───────[ INFORMACIÓN DEL BOT ]───────
 
-✅ *NOMBRE:*DORRAT-BOT-MD*
+✅ *NOMBRE: DORRAT-BOT-MD*
 🐈 *Github:* https://github.com/DIEGO-OFC/DORRAT-BOT-MD
 🥏 *Whatsapp* wa.me/972529277520
 
@@ -38,7 +37,7 @@ const sections = [
 	{title: "|ℹ️| SCRIPT", rowId: ".sc"}
 	]
     },{
-	title: `${htjava} update  –––––––·•`,
+	title: `${htjava} OTROS  –––––––·•`,
 	rows: [
 	    {title: "💹 • Donar", rowId: ".donar"},
 	{title: "🔖 • Grupos", rowId: ".grupos"},
@@ -63,7 +62,7 @@ const listMessage = {
           conn.reply(m.chat, wm, m, { contextInfo: { mentionedJid: [nowner] }})
             break
             case 'bio':
-          conn.sendHydrated(m.chat, teksbio, wm, pp, "https://wa.me/972529277520 💬 ᴄʜᴀᴛs", null,null, [["Grupos", '.grupos'], [null, null],[null,null]], m)
+          conn.sendHydrated(m.chat, teksbio, wm, pp, "https://wa.me/972529277520 💬 ᴄʜᴀᴛs", null,null, [["BY DIEGO-OFC", '.grupos'], [null, null],[null,null]], m)
             break
             
           default:
