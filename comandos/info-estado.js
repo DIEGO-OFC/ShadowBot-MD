@@ -21,7 +21,7 @@ let uptime = clockString(_uptime)
 throw `*🤖 TIEMPO ACTIVO:* ${uptime} ┃ 👑 BY DIEGO-OFC ┃ 🔗 PAGINA OFC: dorrar-bot-oficial.ml`}}
 handler.help = ['estado']
 handler.tags = ['main']
-handler.command = /^(estado|status|estate|state|stado|stats|runtime|uptime)$/i
+handler.command = /^(estado|status|estate|state|stado|stats)$/i
 export default handler
 function clockString(ms) {
 let d = isNaN(ms) ? '--' : Math.floor(ms / 86400000)
