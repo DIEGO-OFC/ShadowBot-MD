@@ -15,7 +15,6 @@ let handler = async (m, { conn, text, usedPrefix }) => {
             }
             )
             m.reply('📩 *SOPORTE*\n\nMensaje enviado exitosamente al usuario seleccionado.')
-    }
 }
 handler.help = ['pesan nomor | teks']
 handler.tags = ['tools']
