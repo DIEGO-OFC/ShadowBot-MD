@@ -2,7 +2,7 @@ let handler = async (m, { conn, text, command, usedPrefix }) => {//prems
 
 let who
 let db = `✅ USUARIO BANEADO\nBANEADO @${who.split`@`[0]}`
-let pp = './Menu2.jpg'
+let pp = './galería/menudorrat3.jpg'
 if (m.isGroup) who = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text
 else who = m.chat
 let user = global.db.data.users[who]
