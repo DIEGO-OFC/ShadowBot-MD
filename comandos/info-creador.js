@@ -5,6 +5,7 @@ let handler  = async (m, { conn, command, args, usedPrefix, DevMode }) => {
   let _type = (args[0] || '').toLowerCase()
 
 //------- Nombre
+let pp = ./Menu2.jpg'
   let nowner = `${wm.split`@`[0]}@s.whatsapp.net`
   let teksnomor = `
 • @${wm.split`@`[0]} •
@@ -65,7 +66,7 @@ const listMessage = {
           conn.reply(m.chat, wm, m, { contextInfo: { mentionedJid: [nowner] }})
             break
             case 'bio':
-          conn.sendHydrated(m.chat, teksbio, wm, ppown, "https://wa.me/972529277520 💬 ᴄʜᴀᴛs", null,null, [["Grupos", '.grupos'], [null, null],[null,null]], m)
+          conn.sendHydrated(m.chat, teksbio, wm, pp, "https://wa.me/972529277520 💬 ᴄʜᴀᴛs", null,null, [["Grupos", '.grupos'], [null, null],[null,null]], m)
             break
             
           default:
