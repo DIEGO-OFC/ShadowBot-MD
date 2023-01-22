@@ -5,14 +5,14 @@ let handler  = async (m, { conn, command, args, usedPrefix, DevMode }) => {
   let _type = (args[0] || '').toLowerCase()
 
 //------- Nombre
-  let nowner = `xd`
+  let nowner = `1111111111`
   let teksnomor = `
 • @${wm.split`@`[0]} •
 ------- ${wm} -------
 `
 
 //------------ BIO
-let ppown = await conn.profilePictureUrl(nomorown + '@s.whatsapp.net', 'image').catch(_ => hwaifu[1]) 
+let ppown = await conn.profilePictureUrl(nowner + '@s.whatsapp.net', 'image').catch(_ => hwaifu[1]) 
 let teksbio = `
 *- - sᴋɪʟʟs: - -* 
 > JavaScript [70.7%]
