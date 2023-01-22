@@ -49,7 +49,7 @@ const sections = [
 const listMessage = {
   text: teks,
   footer: null,
-  title: `${htki} *OWNER | INFO* ${htka}`,
+  title: `${comienzo} *OWNER | INFO* ${fin}`,
   buttonText: "seleccione aqui",
   sections
 }
