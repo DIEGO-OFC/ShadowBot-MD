@@ -3,8 +3,6 @@ handler.all = async function (m) {
 let chat = global.db.data.chats[m.chat]
 let name = conn.getName(m.sender)
 
-if (/^e$/i.test(m.text) ) { //sem prefixo
-
 if (/^reglas|normas|Reglas$/i.test(m.text) ) { //sem prefixo
     conn.reply(m.chat, `╭┅〘 ⚠️ 𝗢𝗯𝗲𝗱𝗲𝗰𝗲 𝗹𝗮𝘀 𝗿𝗲𝗴𝗹𝗮𝘀 ⚠️ 〙*
 ➽❌ 𝐏𝐫𝐨𝐡𝐢𝐛𝐢𝐝𝐨 𝐥𝐥𝐚𝐦𝐚𝐫 𝐚𝐥 𝐁𝐨𝐭
