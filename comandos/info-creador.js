@@ -5,7 +5,7 @@ let handler  = async (m, { conn, command, args, usedPrefix, DevMode }) => {
   let _type = (args[0] || '').toLowerCase()
 
 //------- Nombre
-  let nowner = ``
+  let nowner = `xd`
   let teksnomor = `
 • @${wm.split`@`[0]} •
 ------- ${wm} -------
