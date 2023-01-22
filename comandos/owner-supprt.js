@@ -12,7 +12,10 @@ let handler = async (m, { conn, text, usedPrefix }) => {
            contextInfo: {
            mentionedJid: [m.sender]
         
-      }}}}
+      }
+}
+}
+}
 handler.help = ['pesan nomor | teks']
 handler.tags = ['tools']
 handler.command = /^(msupp|msoporte)$/i
