@@ -11,8 +11,7 @@ let handler = async (m, { conn, text, usedPrefix }) => {
            contextInfo: {
            mentionedJid: [m.sender]
         
-            m.reply('📩 *SOPORTE*\n\nMensaje enviado exitosamente al usuario seleccionado.')
-}
+      }
   
                 }
             }
