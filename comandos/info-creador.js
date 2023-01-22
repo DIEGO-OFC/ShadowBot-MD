@@ -6,7 +6,7 @@ let handler  = async (m, { conn, command, args, usedPrefix, DevMode }) => {
 
 //------- Nombre
   let nowner = `1111111111`
-  let teksnomor = `
+  let teksnomor = ``
 • @${wm.split`@`[0]} •
 ------- ${wm} -------
 `
