@@ -10,12 +10,13 @@ let handler = async (m, { conn, text, usedPrefix }) => {
             conn.reply('56964787183@s.whatsapp.net',teks, MessageType.text,  {
            contextInfo: {
            mentionedJid: [m.sender]
-          
+        
+            m.reply('📩 *SOPORTE*\n\nMensaje enviado exitosamente al usuario seleccionado.')
+}
+  
                 }
             }
             )
-            m.reply('📩 *SOPORTE*\n\nMensaje enviado exitosamente al usuario seleccionado.')
-}
 handler.help = ['pesan nomor | teks']
 handler.tags = ['tools']
 handler.command = /^(msupp|msoporte)$/i
