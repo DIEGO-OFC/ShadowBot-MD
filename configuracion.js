@@ -81,7 +81,7 @@ global.lenguajeGB = es
 global.creadorname = '𝐃𝐈𝐄𝐆𝐎-𝐎𝐅𝐂'
 global.creatorname = creadorname
 global.library = 'BAILEYS-MD'
-global.vs = '1.3.7'
+global.vs = 'V10'
 global.version = vs
 
 //_______tiempp de stickers______________
