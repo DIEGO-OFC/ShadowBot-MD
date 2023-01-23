@@ -66,7 +66,7 @@ _- Al hacer uso de ciertos comandos que tengan como objetivo socavar la incomodi
 *~ Muchas Gracias Por tomarte el tiempo en informate sobre DorratBot
 `.trim()
 
-conn.sendButton(m.chat, terminoB, terminoA, pp, [
+conn.sendButton(m.chat, terminoA, terminoB, pp, [
 ['𝘿𝙊𝙉𝘼𝙍', `#donar`]], m)
 /*await conn.sendFile(m.chat, vn, 'menu.mp3', null, m, true, {
 
