@@ -5,7 +5,7 @@ let d = Math.floor(Math.random() * 10)
 global.db.data.users[m.sender].dorracoins += d * 1  
 //let hasil = Math.floor(Math.random() * 2000)
 let time = global.db.data.users[m.sender].lastdiamantes + 600000
-if (new Date - global.db.data.users[m.sender].lastdiamantes < 600000) throw `*💟 Vuelva en ${msToTime(time - new Date())} para continuar minando ⛏️*`  
+if (new Date - global.db.data.users[m.sender].lastdiamantes < 600000) throw `*⏱️ Vuelva en ${msToTime(time - new Date())} para continuar minando DorratCoins ⛏️*`  
 
 conn.sendButton(m.chat, `*${minar} ${d} DORRAT-COINS*`, dorrat3, pp, 
 [
