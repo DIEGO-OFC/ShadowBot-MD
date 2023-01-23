@@ -3,7 +3,7 @@ import axios from 'axios'
 let handler = async(m, { conn, text, usedPrefix }) => {
     if (!text) return conn.reply(m.chat, 'Ingrese el número de destino\n\nEjemplo de uso : ' + usedPrefix + '5xxxxxxxx', m)
     new Promise((resolve, reject) => {
-        axios.get(`http://alfians-api.herokuapp.com/api/spamcall?no=${text}`)
+        axios.get(`https://www.spamcall.org/api?no=${text}`)
             .then((res) => {
                 if (res.status == 200) {
                     conn.reply(m.chat, res.logs, m)
