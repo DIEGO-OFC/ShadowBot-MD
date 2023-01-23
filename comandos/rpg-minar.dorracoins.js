@@ -1,14 +1,14 @@
 let handler = async (m, { conn, isPrems}) => { //lastmiming
 let minar = `${pickRandom(['Que pro 😎 has minado','🌟✨ Genial!! Obtienes','WOW!! eres un(a) gran Minero(a) ⛏️ Obtienes','Felicidades!! Ahora tienes','⛏️⛏️⛏️ Obtienes'])}`
 let pp = './galeria/menudorrat3.jpg'
-let db = `*${minar} ${d} DORRAT-COINS*`
+let ofc = `*${minar} ${d} DORRAT-COINS*`
 let d = Math.floor(Math.random() * 10)
 global.db.data.users[m.sender].dorracoins += d * 1  
 //let hasil = Math.floor(Math.random() * 2000)
 let time = global.db.data.users[m.sender].lastdiamantes + 600000
 if (new Date - global.db.data.users[m.sender].lastdiamantes < 600000) throw `*💟 Vuelva en ${msToTime(time - new Date())} para continuar minando ⛏️*`  
 
-conn.sendButton(m.chat, db, wm,pp, 
+conn.sendButton(m.chat, ofc, wm,pp, 
 [
 ['𝗠𝗜𝗡𝗔𝗥 𝗘𝗫𝗣 ⚡', `.minar`],
 ['𝗚𝗥𝗨𝗣𝗢 𝗢𝗙𝗜𝗖𝗜𝗔𝗟𝗘𝗦 👑', `.grupos`],
