@@ -7,7 +7,7 @@ global.db.data.users[m.sender].dorracoins += d * 1
 let time = global.db.data.users[m.sender].lastdiamantes + 600000
 if (new Date - global.db.data.users[m.sender].lastdiamantes < 600000) throw `*💟 Vuelva en ${msToTime(time - new Date())} para continuar minando ⛏️*`  
 
-conn.sendButton(m.chat, `*${minar} ${d} DORRAT-COINS*`, db, pp, 
+conn.sendButton(m.chat, `*${minar} ${d} DORRAT-COINS*`, dorrat3, pp, 
 [
 ['𝗠𝗜𝗡𝗔𝗥 𝗘𝗫𝗣 ⚡', `.minar`],
 ['𝗚𝗥𝗨𝗣𝗢 𝗢𝗙𝗜𝗖𝗜𝗔𝗟𝗘𝗦 👑', `.grupos`],
