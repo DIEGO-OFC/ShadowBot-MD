@@ -1,7 +1,7 @@
 let handler = async (m, { conn, text }) => {
     let name = await conn.getName(m.sender)
 
-conn.sendButton(m.chat, '*[ ⚠ ️] No etiquetes a mi creador, si es algo urgente contacta con el a su chat privado*', wm, [['📋 TERMINOS Y CONDICIONES', `terminos y condiciones`]], m)
+conn.sendButton(m.chat, '*[ ⚠ ️] No etiquetes a mi creador, si es algo urgente contacta con el a su chat privado*', dorrat3, [['📋 TERMINOS Y CONDICIONES', `terminos y condiciones`]], m)
     let mentionedJid = [m.sender]
 }
 handler.customPrefix = /@584125778026/i
