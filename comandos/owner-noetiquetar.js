@@ -1,5 +1,6 @@
 let handler = async (m, { conn, text }) => {
-    let name = m.fromMe ? conn.user : conn.contacts[m.sender]
+    let name = await conn.getName(m.sender)
+
 
   conn.reply(m.chat, `
 *[ ⚠ ️] No etiquetes a mi creador, si es algo urgente contacta con el a su chat privado*
