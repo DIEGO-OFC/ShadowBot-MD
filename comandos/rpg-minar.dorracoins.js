@@ -12,7 +12,7 @@ conn.sendButton(m.chat, ofc, wm,pp,
 [
 ['𝗠𝗜𝗡𝗔𝗥 𝗘𝗫𝗣 ⚡', `.minar`],
 ['𝗚𝗥𝗨𝗣𝗢 𝗢𝗙𝗜𝗖𝗜𝗔𝗟𝗘𝗦 👑', `.grupos`],
-], m,)
+], m)
 global.db.data.users[m.sender].lastdiamantes = new Date * 1  
   
 
