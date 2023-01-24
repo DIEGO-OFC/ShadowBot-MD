@@ -28,7 +28,7 @@ rows: [
 ]}, ]
 //let name = await conn.getName(m.sender)
 const listMessage = {
-text: ' ',
+text: '',
 footer: `______________________
 |❀ ❍ _${usedPrefix}enable *welcome*_
 |❀ ❍ _${usedPrefix}disable *welcome*_
