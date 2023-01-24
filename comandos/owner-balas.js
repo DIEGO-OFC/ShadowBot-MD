@@ -6,9 +6,9 @@ let handler = async (m, { conn, args, text }) => {
     let lmfao = args[0]
     let bruh = (lmfao + '@s.whatsapp.net')
     let tex = args.slice(1).join(' ')
-    let txt = conn.req[bruh].text || m.quoted ? m.quoted.text ? m.quoted.text : text ? text : m.text : text ? text : m.text
+    let text = conn.req[bruh].text || m.quoted ? m.quoted.text ? m.quoted.text : text ? text : m.text : text ? text : m.text
     let name = m.fromMe ? conn.user : conn.contacts[m.sender]
-    let text = txt
+ 
     conn.reply(m.chat, 'Pesan Anda sudah terkirim', m)
     conn.sendMessage(bruh, text, MessageType.text)
     delete conn.req[bruh]
