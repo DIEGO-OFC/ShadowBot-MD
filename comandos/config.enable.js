@@ -29,7 +29,7 @@ rows: [
 //let name = await conn.getName(m.sender)
 const listMessage = {
 text: ' ',
-footer: `┏━━━━━━━━━━━━━┓
+footer: `______________________
 |❀ ❍ _${usedPrefix}enable *welcome*_
 |❀ ❍ _${usedPrefix}disable *welcome*_
 |❀ ❍ _${usedPrefix}enable *public*_
@@ -74,7 +74,7 @@ footer: `┏━━━━━━━━━━━━━┓
 |❀ ❍ _${usedPrefix}disable *modejadibot*_
 |❀ ❍ _${usedPrefix}enable *modoadmin*_
 |❀ ❍ _${usedPrefix}disable *modoadmin*_
-┗━━━━━━━━━━━━━┛`,
+|______________________`,
 title: null,
 buttonText: "𝐒𝐄𝐋𝐄𝐂𝐂𝐈𝐎𝐍𝐄 𝐀𝐐𝐔𝐢",
 sections }
