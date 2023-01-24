@@ -16,7 +16,7 @@ let handler = async (m, { conn, text, usedPrefix, command, args, sOwner, isPrems
     delete conn.req[bruh]
     
 }
-handler.help = ['balas'].map(v => v + ' [nomor] [teks]')
+handler.help = ['balas'].map(v => v + ' [nomor] [text]')
 handler.tags = ['owner']
 handler.command = /^(balas|reply)/i
 
