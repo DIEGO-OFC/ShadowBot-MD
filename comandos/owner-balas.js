@@ -12,7 +12,7 @@ let handler = async (m, { conn, text, usedPrefix, command, args, sOwner, isPrems
     let name = m.fromMe ? conn.user : conn.contacts[m.sender]
     let _text = (txt)
     conn.reply(m.chat, 'Pesan Anda sudah terkirim', m)
-    conn.sendMessage(bruh, _text, MessageType.text)
+    conn.sendMessage(bruh, _text)
     delete conn.req[bruh]
     
 }
