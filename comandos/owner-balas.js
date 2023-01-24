@@ -1,7 +1,7 @@
 import MessageType from '@adiwajshing/baileys'
 
 
-let handler = async (m, { conn, text, usedPrefix, command, isOwner, isPrems }) => {
+let handler = async (m, { conn, text, usedPrefix, command, args, sOwner, isPrems }) => {
 
     conn.req = conn.req ? conn.req : {}
     if (!args || !text) return m.reply('Silahkan Masukan Teksnya')
