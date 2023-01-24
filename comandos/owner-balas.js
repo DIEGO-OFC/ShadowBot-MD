@@ -1,7 +1,8 @@
 import MessageType from '@adiwajshing/baileys'
 
 
-let handler = async (m, { conn, args, text }) => {
+let handler = async (m, { conn, text, usedPrefix, command, isOwner, isPrems }) => {
+
     conn.req = conn.req ? conn.req : {}
     if (!args || !text) return m.reply('Silahkan Masukan Teksnya')
     let lmfao = args[0]
