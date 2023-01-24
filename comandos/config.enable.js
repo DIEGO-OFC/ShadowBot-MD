@@ -28,7 +28,7 @@ rows: [
 ]}, ]
 //let name = await conn.getName(m.sender)
 const listMessage = {
-text: '',
+text: '𝐋𝐈𝐒𝐓𝐀 𝐃𝐄 𝐎𝐏𝐂𝐈𝐎𝐍𝐄𝐒',
 footer: `______________________
 |❀ ❍ _${usedPrefix}enable *welcome*_
 |❀ ❍ _${usedPrefix}disable *welcome*_
