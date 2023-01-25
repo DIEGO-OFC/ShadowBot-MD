@@ -1,39 +1,53 @@
-import https from 'https'
 import fetch from 'node-fetch'
 
-let handler = async (m, { args, usedPrefix, command }) => {
-	if (!args[0]) throw `*[❕] INGRESE EL LINK DE UNA PAGINA EJEMPLO: ${usedPrefix + command} https://github.com/DIEGO-OFC/DORRAT-BOT-MD*`
-	let res = await checkWeb(args)
-	m.reply(res.map(v => `*• Domain:* ${v.Domain}\n*• Status:* ${v.Status}`).join('\n\n'))
+let handler = async (m, { conn, command, args }) => {
+   if (!args[0]) return conn.reply(m.chat, 'Enter the link Sis', m)
+
+  await m.reply('_wait a minute⏰_')
+  
+   let img = await (await fetch(`https://botcahx.ddns.net/api/tools/ssweb?link=${args[0]}`)).buffer()
+
+  
+   conn.sendMessage(m.chat, { image: img, caption: 'Here' }, { quoted: m })
 }
-handler.command = /^web(check|cek)|(check|cek)web$/i
+handler.help = ['ssweb']
+handler.tags = ['internet']
+handler.command = /^ss(web)?f?$/i
+
+handler.limit = false
+handler.fail = null
 
 export default handler
 
-async function checkWeb(url) {
-	let res = await (await fetch('https://trustpositif.kominfo.go.id/Rest_server/getrecordsname_home', {
-		agent: new https.Agent({ rejectUnauthorized: false }),
-		method: 'post',
-		body: new URLSearchParams(Object.entries({ name: url.join('%0A') }))
-	})).json()
-	return res.values
+const fetchJson = (url, options) => new Promise(async (resolve, reject) => {
+    fetch(url, options)
+        .then(response => response.json())
+        .then(json => {
+            // console.log(json)
+            resolve(json)
+        })
+        .catch((err) => {
+            reject(err)
+        })
+})
+
+
+const getBuffer = async (url, options) => {
+	try {
+		options ? options : {}
+		const res = await axios({
+			method: "get",
+			url,
+			headers: {
+				'DNT': 1,
+                    'User-Agent': 'GoogleBot',
+				'Upgrade-Insecure-Request': 1
+			},
+			...options,
+			responseType: 'arraybuffer'
+		})
+		return res.data
+	} catch (e) {
+		console.log(`Error : ${e}`)
+	}
 }
-
-
-
-/*import fetch from 'node-fetch'
-
-let handler = async (m, { conn, text, usedPrefix, command, args }) => {
-  let full = /f$/i.test(command)
-  if (!text) throw `*[❗𝐈𝐍𝐅𝐎❗] 𝙸𝙽𝙶𝚁𝙴𝚂𝙴 𝙴𝙻 𝙻𝙸𝙽𝙺 𝙳𝙴 𝚄𝙽𝙰 𝙿𝙰𝙶𝙸𝙽𝙰 𝙿𝙰𝙵𝙰 𝙷𝙰𝙲𝙴𝚁 𝙲𝙰𝙿𝚃𝚄𝚁𝙰n\n*卐 Ejemplo:*\n ${usedPrefix + command} https://github.com/DIEGO-OFC/DORRAT-BOT-MD`
-  conn.reply(m.chat, global.wait, m)
-  let url = /https?:\/\//.test(args[0]) ? args[0] : 'https://' + args[0]
-  let ss = await (await fetch(global.API('nrtm', '/api/ssweb', { delay: 1000, url, full }))).buffer()
-  conn.sendFile(m.chat, ss, 'Error.png', '*📦 Captura de la Pagina*', m)
-}
-
-handler.help = ['captura']
-handler.tags = ['herramientas']
-handler.command = /^(ssweb|ss|cap|screenshot|captura)$/i
-
-export default handler*/
