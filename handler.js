@@ -1340,25 +1340,23 @@ export async function participantsUpdate({ id, participants, action }) {
     switch (action) {
         case 'add':
         case 'remove':
-            if (chat.welcome) {
+         if (chat.welcome) {
                 let groupMetadata = await this.groupMetadata(id) || (conn.chats[id] || {}).metadata
                 for (let user of participants) {
-                    let pp = './galeria/sinfoto.jpg'
+                    let pp = './src/avatar_contact.png'
                     try {
                         pp = await this.profilePictureUrl(user, 'image')
                     } catch (e) {
                     } finally {
-                        text = (action === 'add' ? (chat.sWelcome || this.welcome || conn.welcome || 'Welcome, @user!').replace('@subject', await this.getName(id)).replace('@desc', groupMetadata.desc?.toString() || '*𝙂𝙧𝙪𝙥𝙤 𝙂𝙚𝙣𝙞𝙖𝙡 | 𝘾𝙤𝙤𝙡 𝙂𝙧𝙤𝙪𝙥 😼*') :
-                            (chat.sBye || this.bye || conn.bye || 'Bye, @user!')).replace('@user', await this.getName(user)) //.replace('@user', '@' + user.split('@')[0])
-                            let apii = await this.getFile(pp)
-                            this.sendHydrated(id, text, groupMetadata.subject, apii.data, 'https://github.com/DIEGO-OFC/DORRAT-BOT-MD', '𝐃𝐎𝐑𝐑𝐀𝐓-𝐁𝐎𝐓-𝐌𝐃', null, null, [
-                            [(action == 'add' ? '𝐒𝐄 𝐔𝐍𝐈𝐎 🌠 | 𝐇𝐈!!' : '𝐒𝐄 𝐅𝐔𝐄 𝐔𝐍 𝐑𝐀𝐍𝐃𝐎𝐌 😂'), '.s'],    
-                            ['⫹⫺ 𝐌𝐄𝐍𝐔', '/menu']
-                            ], '', { mentions: [user]})
-                           }
+                    let apii = await this.getFile(pp)
+                        text = (action === 'add' ? (chat.sWelcome || this.welcome || conn.welcome || 'Welcome, @user!').replace('@subject', await this.getName(id)).replace('@desc', groupMetadata.desc?.toString() || '*𝚂𝙸𝙽 𝙳𝙴𝚂𝙲𝚁𝙸𝙿𝙲𝙸𝙾𝙽*') :
+                              (chat.sBye || this.bye || conn.bye || 'Bye, @user!')).replace('@user', '@' + user.split('@')[0])
+                
+ this.sendFile(id, apii.data, 'pp.jpg', text, null, false, { mentions: [user] }) 
+                   }
                 }
             }
-            break
+            break   
         case 'promote':
         case 'daradmin':
         case 'darpoder':
