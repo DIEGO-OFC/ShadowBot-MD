@@ -5,7 +5,9 @@ let x = await a.json()
 let caption = `*⎔┉━「 ${command} 」━┉⎔*\n
 *TITULO: ${x.Title || ''}*
 *AÑO: ${x.Year || ''}*
-*Duración: ${x.Runtime || ''}*`
+*Duración: ${x.Runtime || ''}*
+*Género*: ${x.Genre || ''}*
+*Actores: ${x.Actors || ''}*`
 m.reply(caption) 
 }
 handler.command = ['prueba8']
