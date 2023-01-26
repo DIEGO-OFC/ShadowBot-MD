@@ -6,7 +6,7 @@ let caption = `*⎔┉━「 ${command} 」━┉⎔*\n
 *TITULO: ${x.Title || ''}*
 *AÑO: ${x.Year || ''}*
 *Duración: ${x.Runtime || ''}*
-*Género*: ${x.Genre || ''}*
+*Género: ${x.Genre || ''}*
 *Actores: ${x.Actors || ''}*`
 m.reply(caption) 
 }
