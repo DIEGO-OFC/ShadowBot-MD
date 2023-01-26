@@ -11,7 +11,7 @@ caption += `
 *TITULO: ${response.Title}*
 *AÑO: ${response.Year}*
 *Duración: ${response.Runtime}*
-`}}   
+`}}}
 
 
 handler.command = ['prueba8']
