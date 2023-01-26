@@ -12,3 +12,4 @@ m.reply(caption)
 }
 handler.command = ['prueba8']
 export default handler
+//Creador por https://github.com/DIEGO-OFC/DORRAT-BOT-MD
