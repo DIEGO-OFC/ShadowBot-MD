@@ -5,11 +5,12 @@ if (command == 'prueba8') {
 let json = await fetch(`https://www.omdbapi.com/?t=${text}&apikey=caba8d6f`)
 let jsons = await json.json()
 let caption = `*⎔┉━「 ${command} 」━┉⎔*\n`
-for (let x of jsons.result) {
+for (let x of jsons) {
 caption += `
-*TITULO: ${response.Title}*
-*AÑO: ${response.Year}*
-*Duración: ${response.Runtime}*
+*TITULO: ${x.Title}*
+*AÑO: ${x.Year}*
+*Duración: ${x.Runtime}*
+`}}   
 `}}}
 
 
