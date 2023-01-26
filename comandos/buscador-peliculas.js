@@ -10,6 +10,6 @@ let caption = `*⎔┉━「 ${command} 」━┉⎔*\n
 *Actores: ${x.Actors || ''}*`
 m.reply(caption) 
 }
-handler.command = ['prueba8']
+handler.command = ['pelicula']
 export default handler
 //Creador por https://github.com/DIEGO-OFC/DORRAT-BOT-MD
