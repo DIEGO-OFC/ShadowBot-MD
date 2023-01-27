@@ -12,7 +12,7 @@ let pp = './galeria/menudorrat3.jpg'
 let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
 if (!(who in global.db.data.users)) throw `El usuario que está mencionando no está registrado en mi base de datos`
 try {
-pp = await conn.profilePictureUrl(who)
+pp = await conn.profilePictureUrl(who, 'image')
 } catch (e) {
 
 } finally {
