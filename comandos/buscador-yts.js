@@ -16,7 +16,7 @@ case 'channel': return `
 🎦 ${v.videoCount} 𝚟𝚒𝚍𝚎𝚘𝚜
 `.trim()
 }
-}).filter(v => v).join('\n\n========================\n\n')
+}).filter(v => v).join('\n\n${comiemzo}\n\n')
 m.reply(teks)
 }
 handler.help = ['', 'earch'].map(v => 'yts' + v + ' <pencarian>')
