@@ -13,5 +13,6 @@ let caption = `*⎔┉━「 ${command} 」━┉⎔*\n
 *Actores: ${x.Actors || ''}*`
 m.reply(caption) 
 }
-handler.command = ['pelicula']
+handler.command = /^(película|pelicula|peli)$/i
+
 export default handler
