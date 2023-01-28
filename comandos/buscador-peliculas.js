@@ -6,7 +6,7 @@ let taguser = '@' + m.sender.split("@s.whatsapp.net")[0]
 if (!text) throw `*[❕] Ingrese el nombre de una película*\n\n*❍ EJEMPLO: ${usedPrefix + command} Batman*`
 let a = await fetch(`https://www.omdbapi.com/?t=${text}&apikey=caba8d6f`)
 let x = await a.json()
-let caption = `*${comienzo}「 ${command} 」${fin}*\n
+let caption = `*${comienzo}「 PELÍCULAS 」${fin}*\n
 🔍 *Titulo: ${x.Title || ''}*
 🗒️ *Año: ${x.Year || ''}*
 ⏱️ *Duración: ${x.Runtime || ''}*
