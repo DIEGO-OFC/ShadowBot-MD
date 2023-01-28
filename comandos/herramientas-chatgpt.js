@@ -10,3 +10,5 @@ m.reply(`${hasil.result}`.trim())
 throw `*[❕] ERROR, INTENTA DE NUEVO*`
 }}
 handler.command = ['openai', 'chatgpt', 'ia', 'robot']
+
+export default handler 
