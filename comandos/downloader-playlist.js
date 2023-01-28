@@ -1,7 +1,7 @@
 
 import { youtubeSearch } from '@bochilteam/scraper'
 let handler = async (m, { conn, args, usedPrefix, command, text }) => {
-if (!text) throw `*[❕] INGRESA UNA CANCION PARA ENVIAR LA LISTA, EJEMPLO:\n■ ${usedPrefix + command} phonk`
+if (!text) throw `*[❕] INGRESA UNA CANCION PARA ENVIAR LA LISTA, EJEMPLO:\n■ ${usedPrefix + command} phonk*`
 try {
 const { video } = await youtubeSearch(text)
 const listSections = []
