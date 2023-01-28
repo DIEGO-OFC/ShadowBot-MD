@@ -20,7 +20,7 @@ case 'channel': return `
 }).filter(v => v).join('\n\n• • ◕◕═════════════════◕◕ • •\n\n')
 conn.sendButton(m.chat, teks, wm, pp,
 [
-['null', `null`]], m)
+[null, `null`]], m)
      }
 handler.help = ['', 'earch'].map(v => 'yts' + v + ' <pencarian>')
 handler.tags = ['tools']
