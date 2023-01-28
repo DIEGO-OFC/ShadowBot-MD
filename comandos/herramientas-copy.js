@@ -9,7 +9,7 @@ const templateMessage = {
 			templateMessage: {
 				hydratedTemplate: {
 					hydratedContentText: `Da click en el boton de copy`,
-					hydratedFooterText: wm,
+					hydratedFooterText: wm3,
 					hydratedButtons: templateButtonsxd
 				}
 			}
