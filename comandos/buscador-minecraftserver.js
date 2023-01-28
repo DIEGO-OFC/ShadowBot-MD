@@ -1,6 +1,6 @@
 
-import MessageType from = '@adiwajshing/baileys'
-import util from = 'minecraft-server-util'
+import MessageType from '@adiwajshing/baileys'
+import util from 'minecraft-server-util'
 let handler = async (m, { conn, args, usedPrefix, DevMode }) => {
     try {
         let type = (args[0] || '').toLowerCase()
