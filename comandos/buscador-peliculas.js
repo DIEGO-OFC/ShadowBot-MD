@@ -12,7 +12,8 @@ let caption = `*⎔┉━「 ${command} 」━┉⎔*\n
 *Duración: ${x.Runtime || ''}*
 *Género: ${x.Genre || ''}*
 *Actores: ${x.Actors || ''}*`
-m.reply(caption) 
+conn.fakeReply(m.chat, caption, '0@s.whatsapp.net', '*🔥 THE DORRAT - BOT 🔥*', 'status@broadcast')
+
 } catch {
 await conn.reply(m.chat, '*⚠️ Ocurrio un error, inténtelo de nuevo*', m)}
 
