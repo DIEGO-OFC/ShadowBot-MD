@@ -18,5 +18,5 @@ conn.fakeReply(m.chat, caption, '0@s.whatsapp.net', '*🔥 THE DORRAT - BOT 🔥
 
 }
 handler.command = /^(película|pelicula|peli)$/i
-
+handler.limit = true 
 export default handler
