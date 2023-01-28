@@ -7,8 +7,8 @@ if (!text) throw `*[❕] Ingrese el nombre de una película*\n\n*❍ EJEMPLO: ${
 let a = await fetch(`https://www.omdbapi.com/?t=${text}&apikey=caba8d6f`)
 let x = await a.json()
 let caption = `*⎔┉━「 ${command} 」━┉⎔*\n
-🔍 *TITULO: ${x.Title || ''}*
-🗒️ *AÑO: ${x.Year || ''}*
+🔍 *Titulo: ${x.Title || ''}*
+🗒️ *Año: ${x.Year || ''}*
 ⏱️ *Duración: ${x.Runtime || ''}*
 📗 *Género: ${x.Genre || ''}*
 👥 *Actores: ${x.Actors || ''}*
