@@ -2,7 +2,7 @@
 
 import fetch from 'node-fetch'
 let handler = async (m, {text, usedPrefix, command, conn}) => {
-try {
+
 if (!text) throw `*[❕] Ingrese el nombre de una película*\n\n*❍ EJEMPLO: ${usedPrefix + command} Batman*`
 let a = await fetch(`https://www.omdbapi.com/?t=${text}&apikey=caba8d6f`)
 let x = await a.json()
@@ -14,9 +14,7 @@ let caption = `*⎔┉━「 ${command} 」━┉⎔*\n
 *Actores: ${x.Actors || ''}*`
 conn.fakeReply(m.chat, caption, '0@s.whatsapp.net', '*🔥 THE DORRAT - BOT 🔥*', 'status@broadcast')
 
-} catch {
-await conn.reply(m.chat, '*⚠️ Ocurrio un error, inténtelo de nuevo*', m)}
-
+}
 handler.command = /^(película|pelicula|peli)$/i
 
 export default handler
