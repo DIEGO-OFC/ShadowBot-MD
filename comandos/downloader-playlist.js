@@ -9,10 +9,10 @@ let teks = [...video ].map(v => {
 switch (v.type) {
 case 'video': {
 listSections.push([`${v.title}`, [
-['Video 🎥', `${usedPrefix}ytmp4 ${v.url}`, `descargar: ${v.title} (${v.url})`],
-['Videodoc 🎥', `${usedPrefix}ytmp4doc ${v.url}`, `descargar: ${v.title} (${v.url})`],    
-['Audio 🎧', `${usedPrefix}ytmp3 ${v.url}`, `descargar: ${v.title} (${v.url})`],
-['Audiodoc 🎧', `${usedPrefix}ytmp3doc ${v.url}`, `descargar: ${v.title} (${v.url})`]
+['Video 🎦', `${usedPrefix}ytmp4 ${v.url}`, `descargar: ${v.title} (${v.url})`],
+['Videodoc 🎦', `${usedPrefix}ytmp4doc ${v.url}`, `descargar: ${v.title} (${v.url})`],    
+['Audio 🎵', `${usedPrefix}ytmp3 ${v.url}`, `descargar: ${v.title} (${v.url})`],
+['Audiodoc 🎵', `${usedPrefix}ytmp3doc ${v.url}`, `descargar: ${v.title} (${v.url})`]
 ]])
 }}}).filter(v => v).join('\n\n========================\n\n')
 conn.sendList(m.chat, ' *『 LISTA YOUTUBE  』*', `*📍 Musica relacionada con: ${args.join(" ")}*`, '*📗 Elije una opción y presiona enviar*', '[🔍 𝐑𝐄𝐒𝐔𝐋𝐓𝐀𝐃𝐎𝐒 🔍]', listSections, m)
