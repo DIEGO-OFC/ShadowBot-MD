@@ -129,9 +129,9 @@ let str = `
 ❀••►☪︎ > *<funcion>*
 ❀••►☪︎ => *<funcion>*
 ❀••►☪︎ $ *<funcion>*
-❀••►☪︎ _${usedPrefix}renameplugin <*texto*> / <*texto>_
-❀••►☪︎ _${usedPrefix}getplugin <*nombre*>_
-❀••►☪︎ _${usedPrefix}npmsh <*texto*>_
+❀••►☪︎ _${usedPrefix}renameplugin *<texto>* / *<texto>*_
+❀••►☪︎ _${usedPrefix}getplugin *<nombre>*_
+❀••►☪︎ _${usedPrefix}npmsh *<texto>*_
 ❀••►☪︎ _${usedPrefix}setppbot_
 ❀••►☪︎ _${usedPrefix}backup_
 ❀••►☪︎ _${usedPrefix}cajafuerte_
@@ -193,7 +193,6 @@ throw e
 handler.help = ['menu', 'help', '?']
 
 handler.tags = ['main']
-
 handler.command = /^(soloparaelpropietario|soloparaelpropietario\?)$/i
 
 handler.exp = 50
