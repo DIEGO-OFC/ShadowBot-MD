@@ -43,14 +43,14 @@ let menuA = `
 *┃╭━━━━━━━━━━━━━━━━╾•*
 *┃┃  ❍ ${ucapan()} ❍*
 *┃┣━━━━━━━━━━━━━━━━╾•*
-*┃┃ ▢ CREADOR DEL BOT:  ${creatorname}*
-*┃┃ ▢ NUMERO DEL CREADOR: wa.me/593959425714 (𝐍𝐎 𝐁𝐎𝐓)*
-*┃┃ ▢ VERSION » ${vs}*
-*┃┃ ▢ FECHA » ${week}, ${date}*
-*┃┃ ▢ TIEMPO ACTIVO » ${uptime}*
-*┃┃ ▢ LIBRERIA » ${library}*
-*┃┃ ▢ LENGUAJE » 𝐄𝐒𝐏𝐀𝐍̃𝐎𝐋*
-*┃┃ ▢ USUARIOS » ${Object.keys(global.db.data.users).length}*
+*┃┃ ⋄ CREADOR DEL BOT:  ${creatorname}*
+*┃┃ ⋄ NUMERO DEL CREADOR: wa.me/593959425714 (𝐍𝐎 𝐁𝐎𝐓)*
+*┃┃ ⋄ VERSION » ${vs}*
+*┃┃ ⋄ FECHA » ${week}, ${date}*
+*┃┃ ⋄ TIEMPO ACTIVO » ${uptime}*
+*┃┃ ⋄ LIBRERIA » ${library}*
+*┃┃ ⋄ LENGUAJE » 𝐄𝐒𝐏𝐀𝐍̃𝐎𝐋*
+*┃┃ ⋄ USUARIOS » ${Object.keys(global.db.data.users).length}*
 *┃╰━━━━━━━━━━━━━━━━╾•*
 *╰━━━╼𝐃𝐎𝐑𝐑𝐀𝐓-𝐁𝐎𝐓-𝐌𝐃╾━━━╯*`.trim()
 
@@ -75,13 +75,13 @@ let menuB = `
 ❀••►☪︎ _Bot_ (𝑢𝑠𝑜 𝑠𝑖𝑛 𝑝𝑟𝑒𝑓𝑖𝑗𝑜)
 𒅄 ▬▬▬▬ ◆ ▬▬▬▬ 𒅄
 
-┌──「❗ *REPORTAR COMANDO* 」─
-├➢ _*Reporta con este comando de haber*_
-├➢ _*Fallas para poder Solucionar!!*_
-├┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
-├➢ _${usedPrefix}reporte *texto*_
-├➢ _${usedPrefix}report *texto*_
-*└────ׂ─ׂ─ׂ─ׂ───*
+┣━━━❰･❗ *REPORTAR COMANDO* ･❱━━━┫
+❀••►☪︎ _*Reporta con este comando de haber*_
+❀••►☪︎ _*Fallas para poder Solucionar!!*_
+┣▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+❀••►☪︎ _${usedPrefix}reporte *texto*_
+❀••►☪︎ _${usedPrefix}report *texto*_
+𒅄 ▬▬▬▬ ◆ ▬▬▬▬ 𒅄
 
 ┏━━━━━━━━━━━━━┓
 ┃ *<MINECRAFT SERVER/>*
