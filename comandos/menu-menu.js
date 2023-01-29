@@ -75,7 +75,7 @@ let menuB = `
 ❀••►☪︎ _Bot_ (𝑢𝑠𝑜 𝑠𝑖𝑛 𝑝𝑟𝑒𝑓𝑖𝑗𝑜)
 𒅄 ▬▬▬▬ ◆ ▬▬▬▬ 𒅄
 
-┣━━━❰･❗ *REPORTAR COMANDO* ･❱━━━┫
+┣━━━❰･ *REPORTAR COMANDO ❕* ･❱━━━┫
 ❀••►☪︎ _*Reporta con este comando de haber*_
 ❀••►☪︎ _*Fallas para poder Solucionar!!*_
 ┣▬▬▬▬▬▬▬▬▬▬▬▬▬
@@ -83,13 +83,12 @@ let menuB = `
 ❀••►☪︎ _${usedPrefix}report *texto*_
 𒅄 ▬▬▬▬ ◆ ▬▬▬▬ 𒅄
 
-┏━━━━━━━━━━━━━┓
-┃ *<MINECRAFT SERVER/>*
-║≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋
-┣ • *IP: nodo5.boxmineworld.com*
-┣ • *PUERTO: 4003*
-┣ • *BEDROCK Y JAVA*
-┗━━━━━━━━━━━━━┛
+┣━━━❰･ *MINECRAFT-SETVER 📒* ･❱━━━┫
+┃▬▬▬▬▬▬▬▬
+┣ ⋄ *IP: nodo5.boxmineworld.com*
+┣ ⋄ *PUERTO: 4003*
+┣ ⋄ *BEDROCK Y JAVA*
+𒅄 ▬▬▬▬ ◆ ▬▬▬▬ 𒅄
 
 ┏━━━━━━━━━━━━━┓
 ┃ *<UNE UN BOT A TU GRUPO/>*
@@ -104,27 +103,27 @@ let menuB = `
 ❀••►☪︎_${usedPrefix}bots_
 𒅄 ▬▬▬▬ ◆ ▬▬▬▬ 𒅄
 
-┌──「🌱𝐑𝐏𝐆」─
-├➢${usedPrefix}cazar
-├➢${usedPrefix}aventura
-├➢${usedPrefix}balance
-├➢${usedPrefix}claim
-├➢${usedPrefix}top
-├➢${usedPrefix}heal
-├➢${usedPrefix}cartera
-├➢${usedPrefix}inventory 
-├➢${usedPrefix}levelup
-├➢${usedPrefix}myns
-├➢${usedPrefix}perfil
-├➢${usedPrefix}work
-├➢${usedPrefix}rob <@tag
-├➢${usedPrefix}minar
-├➢${usedPrefix}buy
-├➢${usedPrefix}minardiamantes 
-├➢${usedPrefix}minardorracoins 
-├➢${usedPrefix}transfer <tipo> <cantidad> <@tag
-├➢${usedPrefix}verificar
-├➢${usedPrefix}unreg <numero de serie>
+┣━━━❰･ *RPG ⚔* ･❱━━━┫
+❀••►☪︎ ${usedPrefix}cazar
+❀••►☪︎ ${usedPrefix}aventura
+❀••►☪︎ ${usedPrefix}balance
+❀••►☪︎ ${usedPrefix}claim
+❀••►☪︎ ${usedPrefix}top
+❀••►☪︎ ${usedPrefix}heal
+❀••►☪︎ ${usedPrefix}cartera
+❀••►☪︎ ${usedPrefix}inventory 
+❀••►☪︎ ${usedPrefix}levelup
+❀••►☪︎ ${usedPrefix}myns
+❀••►☪︎ ${usedPrefix}perfil
+❀••►☪︎ ${usedPrefix}work
+❀••►☪︎ ${usedPrefix}rob <@tag
+❀••►☪︎ ${usedPrefix}minar
+❀••►☪︎ ${usedPrefix}buy
+❀••►☪︎ ${usedPrefix}minardiamantes 
+❀••►☪︎ ${usedPrefix}minardorracoins 
+❀••►☪︎ ${usedPrefix}transfer <tipo> <cantidad> <@tag
+❀••►☪︎ ${usedPrefix}verificar
+❀••►☪︎ ${usedPrefix}unreg <numero de serie>
 └────ׂ─ׂ─ׂ─ׂ───
 
 ┌──「🎮𝐆𝐀𝐌𝐄」─
