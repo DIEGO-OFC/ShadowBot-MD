@@ -507,7 +507,7 @@ let menuB = `
 ├➢> *<funcion>*
 ├➢=> *<funcion>*
 ├➢$ *<funcion>*
-├➢_${usedPrefix}renameplugin <*texto*> / <*texto>_
+├➢_${usedPrefix}renameplugin <*texto*> / <*texto*>_
 ├➢_${usedPrefix}getplugin <*nombre*>_
 ├➢_${usedPrefix}npmsh <*texto*>_
 ├➢_${usedPrefix}setppbot_
