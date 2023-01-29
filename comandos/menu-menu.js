@@ -503,50 +503,11 @@ let menuB = `
 ├➢_${usedPrefix}stickerfilter *<efecto> <responder a imagen>*_ 
 └────ׂ─ׂ─ׂ─ׂ───
 
-┌──「💎𝐎𝐖𝐍𝐄𝐑 𝐁𝐎𝐓」─
-├➢> *<funcion>*
-├➢=> *<funcion>*
-├➢$ *<funcion>*
-├➢_${usedPrefix}renameplugin <*texto*> / <*texto*>_
-├➢_${usedPrefix}getplugin <*nombre*>_
-├➢_${usedPrefix}npmsh <*texto*>_
-├➢_${usedPrefix}setppbot_
-├➢_${usedPrefix}backup_
-├➢_${usedPrefix}cajafuerte_
-├➢_${usedPrefix}blocklist_
-├➢_${usedPrefix}block *<@tag>*
-├➢_${usedPrefix}unblock *<@tag>*
-├➢_${usedPrefix}enable *restrict*_
-├➢_${usedPrefix}disable *restrict*_
-├➢_${usedPrefix}enable *autoread*_
-├➢_${usedPrefix}disable *autoread*_
-├➢_${usedPrefix}enable *public*_
-├➢_${usedPrefix}disable *public*_
-├➢_${usedPrefix}enable *pconly*_
-├➢_${usedPrefix}disable *pconly*_
-├➢_${usedPrefix}enable *gconly*_
-├➢_${usedPrefix}disable *gconly*_
-├➢_${usedPrefix}enable *anticall*_
-├➢_${usedPrefix}disable *anticall*_
-├➢_${usedPrefix}enable *antiprivado*_
-├➢_${usedPrefix}disable *antiprivado*_
-├➢_${usedPrefix}msg *<texto>*_
-├➢_${usedPrefix}banchat_
-├➢_${usedPrefix}unbanchat_
-├➢_${usedPrefix}banuser *<@tag>*_
-├➢_${usedPrefix}unbanuser *<@tag>*_
-├➢_${usedPrefix}banuser *<@tag>*_
-├➢_${usedPrefix}bc *<texto>*_
-├➢_${usedPrefix}bcchats *<texto>*_
-├➢_${usedPrefix}bcgc *<texto>*_
-├➢_${usedPrefix}cleartpm_
-├➢_${usedPrefix}restart_
-├➢_${usedPrefix}update_
-├➢_${usedPrefix}traba1_ 
-├➢_${usedPrefix}addprem *<@tag>*_
-├➢_${usedPrefix}delprem *<@tag>*_
-├➢_${usedPrefix}listprem_
-└────ׂ─ׂ─ׂ─ׂ───
+┣━━━❰･ *OWNER 👑* ･❱━━━┫
+❀••►☪︎ PARA VER LOS COMANDOS DE OWNER USE:
+❀••►☪︎ ${usedPrefix}soloparaelpropietario
+𒅄 ▬▬▬▬ ◆ ▬▬▬▬ 𒅄
+
  ━━━━━━━━━━━━━━━━━━━━━━━━━
 ┃𝐃𝐎𝐑𝐑𝐀𝐓-𝐁𝐎𝐓-𝐌𝐃 𝐁𝐘 𝐃𝐈𝐄𝐆𝐎-𝐎𝐅𝐂┃
  ━━━━━━━━━━━━━━━━━━━━━━━━━
