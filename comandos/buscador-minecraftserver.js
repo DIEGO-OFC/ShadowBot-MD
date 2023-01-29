@@ -40,10 +40,10 @@ let handler = async (m, { conn, args, usedPrefix, DevMode }) => {
                     })
                     break
                 default:
-                    return conn.reply(m.chat, `Gunakan format ${usedPrefix}server <bedrock | java> <ip> <port>\ncontoh penggunaan: *${usedPrefix}server bedrock play.nethergames.org 19132*`.trim(), m)
+                    return conn.reply(m.chat, `Formato de uso: ${usedPrefix}server <bedrock | java> <ip> <port>\nEjemplo: *${usedPrefix}server bedrock play.nethergames.org 19132*`.trim(), m)
         }
     } catch (e) {
-        conn.reply(m.chat, `Gunakan format ${usedPrefix}server <bedrock | java> <ip> <port>\ncontoh penggunaan: *${usedPrefix}server bedrock play.nethergames.org 19132*`.trim(), m)
+        conn.reply(m.chat, `Formato de uso: ${usedPrefix}server <bedrock | java> <ip> <port>\nEjemplo: *${usedPrefix}server bedrock play.nethergames.org 19132*`.trim(), m)
         console.log(e)
         if (DevMode) {
             for (let jid of global.owner.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').filter(v => v != conn.user.jid)) {
