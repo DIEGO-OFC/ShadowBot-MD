@@ -124,7 +124,7 @@ let menuB = `
 ❀••►☪︎ ${usedPrefix}transfer <tipo> <cantidad> <@tag
 ❀••►☪︎ ${usedPrefix}verificar
 ❀••►☪︎ ${usedPrefix}unreg <numero de serie>
-└────ׂ─ׂ─ׂ─ׂ───
+𒅄 ▬▬▬▬ ◆ ▬▬▬▬ 𒅄
 
 ┌──「🎮𝐆𝐀𝐌𝐄」─
 ├➢${usedPrefix}suitpvp <@tag>
@@ -548,7 +548,7 @@ let menuB = `
 ┃𝐃𝐎𝐑𝐑𝐀𝐓-𝐁𝐎𝐓-𝐌𝐃 𝐁𝐘 𝐃𝐈𝐄𝐆𝐎-𝐎𝐅𝐂┃
  ━━━━━━━━━━━━━━━━━━━━━━━━━
 `.trim()
-conn.sendButton(m.chat, menuA, menuB, db, [
+conn.sendButton(m.chat, menuA, menuB, wm3, db, [
 ['𝗠𝗘𝗡𝗨 𝗔𝗨𝗗𝗜𝗢𝗦', `#audios`],
 ['𝗚𝗥𝗨𝗣𝗢𝗦', `#grupos`]], m)}
 /*const sections = [
