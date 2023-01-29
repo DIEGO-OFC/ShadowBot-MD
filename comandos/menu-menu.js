@@ -63,17 +63,17 @@ let menuB = `
 *║🪙 DORRAT-COINS ➟ ${dorracoins}*
 *╰══*═════════════ *✧*
 
-┌──「📦𝐈𝐍𝐅𝐎𝐑𝐌𝐀𝐂𝐈𝐎𝐍」─
-├➢ _${usedPrefix}grupos_
-├➢ _${usedPrefix}estado_
-├➢ _${usedPrefix}terminos_
-├➢ _${usedPrefix}instalarbot_
-├➢ _${usedPrefix}infobot_
-├➢ _${usedPrefix}grouplist_
-├➢ _${usedPrefix}owner_
-├➢ _${usedPrefix}script_
-├➢ _Bot_ (𝑢𝑠𝑜 𝑠𝑖𝑛 𝑝𝑟𝑒𝑓𝑖𝑗𝑜)
-└────ׂ─ׂ─ׂ─ׂ───
+┣━━━❰･ *Información 👨‍💻* ･❱━━━┫
+❀••►☪︎ _${usedPrefix}grupos_
+❀••►☪︎ _${usedPrefix}estado_
+❀••►☪︎ _${usedPrefix}terminos_
+❀••►☪︎ _${usedPrefix}instalarbot_
+❀••►☪︎ _${usedPrefix}infobot_
+❀••►☪︎ _${usedPrefix}grouplist_
+❀••►☪︎ _${usedPrefix}owner_
+❀••►☪︎ _${usedPrefix}script_
+❀••►☪︎ _Bot_ (𝑢𝑠𝑜 𝑠𝑖𝑛 𝑝𝑟𝑒𝑓𝑖𝑗𝑜)
+𒅄 ▬▬▬▬ ◆ ▬▬▬▬ 𒅄
 
 ┌──「❗ *REPORTAR COMANDO* 」─
 ├➢ _*Reporta con este comando de haber*_
@@ -98,11 +98,11 @@ let menuB = `
 ┣ ➱_*minimo 30 miembros*_
 ┗━━━━━━━━━━━━━┛
 
-┌──「🖥️𝐒𝐄𝐑𝐁𝐎𝐓 - 𝐉𝐀𝐃𝐈𝐁𝐎𝐓」─
-├➢_${usedPrefix}serbot_
-├➢_${usedPrefix}stop_
-├➢_${usedPrefix}bots_
-└────ׂ─ׂ─ׂ─ׂ───
+┣━━━❰･ *Jadibot 🤖* ･❱━━━┫
+❀••►☪︎_${usedPrefix}serbot_
+❀••►☪︎_${usedPrefix}stop_
+❀••►☪︎_${usedPrefix}bots_
+𒅄 ▬▬▬▬ ◆ ▬▬▬▬ 𒅄
 
 ┌──「🌱𝐑𝐏𝐆」─
 ├➢${usedPrefix}cazar
