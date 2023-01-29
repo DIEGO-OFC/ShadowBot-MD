@@ -16,7 +16,7 @@ if (!args[2]) throw `• example:
 let from = args[0]
 let to = args[2]
 
-let ar = Object.keys(plugins)
+let ar = Object.keys(comandos)
     let ar1 = ar.map(v => v.replace('.js', ''))
     if (!ar1.includes(args[0])) return m.reply(`*🔴 NO ENCONTRADO!*\n==================================\n\n${ar1.map(v => ' ' + v).join`\n`}`)
 await fs.renameSync(`./comandos/${from}.js`, `./comandos/${to}.js`)
