@@ -1,6 +1,6 @@
 import fetch from 'node-fetch'
 let handler = async (m, { conn, args }) => {
-   response = args.join(' ').split('|')
+ let response = args.join(' ').split('|')
   if (!args[0]) throw 'Masukkan Parameter'
   m.reply('*[ ❗ ] Wait,Proses...*')
   let res = `https://api.zeks.xyz/api/wolflogo?apikey=apivinz&text1=${response[0]}&text2=${response[1]}`
