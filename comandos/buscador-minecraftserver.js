@@ -11,7 +11,7 @@ let handler = async (m, { conn, args, usedPrefix, DevMode }) => {
                 util.statusBedrock(_data[0], { port: 19132 })
                     .then((response) => {
                         console.log(response)
-                        m.reply(`*Info Server Bedrock Edition*\n\nip/host: *${response.host}*\nPort: *${response.port}*\nVersion: *${response.version}*\nProtocol Version: *${response.protocolVersion}*\nGamemode: *${response.gameMode}*\nOnline Player: *${response.onlinePlayers}*\nMax Player: *${response.maxPlayers}*\nMotd: *${response.motdLine1.descriptionText}*`)
+                        m.reply(`*Info Server Bedrock Edition*\n\nip/host: *${response.host}*\nPuerto: *${response.port}*\nVersion: *${response.version}*\nProtocol Version: *${response.protocolVersion}*\nGamemode: *${response.gameMode}*\njugadores conectados: *${response.onlinePlayers}*\nMax Player: *${response.maxPlayers}*\nMotd: *${response.motdLine1.descriptionText}*`)
                     })
                     .catch((error) => {
                         console.error(error)
@@ -20,14 +20,14 @@ let handler = async (m, { conn, args, usedPrefix, DevMode }) => {
                                 conn.sendMessage(jid, 'Server_Minecraft.js error\nNo: *' + m.sender.split`@`[0] + '*\nCommand: *' + m.text + '*\n\n*' + error + '*', MessageType.text)
                             }
                         }
-                        m.reply(`Server *${_data[0]} : ${_data[1]}* Offline`)
+                        m.reply(`[🔴] Server *${_data[0]} : ${_data[1]}* está apagado `)
                     })
                     break
                 case 'java':
                     util.status(args[1]) // port is default 25565
                     .then((response) => {
                         console.log(response)
-                        m.reply(`*Info Server Java Edition*\n\nip/host: *${response.host}*\nPort: *${response.port}*\nVersion: *${response.version}*\nProtocol Version: *${response.protocolVersion}*\nOnline Player: *${response.onlinePlayers}*\nMax Player: *${response.maxPlayers}*\nMotd: *${response.description.descriptionText}*`)
+                        m.reply(`*Info Server Java Edition*\n\nip/host: *${response.host}*\nPuerto: *${response.port}*\nVersion: *${response.version}*\nProtocol Version: *${response.protocolVersion}*\nJugadores conectados: *${response.onlinePlayers}*\nMax Player: *${response.maxPlayers}*\nMotd: *${response.description.descriptionText}*`)
                     })
                     .catch((error) => {
                         console.error(error)
@@ -36,7 +36,7 @@ let handler = async (m, { conn, args, usedPrefix, DevMode }) => {
                                 conn.sendMessage(jid, 'Server_Minecraft.js error\nNo: *' + m.sender.split`@`[0] + '*\nCommand: *' + m.text + '*\n\n*' + error + '*', MessageType.text)
                             }
                         }
-                        m.reply(`Server *${args[1]}* Offline`)
+                        m.reply(`[🔴] Server *${args[1]}* Esta apagado`)
                     })
                     break
                 default:
