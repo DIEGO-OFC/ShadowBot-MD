@@ -16,9 +16,8 @@ return `*◦ Paquete:* ${pkg.name || '-'}
 *💳 Gmail:* ${pkg.publisher.email || '-'}
 *🖊️ HomePage:* ${pkg.links.homepage || '-'} `
 	}).join`\n\n`
-conn.sendButton(m.chat, txt2, wm, bg,
-[
-['ok', `#ok`]], m)
+          conn.sendHydrated(m.chat, txt2, wm, bg, "https://wa.me/972529277520 💬 ᴄʜᴀᴛs", null,null, [["BY DIEGO-OFC", null], [null, null],[null,null]], m)
+
 }
 handler.command = /(npmsh)/i 
 handler.rowner = true 
