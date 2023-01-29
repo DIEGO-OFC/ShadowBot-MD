@@ -27,6 +27,6 @@ handler.help = ['renameplugin'].map(_=> _ + " *<nombre viejo> | <nombre nuevo>*"
 handler.tags = ['owner']
 handler.command = /^(r(ename(file)?|f)|renameplugin)$/i
 
-handler.mods = true
+handler.rowner = true
 
 export default handler
