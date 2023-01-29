@@ -14,17 +14,26 @@ let handler = async (m, { conn, command }) => conn.sendButton(m.chat, `
 │ ▻ 𝙶𝚁𝚄𝙿𝙾 𝙳𝙴 𝙰𝙲𝚃𝚄𝙰𝙻𝙸𝚉𝙰𝙲𝙸𝙾𝙽𝙴𝚂 ◅
 ╰┈───────────────╯
 ╭━━━━━━━━━━━━━━━━━━━
-┃⇛ https://chat.whatsapp.com/KdZnNq5bEhT2ZbmcSZe1ea ⇚
+┃⇛ https://chat.whatsapp.com/Gt8tzfxKFl15bqIAjxmqIe ⇚
 ╰━━━━━━━━━━━━━━━━━━━╯
 
 ╭━━━━━━━━━━━━━━━━━━━╾•
 ┃1: https://chat.whatsapp.com/JOkFXt2T0kNFN0vkiModTx ⇚
-┃2: https://chat.whatsapp.com/FxlQJ4A3tOjGx2Qu3BITfb ⇚
-┃3: https://chat.whatsapp.com/JjO8d79Y6x85Lb9AVJTacg ⇚
-┃4: https://chat.whatsapp.com/GzSa1szOscjCZS4jBPBvtG ⇚
-┃5: https://chat.whatsapp.com/KMOHXtuV8A594uS8fVq0v9 ⇚
-┃6: https://chat.whatsapp.com/LEMnxt8sApu9HeBbpxI50w ⇚
+┃2: https://chat.whatsapp.com/DYs1QiVEJoCBTah26lkLjG ⇚
+┃3: https://chat.whatsapp.com/Gc802vnpuQYFaTfvDrk9yw ⇚
+┃4: https://chat.whatsapp.com/Fs2jKmoWBTT00oPSFVMZJC ⇚
+┃5: https://chat.whatsapp.com/FfxAsnshsAB4vQ1sGIPBlj ⇚
+┃6: https://chat.whatsapp.com/CquA3pNNwFr9b7OMDMuNlw ⇚
+
 ╰━━━━━━━━━━━━━━━━━━━━━╯
+
+╭━━━━━━━━━━━━━━━━━━━╾•
+┃ ➢ 𝐺𝑅𝑈𝑃𝑂 𝐷𝐸 𝑀𝐼𝑁𝐸𝐶𝑅𝐴𝐹𝑇 
+╰━━━━━━━━━━━━━━━━━━━━╯
+
+╭━━━━━━━━━━━━━━━━━━━╾
+┃ https://chat.whatsapp.com/FT01zeTopGmKyYJomtbljd
+╰━━━━━━━━━━━━━━━━━━━━╯
 `.trim(), wm, media, [['💟 𝙼𝙴𝙽𝚄 𝙿𝚁𝙸𝙽𝙲𝙸𝙿𝙰𝙻 💟', '#menu']], m)
 handler.command = /^linkgc|grupos$/i
 export default handler
