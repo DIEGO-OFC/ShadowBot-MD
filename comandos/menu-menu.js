@@ -379,6 +379,7 @@ let menuB = `
 └────ׂ─ׂ─ׂ─ׂ──
 
 ┌「🔍𝐁𝐮𝐬𝐜𝐚𝐫」
+├➢_${usedPrefix}server IP \ puerto
 ├➢_${usedPrefix}apkpure <*texto*>
 ├➢_${usedPrefix}covid <*país*>
 ├➢_${usedPrefix}playstore <*texto*>
