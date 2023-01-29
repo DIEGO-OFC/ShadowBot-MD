@@ -8,6 +8,10 @@
 <img src="https://github.com/DIEGO-OFC/DORRAT-BOT-MD/blob/main/galeria/dorrat-imagen.jpg" alt="DORRAT-BOT-MD" width="900"/>
 </p>
 
+### `—◉ ❤️BOTS OFICIALES`
+
+<a href="http://wa.me/50371527687" target="blank"><img src="https://img.shields.io/badge/BOT-OFICIAL.1️⃣-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
+
 `—◉ DUDAS SOBRE EL BOT?, CONTACTANOS ✨`
 
 <a href="http://wa.me/593959425714" target="blank"><img src="https://img.shields.io/badge/DIEGO_OFC_CREADOR-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
@@ -29,12 +33,6 @@
 ## `[🗂️] Página del bot`
 
 <a href="https://sites.google.com/view/dorratbotmd/inicio" target="_blank"> <img src="https://img.shields.io/badge/-pagina aqui-%23E4405F?style=for-the-badge&logo=página aqui&logoColor=black" target="_blank"></a> 
-
-### `—◉ ❤️BOTS OFICIALES`
-
-<a href="http://wa.me/573122695406" target="blank"><img src="https://img.shields.io/badge/BOT-OFICIAL.1️⃣-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
-
-<a href="http://wa.me/5493534267295" target="blank"><img src="https://img.shields.io/badge/BOT-OFICIAL.2️⃣-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
 
 > [⚠️] USAR LOS BOTS SIN SPAM
 
