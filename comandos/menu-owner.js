@@ -167,7 +167,7 @@ let str = `
 ❀••►☪︎ _${usedPrefix}addprem *<@tag>*_
 ❀••►☪︎ _${usedPrefix}delprem *<@tag>*_
 ❀••►☪︎ _${usedPrefix}listprem_
-𒅄 ▬▬▬▬ ◆ ▬▬▬▬ 𒅄
+𒅄 ▬▬▬▬ ◆ ▬▬▬▬ 𒅄`
 
 //await conn.sendFile(m.chat, vn, 'ja.mp3', null, m, true, {
 
