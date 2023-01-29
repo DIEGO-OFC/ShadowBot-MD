@@ -454,6 +454,8 @@ let menuB = `
 
 
 ┌──「🛠️𝐇𝐄𝐑𝐑𝐀𝐌𝐈𝐄𝐍𝐓𝐀𝐒」─
+├➢_${usedPrefix}ofuscar *<código>*
+├➢_${usedPrefix}reenviar *<responder a un mensaje>*
 ├➢_${usedPrefix}copy *<texto>*
 ├➢_${usedPrefix}chatgpt *<texto>*
 ├➢_${usedPrefix}morse *<texto>*
