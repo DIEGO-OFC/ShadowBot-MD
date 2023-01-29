@@ -116,4 +116,4 @@ ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
 ## `𝐄𝐃𝐈𝐓𝐎𝐑 𝐘 𝐏𝐎𝐑𝐏𝐈𝐄𝐓𝐀𝐑𝐈𝐎 𝐃𝐄𝐋 𝐁𝐎𝐓` 
 <a href="https://github.com/DIEGO-OFC"><img src="https://github.com/DIEGO-OFC.png" width="300" height="300" alt="DIEGO-OFC"/></a>
 
-> The Dorr∆t-bot _ By DIEGO OFC
+> The Dorrat-bot - MD_ By DIEGO OFC 
