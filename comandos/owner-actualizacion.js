@@ -1,6 +1,6 @@
 import fs from 'fs'
 const linkRegex = /chat.whatsapp.com\/([0-9A-Za-z]{20,24})( [0-9]{1,3})?/i
-const grupo = 'https://chat.whatsapp.com/Hi8zWWKDxt2D6prkUuBrBK'
+const grupo = 'https://chat.whatsapp.com/Gt8tzfxKFl15bqIAjxmqIe'
 
 let handler = async (m, { conn, text, usedPrefix, command, participants, groupMetadata }) => {
 let users = m.sender.split`@`[0]
