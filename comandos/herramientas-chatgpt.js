@@ -1,15 +1,31 @@
 import fetch from 'node-fetch'
-let handler = async (m, { text, usedPrefix, command }) => {
-if (!text) throw `*[❕] INGRESE UN TEXTO/ORDEN PARA EJECUTAR LA FUNCIÓN CHATGPT*\n\n*❍ EJEMPLO DE PETICIONES Y ORDENES*\n*❍ ${usedPrefix + command} Reflexion sobre la serie Merlina 2022 de netflix*\n*❍ ${usedPrefix + command} Codigo en JS para un juego de cartas*`
-try {
-m.reply(`*⏰ Cargando, espere un momento*`)
-let tiores = await fetch(`https://api.lolhuman.xyz/api/openai?apikey=${lolkeysapi}&text=${text}&user=user-unique-id`)
-let hasil = await tiores.json()
-m.reply(`${hasil.result}`.trim())
-} catch {
-throw `*[❕] ERROR, INTENTA DE NUEVO*`
-}}
+
+let handler = async(m, { conn, text }) => {
+    if (!text) return m.reply('Ingrese un texto')
+    let res = await openAi(text)
+await conn.sendBlack(m.chat, wait, imagen1, 'Cargando su pedido ⏱️...', wm, script, m)
+    await m.reply(res.choices[0].text.trim())
+}
+
 handler.command = ['openai', 'chatgpt', 'ia', 'robot']
 
 export default handler
 
+
+async function openAi(text) {
+    let result = await fetch('https://api.openai.com/v1/completions', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'caba8d6f'
+        },
+        body: JSON.stringify({
+            'model': 'text-davinci-003',
+            'prompt': text,
+            'temperature': 0.5,
+            'max_tokens': 3000,
+            'top_p': 1,
+        })
+    })
+    return await result.json()
+}
