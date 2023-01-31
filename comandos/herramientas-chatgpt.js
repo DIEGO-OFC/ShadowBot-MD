@@ -3,7 +3,7 @@ import fetch from 'node-fetch'
 let handler = async(m, { conn, text }) => {
     if (!text) return m.reply('Ingrese un texto')
     let res = await openAi(text)
-await conn.sendBlack(m.chat, wait, imagen1, 'Cargando su pedido ⏱️...', wm, script, m)
+m.reply('Cargando su pedido ⏱️...')
     await m.reply(res.choices[0].text.trim())
 }
 
