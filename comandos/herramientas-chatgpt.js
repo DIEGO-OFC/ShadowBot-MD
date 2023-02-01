@@ -1,31 +1,25 @@
-import fetch from 'node-fetch'
-
-let handler = async(m, { conn, text }) => {
-    if (!text) return m.reply('Ingrese un texto')
-    let res = await openAi(text)
-m.reply('Cargando su pedido ⏱️...')
-    await m.reply(res.choices[0].text.trim())
-}
-
-handler.command = ['openai', 'chatgpt', 'ia', 'robot']
+import { Configuration, OpenAIApi } from "openai";
+let handler = async (m, { conn, text, usedPrefix, command }) => {
+if (!text) throw `Contoh:\n${usedPrefix + command} Apa itu OpenAI`
+const configuration = new Configuration({
+    apiKey: "" //api key bisa didapatkan dari https://openai.com/api/
+});
+const openai = new OpenAIApi(configuration);
+        const response = await openai.createCompletion({
+            model: "text-davinci-003",
+            prompt: text,
+            temperature: 0,
+            max_tokens: 3000,
+            top_p: 1,
+            frequency_penalty: 0.5,
+            presence_penalty: 0
+        });
+            m.reply(response.data.choices[0].text)
+    }
+handler.help = ['ai <pertanyaan>']
+handler.tags = ['ai']
+handler.command = /^(ai)$/i
+handler.limit = false
+handler.register = true
 
 export default handler
-
-
-async function openAi(text) {
-    let result = await fetch('https://api.openai.com/v1/completions', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-            'Authorization': 'caba8d6f'
-        },
-        body: JSON.stringify({
-            'model': 'text-davinci-003',
-            'prompt': text,
-            'temperature': 0.5,
-            'max_tokens': 3000,
-            'top_p': 1,
-        })
-    })
-    return await result.json()
-}
