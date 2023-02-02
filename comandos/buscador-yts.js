@@ -18,7 +18,7 @@ let handler = async (m, { conn, text }) => {
       switch (resultado.type) {
         case "video":
           return `
-*Titulo ∙* ${resultado.title}_*
+*Titulo ∙* ${resultado.title}
 *Link ∙* ${resultado.url}
 *Duracion ∙* ${resultado.timestamp}
 *Publicado ∙* ${resultado.ago}
