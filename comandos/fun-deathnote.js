@@ -1,4 +1,4 @@
-import*as e from"fs";let handler=async(a,{conn:n,text:t,participants:r, usedPrefix, command:i})=>{if(!t)return a.reply(`*[ ! ] Agrege una razon para la ejecuci\xf3n*
+import*as e from"fs";let handler=async(a,{conn:n,text:t,participants:r, usedPrefix, command})=>{if(!t)return a.reply(`*[ ! ] Agrege una razon para la ejecuci\xf3n*
 Ejemplo: 
 
 ${usedPrefix + command} Hoy muere un random :v
