@@ -7,9 +7,9 @@ let handler = async (m, { conn, args, isAdmin, participants, isOwner }) => {
        throw false 
      } 
    } 
-   let id = args && /.*@g.us/.test(args[0]) ? args[0] : m.chat 
-   let online = [...Object.keys(conn.reply(participants).presences), conn.user.jid] 
-   conn.reply(m.chat, '┌「 *Daftar Wibu* 」\n' + online.map(v => '├ @' + v.replace(/@.+/, '')).join`\n` + '\n└────', m, { 
+     let id = args && /\d+\-\d+@g.us/.test(args[0]) ? args[0] : m.chat
+  let online = [...Object.keys(conn.chats.get(id).presences), conn.user.jid]
+ conn.reply(m.chat, '┌「 *Daftar Wibu* 」\n' + online.map(v => '├ @' + v.replace(/@.+/, '')).join`\n` + '\n└────', m, { 
      contextInfo: { mentionedJid: online } 
    }) 
  } 
