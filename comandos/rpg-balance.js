@@ -3,7 +3,7 @@ let who
 if (m.isGroup) who = m.mentionedJid[0] ? m.mentionedJid[0] : m.sender
 else who = m.sender
 let name = conn.getName(who) 
-Let bank = `
+let bank = `
 ╭━━━━━━ 𝐁𝐀𝐍𝐂𝐎 🏦 ━━━╾•
 ❍ *Nombre:* ${name}
 ❍ *Diamantes:* ${global.db.data.users[who].limit}💎
