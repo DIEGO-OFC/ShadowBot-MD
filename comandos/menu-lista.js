@@ -23,7 +23,7 @@ wm = global.wm
 vs = global.vs
 
 let pareja = global.db.data.users[m.sender].pasangan
-let { exp, limit, dorracoins, level, role } = global.db.data.users[m.sender]
+let { exp, limit, dolares, level, role } = global.db.data.users[m.sender]
 let { min, xp, max } = xpRange(level, global.multiplier)
 //let name = await conn.getName(m.sender)
 
@@ -94,8 +94,8 @@ text: `
 *┃┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈*
 *┃ 🔰 ▢ ${taguser}*
 *┃┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈*
-*┃ 🪙 ▢ DORRAT-COINS:*
-*┃ 🪙 ▢ ${dorracoins}*
+*┃ 🪙 ▢ DOLARES:*
+*┃ 🪙 ▢ ${dolares}*
 *┃┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈*
 *┃ ⏱️ ▢ Hora:*
 *┃ ⌚ ▢ ${time}*   
