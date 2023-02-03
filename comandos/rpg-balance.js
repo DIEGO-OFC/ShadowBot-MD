@@ -3,19 +3,21 @@ let who
 if (m.isGroup) who = m.mentionedJid[0] ? m.mentionedJid[0] : m.sender
 else who = m.sender
 let name = conn.getName(who) 
-m.reply(`
+Let bank = `
 ╭━━━━━━ 𝐁𝐀𝐍𝐂𝐎 🏦 ━━━╾•
 ❍ *Nombre:* ${name}
 ❍ *Diamantes:* ${global.db.data.users[who].limit}💎
 ❍ *Tokens:* ${global.db.data.users[who].joincount}☯️
 ❍ *Dólares:* $${global.db.data.users[who].dolares} 💸
-╰━━━━━━━━━━━━━━━━╾•
+╰━━━━━━━━━━━━━━━━╾•`.trim()
+let bank2 = `
 *𝙽𝙾𝚃𝙰:* 
 *PUEDES COMPRAR USANDO LOS COMANDOS:*
 ❏ *${usedPrefix}buy <cantidad>*
-❏ *${usedPrefix}buyall*
-
-${wm3}`)
+❏ *${usedPrefix}buyall*`.trim()
+conn.sendButton(m.chat, bank, bank2, wm3,
+[
+['𝙼𝙴𝙽𝚄', `#menusimple`]], m)
 }
 handler.help = ['bal']
 handler.tags = ['xp']
