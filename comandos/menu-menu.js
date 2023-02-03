@@ -60,7 +60,7 @@ let menuB = `
 *║🧰 EXPERIENCIA ➟ ${exp}*
 *║⚓ RANGO ➟* ${role}*
 *║💎 DIAMANTES ➟ ${limit}*
-*║💵 DOLARES ➟ ${dolares}*
+*║💸 DOLARES ➟ ${dolares}*
 *╰══*═════════════ *✧*
 
 ┣━━━❰･ *Información 👨‍💻* ･❱━━━┫
