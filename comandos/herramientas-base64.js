@@ -1,3 +1,5 @@
+
+
 let handler = async (m, { args }) => {
   if (m.quoted && m.quoted.text) {
     if (/^enc(rypt)?$/i.test(args[0])) m.reply(Buffer.from(m.quoted.text, 'utf-8').toString('base64'))
