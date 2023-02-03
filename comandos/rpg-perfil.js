@@ -4,7 +4,7 @@ import { createHash } from 'crypto'
 import PhoneNumber from 'awesome-phonenumber'
 import fetch from 'node-fetch'
 let handler = async (m, { conn, usedPrefix, participants }) => {
-let { dorracoins, joincount } = global.db.data.users[m.sender]
+let { dolares, joincount } = global.db.data.users[m.sender]
 let { exp, limit, level, role } = global.db.data.users[m.sender]
 let { min, xp, max } = xpRange(level, global.multiplier)
 let rtotalreg = Object.values(global.db.data.users).filter(user => user.registered == true).length 
