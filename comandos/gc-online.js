@@ -8,7 +8,7 @@ let handler = async (m, { conn, args, isAdmin, participants, isOwner }) => {
      } 
    } 
      let id = args && /\d+\-\d+@g.us/.test(args[0]) ? args[0] : m.chat
-  let online = [...Object.keys(conn.chats(id).presences), conn.user.jid]
+  let online = [...Object.keys(conn.reply(id).presences), conn.user.jid]
  conn.reply(m.chat, '┌「 *Daftar Wibu* 」\n' + online.map(v => '├ @' + v.replace(/@.+/, '')).join`\n` + '\n└────', m, { 
      contextInfo: { mentionedJid: online } 
    }) 
