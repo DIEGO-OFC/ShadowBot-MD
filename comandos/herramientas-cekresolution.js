@@ -17,9 +17,9 @@ let height = await source.getHeight()
 let width = await source.getWidth()
 
 m.reply(`_*RESOLUTION :*_ ${width} x ${height}
-> ᴡɪᴅᴛʜ : ${width}
-> ʜᴇɪɢʜᴛ : ${height}
-> ʟɪɴᴋ : ${link}`)
+> Ancho : ${width}
+> Altura : ${height}
+> Link: ${link}`)
 }
 handler.help = ['cekresolution <reply | caption>', 'cekreso <reply | caption>']
 handler.tags = ['tool']
