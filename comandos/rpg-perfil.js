@@ -26,7 +26,7 @@ let str = `
 *🔗 LINK:* wa.me/${who.split`@`[0]}${registered ? '\n*𝙴𝙳𝙰𝙳:* ' + age + ' años' : ''}
 *🎖️ NIVEL:* ${level}
 *⚓ RANGO:* ${role}
-*🔰 DORRATCOINS*: ${dorracoins}
+*💸 DOLARES*: ${dolares}
 *🎉 EXPERIENCIA/XP:* ${xp}
 *☯️ TOKENS:* ${joincount}
 *💎 DIAMANTES:* ${limit}
