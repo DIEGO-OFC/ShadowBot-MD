@@ -7,8 +7,8 @@ import { en, es, pt } from './lib/idiomas/total-idiomas.js'
 
 //cambia los números que sean propietarios 
 global.owner = [
-  ['593959425714', '🔰 𝐃𝐈𝐄𝐆𝐎 - 𝐂𝐑𝐄𝐀𝐃𝐎𝐑 🔰', true],
-  ['51993138466', '🔰  𝐃𝐎𝐑𝐑𝐀𝐓∆𝐁𝐎𝐓 - 𝙲𝙾𝙻𝙻𝙰𝙱𝙾𝚁𝙰𝚃𝙾𝚁 1 🔰', true],
+  ['16023693070', '🔰 𝐓𝐎𝐌𝐘 - 𝐂𝐑𝐄𝐀𝐃𝐎𝐑 🔰', true],
+  ['50249281005', '🔰  𝐃𝐎𝐑𝐑𝐀𝐓∆𝐁𝐎𝐓 - 𝙲𝙾𝙻𝙻𝙰𝙱𝙾𝚁𝙰𝚃𝙾𝚁 1 🔰', true],
   ['573184314110', '🔰 𝐃𝐎𝐑𝐑𝐀𝐓∆𝐁𝐎𝐓 - 𝙲𝙾𝙻𝙻𝙰𝙱𝙾𝚁𝙰𝚃𝙾𝚁 3 🔰', true],
   ['50246028932', '🔰  𝐃𝐎𝐑𝐑𝐀𝐓∆𝐁𝐎𝐓 - 𝙲𝙾𝙻𝙻𝙰𝙱𝙾𝚁𝙰𝚃𝙾𝚁 4 🔰', true],
   ['51936767238'],
@@ -104,7 +104,7 @@ global.wm3 = db3t
 global.igfg = '𝑫𝑶𝑹𝑹𝑨𝑻-𝑩𝑶𝑻'
 global.wait = '*[❕] CARGANDO POR FAVOR ESPERA...*'
 //-------------------
-global.md = 'https://chat.whatsapp.com/JOkFXt2T0kNFN0vkiModTx'
+global.md = 'https://chat.whatsapp.com/GbuoAehVzZU1VWCZL1mhO1'
 global.dorramd = md
 
 global.yt = 'http://youtube.com/@diegogameplays82'
