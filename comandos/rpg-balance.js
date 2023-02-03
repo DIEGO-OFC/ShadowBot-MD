@@ -6,7 +6,7 @@ let name = conn.getName(who)
 let db = './galeria/menudorrat3.jpg'
 let bank = `╭━━━━━━ 𝐁𝐀𝐍𝐂𝐎 🏦 ━━━╾•
 ❍ *Nombre:* ${name}
-❍ *Diamantes:*  ${global.db.data.users[who].limit} 💎
+❍ *Diamantes:* ${global.db.data.users[who].limit} 💎
 ❍ *Tokens:* ${global.db.data.users[who].joincount} ☯️
 ❍ *Dólares:* $${global.db.data.users[who].dolares} 💸
 ╰━━━━━━━━━━━━━━━━╾•`.trim()
