@@ -6,7 +6,7 @@ let handler = async (m, { conn, usedPrefix }) => {
 	
 let q = m.quoted ? m.quoted : m
 let mime = (q.msg || q).mimetype || ''
-if (!mime) throw "where the media?"
+if (!mime) throw "*[❕] POR FAVOR RESPONDE A UNA IMAGEN*"
 
 let media = await q.download()
 let isMedia = /image\/(png|jpe?g|gif)|video\/mp4/.test(mime)
