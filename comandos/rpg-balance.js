@@ -3,8 +3,8 @@ let who
 if (m.isGroup) who = m.mentionedJid[0] ? m.mentionedJid[0] : m.sender
 else who = m.sender
 let name = conn.getName(who) 
-let bank = `
-╭━━━━━━ 𝐁𝐀𝐍𝐂𝐎 🏦 ━━━╾•
+Let db = './galeria/menudorrat3.jpg'
+let bank = `╭━━━━━━ 𝐁𝐀𝐍𝐂𝐎 🏦 ━━━╾•
 ❍ *Nombre:* ${name}
 ❍ *Diamantes:* ${global.db.data.users[who].limit}💎
 ❍ *Tokens:* ${global.db.data.users[who].joincount}☯️
@@ -15,7 +15,7 @@ let bank2 = `
 *PUEDES COMPRAR USANDO LOS COMANDOS:*
 ❏ *${usedPrefix}buy <cantidad>*
 ❏ *${usedPrefix}buyall*`.trim()
-conn.sendButton(m.chat, bank, bank2, wm3,
+conn.sendButton(m.chat, bank, bank2, db,
 [
 ['𝙼𝙴𝙽𝚄', `#menusimple`]], m)
 }
