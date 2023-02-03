@@ -34,7 +34,7 @@ export async function handler(chatUpdate) {
         if (!m)
             return
         m.exp = 0
-        m.dorracoins = false
+        m.dolares = false
         m.bitcoins = false
         m.limit = false
         try {
@@ -48,7 +48,7 @@ export async function handler(chatUpdate) {
 		if (!('premium' in user)) user.premium = false
 		if (!isNumber(user.joincount)) user.joincount = 2
                 if (!isNumber(user.bitcoins)) user.bitcoins = 10
-                if (!isNumber(user.dorracoins)) user.dorracoins = 20    	    
+                if (!isNumber(user.dorracoins)) user.dolares = 20    	    
                 if (!isNumber(user.limit)) user.limit = 20    	       
                 if (!('registered' in user)) user.registered = false
                     
@@ -342,11 +342,11 @@ export async function handler(chatUpdate) {
               if (!isNumber(user.lelebakar)) user.lelebakar = 0
               if (!isNumber(user.leleg)) user.leleg = 0
               if (!isNumber(user.level)) user.level = 0
-              if (!isNumber(user.dorracoins)) user.dorracoins = 20
+              if (!isNumber(user.dolares)) user.dolares = 20
               if (!isNumber(user.bitcoins)) user.bitcoins = 10
               if (!isNumber(user.limit)) user.limit = 20
               if (!isNumber(user.limitjoinfree)) user.limitjoinfree = 1
-              if (!isNumber(user.dorracoinsjoinfree)) user.dorracoinsjoinfree = 1
+              if (!isNumber(user.dolaresjoinfree)) user.dolaresjoinfree = 1
               if (!isNumber(user.lion)) user.lion = 0
               if (!isNumber(user.lionexp)) user.lionexp = 0
               if (!isNumber(user.lionlastfeed)) user.lionlastfeed = 0
@@ -631,7 +631,7 @@ export async function handler(chatUpdate) {
                     jeruk: 0,
                     job: 'Pengangguran',
 		    joincount: 2,
-                    Joindorracoins: 1,
+                    joindolares: 1,
                     joinlimit: 1,
                     judilast: 0,
                     kaleng: 0,
@@ -753,10 +753,10 @@ export async function handler(chatUpdate) {
                     leleg: 0,
                     level: 0,
                     bitcoins: 10,
-                    dorracoins: 20,
+                    dolares: 20,
                     limit: 20,
                     limitjoinfree: 1,
-                    dorracoinsjoinfree: 1,
+                    dolaresjoinfree: 1,
                     lion: 0,
                     lionexp: 0,
                     lionlastfeed: 0,
@@ -1187,8 +1187,8 @@ export async function handler(chatUpdate) {
                     this.reply(m.chat, `${ag}\n𝙉𝙊 𝙏𝙄𝙀𝙉𝙀 𝘿𝙄𝘼𝙈𝘼𝙉𝙏𝙀𝙎. 💎 𝙋𝙐𝙀𝘿𝙀 𝘾𝙊𝙈𝙋𝙍𝘼𝙍 𝘾𝙊𝙉 𝙀𝙇 𝘾𝙊𝙈𝘼𝙉𝘿𝙊 *${usedPrefix}buy*\n\n𝙄𝙏 𝙃𝘼𝙎 𝙉𝙊 𝘿𝙄𝘼𝙈𝙊𝙉𝘿𝙎. 💎 𝙔𝙊𝙐 𝘾𝘼𝙉 𝘽𝙐𝙔 𝙒𝙄𝙏𝙃 𝙏𝙃𝙀 𝘾𝙊𝙈𝙈𝘼𝙉𝘿 *${usedPrefix}buy*`, m)
                     continue // Limit habis
                 }
-if (!isPrems && comandos.dorracoins && global.db.data.users[m.sender].dorracoins < comandos.dorracoins * 1) {
-                    this.reply(m.chat, `${ag}\n\n*NO TIENE DORRATCOINS* 🪙\n\n *puede conseguir dorratcoins con el comando #minarcoins o comprando con #buy dorracoins [cantidad]*`, m)
+if (!isPrems && comandos.dolares && global.db.data.users[m.sender].dolares < comandos.dolares * 1) {
+                    this.reply(m.chat, `${ag}\n\n*No tiene dólares* 💵\n\n *puede conseguir $ con el comando #minardolares o comprando con #buy dolares [cantidad]*`, m)
                     continue // Limit habis
 
 }
@@ -1223,7 +1223,7 @@ if (!isPrems && comandos.dorracoins && global.db.data.users[m.sender].dorracoins
                     await comandos.call(this, m, extra)
                     if (!isPrems)
                         m.limit = m.limit || comandos.limit || false
-                        m.dorracoins = m.dorracoins || comandos.dorracoins || false
+                        m.dorracoins = m.dolares || comandos.dolares || false
                 } catch (e) {
                     // Error occured
                     m.error = e
@@ -1251,8 +1251,8 @@ if (!isPrems && comandos.dorracoins && global.db.data.users[m.sender].dorracoins
                     }
                     if (m.limit)
                         m.reply(+m.limit + ' 𝘿𝙄𝘼𝙈𝘼𝙉𝙏𝙀(𝙎) 💎 𝙐𝙎𝘼𝘿𝙊(𝙎)')
-                 if (m.dorracoins)
-                        m.reply(+m.dorracoins + ' 𝘿𝙊𝙍𝙍𝘼𝙏𝘾𝙊𝙄𝙉𝙎 🪙 𝙐𝙎𝘼𝘿𝙊(𝙎)')
+                 if (m.dolares)
+                        m.reply(+m.dolares + ' *DOLARES 💵 USADOS*')
               
                 }
                 break
@@ -1272,7 +1272,7 @@ if (!isPrems && comandos.dorracoins && global.db.data.users[m.sender].dorracoins
             if (m.sender && (user = global.db.data.users[m.sender])) {
                 user.exp += m.exp
                 user.limit -= m.limit * 1
-                user.dorracoins -= m.dorracoins * 1
+                user.dolares -= m.dolares * 1
             }
 
             let stat
