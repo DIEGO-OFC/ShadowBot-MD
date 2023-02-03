@@ -2,6 +2,7 @@ let handler = async (m, { conn, text, command, usedPrefix }) => {//prems
 
 let who
 let pp = './galeria/menudorrat3.jpg'
+pp = await conn.profilePictureUrl(who, 'image')
 if (m.isGroup) who = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text
 else who = m.chat
 let user = global.db.data.users[who]
