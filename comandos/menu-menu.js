@@ -14,7 +14,7 @@ let date = d.toLocaleDateString(locale, { day: 'numeric', month: 'long', year: '
 let _uptime = process.uptime() * 1000
 let uptime = clockString(_uptime)
 let {money} = global.db.data.users[m.sender]
-let { exp, limit, dorracoins, level, role } = global.db.data.users[m.sender]
+let { exp, limit, dolares, level, role } = global.db.data.users[m.sender]
 let rtotalreg = Object.values(global.db.data.users).filter(user => user.registered == true).length 
 let more = String.fromCharCode(8206)
 let readMore = more.repeat(850)   
