@@ -8,10 +8,10 @@ m.reply(`
 ▢ *Nombre:* ${name}
 ▢ *Diamantes:* ${global.db.data.users[who].limit}💎
 ▢ *Tokens:* ${global.db.data.users[who].joincount}☯️
-▢ *Dólares:* $ ${global.db.data.users[who].dolares} 💸
+▢ *Dólares:* $${global.db.data.users[who].dolares} 💸
 └──────────────
 *𝙽𝙾𝚃𝙰:* 
-*𝙿𝚞𝚎𝚍𝚎𝚜 𝚌𝚘𝚖𝚙𝚛𝚊𝚛 𝚍𝚒𝚊𝚖𝚊𝚗𝚝𝚎𝚜 💎 𝚞𝚜𝚊𝚗𝚍𝚘 𝚕𝚘𝚜 𝚌𝚘𝚖𝚊𝚗𝚍𝚘𝚜*
+*PUEDES COMPRAR USANDO LOS COMANDOS:*
 ❏ *${usedPrefix}buy <cantidad>*
 ❏ *${usedPrefix}buyall*`)
 }
