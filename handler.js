@@ -33,6 +33,7 @@ export async function handler(chatUpdate) {
         m = smsg(this, m) || m
         if (!m)
             return
+        m.tarjeta = false
         m.exp = 0
         m.dolares = false
         m.bitcoins = false
@@ -48,7 +49,8 @@ export async function handler(chatUpdate) {
 		if (!('premium' in user)) user.premium = false
 		if (!isNumber(user.joincount)) user.joincount = 2
                 if (!isNumber(user.bitcoins)) user.bitcoins = 10
-                if (!isNumber(user.dorracoins)) user.dolares = 20    	    
+                if (!isNumber(user.dorracoins)) user.dolares = 20   
+ 	        if (!isNumber(user.tarjeta)) user.tarjeta = 1
                 if (!isNumber(user.limit)) user.limit = 20    	       
                 if (!('registered' in user)) user.registered = false
                     
@@ -342,6 +344,7 @@ export async function handler(chatUpdate) {
               if (!isNumber(user.lelebakar)) user.lelebakar = 0
               if (!isNumber(user.leleg)) user.leleg = 0
               if (!isNumber(user.level)) user.level = 0
+              if (!isNumber(user.tarjeta)) user.tarjeta = 1
               if (!isNumber(user.dolares)) user.dolares = 20
               if (!isNumber(user.bitcoins)) user.bitcoins = 10
               if (!isNumber(user.limit)) user.limit = 20
@@ -751,7 +754,8 @@ export async function handler(chatUpdate) {
                     leleb: 0,
                     lelebakar: 0,
                     leleg: 0,
-                    level: 0,
+                    level: 0, 
+                    tarjeta: 1,
                     bitcoins: 10,
                     dolares: 20,
                     limit: 20,
@@ -1252,7 +1256,7 @@ if (!isPrems && comandos.dolares && global.db.data.users[m.sender].dolares < com
                     if (m.limit)
                         m.reply(+m.limit + ' 𝘿𝙄𝘼𝙈𝘼𝙉𝙏𝙀(𝙎) 💎 𝙐𝙎𝘼𝘿𝙊(𝙎)')
                  if (m.dolares)
-                        m.reply(+m.dolares + ' *DOLARES 💵 USADOS*')
+                        m.reply(+m.dolares + ' DOLARES 💵 USADOS')
               
                 }
                 break
