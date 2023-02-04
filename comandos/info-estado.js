@@ -44,7 +44,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 let uptime = clockString(_uptime)
 let taguser = '@' + m.sender.split("@s.whatsapp.net")[0]
 let pp = imagen4
-
+let db = 'ㅤ ㅤ'
 let infobt = `
 ╔═[ *∆.𝑫𝑶𝑹𝑹𝑯∆𝑻-𝑩𝑶𝑻.∆* ]
 ║ *➤ 𝙷𝙾𝙻𝙰 ${taguser}*
@@ -59,7 +59,9 @@ let infobt = `
 *≡  NodeJS Uso de memoria*
 ${'```' + Object.keys(used).map((key, _, arr) => `${key.padEnd(Math.max(...arr.map(v => v.length)), ' ')}: ${format(used[key])}`).join('\n') + '```'}
 `.trim()
-m.reply(infobt)}
+conn.sendButton(m.chat, db, infobt, wm3,
+[
+['𝙼𝙴𝙽𝚄', `#menusimple`]], m)}
 handler.help = ['info']
 handler.tags = ['main']
 handler.command = ['info', 'infobot', 'botinfo']
