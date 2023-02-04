@@ -27,9 +27,9 @@ const extractGroupMetadata = (result) => {
 	if (descChild) desc = baileys.getBinaryNodeChild(descChild, 'body')?.content
 	const metadata = {
 		id: group.attrs.id.includes('@') ? group.attrs.id : baileys.jidEncode(group.attrs.id, 'g.us'),
-		subject: group.attrs.subject,
-		creation: new Date(+group.attrs.creation * 1000).toLocaleString('id', { timeZone: 'Asia/Jakarta' }),
-		owner: group.attrs.creator ? 'wa.me/' + baileys.jidNormalizedUser(group.attrs.creator).split('@')[0] : undefined,
+		Nombre: group.attrs.subject,
+		Creación: new Date(+group.attrs.creation * 1000).toLocaleString('id', { timeZone: 'Asia/Jakarta' }),
+		Creador del grupo: group.attrs.creator ? 'wa.me/' + baileys.jidNormalizedUser(group.attrs.creator).split('@')[0] : undefined,
 		desc
 	}
 	return metadata
