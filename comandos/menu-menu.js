@@ -453,11 +453,12 @@ let menuB = `
 
 
 ┌──「🛠️𝐇𝐄𝐑𝐑𝐀𝐌𝐈𝐄𝐍𝐓𝐀𝐒」─
-├➢_${usedPrefix}ofuscar *<código>*
-├➢_${usedPrefix}reenviar *<responder a un mensaje>*
-├➢_${usedPrefix}copy *<texto>*
-├➢_${usedPrefix}chatgpt *<texto>*
-├➢_${usedPrefix}morse *<texto>*
+├➢_${usedPrefix}inspect *<link del grupo>*_
+├➢_${usedPrefix}ofuscar *<código>*_
+├➢_${usedPrefix}reenviar *<responder a un mensaje>*_
+├➢_${usedPrefix}copy *<texto>*_
+├➢_${usedPrefix}chatgpt *<texto>*_
+├➢_${usedPrefix}morse *<texto>*_
 ├➢_${usedPrefix}captura *<link de la página>*_
 ├➢_${usedPrefix}horario_
 ├➢_${usedPrefix}encuestas texto|texto_
