@@ -48,8 +48,7 @@ let handler = async(m, { conn, command, usedPrefix, DevMode }) => {
         await conn.reply(m.chat, `_Testing ${command }..._`, m)
         let _ramTotal = (ramTotal + ' MB')
         let neww = performance.now()
-        conn.sendButtonImg(m.chat,  await(await ('node-fetch')(fla + `Status`)).buffer(), `
-*「 Status 」*
+        let infobt = `*「 Status 」*
 OS : *${OS}*
 CPU Model : *${cpuModel}*
 CPU Core : *${cpuCore} Core*
@@ -59,7 +58,10 @@ Drive : *${driveUsed} / ${driveTotal} (${drivePer})*
 Ping : *${Math.round(neww - old)} ms*
 Internet IN : *${netsIn}*
 Internet OUT : *${netsOut}*
-`.trim(), wm, `Menu`, `${usedPrefix}menu`, m)
+`.trim()
+conn.sendButton(m.chat, infobt, wm3,
+[
+['𝙼𝙴𝙽𝚄', `#menusimple`]], m)
         console.log(OS)
     } catch (e) {
         console.log(e)
