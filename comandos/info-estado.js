@@ -1,6 +1,6 @@
 
-import { performance } from 'perf_hooks'
-import  osu from 'node-os-utils'
+import { cpus as _cpus, totalmem, freemem } from 'os'
+import util from 'util'
 let handler = async(m, { conn, command, usedPrefix, DevMode }) => {
     try {
         let NotDetect = 'Not Detect'
