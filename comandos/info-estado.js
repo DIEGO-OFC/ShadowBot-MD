@@ -57,7 +57,7 @@ ${'```' + Object.keys(used).map((key, _, arr) => `${key.padEnd(Math.max(...arr.m
 `.trim()
 let buttons = [{ buttonId: '#menu', buttonText: { displayText: ' 𝙼𝙴𝙽𝚄 𝙿𝚁𝙸𝙽𝙲𝙸𝙿𝙰𝙻 ✅' }, type: 1 }]
 let buttonMessage = { image: pp, caption: infobt.trim(), mentions: [m.sender], footer: global.wm3, buttons: buttons, headerType: 4, contextInfo: { mentionedJid: [m.sender], externalAdReply: { showAdAttribution: true, mediaType: 'VIDEO', mediaUrl: null, title: 'PÁGINA OFICIAL', body: 'BY @DIEGO-OFC', thumbnail: img, sourceUrl: `https://dorrat-bot-oficial.ml/`}}}
-conn.sendMessage(m.chat, buttonMessage, { quoted: m })
+conn.sendMessage(m.chat, buttonMessage, { quoted: m })}
 
 let _uptime = process.uptime() * 1000
 let uptime = clockString(_uptime)    
