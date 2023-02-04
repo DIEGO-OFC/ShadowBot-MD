@@ -61,9 +61,10 @@ ${'```' + Object.keys(used).map((key, _, arr) => `${key.padEnd(Math.max(...arr.m
 conn.sendButton(m.chat, db, infobt, pp,
 [
 ['𝙼𝙴𝙽𝚄', `#menusimple`]], m)}
-handler.help = ['info']
+handler.help = ['estado']
 handler.tags = ['main']
-handler.command = ['info', 'infobot', 'botinfo']
+handler.command = /^(estado|status|estate|state|stado|stats)$/i
+
 
 export default handler
 
