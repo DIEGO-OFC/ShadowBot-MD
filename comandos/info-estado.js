@@ -44,22 +44,21 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 let uptime = clockString(_uptime)
 let taguser = '@' + m.sender.split("@s.whatsapp.net")[0]
 let pp = imagen4
-let db = 'ㅤ ㅤ'
-let infobt = `
-╔═[ *∆.𝑫𝑶𝑹𝑹𝑯∆𝑻-𝑩𝑶𝑻.∆* ]
+let db = `╔═[ *∆.𝑫𝑶𝑹𝑹𝑯∆𝑻-𝑩𝑶𝑻.∆* ]
 ║ *➤ 𝙷𝙾𝙻𝙰 ${taguser}*
 ║
 ║ *=➢ 🤖 TIEMPO ACTIVO:* ${uptime}
 ║ *=➢ 👑 CREADOR: DIEGO-OFC*
 ║ *=➢ 🔗 PAGINA OFICIAL:* dorrat-bot-oficial.ml
-╚════════════════
+╚════════════════`.trim()
+let infobt = `
  *≡ S E R V E R*
 *🛑 RAM:* ${format(totalmem() - freemem())} / ${format(totalmem())}
 *🔵 FreeRAM:* ${format(freemem())}
 *≡  NodeJS Uso de memoria*
 ${'```' + Object.keys(used).map((key, _, arr) => `${key.padEnd(Math.max(...arr.map(v => v.length)), ' ')}: ${format(used[key])}`).join('\n') + '```'}
 `.trim()
-conn.sendButton(m.chat, db, infobt, wm3,
+conn.sendButton(m.chat, db, infobt, pp,
 [
 ['𝙼𝙴𝙽𝚄', `#menusimple`]], m)}
 handler.help = ['info']
