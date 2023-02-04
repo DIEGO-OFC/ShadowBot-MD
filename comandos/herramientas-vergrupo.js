@@ -1,1 +1,36 @@
-const _0x4baf7a=_0x29e0;(function(_0x126096,_0x29d42f){const _0x38cc83=_0x29e0,_0x305c74=_0x126096();while(!![]){try{const _0x5b063c=-parseInt(_0x38cc83(0x1bf))/0x1+-parseInt(_0x38cc83(0x1d0))/0x2+parseInt(_0x38cc83(0x1dd))/0x3+parseInt(_0x38cc83(0x1ee))/0x4*(parseInt(_0x38cc83(0x1cc))/0x5)+parseInt(_0x38cc83(0x1d6))/0x6*(parseInt(_0x38cc83(0x1eb))/0x7)+parseInt(_0x38cc83(0x1d4))/0x8*(-parseInt(_0x38cc83(0x1d3))/0x9)+-parseInt(_0x38cc83(0x1e9))/0xa;if(_0x5b063c===_0x29d42f)break;else _0x305c74['push'](_0x305c74['shift']());}catch(_0x2df5f0){_0x305c74['push'](_0x305c74['shift']());}}}(_0x3781,0x1febc));let linkRegex=/chat\.whatsapp\.com\/(?:invite\/)?([0-9A-Za-z]{20,24})/i,handler=async(_0x2b656d,{conn:_0x4a1886,text:_0x2f087a})=>{const _0x4aed03=_0x29e0;let [,_0x545632]=_0x2f087a[_0x4aed03(0x1c8)](linkRegex)||[];if(!_0x545632)throw _0x4aed03(0x1d7);let _0x36887f=await _0x4a1886['query']({'json':[_0x4aed03(0x1d1),_0x4aed03(0x1cf),_0x545632],'expect200':!![]});if(!_0x36887f)throw _0x36887f;let _0x37b669=(_0x4aed03(0x1c6)+_0x36887f['id']+_0x4aed03(0x1cd)+_0x36887f[_0x4aed03(0x1ec)]+_0x4aed03(0x1cb)+_0x36887f['id']['split']('-')[0x0]+_0x4aed03(0x1dc)+formatDate(_0x36887f['creation']*0x3e8)+(_0x36887f[_0x4aed03(0x1d5)]?_0x4aed03(0x1db)+_0x36887f[_0x4aed03(0x1d5)][_0x4aed03(0x1e4)]`@`[0x0]+_0x4aed03(0x1dc)+formatDate(_0x36887f[_0x4aed03(0x1e8)]*0x3e8):'')+(_0x36887f['descOwner']?_0x4aed03(0x1d8)+_0x36887f['descOwner'][_0x4aed03(0x1e4)]`@`[0x0]+_0x4aed03(0x1dc)+formatDate(_0x36887f['descTime']*0x3e8):'')+_0x4aed03(0x1bd)+_0x36887f[_0x4aed03(0x1c7)]+_0x4aed03(0x1d9)+(_0x36887f[_0x4aed03(0x1c2)]?'\x0a'+_0x36887f[_0x4aed03(0x1c2)][_0x4aed03(0x1ce)]((_0x2fa102,_0x1754bf)=>++_0x1754bf+_0x4aed03(0x1ba)+_0x2fa102['id'][_0x4aed03(0x1e4)]`@`[0x0])[_0x4aed03(0x1d2)]('\x0a')[_0x4aed03(0x1df)]():_0x4aed03(0x1e5))+'\x0a'+(_0x36887f['desc']?_0x4aed03(0x1ed)+_0x36887f[_0x4aed03(0x1de)]:_0x4aed03(0x1c5))+_0x4aed03(0x1ea)+JSON[_0x4aed03(0x1e0)](_0x36887f,null,0x1)+_0x4aed03(0x1e6))['trim'](),_0x1014ba=await _0x4a1886[_0x4aed03(0x1bc)](_0x36887f['id'])[_0x4aed03(0x1e1)](console[_0x4aed03(0x1da)]);if(_0x1014ba)_0x4a1886[_0x4aed03(0x1bb)](_0x2b656d[_0x4aed03(0x1c9)],_0x1014ba,_0x4aed03(0x1e3),null,_0x2b656d);_0x2b656d['reply'](_0x37b669,![],{'contextInfo':{'mentionedJid':_0x4a1886[_0x4aed03(0x1be)](_0x37b669)}});};handler[_0x4baf7a(0x1c0)]=[_0x4baf7a(0x1c4)],handler['tags']=[_0x4baf7a(0x1e7)],handler[_0x4baf7a(0x1e2)]=/^inspect$/i;function _0x3781(){const _0xb7f14e=['pp.jpg','split','no\x20hay\x20miembros','```\x0a','tools','subjectTime','1136720BcmkyK','\x0aJSON\x20Version\x0a```','182700wviQwW','subject','Descripción\x20actual:\x0a','5772JvqvKX','.\x20@','sendFile','getProfilePicture','\x0aNúmero\x20de\x20Integrantes:\x20','parseMention','130546VwDENt','help','long','participants','numeric','inspect\x20<chat.whatsapp.com>','No\x20hay\x20descripción','\x0a--\x20[INSPECCIONAR\x20GRUPOS]\x20--\x0a','size','match','chat','toLocaleDateString','\x0aCreado\x20por\x20@','610yUpOVX','\x0aNombre\x20del\x20Grupo:\x20','map','invite','116616HWTzWH','query','join','719136nszZYN','8cPLsZT','subjectOwner','30TXhnsU','Enlace\x20incorrecto','\x0aDescripción\x20cambiada\x20por\x20@','\x0aMiembros\x20actuales\x20en\x20el\x20grupo:\x20','error','\x0aTítulo\x20cambiado\x20por\x20@','\x20en\x20','619896foynCs','desc','trim','stringify','catch','command'];_0x3781=function(){return _0xb7f14e;};return _0x3781();}export default handler;function _0x29e0(_0x2d348f,_0xe98526){const _0x378117=_0x3781();return _0x29e0=function(_0x29e0ab,_0x17c5c6){_0x29e0ab=_0x29e0ab-0x1ba;let _0x5b48ee=_0x378117[_0x29e0ab];return _0x5b48ee;},_0x29e0(_0x2d348f,_0xe98526);}function formatDate(_0x1eec4e,_0xf31074='id'){const _0x50de25=_0x4baf7a;let _0x299613=new Date(_0x1eec4e);return _0x299613[_0x50de25(0x1ca)](_0xf31074,{'weekday':_0x50de25(0x1c1),'day':_0x50de25(0x1c3),'month':_0x50de25(0x1c1),'year':_0x50de25(0x1c3),'hour':_0x50de25(0x1c3),'minute':_0x50de25(0x1c3),'second':_0x50de25(0x1c3)});}
+import * as baileys from '@adiwajshing/baileys'
+
+let handler = async (m, { conn, text }) => {
+	let [, code] = text.match(/chat\.whatsapp\.com\/(?:invite\/)?([0-9A-Za-z]{20,24})/i) || []
+	if (!code) throw 'Invalid URL'
+	let res = await conn.query({ tag: 'iq', attrs: { type: 'get', xmlns: 'w:g2', to: '@g.us' }, content: [{ tag: 'invite', attrs: { code } }] }),
+	data = extractGroupMetadata(res),
+	txt = Object.keys(data).map(v => `*${v.capitalize()} :* ${data[v]}`).join('\n').replace('*Desc :*','\n*Desc :* \n'),
+	pp = await conn.profilePictureUrl(data.id, 'image').catch(console.error)
+	if (pp) {
+		await conn.sendMessage(m.chat, { image: { url: pp }, caption: txt }, { quoted: m })
+	} else {
+		m.reply(txt)
+	}
+}
+
+handler.help = ['inspect <url>']
+handler.tags = ['tools']
+handler.command = /^(inspect(link(gc|group)?)?)$/i
+
+export default handler
+
+const extractGroupMetadata = (result) => {
+	const group = baileys.getBinaryNodeChild(result, 'group')
+	const descChild = baileys.getBinaryNodeChild(group, 'description')
+	let desc
+	if (descChild) desc = baileys.getBinaryNodeChild(descChild, 'body')?.content
+	const metadata = {
+		id: group.attrs.id.includes('@') ? group.attrs.id : baileys.jidEncode(group.attrs.id, 'g.us'),
+		subject: group.attrs.subject,
+		creation: new Date(+group.attrs.creation * 1000).toLocaleString('id', { timeZone: 'Asia/Jakarta' }),
+		owner: group.attrs.creator ? 'wa.me/' + baileys.jidNormalizedUser(group.attrs.creator).split('@')[0] : undefined,
+		desc
+	}
+	return metadata
+}
