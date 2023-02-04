@@ -53,8 +53,8 @@ let db = `╔═[ *∆.𝑫𝑶𝑹𝑹𝑯∆𝑻-𝑩𝑶𝑻.∆* ]
 ╚════════════════`.trim()
 let infobt = `
  *≡ S E R V E R*
-*🛑 RAM:* ${format(totalmem() - freemem())} / ${format(totalmem())}
-*🔵 FreeRAM:* ${format(freemem())}
+*🔴 RAM DEL NODO:* ${format(totalmem() - freemem())} / ${format(totalmem())}
+*🔵 RAM DEL BOT:* ${format(freemem())}
 *≡  NodeJS Uso de memoria*
 ${'```' + Object.keys(used).map((key, _, arr) => `${key.padEnd(Math.max(...arr.map(v => v.length)), ' ')}: ${format(used[key])}`).join('\n') + '```'}
 `.trim()
