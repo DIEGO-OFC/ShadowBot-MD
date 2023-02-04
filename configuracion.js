@@ -106,7 +106,7 @@ global.wait = '*[❕] CARGANDO POR FAVOR ESPERA...*'
 //-------------------
 global.md = 'https://chat.whatsapp.com/JOkFXt2T0kNFN0vkiModTx'
 global.dorramd = md
-
+global.tarje = 'Banesco'
 global.yt = 'http://youtube.com/@diegogameplays82'
 global.youtube = yt
 //Menu
@@ -196,6 +196,7 @@ global.rpg = {
 emoticon(string) {
 string = string.toLowerCase()
     let emot = {
+      tarjeta: '💳 Banesco',
       level: '🧬 Nivel',
       limit: '💎 Diamante',
       bitcoins: '🏵️ BitCoins',
@@ -290,6 +291,7 @@ global.rpgg = { //Solo emojis
 emoticon(string) {
 string = string.toLowerCase()
     let emott = {
+      tarjeta: '💳 Banesco',
       level: '🧬',
       limit: '💎',
       bitcoins: '🏵️',
@@ -384,6 +386,7 @@ global.rpgshop = { //Tienda
 emoticon(string) {
 string = string.toLowerCase()
     let emottt = {
+      tarjeta: '💳 Banesco',     
       exp: '⚡ Experiencia',
       limit: '💎 Diamante',
       bitcoins: '🏵️ BitCoins',
@@ -462,6 +465,7 @@ global.rpgshopp = { //Tienda
   emoticon(string) {
     string = string.toLowerCase()
     let emotttt = {
+      tarjeta: '💳',
       exp: '⚡',
       limit: '💎',
       diamond: '💎+',
