@@ -58,9 +58,20 @@ let infobt = `
 *≡  NodeJS Uso de memoria*
 ${'```' + Object.keys(used).map((key, _, arr) => `${key.padEnd(Math.max(...arr.map(v => v.length)), ' ')}: ${format(used[key])}`).join('\n') + '```'}
 `.trim()
-conn.sendButton(m.chat, db, infobt, pp,
+  let buttons = [{ buttonId: `#menusimple`, buttonText: { displayText: "𝙼𝙴𝙽𝚄" }, type: 1 } ]
+  let buttonMessage = { 
+    image: pp,
+    caption: db,
+    footer: infobt,
+    buttons: buttons,
+    headerType: 4
+    }
+  conn.sendMessage(m.chat, buttonMessage, { quoted: m })
+
+/*conn.sendButton(m.chat, db, infobt, pp,
 [
-['𝙼𝙴𝙽𝚄', `#menusimple`]], m)}
+['𝙼𝙴𝙽𝚄', `#menusimple`]], m)*/
+}
 handler.help = ['estado']
 handler.tags = ['main']
 handler.command = /^(estado|status|estate|state|stado|stats)$/i
