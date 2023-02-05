@@ -58,7 +58,7 @@ let infobt = `
 *≡  NodeJS Uso de memoria*
 ${'```' + Object.keys(used).map((key, _, arr) => `${key.padEnd(Math.max(...arr.map(v => v.length)), ' ')}: ${format(used[key])}`).join('\n') + '```'}
 `.trim()
-  let buttons = [{ buttonId: `#menusimple`, buttonText: { displayText: "𝙼𝙴𝙽𝚄" }, type: 1 } ]
+  let buttons = [{ buttonId: `#menu`, buttonText: { displayText: "𝙼𝙴𝙽𝚄" }, type: 1 } ]
   let buttonMessage = { 
     image: pp,
     caption: db,
