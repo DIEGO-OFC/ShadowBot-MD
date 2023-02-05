@@ -1192,7 +1192,7 @@ export async function handler(chatUpdate) {
                     continue // Limit habis
                 }
 if (!isPrems && comandos.dolares && global.db.data.users[m.sender].dolares < comandos.dolares * 1) {
-                    this.reply(m.chat, `${ag}\n\n*No tiene dólares* 💵\n\n *puede conseguir $ con el comando #minardolares o comprando con #buy dolares [cantidad]*`, m)
+                    this.reply(m.chat, `${ag}\n\n*No tiene dólares* 💵\n\n *puede conseguir 💵 con el comando #minardolares o comprando con #buy dolares [cantidad]*`, m)
                     continue // Limit habis
 
 }
@@ -1227,7 +1227,7 @@ if (!isPrems && comandos.dolares && global.db.data.users[m.sender].dolares < com
                     await comandos.call(this, m, extra)
                     if (!isPrems)
                         m.limit = m.limit || comandos.limit || false
-                        m.dorracoins = m.dolares || comandos.dolares || false
+                        m.dolares = m.dolares || comandos.dolares || false
                 } catch (e) {
                     // Error occured
                     m.error = e
