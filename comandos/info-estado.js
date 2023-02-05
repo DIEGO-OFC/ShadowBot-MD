@@ -64,7 +64,8 @@ ${'```' + Object.keys(used).map((key, _, arr) => `${key.padEnd(Math.max(...arr.m
     caption: db,
     footer: infobt,
     buttons: buttons,
-    headerType: 4
+    headerType: 4,
+    mentions: [m.sender]
     }
   conn.sendMessage(m.chat, buttonMessage, { quoted: m })
 
