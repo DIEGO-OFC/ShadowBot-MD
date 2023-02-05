@@ -38,9 +38,6 @@ let handler = async (m, { conn, usedPrefix }) => {
     }
   })
   let old = performance.now()
-  
-  let neww = performance.now()
-  let speed = neww - old
 let _uptime = process.uptime() * 1000
 let uptime = clockString(_uptime) 
 let totalreg = Object.keys(global.db.data.users).length
