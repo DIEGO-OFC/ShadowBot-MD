@@ -20,7 +20,8 @@ let neww = performance.now()
 let speed = neww - old
 
 let info = `
-╠═〘 𝐈𝐍𝐅𝐎 𝐃𝐄𝐋 𝐁𝐎𝐓 〙 ═
+╠═〘 𝐈𝐍𝐅𝐎 𝐃𝐄𝐋 𝐁𝐎𝐓 〙 ═`.trim()
+let info2 = `
 ╠
 ║❍  [👑] *CREADOR: ༒︎𝙳𝙸𝙴𝙶𝙾-𝙾𝙵𝙲༒︎*
 ║❍  [#️⃣] *NUMERO: +593 95 942 5714*
@@ -42,7 +43,7 @@ let info = `
 ╠
 *╠═〘 Dorrat-Bot-MD 〙 ═*
 `.trim() 
-conn.sendButton(m.chat, info, wm3, pp, [
+conn.sendButton(m.chat, info, info2, pp, [
 ['📦 𝐆𝐑𝐔𝐏𝐎𝐒', '#grupos'],
 ['🛡️ 𝐌𝐄𝐍𝐔', '.menu']
 ], m)
