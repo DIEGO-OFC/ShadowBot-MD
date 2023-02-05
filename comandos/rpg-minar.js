@@ -1,14 +1,14 @@
 let handler = async (m, { conn, isPrems}) => {
 let hasil = Math.floor(Math.random() * 1000)
 let time = global.db.data.users[m.sender].lastmiming + 600000
-if (new Date - global.db.data.users[m.sender].lastmiming < 600000) throw `*⏰ Espera ${msToTime(time - new Date())} Para volver a minar*` 
+if (new Date - global.db.data.users[m.sender].lastmiming < 600000) throw `*⏰ Espera ${msToTime(time - new Date())} Para volver a minar*`
+let user = global.db.data.users[m.sender] 
 if (user.health < 80) return m.reply(`Requiere al menos 80 ❤️Salud para la minería!!
 compre ❤️ Salud primero escribiendo *${usedPrefix}buy potion <cantidad>*,
 y despues
 *${usedPrefix}heal <cantidad>*
 `.trim()) 
 let db = './Menu2.jpg'
-let user = global.db.data.users[m.sender]
 let info = `
 *[ ⛏️ ] Genial minaste ${hasil} XP*`.trim()
 global.db.data.users[m.sender].lastmiming = new Date * 1
