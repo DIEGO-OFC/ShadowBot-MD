@@ -8,6 +8,7 @@ y despues
 *${usedPrefix}heal <cantidad>*
 `.trim()) 
 let db = './Menu2.jpg'
+let user = global.db.data.users[m.sender]
 let info = `
 *[ ⛏️ ] Genial minaste ${hasil} XP*`.trim()
 global.db.data.users[m.sender].lastmiming = new Date * 1
