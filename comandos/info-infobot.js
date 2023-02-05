@@ -44,7 +44,7 @@ let info2 = `
 *╠═〘 Dorrat-Bot-MD 〙 ═*
 `.trim() 
 conn.sendButton(m.chat, info, info2, pp, [
-['[GRUPOS]', '#grupos']
+['[ GRUPOS ]', '#grupos']
 ], m)
 
 //conn.reply(m.chat, info, m)
