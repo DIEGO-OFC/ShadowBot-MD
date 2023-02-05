@@ -23,7 +23,7 @@ let info = `
 ╠═〘 𝐈𝐍𝐅𝐎 𝐃𝐄𝐋 𝐁𝐎𝐓 〙 ═`.trim()
 let info2 = `
 ╠
-║❍  [👑] *CREADOR: ༒︎𝙳𝙸𝙴𝙶𝙾-𝙾𝙵𝙲༒︎*
+║❍  [👑] *CREADOR: DIEGO-OFC*
 ║❍  [#️⃣] *NUMERO: +593 95 942 5714*
 ║❍  [🛠️] *PREFIJO: ${usedPrefix}*
 ║❍  [💬] *CHATS PRIVADOS: ${chats.length - groups.length}*
