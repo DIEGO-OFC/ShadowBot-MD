@@ -11,7 +11,6 @@ let format = sizeFormatter({
 import { cpus as _cpus, totalmem, os, freemem } from 'os'
 import MessageType from '@adiwajshing/baileys'
 import fs from 'fs'
-import { performance } from 'perf_hooks'
 let handler = async (m, { conn, usedPrefix }) => {
   const used = process.memoryUsage()
   const cpus = _cpus().map(cpu => {
