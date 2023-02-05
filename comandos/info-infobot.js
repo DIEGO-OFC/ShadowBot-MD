@@ -47,7 +47,6 @@ let totalreg = Object.keys(global.db.data.users).length
 const chats = Object.entries(conn.chats).filter(([id, data]) => id && data.isChats)
 const groupsIn = chats.filter(([id]) => id.endsWith('@g.us'))
 const groups = chats.filter(([id]) => id.endsWith('@g.us'))
-const used = process.memoryUsage()
 const { restrict, antiCall, antiprivado } = global.db.data.settings[conn.user.jid] || {}
 const { autoread, gconly, pconly, self } = global.opts || {}
 let pp = './galeria/menudorrat3.jpg'
