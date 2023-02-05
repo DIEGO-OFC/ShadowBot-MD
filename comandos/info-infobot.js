@@ -9,8 +9,6 @@ let format = sizeFormatter({
 })
 
 import { cpus as _cpus, totalmem, os, freemem } from 'os'
-import util from 'util'
-import sizeFormatter from 'human-readable'
 import MessageType from '@adiwajshing/baileys'
 import fs from 'fs'
 import { performance } from 'perf_hooks'
