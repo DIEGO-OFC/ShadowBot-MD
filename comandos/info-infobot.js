@@ -8,7 +8,7 @@ let format = sizeFormatter({
   render: (literal, symbol) => `${literal} ${symbol}B`,
 })
 
-import { cpus as _cpus, totalmem, os, freemem } from 'os'
+import { cpus as _cpus, totalmem, freemem } from 'os'
 import MessageType from '@adiwajshing/baileys'
 import fs from 'fs'
 let handler = async (m, { conn, usedPrefix }) => {
