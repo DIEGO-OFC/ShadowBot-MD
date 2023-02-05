@@ -7,11 +7,12 @@ compre ❤️ Salud primero escribiendo *${usedPrefix}buy potion <cantidad>*,
 y despues
 *${usedPrefix}heal <cantidad>*
 `.trim()) 
+let db = './Menu2.jpg'
 let info = `
 *[ ⛏️ ] Genial minaste ${hasil} XP*`.trim()
 global.db.data.users[m.sender].lastmiming = new Date * 1
 
-conn.fakeReply(m.chat, info, '0@s.whatsapp.net', '*🔥 THE DORRAT - BOT 🔥*', 'status@broadcast')
+conn.fakeReply(m.chat, info, db, '0@s.whatsapp.net', '*🔥 THE DORRAT - BOT 🔥*', 'status@broadcast')
 }
 handler.help = ['minar']
 handler.tags = ['xp']
