@@ -3,7 +3,7 @@ import MessageType from '@adiwajshing/baileys'
 let handler = async (m, { conn }) => {
     let user = global.db.data.users[m.sender]
         conn.reply(m.chat, `*éxito, ahora tiene todo ilimitado ✅*`, m)
-        global.db.data.users[m.sender].dorracoins = Infinity
+        global.db.data.users[m.sender].dolares = Infinity
         global.db.data.users[m.sender].limit = Infinity
         global.db.data.users[m.sender].level = Infinity
         
