@@ -38,8 +38,8 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
     console.error(e)
     if (!stiker) stiker = e
   } finally {
-    if (stiker) conn.sendFile(m.chat, stiker, 'sticker.webp', '', m)
-    else throw '*[❕] LO SIENTO, OCURRIO UN ERROR , VUELVA A INTENTARLO. NO OLVIDE RESPONDER A UN VIDEO, IMAGEN O INSERTE EL ENLACE DE UNA IMAGEN TERMINACIÓN  .jpg EL CUAL SERA CONVERTIDO EN STICKER.*'
+     if (stiker) conn.sendFile(m.chat, stiker, 'sticker.webp', '',m, true, { contextInfo: { 'forwardingScore': 200, 'isForwarded': false, externalAdReply:{ showAdAttribution: false, title: wm3, body: `h`, mediaType: 2, sourceUrl: md, thumbnail: imagen5}}}, { quoted: m })
+   else throw '*[❕] LO SIENTO, OCURRIO UN ERROR , VUELVA A INTENTARLO. NO OLVIDE RESPONDER A UN VIDEO, IMAGEN O INSERTE EL ENLACE DE UNA IMAGEN TERMINACIÓN  .jpg EL CUAL SERA CONVERTIDO EN STICKER.*'
 
   }
 }
