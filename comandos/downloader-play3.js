@@ -52,5 +52,5 @@ throw '*[❗𝐈𝐍𝐅𝐎❗] ERROR, POR FAVOR VUELVA A INTENTARLO*'}}}
 handler.help = ['playdoc', 'play3'].map(v => v + ' <pencarian>')
 handler.tags = ['downloader']
 handler.command = /^play3|playdoc?$/i
-handler.dorracoins = 5
+handler.dolares = 5
 export default handler
