@@ -99,7 +99,7 @@ global.tiempo = d.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', 
 global.packname = `👑 ➢ CREADOR POR:\n📅 ➢ Día:\n🗓️ ➢ Fecha:`
 global.author = ` DORRAT-BOT\n• ${dia}\n• ${fecha}`
 //_______________
-global.wm = '𝑫𝑶𝑹𝑹𝑨𝑻-𝑩𝑶𝑻 | 𝑫𝑰𝑬𝑮𝑶-𝑶𝑭𝑪'
+global.wm = '𝐃𝐎𝐑𝐑𝐀𝐓-𝐁𝐎𝐓 | 𝐃𝐈𝐄𝐆𝐎-𝐎𝐅𝐂'
 global.db3t = `©⏤͟͟͞𝐓𝐇𝐄 𝐃𝐎𝐑𝐑𝐀𝐓-𝐁𝐎𝐓-𝐌𝐃`
 global.wm3 = db3t
 global.igfg = '𝑫𝑶𝑹𝑹𝑨𝑻-𝑩𝑶𝑻'
