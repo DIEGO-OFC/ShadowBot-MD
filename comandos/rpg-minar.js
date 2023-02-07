@@ -10,12 +10,13 @@ y despues
 *${usedPrefix}heal <cantidad>*
 `.trim()) 
 let db = './Menu2.jpg'
+let prueba = 'xd'
 let info = `
 *[ ⛏️ ] Genial minaste ${hasil} XP*`.trim()
 global.db.data.users[m.sender].lastmiming = new Date * 1
 
 
-conn.sendMessage(m.chat,  {image: fs.readFileSync("./galeria/menudorrat5.png"),  caption: info}, {quoted: m})}
+conn.sendMessage(m.chat,  {image: fs.readFileSync("./galeria/menudorrat5.png"),  caption: prueba, info}, {quoted: m})}
 handler.help = ['minar']
 handler.tags = ['xp']
 handler.command = ['minar', 'miming', 'mine'] 
