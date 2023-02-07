@@ -1,3 +1,4 @@
+import fs from 'fs'
 let handler = async (m, { conn, isPrems, usedPrefix}) => {
 let hasil = Math.floor(Math.random() * 1000)
 let time = global.db.data.users[m.sender].lastmiming + 600000
@@ -13,8 +14,8 @@ let info = `
 *[ ⛏️ ] Genial minaste ${hasil} XP*`.trim()
 global.db.data.users[m.sender].lastmiming = new Date * 1
 
-conn.fakeReply(m.chat, info,  '0@s.whatsapp.net', '*🔥 THE DORRAT - BOT 🔥*', 'status@broadcast')
-}
+
+conn.sendMessage(m.chat, info, {image: fs.readFileSync("./galeria/menudorrat3.jpg"), caption: "xd"}, {quoted: m})}
 handler.help = ['minar']
 handler.tags = ['xp']
 handler.command = ['minar', 'miming', 'mine'] 
