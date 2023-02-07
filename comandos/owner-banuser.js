@@ -3,7 +3,7 @@ import PhoneNumber from 'awesome-phonenumber'
 let handler = async (m, { conn, text, command, usedPrefix }) => {//prems 
 
 let who
-let pp = './galeria/menudorrat3.jpg'
+//let pp = './galeria/menudorrat3.jpg'
 if (m.isGroup) who = m.mentionedJid[0] ? m.mentionedJid[0] : m.sender
 else who = m.sender
 let name = conn.getName(who)
