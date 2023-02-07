@@ -16,7 +16,25 @@ let info = `
 global.db.data.users[m.sender].lastmiming = new Date * 1
 
 
-conn.sendMessage(m.chat,  {image: fs.readFileSync("./galeria/menudorrat5.png"),  caption: info}, {quoted: m})}
+conn.sendMessage(m.chat, {
+     image: {
+         url: "https://i.pinimg.com/564x/2f/5f/ac/2f5fac37836726fa54bf1b271633107a.jpg"
+     },
+     caption: info,
+     contextInfo: {
+         mentionedJid: [m.sender],
+         externalAdReply: {
+             title: `RPG MINAR`,
+             sourceUrl: md,
+             mediaType: 1,
+             showAdAttribution: true,
+             thumbnailUrl: imagen5,
+             //sourceUrl: 'https://chat.whatsapp.com/DBTKQLDShvoKjsNdLMs386'
+         }
+     }
+ }, {
+     quoted: m
+ })}
 handler.help = ['minar']
 handler.tags = ['xp']
 handler.command = ['minar', 'miming', 'mine'] 
