@@ -1,11 +1,11 @@
-// creditos a https://github.com/FG98F
+
 let handler = async (m, { conn, isPrems}) => {
-let hasil = Math.floor(Math.random() * 5000)
+let d = Math.floor(Math.random() * 50)
 let time = global.db.data.users[m.sender].lastwork + 600000
 if (new Date - global.db.data.users[m.sender].lastwork < 600000) throw `*𝙴𝚜𝚝𝚊𝚜 𝚌𝚊𝚗𝚜𝚊𝚍𝚘, 𝚍𝚎𝚋𝚎𝚜 𝚍𝚎𝚜𝚌𝚊𝚗𝚜𝚊𝚛 𝚌𝚘𝚖𝚘 𝚖𝚒𝚗𝚒𝚖𝚘 ${msToTime(time - new Date())} 𝚙𝚊𝚛𝚊 𝚟𝚘𝚕𝚟𝚎𝚛 𝚊 𝚝𝚛𝚊𝚋𝚊𝚓𝚊𝚛!*`
 
-m.reply(`${pickRandom(global.work)} *${hasil} XP*`)
-global.db.data.users[m.sender].lastwork = new Date * 1
+m.reply(`${pickRandom(global.work)} *$${hasil} DOLARES*`)
+global.db.data.users[m.sender].dolares += d * 1  
 }
 handler.help = ['work']
 handler.tags = ['xp']
@@ -43,10 +43,10 @@ global.work = ["Trabajas como cortador de galletas y ganas", "Trabaja para una e
 "Desarrollas juegos para ganarte la vida y ganas", 
 "Ganas un concurso de comer chili picante. ¡El premio es", 
 "Trabajas todo el día en la empresa por", 
-"Ayudas a moderar el grupo de DyLux por", "Diseñaste un logo para *FG* por", 
-"Moderaste el grupo cuando *FG* no estaba, el pago fue", 
+"Ayudas a moderar el grupo de Dorrat por", "Diseñaste un logo para *FG* por", 
+"Moderaste el grupo cuando *DIEGO-OFC* no estaba, el pago fue", 
 "¡Trabajó lo mejor que pudo en una imprenta que estaba contratando y ganó su bien merecido!", 
-"Trabajas como podador de arbustos para *FG98* y ganas", "La demanda de juegos para dispositivos móviles ha aumentado, por lo que creas un nuevo juego lleno de micro-transacciones. Con tu nuevo juego ganas un total de", 
+"Trabajas como podador de arbustos para *Diego-ofc* y ganas", "La demanda de juegos para dispositivos móviles ha aumentado, por lo que creas un nuevo juego lleno de micro-transacciones. Con tu nuevo juego ganas un total de", 
 "Trabajas como actor de voz para Bob Esponja y te las arreglaste para ganar", 
 "Estabas cultivando y Ganaste", "Trabajas como constructor de castillos de arena y ganas", "Trabajaste y Ganaste", 
 "Trabajas como artista callejera y ganas","¡Hiciste trabajo social por una buena causa! por tu buena causa Recibiste", 
