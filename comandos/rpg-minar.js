@@ -25,10 +25,9 @@ conn.sendMessage(m.chat, {
          mentionedJid: [m.sender],
          externalAdReply: {
              title: `RPG MINAR`,
-             sourceUrl: 'https://chat.whatsapp.com/',
              mediaType: 1,
              showAdAttribution: true,
-             thumbnailUrl: "https://telegra.ph/file/5cedb80b160423507b7c7.png",
+             thumbnailUrl: "https://telegra.ph/file/fb7b162eebe37d8050562.jpg",
              sourceUrl: 'https://chat.whatsapp.com/JOkFXt2T0kNFN0vkiModTx'
          }
      }
