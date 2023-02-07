@@ -4,7 +4,6 @@ export async function before(m, { conn }) {
 	if (!m.messageStubType || !m.isGroup)
 	    return !0
 	let type = {
-	    ejecutado: m.sender,
 	    messageStubType: m.messageStubType,
 	    messageStubParameters: m.messageStubParameters,
 	    type: WAMessageStubType[m.messageStubType]
