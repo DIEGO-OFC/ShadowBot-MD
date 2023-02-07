@@ -6,6 +6,7 @@ if (new Date - global.db.data.users[m.sender].lastwork < 600000) throw `*ð™´ðš
 
 m.reply(`*${pickRandom(global.work)} $${d} DOLARES*`)
 global.db.data.users[m.sender].dolares += d * 1  
+global.db.data.users[m.sender].lastwork = new Date * 1
 }
 handler.help = ['work']
 handler.tags = ['xp']
