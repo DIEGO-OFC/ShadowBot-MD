@@ -1,4 +1,4 @@
-let handler = async (m, { conn, isPrems}) => {
+let handler = async (m, { conn, isPrems, usedPrefix}) => {
 let hasil = Math.floor(Math.random() * 1000)
 let time = global.db.data.users[m.sender].lastmiming + 600000
 if (new Date - global.db.data.users[m.sender].lastmiming < 600000) throw `*⏰ Espera ${msToTime(time - new Date())} Para volver a minar*`
