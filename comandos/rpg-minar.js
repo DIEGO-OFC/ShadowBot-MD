@@ -1,8 +1,8 @@
 import fs from 'fs'
 let handler = async (m, { conn, isPrems, usedPrefix}) => {
 let hasil = Math.floor(Math.random() * 1000)
-//let time = global.db.data.users[m.sender].lastmiming + 60000
-//if (new Date - global.db.data.users[m.sender].lastmiming < 600000) throw `*⏰ Espera ${msToTime(time - new Date())} Para volver a minar*`
+let time = global.db.data.users[m.sender].lastmiming + 60000
+if (new Date - global.db.data.users[m.sender].lastmiming < 600000) throw `*⏰ Espera ${msToTime(time - new Date())} Para volver a minar*`
 let user = global.db.data.users[m.sender] 
 if (user.health < 80) return m.reply(`Requiere al menos 80 ❤️Salud para la minería!!
 compre ❤️ Salud primero escribiendo *${usedPrefix}buy potion <cantidad>*,
@@ -16,7 +16,7 @@ let info = `
 global.db.data.users[m.sender].lastmiming = new Date * 1
 
 
-conn.sendMessage(m.chat,  {image: fs.readFileSync("./galeria/menudorrat5.png"),  caption: prueba, info}, {quoted: m})}
+conn.sendMessage(m.chat,  {image: fs.readFileSync("./galeria/menudorrat5.png"),  caption: info}, {quoted: m})}
 handler.help = ['minar']
 handler.tags = ['xp']
 handler.command = ['minar', 'miming', 'mine'] 
