@@ -1,7 +1,7 @@
 import fs from 'fs'
 let handler = async (m, { conn, isPrems, usedPrefix}) => {
 let hasil = Math.floor(Math.random() * 1000)
-let time = global.db.data.users[m.sender].lastmiming + 60000
+let time = global.db.data.users[m.sender].lastmiming + 600000
 if (new Date - global.db.data.users[m.sender].lastmiming < 600000) throw `*⏰ Espera ${msToTime(time - new Date())} Para volver a minar*`
 let user = global.db.data.users[m.sender] 
 if (user.health < 80) return m.reply(`Requiere al menos 80 ❤️Salud para la minería!!
@@ -18,17 +18,17 @@ global.db.data.users[m.sender].lastmiming = new Date * 1
 
 conn.sendMessage(m.chat, {
      image: {
-         url: "https://i.pinimg.com/564x/2f/5f/ac/2f5fac37836726fa54bf1b271633107a.jpg"
+         url: "https://telegra.ph/file/5cedb80b160423507b7c7.png"
      },
      caption: info,
      contextInfo: {
          mentionedJid: [m.sender],
          externalAdReply: {
              title: `RPG MINAR`,
-             sourceUrl: md,
+             sourceUrl: 'https://chat.whatsapp.com/',
              mediaType: 1,
              showAdAttribution: true,
-             thumbnailUrl: imagen5,
+             thumbnailUrl: "https://telegra.ph/file/5cedb80b160423507b7c7.png",
              //sourceUrl: 'https://chat.whatsapp.com/DBTKQLDShvoKjsNdLMs386'
          }
      }
