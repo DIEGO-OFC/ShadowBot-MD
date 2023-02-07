@@ -1361,7 +1361,7 @@ export async function participantsUpdate({ id, participants, action }) {
                 }
             }
             break   
-        case 'promote':
+        /*case 'promote':
         case 'daradmin':
         case 'darpoder':
             text = (chat.sPromote || this.spromote || conn.spromote || '@user ```is now Admin```')
@@ -1373,7 +1373,7 @@ export async function participantsUpdate({ id, participants, action }) {
             text = text.replace('@user', '@' + participants[0].split('@')[0])
             if (chat.detect)
                 this.sendMessage(id, { text, mentions: this.parseMention(text) })
-            break
+            break*/
     }
 }
 
