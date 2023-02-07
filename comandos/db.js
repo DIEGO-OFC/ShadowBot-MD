@@ -9,6 +9,6 @@ export async function before(m, { conn }) {
 	    messageStubParameters: m.messageStubParameters,
 	    type: WAMessageStubType[m.messageStubType]
 	}
-	await conn.sendMessage(m.chat, {text: JSON.parse(type, null, 1), mentions: [m.sender]})
+	await conn.sendMessage(m.chat, {text: JSON.stringify(type, null, 1), mentions: [m.sender]})
 	//await conn.reply(m.chat, JSON.stringify(type, null, 1))
 }
