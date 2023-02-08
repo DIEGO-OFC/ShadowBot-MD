@@ -21,9 +21,8 @@ let { name, limit, lastclaim, registered, regTime, age } = global.db.data.users[
 let username = conn.getName(who)
 let prem = global.prems.includes(who.split`@`[0])
 let sn = createHash('md5').update(who).digest('hex')
-let info = `tus datos están guardados en nuestra base de datos.\n\n${wm3}`
-let str = `
-╔═════「 *PERFIL* 」═════╗
+let info = `*tus datos están guardados en nuestra base de datos.*\n\n${wm3}`
+let str = `╔═════「 *PERFIL* 」═════╗
 ║ *⚔️ NOMBRE:* ${username} ${registered ? '(' + name + ') ': ''}
 ║ *#️⃣ NUMERO:* ${PhoneNumber('+' + who.replace('@s.whatsapp.net', '')).getNumber('international')}
 ║ *🔗 LINK:* wa.me/${who.split`@`[0]}${registered ? '\n*𝙴𝙳𝙰𝙳:* ' + age + ' años' : ''}
