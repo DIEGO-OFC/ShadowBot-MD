@@ -14,7 +14,7 @@ let handler = async (m, { conn, usedPrefix }) => {
     let goa = (pickRandom(['un bosque 🌳']))
     
     if (axe > 0) {
-    if (global.DATABASE._data.users[m.sender].axedurability > 99) {
+    if (global.db.data.users[m.sender].axedurability > 99) {
     if (new Date - global.db.data.users[m.sender].lastcutting > 180000) {
      
 global.db.data.users[m.sender].lastcutting = new Date * 1 
