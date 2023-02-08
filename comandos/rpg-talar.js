@@ -50,6 +50,9 @@ handler.disabled = false
 
 export default handler 
 
+function pickRandom(list) {
+return list[Math.floor(Math.random() * list.length)]}
+
 function clockString(ms) {
 
 let h = isNaN(ms) ? '--' : Math.floor(ms / 3600000)
