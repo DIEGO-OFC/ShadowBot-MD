@@ -16,7 +16,7 @@ let handler = async (m, { conn, text, usedPrefix, command, groupMetadata }) => {
     let _timers = (cooldown - __timers)
     let timers = clockString(_timers)
     
-    let dolares = (Math.floor(Math.random() * 1000) + 20)
+    let dolares = (Math.floor(Math.random() * 20) + 30)
     let oak = (Math.floor(Math.random() * 50) + 50)
     let limit = (Math.floor(Math.random() * 5) + 3)
     let gold = (Math.floor(Math.random() * 10) + 10)
