@@ -22,8 +22,8 @@ let handler = async (m, { conn, text, usedPrefix, command, groupMetadata }) => {
     let gold = (Math.floor(Math.random() * 10) + 10)
 
 let raid = `*Has saqueado ⚔️ a @${_user.split("@s.whatsapp.net")[0]}*
-◦ Dinero: $${money}
-◦ Diamante: ${diamond}
+◦ Dinero: $${dolares}
+◦ Diamante: ${limit}
 ◦ Oro: ${gold}
 ◦ Madera: ${oak}`
     if (new Date - user.lastrob > cooldown) {
