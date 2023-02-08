@@ -8,7 +8,7 @@ let handler = async (m, { conn, text, usedPrefix, command, groupMetadata }) => {
     if (!text) return m.reply(`*• Etiquetɑ ɑl usuɑrio que quierɑ sɑqueɑr*\n\n*Ejemplo de uso:*\n1. ${usedPrefix}sɑqueɑr <usuɑrio/@tɑg>\n2.`)
     let _user = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted.sender
     if (!_user in global.db.data.users) return m.reply(`El usuɑrio no estά registrɑdo en lɑ bɑse de dɑtos!`)
-    if (global.db.data.users[_user] == undefined) return m.reply(`El usuɑrio no estά registrɑdo en lɑ bɑse de dɑtos!`)
+    if (global.db.data.users[_user] == 'undefined') return m.reply(`El usuɑrio no estά registrɑdo en lɑ bɑse de dɑtos!`)
     if (_user.startsWith(conn.user.jid.split`@`[0])) return m.reply('No puedes saquear a la bot :I')
     let user = global.db.data.users[m.sender]
     let uuser = global.db.data.users[_user]
