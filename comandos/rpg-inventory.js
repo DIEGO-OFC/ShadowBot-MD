@@ -158,10 +158,10 @@ if (!args[0]) {
     {
 	title: comienzo + ' ❍  𝗜𝗡𝗩𝗘𝗡𝗧𝗔𝗥𝗜𝗢  ❍ ' + fin,
 	rows: [
-{title: "➢ 𝘐𝘕𝘝𝘌𝘕𝘛𝘈𝘙𝘐𝘖 - 𝘈𝘙𝘛𝘐𝘊𝘜𝘓𝘖𝘚", rowId: usedPrefix + command + ' 1'},
-{title: "➢ 𝘐𝘕𝘝𝘌𝘕𝘛𝘈𝘙𝘐𝘖 - 𝘊𝘖𝘔𝘉𝘈𝘛𝘌", rowId: usedPrefix + command + ' 2'},
-{title: "➢ 𝘐𝘕𝘝𝘌𝘕𝘛𝘈𝘙𝘐𝘖 - 𝘔𝘐𝘚𝘐𝘖𝘕𝘌𝘚", rowId: usedPrefix + command + ' 3'},
-{title: "➢ 𝘐𝘕𝘝𝘌𝘕𝘛𝘈𝘙𝘐𝘖 - 𝘊𝘖𝘔𝘗𝘓𝘌𝘛𝘖", rowId: usedPrefix + command + ' 4'}
+{title: "➢ 𝘈𝘙𝘛𝘐𝘊𝘜𝘓𝘖𝘚", rowId: usedPrefix + command + ' 1'},
+{title: "➢ 𝘊𝘖𝘔𝘉𝘈𝘛𝘌", rowId: usedPrefix + command + ' 2'},
+{title: "➢ 𝘔𝘐𝘚𝘐𝘖𝘕𝘌𝘚", rowId: usedPrefix + command + ' 3'},
+{title: "➢ 𝘊𝘖𝘔𝘗𝘓𝘌𝘛𝘖", rowId: usedPrefix + command + ' 4'}
 ]
 },{
 	title: comienzo + ' ❍ 𝗔𝗟𝗜𝗠𝗘𝗡𝗧𝗢𝗦 𝗬 𝗔𝗡𝗜𝗠𝗔𝗟𝗘𝗦 ❍ ' + fin,
@@ -172,8 +172,8 @@ if (!args[0]) {
 ]
 
 const listMessage = {
-  text: `✨ *AVERIGUA EL INVENTARIO QUE TIENES*`,
-  footer: global.wm,
+  text: `INVENTARIO - RPG *`,
+  footer: global.wm3,
   title: `*»»—— ❍ INVENTARIO ❍  —-««*`,
   buttonText: `📍 SELECCIONE AQUÍ 📍`,
   sections
@@ -185,7 +185,7 @@ let fgif = {
                  participant : '0@s.whatsapp.net'},
             message: { 
                         "videoMessage": { 
-                        "title": wm,
+                        "title": wm3,
                         "h": `Hmm`,
                         'seconds': '999999999', 
                         'gifPlayback': 'true', 
