@@ -9,6 +9,7 @@ let dos = [md, yt]
 
 const items = {
    buy: {
+        axe: { limit: 15 },
         exp: { eleksirb: 3 },
         limit: { exp: 400 },
         dorracoins: { limit: 15 },
