@@ -50,19 +50,12 @@ handler.disabled = false
 
 export default handler 
 
-function clockString(seconds) {
-  d = Math.floor(seconds / (1000 * 60 * 60 * 24));
-  h = Math.floor((seconds / (1000 * 60 * 60)) % 24);
-  m = Math.floor((seconds / (1000 * 60)) % 60);
-  s = Math.floor((seconds / 1000) % 60);
-  
-  dDisplay = d > 0 ? d + (d == 1 ? " dia," : " Dias,") : "";
-  hDisplay = h > 0 ? h + (h == 1 ? " hora, " : " Horas, ") : "";
-  mDisplay = m > 0 ? m + (m == 1 ? " minuto, " : " Minutos, ") : "";
-  sDisplay = s > 0 ? s + (s == 1 ? " segundo" : " Segundos") : "";
-  return dDisplay + hDisplay + mDisplay + sDisplay;
-};
+function clockString(ms) {
 
-function pickRandom(list) {
-    return list[Math.floor(Math.random() * list.length)]
-}
+let h = isNaN(ms) ? '--' : Math.floor(ms / 3600000)
+
+let m = isNaN(ms) ? '--' : Math.floor(ms / 60000) % 60
+
+let s = isNaN(ms) ? '--' : Math.floor(ms / 1000) % 60
+
+return [h, m, s].map(v => v.toString().padStart(2, 0)).join(':')}
