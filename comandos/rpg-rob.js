@@ -1,6 +1,76 @@
 
+import MessageType from '@adiwajshing/baileys'
 
-let ro = 3000
+const cooldown = 10800000
+
+let handler = async (m, { conn, text, usedPrefix, command, groupMetadata }) => {
+    let rauser = groupMetadata.participants.map(v => v.jid)[Math.floor(Math.random() * groupMetadata.participants.map(v => v.jid).length)]
+    if (!text) return m.reply(`*• Etiquetɑ ɑl usuɑrio que quierɑ sɑqueɑr*\n\n*Ejemplo de uso:*\n1. ${usedPrefix}sɑqueɑr <usuɑrio/@tɑg>\n2. ${usedPrefix}sɑqueɑr @${rauser.split("@s.whatsapp.net")[0]}`)
+    let _user = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted.sender
+    if (!_user in global.db.data.users) return m.reply(`El usuɑrio no estά registrɑdo en lɑ bɑse de dɑtos!`)
+    if (global.db.data.users[_user] == undefined) return m.reply(`El usuɑrio no estά registrɑdo en lɑ bɑse de dɑtos!`)
+    if (_user.startsWith(conn.user.jid.split`@`[0])) return m.reply('No puedes saquear a la bot :I')
+    let user = global.db.data.users[m.sender]
+    let uuser = global.db.data.users[_user]
+    let __timers = (new Date - user.lastrob)
+    let _timers = (cooldown - __timers)
+    let timers = clockString(_timers)
+    
+    let dolares = (Math.floor(Math.random() * 1000) + 20)
+    let oak = (Math.floor(Math.random() * 50) + 50)
+    let limit = (Math.floor(Math.random() * 5) + 3)
+    let gold = (Math.floor(Math.random() * 10) + 10)
+
+let raid = `*Has saqueado ⚔️ a @${_user.split("@s.whatsapp.net")[0]}*
+◦ Dinero: $${money}
+◦ Diamante: ${diamond}
+◦ Oro: ${gold}
+◦ Madera: ${oak}`
+    if (new Date - user.lastrob > cooldown) {
+      if (uuser.diamond <= 5) return m.reply('El usuario no tiene suficientes recursos!')
+        global.db.data.users[_user].dolares -= dolares * 1
+        global.db.data.users[_user].oak -= oak * 1
+        global.db.data.users[_user].limit -= limit * 1
+        global.db.data.users[_user].gold -= gold * 1
+    
+        global.db.data.users[m.sender].dolares += dolares * 1
+        global.db.data.users[m.sender].oak += oak * 1
+        global.db.data.users[m.sender].limit += limit * 1
+        global.db.data.users[m.sender].gold += gold * 1
+        global.db.data.users[m.sender].lastrob = new Date * 1
+        m.reply(raid)
+        m.reply(`*@${m.sender.split("@s.whatsapp.net")[0]}* Te acaba de saquear!`, _user)
+    } else {
+        conn.sendMessage(m.chat, 'Espere *' + timers + '* para volver a saquear', MessageType.text, { quoted: m })
+    }
+}
+
+handler.help = ['saquear']
+handler.tags = ['rpg']
+handler.command = /^(raidear|saquear)$/i
+
+handler.cooldown = cooldown
+
+export default handler 
+
+function clockString(seconds) {
+  d = Math.floor(seconds / (1000 * 60 * 60 * 24));
+  h = Math.floor((seconds / (1000 * 60 * 60)) % 24);
+  m = Math.floor((seconds / (1000 * 60)) % 60);
+  s = Math.floor((seconds / 1000) % 60);
+  
+  dDisplay = d > 0 ? d + (d == 1 ? " dia, " : " Dias, ") : "";
+  hDisplay = h > 0 ? h + (h == 1 ? " hora, " : " Horas, ") : "";
+  mDisplay = m > 0 ? m + (m == 1 ? " minuto, " : " Minutos, ") : "";
+  sDisplay = s > 0 ? s + (s == 1 ? " segundo" : " Segundos") : "";
+  return dDisplay + hDisplay + mDisplay + sDisplay;
+};
+
+
+
+
+
+/*let ro = 3000
 let handler = async (m, { conn, usedPrefix, command}) => {
     let time = global.db.data.users[m.sender].lastrob + 7200000
     if (new Date - global.db.data.users[m.sender].lastrob < 7200000) throw `⏱️¡Hey! Espera *${msToTime(time - new Date())}* para volver a robar`
@@ -38,52 +108,7 @@ let handler = async (m, { conn, usedPrefix, command}) => {
     seconds = (seconds < 10) ? "0" + seconds : seconds
   
     return hours + " Hora(s) " + minutes + " Minuto(s)"
-  }
+  }*/
   
 
 
-/*let handler = async (m, { conn, isPrems}) => {
-let hasil = Math.floor(Math.random() * 5000)
-let time = global.db.data.users[m.sender].lastwork + 600000
-if (new Date - global.db.data.users[m.sender].lastwork < 600000) throw `*𝙴𝚜𝚝𝚊𝚜 𝚌𝚊𝚗𝚜𝚊𝚍𝚘, 𝚍𝚎𝚋𝚎𝚜 𝚍𝚎𝚜𝚌𝚊𝚗𝚜𝚊𝚛 𝚌𝚘𝚖𝚘 𝚖𝚒𝚗𝚒𝚖𝚘 ${msToTime(time - new Date())} 𝚙𝚊𝚛𝚊 𝚟𝚘𝚕𝚟𝚎𝚛 𝚊 hacer un crimen!*`
-
-m.reply(`${pickRandom(global.crimen)} *${hasil} XP*`)
-global.db.data.users[m.sender].lastwork = new Date * 1
-}
-handler.help = ['robar']
-handler.tags = ['xp']
-handler.command = ['crimen', 'rob', "asaltar"]
-handler.fail = null
-handler.exp = 0
-export default handler
-
-function msToTime(duration) {
-var milliseconds = parseInt((duration % 1000) / 100),
-seconds = Math.floor((duration / 1000) % 60),
-minutes = Math.floor((duration / (1000 * 60)) % 60),
-hours = Math.floor((duration / (1000 * 60 * 60)) % 24)
-hours = (hours < 10) ? "0" + hours : hours
-minutes = (minutes < 10) ? "0" + minutes : minutes
-seconds = (seconds < 10) ? "0" + seconds : seconds
-
-return minutes + " m " + seconds + " s " 
-}
-
-
-function pickRandom(list) {
-return list[Math.floor(list.length * Math.random())]
-}
-
-global.crimen = ["Robaste a un politico y ganas", "Robaste al Gobierno, ganando", "Robaste una persona y ganas",
- "Robaste un Búnker y ganaste", "Robaste una Mansión y te pagaron", 
-"Robaste un Avión y ganaste", 
-"trabajaste para la mafia y te pagaron", "Robaste dos obra de arte del museo de España y ganaste", 
-"Asaltaste dos bancos de tu ciudad y ganas", 
-"Robaste a McDonald's y ganaste", "robaste a roblox y ganaste", "robaste a DIEGO-OFC y ganaste", 
-"Robaste a discord y ganaste", 
-"Robaste una tienda de ropa y ganaste"
-]*/
-
-/*****************************************
-*CREADO POR https://github.com/DIEGO-OFC*
-*****************************************/
