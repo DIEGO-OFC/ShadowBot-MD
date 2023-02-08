@@ -17,9 +17,7 @@ let handler = async (m, { conn, text, usedPrefix, command, groupMetadata }) => {
     let timers = clockString(_timers)
     
     let dolares = (Math.floor(Math.random() * 20) + 30)
-    let oak = (Math.floor(Math.random() * 50) + 50)
     let limit = (Math.floor(Math.random() * 5) + 3)
-    let gold = (Math.floor(Math.random() * 10) + 10)
 
 let raid = `*Has saqueado ⚔️ a @${_user.split("@s.whatsapp.net")[0]}*
 ◦ Dinero: $${dolares}
@@ -27,14 +25,13 @@ let raid = `*Has saqueado ⚔️ a @${_user.split("@s.whatsapp.net")[0]}*
     if (new Date - user.lastrob > cooldown) {
       if (uuser.diamond <= 5) return m.reply('El usuario no tiene suficientes recursos!')
         global.db.data.users[_user].dolares -= dolares * 1
-        global.db.data.users[_user].oak -= oak * 1
         global.db.data.users[_user].limit -= limit * 1
-        global.db.data.users[_user].gold -= gold * 1
+        
     
         global.db.data.users[m.sender].dolares += dolares * 1
-        global.db.data.users[m.sender].oak += oak * 1
+        
         global.db.data.users[m.sender].limit += limit * 1
-        global.db.data.users[m.sender].gold += gold * 1
+        
         global.db.data.users[m.sender].lastrob = new Date * 1
         m.reply(raid)
         m.reply(`*@${m.sender.split("@s.whatsapp.net")[0]}* Te acaba de saquear!`, _user)
