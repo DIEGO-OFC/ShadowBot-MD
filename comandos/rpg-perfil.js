@@ -35,8 +35,8 @@ let str = `╔═════「 *${command}* 」═════╗
 ║ *💳 PREMIUM:* ${prem ? 'Si' : 'No'}
 ╚════ ≪ •❈• ≫ ════╝`
 conn.sendButton(m.chat, str,  info, pp, [['🔰 MENU PRINCIPAL', '/menu']], m)
-}}
-m.reply(`*❕ NUMERO DE SERIE: ${sn}*`)
+
+m.reply(`*❕ NUMERO DE SERIE: ${sn}*`)}}
 handler.help = ['profile [@user]']
 handler.tags = ['xp']
 handler.command = /^perfil|profile?$/i
