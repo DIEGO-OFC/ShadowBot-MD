@@ -6,3 +6,5 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
 handler.help = ['say <teks>']
 handler.tags = ['tools']
 handler.command = /^(say)$/i
+
+export default handler 
