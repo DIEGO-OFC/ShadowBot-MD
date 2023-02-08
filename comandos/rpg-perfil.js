@@ -30,7 +30,6 @@ let str = `╔═════「 *${command}* 」═════╗
 ║ *⚓ RANGO:* ${role}
 ║ *💸 DOLARES*: ${dolares}
 ║ *🎉 EXPERIENCIA/XP:* ${xp}
-║ *☯️ TOKENS:* ${joincount}
 ║ *💎 DIAMANTES:* ${limit}
 ║ *📦 REGISTRADO:* ${registered ? 'Si': 'No'}
 ║ *💳 PREMIUM:* ${prem ? 'Si' : 'No'}
