@@ -33,7 +33,7 @@ case 'caña':
 
 case 'hacha':
       if (global.db.data.users[m.sender].axe > 0) { 
-      if (global.db._data.users[m.sender].axedurability >= 5000) return conn.reply(m.chat, 'Tu hacha tiene la durabilidad máxima', m)
+      if (global.db.data.users[m.sender].axedurability >= 5000) return conn.reply(m.chat, 'Tu hacha tiene la durabilidad máxima', m)
       if (global.db.data.users[m.sender].dolares > Upaxe * 1) {
       	global.db.data.users[m.sender].axedurability += 500
           global.db.data.users[m.sender].dolares -= Upaxe * 1
