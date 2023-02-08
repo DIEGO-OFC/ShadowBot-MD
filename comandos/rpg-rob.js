@@ -44,7 +44,7 @@ let raid = `*Has saqueado ⚔️ a @${_user.split("@s.whatsapp.net")[0]}*
 
 handler.help = ['saquear']
 handler.tags = ['rpg']
-handler.command = /^(raidear|saquear)$/i
+handler.command = /^(raidear|saquear|rob|robar)$/i
 
 handler.cooldown = cooldown
 
