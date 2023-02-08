@@ -9,8 +9,7 @@ let { exp, limit, level, role } = global.db.data.users[m.sender]
 let { min, xp, max } = xpRange(level, global.multiplier)
 let rtotalreg = Object.values(global.db.data.users).filter(user => user.registered == true).length 
 let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
-
-let pp = await conn.profilePictureUrl(who, 'image')
+let pp = await conn.profilePictureUrl(who, 'image').catch(_ => 'https://telegra.ph/file/9b1353deceded7f387713.jpg')
 if (!(who in global.db.data.users)) throw `El usuario que está mencionando no está registrado en mi base de datos`
 try {
 
@@ -35,8 +34,8 @@ let str = `╔═════「 *${command}* 」═════╗
 ║ *💳 PREMIUM:* ${prem ? 'Si' : 'No'}
 ╚════ ≪ •❈• ≫ ════╝`
 conn.sendButton(m.chat, str,  info, pp, [['🔰 MENU PRINCIPAL', '/menu']], m)
-
-m.reply(`*❕ NUMERO DE SERIE: ${sn}*`)}}
+conn.sendMessage(who, {text: `*❕ NUMERO DE SERIE: ${sn}*`}, {quoted: m})
+}}
 handler.help = ['profile [@user]']
 handler.tags = ['xp']
 handler.command = /^perfil|profile?$/i
