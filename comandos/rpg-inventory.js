@@ -172,7 +172,7 @@ if (!args[0]) {
 ]
 
 const listMessage = {
-  text: `INVENTARIO - RPG *`,
+  text: `*INVENTARIO - RPG*`,
   footer: global.wm3,
   title: `*»»—— ❍ INVENTARIO ❍  —-««*`,
   buttonText: `📍 SELECCIONE AQUÍ 📍`,
