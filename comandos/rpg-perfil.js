@@ -34,8 +34,8 @@ let str = `
 ║ *📦 REGISTRADO:* ${registered ? 'Si': 'No'}
 ║ *💳 PREMIUM:* ${prem ? 'Si' : 'No'}
 ║ *❕ NUMERO DE SERIE:* 
-║ ${sn}`
-╚════ ≪ •❈• ≫ ════╝
+║ ${sn}
+╚════ ≪ •❈• ≫ ════╝`
 conn.sendButton(m.chat, str, author, pp, [['🔰 MENU PRINCIPAL', '/menu']], m)
 }}
 handler.help = ['profile [@user]']
