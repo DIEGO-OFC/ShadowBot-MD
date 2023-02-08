@@ -37,9 +37,9 @@ let raid = `*Has saqueado ⚔️ a @${_user.split("@s.whatsapp.net")[0]}*
         global.db.data.users[m.sender].lastrob = new Date * 1
         m.reply(raid)
         m.reply(`*@${m.sender.split("@s.whatsapp.net")[0]}* Te acaba de saquear!`, _user)
+        global.db.data.users[m.sender].lastrob = new Date * 1
     } else {
-        conn.sendMessage(m.chat, 'Espere *' + timers + '* para volver a saquear', MessageType.text, { quoted: m })
-    }
+            }
 }
 
 handler.help = ['saquear']
