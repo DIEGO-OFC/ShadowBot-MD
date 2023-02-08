@@ -24,7 +24,7 @@ let handler = async (m, { conn, text, usedPrefix, command, groupMetadata }) => {
 let raid = `*Has saqueado ⚔️ a @${_user.split("@s.whatsapp.net")[0]}*
 ◦ Dinero: $${dolares}
 ◦ Diamante: ${limit}`
-    if (new Date - user.lastrob > cooldown) {
+
       if (uuser.limit <= 5) return m.reply('El usuario no tiene suficientes recursos!')
         global.db.data.users[_user].dolares -= dolares * 1
         global.db.data.users[_user].limit -= limit * 1
@@ -34,13 +34,13 @@ let raid = `*Has saqueado ⚔️ a @${_user.split("@s.whatsapp.net")[0]}*
         
         global.db.data.users[m.sender].limit += limit * 1
         
-        global.db.data.users[m.sender].lastrob = new Date * 1
+      
         m.reply(raid)
         m.reply(`*@${m.sender.split("@s.whatsapp.net")[0]}* Te acaba de saquear!`, _user)
         global.db.data.users[m.sender].lastrob = new Date * 1
-    } else {
-            }
-}
+    } 
+            
+
 
 handler.help = ['saquear']
 handler.tags = ['rpg']
