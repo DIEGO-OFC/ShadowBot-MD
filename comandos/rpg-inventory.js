@@ -262,73 +262,74 @@ let tiketm = member.healtmonster
 let str = `
 🏷️ *INVENTARIO* 
 👤» *${name}* ( @${who.split("@")[0]} )\n
-╭━━━━━━━━━⬣
-┃ *𝗜𝗡𝗩𝗘𝗡𝗧𝗔𝗥𝗜𝗢 𝗗𝗘 𝗔𝗥𝗧𝗜𝗖𝗨𝗟𝗢𝗦* 
-┃ ╸╸╸╸╸╸╸╸╸╸╸╸╸╸
-┃ *${rpg.emoticon('health')} » ${healt}* 
-┃ ${rpgg.emoticon('level')} *Nivel : Level » ${level}*
-┃ ${rpgg.emoticon('role')} *Rango : Role* 
-┃ *»* ${rol}
-┃ *${rpgg.emoticon('premium')} ${member.premium ? "✅ VIP : Premium": "Limitado : Free"}*
-┃ 🏦 *Banco : Bank » ${member.bank}*
-┃ 💞 *Pareja* 
-┃ *» ${pasangan ? `${name} 💝 ${conn.getName(pareja)}` : `❌`}*
-┃ ⚠️ *Advertencia » ${warn}/4*
-┃ 🚷 *Baneado(a) » No*
-┃
-┃ ╸╸╸╸╸╸╸╸╸╸╸╸╸╸╮
-┃ 𝗣𝗥𝗢𝗗𝗨𝗖𝗧𝗢𝗦 𝗩𝗔𝗟𝗜𝗢𝗦𝗢𝗦
-┃ ╸╸╸╸╸╸╸╸╸╸╸╸╸╸╯
-┃ ${rpgg.emoticon('exp')} *Exp » ${exp}*
-┃ ${rpgg.emoticon('limit')} *Diamante : Diamond » ${dia}*
-┃ ${rpgg.emoticon('dorracoins')} *DorratCoins: » ${dorracoins}*
-┃ ${rpgg.emoticon('joincount')} *Token » ${token}*
-┃ *${rpgshop.emoticon('emerald')} » ${member.emerald}*
-┃ *${rpgshop.emoticon('berlian')} » ${member.berlian}*
-┃ *${rpgshop.emoticon('tiketcoin')} » ${member.tiketcoin}*
-┃ *${rpgshop.emoticon('kyubi')} » ${member.kyubi}*
-┃ *${rpgshop.emoticon('diamond')} » ${member.diamond}*
-┃ *${rpgshop.emoticon('gold')} » ${member.gold}*
-┃ *${rpgshop.emoticon('stamina')} » ${member.stamina}%*
-┃ 🎟️ *Cupón : Coupon » ${member.cupon}*
-┃ 📉 *Gastos : Expg » ${member.expg}*
-┃
-┃ ╸╸╸╸╸╸╸╸╸╸╸╸╸╸╮
-┃ 𝗦𝗨𝗣𝗘𝗥𝗩𝗜𝗩𝗘𝗡𝗖𝗜𝗔
-┃ ╸╸╸╸╸╸╸╸╸╸╸╸╸╸╯
-┃ *${rpgshop.emoticon('potion')} » ${member.potion}*
-┃ *${rpgshop.emoticon('aqua')} » ${member.aqua}*
-┃ *${rpgshop.emoticon('trash')} » ${member.trash}*
-┃ *${rpgshop.emoticon('wood')} » ${member.wood}*
-┃ *${rpgshop.emoticon('rock')} » ${member.rock}*
-┃ *${rpgshop.emoticon('batu')} » ${member.batu}*
-┃ *${rpgshop.emoticon('string')} » ${member.string}*
-┃ *${rpgshop.emoticon('iron')} » ${member.iron}*
-┃ *${rpgshop.emoticon('coal')} » ${member.coal}*
-┃ *${rpgshop.emoticon('botol')} » ${member.botol}*
-┃ *${rpgshop.emoticon('kaleng')} » ${member.kaleng}*
-┃ *${rpgshop.emoticon('kardus')} » ${member.kardus}*
-┃
-┃ ╸╸╸╸╸╸╸╸╸╸╸╸╸╸╮
-┃ 𝗢𝗕𝗝𝗘𝗧𝗢𝗦 𝗠𝗜𝗦𝗧𝗘𝗥𝗜𝗢𝗦𝗢𝗦
-┃ ╸╸╸╸╸╸╸╸╸╸╸╸╸╸╯
-┃ *${rpgshop.emoticon('eleksirb')} » ${member.eleksirb}*
-┃ *${rpgshop.emoticon('emasbatang')} » ${member.emasbatang}*
-┃ *${rpgshop.emoticon('emasbiasa')} » ${member.emasbiasa}*
-┃ *${rpgshop.emoticon('rubah')} » ${member.rubah}*
-┃ *${rpgshop.emoticon('emas')} » ${member.emas}*
-┃ *${rpgshop.emoticon('sampah')} » ${member.sampah}*
-┃ *${rpgshop.emoticon('serigala')} » ${member.serigala}*
-┃ *${rpgshop.emoticon('kayu')} » ${member.kayu}*
-┃ *${rpgshop.emoticon('sword')} » ${member.sword}*
-┃ *${rpgshop.emoticon('kayu')} » ${member.kayu}*
-┃ *${rpgshop.emoticon('umpan')} » ${member.umpan}*
-┃ *${rpgshop.emoticon('healtmonster')} » ${member.healtmonster}*
-┃ *${rpgshop.emoticon('pancingan')} » ${member.pancingan}*
-┃ *${rpgshop.emoticon('kayu')} » ${member.kayu}*
-┃ *${rpg.emoticon('ramuan')} » ${member.ramuan}*
-┃ *🧭 Reloj : Reloj » ${member.arlok}*
-╰━━━━━━━━━⬣
+╔═════ೋೋ═════╗
+║ ◤━━━━━ ☆. ∆ .☆ ━━━━━◥
+║ *𝗜𝗡𝗩𝗘𝗡𝗧𝗔𝗥𝗜𝗢 𝗗𝗘 𝗔𝗥𝗧𝗜𝗖𝗨𝗟𝗢𝗦* 
+║ ◤━━━━━ ☆. ∆ .☆ ━━━━━◥
+║ *${rpg.emoticon('health')} » ${healt}* 
+║ ${rpgg.emoticon('level')} *Nivel : Level » ${level}*
+║ ${rpgg.emoticon('role')} *Rango : Role* 
+║ *»* ${rol}
+║ *${rpgg.emoticon('premium')} ${member.premium ? "✅ VIP : Premium": "Limitado : Free"}*
+║ 🏦 *Banco : Bank » ${member.bank}*
+║ 💞 *Pareja* 
+║ *» ${pasangan ? `${name} 💝 ${conn.getName(pareja)}` : `❌`}*
+║ ⚠️ *Advertencia » ${warn}/4*
+║ 🚷 *Baneado(a) » No*
+║
+║ ╸╸╸╸╸╸╸╸╸╸╸╸╸╸╮
+║ 𝗣𝗥𝗢𝗗𝗨𝗖𝗧𝗢𝗦 𝗩𝗔𝗟𝗜𝗢𝗦𝗢𝗦
+║ ╸╸╸╸╸╸╸╸╸╸╸╸╸╸╯
+║ ${rpgg.emoticon('exp')} *Exp » ${exp}*
+║ ${rpgg.emoticon('limit')} *Diamante : Diamond » ${dia}*
+║ ${rpgg.emoticon('dorracoins')} *DorratCoins: » ${dorracoins}*
+║ ${rpgg.emoticon('joincount')} *Token » ${token}*
+║ *${rpgshop.emoticon('emerald')} » ${member.emerald}*
+║ *${rpgshop.emoticon('berlian')} » ${member.berlian}*
+║ *${rpgshop.emoticon('tiketcoin')} » ${member.tiketcoin}*
+║ *${rpgshop.emoticon('kyubi')} » ${member.kyubi}*
+║ *${rpgshop.emoticon('diamond')} » ${member.diamond}*
+║ *${rpgshop.emoticon('gold')} » ${member.gold}*
+║ *${rpgshop.emoticon('stamina')} » ${member.stamina}%*
+║ 🎟️ *Cupón : Coupon » ${member.cupon}*
+║ 📉 *Gastos : Expg » ${member.expg}*
+║
+║ ╸╸╸╸╸╸╸╸╸╸╸╸╸╸╮
+║ 𝗦𝗨𝗣𝗘𝗥𝗩𝗜𝗩𝗘𝗡𝗖𝗜𝗔
+║ ╸╸╸╸╸╸╸╸╸╸╸╸╸╸╯
+║ *${rpgshop.emoticon('potion')} » ${member.potion}*
+║ *${rpgshop.emoticon('aqua')} » ${member.aqua}*
+║ *${rpgshop.emoticon('trash')} » ${member.trash}*
+║ *${rpgshop.emoticon('wood')} » ${member.wood}*
+║ *${rpgshop.emoticon('rock')} » ${member.rock}*
+║ *${rpgshop.emoticon('batu')} » ${member.batu}*
+║ *${rpgshop.emoticon('string')} » ${member.string}*
+║ *${rpgshop.emoticon('iron')} » ${member.iron}*
+║ *${rpgshop.emoticon('coal')} » ${member.coal}*
+║ *${rpgshop.emoticon('botol')} » ${member.botol}*
+║ *${rpgshop.emoticon('kaleng')} » ${member.kaleng}*
+║ *${rpgshop.emoticon('kardus')} » ${member.kardus}*
+║
+║ ╸╸╸╸╸╸╸╸╸╸╸╸╸╸╮
+║ 𝗢𝗕𝗝𝗘𝗧𝗢𝗦 𝗠𝗜𝗦𝗧𝗘𝗥𝗜𝗢𝗦𝗢𝗦
+║ ╸╸╸╸╸╸╸╸╸╸╸╸╸╸╯
+║ *${rpgshop.emoticon('eleksirb')} » ${member.eleksirb}*
+║ *${rpgshop.emoticon('emasbatang')} » ${member.emasbatang}*
+║ *${rpgshop.emoticon('emasbiasa')} » ${member.emasbiasa}*
+║ *${rpgshop.emoticon('rubah')} » ${member.rubah}*
+║ *${rpgshop.emoticon('emas')} » ${member.emas}*
+║ *${rpgshop.emoticon('sampah')} » ${member.sampah}*
+║ *${rpgshop.emoticon('serigala')} » ${member.serigala}*
+║ *${rpgshop.emoticon('kayu')} » ${member.kayu}*
+║ *${rpgshop.emoticon('sword')} » ${member.sword}*
+║ *${rpgshop.emoticon('kayu')} » ${member.kayu}*
+║ *${rpgshop.emoticon('umpan')} » ${member.umpan}*
+║ *${rpgshop.emoticon('healtmonster')} » ${member.healtmonster}*
+║ *${rpgshop.emoticon('pancingan')} » ${member.pancingan}*
+║ *${rpgshop.emoticon('kayu')} » ${member.kayu}*
+║ *${rpg.emoticon('ramuan')} » ${member.ramuan}*
+║ *🧭 Reloj : Reloj » ${member.arlok}*
+╚════ ≪ •❈• ≫ ════╝
 
 🏆 *RESUMEN EN LOS TOPS* 🏆 
 🚀 *SUMMARY IN THE TOPS* 🚀
