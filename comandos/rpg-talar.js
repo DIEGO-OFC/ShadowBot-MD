@@ -29,7 +29,7 @@ global.db.data.users[m.sender].exp += exp * 1
             } else m.reply(`Te quedaste sin energía vuelve dentro de *${waktur}*`)
          } else m.reply(`Repara tu hacha, escribiendo ${usedPrefix}reparar hacha`)
      } else m.reply(`Todavía no tienes una hacha, compralo escribiendo ${usedPrefix}comprar hacha`)
- }
+ 
 
 //Update
 //- Roble: ${oak}
