@@ -158,10 +158,10 @@ if (!args[0]) {
     {
 	title: comienzo + ' ❍  𝗜𝗡𝗩𝗘𝗡𝗧𝗔𝗥𝗜𝗢  ❍ ' + fin,
 	rows: [
-{title: "➢ 𝘈𝘙𝘛𝘐𝘊𝘜𝘓𝘖𝘚", rowId: usedPrefix + command + ' 1'},
-{title: "➢ 𝘊𝘖𝘔𝘉𝘈𝘛𝘌", rowId: usedPrefix + command + ' 2'},
-{title: "➢ 𝘔𝘐𝘚𝘐𝘖𝘕𝘌𝘚", rowId: usedPrefix + command + ' 3'},
-{title: "➢ 𝘊𝘖𝘔𝘗𝘓𝘌𝘛𝘖", rowId: usedPrefix + command + ' 4'}
+{title: "➢ 𝘼𝙍𝙏𝙄𝘾𝙐𝙇𝙊𝙎", rowId: usedPrefix + command + ' 1'},
+{title: "➢ 𝘾𝙊𝙈𝘽𝘼𝙏𝙀", rowId: usedPrefix + command + ' 2'},
+{title: "➢ 𝙈𝙄𝙎𝙄𝙊𝙉𝙀𝙎", rowId: usedPrefix + command + ' 3'},
+{title: "➢ 𝘾𝙊𝙈𝙋𝙇𝙀𝙏𝙊", rowId: usedPrefix + command + ' 4'}
 ]
 },{
 	title: comienzo + ' ❍ 𝗔𝗟𝗜𝗠𝗘𝗡𝗧𝗢𝗦 𝗬 𝗔𝗡𝗜𝗠𝗔𝗟𝗘𝗦 ❍ ' + fin,
@@ -174,8 +174,8 @@ if (!args[0]) {
 const listMessage = {
   text: `*INVENTARIO - RPG*`,
   footer: global.wm3,
-  title: `*»»—— ❍ INVENTARIO ❍  —-««*`,
-  buttonText: `📍 SELECCIONE AQUÍ 📍`,
+  title: `*❍ INVENTARIO ❍*`,
+  buttonText: `🔰 SELECCIONE AQUÍ 🔰`,
   sections
 }
 let bottime = `${name} 𝗧𝗜𝗠𝗘: ${moment.tz('America/Bogota').format('HH:mm:ss')}`//America/Los_Angeles
