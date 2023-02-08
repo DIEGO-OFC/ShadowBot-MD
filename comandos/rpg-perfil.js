@@ -21,6 +21,7 @@ let { name, limit, lastclaim, registered, regTime, age } = global.db.data.users[
 let username = conn.getName(who)
 let prem = global.prems.includes(who.split`@`[0])
 let sn = createHash('md5').update(who).digest('hex')
+let info = 'tus datos están guardados en nuestra base de datos'
 let str = `
 ╔═════「 *PERFIL* 」═════╗
 ║ *⚔️ NOMBRE:* ${username} ${registered ? '(' + name + ') ': ''}
@@ -37,7 +38,7 @@ let str = `
 ║ *❕ NUMERO DE SERIE:* 
 ║ ${sn}
 ╚════ ≪ •❈• ≫ ════╝`
-conn.sendButton(m.chat, str, author, pp, [['🔰 MENU PRINCIPAL', '/menu']], m)
+conn.sendButton(m.chat, str,  info, pp, [['🔰 MENU PRINCIPAL', '/menu']], m)
 }}
 handler.help = ['profile [@user]']
 handler.tags = ['xp']
