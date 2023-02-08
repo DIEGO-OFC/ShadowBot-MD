@@ -17,7 +17,7 @@ let handler = async (m, { conn, usedPrefix }) => {
     if (global.DATABASE._data.users[m.sender].axedurability > 99) {
     if (new Date - global.db.data.users[m.sender].lastcutting > 180000) {
      
-global.DATABASE._data.users[m.sender].lastcutting = new Date * 1 
+global.db.data.users[m.sender].lastcutting = new Date * 1 
 //global.DATABASE._data.users[m.sender].jungle += jungle * 1 
 //global.DATABASE._data.users[m.sender].birch += birch * 1 
 global.db.data.users[m.sender].oak += oak * 1 
