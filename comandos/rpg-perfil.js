@@ -33,11 +33,10 @@ let str = `╔═════「 *${command}* 」═════╗
 ║ *💎 DIAMANTES:* ${limit}
 ║ *📦 REGISTRADO:* ${registered ? 'Si': 'No'}
 ║ *💳 PREMIUM:* ${prem ? 'Si' : 'No'}
-║ *❕ NUMERO DE SERIE:* 
-║ ${sn}
 ╚════ ≪ •❈• ≫ ════╝`
 conn.sendButton(m.chat, str,  info, pp, [['🔰 MENU PRINCIPAL', '/menu']], m)
 }}
+m.reply(`*❕ NUMERO DE SERIE: ${sn}*`)
 handler.help = ['profile [@user]']
 handler.tags = ['xp']
 handler.command = /^perfil|profile?$/i
