@@ -76,7 +76,6 @@ function msToTime(duration) {
 
 
 
-/*
-By DIEGO-OFC
+/*By DIEGO-OFC
 
-/*
+*/
