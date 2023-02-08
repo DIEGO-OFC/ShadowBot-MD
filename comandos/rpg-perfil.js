@@ -3,7 +3,7 @@ import fs from 'fs'
 import { createHash } from 'crypto'
 import PhoneNumber from 'awesome-phonenumber'
 import fetch from 'node-fetch'
-let handler = async (m, { conn, usedPrefix, participants }) => {
+let handler = async (m, { conn, usedPrefix, command, participants }) => {
 let { dolares, joincount } = global.db.data.users[m.sender]
 let { exp, limit, level, role } = global.db.data.users[m.sender]
 let { min, xp, max } = xpRange(level, global.multiplier)
@@ -22,7 +22,7 @@ let username = conn.getName(who)
 let prem = global.prems.includes(who.split`@`[0])
 let sn = createHash('md5').update(who).digest('hex')
 let info = `*tus datos están guardados en nuestra base de datos.*\n\n${wm3}`
-let str = `╔═════「 *PERFIL* 」═════╗
+let str = `╔═════「 *${command}* 」═════╗
 ║ *⚔️ NOMBRE:* ${username} ${registered ? '(' + name + ') ': ''}
 ║ *#️⃣ NUMERO:* ${PhoneNumber('+' + who.replace('@s.whatsapp.net', '')).getNumber('international')}
 ║ *🔗 LINK:* wa.me/${who.split`@`[0]}${registered ? '\n*𝙴𝙳𝙰𝙳:* ' + age + ' años' : ''}
