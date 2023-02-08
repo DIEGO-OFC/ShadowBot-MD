@@ -20,8 +20,6 @@ global.db.data.users[m.sender].lastcutting = new Date * 1
 global.db.data.users[m.sender].oak += oak * 1 
 global.db.data.users[m.sender].axedurability -= durability * 1
 global.db.data.users[m.sender].exp += exp * 1
-
-          setTimeout(() => {
           	m.reply(`*Talaste en ${goa} y obtienes*
 - Madera: ${oak}
 - Exp: ${exp}
