@@ -23,9 +23,7 @@ let handler = async (m, { conn, text, usedPrefix, command, groupMetadata }) => {
 
 let raid = `*Has saqueado ⚔️ a @${_user.split("@s.whatsapp.net")[0]}*
 ◦ Dinero: $${dolares}
-◦ Diamante: ${limit}
-◦ Oro: ${gold}
-◦ Madera: ${oak}`
+◦ Diamante: ${limit}`
     if (new Date - user.lastrob > cooldown) {
       if (uuser.diamond <= 5) return m.reply('El usuario no tiene suficientes recursos!')
         global.db.data.users[_user].dolares -= dolares * 1
