@@ -21,7 +21,7 @@ let { name, limit, lastclaim, registered, regTime, age } = global.db.data.users[
 let username = conn.getName(who)
 let prem = global.prems.includes(who.split`@`[0])
 let sn = createHash('md5').update(who).digest('hex')
-let info = 'tus datos están guardados en nuestra base de datos'
+let info = `tus datos están guardados en nuestra base de datos.\n\n${wm3}`
 let str = `
 ╔═════「 *PERFIL* 」═════╗
 ║ *⚔️ NOMBRE:* ${username} ${registered ? '(' + name + ') ': ''}
