@@ -1,6 +1,6 @@
 let handler = async (m, { conn, usedPrefix }) => {
 	
-	let user = global.DATABASE._data.users[m.sender]
+	let user = global.db.data.users[m.sender]
 	let axe = global.DATABASE._data.users[m.sender].axe
 	let adurability = global.DATABASE._data.users[m.sender].axedurability
     let __waktur = (new Date - global.DATABASE._data.users[m.sender].lastcutting)
