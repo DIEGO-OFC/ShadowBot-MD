@@ -43,8 +43,8 @@ Robado por: ${taguser}`
         global.db.data.users[m.sender].limit += limit * 1
         
       
-        m.reply(raid)
-        conn.sendMessage(who, {text: `*❕ TE ACABAN DE ROBAR!*`}, {quoted: m})
+        conn.sendMessage(m.chat, {text: raid, mentions: [_user, taguser]}, {quoted: m})
+        conn.sendMessage(who, {text: `*❕ TE ACABAN DE ROBAR!*`, mentions: [taguser]}, {quoted: m})
 global.db.data.users[m.sender].lastrob = new Date * 1
     } 
             
