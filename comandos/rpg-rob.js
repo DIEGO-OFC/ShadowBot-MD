@@ -13,6 +13,8 @@ let handler = async (m, { conn, text, usedPrefix, command, groupMetadata }) => {
     let _user = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted.sender
     if (!_user in global.db.data.users) return m.reply(`El usuɑrio no estά registrɑdo en lɑ bɑse de dɑtos!`)
     let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
+    if(m.quoted?.sender) m.mentionedJid.push(m.quoted.sender)
+if(!m.mentionedJid.length) m.mentionedJid.push(m.sender)
     if (global.db.data.users[_user] == undefined) return m.reply(`El usuɑrio no estά registrɑdo en lɑ bɑse de dɑtos!`)
     if (_user.startsWith(conn.user.jid.split`@`[0])) return m.reply('No puedes saquear a la bot :I')
     let uuser = global.db.data.users[_user]
