@@ -177,6 +177,6 @@ buttonText: `🧿 𝙀𝙡𝙚𝙜𝙞𝙧 𝙄𝙙𝙞𝙤𝙢𝙖 🧿`,
 sections }  
 await conn.sendMessage(m.chat, listMessage, {quoted: fkontak} )
 await m.reply(result2)
-}}}
+}}
 handler.command = /^(tr(anslate)|traductor|traducir?)$/i
 export default handler
