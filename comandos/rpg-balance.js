@@ -3,8 +3,7 @@ let who
 if (m.isGroup) who = m.mentionedJid[0] ? m.mentionedJid[0] : m.sender
 else who = m.sender
 let name = conn.getName(who) 
-let db = './galeria/menudorrat3.jpg'
-db = await conn.profilePictureUrl(who, 'image')
+let db = await conn.profilePictureUrl(who, 'image').catch(_ => 'https://telegra.ph/file/9b1353deceded7f387713.jpg')
 let bank = `╭━━━━━━ 𝐁𝐀𝐍𝐂𝐎 🏦 ━━━╾•
 ❍ *Nombre:* ${name}
 ❍ *Diamantes:* ${global.db.data.users[who].limit} 💎
