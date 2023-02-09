@@ -7,4 +7,5 @@ m.reply(`*⚡ ${conn.getName(m.sender)} ESTARA AFK*\n\n*❍ MOTIVO (𝙰𝙵𝙺
 handler.help = ['afk [alasan]']
 handler.tags = ['main']
 handler.command = /^afk$/i
+handler.dolares = 4
 export default handler
