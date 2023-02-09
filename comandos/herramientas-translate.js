@@ -154,7 +154,6 @@ rows: [
 {title: "🧿 " + idiomas[133][0], rowId: `${usedPrefix + command} ${idiomas[133][1]} ${text}`, description: `𝑰𝒅𝒊𝒐𝒎𝒂: ${idiomas[133][0]} | ${idiomas[133][1]}`},
 {title: "🧿 " + idiomas[134][0], rowId: `${usedPrefix + command} ${idiomas[134][1]} ${text}`, description: `𝑰𝒅𝒊𝒐𝒎𝒂: ${idiomas[134][0]} | ${idiomas[134][1]}`}
 ]}]	
-try {      
 let result = await translate(`${text}`, { tld, to: lang, })
 
 const listMessage = {
@@ -165,8 +164,7 @@ buttonText: `🧿 𝙀𝙡𝙚𝙜𝙞𝙧 𝙄𝙙𝙞𝙤𝙢𝙖 🧿`,
 sections }  
 await conn.sendMessage(m.chat, listMessage, {quoted: fkontak} )
 await m.reply(result)
-} catch {
-try {    
+} 
 let lol = await fetch(`https://api.lolhuman.xyz/api/translate/auto/${lang}?apikey=85faf717d0545d14074659ad&text=${text}`)
 let loll = await lol.json()
 let result2 = loll.result.translated
@@ -179,8 +177,6 @@ buttonText: `🧿 𝙀𝙡𝙚𝙜𝙞𝙧 𝙄𝙙𝙞𝙤𝙢𝙖 🧿`,
 sections }  
 await conn.sendMessage(m.chat, listMessage, {quoted: fkontak} )
 await m.reply(result2)
-} catch { 
-await m.reply(`${fg}\`\`\`NO SE LOGRÓ TRADUCIR SU TEXTO, REPORTE ESTE COMANDO CON EL COMANDO #reporte\`\`\``)    
-}}}
+}}}}
 handler.command = /^(tr(anslate)|traductor|traducir?)$/i
 export default handler
