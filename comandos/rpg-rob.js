@@ -23,7 +23,7 @@ let handler = async (m, { conn, text, usedPrefix, command, groupMetadata }) => {
     let dolares = (Math.floor(Math.random() * 20) + 30)
     let limit = (Math.floor(Math.random() * 5) + 3)
 
-let raid = `*Has saqueado ⚔️ a @${_user.split("@s.whatsapp.net")[0]}*
+let raid = `*Has saqueado ⚔️ a @${user.split("@")[0]}
 ◦ Dinero: $${dolares}
 ◦ Diamante: ${limit}`
 
