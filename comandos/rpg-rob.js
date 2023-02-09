@@ -10,7 +10,7 @@ let handler = async (m, { conn, text, usedPrefix, command, groupMetadata }) => {
     let rauser = groupMetadata.participants.map(v => v.jid)[Math.floor(Math.random() * groupMetadata.participants.map(v => v.jid).length)]
     let time = global.db.data.users[m.sender].lastrob + 7200000
     if (new Date - global.db.data.users[m.sender].lastrob < 7200000) throw `⏱️¡Hey! Espera *${msToTime(time - new Date())}* para volver a robar`
-    if (!text) return m.reply(`*• Etiquetɑ ɑl usuɑrio que quierɑ sɑqueɑr*\n\n*Ejemplo de uso:*\n1. ${usedPrefix}sɑqueɑr <usuɑrio/@tɑg>.`)
+    if (!text) return m.reply(`*• Etiquetɑ ɑl usuɑrio que quierɑ sɑqueɑr*\n\n*Ejemplo de uso: ${usedPrefix}sɑqueɑr <usuɑrio/@tɑg>.`)
     let _user = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted.sender
     if (!_user in global.db.data.users) return m.reply(`El usuɑrio no estά registrɑdo en lɑ bɑse de dɑtos!`)
     let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
@@ -46,7 +46,7 @@ Robado por: @${m.sender.split("@")[0]}`
         
       
         conn.sendMessage(m.chat, {text: raid, mentions: [_user, m.sender]}, {quoted: m})
-        conn.sendMessage(_user, {text: `*❕ TE ACABAN DE ROBAR!*`, mentions: [m.sender]}, {quoted: m})
+        conn.sendMessage(_user, {text: `*❕@${m.sender.split("@")[0]} TE ACABA DE ROBAR!*`, mentions: [m.sender]}, {quoted: m})
 global.db.data.users[m.sender].lastrob = new Date * 1
     } 
             
