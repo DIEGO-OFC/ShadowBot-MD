@@ -2,8 +2,8 @@ let handler = async (m, { text }) => {
 let user = global.db.data.users[m.sender]
 user.afk = + new Date
 user.afkReason = text
-let afk2 = `*❍ MOTIVO (𝙰𝙵𝙺)${text ? ': ' + text : ''}*`
-let afkinfo = `DORRAT - AFK\n\n*⚡ ${conn.getName(m.sender)} ESTARA AFK*`
+let afk2 = `*❍ MOTIVO (𝙰𝙵𝙺)${text ? ': ' + text : ''}*\n❍ NO LO ETIQUETEN`
+let afkinfo = `*DORRAT - AFK*\n\n*👤 USUARIO QUE ESTARA AFK: ${conn.getName(m.sender)}*`
 conn.sendButton(m.chat, afkinfo, afk2, 
 [
 ['ok', `ok`]], m)}
