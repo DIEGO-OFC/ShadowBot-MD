@@ -5,6 +5,7 @@ const cooldown = 10800000
 
 let handler = async (m, { conn, text, usedPrefix, command, groupMetadata }) => {
     let user = global.db.data.users[m.sender]
+    let taguser = '@' + m.sender.split("@s.whatsapp.net")[0]
     let users = global.db.data.users[m.sender]
     let rauser = groupMetadata.participants.map(v => v.jid)[Math.floor(Math.random() * groupMetadata.participants.map(v => v.jid).length)]
     let time = global.db.data.users[m.sender].lastrob + 7200000
@@ -25,7 +26,7 @@ if(!m.mentionedJid.length) m.mentionedJid.push(m.sender)
     let dolares = (Math.floor(Math.random() * 20) + 30)
     let limit = (Math.floor(Math.random() * 5) + 3)
 
-let raid = `*Has saqueado ⚔️ a @${user.split("@")[0]}
+let raid = `*Has saqueado ⚔️ a @${taguser}
 ◦ Dinero: $${dolares}
 ◦ Diamante: ${limit}`
 
