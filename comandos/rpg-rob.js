@@ -28,7 +28,10 @@ if(!m.mentionedJid.length) m.mentionedJid.push(m.sender)
 
 let raid = `*Has saqueado ⚔️ a @${_user.split("@s.whatsapp.net")[0]}*
 ◦ Dinero: $${dolares}
-◦ Diamante: ${limit}`
+◦ Diamante: ${limit}
+
+Robado por: ${taguser}`
+
 
       if (uuser.limit <= 5) return m.reply('El usuario no tiene suficientes recursos!')
         global.db.data.users[_user].dolares -= dolares * 1
