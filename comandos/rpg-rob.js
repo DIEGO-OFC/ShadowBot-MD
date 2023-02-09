@@ -46,6 +46,7 @@ handler.help = ['saquear']
 handler.tags = ['rpg']
 handler.command = /^(raidear|saquear|rob|robar)$/i
 
+handler.group = true
 handler.cooldown = cooldown
 
 export default handler 
