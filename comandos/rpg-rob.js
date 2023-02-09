@@ -4,7 +4,7 @@ import MessageType from '@adiwajshing/baileys'
 const cooldown = 10800000
 
 let handler = async (m, { conn, text, usedPrefix, command, groupMetadata }) => {
-   //let user = global.db.data.users[m.sender]
+    let user = global.db.data.users[m.sender]
     let users = global.db.data.users[m.sender]
     let rauser = groupMetadata.participants.map(v => v.jid)[Math.floor(Math.random() * groupMetadata.participants.map(v => v.jid).length)]
     let time = global.db.data.users[m.sender].lastrob + 7200000
@@ -46,7 +46,7 @@ global.db.data.users[m.sender].lastrob = new Date * 1
             
 
 
-handler.help = ['saquear']
+handler.help = ['saquear [@user]']
 handler.tags = ['rpg']
 handler.command = /^(raidear|saquear|rob|robar)$/i
 
