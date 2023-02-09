@@ -26,7 +26,7 @@ if(!m.mentionedJid.length) m.mentionedJid.push(m.sender)
     let dolares = (Math.floor(Math.random() * 20) + 30)
     let limit = (Math.floor(Math.random() * 5) + 3)
 
-let raid = `*Has saqueado ⚔️ a @${taguser}
+let raid = `*Has saqueado ⚔️ a @${_user.split("@s.whatsapp.net")[0]}*
 ◦ Dinero: $${dolares}
 ◦ Diamante: ${limit}`
 
