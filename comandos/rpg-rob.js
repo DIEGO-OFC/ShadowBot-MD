@@ -4,7 +4,7 @@ import MessageType from '@adiwajshing/baileys'
 const cooldown = 10800000
 
 let handler = async (m, { conn, text, usedPrefix, command, groupMetadata }) => {
-    let _zzz = owner + "@s.whatsapp.net";
+    //let _zzz = owner + "@s.whatsapp.net";
     let user = global.db.data.users[m.sender]
     let taguser = '@' + m.sender.split("@s.whatsapp.net")[0]
     let users = global.db.data.users[m.sender]
@@ -13,7 +13,7 @@ let handler = async (m, { conn, text, usedPrefix, command, groupMetadata }) => {
     if (new Date - global.db.data.users[m.sender].lastrob < 7200000) throw `⏱️¡Hey! Espera *${msToTime(time - new Date())}* para volver a robar`
     if (!text) return m.reply(`*• Etiquetɑ ɑl usuɑrio que quierɑ sɑqueɑr*\n\n*Ejemplo de uso:* ${usedPrefix}sɑqueɑr <usuɑrio/@tɑg>.`)
     let _user = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted.sender
-    if (_zzz.includes(_user)) return m.reply("*No puedes robarle a los owner's.*")
+    //if (_zzz.includes(_user)) return m.reply("*No puedes robarle a los owner's.*")
     if (!_user in global.db.data.users) return m.reply(`El usuɑrio no estά registrɑdo en lɑ bɑse de dɑtos!`)
     let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
     if(m.quoted?.sender) m.mentionedJid.push(m.quoted.sender)
