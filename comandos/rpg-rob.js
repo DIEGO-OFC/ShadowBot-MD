@@ -30,7 +30,7 @@ let raid = `*Has saqueado ⚔️ a @${_user.split("@s.whatsapp.net")[0]}*
 ◦ Dinero: $${dolares}
 ◦ Diamante: ${limit}
 
-Robado por: ${m.sender.split("@")[0]}`
+Robado por: @${m.sender.split("@")[0]}`
 
 
       if (uuser.limit <= 5) return m.reply('El usuario no tiene suficientes recursos!')
