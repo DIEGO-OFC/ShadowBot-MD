@@ -46,7 +46,7 @@ Robado por: @${m.sender.split("@")[0]}`
         
       
         conn.sendMessage(m.chat, {text: raid, mentions: [_user, m.sender]}, {quoted: m})
-        conn.sendMessage(who, {text: `*❕ TE ACABAN DE ROBAR!*`, mentions: [m.sender]}, {quoted: m})
+        conn.sendMessage(_user, {text: `*❕ TE ACABAN DE ROBAR!*`, mentions: [m.sender]}, {quoted: m})
 global.db.data.users[m.sender].lastrob = new Date * 1
     } 
             
