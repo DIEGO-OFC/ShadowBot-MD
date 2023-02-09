@@ -4,6 +4,8 @@ import MessageType from '@adiwajshing/baileys'
 const cooldown = 10800000
 
 let handler = async (m, { conn, text, usedPrefix, command, groupMetadata }) => {
+    let user = global.db.data.users[m.sender]
+    let users = global.db.data.users[m.sender]
     let rauser = groupMetadata.participants.map(v => v.jid)[Math.floor(Math.random() * groupMetadata.participants.map(v => v.jid).length)]
     let time = global.db.data.users[m.sender].lastrob + 7200000
     if (new Date - global.db.data.users[m.sender].lastrob < 7200000) throw `⏱️¡Hey! Espera *${msToTime(time - new Date())}* para volver a robar`
@@ -12,7 +14,6 @@ let handler = async (m, { conn, text, usedPrefix, command, groupMetadata }) => {
     if (!_user in global.db.data.users) return m.reply(`El usuɑrio no estά registrɑdo en lɑ bɑse de dɑtos!`)
     if (global.db.data.users[_user] == undefined) return m.reply(`El usuɑrio no estά registrɑdo en lɑ bɑse de dɑtos!`)
     if (_user.startsWith(conn.user.jid.split`@`[0])) return m.reply('No puedes saquear a la bot :I')
-    let user = global.db.data.users[m.sender]
     let uuser = global.db.data.users[_user]
     let __timers = (new Date - user.lastrob)
     let _timers = (cooldown - __timers)
