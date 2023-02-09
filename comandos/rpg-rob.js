@@ -34,6 +34,8 @@ Robado por: @${m.sender.split("@")[0]}`
 
 
       if (uuser.limit <= 5) return m.reply('El usuario no tiene suficientes recursos!')
+      if (uuser.dolares <= 5) return m.reply('El usuario no tiene suficientes recursos!')
+       
         global.db.data.users[_user].dolares -= dolares * 1
         global.db.data.users[_user].limit -= limit * 1
         
