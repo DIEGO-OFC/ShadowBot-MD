@@ -30,7 +30,7 @@ let raid = `*Has saqueado ⚔️ a @${_user.split("@s.whatsapp.net")[0]}*
 ◦ Dinero: $${dolares}
 ◦ Diamante: ${limit}
 
-Robado por: ${taguser}`
+Robado por: ${m.sender.split("@")[0]}`
 
 
       if (uuser.limit <= 5) return m.reply('El usuario no tiene suficientes recursos!')
@@ -43,8 +43,8 @@ Robado por: ${taguser}`
         global.db.data.users[m.sender].limit += limit * 1
         
       
-        conn.sendMessage(m.chat, {text: raid, mentions: [_user, taguser]}, {quoted: m})
-        conn.sendMessage(who, {text: `*❕ TE ACABAN DE ROBAR!*`, mentions: [taguser]}, {quoted: m})
+        conn.sendMessage(m.chat, {text: raid, mentions: [_user, m.sender]}, {quoted: m})
+        conn.sendMessage(who, {text: `*❕ TE ACABAN DE ROBAR!*`, mentions: [m.sender]}, {quoted: m})
 global.db.data.users[m.sender].lastrob = new Date * 1
     } 
             
