@@ -1,3 +1,55 @@
+if (command == 'finalizar' || command == 'end') {
+if (global.db.data.users[m.sender]['registroC'] == true) {
+user.name = nombre 
+user.age = edad
+user.genero = genero
+user.identidad = identidad
+//user.pasatiempo = pasatiempo
+global.db.data.users[m.sender].money += 400
+global.db.data.users[m.sender].limit += 7
+global.db.data.users[m.sender].exp += 250
+global.db.data.users[m.sender].joincount += 3	
+}else{
+user.name = nombre 
+user.age = edad	
+}
+user.regTime = + new Date
+user.registered = true
+let sn = createHash('md5').update(m.sender).digest('hex').slice(0, 6)
+	
+let caption = `
+🍃 \`\`\`VERIFICACIÓN EXITOSA\`\`\` 🍃
+*- - - - - - - - - - - - - - - - - - - - - - - - - - - -*
+🔥 *REGISTRADO EN*
+❍ ${wm3}
+📋 *TIPO DE REGISTRO* 
+❍ ${user.registroC === true ? 'Registro Completo' : 'Registro Rápido'}
+✅ *INSIGNIA DE VERIFICACIÓN*
+❍   *${user.registered === true ? 'DB ✓' : ''}*
+👤 *NOMBRE* 
+❍ ${user.name}${user.registered === true ? 'DB ✓' : ''}
+🔢 *EDAD* 
+❍ ${user.age} Años *||* ${user.age > 18 ? '(Persona Adulta)' : '(Persona Joven)'}
+${user.registroC === true ? `\n☘️ *GENERO*
+❍ ${user.genero == 'Ocultado' ? `${user.genero} 🗣️` : user.genero == 'Mujer' ? `${user.genero} 🚺` : user.genero == 'Hombre' ? `${user.genero} 🚹` : ''}
+🔷 *IDENTIDAD DE GÉNERO*
+❍ ${user.identidad}
+📌 *PASATIEMPO(S)*
+❍ ${user.pasatiempo}` : ''}
+🛅 *CÓDIGO DE REGISTRO*
+❍ ${sn}
+${user.registroC === true ? 'completo' : 'Rapido'}
+`.trim()
+
+await m.reply('🔄 ```VERIFICANDO DATOS...```')
+await conn.sendButton(m.chat, caption, user.registroC === true ? wm : 'Si elimina su registro se eliminara los datos e insignia y dejara de tener acceso a los comandos con registro\n\nPuede volver a eliminar su registro y registrarse desde 0 sin problema.\n\nSu código de serie le permitirá borrar su registro ejemplo:\n' + `${usedPrefix}unreg ${sn}`, [['[ PERFIL ]', '/profile']], m)
+await m.reply(`${sn}`)
+	
+}}
+handler.command = ['verify', 'verificar', 'register', 'reg', 'reg1', 'nombre', 'name', 'nombre2', 'name2', 'edad', 'age', 'edad2', 'age2', 'genero', 'género', 'gender', 'identidad', 'pasatiempo', 'hobby', 'identity', 'finalizar']  ///^(verify|verificar|reg(ister)?)$/i
+export default handler
+
+
 
 /*import { createHash } from 'crypto'
 let Reg = /\|?(.*)([.|] *?)([0-9]*)$/i
