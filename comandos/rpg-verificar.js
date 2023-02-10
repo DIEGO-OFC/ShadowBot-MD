@@ -18,27 +18,28 @@ user.registered = true
 let sn = createHash('md5').update(m.sender).digest('hex').slice(0, 6)
 	
 let caption = `
-🍃 \`\`\`VERIFICACIÓN EXITOSA\`\`\` 🍃
-*- - - - - - - - - - - - - - - - - - - - - - - - - - - -*
-🔥 *REGISTRADO EN*
-❍ ${wm3}
-📋 *TIPO DE REGISTRO* 
-❍ ${user.registroC === true ? 'Registro Completo' : 'Registro Rápido'}
-✅ *INSIGNIA DE VERIFICACIÓN*
-❍   *${user.registered === true ? 'DB ✓' : ''}*
-👤 *NOMBRE* 
-❍ ${user.name}${user.registered === true ? 'DB ✓' : ''}
-🔢 *EDAD* 
-❍ ${user.age} Años *||* ${user.age > 18 ? '(Persona Adulta)' : '(Persona Joven)'}
-${user.registroC === true ? `\n☘️ *GENERO*
-❍ ${user.genero == 'Ocultado' ? `${user.genero} 🗣️` : user.genero == 'Mujer' ? `${user.genero} 🚺` : user.genero == 'Hombre' ? `${user.genero} 🚹` : ''}
-🔷 *IDENTIDAD DE GÉNERO*
-❍ ${user.identidad}
-📌 *PASATIEMPO(S)*
-❍ ${user.pasatiempo}` : ''}
-🛅 *CÓDIGO DE REGISTRO*
-❍ ${sn}
+╔═════ೋೋ═════╗
+║ ⚡ \`\`\`VERIFICACIÓN EXITOSA\`\`\` ⚡
+║ 🔥 *REGISTRADO EN*
+║ ❍ ${wm3}
+║ 📋 *TIPO DE REGISTRO* 
+║ ❍ ${user.registroC === true ? 'Registro Completo' : 'Registro Rápido'}
+║ ✅ *INSIGNIA DE VERIFICACIÓN*
+║ ❍   *${user.registered === true ? 'DB ✓' : ''}*
+║ 👤 *NOMBRE* 
+║ ❍ ${user.name}${user.registered === true ? 'DB ✓' : ''}
+║ 🔢 *EDAD* 
+║ ❍ ${user.age} Años *||* ${user.age > 18 ? '(Persona Adulta)' : '(Persona Joven)'}
+║ ${user.registroC === true ? `\n☘️ *GENERO*
+║ ❍ ${user.genero == 'Ocultado' ? `${user.genero} 🗣️` : user.genero == 'Mujer' ? `${user.genero} 🚺` : user.genero == 'Hombre' ? `${user.genero} 🚹` : ''}
+║ 🔷 *IDENTIDAD DE GÉNERO*
+║ ❍ ${user.identidad}
+║ 📌 *PASATIEMPO(S)*
+║ ❍ ${user.pasatiempo}` : ''}
+║ 🛅 *CÓDIGO DE REGISTRO*
+║ ❍ ${sn}
 ${user.registroC === true ? 'completo' : 'Rapido'}
+╚════ ≪ •❈• ≫ ════╝
 `.trim()
 
 await m.reply('🔄 ```VERIFICANDO DATOS...```')
