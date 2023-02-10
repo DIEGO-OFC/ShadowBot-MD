@@ -1,3 +1,11 @@
+/*
+
+CODIGO CREADO POR https://github.com/DIEGO-OFC/DORRAT-BOT-MD
+
+*/
+
+
+
 const cooldown = 10800000;
 
 let handler = async (m, { conn, text, usedPrefix, command, groupMetadata }) => {
