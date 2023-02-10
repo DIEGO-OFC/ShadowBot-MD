@@ -18,7 +18,7 @@ let handler = async (m, { conn, text, usedPrefix, command, groupMetadata }) => {
   if (_user.startsWith(conn.user.jid.split`@`[0]))
     return m.reply("No puedes saquear a la bot :I");
   let uuser = global.db.data.users[_user];
-  let dolares = Math.floor(Math.random() * 20) + 30;
+  let dolares = Math.floor(Math.random() * 20) + 10;
   let limit = Math.floor(Math.random() * 5) + 3;
   let raid = `*Has saqueado ⚔️ a @${_user.split("@s.whatsapp.net")[0]}*
 ◦ Dinero: $${dolares}
