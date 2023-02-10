@@ -53,11 +53,21 @@ export async function handler(chatUpdate) {
  	        if (!isNumber(user.tarjeta)) user.tarjeta = 1
                 if (!isNumber(user.limit)) user.limit = 20    	       
                 if (!('registered' in user)) user.registered = false
-                    
+		if (!('registroR' in user)) user.registroR = false
+		if (!('registroC' in user)) user.registroC = false    
+                     
             if (!user.registered) {
 		                    	 
 		    if (!('name' in user)) user.name = m.name
-                    if (!isNumber(user.age)) user.age = -1
+                    if (!isNumber(user.age)) user.age = 0
+		    if (!isNumber(user.genero)) user.genero = 0
+		    if (!isNumber(user.identidad)) user.identidad = 0
+		    if (!isNumber(user.pasatiempo)) user.pasatiempo = 0
+		    if (!isNumber(user.pas1)) user.pas1 = 0
+		    if (!isNumber(user.pas2)) user.pas2 = 0
+		    if (!isNumber(user.pas3)) user.pas3 = 0
+		    if (!isNumber(user.pas4)) user.pas4 = 0
+		    if (!isNumber(user.pas5)) user.pas5 = 0
                     if (!isNumber(user.anggur)) user.anggur = 0
                     if (!isNumber(user.apel)) user.apel = 0
                     if (!isNumber(user.bibitanggur)) user.bibitanggur = 0
@@ -495,8 +505,16 @@ export async function handler(chatUpdate) {
             global.db.data.users[m.sender] = {
 		    
 		    afk: -1,
-                    afkReason: '',
-                    age: -1,
+                    afkReason: '',                    
+                    age: 0,
+		    genero: 0,
+		    identidad: 0,
+		    pasatiempo: 0,
+		    pas1: 0,
+		    pas2: 0,
+		    pas3: 0,
+	            pas4: 0,
+		    pas5: 0,
                     agility: 16,
                     anakanjing: 0,
                     anakcentaur: 0,
