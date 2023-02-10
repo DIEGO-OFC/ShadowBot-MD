@@ -8,7 +8,7 @@ return {...value, jid: key}
    let sortedLim = users.map(toNumber('limit')).sort(sort('limit'))
     let sortedLevel = users.map(toNumber('level')).sort(sort('level'))
      let sortedRole = users.map(toNumber('role')).sort(sort('role'))
-      let sortedDorracoins = users.map(toNumber('dorracoins')).sort(sort('dorracoins'))
+      let sortedDolares = users.map(toNumber('dorracoins')).sort(sort('dolares'))
        let sortedJoincount = users.map(toNumber('joincount')).sort(sort('joincount'))
         let sortedPremium = users.map(toNumber('premium')).sort(sort('premium'))
        
@@ -17,7 +17,7 @@ return {...value, jid: key}
        let usersLim = sortedLim.map(enumGetKey)
         let usersLevel = sortedLevel.map(enumGetKey)
          let usersRole = sortedRole.map(enumGetKey)
-          let usersDorracoins = sortedDorracoins.map(enumGetKey)
+          let usersDolares = sortedDolares.map(enumGetKey)
            let usersJoincount = sortedJoincount.map(enumGetKey)
             let usersPremium = sortedPremium.map(enumGetKey)
            
@@ -25,7 +25,11 @@ console.log(participants)
 let len = args[0] && args[0].length > 0 ? Math.min(100, Math.max(parseInt(args[0]), 10)) : Math.min(10, sortedExp.length)
 let text = `
        🏆 *TABLA DE CLASIFICACION*
-    
+
+➢ *TOP ${len} Dolares 💵*
+Tú : *${usersDolares.indexOf(m.sender) + 1}* de *${usersDolares.length} Usuarios*
+${sortedDolares.slice(0, len).map(({ jid, dolares }, i) => `${i + 1}. ${participants.some(p => jid === p.jid) ? `(${conn.getName(jid)}) wa.me/` : '@'}${jid.split`@`[0]} *${dolares}  💸*`).join`\n`}
+--------------------  
 ➢ *TOP ${len} XP ⚡* 
 Tú : *${usersExp.indexOf(m.sender) + 1}* de *${usersExp.length} Usuarios*
 ${sortedExp.slice(0, len).map(({ jid, exp }, i) => `${i + 1}. ${participants.some(p => jid === p.jid) ? `(${conn.getName(jid)}) wa.me/` : '@'}${jid.split`@`[0]} *${exp} ⚡*`).join`\n`}
@@ -49,10 +53,6 @@ ${sortedLim.slice(0, len).map(({ jid, limit }, i) => `${i + 1}. ${participants.s
 ➢ *TOP ${len} TOKENS  ☯️* 
 Tú : *${usersJoincount.indexOf(m.sender) + 1}* de *${usersJoincount.length} Usuarios*
 ${sortedJoincount.slice(0, len).map(({ jid, joincount }, i) => `${i + 1}. ${participants.some(p => jid === p.jid) ? `(${conn.getName(jid)}) wa.me/` : '@'}${jid.split`@`[0]} *${joincount} ☯️*`).join`\n`}
-┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
-➢ *TOP ${len} DORRATCOINS 🪙*
-Tú : *${usersDorracoins.indexOf(m.sender) + 1}* de *${usersDorracoins.length} Usuarios*
-${sortedDorracoins.slice(0, len).map(({ jid, dorracoins }, i) => `${i + 1}. ${participants.some(p => jid === p.jid) ? `(${conn.getName(jid)}) wa.me/` : '@'}${jid.split`@`[0]} *${dorracoins}  🪙*`).join`\n`}
 `.trim()
  //await m.reply(text, null, { mentions: conn.parseMention(text) })
 await conn.sendButton(m.chat, wm, text, null, [
