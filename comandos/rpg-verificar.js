@@ -176,6 +176,23 @@ rows: [
 {title: "• Hetero antigays", rowId: usedPrefix + command + ' ' + usedPrefix + text + 'hetero antigays' },	
 {title: "• Hetero rey", rowId: usedPrefix + command + ' ' + usedPrefix + text + 'Hetero Rey' }]
 }, {
+title: comienzo + " 👤 OCULTAR " + fin,
+rows: [
+{title: "Ocultado", rowId: usedPrefix + command + ' ' + usedPrefix + text + 'Ocultado' }]},]
+
+const listMessage = {
+text: `*SELECCIONE SU IDENTIDAD DE GÉNERO POR FAVOR*\n\n*NOMBRE:* _${nombre}_\n*EDAD:* _${edad}_\n*GÉNERO:* _${genero}_\n\n*╰⸺ ⊹ ⸺  ⊹ ⸺ ⊹ ⸺ ⊹ ⸺ ⊹*`,
+footer: wm,
+title: "*╭⸺ ⊹ ⸺  ⊹ ⸺ ⊹ ⸺ ⊹ ⸺ ⊹*\n",
+buttonText: "🌱 IDENTIDAD DE GÉNERO 🌱",
+sections
+}
+
+if (!text) return conn.sendMessage(m.chat, listMessage, m)
+	
+identidad = text.slice(1).trim()
+if (verificar.test(text) == true) return conn.sendButton(m.chat, '*GENIAL!! SE HA REGISTRADO LO SIGUIENTE:*\n*NOMBRE:* ' + nombre + '\n' + '*EDAD:* ' + edad + ' años' + '\n' + '*IDENTIDAD DE GÉNERO:* ' + identidad, wm3, null, [[`🔷 REGISTRAR MIS PASATIEMPOS`, usedPrefix + 'pasatiempo']], m)
+}
 
 
 if (command == 'finalizar' || command == 'end') {
