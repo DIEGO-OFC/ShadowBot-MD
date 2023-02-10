@@ -1,6 +1,7 @@
 const cooldown = 10800000;
 
 let handler = async (m, { conn, text, usedPrefix, command, groupMetadata }) => {
+try {
   let time = global.db.data.users[m.sender].lastrob + 7200000;
   if (new Date() - global.db.data.users[m.sender].lastrob < 7200000)
     throw `⏱️¡Hey! Espera *${msToTime(time - new Date())}* para volver a robar`;
@@ -48,7 +49,9 @@ Robado por: @${m.sender.split("@")[0]}`;
   );
   global.db.data.users[m.sender].lastrob = new Date() * 1;
 };
-
+catch {
+conn.reply(m.chat, '*⚠️ ERROR, INTENTALO DE NUEVO, SEGURAMENTE EL USUARIO ESTA AFK')
+}
 handler.help = ["saquear [@user]"];
 handler.tags = ["rpg"];
 handler.command = /^(raidear|saquear|rob|robar)$/i;
