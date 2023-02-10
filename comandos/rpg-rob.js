@@ -9,7 +9,7 @@ CODIGO CREADO POR https://github.com/DIEGO-OFC/DORRAT-BOT-MD
 const cooldown = 10800000;
 
 let handler = async (m, { conn, text, usedPrefix, command, groupMetadata }) => {
-try {
+
   let time = global.db.data.users[m.sender].lastrob + 7200000;
   if (new Date() - global.db.data.users[m.sender].lastrob < 7200000)
     throw `⏱️¡Hey! Espera *${msToTime(time - new Date())}* para volver a robar`;
@@ -17,6 +17,7 @@ try {
     return m.reply(
       `*• Etiquetɑ ɑl usuɑrio que quierɑ sɑqueɑr*\n\n*Ejemplo de uso:* ${usedPrefix}sɑqueɑr <usuɑrio/@tɑg>.`
     );
+try {
   let _user = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted.sender;
   if (!_user in global.db.data.users)
     return m.reply(`El usuɑrio no estά registrɑdo en lɑ bɑse de dɑtos!`);
