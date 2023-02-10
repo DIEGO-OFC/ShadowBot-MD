@@ -50,7 +50,7 @@ Robado por: @${m.sender.split("@")[0]}`;
   global.db.data.users[m.sender].lastrob = new Date() * 1;
 }
 catch {  
-throw '*[❕] ERROR, POR FAVOR INTÉNTELO DE NUEVO*'}}}
+conn.reply(m.chat, `*[❕] ERROR, POR FAVOR INTÉNTELO DE NUEVO*`)}}}
 
 handler.help = ["saquear [@user]"];
 handler.tags = ["rpg"];
