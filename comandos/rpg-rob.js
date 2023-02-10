@@ -51,7 +51,7 @@ Robado por: @${m.sender.split("@")[0]}`;
 }; 
 catch {
 conn.reply(m.chat, '*⚠️ ERROR, INTENTALO DE NUEVO, SEGURAMENTE EL USUARIO ESTA AFK')
-}}
+}}}
 handler.help = ["saquear [@user]"];
 handler.tags = ["rpg"];
 handler.command = /^(raidear|saquear|rob|robar)$/i;
