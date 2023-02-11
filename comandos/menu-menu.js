@@ -513,7 +513,7 @@ let menuB = `
 `.trim()
 conn.sendButton(m.chat, menuA, menuB,  db, [
 ['𝗠𝗘𝗡𝗨 𝗔𝗨𝗗𝗜𝗢𝗦', `#audios`],
-['𝗚𝗥𝗨𝗣𝗢𝗦', `#grupos`]], m)}
+['𝗚𝗥𝗨𝗣𝗢𝗦', `#grupos`]], m)
 const sections = [
 {
 title: `𝐈𝐍𝐅𝐎𝐑𝐌𝐀𝐂𝐈𝐎𝐍`,
