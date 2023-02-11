@@ -63,68 +63,68 @@ let menuB = `
 *║💸 DOLARES ➟ ${dolares}*
 *╰══*═════════════ *✧*
 
-┣━━━❰･ *Información 👨‍💻* ･❱━━━┫
-❀••►☪︎ _${usedPrefix}grupos_
-❀••►☪︎ _${usedPrefix}estado_
-❀••►☪︎ _${usedPrefix}terminos_
-❀••►☪︎ _${usedPrefix}instalarbot_
-❀••►☪︎ _${usedPrefix}infobot_
-❀••►☪︎ _${usedPrefix}grouplist_
-❀••►☪︎ _${usedPrefix}owner_
-❀••►☪︎ _${usedPrefix}script_
-❀••►☪︎ _Bot_ (𝑢𝑠𝑜 𝑠𝑖𝑛 𝑝𝑟𝑒𝑓𝑖𝑗𝑜)
-𒅄 ▬▬▬▬ ◆ ▬▬▬▬ 𒅄
+╔═════ INFO-BOT ═════╗ 
+║ ❒ ︎_${usedPrefix}grupos_
+║ ❒ _${usedPrefix}estado_
+║ ❒ ︎_${usedPrefix}terminos_
+║ ❒︎ _${usedPrefix}instalarbot_
+║ ❒ _${usedPrefix}infobot_
+║ ❒ _${usedPrefix}grouplist_
+║ ❒ _${usedPrefix}owner_
+║ ❒ _${usedPrefix}script_
+║ ❒︎ _Bot_ (𝑢𝑠𝑜 𝑠𝑖𝑛 𝑝𝑟𝑒𝑓𝑖𝑗𝑜)
+╚════ ≪ •❈• ≫ ════╝
 
-┣━━━❰･ *REPORTAR COMANDO ❕* ･❱━━━┫
-❀••►☪︎ _*Reporta con este comando de haber*_
-❀••►☪︎ _*Fallas para poder Solucionar!!*_
-┣▬▬▬▬▬▬▬▬▬▬▬▬▬
-❀••►☪︎ _${usedPrefix}reporte *texto*_
-❀••►☪︎ _${usedPrefix}report *texto*_
-𒅄 ▬▬▬▬ ◆ ▬▬▬▬ 𒅄
+╔═════ REPORTAR ═════╗ 
+║ ❒ _*Reporta con este comando de haber*_
+║ ❒ _*Fallas para poder Solucionar!!*_
+║════════════════════════
+║︎ ❒ _${usedPrefix}reporte *texto*_
+║ ❒ _${usedPrefix}report *texto*_
+╚════ ≪ •❈• ≫ ════╝
 
-┣━━━❰･ *MINECRAFT-SETVER 📒* ･❱━━━┫
-┃▬▬▬▬▬▬▬▬
-┣ ⋄ *IP: nodo5.boxmineworld.com*
-┣ ⋄ *PUERTO: 4003*
-┣ ⋄ *BEDROCK Y JAVA*
-𒅄 ▬▬▬▬ ◆ ▬▬▬▬ 𒅄
+╔═════ MINECRAFT SERVER  ═════╗ 
+║══════════════
+║ ❒ *IP: nodo5.boxmineworld.com*
+║ ❒ *PUERTO: 4003*
+║ ❒ *BEDROCK Y JAVA*
+╚════ ≪ •❈• ≫ ════╝
 
-┏━━━━━━━━━━━━━┓
-┃ *<UNE UN BOT A TU GRUPO/>*
-║≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋
-┣ ➱_${usedPrefix}join *link del grupo*_ 
-┣ ➱_*minimo 30 miembros*_
-┗━━━━━━━━━━━━━┛
+╔═════════════╗ 
+║ *<UNE UN BOT A TU GRUPO/>*
+║══════════════════
+║ ➱_${usedPrefix}join *link del grupo*_ 
+║ ➱_*minimo 30 miembros*_
+╚════ ≪ •❈• ≫ ════╝
 
-┣━━━❰･ *Jadibot 🤖* ･❱━━━┫
-❀••►☪︎_${usedPrefix}serbot_
-❀••►☪︎_${usedPrefix}stop_
-❀••►☪︎_${usedPrefix}bots_
-𒅄 ▬▬▬▬ ◆ ▬▬▬▬ 𒅄
+╔═════ JADIBOT 🤖 ═════╗ 
+║ ❒ ︎_${usedPrefix}serbot_
+║ ❒ ︎_${usedPrefix}stop_
+║ ❒ ︎_${usedPrefix}bots_
+╚════ ≪ •❈• ≫ ════╝
 
-┣━━━❰･ *RPG ⚔* ･❱━━━┫
-❀••►☪︎ ${usedPrefix}cazar
-❀••►☪︎ ${usedPrefix}aventura
-❀••►☪︎ ${usedPrefix}balance
-❀••►☪︎ ${usedPrefix}claim
-❀••►☪︎ ${usedPrefix}top
-❀••►☪︎ ${usedPrefix}heal
-❀••►☪︎ ${usedPrefix}cartera
-❀••►☪︎ ${usedPrefix}inventory 
-❀••►☪︎ ${usedPrefix}levelup
-❀••►☪︎ ${usedPrefix}myns
-❀••►☪︎ ${usedPrefix}perfil
-❀••►☪︎ ${usedPrefix}work
-❀••►☪︎ ${usedPrefix}rob <@tag
-❀••►☪︎ ${usedPrefix}minar
-❀••►☪︎ ${usedPrefix}buy
-❀••►☪︎ ${usedPrefix}minardiamantes 
-❀••►☪︎ ${usedPrefix}minardorracoins 
-❀••►☪︎ ${usedPrefix}transfer <tipo> <cantidad> <@tag
-❀••►☪︎ ${usedPrefix}verificar
-❀••►☪︎ ${usedPrefix}unreg <numero de serie>
-𒅄 ▬▬▬▬ ◆ ▬▬▬▬ 𒅄
+╔═════ RPG ═════╗ 
+║ ❒ ${usedPrefix}cazar
+║ ❒ ${usedPrefix}aventura
+║ ❒ ${usedPrefix}balance
+║ ❒︎ ${usedPrefix}claim
+║ ❒︎ ${usedPrefix}top
+║ ❒︎ ${usedPrefix}heal
+║ ❒ ${usedPrefix}cartera
+║ ❒ ${usedPrefix}inventory 
+║ ❒︎ ${usedPrefix}levelup
+║ ❒︎ ${usedPrefix}myns
+║ ❒ ${usedPrefix}perfil
+║ ❒︎ ${usedPrefix}work
+║ ❒ ${usedPrefix}rob <@tag
+║ ❒︎ ${usedPrefix}minar
+║ ❒︎ ${usedPrefix}buy
+║ ❒ ${usedPrefix}minardiamantes 
+║ ❒ ${usedPrefix}minardorracoins 
+║ ❒︎ ${usedPrefix}transfer <tipo> <cantidad> <@tag
+║ ❒ ${usedPrefix}verificar
+║ ❒︎ ${usedPrefix}unreg <numero de serie>
+╚════ ≪ •❈• ≫ ════╝
 
 ┌──「🎮𝐆𝐀𝐌𝐄」─
 ├➢${usedPrefix}suitpvp <@tag>
