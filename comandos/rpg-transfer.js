@@ -1,4 +1,4 @@
-const items = [
+/*const items = [
     'limit', 'exp',
 ]
 let confirmation = {}
@@ -87,3 +87,4 @@ function special(type) {
 function isNumber(x) {
     return !isNaN(x)
 }
+*/
