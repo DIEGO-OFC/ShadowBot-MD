@@ -511,7 +511,7 @@ let menuB = `
 ┃𝐃𝐎𝐑𝐑𝐀𝐓-𝐁𝐎𝐓-𝐌𝐃 𝐁𝐘 𝐃𝐈𝐄𝐆𝐎-𝐎𝐅𝐂┃
  ━━━━━━━━━━━━━━━━━━━━━━━━━
 `.trim()
-conn.sendButton(m.chat, menuA, menuB,  db, [
+await conn.sendButton(m.chat, menuA, menuB,  db, [
 ['𝗠𝗘𝗡𝗨 𝗔𝗨𝗗𝗜𝗢𝗦', `#audios`],
 ['𝗚𝗥𝗨𝗣𝗢𝗦', `#grupos`]], m)
 const sections = [
