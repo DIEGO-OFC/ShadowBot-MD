@@ -27,9 +27,7 @@ let pp = './galeria/dorratmini.mp4'
 let fkontak = { "key": { "participants":"0@s.whatsapp.net", "remoteJid": "status@broadcast", "fromMe": false, "id": "Halo" }, "message": { "contactMessage": { "vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD` }}, "participant": "0@s.whatsapp.net" }
 let fsizedoc = '1'.repeat(10)
 let adReply = { fileLength: fsizedoc, seconds: fsizedoc, contextInfo: { forwardingScore: fsizedoc, externalAdReply: { showAdAttribution: true, title: wm, body: '👋 ' + username, mediaUrl: yt, description: 'Hola', previewType: 'PHOTO', thumbnail: await(await fetch(imagenMEnu.getRandom())).buffer(), sourceUrl: menulinks.getRandom() }}}
-m.reply(`╭──────────────────  
-│⏱️ 𝐂𝐀𝐑𝐆𝐀𝐍𝐃𝐎 𝐌𝐄𝐍𝐔... 
-╰──────────────────`)
+m.reply(`[ 𝐂𝐀𝐑𝐆𝐀𝐍𝐃𝐎 𝐌𝐄𝐍𝐔... ]`)
 //no me roben la decoracion, no tengo creatividad
 
 let menuA = `
@@ -64,9 +62,9 @@ let menuB = `
 *╰══*═════════════ *✧*
 
 ╔═════ INFO-BOT ═════╗ 
-║ ❒ ︎_${usedPrefix}grupos_
+║ ❒  ︎_${usedPrefix}grupos_
 ║ ❒ _${usedPrefix}estado_
-║ ❒ ︎_${usedPrefix}terminos_
+║ ❒ ︎ _${usedPrefix}terminos_
 ║ ❒︎ _${usedPrefix}instalarbot_
 ║ ❒ _${usedPrefix}infobot_
 ║ ❒ _${usedPrefix}grouplist_
@@ -83,7 +81,7 @@ let menuB = `
 ║ ❒ _${usedPrefix}report *texto*_
 ╚════ ≪ •❈• ≫ ════╝
 
-╔═════ MINECRAFT SERVER  ═════╗ 
+╔═══ MINECRAFT SERVER  ═══╗ 
 ║══════════════
 ║ ❒ *IP: nodo5.boxmineworld.com*
 ║ ❒ *PUERTO: 4003*
