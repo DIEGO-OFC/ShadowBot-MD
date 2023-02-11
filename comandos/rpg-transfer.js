@@ -1,4 +1,4 @@
-/*const items = [
+const items = [
     'limit', 'exp',
 ]
 let confirmation = {}
@@ -29,7 +29,7 @@ async function handler(m, { conn, args, usedPrefix, command }) {
 
 Tienes  *60* s
 `.trim()
-    let c = 'FG - dylux-bot'
+    let c = `${wm3}`
     conn.sendButton(m.chat, confirm, c, null, [['si'], ['no']], m, { mentions: [who] })
     confirmation[m.sender] = {
         sender: m.sender,
@@ -87,4 +87,4 @@ function special(type) {
 function isNumber(x) {
     return !isNaN(x)
 }
-*/
+
