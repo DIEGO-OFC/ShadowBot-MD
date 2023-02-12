@@ -527,10 +527,10 @@ rows: [
 {title: "/infobot", description: "informacion del bot", rowId: `${usedPrefix}infobot`},
 {title: "/grouplist", description: "muestra los grupos en donde está el bot", rowId: `${usedPrefix}grouplist`},
 {title: "/owner", description: "muestra los creadores del bot", rowId: `${usedPrefix}owner`},
-{title: "/script", description: "muestra el github del bot", rowId: `${usedPrefix}script`},
+{title: "/script", description: "muestra el github del bot", rowId: `${usedPrefix}sc`},
 ]}, ]
 const listMessage = {
-text: `𝙳𝙸𝙴𝙶𝙾-𝙾𝙵𝙲 | 𝙳𝙾𝚁𝚁𝙰𝚃-𝙱𝙾𝚃-𝙼𝙳`,
+text: null,
 footer: `𝙼𝙴𝙽𝚄 𝙳𝙴𝚂𝙿𝙻𝙴𝙶𝙰𝙱𝙻𝙴
 ${wm}`,
 title: null,
