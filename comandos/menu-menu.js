@@ -512,7 +512,9 @@ let menuB = `
  ━━━━━━━━━━━━━━━━━━━━━━━━━
 `.trim()
 await conn.sendButton(m.chat, menuA, menuB,  db, [
-['𝗚𝗥𝗨𝗣𝗢𝗦', `#grupos`]], m)
+['𝗚𝗥𝗨𝗣𝗢𝗦', `#grupos`],
+['𝗗𝗢𝗡𝗔𝗥', `#donar`]
+], m)
 const sections = [
 {
 title: `𝐈𝐍𝐅𝐎𝐑𝐌𝐀𝐂𝐈𝐎𝐍`,
