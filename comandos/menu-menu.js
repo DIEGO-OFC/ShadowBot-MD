@@ -530,9 +530,8 @@ rows: [
 {title: "/script", description: "muestra el github del bot", rowId: `${usedPrefix}sc`},
 ]}, ]
 const listMessage = {
-text: null,
-footer: `𝙼𝙴𝙽𝚄 𝙳𝙴𝚂𝙿𝙻𝙴𝙶𝙰𝙱𝙻𝙴
-${wm}`,
+text: wm3,
+footer: `𝙼𝙴𝙽𝚄 𝙳𝙴𝚂𝙿𝙻𝙴𝙶𝙰𝙱𝙻𝙴`,
 title: null,
 buttonText: "selecionar", 
 sections }
