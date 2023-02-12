@@ -1211,12 +1211,13 @@ export async function handler(chatUpdate) {
                 }
 if (!isPrems && comandos.dolares && global.db.data.users[m.sender].dolares < comandos.dolares * 1) {
                     this.reply(m.chat, `${ag}\n\n*No tiene dólares* 💵\n\n *puede conseguir 💵 con el comando #trabajar o comprando con #buy dolares [cantidad]*`, m)
-                    continue 
+                    continue // Limit habis
 
 }
 if (!isPrems && comandos.bitcoins && global.db.data.users[m.sender].bitcoins < comandos.bitcoins * 1) {
-                    this.reply(m.chat, `${ag}\n\n*No tiene bitcoins* 🏵️\n\n *puede conseguir Bitcoins 🏵️ comprando con #buy bitcoins [cantidad]*`, m)
+                    this.reply(m.chat, `*No tiene bitcoins* 🏵️\n\n *puede conseguir Bitcoins 🏵️ comprando con #buy bitcoins [cantidad]*`, m)
                     continue 
+
 }
                 if (comandos.level > _user.level) {
                     this.reply(m.chat, `𝙉𝙀𝘾𝙀𝙎𝙄𝙏𝘼 𝙀𝙇 𝙉𝙄𝙑𝙀𝙇 ➡️ *${comandos.level}* 𝙋𝘼𝙍𝘼 𝙋𝙊𝘿𝙀𝙍 𝙐𝙎𝘼𝙍 𝙀𝙎𝙏𝙀 𝘾𝙊𝙈𝘼𝙉𝘿𝙊. 𝙏𝙐 𝙉𝙄𝙑𝙀𝙇 𝙀𝙎 ➡️ *${_user.level}* 𝘼𝘾𝙏𝙐𝘼𝙇𝙄𝙕𝘼 𝙏𝙐 𝙉𝙄𝙑𝙀𝙇 𝘾𝙊𝙉 𝙀𝙇 𝘾𝙊𝙈𝘼𝙉𝘿𝙊 *${usedPrefix}nivel*\n\n𝙈𝙐𝙎𝙏 𝙍𝙀𝘼𝘾𝙃 𝙏𝙃𝙀 𝙇𝙀𝙑𝙀𝙇 #️⃣ *${comandos.level}* 𝙏𝙊 𝘽𝙀 𝘼𝘽𝙇𝙀 𝙏𝙊 𝙐𝙎𝙀 𝙏𝙃𝙄𝙎 𝘾𝙊𝙈𝙈𝘼𝙉𝘿. 𝙔𝙊𝙐𝙍 𝙇𝙀𝙑𝙀𝙇 𝙄𝙎 #️⃣ *${_user.level}* 𝙐𝙋𝘿𝘼𝙏𝙀 𝙒𝙄𝙏𝙃 𝘾𝙊𝙈𝙈𝘼𝙉𝘿 *${usedPrefix}level*`, m)
@@ -1250,6 +1251,7 @@ if (!isPrems && comandos.bitcoins && global.db.data.users[m.sender].bitcoins < c
                     if (!isPrems)
                         m.limit = m.limit || comandos.limit || false
                         m.dolares = m.dolares || comandos.dolares || false
+                        m.bitcoins = m.bitcoins || comandos.bitcoins || false
                 } catch (e) {
                     // Error occured
                     m.error = e
@@ -1278,7 +1280,7 @@ if (!isPrems && comandos.bitcoins && global.db.data.users[m.sender].bitcoins < c
                     if (m.limit)
                         m.reply(+m.limit + ' 𝘿𝙄𝘼𝙈𝘼𝙉𝙏𝙀(𝙎) 💎 𝙐𝙎𝘼𝘿𝙊(𝙎)')
                     if (m.bitcoins)
-                        m.reply(+m.bitcoins + ' *Bitcoins  🏵️ Usados*')
+                        m.reply(+m.bitcoins + ' Bitcoins  🏵️ Usados')
 
                  if (m.dolares)
                         m.reply(+m.dolares + ' DOLARES 💵 USADOS')
