@@ -34,7 +34,6 @@ let terminoA = `
 *_Toda la información que se mencione aquí no excluye al Propietario del Bot al uso de DorratBot-MD_*
 
 
-/*let terminoB = `*/
 *_No Somos responsables del desconocimiento que tenga por parte de esta información._* 
 *TÉRMINOS DE PRIVACIDAD*
 1- Somos consciente del constante uso que le pueda dar al Bot, y también Garantizamos que la información como (imágenes, vídeos, enlaces, ubicación, Audios, Stickers, Gif, Contactos que Usted Proporcione en torno a Número(s) Oficial(es) No son ni serán Compartido Con Nadie, ni se usaran dicho Datos fuera del entorno del BOT._
