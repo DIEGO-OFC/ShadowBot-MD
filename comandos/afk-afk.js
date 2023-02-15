@@ -10,5 +10,5 @@ await conn.sendButton(m.chat, afkinfo, afk2,
 handler.help = ['afk [alasan]']
 handler.tags = ['main']
 handler.command = /^afk$/i
-handler.dolares = 4
+handler.bitcoins = 1
 export default handler
