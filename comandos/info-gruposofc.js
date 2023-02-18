@@ -19,7 +19,7 @@ let handler = async (m, { conn, command }) => conn.sendButton(m.chat, `
 
 ╭━━━━━━━━━━━━━━━━━━━╾•
 ┃1: https://chat.whatsapp.com/JOkFXt2T0kNFN0vkiModTx ⇚
-┃2: https://chat.whatsapp.com/DYs1QiVEJoCBTah26lkLjG ⇚
+┃2: https://chat.whatsapp.com/C3TfpGAEnpYHMqfe5YbZfc ⇚
 ┃3: https://chat.whatsapp.com/Gc802vnpuQYFaTfvDrk9yw ⇚
 ┃4: https://chat.whatsapp.com/Fs2jKmoWBTT00oPSFVMZJC ⇚
 ┃5: https://chat.whatsapp.com/FfxAsnshsAB4vQ1sGIPBlj ⇚
