@@ -12,7 +12,7 @@ let caption = `
 
 *⏰ ENVIANDO ARCHIVO, POR FAVOR ESPERE. . . .* 
 `.trim()
-conn.reply(m.chat, caption, m, {
+await conn.reply(m.chat, caption, m, {
 contextInfo: { externalAdReply :{ mediaUrl: null, mediaType: 1, description: null, 
 title: '𝙳𝙴𝚂𝙲𝙰𝚁𝙶𝙰𝚁 𝙳𝙴 𝙼𝙴𝙳𝙸𝙰𝙵𝙸𝚁𝙴',
 body: '𝑩𝒀 𝑫𝑶𝑹𝑹𝑨𝑻-𝑩𝑶𝑻-𝑴𝑫',         
@@ -25,6 +25,6 @@ console.log(e)
 }}
 handler.help = ['mediafire'].map(v => v + ' <url>')
 handler.tags = ['downloader']
-handler.dorracoins = 1
+handler.dolares = 4
 handler.command = /^(mediafire|mediafiredl|dlmediafire)$/i
 export default handler
