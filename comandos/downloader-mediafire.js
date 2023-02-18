@@ -6,11 +6,11 @@ try {
 let res = await mediafiredl(args[0])
 let { url, url2, filename, ext, aploud, filesize, filesizeH } = res
 let caption = `
-❍ 🔍 *NOMBRE:* ${filename}
-❍ 📦 *PESO:* ${filesizeH}
-❍ 🔰 *TIPO:* ${ext}
+❒➢ 🔍 *NOMBRE:* ${filename}
+❒➢ 📦 *PESO:* ${filesizeH}
+❒➢ 🔰 *TIPO:* ${ext}
 
-*⏰ ENVIANDO ARCHIVO, POR FAVOR ESPERE. . . .* 
+➢ *⏰ ENVIANDO ARCHIVO, POR FAVOR ESPERE. . . .* 
 `.trim()
 await conn.reply(m.chat, caption, m, {
 contextInfo: { externalAdReply :{ mediaUrl: null, mediaType: 1, description: null, 
