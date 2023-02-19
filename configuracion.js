@@ -107,7 +107,7 @@ global.wm3 = db3t
 global.igfg = '𝑫𝑶𝑹𝑹𝑨𝑻-𝑩𝑶𝑻'
 global.wait = '*[❕] CARGANDO POR FAVOR ESPERA...*'
 //-------------------
-global.md = 'https://chat.whatsapp.com/JOkFXt2T0kNFN0vkiModTx'
+global.md = 'https://chat.whatsapp.com/JuuuUaIQnnE3t4SWQenShg'
 global.dorramd = md
 global.tarje = 'Banesco'
 global.yt = 'http://youtube.com/@diegogameplays82'
