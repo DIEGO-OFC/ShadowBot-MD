@@ -12,10 +12,10 @@ let handler = async (m, { conn, text, usedPrefix, command, groupMetadata }) => {
 
   let time = global.db.data.users[m.sender].lastrob + 7200000;
   if (new Date() - global.db.data.users[m.sender].lastrob < 7200000)
-    throw `⏱️¡Hey! Espera *${msToTime(time - new Date())}* para volver a robar`;
+    throw `⏱️ Espera *${msToTime(time - new Date())}* para volver a robar`;
   if (!text)
     return m.reply(
-      `*• Etiquetɑ ɑl usuɑrio que quierɑ sɑqueɑr*\n\n*Ejemplo de uso:* ${usedPrefix}sɑqueɑr <usuɑrio/@tɑg>.`
+      `*• Etiquetɑ ɑl usuɑrio que quierɑ sɑqueɑr*\n\n*Ejemplo de uso:* ${usedPrefix + command} @tɑg>.`
     );
 try {
   let _user = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted.sender;
