@@ -42,7 +42,7 @@ Robado por: @${m.sender.split("@")[0]}`;
   global.db.data.users[_user].limit -= limit * 1;
   global.db.data.users[m.sender].dolares += dolares * 1;
   global.db.data.users[m.sender].limit += limit * 1;
-  conn.sendMessage(
+await await conn.sendMessage(
     m.chat,
     { text: raid, mentions: [_user, m.sender] },
     { quoted: m }
