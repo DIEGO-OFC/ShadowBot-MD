@@ -9,12 +9,12 @@ else who = m.sender
 let name = conn.getName(who)
 let pp = await conn.profilePictureUrl(who, 'image').catch(_ => 'https://telegra.ph/file/9b1353deceded7f387713.jpg')
 if (m.isGroup) who = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text
-
+let banu = 'Tal vez el ban los haga reflexionar'
 let user = global.db.data.users[who]
 if (!who) throw `*[❕] ETIQUETA A LA PERSONA QUE SERA BANEADA*`
 let users = global.db.data.users
 users[who].banned = true
-await conn.sendButton(m.chat, `*✅ USUARIO BANEADO*\n*NOMBRE:* ${name}\n*NUMERO:* ${PhoneNumber('+' + who.replace('@s.whatsapp.net', '')).getNumber('international')}\nRazon: ${text ? ': ' + text : ''}*`, wm,  pp,[
+await conn.sendButton(m.chat, `*✅ USUARIO BANEADO*\n*NOMBRE:* ${name}\n*NUMERO:* ${PhoneNumber('+' + who.replace('@s.whatsapp.net', '')).getNumber('international')}\nRazon: ${text ? ': ' + text : ''}*`, banu, wm,  pp,[
 ['𝙼𝙴𝙽𝚄', `#menusimple`]], m)}
 handler.help = ['banuser']
 handler.tags = ['owner']
