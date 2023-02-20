@@ -311,9 +311,7 @@ if (!/[01]/.test(command)) return await conn.sendMessage(m.chat, listMessage)
 throw false
 }
 
-conn.sendButton(m.chat, `*📂 OPCION*: ${type} 
-*🔰 ESTADO*: ${isEnable ? '𝙰𝙲𝚃𝙸𝚅𝙰𝙳𝙾' : '𝙳𝙴𝚂𝙰𝙲𝚃𝙸𝚅𝙰𝙳𝙾'}
-*🛡️ PARA*: ${isAll ? '𝙴𝚂𝚃𝙴 𝙱𝙾𝚃' : isUser ? '' : '𝙴𝚂𝚃𝙴 𝙲𝙷𝙰𝚃'}`, wm3, null, [[`${isEnable ? '❎ 𝘿𝙀𝙎𝘼𝘾𝙏𝙄𝙑𝘼𝙍 ❎' : '☑️ 𝘼𝘾𝙏𝙄𝙑𝘼𝙍 ☑️'}`, `${isEnable ? `#disable ${type}` : `#enable ${type}`}`], ['📦 𝙈𝙀𝙉𝙐 ', '#menu']], m)}
+conn.reply(m.chat, `*✅ OPCION: ${type} ${isEnable ? '𝙰𝙲𝚃𝙸𝚅𝙰𝙳𝙾' : '𝙳𝙴𝚂𝙰𝙲𝚃𝙸𝚅𝙰𝙳𝙾'} *PARA*: ${isAll ? '𝙴𝚂𝚃𝙴 𝙱𝙾𝚃' : isUser ? '' : '𝙴𝚂𝚃𝙴 𝙲𝙷𝙰𝚃'}`)}
 handler.help = ['en', 'dis'].map(v => v + 'able <option>')
 handler.tags = ['group', 'owner']
 handler.command = /^((en|dis)able|(tru|fals)e|(turn)?[01])$/i
