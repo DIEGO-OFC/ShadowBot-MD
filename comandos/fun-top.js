@@ -2,7 +2,7 @@ import util from 'util'
 import path from 'path'
 import { generateWAMessageFromContent } from '@adiwajshing/baileys'
 let user = a => '@' + a.split('@')[0]
-let handler = async (m, { groupMetadata, command, conn, text, usedPrefix}) {
+function handler(m, { groupMetadata, command, conn, text, usedPrefix}) {
 if (!text) throw `Ejemplo de uso:\n.top *texto*`
 let ps = groupMetadata.participants.map(v => v.id)
 let a = ps.getRandom()
@@ -32,7 +32,7 @@ let top = `*${x} Top 10 ${text} ${x}*
 *9. ${user(i)}*
 *10. ${user(j)}*`
 m.reply(top, null, { mentions: [a, b, c, d, e, f, g, h, i, j]})
-await conn.sendFile(m.chat, vn, 'error.mp3', null, m, true, {
+ conn.sendFile(m.chat, vn, 'error.mp3', null, m, true, {
 type: 'audioMessage',
 ptt: true })}
 handler.help = handler.command = ['top']
