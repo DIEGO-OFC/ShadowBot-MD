@@ -1,3 +1,6 @@
+//By https://github.com/DIEGO-OFC/DORRAT-BOT-MD
+
+
 import fetch from 'node-fetch'
 import { webp2png } from '../lib/webp2mp4.js'
 
