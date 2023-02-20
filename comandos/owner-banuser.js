@@ -18,11 +18,13 @@ const fkontak = {
 
 let who
 //let pp = './galeria/menudorrat3.jpg'
+if (m.isGroup) who = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text
+else who = m.chat
+let user = global.db.data.users[who]
+let name = conn.getName(who)
 let txt = text.replace('@' + who.split`@`[0], '').trim()
 if (!txt) return conn.reply(m.chat, `$*ESCRIBA EL MOTIVO DEL BANEO\n` + `*${usedPrefix + command} @${who.split`@`[0]} *Motivo*`, fkontak, m)  
-if (m.isGroup) who = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text
-else who = m.sender
-let name = conn.getName(who)
+
 let pp = await conn.profilePictureUrl(who, 'image').catch(_ => 'https://telegra.ph/file/9b1353deceded7f387713.jpg')
 let banu = `Tal vez el ban los haga reflexionar`
 let banu2 = `*✅ USUARIO BANEADO*\n*NOMBRE:* ${name}\n*NUMERO:* ${PhoneNumber('+' + who.replace('@s.whatsapp.net', '')).getNumber('international')}\nRazon: ${text}*`
