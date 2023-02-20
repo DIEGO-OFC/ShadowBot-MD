@@ -1,6 +1,7 @@
 import PhoneNumber from 'awesome-phonenumber'
 
 let handler = async (m, { conn, text, command, usedPrefix }) => {//prems 
+
 const fkontak = {
 	"key": {
     "participants":"0@s.whatsapp.net",
