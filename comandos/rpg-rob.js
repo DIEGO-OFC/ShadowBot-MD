@@ -47,14 +47,14 @@ await await conn.sendMessage(
     { text: raid, mentions: [_user, m.sender] },
     { quoted: m }
   );
-  conn.sendMessage(
+  /*conn.sendMessage(
     _user,
     {
       text: `*❕@${m.sender.split("@")[0]} TE ACABA DE ROBAR!*`,
       mentions: [m.sender],
     },
     { quoted: m }
-  );
+  );*/
   global.db.data.users[m.sender].lastrob = new Date() * 1;
 }
 catch {  
