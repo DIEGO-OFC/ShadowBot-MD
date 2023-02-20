@@ -15,7 +15,7 @@ let user = global.db.data.users[who]
 if (!who) throw `*[❕] ETIQUETA A LA PERSONA QUE SERA BANEADA*`
 let users = global.db.data.users
 users[who].banned = true
-await conn.sendButton(m.chat, banu2,  banu, wm,  pp,[
+await conn.sendButton(m.chat, banu2,  banu,  pp,[
 ['𝙼𝙴𝙽𝚄', `#menusimple`]], m)}
 handler.help = ['banuser']
 handler.tags = ['owner']
