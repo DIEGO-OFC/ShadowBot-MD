@@ -1,4 +1,4 @@
-let handler = async (m, { conn, text, command, usedPrefix, args }) => {
+/*let handler = async (m, { conn, text, command, usedPrefix, args }) => {
 let user = global.db.data.users[m.sender]
 let time = global.db.data.users[m.sender].lastmiming + 600000
 if (new Date - global.db.data.users[m.sender].lastmiming < 600000) throw `*⏰ Espera ${msToTime(time - new Date())} Para volver a jugar ppt*`
@@ -76,4 +76,4 @@ minutes = (minutes < 10) ? "0" + minutes : minutes
 seconds = (seconds < 10) ? "0" + seconds : seconds
 
 return minutes + " m y " + seconds + " s " 
-}
+}*/
