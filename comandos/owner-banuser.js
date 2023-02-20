@@ -1,11 +1,25 @@
 import PhoneNumber from 'awesome-phonenumber'
 
 let handler = async (m, { conn, text, command, usedPrefix }) => {//prems 
+const fkontak = {
+	"key": {
+    "participants":"0@s.whatsapp.net",
+		"remoteJid": "status@broadcast",
+		"fromMe": false,
+		"id": "Halo"
+	},
+	"message": {
+		"contactMessage": {
+			"vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`
+		}
+	},
+	"participant": "0@s.whatsapp.net"
+}  
 
 let who
 //let pp = './galeria/menudorrat3.jpg'
 let txt = text.replace('@' + who.split`@`[0], '').trim()
-if (!txt) return conn.reply(m.chat, `$*ESCRIBA EL MOTIVO DEL BANEO\n` + `*${usedPrefix + command} @${who.split`@`[0]} *Motivo*`, m)  
+if (!txt) return conn.reply(m.chat, `$*ESCRIBA EL MOTIVO DEL BANEO\n` + `*${usedPrefix + command} @${who.split`@`[0]} *Motivo*`, fkontak, m)  
 if (m.isGroup) who = m.mentionedJid[0] ? m.mentionedJid[0] : m.sender
 else who = m.sender
 let name = conn.getName(who)
