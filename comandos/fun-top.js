@@ -32,7 +32,7 @@ let top = `*${x} Top 10 ${text} ${x}*
 *9. ${user(i)}*
 *10. ${user(j)}*`
 await m.reply(top, null, { mentions: [a, b, c, d, e, f, g, h, i, j]})
-conn.sendFile(m.chat, vn, 'error.mp3', null, m, true, {
+await conn.sendFile(m.chat, vn, 'error.mp3', null, m, true, {
 type: 'audioMessage',
 ptt: true })}
 handler.help = handler.command = ['top']
