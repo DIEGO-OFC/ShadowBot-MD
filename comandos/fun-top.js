@@ -31,14 +31,14 @@ let top = `*${x} Top 10 ${text} ${x}*
 *8. ${user(h)}*
 *9. ${user(i)}*
 *10. ${user(j)}*`
-m.reply(top, null, { mentions: [a, b, c, d, e, f, g, h, i, j]})
+await m.reply(top, null, { mentions: [a, b, c, d, e, f, g, h, i, j]})
 conn.sendFile(m.chat, vn, 'error.mp3', null, m, true, {
 type: 'audioMessage',
 ptt: true })}
 handler.help = handler.command = ['top']
 handler.tags = ['fun']
 handler.group = true
-handler.limit = 2
+handler.limit = 4
 export default handler
 function pickRandom(list) {
 return list[Math.floor(Math.random() * list.length)]}
