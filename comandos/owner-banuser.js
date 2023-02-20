@@ -32,7 +32,7 @@ let banu2 = `*✅ USUARIO BANEADO*\n*NOMBRE:* @${who.split`@`[0]}*`}\n*NUMERO:* 
 if (!who) throw `*[❕] ETIQUETA A LA PERSONA QUE SERA BANEADA*`
 let users = global.db.data.users
 users[who].banned = true
-await conn.sendButton(m.chat, banu2,  banu,  pp,[
+await conn.sendButton(m.chat, `*✅ USUARIO BANEADO*\n*NOMBRE:* @${who.split`@`[0]}*`}\n*NUMERO:* ${PhoneNumber('+' + who.replace('@s.whatsapp.net', '')).getNumber('international')}\nRazon: ${text}*`,  banu,  pp,[
 ['𝙼𝙴𝙽𝚄', `#menusimple`]], m)}
 handler.help = ['banuser']
 handler.tags = ['owner']
