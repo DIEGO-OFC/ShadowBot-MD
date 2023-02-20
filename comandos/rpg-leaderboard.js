@@ -62,7 +62,7 @@ await conn.sendButton(m.chat, wm, text, null, [
 }
 handler.help = ['top']
 handler.tags = ['xp']
-handler.command = ['leaderboard', 'lb', 'top'] 
+handler.command = ['leaderboard', 'lb'] 
 //handler.register = true
 handler.fail = null
 handler.exp = 0
