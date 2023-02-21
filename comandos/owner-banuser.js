@@ -1,4 +1,4 @@
-import PhoneNumber from 'awesome-phonenumber'
+/* mejorado por DIEGO-OFC*/ import PhoneNumber from 'awesome-phonenumber'
 
 let handler = async (m, { conn, text, command, usedPrefix }) => {//prems 
 
