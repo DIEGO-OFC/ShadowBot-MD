@@ -61,4 +61,4 @@ handler.command = /^xnxxsearch|xnxxs$/i
 handler.register = true
 handler.premium = true
 
-export default handle
+export default handler
