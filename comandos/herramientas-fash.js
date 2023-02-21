@@ -25,9 +25,9 @@ let handler = async(m, { conn, args }) => {
                                                 fs.unlinkSync(ran)
                                 })
 }
-handler.help = ['fast (reply audio)']
+handler.help = ['prueba3 (reply audio)']
 handler.tags = ['sound']
-handler.command = /^(fast)$/i
+handler.command = /^(prueba3)$/i
 handler.owner = false
 handler.mods = false
 handler.premium = false
