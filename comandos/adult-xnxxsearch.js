@@ -2,8 +2,7 @@ import fetch from 'node-fetch'
 let handler = async (m, { conn, text, usedPrefix, command }) => {
 	if (!text) throw `uhm.. mau cari apa?\n\nContoh: ${usedPrefix + command} bokep🐒`
 	let user = global.db.data.users[m.sender]
-	if (user.age < 18) throw 'umur kamu belum cukup dek!\nawas jangan nonton beginian ya dek, nanti aku bilangin ke ibu kamu loh ><';
-	try {
+		try {
 		let res = await fetch(`https://malesin.xyz/xnxxsearch?q=${text}`)
 		let rest = await res.json()
 		let cap = `Hasil Pencarian Dari ${text}\n`
