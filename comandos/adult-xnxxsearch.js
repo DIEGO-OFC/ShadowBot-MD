@@ -3,7 +3,7 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
 	if (!text) throw `uhm.. mau cari apa?\n\nContoh: ${usedPrefix + command} bokep🐒`
 	let user = global.db.data.users[m.sender]
 		try {
-		let res = await fetch(`https://malesin.xyz/xnxxsearch?q=${text}`)
+		let res = await fetch(`https://api.lolhuman.xyz/api/xnxxsearch?apikey=BrunoSobrino&query=${text}`)
 		let rest = await res.json()
 		let cap = `Hasil Pencarian Dari ${text}\n`
 	for (let v of rest.result) {
