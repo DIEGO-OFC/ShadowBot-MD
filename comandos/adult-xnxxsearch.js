@@ -58,7 +58,7 @@ handler.help = ["xnxxsearch"].map(v => v + ' <query>')
 handler.tags = ["downloader", "premium"]
 handler.command = /^xnxxsearch|xnxxs$/i
 
-handler.register = true
+handler.register = false
 handler.premium = true
 
 export default handler
