@@ -1,4 +1,5 @@
 import axios from 'axios'
+import fetch from 'node-fetch'
 import fs from 'fs'
 import cheerio from 'cheerio'
 let handler = async (m, { text, conn, args, command, usedPrefix }) => {
