@@ -6,9 +6,7 @@ let res = await fetch(`https://api.xteam.xyz/sticker/stickerly?q=${args[0]}&APIK
 let json = await res.json()
 for (let data of (json.result.stickerlist || json)) {
 const stikers = await sticker(false, data, global.packname, global.author)
-conn.sendFile(m.chat, stikers, 'sticker.webp', '', m, { asSticker: true })}
-//await delay(1500)
-}}
+conn.sendFile(m.chat, stikers, 'sticker.webp', '', m, { asSticker: true })}}
 handler.command = /^stickerly|stickerpack$/i
 export default handler
 //const delay = time => new Promise(res => setTimeout(res, time))
