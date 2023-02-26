@@ -20,4 +20,4 @@ conn.sendFile(m.chat, stikers2, 'sticker.webp', '', m, { asSticker: true })}
 } catch {   
 await m.reply('*⚠️ ERROR INTENTALO DE NUEVO*')  
 }}}
-handler.command = /^stickerly$/i
+handler.command = /^stickerly2$/i
