@@ -21,3 +21,5 @@ conn.sendFile(m.chat, stikers2, 'sticker.webp', '', m, { asSticker: true })}
 await m.reply('*⚠️ ERROR INTENTALO DE NUEVO*')  
 }}}
 handler.command = /^stickerly$/i
+
+export default handler 
