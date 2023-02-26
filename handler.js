@@ -1249,7 +1249,7 @@ if (!isPrems && comandos.bitcoins && global.db.data.users[m.sender].bitcoins < c
                     await comandos.call(this, m, extra)
                     if (!isPrems)
                         m.limit = m.limit || comandos.limit || false
-                        m.dolares = m.dolares || comandos.dolares || true
+                        m.dolares = m.dolares || comandos.dolares || false
                 } catch (e) {
                     // Error occured
                     m.error = e
