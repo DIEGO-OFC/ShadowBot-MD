@@ -10,6 +10,6 @@ const stikers = await sticker(false, data, global.packname, global.author)
 conn.sendFile(m.chat, stikers, 'sticker.webp', '', m, { asSticker: true })
 //await delay(1500)
 }}
-handler.command = /^stickerly|stickerpack$/i
+handler.command = /^stickerpack$/i
 export default handler
 //const delay = time => new Promise(res => setTimeout(res, time))
