@@ -6,8 +6,8 @@ let image = await res.getRandom()
 let link = image
 let captionn = `👻 *IMAGEN DE: SHIPOST*`
 await conn.sendButton(m.chat, captionn, author, link, [
-['🔷 [STICKER]', `#s`],
-['🔄 [SIGUIENTE]',`#shipost`]
+['🔄 [SIGUIENTE]',`#shipost`],
+['🔷 [STICKER]', `#s`]
 ], m)}
 handler.help = ['shipost <query>', 'shipost <query>']
 handler.tags = ['internet', 'tools']
