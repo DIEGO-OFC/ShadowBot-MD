@@ -4,8 +4,11 @@ let shipost = 'shipost'
 const res = await googleImage(shipost)
 let image = await res.getRandom()
 let link = image
-let captionn = `👻 *IMAGEN DE:* shipost`
-await conn.sendButton(m.chat, captionn, author, link, [['🔷 [STICKER]', `#s`]], m)}
+let captionn = `👻 *IMAGEN DE: SHIPOST*`
+await conn.sendButton(m.chat, captionn, author, link, [
+['🔷 [STICKER]', `#s`],
+['🔄 [SIGUIENTE]',`#shipost`]
+], m)}
 handler.help = ['shipost <query>', 'shipost <query>']
 handler.tags = ['internet', 'tools']
 handler.command = /^(shipost)$/i
