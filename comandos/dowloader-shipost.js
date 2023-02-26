@@ -5,7 +5,7 @@ const res = await googleImage(shipost)
 let image = await res.getRandom()
 let link = image
 let captionn = `👻 *IMAGEN DE: SHIPOST*`
-await conn.sendButton(m.chat, captionn, author, link, [
+await await conn.sendButton(m.chat, captionn, author, link, [
 ['🔄 [SIGUIENTE]',`#shipost`],
 ['🔷 [STICKER]', `#s`]
 ], m)}
