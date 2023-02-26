@@ -12,5 +12,5 @@ await await conn.sendButton(m.chat, captionn, author, link, [
 handler.help = ['shipost <query>', 'shipost <query>']
 handler.tags = ['internet', 'tools']
 handler.command = /^(shipost)$/i
-handler.bitcoins = 5
+handler.dolares = 5
 export default handler
