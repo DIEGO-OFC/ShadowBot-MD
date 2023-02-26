@@ -1,12 +1,27 @@
 import { sticker } from '../lib/sticker.js'
 import fetch from 'node-fetch'
-let handler = async (m, { conn, args, usedPrefix, command }) => {
-if (!args[0]) throw `*[❗] 𝙴𝙹𝙴𝙼𝙿𝙻𝙾 𝙳𝙴 𝚄𝚂𝙾 𝙳𝙴𝙻 𝙲𝙾𝙼𝙰𝙽𝙳𝙾 ${usedPrefix + command} memes*`
-let res = await fetch(`https://api.xteam.xyz/sticker/stickerly?q=${args[0]}&APIKEY=5bd33b276d41d6b4`)
-let json = await res.json()
-for (let data of (json.result.stickerlist || json)) {
-const stikers = await sticker(false, data, global.packname, global.author)
-conn.sendFile(m.chat, stikers, 'sticker.webp', '', m, { asSticker: true })}}
-handler.command = /^stickerly|stickerpack$/i
-export default handler
-//const delay = time => new Promise(res => setTimeout(res, time))
+import MessageType from = '@adiwajshing/baileys'
+
+let handler = async (m, { conn, text, usedPrefix, command }) => {
+    if (!text) throw `*Perintah ini untuk mengambil stiker dari Stickerly berdasarkan pencarian*\n\nContoh penggunaan:\n${usedPrefix + command} spongebob`
+    let res = await fetch(global.API('xteam', '/sticker/stickerly', { q: text }, 'APIKEY'))
+    if (res.status !== 200) throw await res.text()
+    let json = await res.json()
+    if (!json.status) throw json
+    m.reply(`
+*Total stiker:* ${json.result.stickerlist.length}
+        `.trim())
+
+    for (let i of json.result.stickerlist) {
+        stiker = await sticker(false, i, global.packname, global.author)
+        await conn.sendMessage(m.chat, stiker, MessageType.sticker, { quoted: m })
+        await delay(1500)
+    }
+}
+handler.help = ['stikerly <pencarian>']
+handler.tags = ['sticker']
+handler.command = /^(stic?kerly)$/i
+
+handler.limit = true
+
+export default handler 
