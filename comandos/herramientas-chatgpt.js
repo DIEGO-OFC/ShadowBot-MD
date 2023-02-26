@@ -3,9 +3,10 @@ let handler = async (m, { text, usedPrefix, command }) => {
 if (!text) throw `*[❕] INGRESE UN TEXTO/ORDEN PARA EJECUTAR LA FUNCIÓN CHATGPT*\n\n*❍ EJEMPLO DE PETICIONES Y ORDENES*\n*❍ ${usedPrefix + command} Reflexion sobre la serie Merlina 2022 de netflix*\n*❍ ${usedPrefix + command} Codigo en JS para un juego de cartas*`
 try {
 await await m.reply(`*[ 𝐂𝐀𝐑𝐆𝐀𝐍𝐃𝐎 ]*`)
+await m.reply(`🚀`)
 let tiores = await fetch(`https://api.lolhuman.xyz/api/openai?apikey=${lolkeysapi}&text=${text}&user=user-unique-id`)
 let hasil = await tiores.json()
-await await await await m.reply(`*${hasil.result}*`.trim())
+await await await await m.reply(`${hasil.result}`.trim())
 } catch {
 throw `*[❕] ERROR, INTENTA DE NUEVO*`
 }}
