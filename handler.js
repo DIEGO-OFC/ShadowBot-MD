@@ -1177,7 +1177,7 @@ export async function handler(chatUpdate) {
                     fail('mods', m, this)
                     continue
                 }
-                if (comandos.premium && isPrems) { // Premium
+                if (comandos.premium && !isPrems) { // Premium
                     fail('premium', m, this)
                     continue
                 }
@@ -1209,12 +1209,12 @@ export async function handler(chatUpdate) {
                     this.reply(m.chat, `${ag}\n𝙉𝙊 𝙏𝙄𝙀𝙉𝙀 𝘿𝙄𝘼𝙈𝘼𝙉𝙏𝙀𝙎. 💎 𝙋𝙐𝙀𝘿𝙀 𝘾𝙊𝙈𝙋𝙍𝘼𝙍 𝘾𝙊𝙉 𝙀𝙇 𝘾𝙊𝙈𝘼𝙉𝘿𝙊 *${usedPrefix}buy*\n\n𝙄𝙏 𝙃𝘼𝙎 𝙉𝙊 𝘿𝙄𝘼𝙈𝙊𝙉𝘿𝙎. 💎 𝙔𝙊𝙐 𝘾𝘼𝙉 𝘽𝙐𝙔 𝙒𝙄𝙏𝙃 𝙏𝙃𝙀 𝘾𝙊𝙈𝙈𝘼𝙉𝘿 *${usedPrefix}buy*`, m)
                     continue // Limit habis
                 }
-if (isPrems && comandos.dolares && global.db.data.users[m.sender].dolares < comandos.dolares * 1) {
+if (!isPrems && comandos.dolares && global.db.data.users[m.sender].dolares < comandos.dolares * 1) {
                     this.reply(m.chat, `${ag}\n\n*No tiene dólares* 💵\n\n *puede conseguir 💵 con el comando #trabajar o comprando con #buy dolares [cantidad]*`, m)
                     continue 
 
 }
-if (isPrems && comandos.bitcoins && global.db.data.users[m.sender].bitcoins < comandos.bitcoins * 1) {
+if (!isPrems && comandos.bitcoins && global.db.data.users[m.sender].bitcoins < comandos.bitcoins * 1) {
                     this.reply(m.chat, `${ag}\n\n*No tiene bitcoins* 🏵️\n\n *puede conseguir Bitcoins 🏵️ comprando con #buy bitcoins [cantidad]*`, m)
                     continue 
 }
@@ -1247,7 +1247,7 @@ if (isPrems && comandos.bitcoins && global.db.data.users[m.sender].bitcoins < co
                 }
                 try {
                     await comandos.call(this, m, extra)
-                    if (isPrems)
+                    if (!isPrems)
                         m.limit = m.limit || comandos.limit || false
                         m.dolares = m.dolares || comandos.dolares || false
                 } catch (e) {
