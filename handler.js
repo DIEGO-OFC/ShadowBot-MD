@@ -1247,7 +1247,7 @@ if (!isPrems && comandos.bitcoins && global.db.data.users[m.sender].bitcoins < c
                 }
                 try {
                     await comandos.call(this, m, extra)
-                    if (!isPrems)
+                    if (isPrems)
                         m.limit = m.limit || comandos.limit || false
                         m.dolares = m.dolares || comandos.dolares || false
                 } catch (e) {
