@@ -31,7 +31,7 @@ export async function handler(chatUpdate) {
         await global.loadDatabase()
     try {
         m = smsg(this, m) || m
-        if (m)
+        if (!m)
             return
         m.tarjeta = false
         m.exp = 0
