@@ -41,7 +41,7 @@ return conn.sendMessage(m.chat, listMessage, { quoted: fkontak  })
 
 handler.help = ['ytd']
 handler.tags = ['downloader']
-handler.command = /^ytv2)?$/i
+handler.command = ['ytv2']
 handler.exp = 3
 
 export default handler
