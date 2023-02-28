@@ -12,7 +12,7 @@ ${htjava} 𝐂𝐌𝐃 ${htjava}\n⮕ ${name}
 ${htjava} 𝐇𝐈𝐓 ${htjava}\n⮕ ${total}
 ${htjava} 𝐓𝐈𝐌𝐄 ${htjava}\n⮕ ${getTime(last)}`
 }).join`\n\n`
-  m.reply(txt)}}}
+  m.reply(txt)}}}}
 handler.help = ['dashboard']
 handler.tags = ['info']
 handler.command = /^(db|dashboard)$/i
