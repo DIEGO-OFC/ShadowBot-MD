@@ -14,7 +14,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
 `.trim()
    await m.reply(caption)
    await conn.sendFile(m.chat, link, name, '', m, null, { mimetype: mime, asDocument: true })
-   } /*catch {  
+   /*} catch {  
       await m.reply('*[❕] ERROR, INTENTA DE NUEVO*\n\n*- COMPRUEBA QUE EL ENLACE SEA IGUAL A*\n*❍ https://www.mediafire.com/file/xo6msugx6u2fhlw/1.19.30.apk/file*')
 
    }*/
