@@ -31,7 +31,8 @@ if (!who) throw `*[❕] ETIQUETA A LA PERSONA QUE SERA BANEADA*`
 let chatstext = text.replace(who.split("@")[0], '').replace("@", '')
 let users = global.db.data.users
 users[who].banned = true
-await conn.sendButton(m.chat, `*✅ USUARIO BANEADO*\n*NOMBRE:* ${name}\n*NUMERO:* ${PhoneNumber('+' + who.replace('@s.whatsapp.net', '')).getNumber('international')}\n*RAZÓN: ${chatstext}*`,  banu,  pp,[['𝙼𝙴𝙽𝚄', `#menusimple`]], m)} handler.help = ['banuser'] handler.tags = ['owner'] handler.command = /^banuser$/i handler.rowner = true
+await conn.sendButton(m.chat, `*✅ USUARIO BANEADO*\n*NOMBRE:* ${name}\n*NUMERO:* ${PhoneNumber('+' + who.replace('@s.whatsapp.net', '')).getNumber('international')}\n*RAZÓN: ${chatstext}*`,  banu,  pp,[['𝙼𝙴𝙽𝚄', `#menusimple`]], m)} handler.help = ['banuser'] handler.tags = ['owner'] handler.command = /^banuser$/i
+handler.owner = true
 export default handler
 
 
