@@ -12,12 +12,12 @@ let handler = async (m, { conn, args, isPrems, isOwner }) => {
      let titleYt = infoYt.videoDetails.title;
      let randomName = getRandom(".mp4");
      const stream = ytdl(urlYt, { filter: (info) => info.itag == 22 || info.itag == 18,}).pipe(fs.createWriteStream(`./${randomName}`));
-     console.log(" downloading ->", urlYt);
+     console.log("Descargando ->", urlYt);
      await new Promise((resolve, reject) => { stream.on("error", reject); stream.on("finish", resolve); });
      let stats = fs.statSync(`./${randomName}`);
      let fileSizeInBytes = stats.size;
      let fileSizeInMegabytes = fileSizeInBytes / (1024 * 1024);
-     console.log("Video downloaded ! tamaño: " + fileSizeInMegabytes);
+     console.log("Tamaño del video: " + fileSizeInMegabytes);
      if (fileSizeInMegabytes <= 999) {
     conn.sendMessage(m.chat, { document: fs.readFileSync(`./${randomName}`),fileName: `${titleYt}.mp4` , mimetype: 'video/mp4'}, { quoted: m });
      } else {
