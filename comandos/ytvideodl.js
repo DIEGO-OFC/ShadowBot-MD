@@ -19,7 +19,7 @@ let handler = async (m, { conn, args, isPrems, isOwner }) => {
      let fileSizeInMegabytes = fileSizeInBytes / (1024 * 1024);
      console.log("Video downloaded ! tamaño: " + fileSizeInMegabytes);
      if (fileSizeInMegabytes <= 999) {
-     conn.sendMessage(m.chat, { video: fs.readFileSync(`./${randomName}`), caption: `${titleYt}`}, { quoted: m });
+    conn.sendMessage(m.chat, { document: fs.readFileSync(`./${randomName}`),fileName: `${titleYt}.mp4` , mimetype: 'video/mp4'}, { quoted: m });
      } else {
      m.reply(`*El archivo es superior a 999 MB.*`);
      }
