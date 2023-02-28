@@ -13,7 +13,7 @@ const ttl = await yt.title
 await await conn.sendMessage(m.chat, { document: { url: dl_url }, mimetype: 'video/mp4', fileName: ttl + `.mp4`}, {quoted: m})
 } catch {
 try {
-let lolhuman = await fetch(`https://api.lolhuman.xyz/api/ytvideo2?apikey=85faf717d0545d14074659ad&url=${args[0]}`)    
+let lolhuman = await fetch(`https://api.lolhuman.xyz/api/ytvideo2?apikey=${lolkeysapi}&url=${args[0]}`)    
 let lolh = await lolhuman.json()
 let n = lolh.result.title || 'error'
 let n2 = lolh.result.link
