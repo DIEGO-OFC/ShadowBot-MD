@@ -36,7 +36,7 @@ const listMessage = {
   sections
 }
 
-return conn.sendMessage(m.chat, listMessage, { quoted: fkontak  })
+return conn.sendMessage(m.chat, listMessage, { quoted: m })
 }
 
 handler.help = ['ytd']
