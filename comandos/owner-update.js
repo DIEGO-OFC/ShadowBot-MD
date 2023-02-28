@@ -7,7 +7,7 @@ m.reply(`*[ 𝐂𝐀𝐑𝐆𝐀𝐍𝐃𝐎 ]*`)
 await await conn.reply(m.chat, stdout.toString(), m)}
 } catch {
 var update = execSync('git remote set-url origin https://github.com/DIEGO-OFC/DORRAT-BOT-MD.git && git pull')
-await m.reply(update.toString())
+await await m.reply(update.toString())
 }}
 handler.help = ['update']
 handler.tags = ['owner']
