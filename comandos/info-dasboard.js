@@ -10,9 +10,8 @@ let pp = imagen1
     return `${htki} ${idx + 1} ${htka}
 ${htjava} 𝐂𝐌𝐃 ${htjava}\n⮕ ${name}
 ${htjava} 𝐇𝐈𝐓 ${htjava}\n⮕ ${total}
-${htjava} 𝐓𝐈𝐌𝐄 ${htjava}\n⮕ ${getTime(last)}`
 }).join`\n\n`
-  m.reply(txt)}}
+  m.reply(txt)}
 handler.help = ['dashboard']
 handler.tags = ['info']
 handler.command = /^(db|dashboard)$/i
@@ -31,10 +30,3 @@ export function parseMs(ms) {
     nanoseconds: Math.trunc(ms * 1e6) % 1000
   }
 }
-
-export function getTime(ms) {
-  let now = parseMs(+new Date() - ms)
-  if (now.days) return `${now.days} Hari yang lalu`
-  else if (now.hours) return `${now.hours} Jam yang lalu`
-  else if (now.minutes) return `${now.minutes} Menit yang lalu`
-  else return `Barusan`
