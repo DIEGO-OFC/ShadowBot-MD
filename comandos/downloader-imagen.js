@@ -9,5 +9,5 @@ await conn.sendButton(m.chat, captionn, author, link, [['🔄 𝚂𝙸𝙶𝚄�
 handler.help = ['gimage <query>', 'imagen <query>']
 handler.tags = ['internet', 'tools']
 handler.command = /^(gimage|image|imagen)$/i
-handler.bitcoins = 5
+handler.limit = 2
 export default handler
