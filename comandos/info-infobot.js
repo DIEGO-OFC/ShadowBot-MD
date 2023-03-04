@@ -1,6 +1,6 @@
 
 import util from 'util'
-import { si } from 'systeminformation'
+import si from 'systeminformation'
 import { performance } from 'perf_hooks'
 import { sizeFormatter } from 'human-readable'
 import { cpus as _cpus, totalmem, freemem } from 'os'
