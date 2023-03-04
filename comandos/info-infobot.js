@@ -41,8 +41,6 @@ let info2 = `
 ║❒  [🏢] *GCONLY*: ${gconly ? '*𝚊𝚌𝚝𝚒𝚟𝚊𝚍𝚘*' : '*𝚍𝚎𝚜𝚊𝚌𝚝𝚒𝚟𝚊𝚍𝚘*'}
 ║❒  [🗺️] *MODO*: ${self ? '*𝚙𝚛𝚒𝚟𝚊𝚍𝚘*' : '*𝚙𝚞𝚋𝚕𝚒𝚌𝚘*'}
 ║❒  [🔴] *RAM:* ${json.memory}
-║❒  [🔥] *VELOCIDAD*: 
-║  *${speed} ms* 
 ╠
 *╠═〘 Dorrat-Bot-MD 〙 ═*
 `.trim() 
