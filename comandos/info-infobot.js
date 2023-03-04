@@ -6,6 +6,12 @@ import { cpus as _cpus, totalmem, freemem } from 'os'
 import MessageType from '@adiwajshing/baileys'
 import fs from 'fs'
 let handler = async (m, { conn, usedPrefix }) => {  
+let format = sizeFormatter({
+  std: 'JEDEC', // 'SI' (default) | 'IEC' | 'JEDEC'
+  decimalPlaces: 2,
+  keepTrailingZeroes: false,
+  render: (literal, symbol) => `${literal} ${symbol}B`,
+})
 let _uptime = process.uptime() * 1000
 let uptime = clockString(_uptime) 
 let totalreg = Object.keys(global.db.data.users).length
@@ -40,7 +46,7 @@ let info2 = `
 ║❒  [💬] *PCONLY*: ${pconly ? '*𝚊𝚌𝚝𝚒𝚟𝚊𝚍𝚘*' : '*𝚍𝚎𝚜𝚊𝚌𝚝𝚒𝚟𝚊𝚍𝚘*'}
 ║❒  [🏢] *GCONLY*: ${gconly ? '*𝚊𝚌𝚝𝚒𝚟𝚊𝚍𝚘*' : '*𝚍𝚎𝚜𝚊𝚌𝚝𝚒𝚟𝚊𝚍𝚘*'}
 ║❒  [🗺️] *MODO*: ${self ? '*𝚙𝚛𝚒𝚟𝚊𝚍𝚘*' : '*𝚙𝚞𝚋𝚕𝚒𝚌𝚘*'}
-║❒  [🔴] *RAM:* ${json.memory}
+║❒  [🔴] *RAM:* ${format(json.memory)}
 ╠
 *╠═〘 Dorrat-Bot-MD 〙 ═*
 `.trim() 
