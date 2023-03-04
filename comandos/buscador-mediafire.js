@@ -3,15 +3,28 @@ import fs from 'fs'
 import cheerio from 'cheerio'
 import fetch from 'node-fetch'
 let handler = async (m, { text, conn, args, command, usedPrefix }) => {
-if (!text) throw `*[❗𝐈𝐍𝐅𝐎❗] 𝙴𝙹𝙴𝙼𝙿𝙻𝙾 𝙳𝙴 𝚄𝚂𝙾 𝙳𝙴𝙻 𝙲𝙾𝙼𝙰𝙽𝙳𝙾 ${usedPrefix + command} WhatsApp*`
-//try {
-let res = await axios.get(`https://www.mediafire.com/api/1.5/search/get_web_results.php?search_term=${text}`)
-let json = res.result
-let listSerch = []
-const sections = [{
-title: comienzo + ' ' + lenguajeGB['smsLista1']() + ' ' + fin,
+const sections = [
+{
+title: `𝐈𝐍𝐅𝐎𝐑𝐌𝐀𝐂𝐈𝐎𝐍`,
 rows: [
-{title: "│🌐│MINECRAFT-SERVER", rowId:`${usedPrefix}mc-server`},  
-{title: lenguajeGB['smsLista7'](), rowId:`${usedPrefix}instalarbot`}]}]
+{title: "/grupos", description: "muestra los grupos del bot", rowId: `${usedPrefix}grupos`},
+{title: "/estado", description: "para ver el estado del bot", rowId: `${usedPrefix}estado`},
+{title: "/terminos", description: "para leer los términos y condiciones del bot", rowId: `${usedPrefix}términos`},
+{title: "/instalarbot", description: "información para instalar al bot", rowId: `${usedPrefix}instalarbot`},
+{title: "/infobot", description: "informacion del bot", rowId: `${usedPrefix}infobot`},
+{title: "/grouplist", description: "muestra los grupos en donde está el bot", rowId: `${usedPrefix}grouplist`},
+{title: "/owner", description: "muestra los creadores del bot", rowId: `${usedPrefix}owner`},
+{title: "/script", description: "muestra el github del bot", rowId: `${usedPrefix}sc`},
+]}, ]
+const listMessage = {
+text: wm3,
+footer: `𝙼𝙴𝙽𝚄 𝙳𝙴𝚂𝙿𝙻𝙴𝙶𝙰𝙱𝙻𝙴`,
+title: null,
+buttonText: "selecionar", 
+sections }
+
+ conn.sendMessage(m.chat, listMessage, {quoted: m})	
+}
+
 handler.command = /^mediafiresearch$/i
 export default handler
