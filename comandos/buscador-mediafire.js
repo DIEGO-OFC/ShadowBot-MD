@@ -4,7 +4,7 @@ import cheerio from 'cheerio'
 import fetch from 'node-fetch'
 let handler = async (m, { text, conn, args, command, usedPrefix }) => {
 if (!text) throw `*[❗𝐈𝐍𝐅𝐎❗] 𝙴𝙹𝙴𝙼𝙿𝙻𝙾 𝙳𝙴 𝚄𝚂𝙾 𝙳𝙴𝙻 𝙲𝙾𝙼𝙰𝙽𝙳𝙾 ${usedPrefix + command} WhatsApp*`
-try {
+//try {
 let res = await axios.get(`https://www.mediafire.com/api/1.5/search/q.php?q=${text}`)
 let json = res.result
 let listSerch = []
@@ -21,8 +21,6 @@ sections}
 for (let i of json) {
 listSerch.push({title: i.title, description: '⇧ sᴇʟᴇᴄᴄɪᴏɴᴀ ᴇsᴛᴀ ᴏᴘᴄɪᴏɴ ᴘᴀʀᴀ ᴅᴇsᴄᴀʀɢᴀʀ ᴇsᴛᴇ ᴠɪᴅᴇᴏ ⇧', rowId: `${usedPrefix}xnxxdl ${i.link}`})} 
 conn.sendMessage(m.chat, listMessage, { quoted: m })
-} catch (e) {
-m.reply('*[❗𝐈𝐍𝐅𝐎❗] 𝙴𝚁𝚁𝙾𝚁, 𝙿𝙾𝚁 𝙵𝙰𝚅𝙾𝚁 𝚅𝚄𝙴𝙻𝚅𝙰 𝙰 𝙸𝙽𝚃𝙴𝙽𝚃𝙰𝚁𝙻𝙾*')
-}}
+}
 handler.command = /^mediafiresearch$/i
 export default handler
