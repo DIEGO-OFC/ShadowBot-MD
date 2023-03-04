@@ -23,8 +23,9 @@ const { autoread, gconly, pconly, self } = global.opts || {}
 let pp = './galeria/menudorrat3.jpg'
 let neww = performance.now()
 let ram = await si.mem()
-let json = {
-         memory: ram.free + ' libre de ' + ram.total,
+
+    let json = {
+         memory: format(ram.free) + ' libre de ' + format(ram.total),
          memory_used: ram.used
      }
 let info = `
