@@ -18,9 +18,9 @@ rows: [
 ]}, ]
 const listMessage = {
 text: wm3,
-footer: `𝙼𝙴𝙽𝚄 𝙳𝙴𝚂𝙿𝙻𝙴𝙶𝙰𝙱𝙻𝙴`,
+footer: `DESCARGAS MEDIAFIRE`,
 title: null,
-buttonText: "selecionar", 
+buttonText: "seleciona lo que quieres descargar", 
 sections }
 
  conn.sendMessage(m.chat, listMessage, {quoted: m})	
