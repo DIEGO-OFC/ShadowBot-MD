@@ -1,4 +1,5 @@
 import util from 'util'
+import si from 'systeminformation'
 import { performance } from 'perf_hooks'
 import { sizeFormatter } from 'human-readable'
 let format = sizeFormatter({
@@ -49,7 +50,7 @@ const { autoread, gconly, pconly, self } = global.opts || {}
 let pp = './galeria/menudorrat3.jpg'
 let neww = performance.now()
 let speed = neww - old
-
+let ram = await si.mem()
 let info = `
 ╠═〘 𝐈𝐍𝐅𝐎 𝐃𝐄𝐋 𝐁𝐎𝐓 〙 ═`.trim()
 let info2 = `
@@ -69,8 +70,7 @@ let info2 = `
 ║❒  [💬] *PCONLY*: ${pconly ? '*𝚊𝚌𝚝𝚒𝚟𝚊𝚍𝚘*' : '*𝚍𝚎𝚜𝚊𝚌𝚝𝚒𝚟𝚊𝚍𝚘*'}
 ║❒  [🏢] *GCONLY*: ${gconly ? '*𝚊𝚌𝚝𝚒𝚟𝚊𝚍𝚘*' : '*𝚍𝚎𝚜𝚊𝚌𝚝𝚒𝚟𝚊𝚍𝚘*'}
 ║❒  [🗺️] *MODO*: ${self ? '*𝚙𝚛𝚒𝚟𝚊𝚍𝚘*' : '*𝚙𝚞𝚋𝚕𝚒𝚌𝚘*'}
-║❒  [🔴] *RAM:* ${format(totalmem() - freemem())} / ${format(totalmem())} 
-║❒  [🔵] *FREERAM:* ${format(freemem())}
+║❒  [🔴] *RAM:* memory: ram.free + ' libre de ' + ram.total,  memory_used: ram.used
 ║❒  [🔥] *VELOCIDAD*: 
 ║  *${speed} ms* 
 ╠
