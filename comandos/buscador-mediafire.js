@@ -13,8 +13,9 @@ let fnaf4 = `https://www.mediafire.com/file/aefg3xafqctvmrq/Fnaf4.apk/file`
 let fnaf5 = `https://www.mediafire.com/file/2a6nfr3bly2voy6/FNAF_Sister_Location_por_Tomatito22.apk/file`
 let fnaf6 = `https://www.mediafire.com/file/2bk1h9bnhgouen7/Fnaf_6.apk/file`
 let ucn = `https://www.mediafire.com/file/jb17ec412gv91q6/UCN_v1.11.apk/file`
+let jgp = `JUEGOS 🎮`
 const sections = [{
-title: `JUEGOS 🎮`,
+title: comienzo + ' ' + jgp + ' ' + fin,
 rows: [
 {title: "FNAF 1", description: "DESCARGAR FIVE NIGHTS AT FREDDY'S 1", rowId: `${usedPrefix}mediafire ${fnaf1}`},
 {title: "FNAF 2", description: "DESCARGAR FIVE NIGHTS AT FREDDY'S 2", rowId: `${usedPrefix}mediafire ${fnaf2}`},
