@@ -5,11 +5,13 @@ import fs from 'fs'
 import cheerio from 'cheerio'
 import fetch from 'node-fetch'
 let handler = async (m, { text, conn, args, command, usedPrefix }) => {
+
+let fnaf1 = `https://www.mediafire.com/file/5y7jq06rb8i3vl1/Fnaf_1.apk/file`
 const sections = [
 {
 title: `JUEGOS 🎮`,
 rows: [
-{title: "FNAF 1", description: "DESCARGAR FIVE NIGHTS AT FREDDY'S 1", rowId: `${usedPrefix}mediafire https://www.mediafire.com/file/5y7jq06rb8i3vl1/Fnaf_1.apk/file`},
+{title: "FNAF 1", description: "DESCARGAR FIVE NIGHTS AT FREDDY'S 1", rowId: `${usedPrefix}mediafire ${fnaf1}`},
 {title: "FNAF 2", description: "DESCARGAR FIVE NIGHTS AT FREDDY'S 2", rowId: `${usedPrefix}mediafire https://www.mediafire.com/file/io8lmvb8z0gsrqx/Fnaf_2.apk/file`},
 {title: "FNAF 3", description: "DESCARGAR FIVE NIGHTS AT FREDDY'S 3", rowId: `${usedPrefix}mediafire https://www.mediafire.com/file/t3xlmeoqhb63vub/Fnaf3.apk/file`},
 {title: "FNAF 4", description: "DESCARGAR FIVE NIGHTS AT FREDDY'S 4", rowId: `${usedPrefix}mediafire https://www.mediafire.com/file/aefg3xafqctvmrq/Fnaf4.apk/file`},
