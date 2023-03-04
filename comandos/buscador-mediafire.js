@@ -7,7 +7,7 @@ import fetch from 'node-fetch'
 let handler = async (m, { text, conn, args, command, usedPrefix }) => {
 const sections = [
 {
-title: `𝐈𝐍𝐅𝐎𝐑𝐌𝐀𝐂𝐈𝐎𝐍`,
+title: `JUEGOS 🎮`,
 rows: [
 {title: "FNAF 1", description: "DESCARGAR FIVE NIGHTS AT FREDDY'S 1", rowId: `${usedPrefix}mediafire https://www.mediafire.com/file/5y7jq06rb8i3vl1/Fnaf_1.apk/file`},
 {title: "FNAF 2", description: "DESCARGAR FIVE NIGHTS AT FREDDY'S 2", rowId: `${usedPrefix}mediafire https://www.mediafire.com/file/io8lmvb8z0gsrqx/Fnaf_2.apk/file`},
