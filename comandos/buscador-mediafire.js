@@ -1,3 +1,5 @@
+//creado por https://github.com/DIEGO-OFC
+
 import axios from 'axios'
 import fs from 'fs'
 import cheerio from 'cheerio'
