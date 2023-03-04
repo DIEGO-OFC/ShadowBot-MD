@@ -12,8 +12,8 @@ rows: [
 {title: "FNAF 3", description: "DESCARGAR FIVE NIGHTS AT FREDDY'S 3", rowId: `${usedPrefix}mediafire https://www.mediafire.com/file/t3xlmeoqhb63vub/Fnaf3.apk/file`},
 {title: "FNAF 4", description: "DESCARGAR FIVE NIGHTS AT FREDDY'S 4", rowId: `${usedPrefix}mediafire https://www.mediafire.com/file/aefg3xafqctvmrq/Fnaf4.apk/file`},
 {title: "FNAF 5", description: "DESCARGAR FIVE NIGHTS AT FREDDY'S SISTER LOCATION", rowId: `${usedPrefix}mediafire https://www.mediafire.com/file/2a6nfr3bly2voy6/FNAF_Sister_Location_por_Tomatito22.apk/file`},
-{title: "/grouplist", description: "muestra los grupos en donde está el bot", rowId: `${usedPrefix}grouplist`},
-{title: "/owner", description: "muestra los creadores del bot", rowId: `${usedPrefix}owner`},
+{title: "FNAF 6", description: "DESCARGAR FIVE NIGHTS AT FREDDY'S 6", rowId: `${usedPrefix}mediafire https://www.mediafire.com/file/2bk1h9bnhgouen7/Fnaf_6.apk/file `},
+{title: "FNAF UCN", description: "DESCARGAR FIVE NIGHTS AT FREDDY'S UCN", rowId: `${usedPrefix}mediafire https://www.mediafire.com/file/jb17ec412gv91q6/UCN_v1.11.apk/file`},
 {title: "/script", description: "muestra el github del bot", rowId: `${usedPrefix}sc`},
 ]}, ]
 const listMessage = {
