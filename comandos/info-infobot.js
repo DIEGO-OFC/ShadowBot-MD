@@ -16,7 +16,6 @@ const { restrict, antiCall, antiprivado } = global.db.data.settings[conn.user.ji
 const { autoread, gconly, pconly, self } = global.opts || {}
 let pp = './galeria/menudorrat3.jpg'
 let neww = performance.now()
-let speed = neww - old
 let ram = await si.mem()
 let json = {
          memory: ram.free + ' libre de ' + ram.total,
