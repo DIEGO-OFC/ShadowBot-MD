@@ -7,7 +7,7 @@ const sections = [
 {
 title: `𝐈𝐍𝐅𝐎𝐑𝐌𝐀𝐂𝐈𝐎𝐍`,
 rows: [
-{title: "/grupos", description: "muestra los grupos del bot", rowId: `${usedPrefix}grupos`},
+{title: "FNAF 1", description: "DESCARGAR FIVE NIGHTS AT FREDDY'S 1", rowId: `${usedPrefix}mediafire https://www.mediafire.com/file/5y7jq06rb8i3vl1/Fnaf_1.apk/file`},
 {title: "/estado", description: "para ver el estado del bot", rowId: `${usedPrefix}estado`},
 {title: "/terminos", description: "para leer los términos y condiciones del bot", rowId: `${usedPrefix}términos`},
 {title: "/instalarbot", description: "información para instalar al bot", rowId: `${usedPrefix}instalarbot`},
