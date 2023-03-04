@@ -74,7 +74,7 @@ let info2 = `
 ║❒  [💬] *PCONLY*: ${pconly ? '*𝚊𝚌𝚝𝚒𝚟𝚊𝚍𝚘*' : '*𝚍𝚎𝚜𝚊𝚌𝚝𝚒𝚟𝚊𝚍𝚘*'}
 ║❒  [🏢] *GCONLY*: ${gconly ? '*𝚊𝚌𝚝𝚒𝚟𝚊𝚍𝚘*' : '*𝚍𝚎𝚜𝚊𝚌𝚝𝚒𝚟𝚊𝚍𝚘*'}
 ║❒  [🗺️] *MODO*: ${self ? '*𝚙𝚛𝚒𝚟𝚊𝚍𝚘*' : '*𝚙𝚞𝚋𝚕𝚒𝚌𝚘*'}
-║❒  [🔴] *RAM:* ${json}
+║❒  [🔴] *RAM:* ${json.memory}
 ║❒  [🔥] *VELOCIDAD*: 
 ║  *${speed} ms* 
 ╠
