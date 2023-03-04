@@ -14,6 +14,7 @@ let fnaf5 = `https://www.mediafire.com/file/2a6nfr3bly2voy6/FNAF_Sister_Location
 let fnaf6 = `https://www.mediafire.com/file/2bk1h9bnhgouen7/Fnaf_6.apk/file`
 let ucn = `https://www.mediafire.com/file/jb17ec412gv91q6/UCN_v1.11.apk/file`
 let jgp = `JUEGOS 🎮`
+let app = `APPS PREMIUM`
 const sections = [{
 title: comienzo + ' ' + jgp + ' ' + fin,
 rows: [
@@ -24,8 +25,10 @@ rows: [
 {title: "FNAF 5", description: "DESCARGAR FIVE NIGHTS AT FREDDY'S SISTER LOCATION", rowId: `${usedPrefix}mediafire ${fnaf5}`},
 {title: "FNAF 6", description: "DESCARGAR FIVE NIGHTS AT FREDDY'S 6", rowId: `${usedPrefix}mediafire ${fnaf6}`},
 {title: "FNAF UCN", description: "DESCARGAR FIVE NIGHTS AT FREDDY'S UCN", rowId: `${usedPrefix}mediafire ${ucn}`},
-{title: "/script", description: "muestra el github del bot", rowId: `${usedPrefix}sc`},
-]}, ]
+{title: "/script", description: "muestra el github del bot", rowId: `${usedPrefix}sc`}]}, {
+title: comienzo + ' ' + app + ' ' + fin,
+rows: [
+{title: "PRUEBA", description: "prueba", rowId: `${usedPrefix}ppp`}]}]
 const listMessage = {
 text: wm3,
 footer: `DESCARGAS MEDIAFIRE`,
