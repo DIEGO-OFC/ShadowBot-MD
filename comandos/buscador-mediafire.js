@@ -33,10 +33,10 @@ rows: [
 {title: "/script", description: "muestra el github del bot", rowId: `${usedPrefix}sc`}]}, {
 title: comienzo + ' ' + app + ' ' + fin,
 rows: [
-{title: "PicsArt Premium", description: "Descargar PicsArt Premium Photo editor", rowId: `${usedPrefix}mediafire ${PicsArt}`},
-{title: "VivaCut Premium", description: "Descargar VivaCutPro", rowId: `${usedPrefix}mediafire ${VivaCutPro}`},
-{title: "InShot Premium", description: "Descargar inShotPro", rowId: `${usedPrefix}mediafire ${InShotPro}`},
-{title: "SnapTube Premium", description: "Descargar SnapTube Premium", rowId: `${usedPrefix}mediafire ${SnapTube}`}
+{title: "PicsArt Premium", description: "[⬇️] Descargar PicsArt Premium Photo editor", rowId: `${usedPrefix}mediafire ${PicsArt}`},
+{title: "VivaCut Premium", description: "[⬇️] Descargar VivaCutPro", rowId: `${usedPrefix}mediafire ${VivaCutPro}`},
+{title: "InShot Premium", description:  "[⬇️] Descargar inShotPro", rowId: `${usedPrefix}mediafire ${InShotPro}`},
+{title: "SnapTube Premium", description: "[⬇️] Descargar SnapTube Premium", rowId: `${usedPrefix}mediafire ${SnapTube}`}
 
 ]}]
 const listMessage = {
