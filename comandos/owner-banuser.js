@@ -32,7 +32,7 @@ let pp = await conn.profilePictureUrl(who, 'image').catch(_ => 'https://telegra.
 let banu = `Tal vez el ban los haga reflexionar`
 let banea = `*✅ USUARIO BANEADO*\n*NOMBRE:* ${name}\n*NUMERO:* ${PhoneNumber('+' + who.replace('@s.whatsapp.net', '')).getNumber('international')}\n*RAZÓN: ${chatstext}*`
 users[who].banned = true
-await conn.sendMessage(m.chat,  {image: fs.readFileSync("./galeria/menudorrat5.png"),  caption: banu + banea}, {quoted: m})}
+await conn.sendMessage(m.chat,  {image: pp,  caption: banea + banu}, {quoted: m})}
 handler.help = ['banuser']
 handler.tags = ['owner'] 
 handler.command = /^banuser$/i
