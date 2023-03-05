@@ -19,6 +19,7 @@ let InShotPro = `https://www.mediafire.com/file/i30zxa81luipmec/v1.852.1371.apk/
 let SnapTube = `https://www.mediafire.com/file/gi94c68i9bva77f/v6.11.0.6116410.apk/file`
 let InstaPro = `https://www.mediafire.com/file/mb5r6pjmlu2qgg7/v9.30.apk/file`
 let SpotifyPremium = `https://www.mediafire.com/file/nbhlxz1zeej04wo/V8.7.30.1221.apk/file`
+let TiktokPremium = `https://www.mediafire.com/file/e3vbd4qkp8rullq/TikTok_v26.0.3_MOD.apk/file`
 let jgp = `JUEGOS 🎮`
 let app = `APPS PREMIUM`
 const sections = [{
@@ -39,8 +40,8 @@ rows: [
 {title: "📂 InShot Premium", description:  "[⬇️] Descargar inShotPro", rowId: `${usedPrefix}mediafire ${InShotPro}`},
 {title: "📂 SnapTube Premium", description: "[⬇️] Descargar SnapTube Premium", rowId: `${usedPrefix}mediafire ${SnapTube}`},
 {title: "📂 InstaPro Premium", description: "[⬇️] Descargar InstaPro", rowId: `${usedPrefix}mediafire ${InstaPro}`},
-{title: "📂 Spotify Premium", description: "[⬇️] Descargar SpotifyPremium", rowId: `${usedPrefix}mediafire ${SpotifyPremium}`}
-
+{title: "📂 Spotify Premium", description: "[⬇️] Descargar SpotifyPremium", rowId: `${usedPrefix}mediafire ${SpotifyPremium}`},
+{title: "📂 Tiktok Premium", description: "[⬇️] Descargar TiktokPremium(Sin marca de agua)", rowId: `${usedPrefix}mediafire ${TiktokPremium}`}
 ]}]
 const listMessage = {
 text: wm3,
