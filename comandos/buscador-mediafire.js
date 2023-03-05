@@ -15,6 +15,8 @@ let fnaf5 = `https://www.mediafire.com/file/2a6nfr3bly2voy6/FNAF_Sister_Location
 let fnaf6 = `https://www.mediafire.com/file/2bk1h9bnhgouen7/Fnaf_6.apk/file`
 let ucn = `https://www.mediafire.com/file/jb17ec412gv91q6/UCN_v1.11.apk/file`
 let PicsArt = `https://www.mediafire.com/file/iwylgkdw4o22k45/v20.4.2.apk/file`
+let VivaCutPro = `https://www.mediafire.com/file/l2xro1fapo8v68h/v2.16.0.apk/file`
+
 let jgp = `JUEGOS 🎮`
 let app = `APPS PREMIUM`
 const sections = [{
@@ -30,7 +32,8 @@ rows: [
 {title: "/script", description: "muestra el github del bot", rowId: `${usedPrefix}sc`}]}, {
 title: comienzo + ' ' + app + ' ' + fin,
 rows: [
-{title: "PicsArt Premium", description: "Descargar PicsArt Premium Photo editor", rowId: `${usedPrefix}mediafire ${PicsArt}`}]}]
+{title: "PicsArt Premium", description: "Descargar PicsArt Premium Photo editor", rowId: `${usedPrefix}mediafire ${PicsArt}`},
+{title: "VivaCut Premium", description: "Descargar VivaCutPro", rowId: `${usedPrefix}mediafire ${VivaCutPro}`}]}]
 const listMessage = {
 text: wm3,
 footer: `DESCARGAS MEDIAFIRE`,
