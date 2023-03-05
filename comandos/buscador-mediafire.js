@@ -18,6 +18,7 @@ let VivaCutPro = `https://www.mediafire.com/file/l2xro1fapo8v68h/v2.16.0.apk/fil
 let InShotPro = `https://www.mediafire.com/file/i30zxa81luipmec/v1.852.1371.apk/file`
 let SnapTube = `https://www.mediafire.com/file/gi94c68i9bva77f/v6.11.0.6116410.apk/file`
 let InstaPro = `https://www.mediafire.com/file/mb5r6pjmlu2qgg7/v9.30.apk/file`
+let SpotifyPremium = `https://www.mediafire.com/file/nbhlxz1zeej04wo/V8.7.30.1221.apk/file`
 let jgp = `JUEGOS 🎮`
 let app = `APPS PREMIUM`
 const sections = [{
@@ -37,7 +38,9 @@ rows: [
 {title: "📂 VivaCut Premium", description: "[⬇️] Descargar VivaCutPro", rowId: `${usedPrefix}mediafire ${VivaCutPro}`},
 {title: "📂 InShot Premium", description:  "[⬇️] Descargar inShotPro", rowId: `${usedPrefix}mediafire ${InShotPro}`},
 {title: "📂 SnapTube Premium", description: "[⬇️] Descargar SnapTube Premium", rowId: `${usedPrefix}mediafire ${SnapTube}`},
-{title: "📂 InstaPro Premium", description: "[⬇️] Descargar InstaPro", rowId: `${usedPrefix}mediafire ${InstaPro}`}
+{title: "📂 InstaPro Premium", description: "[⬇️] Descargar InstaPro", rowId: `${usedPrefix}mediafire ${InstaPro}`},
+{title: "📂 Spotify Premium", description: "[⬇️] Descargar SpotifyPremium", rowId: `${usedPrefix}mediafire ${SpotifyPremium}`}
+
 ]}]
 const listMessage = {
 text: wm3,
