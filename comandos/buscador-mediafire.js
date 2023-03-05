@@ -1,9 +1,5 @@
 //creado por https://github.com/DIEGO-OFC
 
-import axios from 'axios'
-import fs from 'fs'
-import cheerio from 'cheerio'
-import fetch from 'node-fetch'
 let handler = async (m, { text, conn, args, command, usedPrefix }) => {
 
 //Si se cae un enlace cambialo.
@@ -33,10 +29,10 @@ rows: [
 ]}, {
 title: comienzo + ' ' + app + ' ' + fin,
 rows: [
-{title: "PicsArt Premium", description: "[⬇️] Descargar PicsArt Premium Photo editor", rowId: `${usedPrefix}mediafire ${PicsArt}`},
-{title: "VivaCut Premium", description: "[⬇️] Descargar VivaCutPro", rowId: `${usedPrefix}mediafire ${VivaCutPro}`},
-{title: "InShot Premium", description:  "[⬇️] Descargar inShotPro", rowId: `${usedPrefix}mediafire ${InShotPro}`},
-{title: "SnapTube Premium", description: "[⬇️] Descargar SnapTube Premium", rowId: `${usedPrefix}mediafire ${SnapTube}`}
+{title: "📂 PicsArt Premium", description: "[⬇️] Descargar PicsArt Premium Photo editor", rowId: `${usedPrefix}mediafire ${PicsArt}`},
+{title: "📂 VivaCut Premium", description: "[⬇️] Descargar VivaCutPro", rowId: `${usedPrefix}mediafire ${VivaCutPro}`},
+{title: "📂 InShot Premium", description:  "[⬇️] Descargar inShotPro", rowId: `${usedPrefix}mediafire ${InShotPro}`},
+{title: "📂 SnapTube Premium", description: "[⬇️] Descargar SnapTube Premium", rowId: `${usedPrefix}mediafire ${SnapTube}`}
 
 ]}]
 const listMessage = {
