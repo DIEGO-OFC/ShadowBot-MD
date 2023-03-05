@@ -29,8 +29,8 @@ rows: [
 {title: "FNAF 4", description: "DESCARGAR FIVE NIGHTS AT FREDDY'S 4", rowId: `${usedPrefix}mediafire ${fnaf4}`},
 {title: "FNAF 5", description: "DESCARGAR FIVE NIGHTS AT FREDDY'S SISTER LOCATION", rowId: `${usedPrefix}mediafire ${fnaf5}`},
 {title: "FNAF 6", description: "DESCARGAR FIVE NIGHTS AT FREDDY'S 6", rowId: `${usedPrefix}mediafire ${fnaf6}`},
-{title: "FNAF UCN", description: "DESCARGAR FIVE NIGHTS AT FREDDY'S UCN", rowId: `${usedPrefix}mediafire ${ucn}`},
-{title: "/script", description: "muestra el github del bot", rowId: `${usedPrefix}sc`}]}, {
+{title: "FNAF UCN", description: "DESCARGAR FIVE NIGHTS AT FREDDY'S UCN", rowId: `${usedPrefix}mediafire ${ucn}`}
+]}, {
 title: comienzo + ' ' + app + ' ' + fin,
 rows: [
 {title: "PicsArt Premium", description: "[⬇️] Descargar PicsArt Premium Photo editor", rowId: `${usedPrefix}mediafire ${PicsArt}`},
