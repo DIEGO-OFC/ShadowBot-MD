@@ -2,6 +2,7 @@
 
 let handler = async (m, { text, conn, args, command, usedPrefix }) => {
 
+//Juegos 🎮
 //Si se cae un enlace cambialo.
 let fnaf1 = `https://www.mediafire.com/file/5y7jq06rb8i3vl1/Fnaf_1.apk/file`
 let fnaf2 = `https://www.mediafire.com/file/io8lmvb8z0gsrqx/Fnaf_2.apk/file`
@@ -10,6 +11,8 @@ let fnaf4 = `https://www.mediafire.com/file/aefg3xafqctvmrq/Fnaf4.apk/file`
 let fnaf5 = `https://www.mediafire.com/file/2a6nfr3bly2voy6/FNAF_Sister_Location_por_Tomatito22.apk/file`
 let fnaf6 = `https://www.mediafire.com/file/2bk1h9bnhgouen7/Fnaf_6.apk/file`
 let ucn = `https://www.mediafire.com/file/jb17ec412gv91q6/UCN_v1.11.apk/file`
+//apps 📂
+//Si se cae un enlace cambialo.
 let PicsArt = `https://www.mediafire.com/file/iwylgkdw4o22k45/v20.4.2.apk/file`
 let VivaCutPro = `https://www.mediafire.com/file/l2xro1fapo8v68h/v2.16.0.apk/file`
 let InShotPro = `https://www.mediafire.com/file/i30zxa81luipmec/v1.852.1371.apk/file`
