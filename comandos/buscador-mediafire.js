@@ -30,7 +30,7 @@ rows: [
 {title: "/script", description: "muestra el github del bot", rowId: `${usedPrefix}sc`}]}, {
 title: comienzo + ' ' + app + ' ' + fin,
 rows: [
-{title: "PicsArt Premium", description: "prueba", rowId: `${usedPrefix}mediafire ${PicsArt}`}]}]
+{title: "PicsArt Premium", description: "Descargar PicsArt Premium Photo editor", rowId: `${usedPrefix}mediafire ${PicsArt}`}]}]
 const listMessage = {
 text: wm3,
 footer: `DESCARGAS MEDIAFIRE`,
