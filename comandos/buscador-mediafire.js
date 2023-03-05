@@ -6,6 +6,7 @@ import cheerio from 'cheerio'
 import fetch from 'node-fetch'
 let handler = async (m, { text, conn, args, command, usedPrefix }) => {
 
+//Si se cae un enlace cambialo.
 let fnaf1 = `https://www.mediafire.com/file/5y7jq06rb8i3vl1/Fnaf_1.apk/file`
 let fnaf2 = `https://www.mediafire.com/file/io8lmvb8z0gsrqx/Fnaf_2.apk/file`
 let fnaf3 = `https://www.mediafire.com/file/t3xlmeoqhb63vub/Fnaf3.apk/file`
