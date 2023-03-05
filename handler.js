@@ -1211,7 +1211,7 @@ export async function handler(chatUpdate) {
                     continue // Limit habis
                 }
 if (!isPrems && comandos.dolares && global.db.data.users[m.sender].dolares < comandos.dolares * 1) {
-                    this.reply(m.chat, `*No tiene dólares* 💵\nNecesita ${comandos.dolares} para  usar este comando\n\n*puede conseguir 💵 con el comando #trabajar o comprando con #buy dolares [cantidad]*`, m)
+                    this.reply(m.chat, `*No tiene dólares* 💵\n\n*puede conseguir 💵 con el comando #trabajar o comprando con #buy dolares [cantidad]*`, m)
                     continue 
 
 }
