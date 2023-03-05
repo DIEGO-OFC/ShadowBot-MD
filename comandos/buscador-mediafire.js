@@ -46,7 +46,7 @@ title: null,
 buttonText: "seleciona lo que quieres descargar", 
 sections }
 
- conn.sendMessage(m.chat, listMessage, {quoted: m})	
+await conn.sendMessage(m.chat, listMessage, {quoted: m})	
 }
 
 handler.command = /^mediafiresearch$/i
