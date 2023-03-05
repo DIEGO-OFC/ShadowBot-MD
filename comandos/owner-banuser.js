@@ -28,10 +28,11 @@ let txt = text.replace(name).trim()
 if (!txt) return conn.reply(m.chat, `${mg}*ESCRIBA EL MOTIVO DEL BANEO*\n` + `*${usedPrefix + command} @${who.split`@`[0]} *Motivo*`, fkontak, m)  
 let pp = await conn.profilePictureUrl(who, 'image').catch(_ => 'https://telegra.ph/file/9b1353deceded7f387713.jpg')
 let banu = `Tal vez el ban los haga reflexionar`
+let banea = `*✅ USUARIO BANEADO*\n*NOMBRE:* ${name}\n*NUMERO:* ${PhoneNumber('+' + who.replace('@s.whatsapp.net', '')).getNumber('international')}\n*RAZÓN: ${chatstext}*`
 let chatstext = text.replace(who.split("@")[0], '').replace("@", '')
 let users = global.db.data.users
 users[who].banned = true
-await conn.sendButton(m.chat, `*✅ USUARIO BANEADO*\n*NOMBRE:* ${name}\n*NUMERO:* ${PhoneNumber('+' + who.replace('@s.whatsapp.net', '')).getNumber('international')}\n*RAZÓN: ${chatstext}*`,  banu,  pp,[['𝙼𝙴𝙽𝚄', `#menusimple`]], m)} 
+await conn.sendMessage(m.chat,  {image: fs.readFileSync("./galeria/menudorrat5.png"),  caption: banu + banea}, {quoted: m})}
 handler.help = ['banuser']
 handler.tags = ['owner'] 
 handler.command = /^banuser$/i
