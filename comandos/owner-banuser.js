@@ -24,13 +24,14 @@ else who = m.chat
 if (!who) throw `*[❕] ETIQUETA A LA PERSONA QUE SERA BANEADA*`
 let user = global.db.data.users[who]
 let name = conn.getName(who)
-let txt = text.replace(name).trim()
 if (!txt) return conn.reply(m.chat, `${mg}*ESCRIBA EL MOTIVO DEL BANEO*\n` + `*${usedPrefix + command} @${who.split`@`[0]} *Motivo*`, fkontak, m)  
+
+let txt = text.replace(name).trim()
+let chatstext = text.replace(who.split("@")[0], '').replace("@", '')
+let users = global.db.data.users
 let pp = await conn.profilePictureUrl(who, 'image').catch(_ => 'https://telegra.ph/file/9b1353deceded7f387713.jpg')
 let banu = `Tal vez el ban los haga reflexionar`
 let banea = `*✅ USUARIO BANEADO*\n*NOMBRE:* ${name}\n*NUMERO:* ${PhoneNumber('+' + who.replace('@s.whatsapp.net', '')).getNumber('international')}\n*RAZÓN: ${chatstext}*`
-let chatstext = text.replace(who.split("@")[0], '').replace("@", '')
-let users = global.db.data.users
 users[who].banned = true
 await conn.sendMessage(m.chat,  {image: fs.readFileSync("./galeria/menudorrat5.png"),  caption: banu + banea}, {quoted: m})}
 handler.help = ['banuser']
