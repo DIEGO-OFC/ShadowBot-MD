@@ -1,7 +1,7 @@
 let handler = async (m, { conn }) => {
 let pp = imagen1
   let stats = Object.entries(db.data.stats).map(([key, val]) => {
-    let name = Array.isArray(comandos[key]?.help) ? comandos[key]?.help?.join('\n⮕ ') : comandos[key]?.help || key 
+    let name = Array.isArray(comandos[key]?.command) ? comandos[key]?.command?.join('\n⮕ ') : comandos[key]?.command || key 
     if (/exec/.test(name)) return
     return { name, ...val }
   })
