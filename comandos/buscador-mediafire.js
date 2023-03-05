@@ -23,13 +23,13 @@ let app = `APPS PREMIUM`
 const sections = [{
 title: comienzo + ' ' + jgp + ' ' + fin,
 rows: [
-{title: "FNAF 1", description: "DESCARGAR FIVE NIGHTS AT FREDDY'S 1", rowId: `${usedPrefix}mediafire ${fnaf1}`},
-{title: "FNAF 2", description: "DESCARGAR FIVE NIGHTS AT FREDDY'S 2", rowId: `${usedPrefix}mediafire ${fnaf2}`},
-{title: "FNAF 3", description: "DESCARGAR FIVE NIGHTS AT FREDDY'S 3", rowId: `${usedPrefix}mediafire ${fnaf3}`},
-{title: "FNAF 4", description: "DESCARGAR FIVE NIGHTS AT FREDDY'S 4", rowId: `${usedPrefix}mediafire ${fnaf4}`},
-{title: "FNAF 5", description: "DESCARGAR FIVE NIGHTS AT FREDDY'S SISTER LOCATION", rowId: `${usedPrefix}mediafire ${fnaf5}`},
-{title: "FNAF 6", description: "DESCARGAR FIVE NIGHTS AT FREDDY'S 6", rowId: `${usedPrefix}mediafire ${fnaf6}`},
-{title: "FNAF UCN", description: "DESCARGAR FIVE NIGHTS AT FREDDY'S UCN", rowId: `${usedPrefix}mediafire ${ucn}`}
+{title: "FNAF 1", description: "[⬇️] DESCARGAR FIVE NIGHTS AT FREDDY'S 1", rowId: `${usedPrefix}mediafire ${fnaf1}`},
+{title: "FNAF 2", description: "[⬇️] DESCARGAR FIVE NIGHTS AT FREDDY'S 2", rowId: `${usedPrefix}mediafire ${fnaf2}`},
+{title: "FNAF 3", description: "[⬇️] DESCARGAR FIVE NIGHTS AT FREDDY'S 3", rowId: `${usedPrefix}mediafire ${fnaf3}`},
+{title: "FNAF 4", description: "[⬇️] DESCARGAR FIVE NIGHTS AT FREDDY'S 4", rowId: `${usedPrefix}mediafire ${fnaf4}`},
+{title: "FNAF 5", description: "[⬇️] DESCARGAR FIVE NIGHTS AT FREDDY'S SISTER LOCATION", rowId: `${usedPrefix}mediafire ${fnaf5}`},
+{title: "FNAF 6", description: "[⬇️] DESCARGAR FIVE NIGHTS AT FREDDY'S 6", rowId: `${usedPrefix}mediafire ${fnaf6}`},
+{title: "FNAF UCN", description: "[⬇️] DESCARGAR FIVE NIGHTS AT FREDDY'S UCN", rowId: `${usedPrefix}mediafire ${ucn}`}
 ]}, {
 title: comienzo + ' ' + app + ' ' + fin,
 rows: [
