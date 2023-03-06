@@ -8,7 +8,7 @@ let tiores = await await fetch(`https://api.lolhuman.xyz/api/openai?apikey=${lol
 let hasil = await await tiores.json()
 await await await await await await m.reply(`${hasil.result}`.trim())
 } catch {
-throw `*[❕] ERROR, INTENTA DE NUEVO*`
+conn.reply(m.chat,`*[❕] ERROR, INTENTA DE NUEVO*`)
 }}
 handler.command = ['openai', 'ia', 'robot']
 handler.dolares = 8
