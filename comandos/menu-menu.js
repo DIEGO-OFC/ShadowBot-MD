@@ -125,6 +125,7 @@ let menuB = `
 ╚════ ≪ •❈• ≫ ════╝
 
 ╔═════ GAMES ═════╗ 
+║ ❒ ${usedPrefix}es facil
 ║ ❒ ${usedPrefix}suitpvp <@tag>
 ║ ❒ ${usedPrefix}mates <noob / easy / medium / hard / extreme /impossible /impossible2>
 ║ ❒ ${usedPrefix}ppt <papel / tijera /piedra
