@@ -184,6 +184,7 @@ let menuB = `
 ╚════ ≪ •❈• ≫ ════╝
 
 ┌─「💻𝐃𝐎𝐖𝐍𝐋𝐎𝐀𝐃𝐄𝐑」
+├➢${usedPrefix}videodocumento <enlace / link / url
 ├➢${usedPrefix}facebook <enlace / link / url
 ├➢${usedPrefix}instagram <enlace / link / url
 ├➢${usedPrefix}mediafire <enlace / link / url
