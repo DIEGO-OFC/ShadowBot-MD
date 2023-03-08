@@ -28,7 +28,8 @@ let txt = `
 fs.unlinkSync(`./tmp/${m.sender}.${ext}`)
 m.reply(txt)
 } else throw '*[❗𝐈𝐍𝐅𝐎❗] 𝚁𝙴𝚂𝙿𝙾𝙽𝙳𝙰 𝙰 𝚄𝙽 𝙰𝚄𝙳𝙸𝙾*'
-handler.command = /^quemusica|quemusicaes|whatmusic$/i
-handler.help = ['whatmusic']
 handler.tags = ['tools']
+handler.help = ['whatmusic']
+handler.command = /^quemusica|quemusicaes|whatmusic$/i
+
 export default handler 
