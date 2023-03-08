@@ -9,7 +9,7 @@ let captionn = `🔎 *𝚁𝙴𝚂𝚄𝙻𝚃𝙰𝙳𝙾 𝙳𝙴:* ${text}\n�
 /*await await conn.sendButton(m.chat, captionn, author, link, [['🔄 𝚂𝙸𝙶𝚄𝙸𝙴𝙽𝚃𝙴 🔄', `#imagen ${text}`]], m)*/
 
 await conn.sendFile(m.chat, res.getRandom(), 'gimage.jpg', `
-🔎 *𝚁𝙴𝚂𝚄𝙻𝚃𝙰𝙳𝙾 𝙳𝙴:* ${text}\n🌎 *𝙱𝚄𝚂𝙲𝙰𝙳𝙾𝚁:* Google
+🔎 *𝚁𝙴𝚂𝚄𝙻𝚃𝙰𝙳𝙾 𝙳𝙴:* ${text}\n🌎 *𝙱𝚄𝚂𝙲𝙰𝙳𝙾𝚁:* Google\n${wm4}
 `.trim(), m)
 }
 handler.help = ['gimage <query>', 'imagen <query>']
