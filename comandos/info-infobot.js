@@ -34,7 +34,7 @@ let info = `
 let info2 = `
 ╠
 ║❒  [👑] *CREADOR: DIEGO-OFC*
-║❒  [#️⃣] *NUMERO: +593 95 942 5714*
+║❒  [#️⃣] *NUMERO: +525560066050
 ║❒  [🛠️] *PREFIJO: ${usedPrefix}*
 ║❒  [💬] *CHATS PRIVADOS: ${chats.length - groups.length}*
 ║❒  [💭] *CHAT DE GRUPOS: ${groups.length}* 
