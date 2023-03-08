@@ -44,6 +44,5 @@ async function uploadFile(path) {
 	let $ = cheerio.load(await data.text())
 	return {
 		url: res.data.file.url.full
-		url2: res.data.file.url.short
 	}
 }
