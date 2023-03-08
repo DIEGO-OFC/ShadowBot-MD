@@ -19,11 +19,11 @@ conn.sendMessage(m.chat, {
          mentionedJid: [m.sender],
          externalAdReply: {
              title: `RPG BANK`,
-             sourceUrl: 'https://chat.whatsapp.com/',
+             sourceUrl: 'http://paypal.me/DorratBotOficial',
              mediaType: 1,
              showAdAttribution: true,
              thumbnailUrl: "https://telegra.ph/file/e01c177fb1c61f453c659.jpg",
-             //sourceUrl: 'https://chat.whatsapp.com/DBTKQLDShvoKjsNdLMs386'
+             
          }
      }
  }, {
