@@ -24,7 +24,7 @@ let txt = `
 • 💾 ALBUM: ${album.name || 'No encontrado'}
 • 🌐 GENERO: ${genres !== undefined ? genres.map(v => v.name).join(', ') : 'No encontrado'}
 • 📆 FECHA: ${release_date || 'No encontrado'}
-${Link}
+${link}
 `.trim()
 fs.unlinkSync(`./tmp/${m.sender}.${ext}`)
 m.reply(txt)
