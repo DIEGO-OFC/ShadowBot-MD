@@ -10,15 +10,7 @@ let bank = `╭━━━━━━ 𝐁𝐀𝐍𝐂𝐎 🏦 ━━━╾•
 ❍ *Tokens:* ${global.db.data.users[who].joincount} ☯️
 ❍ *Dólares:* $${global.db.data.users[who].dolares} 💸
 ╰━━━━━━━━━━━━━━━━╾•`.trim()
-let bank2 = `
-*𝙽𝙾𝚃𝙰:* 
-*PUEDES COMPRAR USANDO LOS COMANDOS:*
-❏ *${usedPrefix}buy <cantidad>*
-❏ *${usedPrefix}buyall*`.trim()
-conn.sendButton(m.chat, bank, bank2, db,
-[
-['𝙼𝙴𝙽𝚄', `#menusimple`]], m)
-}
+await conn.sendMessage(m.chat, image: { url: "https://telegra.ph/file/e01c177fb1c61f453c659.jpg"}, caption: bank}, {quoted: m})}
 handler.help = ['bal']
 handler.tags = ['xp']
 handler.command = ['bal', 'diamantes', 'diamond', 'balance', 'banco'] 
