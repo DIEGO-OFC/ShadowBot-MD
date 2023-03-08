@@ -18,7 +18,7 @@ conn.sendMessage(m.chat, {
      contextInfo: {
          mentionedJid: [m.sender],
          externalAdReply: {
-             title: `RPG BANK`,
+             title: `RPG - BANK`,
              sourceUrl: 'http://paypal.me/DorratBotOficial',
              mediaType: 1,
              showAdAttribution: true,
