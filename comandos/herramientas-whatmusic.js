@@ -16,7 +16,7 @@ fs.writeFileSync(`./tmp/${m.sender}.${ext}`, media)
 let res = await acr.identify(fs.readFileSync(`./tmp/${m.sender}.${ext}`))
 let { code, msg } = res.status
 if (code !== 0) throw msg
-let { title, artists, album, genres, release_date } = res.metadata.music[0]
+let { title, artists, album, genres, release_date, link } = res.metadata.music[0]
 let txt = `
 🔰 RESULTADOS 🔰
 • 📌 TITULO: ${title}
@@ -24,10 +24,11 @@ let txt = `
 • 💾 ALBUM: ${album.name || 'No encontrado'}
 • 🌐 GENERO: ${genres !== undefined ? genres.map(v => v.name).join(', ') : 'No encontrado'}
 • 📆 FECHA: ${release_date || 'No encontrado'}
+${Link}
 `.trim()
 fs.unlinkSync(`./tmp/${m.sender}.${ext}`)
 m.reply(txt)
-} else throw '*RESPONDA A UN AUDIO*'
+} else throw '*RESPONDA A UN VIDEO*'
 }
 handler.command = /^quemusica|quemusicaes|whatmusic$/i
 export default handler
