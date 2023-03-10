@@ -27,7 +27,7 @@
     },
     "license": "GPL-3.0-or-later",
     "dependencies": {
-        "@adiwajshing/baileys": "github:adiwajshing/baileys",
+        "@adiwajshing/baileys": "^5.0.0",
         "@bochilteam/scraper": "^3.0.0",
         "@vitalets/google-translate-api": "^8.0.0",
         "acrcloud": "^1.4.0",
@@ -52,7 +52,7 @@
         "hxz-api": "^1.0.1",
         "javascript-obfuscator": "^4.0.0",
         "jsdom": "^19.0.0",
-        "link-preview-js": "^2.1.13",
+        "link-preview-js": "^3.0.0",
         "lodash": "^4.17.21",
         "lowdb": "^3.0.0",
         "minecraft-server-util": "^3.5.2",
