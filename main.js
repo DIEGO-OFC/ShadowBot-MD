@@ -69,14 +69,14 @@ loadDatabase()
 global.authFile = `Dorrat-BotSession`
 const { state, saveState, saveCreds } = await useMultiFileAuthState(global.authFile)
 
-const connectionOptions = {
+ const connectionOptions = {
  	printQRInTerminal: true,
  	auth: state,
  	logger: P({
  		level: 'silent'
  	}),
  	browser: ['Dorrat-Bot', 'Firefox', '1.0.0'],
- 	patchMessageBeforeSending: (message) => {
+ 	/*patchMessageBeforeSending: (message) => {
  		const requiresPatch = !!(message.buttonsMessage || message.templateMessage || message.listMessage);
  		if (requiresPatch) {
  			message = {
@@ -92,7 +92,7 @@ const connectionOptions = {
  			};
  		}
  		return message;
- 	}
+ 	}*/
  }
 
 global.conn = makeWASocket(connectionOptions)
