@@ -20,7 +20,8 @@ import { makeWASocket, protoType, serialize } from './lib/simple.js';
 import { Low, JSONFile } from 'lowdb';
 import { mongoDB, mongoDBV2 } from './lib/mongoDB.js';
 import store from './lib/store.js'
-const { DisconnectReason, useMultiFileAuthState } = await import('@adiwajshing/baileys')
+//const { DisconnectReason, useMultiFileAuthState } = await import('@adiwajshing/baileys')
+const { DisconnectReason, useMultiFileAuthState, MessageRetryMap, fetchLatestBaileysVersion } = await import('@adiwajshing/baileys')
 const { CONNECTING } = ws
 const { chain } = lodash
 const PORT = process.env.PORT || process.env.SERVER_PORT || 3000
@@ -68,15 +69,33 @@ loadDatabase()
 
 global.authFile = `Dorrat-BotSession`
 const { state, saveState, saveCreds } = await useMultiFileAuthState(global.authFile)
+const msgRetryCounterMap = MessageRetryMap => { }
+let { version } = await fetchLatestBaileysVersion();
 
- const connectionOptions = {
+const connectionOptions = {
+printQRInTerminal: true,
+patchMessageBeforeSending: (message) => {
+const requiresPatch = !!( message.buttonsMessage || message.templateMessage || message.listMessage );
+if (requiresPatch) { message = { viewOnceMessage: { message: { messageContextInfo: { deviceListMetadataVersion: 2, deviceListMetadata: {}, }, ...message, },},};}
+return message;},
+getMessage: async (key) => ( opts.store.loadMessage(/** @type {string} */(key.remoteJid), key.id) || opts.store.loadMessage(/** @type {string} */(key.id)) || {} ).message || { conversation: 'Please send messages again' },   
+msgRetryCounterMap,
+logger: pino({ level: 'silent' }),
+auth: state,
+browser: ['Dorrat-Bot','Safari','9.7.0'],
+version   
+}
+
+//const { state, saveState, saveCreds } = await useMultiFileAuthState(global.authFile)
+
+/* const connectionOptions = {
  	printQRInTerminal: true,
  	auth: state,
  	logger: P({
  		level: 'silent'
  	}),
  	browser: ['Dorrat-Bot', 'Firefox', '1.0.0'],
- 	/*patchMessageBeforeSending: (message) => {
+ 	patchMessageBeforeSending: (message) => {
  		const requiresPatch = !!(message.buttonsMessage || message.templateMessage || message.listMessage);
  		if (requiresPatch) {
  			message = {
@@ -93,7 +112,7 @@ const { state, saveState, saveCreds } = await useMultiFileAuthState(global.authF
  		}
  		return message;
  	}*/
- }
+// }*/
 
 global.conn = makeWASocket(connectionOptions)
 conn.isInit = false
