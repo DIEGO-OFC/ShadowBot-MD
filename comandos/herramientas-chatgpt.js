@@ -5,7 +5,8 @@ if (!text) throw `*[❕] INGRESE UN TEXTO/ORDEN PARA EJECUTAR LA FUNCIÓN CHATGP
 await await m.reply(`*[ 𝐂𝐀𝐑𝐆𝐀𝐍𝐃𝐎 ]*`)
 let tiores = await await fetch(`https://api.lolhuman.xyz/api/openai?apikey=${zds}&text=${text}&user=user-unique-id`)
 let hasil = await await tiores.json()
-await await await await await await m.reply(`${hasil.result}`.trim())
+let openAi = `${hasil.result}`
+await await 
 } catch {
 conn.reply(m.chat,`*[❕] ERROR, INTENTA DE NUEVO*`)
 }}
