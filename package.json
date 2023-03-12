@@ -52,7 +52,7 @@
         "hxz-api": "^1.0.1",
         "javascript-obfuscator": "^4.0.0",
         "jsdom": "^19.0.0",
-        "link-preview-js": "^2.1.13",
+        "link-preview-js": "^3.0.0",
         "lodash": "^4.17.21",
         "lowdb": "^3.0.0",
         "minecraft-server-util": "^3.5.2",
