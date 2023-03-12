@@ -8,7 +8,7 @@ let hasil = await await tiores.json()
 let openAi = `${hasil.result}`
 await await conn.sendMessage(m.chat, {
      image: {
-         url: "https://telegra.ph/file/e01c177fb1c61f453c659.jpg"
+         url: "https://telegra.ph/file/10e013d9ae4d9cdf5af14.jpg"
      },
      caption: openAi,
      contextInfo: {
@@ -18,7 +18,7 @@ await await conn.sendMessage(m.chat, {
              sourceUrl: 'http://paypal.me/DorratBotOficial',
              mediaType: 1,
              showAdAttribution: true,
-             thumbnailUrl: "https://telegra.ph/file/e01c177fb1c61f453c659.jpg",
+             thumbnailUrl: "https://telegra.ph/file/10e013d9ae4d9cdf5af14.jpg",
              
          }
      }
