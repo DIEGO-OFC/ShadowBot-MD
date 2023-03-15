@@ -122,7 +122,7 @@ if (!opts['test']) {
 if (global.db) setInterval(async () => {
 if (global.db.data) await global.db.write()
 if (opts['autocleartmp'] && (global.support || {}).find) (tmp = [os.tmpdir(), 'tmp'], tmp.forEach(filename => cp.spawn('find', [filename, '-amin', '3', '-type', 'f', '-delete'])))
-}, 30 * 1000)}
+}, 1000 * 60 * 4)}
 
 if (opts['server']) (await import('./server.js')).default(global.conn, PORT)
 
@@ -132,7 +132,7 @@ const filename = []
 tmp.forEach(dirname => readdirSync(dirname).forEach(file => filename.push(join(dirname, file))))
 return filename.map(file => {
 const stats = statSync(file)
-if (stats.isFile() && (Date.now() - stats.mtimeMs >= 1000 * 60 * 3)) return unlinkSync(file) // 3 minutes
+if (stats.isFile() && (Date.now() - stats.mtimeMs >= 1000 * 60 * 4)) return unlinkSync(file) // 3 minutes
 return false
 })}
 
@@ -195,7 +195,7 @@ console.log(chalk.red(lenguajeGB.smspurgeSessionSB3() + err))
 
 function purgeOldFiles() {
 const directories = ['./Dorrat-BotSession/', './jadibts/']
-const oneHourAgo = Date.now() - (1000 * 60 * 2) //60 min 
+const oneHourAgo = Date.now() - (1000 * 60 * 60) //60 min 
 directories.forEach(dir => {
 readdirSync(dir, (err, files) => {
 if (err) throw err
@@ -348,18 +348,18 @@ Object.freeze(global.support)
 setInterval(async () => {
 if (stopped == 'close') return
 var a = await clearTmp()        
-console.log(chalk.cyanBright(lenguajeGB.smsClearTmp()))}, 1000 * 60 * 2) 
+console.log(chalk.cyanBright(lenguajeGB.smsClearTmp()))}, 1000 * 60 * 4) 
 
 setInterval(async () => {
 await purgeSession()
-console.log(chalk.cyanBright(lenguajeGB.smspurgeSession()))}, 1000 * 60 * 2)
+console.log(chalk.cyanBright(lenguajeGB.smspurgeSession()))}, 1000 * 60 * 60)
 
 setInterval(async () => {
-await purgeSessionSB()}, 1000 * 60 * 2)
+await purgeSessionSB()}, 1000 * 60 * 60)
 
 setInterval(async () => {
 await purgeOldFiles()
-console.log(chalk.cyanBright(lenguajeGB.smspurgeOldFiles()))}, 1000 * 60 * 2)
+console.log(chalk.cyanBright(lenguajeGB.smspurgeOldFiles()))}, 1000 * 60 * 60)
 
 _quickTest()
 .then(() => conn.logger.info(lenguajeGB['smsCargando']()))
