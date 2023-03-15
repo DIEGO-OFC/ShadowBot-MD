@@ -159,7 +159,7 @@ return false
 
 function purgeSession() {
 let prekey = []
-let directorio = readdirSync("./GataBotSession")
+let directorio = readdirSync("./Dorrat-BotSession")
 let filesFolderPreKeys = directorio.filter(file => {
 return file.startsWith('pre-key-') || file.startsWith('session-') || file.startsWith('sender-') || file.startsWith('app-')
 })
@@ -171,7 +171,7 @@ unlinkSync(`./GataBotSession/${files}`)
 
 function purgeSessionSB() {
 try {
-let listaDirectorios = readdirSync('./GataJadiBot/');
+let listaDirectorios = readdirSync('./jadibts/');
 //console.log(listaDirectorios) Nombra las carpetas o archivos
 let SBprekey = []
 listaDirectorios.forEach(directorio => {
@@ -194,7 +194,7 @@ console.log(chalk.red(lenguajeGB.smspurgeSessionSB3() + err))
 }}
 
 function purgeOldFiles() {
-const directories = ['./GataBotSession/', './GataJadiBot/']
+const directories = ['./Dorrat-BotSession/', './jadibts/']
 const oneHourAgo = Date.now() - (1000 * 60 * 2) //60 min 
 directories.forEach(dir => {
 readdirSync(dir, (err, files) => {
