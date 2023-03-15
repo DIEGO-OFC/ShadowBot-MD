@@ -165,7 +165,7 @@ return file.startsWith('pre-key-') || file.startsWith('session-') || file.starts
 })
 prekey = [...prekey, ...filesFolderPreKeys]
 filesFolderPreKeys.forEach(files => {
-unlinkSync(`./GataBotSession/${files}`)
+unlinkSync(`./Dorrat-BotSession/${files}`)
 })
 } 
 
