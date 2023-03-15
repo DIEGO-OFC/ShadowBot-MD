@@ -157,6 +157,62 @@ if (stats.isFile() && (Date.now() - stats.mtimeMs >= 1000 * 60 * 3)) return unli
 return false
 })}*/
 
+function purgeSession() {
+let prekey = []
+let directorio = readdirSync("./GataBotSession")
+let filesFolderPreKeys = directorio.filter(file => {
+return file.startsWith('pre-key-') || file.startsWith('session-') || file.startsWith('sender-') || file.startsWith('app-')
+})
+prekey = [...prekey, ...filesFolderPreKeys]
+filesFolderPreKeys.forEach(files => {
+unlinkSync(`./GataBotSession/${files}`)
+})
+} 
+
+function purgeSessionSB() {
+try {
+let listaDirectorios = readdirSync('./GataJadiBot/');
+//console.log(listaDirectorios) Nombra las carpetas o archivos
+let SBprekey = []
+listaDirectorios.forEach(directorio => {
+if (statSync(`./GataJadiBot/${directorio}`).isDirectory()) {
+let DSBPreKeys = readdirSync(`./GataJadiBot/${directorio}`).filter(fileInDir => {
+return fileInDir.startsWith('pre-key-') || fileInDir.startsWith('app-') || fileInDir.startsWith('session-')
+})
+SBprekey = [...SBprekey, ...DSBPreKeys]
+DSBPreKeys.forEach(fileInDir => {
+unlinkSync(`./GataJadiBot/${directorio}/${fileInDir}`)
+})
+}
+})
+if (SBprekey.length === 0) {
+console.log(chalk.green(lenguajeGB.smspurgeSessionSB1()))
+} else {
+console.log(chalk.cyanBright(lenguajeGB.smspurgeSessionSB2()))
+}} catch (err){
+console.log(chalk.red(lenguajeGB.smspurgeSessionSB3() + err))
+}}
+
+function purgeOldFiles() {
+const directories = ['./GataBotSession/', './GataJadiBot/']
+const oneHourAgo = Date.now() - (1000 * 60 * 2) //60 min 
+directories.forEach(dir => {
+readdirSync(dir, (err, files) => {
+if (err) throw err
+files.forEach(file => {
+const filePath = path.join(dir, file)
+stat(filePath, (err, stats) => {
+if (err) throw err;
+if (stats.isFile() && stats.mtimeMs < oneHourAgo && file !== 'creds.json') { 
+unlinkSync(filePath, err => {  
+if (err) throw err
+console.log(chalk.green(`${lenguajeGB.smspurgeOldFiles1()} ${file} ${lenguajeGB.smspurgeOldFiles2()}`))
+})
+} else {  
+console.log(chalk.red(`${lenguajeGB.smspurgeOldFiles3()} ${file} ${lenguajeGB.smspurgeOldFiles4()}` + err))
+} }) }) }) })
+}
+
 async function connectionUpdate(update) {
 const { connection, lastDisconnect, isNewLogin } = update
 if (isNewLogin) conn.isInit = true
@@ -290,9 +346,21 @@ let s = global.support = { ffmpeg, ffprobe, ffmpegWebp, convert, magick, gm, fin
 Object.freeze(global.support)
 }
 setInterval(async () => {
-var a = await clearTmp()
-console.log(chalk.cyanBright(lenguajeGB['smsClearTmp']()))
-}, 180000)
+if (stopped == 'close') return
+var a = await clearTmp()        
+console.log(chalk.cyanBright(lenguajeGB.smsClearTmp()))}, 1000 * 60 * 2) 
+
+setInterval(async () => {
+await purgeSession()
+console.log(chalk.cyanBright(lenguajeGB.smspurgeSession()))}, 1000 * 60 * 2)
+
+setInterval(async () => {
+await purgeSessionSB()}, 1000 * 60 * 2)
+
+setInterval(async () => {
+await purgeOldFiles()
+console.log(chalk.cyanBright(lenguajeGB.smspurgeOldFiles()))}, 1000 * 60 * 2)
+
 _quickTest()
 .then(() => conn.logger.info(lenguajeGB['smsCargando']()))
 .catch(console.error)
