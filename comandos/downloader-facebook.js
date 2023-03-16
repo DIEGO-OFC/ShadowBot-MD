@@ -17,7 +17,7 @@ break
 case "facebook": case "fb": case "facebookdl": case "fbdl":           
 let ress = await fg.fbdl(args[0])
 let urll = await ress.data[0].url    
-await conn.sendFile(m.chat, urll, 'error.mp4', '*𝙰𝚀𝚄𝙸 𝙴𝚂𝚃𝙰 𝚂𝚄 𝚅𝙸𝙳𝙴𝙾*', m) 
+await await conn.sendFile(m.chat, urll, 'error.mp4', '*𝙰𝚀𝚄𝙸 𝙴𝚂𝚃𝙰 𝚂𝚄 𝚅𝙸𝙳𝙴𝙾*', m) 
 break
 case "facebook3": case "fb3": case "facebookdl3": case "fbdl3":        
 let vio = await fetch(`https://api.violetics.pw/api/downloader/facebook?apikey=beta&url=${args[0]}`)  
