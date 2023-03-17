@@ -81,6 +81,11 @@ global.APIKeys = { // APIKey Here
   'https://violetics.pw': 'beta'
 }
 
+global.openai_key = 'sk-0'
+/* Consigue tu ApiKey en este enlace: https://platform.openai.com/account/api-keys */
+
+global.openai_org_id = 'org-3'
+/* Consigue tu ID de organizacion en este enlace: https://platform.openai.com/account/org-settings */
 
 global.lenguajeGB = es
 
