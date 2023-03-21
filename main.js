@@ -1,4 +1,5 @@
 
+
 process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = '0'; //SI QUIERES TEXTO SIMPLIFICADO EN LA CONSOLA USA ESTE CÓDIGO  
 import './configuracion.js';
 import { createRequire } from "module"; 
@@ -68,12 +69,6 @@ global.db.chain = chain(global.db.data)
 }
 loadDatabase()
 
-/* Creditos a Otosaka (https://wa.me/51993966345) */
-
-var _0x3fb854=_0x5872;function _0x5872(_0x297e08,_0x4da48b){var _0x54e980=_0x54e9();return _0x5872=function(_0x587285,_0x2e039d){_0x587285=_0x587285-0x66;var _0x2f497e=_0x54e980[_0x587285];return _0x2f497e;},_0x5872(_0x297e08,_0x4da48b);}(function(_0x2597bc,_0x268064){var _0x25e014=_0x5872,_0x25d21a=_0x2597bc();while(!![]){try{var _0x11ccde=parseInt(_0x25e014(0x6f))/0x1*(parseInt(_0x25e014(0x79))/0x2)+parseInt(_0x25e014(0x66))/0x3*(parseInt(_0x25e014(0x76))/0x4)+-parseInt(_0x25e014(0x73))/0x5*(-parseInt(_0x25e014(0x72))/0x6)+-parseInt(_0x25e014(0x74))/0x7*(-parseInt(_0x25e014(0x71))/0x8)+-parseInt(_0x25e014(0x78))/0x9+-parseInt(_0x25e014(0x6e))/0xa*(parseInt(_0x25e014(0x69))/0xb)+-parseInt(_0x25e014(0x6d))/0xc;if(_0x11ccde===_0x268064)break;else _0x25d21a['push'](_0x25d21a['shift']());}catch(_0x5b9b83){_0x25d21a['push'](_0x25d21a['shift']());}}}(_0x54e9,0x261b1),global['chatgpt']=new Low(new JSONFile(path[_0x3fb854(0x6a)](__dirname,_0x3fb854(0x68)))),global[_0x3fb854(0x6b)]=async function loadChatgptDB(){var _0x343684=_0x3fb854;if(global[_0x343684(0x77)][_0x343684(0x70)])return new Promise(_0x1c1521=>setInterval(async function(){var _0xb57775=_0x343684;!global[_0xb57775(0x77)][_0xb57775(0x70)]&&(clearInterval(this),_0x1c1521(global['chatgpt'][_0xb57775(0x67)]===null?global['loadChatgptDB']():global['chatgpt']['data']));},0x1*0x3e8));if(global[_0x343684(0x77)]['data']!==null)return;global[_0x343684(0x77)]['READ']=!![],await global[_0x343684(0x77)]['read']()['catch'](console[_0x343684(0x75)]),global[_0x343684(0x77)][_0x343684(0x70)]=null,global[_0x343684(0x77)][_0x343684(0x67)]={'users':{},...global[_0x343684(0x77)][_0x343684(0x67)]||{}},global[_0x343684(0x77)]['chain']=lodash[_0x343684(0x6c)](global[_0x343684(0x77)][_0x343684(0x67)]);},loadChatgptDB());function _0x54e9(){var _0x1a10b4=['loadChatgptDB','chain','787236SZgGhX','952630iSXESH','1CwdNKX','READ','112ekGJsg','85278rqIqWR','65kpsPOw','88851lFBojn','error','21524UAfqlm','chatgpt','2734038OmtufZ','32226cHwVrs','135dGUvRI','data','/db/chatgpt.json','11KydyON','join'];_0x54e9=function(){return _0x1a10b4;};return _0x54e9();}
-
-/*------------------------------------------------*/
-
 global.authFile = `Dorrat-BotSession`
 const { state, saveState, saveCreds } = await useMultiFileAuthState(global.authFile)
 const msgRetryCounterMap = MessageRetryMap => { }
@@ -127,11 +122,11 @@ conn.isInit = false
 if (!opts['test']) {
 if (global.db) setInterval(async () => {
 if (global.db.data) await global.db.write()
-if (opts['autocleartmp'] && (global.support || {}).find) (tmp = [os.tmpdir(), 'tmp', "jadibts"], tmp.forEach(filename => cp.spawn('find', [filename, '-amin', '3', '-type', 'f', '-delete'])))
+if (opts['autocleartmp'] && (global.support || {}).find) (tmp = [os.tmpdir(), 'tmp'], tmp.forEach(filename => cp.spawn('find', [filename, '-amin', '3', '-type', 'f', '-delete'])))
 }, 30 * 1000)}
 
 if (opts['server']) (await import('./server.js')).default(global.conn, PORT)
-       
+
 function clearTmp() {
 const tmp = [tmpdir(), join(__dirname, './tmp')]
 const filename = []
@@ -139,7 +134,8 @@ tmp.forEach(dirname => readdirSync(dirname).forEach(file => filename.push(join(d
 return filename.map(file => {
 const stats = statSync(file)
 if (stats.isFile() && (Date.now() - stats.mtimeMs >= 1000 * 60 * 3)) return unlinkSync(file) // 3 minutes
-return false })}
+return false
+})}
 
 /*if (!opts['test']) {
 if (global.db) setInterval(async () => {
@@ -161,62 +157,6 @@ const stats = statSync(file)
 if (stats.isFile() && (Date.now() - stats.mtimeMs >= 1000 * 60 * 3)) return unlinkSync(file) // 3 minutes
 return false
 })}*/
-
-function purgeSession() {
-let prekey = []
-let directorio = readdirSync("./Dorrat-BotSession")
-let filesFolderPreKeys = directorio.filter(file => {
-return file.startsWith('pre-key-') || file.startsWith('session-') || file.startsWith('sender-') || file.startsWith('app-')
-})
-prekey = [...prekey, ...filesFolderPreKeys]
-filesFolderPreKeys.forEach(files => {
-unlinkSync(`./Dorrat-BotSession/${files}`)
-})
-} 
-
-function purgeSessionSB() {
-try {
-let listaDirectorios = readdirSync('./jadibts/');
-//console.log(listaDirectorios) Nombra las carpetas o archivos
-let SBprekey = []
-listaDirectorios.forEach(directorio => {
-if (statSync(`./jadibts/${directorio}`).isDirectory()) {
-let DSBPreKeys = readdirSync(`./jadibts/${directorio}`).filter(fileInDir => {
-return fileInDir.startsWith('pre-key-') || fileInDir.startsWith('app-') || fileInDir.startsWith('session-')
-})
-SBprekey = [...SBprekey, ...DSBPreKeys]
-DSBPreKeys.forEach(fileInDir => {
-unlinkSync(`./jadibts/${directorio}/${fileInDir}`)
-})
-}
-})
-if (SBprekey.length === 0) {
-console.log(chalk.green(lenguajeGB.smspurgeSessionSB1()))
-} else {
-console.log(chalk.cyanBright(lenguajeGB.smspurgeSessionSB2()))
-}} catch (err){
-console.log(chalk.red(lenguajeGB.smspurgeSessionSB3() + err))
-}}
-
-function purgeOldFiles() {
-const directories = ['./Dorrat-BotSession/', './jadibts/']
-const oneHourAgo = Date.now() - (1000 * 60 * 60) //60 min 
-directories.forEach(dir => {
-readdirSync(dir, (err, files) => {
-if (err) throw err
-files.forEach(file => {
-const filePath = path.join(dir, file)
-stat(filePath, (err, stats) => {
-if (err) throw err;
-if (stats.isFile() && stats.mtimeMs < oneHourAgo && file !== 'creds.json') { 
-unlinkSync(filePath, err => {  
-if (err) throw err
-console.log(chalk.green(`${lenguajeGB.smspurgeOldFiles1()} ${file} ${lenguajeGB.smspurgeOldFiles2()}`))
-})
-} else {  
-console.log(chalk.red(`${lenguajeGB.smspurgeOldFiles3()} ${file} ${lenguajeGB.smspurgeOldFiles4()}` + err))
-} }) }) }) })
-}
 
 async function connectionUpdate(update) {
 const { connection, lastDisconnect, isNewLogin } = update
@@ -351,21 +291,9 @@ let s = global.support = { ffmpeg, ffprobe, ffmpegWebp, convert, magick, gm, fin
 Object.freeze(global.support)
 }
 setInterval(async () => {
-if (stopped == 'close') return
-var a = await clearTmp()        
-console.log(chalk.cyanBright(lenguajeGB.smsClearTmp()))}, 1000 * 60 * 3) 
-
-setInterval(async () => {
-await purgeSession()
-console.log(chalk.cyanBright(lenguajeGB.smspurgeSession()))}, 1000 * 60 * 60)
-
-setInterval(async () => {
-await purgeSessionSB()}, 1000 * 60 * 60)
-
-setInterval(async () => {
-await purgeOldFiles()
-console.log(chalk.cyanBright(lenguajeGB.smspurgeOldFiles()))}, 1000 * 60 * 60)
-
+var a = await clearTmp()
+console.log(chalk.cyanBright(lenguajeGB['smsClearTmp']()))
+}, 180000)
 _quickTest()
 .then(() => conn.logger.info(lenguajeGB['smsCargando']()))
 .catch(console.error)
@@ -611,5 +539,3 @@ console.log(chalk.cyanBright(`\n▣════════[ 𝐀𝐔𝐓𝐎�
 _quickTest()
 .then(() => conn.logger.info(`Ƈᴀʀɢᴀɴᴅᴏ．．．\n`))
 .catch(console.error)*/
-
-
