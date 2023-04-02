@@ -541,7 +541,7 @@ sections }
  conn.sendMessage(m.chat, listMessage, {quoted: fkontak})	
 }
 
-handler.command = /^(menucompleto|menu completo|allmenu)$/i
+handler.command = /^(menucompleto|menu completo|allmenu|menú|help|menu)$/i
 handler.exp = 50
 handler.fail = null
 export default handler
