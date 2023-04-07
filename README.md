@@ -28,7 +28,7 @@
 
 ## `[🗂️] Página del bot`
 
-<a href="https://sites.google.com/view/dorratbotmd/inicio" target="_blank"> <img src="https://img.shields.io/badge/-pagina aqui-%23E4405F?style=for-the-badge&logo=página aqui&logoColor=black" target="_blank"></a> 
+<a href="https://dorrat-bot-oficial.ml/" target="_blank"> <img src="https://img.shields.io/badge/-pagina aqui-%23E4405F?style=for-the-badge&logo=página aqui&logoColor=black" target="_blank"></a> 
 
 > [⚠️] USAR LOS BOTS SIN SPAM
 
