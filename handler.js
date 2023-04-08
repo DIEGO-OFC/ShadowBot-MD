@@ -1405,7 +1405,7 @@ export async function participantsUpdate({ id, participants, action }) {
             text = text.replace('@user', '@' + participants[0].split('@')[0])
             if (chat.detect)
                 this.sendMessage(id, { text, mentions: this.parseMention(text) })
-            break*/
+            break
     }
 }
 
