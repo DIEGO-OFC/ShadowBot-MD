@@ -1,4 +1,4 @@
-import axios from 'axios'
+/*import axios from 'axios'
 import fs from 'fs'
 import cheerio from 'cheerio'
 import fetch from 'node-fetch'
@@ -51,10 +51,10 @@ title.push($(f).attr('title'))
 for (let i = 0; i < title.length; i++) {
 results.push({ title: title[i], info: desc[i], link: url[i] })}
 resolve({ code: 200, status: true, result: results
-})}).catch(err => reject({code: 503, status: false, result: err }))})}
+})}).catch(err => reject({code: 503, status: false, result: err }))})}*/
 
 
-/*import fetch from 'node-fetch'
+import fetch from 'node-fetch'
 let handler = async (m, { conn, text, usedPrefix, command }) => {
 	if (!text) throw `uhm.. mau cari apa?\n\nContoh: ${usedPrefix + command} bokep🐒`
 	let user = global.db.data.users[m.sender]
@@ -82,4 +82,4 @@ handler.command = /^xnxxsearch|xnxxs$/i
 handler.register = false
 handler.premium = true
 
-export default handler*/
+export default handler
