@@ -62,7 +62,7 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
 	       let res = await xnxxsearch(text)
                let json = res.result
 		let cap = `Hasil Pencarian Dari ${text}\n`
-	for (let v of rest.result) {
+	for (let v of json) {
 	 cap += `• *Title :* ${v.title}
 • *Info :* ${v.info}
 • *Link :* ${v.link}
