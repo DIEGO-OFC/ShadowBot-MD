@@ -86,6 +86,8 @@ _- Al hacer uso de ciertos comandos que tengan como objetivo socavar la incomodi
 
 conn.sendButton(m.chat, terminoA, wm, pp, [
 ['𝘿𝙊𝙉𝘼𝙍', `#donar`]], m)
+m.reply(`si no quiere leer ese texto tan grande puede verlo en:
+https://dorrat-bot-oficial.ml/terminos.html`)
 /*await conn.sendFile(m.chat, vn, 'menu.mp3', null, m, true, {
 
 type: 'audioMessage', 
