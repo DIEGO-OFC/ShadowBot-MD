@@ -61,4 +61,4 @@ import { performance } from 'perf_hooks'
  export default handler 
   
  function pickRandom(list) { 
- return list[Math.floor(Math.random() * list.length)]}
+ return list[Math.floor(Math.random() * list.length)]} 
