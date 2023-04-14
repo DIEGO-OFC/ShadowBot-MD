@@ -26,7 +26,7 @@ import { performance } from 'perf_hooks'
  *IPV6:* ${pickRandom(['fe80::5dcd::ef69::fb22::d9888%12','fe30::8dcd::ef52::fb43::d96552%32','fe52::8dcd::ef65::fb72::d81653%10'])} 
  *UPNP:* ${pickRandom(['ENABLE','DISABLE'])} 
  *DMZ:* ${pickRandom(['10.112.42.15','83.173.72.18','81.196.27.48','17.726.29.49','27.919.25.84','38.926.48.71','38.826.37.82'])} 
- *MAC:* ${pickRandom(['3A:78:3E:7E:00','3N:82:2B:2E:71','8S:67:3D:7S:18])} 
+ *MAC:* ${pickRandom(['3A:78:3E:7E:00','3N:82:2B:2E:71','8S:67:3D:7S:18'])} 
  *ISP:* Ucom unversal  
  *DNS:* 8.8.8.8 
  *ALT DNS:* 1.1.1.8.1   
