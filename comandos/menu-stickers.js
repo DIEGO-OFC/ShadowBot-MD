@@ -1,9 +1,5 @@
 import { xpRange } from '../lib/levelling.js'
 
-const { levelling } = '../lib/levelling.js'
-
-import PhoneNumber from 'awesome-phonenumber'
-
 import { promises } from 'fs'
 
 import { join } from 'path'
@@ -12,7 +8,6 @@ let handler = async (m, { conn, usedPrefix, usedPrefix: _p, __dirname, text }) =
 
 try {
 
-let vn = './media/menu.mp3'
 
 let pp = './Menu2.jpg'
 
