@@ -1,7 +1,4 @@
 import fetch from 'node-fetch'
-import fs from 'fs'
-import { promises } from 'fs'
-import { join } from 'path'
 const cooldown = 300000 //3 minutos
 let handler = async (m, { usedPrefix, conn }) => {
 try {
