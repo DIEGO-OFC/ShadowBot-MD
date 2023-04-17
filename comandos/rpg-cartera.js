@@ -1,4 +1,3 @@
-import fetch from 'node-fetch'
 let handler = async (m, { usedPrefix, conn}) => {	
 let who
 if (m.isGroup) who = m.mentionedJid[0] ? m.mentionedJid[0] : m.sender
