@@ -1,4 +1,3 @@
-import fs from 'fs'
 let handler = async (m, { conn, isPrems, usedPrefix}) => {
 let hasil = Math.floor(Math.random() * 1000)
 let time = global.db.data.users[m.sender].lastmiming + 600000
@@ -9,8 +8,6 @@ compre ❤️ Salud primero escribiendo *${usedPrefix}buy potion <cantidad>*,
 y despues
 *${usedPrefix}heal <cantidad>*
 `.trim()) 
-let db = './Menu2.jpg'
-let prueba = 'xd'
 let info = `
 *[ ⛏️ ] Genial minaste ${hasil} XP*`.trim()
 global.db.data.users[m.sender].lastmiming = new Date * 1
