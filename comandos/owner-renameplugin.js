@@ -1,5 +1,3 @@
-import { tmpdir } from 'os'
-import { join } from 'path'
 import fs from 'fs'
 let handler = async (m, { args, text, usedPrefix, command }) => {
 	let info = `${usedPrefix + command} <Antiguo nombre> | <Nuevo nombre>
