@@ -1,18 +1,6 @@
 import { xpRange } from '../lib/levelling.js'
 
-import PhoneNumber from 'awesome-phonenumber'
-
-import { promises } from 'fs'
-
-import { join } from 'path'
-
 let handler = async (m, { conn, usedPrefix, command, args, usedPrefix: _p, __dirname, isOwner, text, isAdmin, isROwner }) => {
-
-  
-
-  
-
-const { levelling } = '../lib/levelling.js'
 
 //let handler = async (m, { conn, usedPrefix, usedPrefix: _p, __dirname, text }) => {
 
