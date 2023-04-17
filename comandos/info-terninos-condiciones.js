@@ -1,12 +1,12 @@
-import moment from 'moment-timezone'
-let handler = async (m, { conn, usedPrefix, usedPrefix: _p, __dirname, text }) => {
-try {
-let pp = './galeria/menudorrat3.jpg'
-m.reply(`╭──────────────────  
+import moment from "moment-timezone";
+let handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text}) => {
+  try {
+    let pp = "./galeria/menudorrat3.jpg";
+    m.reply(`╭──────────────────  
 │⏱️ 𝐂𝐀𝐑𝐆𝐀𝐍𝐃𝐎... 
-╰──────────────────`)
+╰──────────────────`);
 
-let terminoA = `
+    let terminoA = `
 *╭━━━━━━━━━━━━━━━━╾•*
 *┃ ❍ ${ucapan()} ❍*
 *╰━━━━━━━━━━━━━━━━╾•*
@@ -61,72 +61,60 @@ _- Al hacer uso de ciertos comandos que tengan como objetivo socavar la incomodi
 ~ _Solo en esta Cuenta Respondo si tiene Dudas, Preguntas o Necesita Ayuda sobre DorratBot, También puede Comunicarse en Caso de Temas de Colaboración_
 *Wa.me/593959425714*
 *~ Muchas Gracias Por tomarte el tiempo en informate sobre DorratBot
-`.trim()
+`.trim();
 
-await await conn.sendButton(m.chat, terminoA, wm, pp, [
-['𝘿𝙊𝙉𝘼𝙍', `#donar`]], m)
-m.reply(`si no quiere leer ese texto tan grande puede verlo en:
-https://dorrat-bot-oficial.ml/terminos.html`)
-/*await conn.sendFile(m.chat, vn, 'menu.mp3', null, m, true, {
+    await await conn.sendButton(m.chat, terminoA, wm, pp, [["𝘿𝙊𝙉𝘼𝙍", `#donar`]], m);
+    m.reply(`si no quiere leer ese texto tan grande puede verlo en:
+https://dorrat-bot-oficial.ml/terminos.html`);
+    /*await conn.sendFile(m.chat, vn, 'menu.mp3', null, m, true, {
 
 type: 'audioMessage', 
 
 ptt: true})*/
+  } catch {
+    conn.reply(m.chat, "*[❗𝐈𝐍𝐅𝐎❗] 𝙴𝙻 𝙼𝙴𝙽𝚄 𝚃𝙸𝙴𝙽𝙴 𝚄𝙽 𝙴𝚁𝚁𝙾𝚁 𝚈 𝙽𝙾 𝙵𝚄𝙴 𝙿𝙾𝚂𝙸𝙱𝙻𝙴 𝙴𝙽𝚅𝙸𝙰𝚁𝙻𝙾, 𝚁𝙴𝙿𝙾𝚁𝚃𝙴𝙻𝙾 𝙰𝙻 𝙿𝚁𝙾𝙿𝙸𝙴𝚃𝙰𝚁𝙸𝙾 𝙳𝙴𝙻 𝙱𝙾𝚃*", m);
+  }
+};
 
-} catch {
+handler.command =
+  /^(terminos|términos|términos, condiciones y privacidad|terminos, condiciones y privacidad|términos y condiciones y privacidad|terminosycondicionesyprivacidad|terminosycondiciones|terminos y condiciones y privacidad|terminos y condiciones|terminos y condiciones|terminos de uso|Terminos de uso|Terminó se uso|términos de uso|Términos de uso|Términos y condiciones)$/i;
 
-conn.reply(m.chat, '*[❗𝐈𝐍𝐅𝐎❗] 𝙴𝙻 𝙼𝙴𝙽𝚄 𝚃𝙸𝙴𝙽𝙴 𝚄𝙽 𝙴𝚁𝚁𝙾𝚁 𝚈 𝙽𝙾 𝙵𝚄𝙴 𝙿𝙾𝚂𝙸𝙱𝙻𝙴 𝙴𝙽𝚅𝙸𝙰𝚁𝙻𝙾, 𝚁𝙴𝙿𝙾𝚁𝚃𝙴𝙻𝙾 𝙰𝙻 𝙿𝚁𝙾𝙿𝙸𝙴𝚃𝙰𝚁𝙸𝙾 𝙳𝙴𝙻 𝙱𝙾𝚃*', m)
+handler.exp = 50;
 
-}}
+handler.fail = null;
 
-handler.command = /^(terminos|términos|términos, condiciones y privacidad|terminos, condiciones y privacidad|términos y condiciones y privacidad|terminosycondicionesyprivacidad|terminosycondiciones|terminos y condiciones y privacidad|terminos y condiciones|terminos y condiciones|terminos de uso|Terminos de uso|Terminó se uso|términos de uso|Términos de uso|Términos y condiciones)$/i
-
-handler.exp = 50
-
-handler.fail = null
-
-export default handler
+export default handler;
 
 function clockString(ms) {
+  let h = isNaN(ms) ? "--" : Math.floor(ms / 3600000);
 
-let h = isNaN(ms) ? '--' : Math.floor(ms / 3600000)
+  let m = isNaN(ms) ? "--" : Math.floor(ms / 60000) % 60;
 
-let m = isNaN(ms) ? '--' : Math.floor(ms / 60000) % 60
+  let s = isNaN(ms) ? "--" : Math.floor(ms / 1000) % 60;
 
-let s = isNaN(ms) ? '--' : Math.floor(ms / 1000) % 60
-
-return [h, m, s].map(v => v.toString().padStart(2, 0)).join(':')}
+  return [h, m, s].map((v) => v.toString().padStart(2, 0)).join(":");
+}
 
 function ucapan() {
+  const time = moment.tz("America/Los_Angeles").format("HH"); //America/Los_Angeles  Asia/Jakarta   America/Toronto
 
-  const time = moment.tz('America/Los_Angeles').format('HH')  //America/Los_Angeles  Asia/Jakarta   America/Toronto
-
-  let res = "🌉Buenas madrugadas"
+  let res = "🌉Buenas madrugadas";
 
   if (time >= 4) {
-
-    res = "🌇Buenos Días"
-
+    res = "🌇Buenos Días";
   }
 
   if (time >= 11) {
-
-    res = "🏙️Buenas Tardes"
-
+    res = "🏙️Buenas Tardes";
   }
 
   if (time >= 15) {
-
-    res = "🌆Buenas tardes"
-
+    res = "🌆Buenas tardes";
   }
 
   if (time >= 17) {
-
-    res = "🌃Buenas noches"
-
+    res = "🌃Buenas noches";
   }
 
-  return res
-
+  return res;
 }

@@ -1,5 +1,5 @@
-import { canLevelUp, xpRange } from "../lib/levelling.js";
-import { levelup } from "../lib/canvas.js";
+import {canLevelUp, xpRange} from "../lib/levelling.js";
+import {levelup} from "../lib/canvas.js";
 
 function ConvertMiles(number) {
   const exp = /(\d)(?=(\d{3})+(?!\d))/g;
@@ -9,11 +9,11 @@ function ConvertMiles(number) {
   return arr[1] ? arr.join(".") : arr[0];
 }
 
-let handler = async (m, { conn }) => {
+let handler = async (m, {conn}) => {
   let name = conn.getName(m.sender);
   let user = global.db.data.users[m.sender];
   if (!canLevelUp(user.level, user.exp, global.multiplier)) {
-    let { min, xp, max } = xpRange(user.level, global.multiplier);
+    let {min, xp, max} = xpRange(user.level, global.multiplier);
     throw `
 ╔════ *NIVEL*
 ➢ 👥 Nombre : *${name}*

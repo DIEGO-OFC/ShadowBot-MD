@@ -1,125 +1,119 @@
-import { xpRange } from '../lib/levelling.js'
+import {xpRange} from "../lib/levelling.js";
 
-import { promises } from 'fs'
+import {promises} from "fs";
 
-import { join } from 'path'
+import {join} from "path";
 
-let handler = async (m, { conn, usedPrefix, usedPrefix: _p, __dirname, text }) => {
+let handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text}) => {
+  try {
+    let pp = "./Menu2.jpg";
 
-try {
+    let _package = JSON.parse(await promises.readFile(join(__dirname, "../package.json")).catch((_) => ({}))) || {};
 
+    let {exp, limit, level, role} = global.db.data.users[m.sender];
 
-let pp = './Menu2.jpg'
+    let {min, xp, max} = xpRange(level, global.multiplier);
 
-let _package = JSON.parse(await promises.readFile(join(__dirname, '../package.json')).catch(_ => ({}))) || {}
+    let name = await conn.getName(m.sender);
 
-let { exp, limit, level, role } = global.db.data.users[m.sender]
+    let d = new Date(new Date() + 3600000);
 
-let { min, xp, max } = xpRange(level, global.multiplier)
+    let locale = "es";
 
-let name = await conn.getName(m.sender)
+    let weton = ["Pahing", "Pon", "Wage", "Kliwon", "Legi"][Math.floor(d / 84600000) % 5];
 
-let d = new Date(new Date + 3600000)
+    let week = d.toLocaleDateString(locale, {weekday: "long"});
 
-let locale = 'es'
+    let date = d.toLocaleDateString(locale, {
+      day: "numeric",
 
-let weton = ['Pahing', 'Pon', 'Wage', 'Kliwon', 'Legi'][Math.floor(d / 84600000) % 5]
+      month: "long",
 
-let week = d.toLocaleDateString(locale, { weekday: 'long' })
+      year: "numeric",
+    });
 
-let date = d.toLocaleDateString(locale, {
+    let dateIslamic = Intl.DateTimeFormat(locale + "-TN-u-ca-islamic", {
+      day: "numeric",
 
-day: 'numeric',
+      month: "long",
 
-month: 'long',
+      year: "numeric",
+    }).format(d);
 
-year: 'numeric'
+    let time = d.toLocaleTimeString(locale, {
+      hour: "numeric",
 
-})
+      minute: "numeric",
 
-let dateIslamic = Intl.DateTimeFormat(locale + '-TN-u-ca-islamic', {
+      second: "numeric",
+    });
 
-day: 'numeric',
+    let _uptime = process.uptime() * 1000;
 
-month: 'long',
+    let _muptime;
 
-year: 'numeric'
+    if (process.send) {
+      process.send("uptime");
 
-}).format(d)
+      _muptime =
+        (await new Promise((resolve) => {
+          process.once("message", resolve);
 
-let time = d.toLocaleTimeString(locale, {
+          setTimeout(resolve, 1000);
+        })) * 1000;
+    }
 
-hour: 'numeric',
+    let muptime = clockString(_muptime);
 
-minute: 'numeric',
+    let uptime = clockString(_uptime);
 
-second: 'numeric'
+    let totalreg = Object.keys(global.db.data.users).length;
 
-})
+    let rtotalreg = Object.values(global.db.data.users).filter((user) => user.registered == true).length;
 
-let _uptime = process.uptime() * 1000
+    let replace = {
+      "%": "%",
 
-let _muptime
+      p: _p,
+      uptime,
+      muptime,
 
-if (process.send) {
+      me: conn.getName(conn.user.jid),
 
-process.send('uptime')
+      npmname: _package.name,
 
-_muptime = await new Promise(resolve => {
+      npmdesc: _package.description,
 
-process.once('message', resolve)
+      version: _package.version,
 
-setTimeout(resolve, 1000)
+      exp: exp - min,
 
-}) * 1000
+      maxexp: xp,
 
-}
+      totalexp: exp,
 
-let muptime = clockString(_muptime)
+      xp4levelup: max - exp,
 
-let uptime = clockString(_uptime)
+      github: _package.homepage ? _package.homepage.url || _package.homepage : "[unknown github url]",
 
-let totalreg = Object.keys(global.db.data.users).length
+      level,
+      limit,
+      name,
+      weton,
+      week,
+      date,
+      dateIslamic,
+      time,
+      totalreg,
+      rtotalreg,
+      role,
 
-let rtotalreg = Object.values(global.db.data.users).filter(user => user.registered == true).length
+      readmore: readMore,
+    };
 
-let replace = {
+    text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, "g"), (_, name) => "" + replace[name]);
 
-'%': '%',
-
-p: _p, uptime, muptime,
-
-me: conn.getName(conn.user.jid),
-
-npmname: _package.name,
-
-npmdesc: _package.description,
-
-version: _package.version,
-
-exp: exp - min,
-
-maxexp: xp,
-
-totalexp: exp,
-
-xp4levelup: max - exp,
-
-github: _package.homepage ? _package.homepage.url || _package.homepage : '[unknown github url]',
-
-level, limit, name, weton, week, date, dateIslamic, time, totalreg, rtotalreg, role,
-
-readmore: readMore
-
-}
-
-text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
-
- 
-
-    
-
-let str = `
+    let str = `
 
 💗 *¡HOLA | HI!* ${name}
 ╭━━〔 *${wm}* 〕━━⬣
@@ -157,50 +151,57 @@ let str = `
 ├➢🌠 _${usedPrefix}wm *<packname> <author>*_
 ├➢🌠 _${usedPrefix}stickermarker *<efecto> <responder a imagen>*_
 ├➢🌠 _${usedPrefix}stickerfilter *<efecto> <responder a imagen>*_ 
-└────ׂ─ׂ─ׂ─ׂ───`.trim()
+└────ׂ─ׂ─ׂ─ׂ───`.trim();
 
-conn.sendHydrated2(m.chat, str, wm, pp, 'https://www.paypal.me/TheShadowBrokers133', '𝙿𝙰𝚈𝙿𝙰𝙻', 'https://github.com/DIEGO-OFC/DORRAT-BOT-MD', '𝙶𝙸𝚃𝙷𝚄𝙱', [
+    conn.sendHydrated2(
+      m.chat,
+      str,
+      wm,
+      pp,
+      "https://www.paypal.me/TheShadowBrokers133",
+      "𝙿𝙰𝚈𝙿𝙰𝙻",
+      "https://github.com/DIEGO-OFC/DORRAT-BOT-MD",
+      "𝙶𝙸𝚃𝙷𝚄𝙱",
+      [
+        ["💎 𝙶𝚁𝚄𝙿𝙾𝚂 𝙾𝙵𝙸𝙲𝙸𝙰𝙻𝙴𝚂 💎", "/grupos"],
 
-['💎 𝙶𝚁𝚄𝙿𝙾𝚂 𝙾𝙵𝙸𝙲𝙸𝙰𝙻𝙴𝚂 💎', '/grupos'],
+        ["🤴 𝙾𝚆𝙽𝙴𝚁S 🤴", "/owner"],
 
-['🤴 𝙾𝚆𝙽𝙴𝚁S 🤴', '/owner'],
+        ["🔰 𝙸𝙽𝙵𝙾𝙱𝙾𝚃 🔰", "/infobot"],
+      ],
+      m
+    );
 
-['🔰 𝙸𝙽𝙵𝙾𝙱𝙾𝚃 🔰', '/infobot']
+    //await conn.sendFile(m.chat, vn, 'menu.mp3', null, m, true, {
 
-], m,)
+    //type: 'audioMessage',
 
-//await conn.sendFile(m.chat, vn, 'menu.mp3', null, m, true, {
+    //ptt: true})
+  } catch (e) {
+    conn.reply(m.chat, "*[❗𝐈𝐍𝐅𝐎❗] 𝙴𝙻 𝙼𝙴𝙽𝚄 𝚃𝙸𝙴𝙽𝙴 𝚄𝙽 𝙴𝚁𝚁𝙾𝚁 𝚈 𝙽𝙾 𝙵𝚄𝙴 𝙿𝙾𝚂𝙸𝙱𝙻𝙴 𝙴𝙽𝚅𝙸𝙰𝚁𝙻𝙾, 𝚁𝙴𝙿𝙾𝚁𝚃𝙴𝙻𝙾 𝙰𝙻 𝙿𝚁𝙾𝙿𝙸𝙴𝚃𝙰𝚁𝙸𝙾 𝙳𝙴𝙻 𝙱𝙾𝚃*", m);
 
-//type: 'audioMessage', 
+    throw e;
+  }
+};
 
-//ptt: true})
+handler.command = /^(stickermenu|stickermenu)$/i;
 
-} catch (e) {
+handler.exp = 50;
 
-conn.reply(m.chat, '*[❗𝐈𝐍𝐅𝐎❗] 𝙴𝙻 𝙼𝙴𝙽𝚄 𝚃𝙸𝙴𝙽𝙴 𝚄𝙽 𝙴𝚁𝚁𝙾𝚁 𝚈 𝙽𝙾 𝙵𝚄𝙴 𝙿𝙾𝚂𝙸𝙱𝙻𝙴 𝙴𝙽𝚅𝙸𝙰𝚁𝙻𝙾, 𝚁𝙴𝙿𝙾𝚁𝚃𝙴𝙻𝙾 𝙰𝙻 𝙿𝚁𝙾𝙿𝙸𝙴𝚃𝙰𝚁𝙸𝙾 𝙳𝙴𝙻 𝙱𝙾𝚃*', m)
+handler.fail = null;
 
-throw e
+export default handler;
 
-}}
+const more = String.fromCharCode(8206);
 
-handler.command = /^(stickermenu|stickermenu)$/i
-
-handler.exp = 50
-
-handler.fail = null
-
-export default handler
-
-const more = String.fromCharCode(8206)
-
-const readMore = more.repeat(4001)
+const readMore = more.repeat(4001);
 
 function clockString(ms) {
+  let h = isNaN(ms) ? "--" : Math.floor(ms / 3600000);
 
-let h = isNaN(ms) ? '--' : Math.floor(ms / 3600000)
+  let m = isNaN(ms) ? "--" : Math.floor(ms / 60000) % 60;
 
-let m = isNaN(ms) ? '--' : Math.floor(ms / 60000) % 60
+  let s = isNaN(ms) ? "--" : Math.floor(ms / 1000) % 60;
 
-let s = isNaN(ms) ? '--' : Math.floor(ms / 1000) % 60
-
-return [h, m, s].map(v => v.toString().padStart(2, 0)).join(':')}
+  return [h, m, s].map((v) => v.toString().padStart(2, 0)).join(":");
+}

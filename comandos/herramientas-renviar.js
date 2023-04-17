@@ -1,17 +1,15 @@
-let handler = async (m, { conn, text, participants, isAdmin, isOwner, usedPrefix, command}) => {
+let handler = async (m, {conn, text, participants, isAdmin, isOwner, usedPrefix, command}) => {
+  if (!m.quoted) throw `Etiqueta un mensaje con el comando *${usedPrefix + command}*`;
 
-    if (!m.quoted) throw `Etiqueta un mensaje con el comando *${usedPrefix + command}*`
+  conn.sendMessage(m.chat, {forward: m.quoted.fakeObj}, {quoted: m});
+};
 
-    conn.sendMessage(m.chat, { forward: m.quoted.fakeObj }, { quoted: m })
+handler.help = ["reenviar"];
 
-}
+handler.tags = ["tools"];
 
-handler.help = ['reenviar']
+handler.command = ["reenviar"];
 
-handler.tags = ['tools']
+handler.group = true;
 
-handler.command = ['reenviar']
-
-handler.group = true
-
-export default handler
+export default handler;
