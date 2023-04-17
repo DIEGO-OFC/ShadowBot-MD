@@ -1,6 +1,5 @@
 import fetch from 'node-fetch'
 import axios from 'axios'
-import cheerio from 'cheerio'
 import instagramGetUrl from 'instagram-url-direct'
 import vm from 'node:vm'
 import { instagramdl, instagramdlv2, instagramdlv3, instagramdlv4 } from '@bochilteam/scraper'

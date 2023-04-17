@@ -1,4 +1,3 @@
-import fs from 'fs'
 import fetch from 'node-fetch'
 import { googleImage } from '@bochilteam/scraper'
 let handler = async (m, {text, usedPrefix, command, conn}) => {

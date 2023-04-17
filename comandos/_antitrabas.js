@@ -1,6 +1,4 @@
 
-import * as fs from 'fs'
-
 export async function before(m, { conn, isAdmin, isBotAdmin, usedPrefix }) {
   if (m.isBaileys && m.fromMe)
        return !0
