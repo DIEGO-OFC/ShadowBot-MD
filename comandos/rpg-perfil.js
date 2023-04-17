@@ -1,8 +1,6 @@
 import { xpRange } from '../lib/levelling.js'
-import fs from 'fs'
 import { createHash } from 'crypto'
 import PhoneNumber from 'awesome-phonenumber'
-import fetch from 'node-fetch'
 let handler = async (m, { conn, usedPrefix, command, participants }) => {
 let { dolares, joincount } = global.db.data.users[m.sender]
 let { exp, limit, level, role } = global.db.data.users[m.sender]
