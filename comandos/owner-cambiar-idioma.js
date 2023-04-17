@@ -1,5 +1,4 @@
 import translate from '@vitalets/google-translate-api'
-import * as fs from 'fs'
 import { es, en, pt } from '../lib/idiomas/total-idiomas.js'
 
 let handler = async (m, { conn, args, usedPrefix, command }) => {
