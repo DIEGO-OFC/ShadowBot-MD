@@ -1,4 +1,4 @@
-/*gracias por usar el bot, si quieres rescanear el código qr borra la carpeta DORRATSESSION, DAR RESTAR O ESTART
+gracias por usar el bot, si quieres rescanear el código qr borra la carpeta DORRATSESSION, DAR RESTAR O ESTART
 número del bot oficial +573122695406
 Si quieres cambiar los números owners ve a configuracion.js
 Creador: DIEGO-OFC número: +593959425714
@@ -35,4 +35,4 @@ https://youtu.be/DKo7PO2ta4o
  > npm update
  > npm start
 
-Cómo cambió el bot sin perder los diamantes y xp? Descarga la database.json y instala el nuevo bot, antes de encerderlo pones la database*/
+Cómo cambió el bot sin perder los diamantes y xp? Descarga la database.json y instala el nuevo bot, antes de encerderlo pones la database*
