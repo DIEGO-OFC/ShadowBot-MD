@@ -1,6 +1,3 @@
-const { levelling } = '../lib/levelling.js'
-import PhoneNumber from 'awesome-phonenumber'
-
 let handler = async (m, { conn, usedPrefix }) => {
 let pp = './Menu2.jpg'
 try {
