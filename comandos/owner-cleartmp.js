@@ -1,12 +1,9 @@
 import { tmpdir } from 'os'
-import path, { join } from 'path'
+import { join } from 'path'
 import {
 readdirSync,
 statSync,
 unlinkSync,
-existsSync,
-readFileSync,
-watch
 } from 'fs'
 let handler = async (m, { conn, usedPrefix: _p, __dirname, args }) => {
 
