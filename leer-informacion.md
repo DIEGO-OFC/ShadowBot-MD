@@ -1,6 +1,6 @@
 # DORR∆T-BOT-MD
 
-Gracias por usar el bot. Si deseas volver a escanear el código QR, borra la carpeta DORRATSESSION o reinicia el bot con el comando "restart" o "estart".
+Gracias por usar el bot. Si deseas volver a escanear el código QR, borra la carpeta DORRATSESSION o reinicia el bot con el comando "restart" o "start".
 
 - Número del bot oficial: +573122695406
 - Si deseas cambiar los números owners, ve a configuracion.js
