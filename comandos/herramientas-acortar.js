@@ -1,4 +1,3 @@
-import axiostal from "axios"
 import fetch from 'node-fetch'
 let handler = async(m, { conn, text, xteamkey }) => {
 if (!text) throw '*[❗𝐈𝐍𝐅𝐎❗] 𝙸𝙽𝙶𝚁𝙴𝚂𝙴 𝚄𝙽 𝙴𝙽𝙻𝙰𝙲𝙴 / 𝚄𝚁𝙻 𝙴𝙻 𝙲𝚄𝙰𝙻 𝙳𝙴𝚂𝙴𝙰 𝙰𝙲𝙾𝚁𝚃𝙰𝚁*'
