@@ -1,11 +1,8 @@
-let handler = async (m, {usedPrefix, conn}) => {
+let handler = async (m, {conn}) => {
   let who;
   if (m.isGroup) who = m.mentionedJid[0] ? m.mentionedJid[0] : m.sender;
   else who = m.sender;
   let name = conn.getName(who);
-  let grupos = [md, yt];
-  let dorrat = [imagen1, imagen4];
-  let dos = [md];
 
   let user = global.db.data.users[who];
   let premium = user.premium;
