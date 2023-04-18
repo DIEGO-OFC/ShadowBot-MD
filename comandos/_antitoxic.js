@@ -1,11 +1,10 @@
 const toxicRegex = /puto|puta|rata|estupido|imbecil|rctmre|mrd|verga|vrga|maricon/i;
 
-export async function before(m, {isAdmin, isBotAdmin, isOwner}) {
+export async function before(m, {isAdmin, isOwner}) {
   if (m.isBaileys && m.fromMe) return !0;
   if (!m.isGroup) return !1;
   let user = global.db.data.users[m.sender];
   let chat = global.db.data.chats[m.chat];
-  let bot = global.db.data.settings[this.user.jid] || {};
   const isToxic = toxicRegex.exec(m.text);
 
   if (isToxic && chat.antiToxic && !isOwner && !isAdmin) {
