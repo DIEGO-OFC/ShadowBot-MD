@@ -1,5 +1,4 @@
 let handler = async (m, {conn}) => {
-  let vn = "./media/gay2.mp3";
   let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender;
   conn.sendFile(
     m.chat,
