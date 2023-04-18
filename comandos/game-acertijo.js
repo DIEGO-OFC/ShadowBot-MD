@@ -1,7 +1,7 @@
 import fs from "fs";
 let timeout = 60000;
 let poin = 500;
-let handler = async (m, {conn, usedPrefix}) => {
+let handler = async (m, {conn}) => {
   conn.tekateki = conn.tekateki ? conn.tekateki : {};
   let id = m.chat;
   if (id in conn.tekateki) {
@@ -10,8 +10,6 @@ let handler = async (m, {conn, usedPrefix}) => {
   }
   let tekateki = JSON.parse(fs.readFileSync(`./galeria/games/acertijo.json`));
   let json = tekateki[Math.floor(Math.random() * tekateki.length)];
-  let _clue = json.response;
-  let clue = _clue.replace(/[A-Za-z]/g, "_");
   let caption = `
 ⷮ *${json.question}*
 *➢ Tiempo:* ${(timeout / 1000).toFixed(2)} segundos
