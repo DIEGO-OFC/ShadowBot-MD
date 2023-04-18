@@ -1,4 +1,4 @@
-let handler = async (m, {conn, command, text, usedPrefix}) => {
+let handler = async (m, {conn, command, text}) => {
   if (!text) throw `*[❗𝐈𝐍𝐅𝐎❗] 𝙸𝙽𝙶𝚁𝙴𝚂𝙴 𝙴𝙻 @tag 𝙳𝙴 𝙰𝙻𝙶𝚄𝙽 𝙿𝙰𝚁𝚃𝙸𝙲𝙸𝙿𝙰𝙽𝚃𝙴 𝙳𝙴𝙻 𝙶𝚁𝚄𝙿𝙾 𝙾 𝙴𝙻 𝙽𝙾𝙼𝙱𝚁𝙴 𝙳𝙴 𝙻𝙰 𝙿𝙴𝚁𝚂𝙾𝙽𝙰*`;
   if (command == "gay2") {
     conn.reply(
