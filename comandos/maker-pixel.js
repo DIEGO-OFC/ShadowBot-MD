@@ -1,5 +1,4 @@
-let handler = async (m, {conn, usedprefix, text}) => {
-  let who = m.quoted ? m.quoted.sender : m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender;
+let handler = async (m, {conn, text}) => {
   conn.sendFile(
     m.chat,
     global.API("https://some-random-api.ml", "/canvas/pixelate", {
