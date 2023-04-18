@@ -4,7 +4,6 @@ let handler = (m) => m;
 
 handler.all = async function (m) {
   let chat = db.data.chats[m.chat];
-  let user = db.data.users[m.sender];
 
   if (chat.autosticker && m.isGroup) {
     let q = m;
