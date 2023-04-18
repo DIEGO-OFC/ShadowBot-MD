@@ -2,7 +2,7 @@ let timeout = 60000;
 let poin = 500;
 let poin_lose = -100;
 let poin_bot = 200;
-let handler = async (m, {conn, usedPrefix, text}) => {
+let handler = async (m, {conn, usedPrefix}) => {
   conn.suit = conn.suit ? conn.suit : {};
   if (Object.values(conn.suit).find((room) => room.id.startsWith("suit") && [room.p, room.p2].includes(m.sender)))
     throw "*[❗] 𝚃𝙴𝚁𝙼𝙸𝙽𝙰 𝚃𝚄 𝙿𝙰𝚁𝚃𝙸𝙳𝙰 𝙰𝙽𝚃𝙴𝚂 𝙳𝙴 𝙸𝙽𝙲𝙸𝙰𝚁 𝙾𝚃𝚁𝙰*";
