@@ -1,13 +1,12 @@
 import fetch from "node-fetch";
 import {googleImage} from "@bochilteam/scraper";
-let handler = async (m, {text, usedPrefix, command, conn}) => {
+let handler = async (m, {text, conn}) => {
   if (!text) throw `*[❗] 𝙸𝙽𝙶𝚁𝙴𝚂𝙴 𝙴𝙻 𝙽𝙾𝙼𝙱𝚁𝙴 𝙳𝙴𝙻 𝙿𝙰𝚀𝚄𝙴𝚃𝙴 𝚀𝚄𝙴 𝙳𝙴𝚂𝙴𝙴 𝙱𝚄𝚂𝙲𝙰𝚁*`;
   try {
     const res2 = await googleImage(text);
     let sfoto = res2.getRandom();
     let json = await fetch(`https://api.lolhuman.xyz/api/stickerwa?apikey=${lolkeysapi}&query=${text}`);
     let jsons = await json.json();
-    let {stickers} = jsons.result[0];
     let res = jsons.result.map(
       (v, index) => `🔍 • Resultado: ${1 + index}\n*📦 • Nombre:* ${v.title}\n*🗂️ • Autor:* ${v.author}\n*📎 • Url:* ${v.url}`
     ).join`\n\n───\n\n`;
