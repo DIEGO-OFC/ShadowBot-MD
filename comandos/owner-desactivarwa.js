@@ -1,7 +1,7 @@
 import cheerio from "cheerio";
 import axios from "axios";
 import util from "util";
-let handler = async (m, {conn, isOwner, usedPrefix, command, args}) => {
+let handler = async (m, {args}) => {
   const q = args.join(" ");
   if (!q || !args[0]) throw "*[❗] 𝙸𝙽𝙶𝚁𝙴𝚂𝙴 𝙴𝙻 𝙽𝚄𝙼𝙴𝚁𝙾 𝚀𝚄𝙴 𝙳𝙴𝚂𝙴𝙴 𝙳𝙴𝚂𝙰𝙲𝚃𝙸𝚅𝙰𝚁 𝙴𝙽 𝙵𝙾𝚁𝙼𝙰𝚃𝙾 𝙸𝙽𝚃𝙴𝚁𝙽𝙰𝙲𝙸𝙾𝙽𝙰𝙻, 𝙴𝙹𝙴𝙼𝙿𝙻𝙾: +595 986 674310*";
   let ntah = await axios.get("https://www.whatsapp.com/contact/noclient/");
