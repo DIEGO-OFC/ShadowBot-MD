@@ -1,5 +1,5 @@
 import {generateWAMessageFromContent} from "@adiwajshing/baileys";
-let handler = async (m, {conn, text, participants, isOwner, isAdmin}) => {
+let handler = async (m, {conn, text, participants}) => {
   try {
     let users = participants.map((u) => conn.decodeJid(u.id));
     let q = m.quoted ? m.quoted : m || m.text || m.sender;
