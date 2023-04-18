@@ -1,5 +1,5 @@
 import fetch from "node-fetch";
-let handler = async (m, {conn, args, usedPrefix, command, text}) => {
+let handler = async (m, {conn, text}) => {
   if (!text) throw `*_*[❗] 𝙸𝙽𝙶𝚁𝙴𝙴𝚂𝙴 𝙴𝙻 𝙽𝙾𝙼𝙱𝚁𝙴 𝙳𝙴 𝙻𝙰 𝙰𝙿𝙿 𝚀𝚄𝙴 𝚀𝚄𝙸𝙴𝚁𝙰 𝙳𝙴𝚂𝙲𝙰𝚁𝙶𝙰𝚁*._*`;
   try {
     let res = await fetch(`https://api.akuari.my.id/downloader/apkdownloader?query=${text}`);
