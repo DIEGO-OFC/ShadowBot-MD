@@ -1,14 +1,10 @@
-let handler = async (m, {conn, command, args, usedPrefix, DevMode}) => {
+let handler = async (m, {conn, command, args}) => {
   let type = (args[0] || "").toLowerCase();
   let _type = (args[0] || "").toLowerCase();
 
   //------- Nombre
   let pp = "./Menu2.jpg";
   let nowner = `${wm.split`@`[0]}@s.whatsapp.net`;
-  let teksnomor = `
-• @${wm.split`@`[0]} •
-------- ${wm} -------
-`;
 
   //------------ BIO
   let teksbio = `
@@ -24,7 +20,6 @@ let handler = async (m, {conn, command, args, usedPrefix, DevMode}) => {
 🥏 *Whatsapp* wa.me/972529277520
 
 `;
-  let teks = " ";
   const sections = [
     {
       title: ` OWNER`,
