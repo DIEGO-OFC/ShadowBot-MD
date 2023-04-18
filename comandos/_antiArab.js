@@ -1,5 +1,5 @@
 let handler = (m) => m;
-handler.before = async function (m, {conn, isAdmin, isBotAdmin}) {
+handler.before = async function (m, {conn, isBotAdmin}) {
   if (!m.isGroup) return !1;
   let chat = global.db.data.chats[m.chat];
 
