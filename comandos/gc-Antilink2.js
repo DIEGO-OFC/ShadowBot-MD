@@ -1,5 +1,5 @@
 let linkRegex = /https:/i;
-export async function before(m, {isAdmin, isBotAdmin, text}) {
+export async function before(m, {isAdmin, isBotAdmin}) {
   if (m.isBaileys && m.fromMe) return !0;
   if (!m.isGroup) return !1;
   let chat = global.db.data.chats[m.chat];
