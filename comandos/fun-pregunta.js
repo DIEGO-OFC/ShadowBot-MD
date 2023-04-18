@@ -1,7 +1,6 @@
 import fetch from "node-fetch";
 
-let handler = async (m, {conn, text, usedPrefix, command}) => {
-  let name = conn.getName(m.sender);
+let handler = async (m, {text, usedPrefix, command}) => {
   if (!text) throw `[❕𝐈𝐍𝐅𝐎❕] *Ejemplo :*\n\n *${usedPrefix + command}* me baño?`;
   //let res = await fetch(global.API('https://api.simsimi.net', '/v2/', { text: encodeURIComponent(text), lc: "es" }, ''))
   let res = await fetch(`https://api.simsimi.net/v2/?text=${text}&lc=es`);
