@@ -2,8 +2,7 @@ import daily from "./rpg-daily.js";
 import weekly from "./rpg-weekly.js";
 import monthly from "./rpg-monthly.js";
 import adventure from "./rpg-adventure.js";
-import {canLevelUp, xpRange} from "../lib/levelling.js";
-import PhoneNumber from "awesome-phonenumber";
+import {xpRange} from "../lib/levelling.js";
 
 import moment from "moment-timezone";
 import fs from "fs";
