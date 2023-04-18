@@ -1,5 +1,5 @@
 import {googleImage} from "@bochilteam/scraper";
-let handler = async (m, {conn, text, usedPrefix, command}) => {
+let handler = async (m, {conn}) => {
   let shipost = "shipost";
   const res = await googleImage(shipost);
   let image = await res.getRandom();
