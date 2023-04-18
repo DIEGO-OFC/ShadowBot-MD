@@ -1,7 +1,6 @@
 let handler = async (m, {conn, isOwner}) => {
   let adv = Object.entries(global.db.data.users).filter((user) => user[1].warn);
   let warns = global.db.data.users.warn;
-  let user = global.db.data.users;
 
   let caption = `⚠️ 𝐔𝐒𝐔𝐀𝐑𝐈𝐎𝐒 𝐀𝐃𝐕𝐄𝐑𝐓𝐈𝐃𝐎𝐒
 *╔═══════════════════·•*
