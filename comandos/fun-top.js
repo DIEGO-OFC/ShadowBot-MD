@@ -1,5 +1,5 @@
 let user = (a) => "@" + a.split("@")[0];
-function handler(m, {groupMetadata, command, conn, text, usedPrefix}) {
+function handler(m, {groupMetadata, conn, text}) {
   if (!text) throw `Ejemplo de uso:\n.top *texto*`;
   let ps = groupMetadata.participants.map((v) => v.id);
   let a = ps.getRandom();
@@ -14,7 +14,6 @@ function handler(m, {groupMetadata, command, conn, text, usedPrefix}) {
   let j = ps.getRandom();
   let k = Math.floor(Math.random() * 70);
   let x = `${pickRandom(["🤓", "😅", "😂", "😳", "😎", "🥵", "😱", "🤑", "🙄", "💩", "🍑", "🤨", "🥴", "🔥", "👇🏻", "😔", "👀", "🌚"])}`;
-  let l = Math.floor(Math.random() * x.length);
   let vn = `https://hansxd.nasihosting.com/sound/sound${k}.mp3`;
   let top = `*${x} Top 10 ${text} ${x}*
     
