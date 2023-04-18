@@ -1,4 +1,4 @@
-let handler = async (m, {conn, usedPrefix}) => {
+let handler = async (m, {usedPrefix}) => {
   let command = "phmaker";
   m.reply(`*[❗𝐈𝐍𝐅𝐎❗] ¿𝙲𝙾𝙼𝙾 𝚄𝚂𝙰𝚁 𝙴𝚂𝚃𝙴 𝙲𝙾𝙼𝙰𝙽𝙳𝙾?*
 —◉ #phmaker (opcion) <responder / etiquetar a una imagen>
