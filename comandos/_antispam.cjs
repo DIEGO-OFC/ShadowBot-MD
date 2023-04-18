@@ -2,10 +2,8 @@
 
 let handler = (m) => m;
 handler.all = async function (m) {
-  let chat = global.db.data.chats[m.chat];
   let delet = m.key.participant;
   let bang = m.key.id;
-  let bot = global.db.data.settings[this.user.jid] || {};
   let user = global.db.data.users[m.sender];
 
   this.spam = this.spam ? this.spam : {};
