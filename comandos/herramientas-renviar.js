@@ -1,4 +1,4 @@
-let handler = async (m, {conn, text, participants, isAdmin, isOwner, usedPrefix, command}) => {
+let handler = async (m, {conn, usedPrefix, command}) => {
   if (!m.quoted) throw `Etiqueta un mensaje con el comando *${usedPrefix + command}*`;
 
   conn.sendMessage(m.chat, {forward: m.quoted.fakeObj}, {quoted: m});
