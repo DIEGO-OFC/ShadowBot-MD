@@ -1,4 +1,3 @@
-import uploadFile from "../lib/uploadFile.js";
 import uploadImage from "../lib/uploadImage.js";
 let handler = async (m, {conn, text, usedPrefix, command}) => {
   let q = m.quoted ? m.quoted : m;
