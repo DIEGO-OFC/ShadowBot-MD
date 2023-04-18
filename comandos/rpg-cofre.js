@@ -1,4 +1,4 @@
-let handler = async (m, {isPrems, conn}) => {
+let handler = async (m, {conn}) => {
   let time = global.db.data.users[m.sender].lastcofre + 86400000; // 36000000 10 Horas //86400000 24 Horas
   if (new Date() - global.db.data.users[m.sender].lastcofre < 86400000)
     throw `[❗𝐈𝐍𝐅𝐎❗] 𝚈𝙰 𝚁𝙴𝙲𝙻𝙰𝙼𝙰𝚂𝚃𝙴 𝚃𝚄 𝙲𝙾𝙵𝚁𝙴\𝚗𝚅𝚄𝙴𝙻𝚅𝙴 𝙴𝙽 *${msToTime(time - new Date())}* 𝙿𝙰𝚁𝙰 𝚅𝙾𝙻𝚅𝙴𝚁 𝙰 𝚁𝙴𝙲𝙻𝙰𝙼𝙰𝚁`;
@@ -50,13 +50,8 @@ handler.command = ["coffer", "cofre", "abrircofre", "cofreabrir"];
 handler.level = 5;
 export default handler;
 
-function pickRandom(list) {
-  return list[Math.floor(Math.random() * list.length)];
-}
-
 function msToTime(duration) {
-  var milliseconds = parseInt((duration % 1000) / 100),
-    seconds = Math.floor((duration / 1000) % 60),
+  var seconds = Math.floor((duration / 1000) % 60),
     minutes = Math.floor((duration / (1000 * 60)) % 60),
     hours = Math.floor((duration / (1000 * 60 * 60)) % 24);
 
