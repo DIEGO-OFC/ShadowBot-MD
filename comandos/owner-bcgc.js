@@ -1,7 +1,6 @@
 /*
 Creado por https://github.com/DIEGO-OFC | https://github.com/GataNina-Li
 */
-import fetch from "node-fetch";
 let handler = async (m, {conn, text}) => {
   let groups = Object.keys(await conn.groupFetchAllParticipating());
   m.reply(`_mensaje enviando a ${groups.length}`);
