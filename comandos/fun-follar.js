@@ -1,4 +1,4 @@
-let handler = async (m, {conn, command, text}) => {
+let handler = async (m, {conn, text}) => {
   let coger = `🥵 te acabas acabas de coger a ${text}!🥵 
     
   te acabas de coger a la puta de ${text} ⁩mientras gemia como una maldita puta
