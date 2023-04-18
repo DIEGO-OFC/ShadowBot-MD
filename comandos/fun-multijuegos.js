@@ -1,11 +1,5 @@
 import {xpRange} from "../lib/levelling.js";
-let handler = async (m, {conn, usedPrefix, command, args, usedPrefix: _p, __dirname, isOwner, text, isAdmin, isROwner}) => {
-  //let com = `${usedPrefix}`
-  //let juegos = `${pickRandom([`${com}formarareja`,`${com}reto`,`${com}verdad`])}`
-
-  const {levelling} = "../lib/levelling.js";
-  //let handler = async (m, { conn, usedPrefix, usedPrefix: _p, __dirname, text }) => {
-
+let handler = async (m, {conn, usedPrefix, command, usedPrefix: _p, text}) => {
   let {exp, limit, level, role} = global.db.data.users[m.sender];
   let {min, xp, max} = xpRange(level, global.multiplier);
 
@@ -68,7 +62,6 @@ let handler = async (m, {conn, usedPrefix, command, args, usedPrefix: _p, __dirn
   };
   text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, "g"), (_, name) => "" + replace[name]);
   let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender;
-  let mentionedJid = [who];
   let username = conn.getName(who);
 
   if (command == "multijuegos") {
@@ -94,7 +87,6 @@ let handler = async (m, {conn, usedPrefix, command, args, usedPrefix: _p, __dirn
 
   if (command == "juegos") {
     global.db.data.users[m.sender].money += 5;
-    let gata = `${pickRandom([`𝙋𝙪𝙚𝙙𝙚𝙨 𝙂𝙖𝙣𝙖𝙧 𝘿𝙞𝙖𝙢𝙖𝙣𝙩𝙚𝙨 𝙖𝙡 𝙅𝙪𝙜𝙖𝙧!!`, `𝙎𝙖𝙗𝙞𝙖𝙨 𝙦𝙪𝙚 𝙥𝙪𝙚𝙙𝙚𝙨 𝙂𝙖𝙣𝙖𝙧 𝙀𝙭𝙥𝙚𝙧𝙞𝙚𝙣𝙘𝙞𝙖 𝙖𝙡 𝙅𝙪𝙜𝙖𝙧? 𝘼𝙝𝙤𝙧𝙖 𝙮𝙖 𝙡𝙤 𝙨𝙖𝙗𝙚𝙨!!`])}`;
     let c = `${usedPrefix}`;
     let juegos = `${pickRandom([`${c}reto`, `${c}verdad`, `${c}topgays`, `${c}topotakus`, `${c}mates medium`, `${c}mates noob`])}`;
     let juegos2 = `${pickRandom([`${c}reto`, `${c}verdad`, `${c}formarpareja`, `${c}ppt tijeras`, `${c}ppt piedra`])}`;
@@ -122,11 +114,6 @@ let handler = async (m, {conn, usedPrefix, command, args, usedPrefix: _p, __dirn
 
   if (command == "juegos") {
     global.db.data.users[m.sender].money += 10;
-    let gata = `${pickRandom([
-      `𝘿𝙚𝙢𝙪𝙚𝙨𝙩𝙧𝙖 𝙦𝙪𝙚 𝙥𝙪𝙚𝙙𝙚𝙨 𝙡𝙡𝙚𝙜𝙖𝙧 𝙖𝙡 𝙏𝙤𝙥 1!!`,
-      `𝙈𝙞𝙚𝙣𝙩𝙧𝙖𝙨 𝙢𝙖𝙨 𝙅𝙪𝙚𝙜𝙖𝙨 𝙩𝙪 𝙍𝙖𝙣𝙜𝙤 𝙩𝙖𝙢𝙗𝙞𝙚𝙣 𝙨𝙪𝙗𝙞𝙧𝙖!!`,
-      `𝙋𝙖𝙧𝙩𝙞𝙘𝙞𝙥𝙖 𝙚𝙣 𝙚𝙡 𝙢𝙤𝙙𝙤 𝙈𝙪𝙡𝙩𝙞𝙟𝙪𝙚𝙜𝙤𝙨 𝙮 𝙂𝙖𝙣𝙖 𝙧𝙚𝙘𝙤𝙢𝙥𝙚𝙣𝙨𝙖𝙨!!`,
-    ])}`;
     let c = `${usedPrefix}`;
     let juegos = `${pickRandom([
       `${c}lesbiana Yo`,
@@ -235,12 +222,6 @@ let handler = async (m, {conn, usedPrefix, command, args, usedPrefix: _p, __dirn
 
   if (command == "juegos") {
     global.db.data.users[m.sender].exp += 20;
-    let gata = `${pickRandom([
-      `𝙀𝙡𝙞𝙟𝙚 𝙏𝙪 𝙀𝙢𝙤𝙟𝙞 𝙁𝙖𝙫𝙤𝙧𝙞𝙩𝙤 𝙥𝙖𝙧𝙖 𝙅𝙪𝙜𝙖𝙧!!`,
-      `𝘼𝙙𝙞𝙫𝙞𝙣𝙖 𝙚𝙡 𝙋𝙧𝙤𝙭𝙞𝙢𝙤 𝙅𝙪𝙚𝙜𝙤!!`,
-      `𝘼𝙙𝙞𝙫𝙞𝙣𝙖 𝙚𝙡 𝙋𝙧𝙤𝙭𝙞𝙢𝙤 𝙅𝙪𝙚𝙜𝙤!!`,
-      `𝙈𝙞𝙣𝙞𝙟𝙪𝙚𝙜𝙤𝙨 𝙚𝙨𝙩á𝙣 𝙚𝙨𝙥𝙚𝙧𝙖𝙣𝙙𝙤 𝙚𝙣 𝙨𝙚𝙧 𝙅𝙪𝙜𝙖𝙙𝙤𝙨!!`,
-    ])}`;
     let c = `${usedPrefix}`;
     let juegos = `${pickRandom([
       `${c}lesbiana Yo`,
@@ -303,7 +284,6 @@ let handler = async (m, {conn, usedPrefix, command, args, usedPrefix: _p, __dirn
 
   if (command == "juegos") {
     global.db.data.users[m.sender].exp += 20;
-    let gata = `${pickRandom([`𝘾𝙖𝙧𝙜𝙖 𝙢𝙖𝙨 𝙅𝙪𝙚𝙜𝙤𝙨 𝙪𝙨𝙖𝙣𝙙𝙤 𝙚𝙡 𝘽𝙤𝙩𝙤𝙣 𝙈𝙖𝙨 𝙅𝙪𝙚𝙜𝙤𝙨!!`, `𝘿𝙞𝙣𝙖𝙢𝙞𝙘𝙖𝙨, 𝙍𝙚𝙩𝙤𝙨, 𝘼𝙥𝙪𝙚𝙨𝙩𝙖𝙨, 𝙀𝙩𝙞𝙦𝙪𝙚𝙩𝙖𝙨 𝙮 𝙢𝙪𝙘𝙝𝙤 𝙢𝙖𝙨!!`])}`;
     let c = `${usedPrefix}`;
     let juegos2 = `${pickRandom([
       `${c}ppt piedra`,
