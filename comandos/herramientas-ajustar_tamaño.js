@@ -1,5 +1,5 @@
 import uploadImage from "../lib/uploadImage.js";
-let handler = async (m, {conn, usedPrefix, command, args, text}) => {
+let handler = async (m, {conn, text}) => {
   let q = m.quoted ? m.quoted : m;
   let mime = (q.msg || q).mimetype || "";
   if (!mime) throw "⚠️️ Responde a una imagen o video.";
