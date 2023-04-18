@@ -1,4 +1,4 @@
-let handler = async (m, {conn, usedPrefix}) => {
+let handler = async (m, {conn}) => {
   let pp = "./Menu2.jpg";
   try {
   } catch (e) {
