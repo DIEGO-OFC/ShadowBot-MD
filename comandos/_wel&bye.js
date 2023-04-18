@@ -1,4 +1,4 @@
-let handler = async (m, {conn, text, usedPrefix, command, customPrefix}) => {
+let handler = async (m, {conn, command}) => {
   let stikerwelgc = "./galeria/welgc.webp";
   let stikerbyegc = "./galeria/byegc.webp";
   if (command == "welcomegc") {
@@ -18,6 +18,3 @@ let handler = async (m, {conn, text, usedPrefix, command, customPrefix}) => {
 };
 handler.command = ["welcomegc", "byegc"];
 export default handler;
-function pickRandom(list) {
-  return list[Math.floor(list.length * Math.random())];
-}
