@@ -1,12 +1,11 @@
-let handler = async (m, {conn}) => {
-  let pp = imagen1;
+let handler = async (m) => {
   let stats = Object.entries(db.data.stats).map(([key, val]) => {
     let name = Array.isArray(comandos[key]?.command) ? comandos[key]?.command?.join("\n⮕ ") : comandos[key]?.command || key;
     if (/exec/.test(name)) return;
     return {name, ...val};
   });
   stats = stats.sort((a, b) => b.total - a.total);
-  let txt = stats.slice(0, 15).map(({name, total, last}, idx) => {
+  let txt = stats.slice(0, 15).map(({name, total}, idx) => {
     return `${htki} ${idx + 1} ${htka}
 ${htjava} COMANDO ${htjava}\n⮕ ${name}
 ${htjava} USOS ${htjava}\n⮕ ${total}`;
