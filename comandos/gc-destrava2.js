@@ -1,4 +1,4 @@
-let handler = async (m, {conn}) => {
+let handler = async (m, {}) => {
   m.reply(global.quitarviruz);
 };
 handler.command = /^(quitarviruz|quitarvirus|eliminarviruz|quitarlag|eliminarbinarios|clearviruz)$/i;
