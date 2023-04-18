@@ -1,5 +1,5 @@
 import moment from "moment-timezone";
-let handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text}) => {
+let handler = async (m, {conn, usedPrefix: _p}) => {
   try {
     let pp = "./galeria/menudorrat3.jpg";
     m.reply(`╭──────────────────  
@@ -84,16 +84,6 @@ handler.exp = 50;
 handler.fail = null;
 
 export default handler;
-
-function clockString(ms) {
-  let h = isNaN(ms) ? "--" : Math.floor(ms / 3600000);
-
-  let m = isNaN(ms) ? "--" : Math.floor(ms / 60000) % 60;
-
-  let s = isNaN(ms) ? "--" : Math.floor(ms / 1000) % 60;
-
-  return [h, m, s].map((v) => v.toString().padStart(2, 0)).join(":");
-}
 
 function ucapan() {
   const time = moment.tz("America/Los_Angeles").format("HH"); //America/Los_Angeles  Asia/Jakarta   America/Toronto
