@@ -1,7 +1,6 @@
 import fetch from "node-fetch";
-let handler = async (m, {conn, text, usedPrefix, command}) => {
+let handler = async (m, {text, usedPrefix, command}) => {
   if (!text) throw `uhm.. mau cari apa?\n\nContoh: ${usedPrefix + command} bokep🐒`;
-  let user = global.db.data.users[m.sender];
   try {
     let res = await xnxxsearch(text);
     let json = res.result;
