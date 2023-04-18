@@ -1,7 +1,7 @@
 import fetch from "node-fetch";
 import {webp2png} from "../lib/webp2mp4.js";
 
-let handler = async (m, {conn}) => {
+let handler = async (m, {}) => {
   let q = m.quoted ? m.quoted : m,
     mime = (q || q.msg).mimetype || q.mediaType || "";
   if (/image/.test(mime)) {
