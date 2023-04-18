@@ -1,4 +1,4 @@
-let handler = async (m, {conn, usedPrefix, text, command}) => {
+let handler = async (m, {usedPrefix, text}) => {
   let hash = text;
   if (m.quoted && m.quoted.fileSha256) hash = m.quoted.fileSha256.toString("hex");
   if (!hash)
