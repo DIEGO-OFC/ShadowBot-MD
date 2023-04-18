@@ -1,4 +1,4 @@
-let handler = async (m, {conn, args, participants, usedPrefix}) => {
+let handler = async (m, {conn, args, participants}) => {
   let users = Object.entries(global.db.data.users).map(([key, value]) => {
     return {...value, jid: key};
   });
@@ -13,10 +13,8 @@ let handler = async (m, {conn, args, participants, usedPrefix}) => {
   let usersExp = sortedExp.map(enumGetKey);
   let usersLim = sortedLim.map(enumGetKey);
   let usersLevel = sortedLevel.map(enumGetKey);
-  let usersRole = sortedRole.map(enumGetKey);
   let usersDolares = sortedDolares.map(enumGetKey);
   let usersJoincount = sortedJoincount.map(enumGetKey);
-  let usersPremium = sortedPremium.map(enumGetKey);
 
   console.log(participants);
   let len = args[0] && args[0].length > 0 ? Math.min(100, Math.max(parseInt(args[0]), 10)) : Math.min(10, sortedExp.length);
@@ -53,17 +51,15 @@ let handler = async (m, {conn, args, participants, usedPrefix}) => {
 ║ Tú : *${usersLevel.indexOf(m.sender) + 1}* de *${usersLevel.length} Usuarios*
 ║ ${sortedLevel
     .slice(0, len)
-    .map(
-      ({jid, role, level}, i) =>
-        `${i + 1}. ${participants.some((p) => jid === p.jid) ? `(${conn.getName(jid)}) wa.me/` : "@"}${jid.split`@`[0]} ${role}`
-    ).join`\n`}
+    .map(({jid, role}, i) => `${i + 1}. ${participants.some((p) => jid === p.jid) ? `(${conn.getName(jid)}) wa.me/` : "@"}${jid.split`@`[0]} ${role}`)
+    .join`\n`}
 ║═════════════════
 ║ ➢ *TOP USUARIOS ${len} PREMIUM 🎟️* 
 ║ Tú : *${usersLevel.indexOf(m.sender) + 1}* de *${usersLevel.length} Usuarios*
 ║ ${sortedLim
     .slice(0, len)
     .map(
-      ({jid, premium, level}, i) =>
+      ({jid, premium}, i) =>
         `${i + 1}. ${participants.some((p) => jid === p.jid) ? `(${conn.getName(jid)}) wa.me/` : "@"}${jid.split`@`[0]} *${premium ? `✅` : `❌`} 🎟️*`
     ).join`\n`}
 ║═════════════════
