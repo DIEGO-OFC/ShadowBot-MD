@@ -4,50 +4,35 @@ CODIGO CREADO POR https://github.com/DIEGO-OFC/DORRAT-BOT-MD
 
 */
 
-
-
 const cooldown = 10800000;
 
-let handler = async (m, { conn, text, usedPrefix, command, groupMetadata }) => {
-
+let handler = async (m, {conn, text, usedPrefix, command, groupMetadata}) => {
   let time = global.db.data.users[m.sender].lastrob + 7200000;
-  if (new Date() - global.db.data.users[m.sender].lastrob < 7200000)
-    throw `⏱️ Espera *${msToTime(time - new Date())}* para volver a robar`;
-  if (!text)
-    return m.reply(
-      `*• Etiquetɑ ɑl usuɑrio que quierɑ sɑqueɑr*\n\n*Ejemplo de uso:* ${usedPrefix + command} @tɑg>.`
-    );
-try {
-  let _user = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted.sender;
-  if (!_user in global.db.data.users)
-    return m.reply(`El usuɑrio no estά registrɑdo en lɑ bɑse de dɑtos!`);
-  if (m.quoted?.sender) m.mentionedJid.push(m.quoted.sender);
-  if (!m.mentionedJid.length) m.mentionedJid.push(m.sender);
-  if (global.db.data.users[_user] == undefined)
-    return m.reply(`El usuɑrio no estά registrɑdo en lɑ bɑse de dɑtos!`);
-  if (_user.startsWith(conn.user.jid.split`@`[0]))
-    return m.reply("No puedes saquear a la bot :I");
-  let uuser = global.db.data.users[_user];
-  let dolares = Math.floor(Math.random() * 15) + 10;
-  let limit = Math.floor(Math.random() * 5) + 3;
-  let raid = `*Has saqueado ⚔️ a @${_user.split("@s.whatsapp.net")[0]}*
+  if (new Date() - global.db.data.users[m.sender].lastrob < 7200000) throw `⏱️ Espera *${msToTime(time - new Date())}* para volver a robar`;
+  if (!text) return m.reply(`*• Etiquetɑ ɑl usuɑrio que quierɑ sɑqueɑr*\n\n*Ejemplo de uso:* ${usedPrefix + command} @tɑg>.`);
+  try {
+    let _user = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted.sender;
+    if (!_user in global.db.data.users) return m.reply(`El usuɑrio no estά registrɑdo en lɑ bɑse de dɑtos!`);
+    if (m.quoted?.sender) m.mentionedJid.push(m.quoted.sender);
+    if (!m.mentionedJid.length) m.mentionedJid.push(m.sender);
+    if (global.db.data.users[_user] == undefined) return m.reply(`El usuɑrio no estά registrɑdo en lɑ bɑse de dɑtos!`);
+    if (_user.startsWith(conn.user.jid.split`@`[0])) return m.reply("No puedes saquear a la bot :I");
+    let uuser = global.db.data.users[_user];
+    let dolares = Math.floor(Math.random() * 15) + 10;
+    let limit = Math.floor(Math.random() * 5) + 3;
+    let raid = `*Has saqueado ⚔️ a @${_user.split("@s.whatsapp.net")[0]}*
 ◦ Dinero: $${dolares}
 ◦ Diamante: ${limit}
 
 Robado por: @${m.sender.split("@")[0]}`;
-  if (uuser.limit <= 5)
-    return m.reply("El usuario no tiene suficientes recursos!");
- if (uuser.dolares <= 10) return m.reply(`El usuario no tiene suficientes recursos!`)
-   global.db.data.users[_user].dolares -= dolares * 1;
-  global.db.data.users[_user].limit -= limit * 1;
-  global.db.data.users[m.sender].dolares += dolares * 1;
-  global.db.data.users[m.sender].limit += limit * 1;
-await await conn.sendMessage(
-    m.chat,
-    { text: raid, mentions: [_user, m.sender] },
-    { quoted: m }
-  );
-  /*conn.sendMessage(
+    if (uuser.limit <= 5) return m.reply("El usuario no tiene suficientes recursos!");
+    if (uuser.dolares <= 10) return m.reply(`El usuario no tiene suficientes recursos!`);
+    global.db.data.users[_user].dolares -= dolares * 1;
+    global.db.data.users[_user].limit -= limit * 1;
+    global.db.data.users[m.sender].dolares += dolares * 1;
+    global.db.data.users[m.sender].limit += limit * 1;
+    await await conn.sendMessage(m.chat, {text: raid, mentions: [_user, m.sender]}, {quoted: m});
+    /*conn.sendMessage(
     _user,
     {
       text: `*❕@${m.sender.split("@")[0]} TE ACABA DE ROBAR!*`,
@@ -55,10 +40,11 @@ await await conn.sendMessage(
     },
     { quoted: m }
   );*/
-  global.db.data.users[m.sender].lastrob = new Date() * 1;
-}
-catch {  
-await m.reply(`*[❕] ERROR, POR FAVOR INTÉNTELO DE NUEVO, SEGURAMENTE EL USUARIO ESTÁ AFK*`)}}
+    global.db.data.users[m.sender].lastrob = new Date() * 1;
+  } catch {
+    await m.reply(`*[❕] ERROR, POR FAVOR INTÉNTELO DE NUEVO, SEGURAMENTE EL USUARIO ESTÁ AFK*`);
+  }
+};
 
 handler.help = ["saquear [@user]"];
 handler.tags = ["rpg"];
@@ -79,7 +65,6 @@ function msToTime(duration) {
 
   return hours + " Hora(s) " + minutes + " Minuto(s)";
 }
-
 
 /*import MessageType from '@adiwajshing/baileys'
 
@@ -167,7 +152,5 @@ function msToTime(duration) {
   
     return hours + " Hora(s) " + minutes + " Minuto(s)"
   }*/
-
-
 
 //By DIEGO-OFC

@@ -1,6 +1,6 @@
-let handler = async (m, { conn, usedPrefix }) => {
-let command = 'phmaker'
-m.reply(`*[❗𝐈𝐍𝐅𝐎❗] ¿𝙲𝙾𝙼𝙾 𝚄𝚂𝙰𝚁 𝙴𝚂𝚃𝙴 𝙲𝙾𝙼𝙰𝙽𝙳𝙾?*
+let handler = async (m, {conn, usedPrefix}) => {
+  let command = "phmaker";
+  m.reply(`*[❗𝐈𝐍𝐅𝐎❗] ¿𝙲𝙾𝙼𝙾 𝚄𝚂𝙰𝚁 𝙴𝚂𝚃𝙴 𝙲𝙾𝙼𝙰𝙽𝙳𝙾?*
 —◉ #phmaker (opcion) <responder / etiquetar a una imagen>
 
 *𝙴𝙹𝙴𝙼𝙿𝙻𝙾:*
@@ -433,6 +433,7 @@ m.reply(`*[❗𝐈𝐍𝐅𝐎❗] ¿𝙲𝙾𝙼𝙾 𝚄𝚂𝙰𝚁 𝙴𝚂�
 ° ඬ⃟💫 ${usedPrefix + command} worker-by-the-billboard
 ° ඬ⃟💫 ${usedPrefix + command} woven-sketch
 ° ඬ⃟💫 ${usedPrefix + command} xmas_tree
-° ඬ⃟💫 ${usedPrefix + command} yellow_wall`)}
-handler.command = /^(phmakerlist)$/i
-export default handler
+° ඬ⃟💫 ${usedPrefix + command} yellow_wall`);
+};
+handler.command = /^(phmakerlist)$/i;
+export default handler;

@@ -1,36 +1,59 @@
-
 /********************************************
 *         DORRAT-BOT-MD BY DIEGO-OFC        *
 /********************************************/
-import moment from 'moment-timezone'
-import fs, { promises } from 'fs'
-import fetch from 'node-fetch'
-let handler = async (m, { conn, usedPrefix, command, args, usedPrefix: _p, __dirname, isOwner, text, isAdmin, isROwner }) => {
-let vn = './media/menu.mp3'
-let d = new Date(new Date + 3600000)
-let locale = 'es'
-let week = d.toLocaleDateString(locale, { weekday: 'long' })
-let date = d.toLocaleDateString(locale, { day: 'numeric', month: 'long', year: 'numeric' })
-let _uptime = process.uptime() * 1000
-let uptime = clockString(_uptime)
-let {money} = global.db.data.users[m.sender]
-let { exp, limit, dolares, level, role } = global.db.data.users[m.sender]
-let rtotalreg = Object.values(global.db.data.users).filter(user => user.registered == true).length 
-let more = String.fromCharCode(8206)
-let readMore = more.repeat(850)   
-let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
-let mentionedJid = [who]
-let username = conn.getName(who)
-let imagenMEnu = ['https://i.imgur.com/1qOn8Vw.jpg', 'https://i.imgur.com/vExxeYz.jpg']
-let db = './galeria/menudorrat3.jpg'
-let pp = './galeria/dorratmini.mp4'
-let fkontak = { "key": { "participants":"0@s.whatsapp.net", "remoteJid": "status@broadcast", "fromMe": false, "id": "Halo" }, "message": { "contactMessage": { "vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD` }}, "participant": "0@s.whatsapp.net" }
-let fsizedoc = '1'.repeat(10)
-let adReply = { fileLength: fsizedoc, seconds: fsizedoc, contextInfo: { forwardingScore: fsizedoc, externalAdReply: { showAdAttribution: true, title: wm, body: '👋 ' + username, mediaUrl: yt, description: 'Hola', previewType: 'PHOTO', thumbnail: await(await fetch(imagenMEnu.getRandom())).buffer(), sourceUrl: menulinks.getRandom() }}}
-m.reply(`[ 𝐂𝐀𝐑𝐆𝐀𝐍𝐃𝐎 𝐌𝐄𝐍𝐔... ]`)
-//no me roben la decoracion, no tengo creatividad
+import moment from "moment-timezone";
+import fetch from "node-fetch";
+let handler = async (m, {conn, usedPrefix, command, args, usedPrefix: _p, __dirname, isOwner, text, isAdmin, isROwner}) => {
+  let d = new Date(new Date() + 3600000);
+  let locale = "es";
+  let week = d.toLocaleDateString(locale, {weekday: "long"});
+  let date = d.toLocaleDateString(locale, {day: "numeric", month: "long", year: "numeric"});
+  let _uptime = process.uptime() * 1000;
+  let uptime = clockString(_uptime);
+  let {money} = global.db.data.users[m.sender];
+  let {exp, limit, dolares, level, role} = global.db.data.users[m.sender];
+  let rtotalreg = Object.values(global.db.data.users).filter((user) => user.registered == true).length;
+  let more = String.fromCharCode(8206);
+  let readMore = more.repeat(850);
+  let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender;
+  let mentionedJid = [who];
+  let username = conn.getName(who);
+  let imagenMEnu = ["https://i.imgur.com/1qOn8Vw.jpg", "https://i.imgur.com/vExxeYz.jpg"];
+  let db = "./galeria/menudorrat3.jpg";
+  let pp = "./galeria/dorratmini.mp4";
+  let fkontak = {
+    key: {participants: "0@s.whatsapp.net", remoteJid: "status@broadcast", fromMe: false, id: "Halo"},
+    message: {
+      contactMessage: {
+        vcard: `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split("@")[0]}:${
+          m.sender.split("@")[0]
+        }\nitem1.X-ABLabel:Ponsel\nEND:VCARD`,
+      },
+    },
+    participant: "0@s.whatsapp.net",
+  };
+  let fsizedoc = "1".repeat(10);
+  let adReply = {
+    fileLength: fsizedoc,
+    seconds: fsizedoc,
+    contextInfo: {
+      forwardingScore: fsizedoc,
+      externalAdReply: {
+        showAdAttribution: true,
+        title: wm,
+        body: "👋 " + username,
+        mediaUrl: yt,
+        description: "Hola",
+        previewType: "PHOTO",
+        thumbnail: await (await fetch(imagenMEnu.getRandom())).buffer(),
+        sourceUrl: menulinks.getRandom(),
+      },
+    },
+  };
+  m.reply(`[ 𝐂𝐀𝐑𝐆𝐀𝐍𝐃𝐎 𝐌𝐄𝐍𝐔... ]`);
+  //no me roben la decoracion, no tengo creatividad
 
-let menuA = `
+  let menuA = `
 *╭━━❍𝐃𝐎𝐑𝐑𝐀𝐓-𝐁𝐎𝐓-𝐌𝐃❍━━╮*
 *┃ ╭━━━━━━━━━━━━━━━━╮*
 *┃ ┃ ╭┈────────────╮*
@@ -50,9 +73,9 @@ let menuA = `
 *┃┃ ⋄ LENGUAJE » 𝐄𝐒𝐏𝐀𝐍̃𝐎𝐋*
 *┃┃ ⋄ USUARIOS » ${Object.keys(global.db.data.users).length}*
 *┃╰━━━━━━━━━━━━━━━━╾•*
-*╰━━━╼𝐃𝐎𝐑𝐑𝐀𝐓-𝐁𝐎𝐓-𝐌𝐃╾━━━╯*`.trim()
+*╰━━━╼𝐃𝐎𝐑𝐑𝐀𝐓-𝐁𝐎𝐓-𝐌𝐃╾━━━╯*`.trim();
 
-let menuB = `
+  let menuB = `
 *═〔 INFO DEL USUARIO 〕⬣═*
 *║👤 NOMBRE: ${username}*
 *║🧰 EXPERIENCIA ➟ ${exp}*
@@ -513,74 +536,75 @@ let menuB = `
 ║ ❒ 𝐃𝐎𝐑𝐑𝐀𝐓-𝐁𝐎𝐓-𝐌𝐃     
 ║ ❒ 𝐁𝐘 𝐃𝐈𝐄𝐆𝐎-𝐎𝐅𝐂       
 ╚══════════════════╝
-`.trim()
-await conn.sendButton(m.chat, menuA, menuB,  db, [
-['𝗚𝗥𝗨𝗣𝗢𝗦', `#grupos`],
-['𝗗𝗢𝗡𝗔𝗥', `#donar`]
-], m)
-const sections = [
-{
-title: `𝐈𝐍𝐅𝐎𝐑𝐌𝐀𝐂𝐈𝐎𝐍`,
-rows: [
-{title: "/grupos", description: "muestra los grupos del bot", rowId: `${usedPrefix}grupos`},
-{title: "/estado", description: "para ver el estado del bot", rowId: `${usedPrefix}estado`},
-{title: "/terminos", description: "para leer los términos y condiciones del bot", rowId: `${usedPrefix}términos`},
-{title: "/instalarbot", description: "información para instalar al bot", rowId: `${usedPrefix}instalarbot`},
-{title: "/infobot", description: "informacion del bot", rowId: `${usedPrefix}infobot`},
-{title: "/grouplist", description: "muestra los grupos en donde está el bot", rowId: `${usedPrefix}grouplist`},
-{title: "/owner", description: "muestra los creadores del bot", rowId: `${usedPrefix}owner`},
-{title: "/script", description: "muestra el github del bot", rowId: `${usedPrefix}sc`},
-]}, ]
-const listMessage = {
-text: wm3,
-footer: `𝙼𝙴𝙽𝚄 𝙳𝙴𝚂𝙿𝙻𝙴𝙶𝙰𝙱𝙻𝙴`,
-title: null,
-buttonText: "selecionar", 
-sections }
+`.trim();
+  await conn.sendButton(
+    m.chat,
+    menuA,
+    menuB,
+    db,
+    [
+      ["𝗚𝗥𝗨𝗣𝗢𝗦", `#grupos`],
+      ["𝗗𝗢𝗡𝗔𝗥", `#donar`],
+    ],
+    m
+  );
+  const sections = [
+    {
+      title: `𝐈𝐍𝐅𝐎𝐑𝐌𝐀𝐂𝐈𝐎𝐍`,
+      rows: [
+        {title: "/grupos", description: "muestra los grupos del bot", rowId: `${usedPrefix}grupos`},
+        {title: "/estado", description: "para ver el estado del bot", rowId: `${usedPrefix}estado`},
+        {title: "/terminos", description: "para leer los términos y condiciones del bot", rowId: `${usedPrefix}términos`},
+        {title: "/instalarbot", description: "información para instalar al bot", rowId: `${usedPrefix}instalarbot`},
+        {title: "/infobot", description: "informacion del bot", rowId: `${usedPrefix}infobot`},
+        {title: "/grouplist", description: "muestra los grupos en donde está el bot", rowId: `${usedPrefix}grouplist`},
+        {title: "/owner", description: "muestra los creadores del bot", rowId: `${usedPrefix}owner`},
+        {title: "/script", description: "muestra el github del bot", rowId: `${usedPrefix}sc`},
+      ],
+    },
+  ];
+  const listMessage = {
+    text: wm3,
+    footer: `𝙼𝙴𝙽𝚄 𝙳𝙴𝚂𝙿𝙻𝙴𝙶𝙰𝙱𝙻𝙴`,
+    title: null,
+    buttonText: "selecionar",
+    sections,
+  };
 
- conn.sendMessage(m.chat, listMessage, {quoted: fkontak})	
+  conn.sendMessage(m.chat, listMessage, {quoted: fkontak});
+};
+
+handler.command = /^(menucompleto|menu completo|allmenu|menú|help|menu)$/i;
+handler.exp = 50;
+handler.fail = null;
+export default handler;
+function clockString(ms) {
+  let h = isNaN(ms) ? "--" : Math.floor(ms / 3600000);
+  let m = isNaN(ms) ? "--" : Math.floor(ms / 60000) % 60;
+  let s = isNaN(ms) ? "--" : Math.floor(ms / 1000) % 60;
+  return [h, m, s].map((v) => v.toString().padStart(2, 0)).join(":");
 }
 
-handler.command = /^(menucompleto|menu completo|allmenu|menú|help|menu)$/i
-handler.exp = 50
-handler.fail = null
-export default handler
-function clockString(ms) {
-let h = isNaN(ms) ? '--' : Math.floor(ms / 3600000)
-let m = isNaN(ms) ? '--' : Math.floor(ms / 60000) % 60
-let s = isNaN(ms) ? '--' : Math.floor(ms / 1000) % 60
-return [h, m, s].map(v => v.toString().padStart(2, 0)).join(':')}
-
 function ucapan() {
+  const time = moment.tz("America/Los_Angeles").format("HH"); //America/Los_Angeles  Asia/Jakarta   America/Toronto
 
-  const time = moment.tz('America/Los_Angeles').format('HH')  //America/Los_Angeles  Asia/Jakarta   America/Toronto
-
-  let res = "🌉Buenas madrugadas"
+  let res = "🌉Buenas madrugadas";
 
   if (time >= 4) {
-
-    res = "🌇Buenos Días"
-
+    res = "🌇Buenos Días";
   }
 
   if (time >= 11) {
-
-    res = "🏙️Buenas Tardes"
-
+    res = "🏙️Buenas Tardes";
   }
 
   if (time >= 15) {
-
-    res = "🌆Buenas tardes"
-
+    res = "🌆Buenas tardes";
   }
 
   if (time >= 17) {
-
-    res = "🌃Buenas noches"
-
+    res = "🌃Buenas noches";
   }
 
-  return res
-
+  return res;
 }
