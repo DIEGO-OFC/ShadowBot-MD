@@ -1,4 +1,4 @@
-let handler = async (m, {conn, usedprefix}) => {
+let handler = async (m, {conn}) => {
   let who = m.quoted ? m.quoted.sender : m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender;
   conn.sendFile(
     m.chat,
