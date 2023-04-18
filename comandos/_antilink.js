@@ -6,7 +6,6 @@ export async function before(m, {isAdmin, isBotAdmin}) {
   let db = imagen5;
   let delet = m.key.participant;
   let bang = m.key.id;
-  let bot = global.db.data.settings[this.user.jid] || {};
   const isGroupLink = linkRegex.exec(m.text);
   const grupo = `https://chat.whatsapp.com`;
   if (isAdmin && chat.antiLink && m.text.includes(grupo)) return m.reply("*𝙷𝙴𝚈!! 𝙴𝙻 𝙰𝙽𝚃𝙸𝙻𝙸𝙽𝙺 𝙴𝚂𝚃𝙰 𝙰𝙲𝚃𝙸𝚅𝙾, 𝙿𝙴𝚁𝙾 𝙴𝚁𝙴𝚂 𝚄𝙽 𝙰𝙳𝙼𝙸𝙽 🤑, 𝚂𝙰𝙻𝚅𝙰𝙳𝙾/𝙰!*");
