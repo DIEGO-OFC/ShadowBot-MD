@@ -13,22 +13,14 @@ Gracias por usar el bot. Si deseas volver a escanear el código QR, borra la car
 - No me hago responsable del mal uso que puedas darle al bot.
 - Los números del bot oficial son: wa.me/573122695406 o wa.me/240555351060
 - Bot creado para la diversión de los usuarios.
-
 **DORR∆T-BOT-MD CREATE BY DIEGO-OFC**
-
 ### Grupo oficial
-
 Únete al grupo oficial para obtener ayuda:
-
 https://chat.whatsapp.com/CrsOmirjZNYKrvnQNT98Oo
-
 Gracias por leer.
-
 **—◉ 𝚃𝚄𝚃𝙾𝚁𝙸𝙰𝙻 𝚃𝙴𝚁𝙼𝚄𝚇:**
 https://youtu.be/DKo7PO2ta4o
-
 **—◉ 𝙲𝙾𝙼𝙰𝙽𝙳𝙾𝚂 𝚃𝙴𝚁𝙼𝚄𝚇**
-
 ```bash
 cd
 termux-setup-storage
@@ -47,7 +39,5 @@ npm install
 npm update
 npm start
 ```
-
 **Cómo cambió el bot sin perder los diamantes y xp?**
-
 Descarga la database.json y instala el nuevo bot, antes de encerderlo pones la database
