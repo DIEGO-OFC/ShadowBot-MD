@@ -1,5 +1,5 @@
 import fetch from "node-fetch";
-let handler = async (m, {conn, text, usedPrefix, command, args}) => {
+let handler = async (m, {conn, text, usedPrefix, command}) => {
   if (!text) throw `*[❗] 𝙸𝙽𝙶𝚁𝙴𝚂𝙰 𝙴𝙻 𝙽𝙾𝙼𝙱𝚁𝙴 𝙳𝙴 𝙰𝙻𝙶𝚄𝙽𝙰 𝙲𝙰𝚃𝙴𝙶𝙾𝚁𝙸𝙰 𝙳𝙴 𝙷𝙴𝙽𝚃𝙰𝙸, 𝙴𝙹𝙴𝙼𝙿𝙻𝙾: ${usedPrefix + command} miku*`;
   try {
     m.reply(global.wait);
