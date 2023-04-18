@@ -1,5 +1,5 @@
 let user = (a) => "@" + a.split("@")[0];
-function handler(m, {groupMetadata, command, conn, participants}) {
+function handler(m, {groupMetadata, command, conn}) {
   let ps = groupMetadata.participants.map((v) => v.id);
   let a = ps.getRandom();
   let b = ps.getRandom();
