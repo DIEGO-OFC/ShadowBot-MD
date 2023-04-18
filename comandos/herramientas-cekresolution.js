@@ -3,7 +3,7 @@
 import jimp from "jimp";
 import uploadImage from "../lib/uploadImage.js";
 
-let handler = async (m, {conn, usedPrefix}) => {
+let handler = async (m, {}) => {
   let q = m.quoted ? m.quoted : m;
   let mime = (q.msg || q).mimetype || "";
   if (!mime) throw "*[❕] POR FAVOR RESPONDE A UNA IMAGEN*";
