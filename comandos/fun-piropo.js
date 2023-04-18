@@ -1,6 +1,6 @@
 /* By https://github.com/DIEGO-OFC/DORRAT-BOT-MD */
 
-let handler = async (m, {conn, text}) => {
+let handler = async (m, {}) => {
   m.reply(`*╔═════════════════════════════*\n➢ *"${pickRandom(global.piropo)}"*\n - *_By DIEGO-0FC©_*\n*╚═════════════════════════════*`);
 };
 handler.tags = ["frases"];
