@@ -1,4 +1,4 @@
-let handler = async (m, {conn}) => {
+let handler = async (m, {}) => {
   m.reply(global.mc);
 };
 handler.command = /^(MC-SERVER|MC-SERVER|mc-server)$/i;
