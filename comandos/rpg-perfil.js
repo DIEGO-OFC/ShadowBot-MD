@@ -1,18 +1,17 @@
 import {xpRange} from "../lib/levelling.js";
 import {createHash} from "crypto";
 import PhoneNumber from "awesome-phonenumber";
-let handler = async (m, {conn, usedPrefix, command, participants}) => {
-  let {dolares, joincount} = global.db.data.users[m.sender];
-  let {exp, limit, level, role} = global.db.data.users[m.sender];
-  let {min, xp, max} = xpRange(level, global.multiplier);
-  let rtotalreg = Object.values(global.db.data.users).filter((user) => user.registered == true).length;
+let handler = async (m, {conn, command}) => {
+  let {dolares} = global.db.data.users[m.sender];
+  let {level, role} = global.db.data.users[m.sender];
+  let {xp} = xpRange(level, global.multiplier);
   let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender;
   let pp = await conn.profilePictureUrl(who, "image").catch((_) => "https://telegra.ph/file/9b1353deceded7f387713.jpg");
   if (!(who in global.db.data.users)) throw `El usuario que está mencionando no está registrado en mi base de datos`;
   try {
   } catch (e) {
   } finally {
-    let {name, limit, lastclaim, registered, regTime, age} = global.db.data.users[who];
+    let {name, limit, registered, age} = global.db.data.users[who];
     let username = conn.getName(who);
     let prem = global.prems.includes(who.split`@`[0]);
     let sn = createHash("md5").update(who).digest("hex");
