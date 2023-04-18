@@ -1,6 +1,5 @@
 import fetch from "node-fetch";
 let handler = async (m, {text, usedPrefix, command}) => {
-  let name = await conn.getName(m.sender);
   if (!text) {
     conn.reply(
       m.chat,
