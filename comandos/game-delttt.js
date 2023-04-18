@@ -1,5 +1,4 @@
-import MessageType from "@adiwajshing/baileys";
-let handler = async (m, {conn, usedPrefix, command}) => {
+let handler = async (m, {conn, usedPrefix}) => {
   let room = Object.values(conn.game).find((room) => room.id.startsWith("tictactoe") && [room.game.playerX, room.game.playerO].includes(m.sender));
   if (room == undefined)
     return conn.sendButton(
