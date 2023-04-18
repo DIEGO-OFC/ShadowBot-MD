@@ -1,6 +1,6 @@
 import {xpRange} from "../lib/levelling.js";
 
-let handler = async (m, {conn, usedPrefix, command, args, usedPrefix: _p, __dirname, isOwner, text, isAdmin, isROwner}) => {
+let handler = async (m, {conn, usedPrefix, usedPrefix: _p, text}) => {
   let {exp, limit, level, role} = global.db.data.users[m.sender];
 
   let {min, xp, max} = xpRange(level, global.multiplier);
@@ -146,8 +146,6 @@ rows: [
   let pp = "./Menu2.jpg";
 
   let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender;
-
-  let mentionedJid = [who];
 
   let username = conn.getName(who);
 
