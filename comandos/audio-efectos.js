@@ -2,7 +2,7 @@ import {unlinkSync, readFileSync} from "fs";
 import {join} from "path";
 import {exec} from "child_process";
 
-let handler = async (m, {conn, args, __dirname, usedPrefix, command}) => {
+let handler = async (m, {conn, __dirname, usedPrefix, command}) => {
   try {
     let q = m.quoted ? m.quoted : m;
     let mime = (m.quoted ? m.quoted : m.msg).mimetype || "";
@@ -23,7 +23,7 @@ let handler = async (m, {conn, args, __dirname, usedPrefix, command}) => {
       let ran = getRandom(".mp3");
       let filename = join(__dirname, "../tmp/" + ran);
       let media = await q.download(true);
-      exec(`ffmpeg -i ${media} ${set} ${filename}`, async (err, stderr, stdout) => {
+      exec(`ffmpeg -i ${media} ${set} ${filename}`, async (err) => {
         await unlinkSync(media);
         if (err) throw `_*Error!*_`;
         let buff = await readFileSync(filename);
