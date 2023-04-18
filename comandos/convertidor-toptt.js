@@ -1,5 +1,5 @@
 import {toPTT} from "../lib/converter.js";
-let handler = async (m, {conn, usedPrefix, command}) => {
+let handler = async (m, {conn}) => {
   let q = m.quoted ? m.quoted : m;
   let mime = (m.quoted ? m.quoted : m.msg).mimetype || "";
   if (!/video|audio/.test(mime)) throw `*[❗𝐈𝐍𝐅𝐎❗] 𝚁𝙴𝚂𝙿𝙾𝙽𝙳𝙰 𝙰𝙻 𝚅𝙸𝙳𝙴𝙾 𝙾 𝙰𝚄𝙳𝙸𝙾 𝚀𝚄𝙴 𝙳𝙴𝚂𝙴𝙴 𝙲𝙾𝙽𝚅𝙴𝚁𝚃𝙸𝚁 𝙰 𝙽𝙾𝚃𝙰 𝙳𝙴 𝚅𝙾𝚉*`;
