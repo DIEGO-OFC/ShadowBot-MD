@@ -1,6 +1,6 @@
 import {googleImage} from "@bochilteam/scraper";
 import fetch from "node-fetch";
-let handler = async (m, {text, usedPrefix, command, conn}) => {
+let handler = async (m, {text, command, conn}) => {
   if (!text) throw `*[❗] 𝙸𝙽𝙶𝚁𝙴𝙴𝚂𝙴 𝙴𝙻 𝙽𝙾𝙼𝙱𝚁𝙴 𝙳𝙴 𝙻𝙰 𝙰𝙿𝙺 𝚀𝚄𝙴 𝚀𝚄𝙸𝙴𝚁𝙰 𝙱𝚄𝚂𝙲𝙰𝚁*`;
   const res = await googleImage(text);
   let image = res.getRandom();
