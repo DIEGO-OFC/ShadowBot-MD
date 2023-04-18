@@ -1,4 +1,4 @@
-let handler = async (m, {conn, args, isPrems, isOwner}) => {
+let handler = async (m, {conn, args}) => {
   if (!args[0]) return m.reply("Link?");
   const sections = [
     {
