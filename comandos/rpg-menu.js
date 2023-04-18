@@ -1,5 +1,5 @@
 import {xpRange} from "../lib/levelling.js";
-let handler = async (m, {conn, usedPrefix, command, args, usedPrefix: _p, __dirname, isOwner, text, isAdmin, isROwner}) => {
+let handler = async (m, {conn, usedPrefix, usedPrefix: _p, text}) => {
   const {levelling} = "../lib/levelling.js";
   //let handler = async (m, { conn, usedPrefix, usedPrefix: _p, __dirname, text }) => {
 
@@ -82,7 +82,6 @@ rows: [
   //let name = await conn.getName(m.sender)
   let pp = "./Menu2.jpg";
   let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender;
-  let mentionedJid = [who];
   let username = conn.getName(who);
   //let user = global.db.data.users[m.sender]
   //user.registered = false
