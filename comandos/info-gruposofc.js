@@ -1,5 +1,5 @@
 let media = "./Menu2.jpg";
-let handler = async (m, {conn, command}) =>
+let handler = async (m, {conn}) =>
   conn.sendButton(
     m.chat,
     `
