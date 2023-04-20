@@ -1,8 +1,11 @@
 const prueba1 = `hola`;
 const prueba2 = `xd`;
 
+const pruebaA = [prueba1]
 
-const prueba = pickRandom([prueba1, prueba2])
+ 
+
+
 
 export default prueba;
 
