@@ -1,5 +1,5 @@
 
-import prueba from '../galeria/prueba.js'
+import pruebaA from '../galeria/prueba.js'
 
 let handler = async (m, {text, command, conn}) => {
 
