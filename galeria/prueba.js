@@ -1,4 +1,4 @@
-comst prueba1 = `hola`
-comat prueba2 = `xd`
+const prueba1 = `hola`
+const prueba2 = `xd`
 
 export default pruena
