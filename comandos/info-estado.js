@@ -12,7 +12,7 @@ let handler = async (m, {conn}) => {
   let _uptime = process.uptime() * 1000;
   let uptime = clockString(_uptime);
   let taguser = "@" + m.sender.split("@s.whatsapp.net")[0];
-  let pp = "./menu2.jpg";
+  let pp = './menu2.jpg';
   let db = `╔═[ *∆.𝑫𝑶𝑹𝑹𝑯∆𝑻-𝑩𝑶𝑻.∆* ]
 ║ *➤ 𝙷𝙾𝙻𝙰 ${taguser}*
 ║
