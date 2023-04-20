@@ -1,4 +1,4 @@
-const pruebaA = `hola`;
+const pruebaA = (`hola`);
 const prueba2 = `xd`;
 
 
