@@ -1,7 +1,7 @@
-const prueba1 = `hola`;
+const pruebaA = `hola`;
 const prueba2 = `xd`;
 
-const pruebaA = [prueba1]
+
 const pruebaB = [prueba2]
 export default {
 
