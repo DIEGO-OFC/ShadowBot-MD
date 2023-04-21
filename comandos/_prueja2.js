@@ -1,8 +1,8 @@
-import pruebaA from '../galeria/prueba.js'
+import prueba from '../galeria/prueba.js'
 
 let handler = async (m, {text, command, conn}) => {
 
-m.reply(pruebaA)}
+m.reply(prueba)}
 
 handler.command = ["prueba3"];
 
