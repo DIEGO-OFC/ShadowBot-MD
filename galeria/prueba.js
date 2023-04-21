@@ -1,6 +1,6 @@
-const prueba = (dorrat) => {
-let bb = `hola`;
-};
+const prueba = `gola`
+
+
 export default {prueba}
 function pickRandom(list) {
 
