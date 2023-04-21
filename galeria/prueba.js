@@ -1,4 +1,4 @@
-const Prueba = (dorrat) => {
+const prueba = (dorrat) => {
 let bb = `hola`;
 };
 export default {prueba}
