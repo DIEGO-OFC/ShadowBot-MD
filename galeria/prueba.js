@@ -1,5 +1,5 @@
-const prueba = (dorrat) => {
-let dorrat = `hola`;
+const Prueba = (dorrat) => {
+let bb = `hola`;
 };
 export default {prueba}
 function pickRandom(list) {
