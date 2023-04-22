@@ -1,5 +1,5 @@
 const prueba = `gola`
-const dorrat = prueba
+const dorrat = [prueba]
 
 export default dorrat;
 function pickRandom(list) {
