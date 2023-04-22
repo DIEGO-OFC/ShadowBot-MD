@@ -1,5 +1,6 @@
 async function prueba() {
-return `gola`
+let prueba = '' 
+return { prueba: `gola` }
 }
 
 export default { prueba }
