@@ -1,7 +1,4 @@
-async function prueba() {
-let prueba = '' 
-return { prueba: `gola` }
-}
+const prueba = `gola`
 
 export default { prueba }
 function pickRandom(list) {
