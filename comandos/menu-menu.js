@@ -47,9 +47,8 @@ let handler = async (m, {conn, usedPrefix, usedPrefix: _p}) => {
 *┃┃ ⋄ LENGUAJE » 𝐄𝐒𝐏𝐀𝐍̃𝐎𝐋*
 *┃┃ ⋄ USUARIOS » ${Object.keys(global.db.data.users).length}*
 *┃╰━━━━━━━━━━━━━━━━╾•*
-*╰━━━╼𝐃𝐎𝐑𝐑𝐀𝐓-𝐁𝐎𝐓-𝐌𝐃╾━━━╯*`.trim();
+*╰━━━╼𝐃𝐎𝐑𝐑𝐀𝐓-𝐁𝐎𝐓-𝐌𝐃╾━━━╯*
 
-  let menuB = `
 *═〔 INFO DEL USUARIO 〕⬣═*
 *║👤 NOMBRE: ${username}*
 *║🧰 EXPERIENCIA ➟ ${exp}*
@@ -511,17 +510,29 @@ let handler = async (m, {conn, usedPrefix, usedPrefix: _p}) => {
 ║ ❒ 𝐁𝐘 𝐃𝐈𝐄𝐆𝐎-𝐎𝐅𝐂       
 ╚══════════════════╝
 `.trim();
-  await conn.sendButton(
+  conn.sendMessage(
     m.chat,
-    menuA,
-    menuB,
-    db,
-    [
-      ["𝗚𝗥𝗨𝗣𝗢𝗦", `#grupos`],
-      ["𝗗𝗢𝗡𝗔𝗥", `#donar`],
-    ],
-    m
+    {
+      image: {
+        url: "",
+      },
+      caption: menuA,
+      contextInfo: {
+        mentionedJid: [m.sender],
+        externalAdReply: {
+          title: `MENU - COMPLETO`,
+          sourceUrl: "http://paypal.me/DorratBotOficial",
+          mediaType: 1,
+          showAdAttribution: true,
+          thumbnailUrl: "",
+        },
+      },
+    },
+    {
+      quoted: m,
+    }
   );
+
   const sections = [
     {
       title: `𝐈𝐍𝐅𝐎𝐑𝐌𝐀𝐂𝐈𝐎𝐍`,
