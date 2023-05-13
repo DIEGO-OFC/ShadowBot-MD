@@ -514,7 +514,7 @@ let handler = async (m, {conn, usedPrefix, usedPrefix: _p}) => {
     m.chat,
     {
       image: {
-        url: "",
+        url: "https://telegra.ph/file/d87bb48f283547ba5119d.jpg",
       },
       caption: menuA,
       contextInfo: {
@@ -524,7 +524,7 @@ let handler = async (m, {conn, usedPrefix, usedPrefix: _p}) => {
           sourceUrl: "http://paypal.me/DorratBotOficial",
           mediaType: 1,
           showAdAttribution: true,
-          thumbnailUrl: "",
+          thumbnailUrl: "https://telegra.ph/file/d87bb48f283547ba5119d.jpg",
         },
       },
     },
