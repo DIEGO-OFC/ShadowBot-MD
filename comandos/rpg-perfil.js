@@ -31,7 +31,7 @@ let handler = async (m, {conn, command}) => {
 conn.sendMessage(who, {text: `*❕ NUMERO DE SERIE: ${sn}*`}, {quoted: m});
   
 
-conn.sendMessage(
+await conn.sendMessage(
     m.chat,
     {
       image: {
