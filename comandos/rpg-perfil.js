@@ -28,6 +28,9 @@ let handler = async (m, {conn, command}) => {
 ║ *📦 REGISTRADO:* ${registered ? "Si" : "No"}
 ║ *💳 PREMIUM:* ${prem ? "Si" : "No"}
 ╚════ ≪ •❈• ≫ ════╝`;
+conn.sendMessage(who, {text: `*❕ NUMERO DE SERIE: ${sn}*`}, {quoted: m});
+  
+
 conn.sendMessage(
     m.chat,
     {
