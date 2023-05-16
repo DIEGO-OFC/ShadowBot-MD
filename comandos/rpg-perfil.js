@@ -28,10 +28,29 @@ let handler = async (m, {conn, command}) => {
 ║ *📦 REGISTRADO:* ${registered ? "Si" : "No"}
 ║ *💳 PREMIUM:* ${prem ? "Si" : "No"}
 ╚════ ≪ •❈• ≫ ════╝`;
-    conn.sendButton(m.chat, str, info, pp, [["🔰 MENU PRINCIPAL", "/menu"]], m);
-    conn.sendMessage(who, {text: `*❕ NUMERO DE SERIE: ${sn}*`}, {quoted: m});
-  }
-};
+conn.sendMessage(
+    m.chat,
+    {
+      image: {
+        url: "https://telegra.ph/file/7ec5032386dfe878f99ab.jpg",
+      },
+      caption: str,
+      contextInfo: {
+        mentionedJid: [m.sender],
+        externalAdReply: {
+          title: `RPG - PERFIL`,
+          sourceUrl: "http://paypal.me/DorratBotOficial",
+          mediaType: 1,
+          showAdAttribution: true,
+          thumbnailUrl: "https://telegra.ph/file/7ec5032386dfe878f99ab.jpg",
+        },
+      },
+    },
+    {
+      quoted: m,
+    }
+  );
+};    
 handler.help = ["profile [@user]"];
 handler.tags = ["xp"];
 handler.command = /^perfil|profile?$/i;
