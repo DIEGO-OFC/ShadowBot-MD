@@ -92,10 +92,10 @@ let handler = async (m, {conn, usedPrefix}) => {
     }
      
      
-handler.help = ["infobot"];
-handler.tags = ["info", "tools"];
+handler.help = ["infobot"]
+handler.tags = ["info", "tools"]
 handler.command = /^(infobot|informacionbot|infodorrat|informacióndorrat|informaciondorrats)$/i;
-export default handler;
+export default handler
 function clockString(ms) {
   let h = Math.floor(ms / 3600000);
   let m = Math.floor(ms / 60000) % 60;
