@@ -90,7 +90,7 @@ let handler = async (m, {conn, usedPrefix}) => {
       quoted: m,
 
     }
-     
+     }
      
 handler.help = ["infobot"]
 handler.tags = ["info", "tools"]
