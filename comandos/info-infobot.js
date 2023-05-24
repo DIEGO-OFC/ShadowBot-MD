@@ -49,7 +49,7 @@ let handler = async (m, {conn, usedPrefix}) => {
 *╠═〘 Dorrat-Bot-MD 〙 ═*
 `.trim();
   
-  await conn.sendMessage(
+   conn.sendMessage(
 
     m.chat,
 
