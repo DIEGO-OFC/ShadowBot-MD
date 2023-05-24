@@ -26,8 +26,8 @@ let handler = async (m, {conn, usedPrefix}) => {
     memory_used: ram.used,
   };
   let info = `
-╠═〘 𝐈𝐍𝐅𝐎 𝐃𝐄𝐋 𝐁𝐎𝐓 〙 ═`.trim();
-  let info2 = `
+╠═〘 𝐈𝐍𝐅𝐎 𝐃𝐄𝐋 𝐁𝐎𝐓 〙 ═
+
 ╠
 ║❒  [👑] *CREADOR: DIEGO-OFC*
 ║❒  [#️⃣] *NUMERO: +593959425714*
@@ -48,10 +48,48 @@ let handler = async (m, {conn, usedPrefix}) => {
 ╠
 *╠═〘 Dorrat-Bot-MD 〙 ═*
 `.trim();
-  conn.sendButton(m.chat, info, info2, pp, [["[ GRUPOS ]", "#grupos"]], m);
+  
+  await conn.sendMessage(
 
-  //conn.reply(m.chat, info, m)
-};
+    m.chat,
+
+    {
+
+      image: {
+
+        url: "https://telegra.ph/file/7ec5032386dfe878f99ab.jpg",
+
+      },
+
+      caption: info,
+
+      contextInfo: {
+
+        mentionedJid: [m.sender],
+
+        externalAdReply: {
+
+          title: `INFO - BOT`,
+
+          sourceUrl: "http://paypal.me/DorratBotOficial",
+
+          mediaType: 1,
+
+          showAdAttribution: true,
+
+          thumbnailUrl: "https://telegra.ph/file/7ec5032386dfe878f99ab.jpg",
+
+        },
+
+      },
+
+    },
+
+    {
+
+      quoted: m,
+
+    }}
 handler.help = ["infobot"];
 handler.tags = ["info", "tools"];
 handler.command = /^(infobot|informacionbot|infodorrat|informacióndorrat|informaciondorrats)$/i;
