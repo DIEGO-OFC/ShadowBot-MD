@@ -289,7 +289,7 @@ ${Object.keys(listItems)
 *💫 Semanalmente : ${new Date() - user.lastweekly < 259200000 ? "❌" : `✅ _${usedPrefix}cadasemana_`}*
 *🏅 Mensual : ${new Date() - user.lastmonthly < 432000000 ? "❌" : `✅ _${usedPrefix}cadames_`}*`)
     
-      );
+      
     user[paymentMethod] -= listItems[item][paymentMethod] * total;
     user[item] += total;
 
