@@ -4,7 +4,7 @@ let handler = async (m, {text}) => {
   user.afkReason = text;
   let afk2 = `*❍ MOTIVO (𝙰𝙵𝙺)${text ? ": " + text : ""}*\n❍ NO LO ETIQUETEN`;
   let afkinfo = `*DORRAT - AFK*\n\n*👤 USUARIO QUE ESTARA AFK: ${conn.getName(m.sender)}*`;
-  await conn.sendButton(m.chat, afkinfo, afk2, [["ok", `ok`]], m);
+  await m.reply(afkinfo)
 };
 handler.help = ["afk [alasan]"];
 handler.tags = ["main"];
