@@ -309,23 +309,13 @@ ${Object.keys(listItems)
     user[paymentMethod] -= listItems[item][paymentMethod] * total;
     user[item] += total;
 
-    return conn.sendButton(
-      m.chat,
-      `*––『 COMPRADO | BOUGHT 』––*`,
-      `${conn.getName(m.sender)} 
+    return conn.reply(`
+      *––『 COMPRADO | BOUGHT 』––*
+      ${conn.getName(m.sender)} 
 *𝙷𝙰𝚂 𝙲𝙾𝙼𝙿𝚁𝙰𝙳𝙾 ${item} » ${total} ${global.rpgshop.emoticon(item)}*.
 *--------------------------------------------*
 *𝙶𝙰𝚂𝚃𝙾: ${listItems[item][paymentMethod] * total} ${global.rpgshop.emoticon(paymentMethod)}*
-*𝙰𝙷𝙾𝚁𝙰 𝚃𝙸𝙴𝙽𝙴: ${user[item]} ${global.rpgshopp.emoticon(item)}*
-`.trim(),
-      imgr + "COMPRA EXITOSA : DONE",
-      [
-        [`👝 𝙲𝙰𝚁𝚃𝙴𝚁𝙰`, `${usedPrefix}cartera`],
-        [`🎒 𝙸𝙽𝚅𝙴𝙽𝚃𝙰𝚁𝙸𝙾`, `${usedPrefix}inventory`],
-      ],
-      fkontak,
-      m
-    );
+*𝙰𝙷𝙾𝚁𝙰 𝚃𝙸𝙴𝙽𝙴: ${user[item]} ${global.rpgshopp.emoticon(item)}`)
   } else {
     if (user[item] < total)
       return conn.sendButton(
