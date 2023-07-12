@@ -37,7 +37,7 @@ let handler = async (m, {conn, text, command, usedPrefix}) => {
     "international"
   )}\n*RAZÓN: ${chatstext}*`;
   users[who].banned = true;
-  await conn.sendButton(m.chat, banea, banu, pp, [["𝙼𝙴𝙽𝚄", `#menusimple`]], m);
+  await m.reply(${banea} ${banu})
 };
 handler.help = ["banuser"];
 handler.tags = ["owner"];
