@@ -20,7 +20,7 @@ let handler = async (m, {conn, isPrems}) => {
   
   global.db.data.users[m.sender].lastdiamantes = new Date() * 1;
 
-  m.reply(`*${minar} *${d} DIAMANTES*`)
+  m.reply(`*${minar} ${d} DIAMANTES*`)
 };
 handler.help = ["minar"];
 handler.tags = ["diamantes"];
