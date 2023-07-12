@@ -281,18 +281,10 @@ ${Object.keys(listItems)
         )} Para Comprar ${total} ${global.rpgshop.emoticon(item)}.*
 
 *Solo tienes ${user[paymentMethod]} ${global.rpgshop.emoticon(paymentMethod)}.*
-*–––––––––––––––––––––––––*
-*Misiones para Obtener Recursos*
-*Quests to Obtain Resources*
-*⛰️ Aventura : » ${new Date() - user.lastadventure < 1500000 ? "❌" : `✅ _${usedPrefix}aventura_`}*
-*♻️ Cada hora : » ${new Date() - user.lasthourly < 3600000 ? "❌" : `✅ _${usedPrefix}cadahora_`}*
-*💫 Semanalmente : ${new Date() - user.lastweekly < 259200000 ? "❌" : `✅ _${usedPrefix}cadasemana_`}*
-*🏅 Mensual : ${new Date() - user.lastmonthly < 432000000 ? "❌" : `✅ _${usedPrefix}cadames_`}*`)
+*–––––––––––––––––––––––––*`)
     
       
-    user[paymentMethod] -= listItems[item][paymentMethod] * total;
-    user[item] += total;
-
+    
     return conn.reply(`
       *––『 COMPRADO | BOUGHT 』––*
       ${conn.getName(m.sender)} 
