@@ -32,7 +32,7 @@ let handler = async (m, {conn, args, usedPrefix, __dirname}) => {
   let count = Math.max(1, Math.min(Number.MAX_SAFE_INTEGER, (isNumber(args[0]) && parseInt(args[0])) || Math.round((90 - user.health) / heal))) * 1;
 
   if (user.potion < count)
-    return conn.reply(
+    return conn.reply(`
 ${htki} 𝚂𝙸𝙽 𝙿𝙾𝙲𝙸𝙾𝙽𝙴𝚂 ${htka}
 𝙽𝙴𝙲𝙴𝚂𝙸𝚃𝙰𝚂 ${count - user.potion} 𝙿𝙾𝙲𝙸𝙾𝙽 🥤 𝙿𝙰𝚁𝙰 𝙲𝚄𝚁𝙰𝚁𝚃𝙴
 𝚂𝙰𝙻𝚄𝙳 » ${user.health} ❤️
