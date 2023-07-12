@@ -274,10 +274,9 @@ ${Object.keys(listItems)
   if (command.toLowerCase() == "buy") {
     let paymentMethod = Object.keys(listItems[item]).find((v) => v in user);
     if (user[paymentMethod] < listItems[item][paymentMethod] * total)
-      return conn.sendButton(
-        m.chat,
-        `*–--『 𝙸𝙽𝚂𝚄𝙵𝙸𝙲𝙸𝙴𝙽𝚃𝙴𝚂 𝚁𝙴𝙲𝚄𝚁𝚂𝙾𝚂 』--–*`,
-        `*Necesitas ${listItems[item][paymentMethod] * total - user[paymentMethod]} ${global.rpgshop.emoticon(
+      return conn.reply(`
+        *–--『 𝙸𝙽𝚂𝚄𝙵𝙸𝙲𝙸𝙴𝙽𝚃𝙴𝚂 𝚁𝙴𝙲𝚄𝚁𝚂𝙾𝚂 』--–*
+        *Necesitas ${listItems[item][paymentMethod] * total - user[paymentMethod]} ${global.rpgshop.emoticon(
           paymentMethod
         )} Para Comprar ${total} ${global.rpgshop.emoticon(item)}.*
 
@@ -288,23 +287,8 @@ ${Object.keys(listItems)
 *⛰️ Aventura : » ${new Date() - user.lastadventure < 1500000 ? "❌" : `✅ _${usedPrefix}aventura_`}*
 *♻️ Cada hora : » ${new Date() - user.lasthourly < 3600000 ? "❌" : `✅ _${usedPrefix}cadahora_`}*
 *💫 Semanalmente : ${new Date() - user.lastweekly < 259200000 ? "❌" : `✅ _${usedPrefix}cadasemana_`}*
-*🏅 Mensual : ${new Date() - user.lastmonthly < 432000000 ? "❌" : `✅ _${usedPrefix}cadames_`}*`.trim(),
-        imgr + "RECURSOS BAJOS : LOW RESOURCES",
-        [
-          [
-            `𝗖𝗼𝗺𝗽𝗿𝗮𝗿 : ${listItems[item][paymentMethod] * total - user[paymentMethod]} ${global.rpgshopp.emoticon(paymentMethod)}`,
-            `${usedPrefix}buy ${paymentMethod} ${listItems[item][paymentMethod] * total - user[paymentMethod]}`,
-          ],
-          [
-            `𝙋𝙚𝙙𝙞𝙧 𝘼𝙮𝙪𝙙𝙖 `,
-            `${usedPrefix}pedirayuda *Por Favor alguien ayudeme con *${
-              listItems[item][paymentMethod] * total - user[paymentMethod]
-            } ${global.rpg.emoticon(paymentMethod)}.*
-*» AYUDA TRANSFIRIENDO:*
-*${usedPrefix}transfer ${paymentMethod} ${listItems[item][paymentMethod] * total - user[paymentMethod]} @${conn.getName(m.sender)}*`,
-          ],
-        ],
-        m
+*🏅 Mensual : ${new Date() - user.lastmonthly < 432000000 ? "❌" : `✅ _${usedPrefix}cadames_`}*`)
+    
       );
     user[paymentMethod] -= listItems[item][paymentMethod] * total;
     user[item] += total;
