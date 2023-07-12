@@ -4,7 +4,7 @@ let handler = async (m, {conn, isPrems}) => {
   if (new Date() - global.db.data.users[m.sender].lastwork < 600000)
     throw `*𝙴𝚜𝚝𝚊𝚜 𝚌𝚊𝚗𝚜𝚊𝚍𝚘, 𝚍𝚎𝚋𝚎𝚜 𝚍𝚎𝚜𝚌𝚊𝚗𝚜𝚊𝚛 𝚌𝚘𝚖𝚘 𝚖𝚒𝚗𝚒𝚖𝚘 ${msToTime(time - new Date())} 𝚙𝚊𝚛𝚊 𝚟𝚘𝚕𝚟𝚎𝚛 𝚊 𝚝𝚛𝚊𝚋𝚊𝚓𝚊𝚛!*`;
   let pp = "galeria/menudorrat3.jpg";
-  m.reply(`*${pickRandom(global.work)} $${d}* *DOLARES*`
+  m.reply(`*${pickRandom(global.work)} $${d}* *DOLARES*`)
   global.db.data.users[m.sender].dolares += d * 1;
   global.db.data.users[m.sender].lastwork = new Date() * 1;
 };
