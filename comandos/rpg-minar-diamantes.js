@@ -17,25 +17,10 @@ let handler = async (m, {conn, isPrems}) => {
   if (new Date() - global.db.data.users[m.sender].lastdiamantes < 600000)
     throw `*💟 Vuelva en ${msToTime(time - new Date())} para continuar minando ⛏️*`;
 
-  conn.sendHydrated(
-    m.chat,
-    `*${minar} ${d} 𝘿𝙞𝙖𝙢𝙖𝙣𝙩𝙚𝙨*`,
-    wm,
-    pp,
-    md,
-    "𝘿𝙤𝙧𝙧𝙖𝙩𝘽𝙤𝙩-𝙈𝘿",
-    null,
-    null,
-    [
-      ["𝙈𝙞𝙣𝙖𝙧 𝙀𝙓𝙋 ⚡", `.minar`],
-      ["𝙈𝙞𝙣𝙖𝙧 𝘿𝙤𝙧𝙧𝙖𝙩𝘾𝙤𝙞𝙣𝙨 💵", `.minar2`],
-      ["𝙑𝙤𝙡𝙫𝙚𝙧 𝙖𝙡 𝙈𝙚𝙣𝙪́ | 𝘽𝙖𝙘𝙠 𝙩𝙤 𝙈𝙚𝙣𝙪 ☘️", `.menu`],
-    ],
-    m
-  );
+  
   global.db.data.users[m.sender].lastdiamantes = new Date() * 1;
 
-  //m.reply(`*${minar} *${hasil} 𝙓𝙋*`)
+  m.reply(`*${minar} *${d} DIAMANTES*`)
 };
 handler.help = ["minar"];
 handler.tags = ["diamantes"];
