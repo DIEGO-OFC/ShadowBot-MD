@@ -1,6 +1,6 @@
 import fetch from "node-fetch";
 let handler = async (m, {conn, text, args, command, usedPrefix}) => {
-  if (!text) throw `_Ingresa el nombre del paquete npm_\n_Ejemplo_ : ${prefix}npmsearch whatsapp-web.js`;
+  if (!text) throw `_Ingresa el nombre del paquete npm_\n_Ejemplo_ : ${usedPrefix}npmsearch whatsapp-web.js`;
   let res = await fetch(`http://registry.npmjs.com/-/v1/search?text=${text}`);
   let {objects} = await res.json();
   if (!objects.length) return m.reply(`Paquete "${text}" no encontrado`);
