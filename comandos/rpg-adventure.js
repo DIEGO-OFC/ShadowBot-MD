@@ -2,7 +2,7 @@
 import fetch from "node-fetch";
 const cooldown = 300000; //3 minutos
 let handler = async (m, {usedPrefix, conn}) => {
-  try {
+  
     const fkontak = {
       key: {
         participants: "0@s.whatsapp.net",
@@ -345,10 +345,7 @@ let av = `${htki} 𝘼𝙑𝙀𝙉𝙏𝙐𝙍𝘼 ${htka}
 ${text}`.trim()
   
     user.lastadventure = new Date() * 1;
-  } catch {
-    conn.reply(m.chat, "*[❗𝐈𝐍𝐅𝐎❗] 𝙾𝙲𝚄𝚁𝚁𝙸𝙾 𝚄𝙽 𝙴𝚁𝚁𝙾𝚁, 𝙸𝙽𝚃𝙴𝙽𝚃𝙰𝙻𝙾 𝙳𝙴 𝙽𝚄𝙴𝚅𝙾, 𝚂𝙴𝙶𝚄𝚁𝙾 𝙻𝙰 𝙰𝙿𝙸 𝙽𝙾 𝙶𝙴𝙽𝙴𝚁𝙾 𝙻𝙰 𝙸𝙼𝙰𝙶𝙴𝙽*", m);
-  }
-};
+  } 
 handler.help = ["adventure"];
 handler.tags = ["rpg"];
 handler.command = /^(adventure|adv|aventura|aventurar)$/i;
