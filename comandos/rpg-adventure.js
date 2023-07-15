@@ -19,7 +19,7 @@ let handler = async (m, {usedPrefix, conn}) => {
       },
       participant: "0@s.whatsapp.net",
     };
-
+let pp = 'https://static-maps.yandex.ru/1.x/?lang=id-ID&ll=${kt[1][0].longitude},${kt[1][0].latitude}&z=12&l=map&size=600,300'
     let ct = [
       "AF",
       "AX",
@@ -340,11 +340,7 @@ let baja = `${htki} 𝘽𝘼𝙅𝘼 𝙎𝘼𝙇𝙐𝘿 ${htka}
         user[rewardItem] += total * 1;
         if (total) text += `\n» ${global.rpg.emoticon(rewardItem)} ${total}`;
       }
-     await conn.sendMessage(  
-      m.chat,  
-      { text: av, mentions: [userssss, m.sender] },  
-      { quoted: m }  
-    ); 
+        conn.sendFile(m.chat, pp, 'dorrat.jpg', text.trim(), fkontak)
  
     
 
