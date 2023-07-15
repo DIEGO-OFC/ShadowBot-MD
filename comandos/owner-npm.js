@@ -1,6 +1,13 @@
 import fetch from "node-fetch";
-let handler = async (m, {conn, text, args, command, usedPrefix}) => {
+let handler = async (m, { conn, text, usedPrefix, command, groupMetadata }) => {
   if (!text) throw `_Ingresa el nombre del paquete npm_\n_Ejemplo_ : ${usedPrefix}npmsearch whatsapp-web.js`;
+let who 
+ if (m.isGroup) who = m.mentionedJid[0] 
+ else who = m.chat 
+ let user = global.db.data.users 
+ if (global.db.data.users[user] == undefined) 
+ if (m.quoted?.sender) m.mentionedJid.push(m.quoted.sender); 
+ if (!m.mentionedJid.length) m.mentionedJid.push(m.sender);
   let res = await fetch(`http://registry.npmjs.com/-/v1/search?text=${text}`);
   let {objects} = await res.json();
   if (!objects.length) return m.reply(`Paquete "${text}" no encontrado`);
