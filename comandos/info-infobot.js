@@ -1,4 +1,4 @@
-/* Diego, no uses chatgpt para programar, rata! */
+
 
 import si from "systeminformation";
 import {performance} from "perf_hooks";
@@ -22,7 +22,7 @@ let info = `
 ╠═〘 𝐈𝐍𝐅𝐎 𝐃𝐄𝐋 𝐁𝐎𝐓 〙 ═
 ╠
 ║❒  [👑] *CREADOR: DIEGO-OFC*
-║❒  [#️⃣] *NUMERO: +593959425714*
+║❒  [#️⃣] *NUMERO: +528442286089*
 ║❒  [🛠️] *PREFIJO: ${usedPrefix}*
 ║❒  [💬] *CHATS PRIVADOS: ${chats.length - groups.length}*
 ║❒  [💭] *CHAT DE GRUPOS: ${groups.length}* 
