@@ -275,6 +275,12 @@ let handler = async (m, {usedPrefix, conn}) => {
       "ZM",
       "ZW",
     ];
+let ke = await fetch(`https://api.worldbank.org/v2/country/${ct.getRandom()}?format=json`);
+    let kt = await ke.json();
+    let imgr = flaaa.getRandom();
+     let userssss = global.db.data.users 
+    let user = global.db.data.users[m.sender];
+    let timers = cooldown - (new Date() - user.lastadventure);
 let text = `🛫 𝙀𝙎𝙏𝘼𝙎 𝘼𝙑𝙀𝙉𝙏𝙐𝙍𝘼𝙉𝘿𝙊 𝙀𝙉 *» ${kt[1][0].name}*
 
 ${cmenut}
@@ -301,12 +307,7 @@ let  dscn = `${htki} 𝘿𝙀𝙎𝘾𝘼𝙉𝙎𝘼𝙉𝘿𝙊 ${htka}
 let baja = `${htki} 𝘽𝘼𝙅𝘼 𝙎𝘼𝙇𝙐𝘿 ${htka}
         𝙏𝙐 𝙎𝘼𝙇𝙐𝘿 💔 𝙀𝙎𝙏𝘼 𝙋𝙊𝙍 𝘿𝙀𝘽𝘼𝙅𝙊 𝘿𝙀 *80!!*
 𝙋𝙊𝙍 𝙁𝘼𝙑𝙊𝙍 𝘾𝙐𝙍𝘼𝙏𝙀 𝙋𝙍𝙄𝙈𝙀𝙍𝙊 𝙋𝘼𝙍𝘼 𝘼𝙑𝙀𝙉𝙏𝙐𝙍𝘼𝙍 𝘿𝙀 𝙉𝙐𝙀𝙑𝙊\n\n𝙔𝙊𝙐𝙍 𝙃𝙀𝘼𝙇𝙏𝙃 💔 𝙄𝙎 𝘽𝙀𝙇𝙊𝙒 *80!!*\n𝙋𝙇𝙀𝘼𝙎𝙀 𝙃𝙀𝘼𝙇 𝙁𝙄𝙍𝙎𝙏 𝙏𝙊 𝘼𝘿𝙑𝙀𝙉𝙏𝙐𝙍𝙀 𝘼𝙂𝘼𝙄𝙉`
-    let ke = await fetch(`https://api.worldbank.org/v2/country/${ct.getRandom()}?format=json`);
-    let kt = await ke.json();
-    let imgr = flaaa.getRandom();
-     let userssss = global.db.data.users 
-    let user = global.db.data.users[m.sender];
-    let timers = cooldown - (new Date() - user.lastadventure);
+    
     if (user.health < 80)
       return  await conn.sendMessage(  
       m.chat,  
