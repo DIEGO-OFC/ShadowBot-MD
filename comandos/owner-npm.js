@@ -25,11 +25,8 @@ let who
 *💳 Gmail:* ${pkg.publisher.email || "-"}
 *🖊️ HomePage:* ${pkg.links.homepage || "-"} `;
   }).join`\n\n`;
- await conn.sendMessage( 
-     m.chat, 
-     { text: txt2, mentions: [_user, m.sender] }, 
-     { quoted: m } 
-   );
+ m.reply(`${txt2}`);
+   
 };
 
 handler.command = /(npmsh)/i;
