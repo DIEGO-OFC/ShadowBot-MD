@@ -1,5 +1,7 @@
 import fetch from "node-fetch";
+import MessageType from '@adiwajshing/baileys'
 let handler = async (m, { conn, text, usedPrefix, command, groupMetadata }) => {
+let _user = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted.sender;
   if (!text) throw `_Ingresa el nombre del paquete npm_\n_Ejemplo_ : ${usedPrefix}npmsearch whatsapp-web.js`;
 let who 
  if (m.isGroup) who = m.mentionedJid[0] 
@@ -12,7 +14,6 @@ let who
   let {objects} = await res.json();
   if (!objects.length) return m.reply(`Paquete "${text}" no encontrado`);
   let bg = "./Menu2.jpg";
-let _user = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted.sender;
   let txt2 = objects.map(({package: pkg}) => {
     return `*◦ Paquete:* ${pkg.name || "-"}
 *🔍 Version:* ${pkg.version || "-"}
