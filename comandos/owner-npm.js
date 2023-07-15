@@ -5,6 +5,7 @@ let handler = async (m, {conn, text, args, command, usedPrefix}) => {
   let {objects} = await res.json();
   if (!objects.length) return m.reply(`Paquete "${text}" no encontrado`);
   let bg = "./Menu2.jpg";
+let _user = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted.sender;
   let txt2 = objects.map(({package: pkg}) => {
     return `*◦ Paquete:* ${pkg.name || "-"}
 *🔍 Version:* ${pkg.version || "-"}
@@ -16,7 +17,11 @@ let handler = async (m, {conn, text, args, command, usedPrefix}) => {
 *💳 Gmail:* ${pkg.publisher.email || "-"}
 *🖊️ HomePage:* ${pkg.links.homepage || "-"} `;
   }).join`\n\n`;
-  m.reply(`${txt2}`)
+ await conn.sendMessage( 
+     m.chat, 
+     { text: txt2, mentions: [_user, m.sender] }, 
+     { quoted: m } 
+   );
 };
 
 handler.command = /(npmsh)/i;
