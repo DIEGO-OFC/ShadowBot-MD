@@ -16,7 +16,7 @@ let handler = async (m, {conn, text, args, command, usedPrefix}) => {
 *💳 Gmail:* ${pkg.publisher.email || "-"}
 *🖊️ HomePage:* ${pkg.links.homepage || "-"} `;
   }).join`\n\n`;
-  conn.sendHydrated(m.chat, txt2, wm3, bg, "https://github.com/DIEGO-OFC/DORRAT-BOT-MD", "Github", null, null, [[``, ``]], m);
+  m.reply(`${txt2}`)
 };
 
 handler.command = /(npmsh)/i;
