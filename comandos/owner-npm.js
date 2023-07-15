@@ -25,7 +25,11 @@ let who
 *💳 Gmail:* ${pkg.publisher.email || "-"}
 *🖊️ HomePage:* ${pkg.links.homepage || "-"} `;
   }).join`\n\n`;
- m.reply(`${txt2}`);
+ await conn.sendMessage( 
+     m.chat, 
+     { text: txt2, mentions: [user, m.sender] }, 
+     { quoted: m } 
+   );
    
 };
 
