@@ -26,6 +26,7 @@ async function handler(m, {conn, args, usedPrefix, command}) {
 ¿Está seguro de que desea transferir *${count}* ${type} a  *@${(who || "").replace(/@s\.whatsapp\.net/g, "")}* ? 
 
 Tienes  *60* s
+*Responda si o no al mensaje*
 `.trim();
   let c = `${wm3}`;
   m.reply(`${confirm} ${c}`);
