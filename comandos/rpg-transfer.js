@@ -29,7 +29,7 @@ Tienes  *60* s
 *Responda si o no al mensaje*
 
 `.trim();
-  let c = `${wm3}`;
+  let c = `\n${wm3}`;
   m.reply(`${confirm} ${c}`);
   confirmation[m.sender] = {
     sender: m.sender,
