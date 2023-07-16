@@ -28,7 +28,7 @@ async function handler(m, {conn, args, usedPrefix, command}) {
 Tienes  *60* s
 `.trim();
   let c = `${wm3}`;
-  conn.sendButton(m.chat, confirm, c, null, [["si"], ["no"]], m, {mentions: [who]});
+  m.reply(`${confirm} ${c}`);
   confirmation[m.sender] = {
     sender: m.sender,
     to: who,
