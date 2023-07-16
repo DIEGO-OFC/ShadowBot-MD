@@ -39,7 +39,7 @@ let handler = async (m, {conn, usedPrefix, usedPrefix: _p}) => {
 *┃┃  ❍ ${ucapan()} ❍*
 *┃┣━━━━━━━━━━━━━━━━╾•*
 *┃┃ ⋄ CREADOR DEL BOT:  ${creatorname}*
-*┃┃ ⋄ NUMERO DEL CREADOR: wa.me/593959425714 (𝐍𝐎 𝐁𝐎𝐓)*
+*┃┃ ⋄ NUMERO DEL CREADOR: wa.me/528442286089 (𝐍𝐎 𝐁𝐎𝐓)*
 *┃┃ ⋄ VERSION » ${vs}*
 *┃┃ ⋄ FECHA » ${week}, ${date}*
 *┃┃ ⋄ TIEMPO ACTIVO » ${uptime}*
