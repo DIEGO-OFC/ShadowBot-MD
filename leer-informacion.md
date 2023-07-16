@@ -4,8 +4,8 @@ Gracias por usar el bot. Si deseas volver a escanear el código QR, borra la car
 
 - Número del bot oficial: +573122695406
 - Si deseas cambiar los números owners, ve a configuracion.js
-- Creador: DIEGO-OFC número: +593959425714
-- Si tienes errores en la consola, repórtalos al número +593959425714
+- Creador: DIEGO-OFC número: +528442286089
+- Si tienes errores en la consola, repórtalos al número +528442286089
 - Puedes editar el bot como desees.
 - Host recomendados: boxmineworld.com o Termux.
 - Si necesitas ayuda o soporte, únete al grupo oficial o escribe al número del creador.
