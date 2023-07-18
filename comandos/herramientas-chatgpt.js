@@ -64,7 +64,7 @@ let grtp = `{IAR2.response}`
 try {   
 let rrEes = await fetch(`https://api.ibeng.tech/api/info/openai?text=${text}&apikey=tamvan`)
 let jjJson = await rrEes.json()
-let chatgt = `{jjJson.data.data.trim()}`
+let chatgt = `${jjJson.data.data.trim()}`
    await await conn.sendMessage(
       m.chat,
       {
