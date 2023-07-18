@@ -10,7 +10,7 @@ try {
  let vide = `https://yt.btch.bz/download?URL=${url}&videoName=video` 
  let web = `https://yt.btch.bz/downloadAudio?URL=${url}&videoName=video` 
  var tmb = thumbnail 
- let lolhuman = await fetch(`https://api.lolhuman.xyz/api/ytplay?apikey=${lolkeysapi}&query=${title}`)    
+ let lolhuman = await fetch(`https://api.lolhuman.xyz/api/ytplay?apikey=GataDios&query=${title}`)    
  let lolh = await lolhuman.json() 
  let n = lolh.result.title || 'error' 
  var captionvid = `╔═══════❰  *🔰*  ❱══════⬣ 
