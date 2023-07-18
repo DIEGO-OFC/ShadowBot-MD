@@ -19,7 +19,7 @@ const grupo15 = 'https://chat.whatsapp.com/JE2fYdNALjF4GvKu8nkMRs'
 
 let handler = async (m, { conn, text, usedPrefix, command, participants, groupMetadata }) => {
 
-  let fakegif = { key: {participant: `0@s.whatsapp.net`, ...("6289643739077-1613049930@g.us" ? { remoteJid: "6289643739077-1613049930@g.us" } : {})},message: {"videoMessage": { "title": 'CuriosityBot-MD', "h": `Hmm`,'seconds': '99999', 'gifPlayback': 'true', 'caption': 'Unirte a mi grupo uwu', 'jpegThumbnail': false }}}
+  let fakegif = { key: {participant: `0@s.whatsapp.net`, ...("6289643739077-1613049930@g.us" ? { remoteJid: "6289643739077-1613049930@g.us" } : {})},message: {"videoMessage": { "title": 'DorratBot-MD', "h": `Hmm`,'seconds': '99999', 'gifPlayback': 'true', 'caption': 'Unete a mi grupo 😉', 'jpegThumbnail': false }}}
 let [_, code] = grupo.match(linkRegex) || []
 let [_1, code1] = grupo1.match(linkRegex) || []
 let [_2, code2] = grupo2.match(linkRegex) || []
