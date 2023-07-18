@@ -2,7 +2,7 @@ import fetch from 'node-fetch'
 import cheerio from 'cheerio'
 import gpt from 'api-dylux'
 let handler = async (m, { text, usedPrefix, command }) => {
-if (!text) throw `*[❕] HAGA PETICIÓN, EJEMPLO ${usedPrefix + comand}que es el planeta\nSI QUIERES EN MODO HARD:${usedPrefix + command}cuento donde violen a skid salvajemente*`
+if (!text) throw `*[❕] HAGA PETICIÓN, EJEMPLO ${usedPrefix + command}que es el planeta\nSI QUIERES EN MODO HARD:${usedPrefix + command}cuento donde violen a skid salvajemente*`
 try {
 let jailbreak = await fetch('https://raw.githubusercontent.com/Skidy89/chat-gpt-jailbreak/main/Text.txt').then(v => v.text());
 await conn.sendPresenceUpdate('composing', m.chat)
