@@ -37,7 +37,7 @@ let rgapt = `${res.text}`
 try {   
 let IA2 = await fetch(`https://api.amosayomide05.cf/gpt/?question=${text}&string_id=${m.sender}`)  
 let IAR2 = await IA2.json()
-let grtp = `{IAR2.response}`
+let grtp = `${IAR2.response}`
    await await conn.sendMessage(
       m.chat,
       {
