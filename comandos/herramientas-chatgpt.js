@@ -20,7 +20,28 @@ m.reply(`${IAR2.response}`.trim())
 try {   
 let rrEes = await fetch(`https://api.ibeng.tech/api/info/openai?text=${text}&apikey=tamvan`)
 let jjJson = await rrEes.json()
-m.reply(jjJson.data.data.trim())    
+   await await conn.sendMessage(
+      m.chat,
+      {
+        image: {
+          url: "https://telegra.ph/file/10e013d9ae4d9cdf5af14.jpg",
+        },
+        caption: jjJson.data.data.trim(),
+        contextInfo: {
+          mentionedJid: [m.sender],
+          externalAdReply: {
+            title: `TOOLS - CHATGPT`,
+            sourceUrl: "http://paypal.me/DorratBotOficial",
+            mediaType: 1,
+            showAdAttribution: true,
+            thumbnailUrl: "https://telegra.ph/file/10e013d9ae4d9cdf5af14.jpg",
+          },
+        },
+      },
+      {
+        quoted: m,
+      }
+    )
 } catch {      
 try {    
 let tioress = await fetch(`https://api.lolhuman.xyz/api/openai?apikey=BrunoSobrino&text=${text}&user=${m.sender}`)
