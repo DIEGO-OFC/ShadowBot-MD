@@ -81,7 +81,7 @@ try {
  previewType: 0, thumbnail: fs.readFileSync("./galeria/menudorrat5.png"), 
  sourceUrl: `https://github.com/DIEGO-OFC/DORRAT-BOT-MD`}}}) 
   
- let res = await fetch("https://violetics.pw/api/media/youtube-play?apikey=beta&query="+text)  
+ let res = await fetch(`https://api.lolhuman.xyz/api/ytplay?apikey=GataDios&query=${title}`)  
  let json = await res.json() 
  conn.sendFile(m.chat, json.result.url, 'error.mp4', `${wm}`, m) 
  }} 
