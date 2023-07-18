@@ -20,13 +20,14 @@ m.reply(`${IAR2.response}`.trim())
 try {   
 let rrEes = await fetch(`https://api.ibeng.tech/api/info/openai?text=${text}&apikey=tamvan`)
 let jjJson = await rrEes.json()
+let chatgt = `{jjJson.data.data.trim()}`
    await await conn.sendMessage(
       m.chat,
       {
         image: {
           url: "https://telegra.ph/file/10e013d9ae4d9cdf5af14.jpg",
         },
-        caption: jjJson.data.data.trim(),
+        caption: chatgt,
         contextInfo: {
           mentionedJid: [m.sender],
           externalAdReply: {
