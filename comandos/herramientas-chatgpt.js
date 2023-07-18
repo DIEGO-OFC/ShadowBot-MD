@@ -10,7 +10,7 @@ var syms = `Actuaras como un Bot de WhatsApp el cual fue creado por DIEGO-OFC, t
 
 
 let res = await gpt.ChatGpt(text, syms)
-let rgapt = `${res.text}
+let rgapt = `${res.text}`
  await await conn.sendMessage(
       m.chat,
       {
