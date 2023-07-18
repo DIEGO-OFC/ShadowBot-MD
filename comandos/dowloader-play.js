@@ -96,10 +96,7 @@ try {
  if (!res.ok) throw false 
  return await res.text() 
  } 
- async function delay(ms) { 
- await new Promise(resolve => setTimeout(resolve, ms)) 
- }
-
+ 
 
 /*const _0x235d2a = _0x1518;
 (function (_0x5d2146, _0x2bd7b9) {
