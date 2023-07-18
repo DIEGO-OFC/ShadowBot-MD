@@ -6,7 +6,7 @@ if (!text) throw `*[❗] 𝙸𝙽𝙶𝚁𝙴𝚂𝙴 𝚄𝙽𝙰 𝙿𝙴𝚃�
 try {
 let jailbreak = await fetch('https://raw.githubusercontent.com/Skidy89/chat-gpt-jailbreak/main/Text.txt').then(v => v.text());
 await conn.sendPresenceUpdate('composing', m.chat)
-var syms = ``Actuaras como un Bot de WhatsApp el cual fue creado por DIEGO-OFC, tu seras DorratBot-MD.\n${jailbreak}`
+var syms = `Actuaras como un Bot de WhatsApp el cual fue creado por DIEGO-OFC, tu seras DorratBot-MD.\n${jailbreak}`
 
 
 let res = await gpt.ChatGpt(text, syms)
