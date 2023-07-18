@@ -10,7 +10,28 @@ var syms = `${jailbreak}`
 
 
 let res = await gpt.ChatGpt(text, syms)
-await m.reply(res.text)
+ await await conn.sendMessage(
+      m.chat,
+      {
+        image: {
+          url: "https://telegra.ph/file/10e013d9ae4d9cdf5af14.jpg",
+        },
+        caption: res.text,
+        contextInfo: {
+          mentionedJid: [m.sender],
+          externalAdReply: {
+            title: `TOOLS - CHATGPT`,
+            sourceUrl: "http://paypal.me/DorratBotOficial",
+            mediaType: 1,
+            showAdAttribution: true,
+            thumbnailUrl: "https://telegra.ph/file/10e013d9ae4d9cdf5af14.jpg",
+          },
+        },
+      },
+      {
+        quoted: m,
+      }
+    )
 } catch {
 try {   
 let IA2 = await fetch(`https://api.amosayomide05.cf/gpt/?question=${text}&string_id=${m.sender}`)  
