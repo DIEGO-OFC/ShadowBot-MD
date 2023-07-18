@@ -1,4 +1,107 @@
-const _0x235d2a = _0x1518;
+import { youtubedl, youtubeSearch, youtubedlv2, youtubedlv3 } from '@bochilteam/scraper' 
+  
+ let handler = async (m, { conn, text, args, isPrems, isOwner, usedPrefix, command }) => { 
+ let q, v, yt, dl_url, ttl, size, lolhuman, lolh, n, n2, n3, n4, cap, qu, currentQuality    
+ if (!text) throw `*[❕𝐈𝐍𝐅𝐎❕] NOMBRE DE LA CANCION FALTANTE, POR FAVOR INGRESE EL COMANDO MAS EL NOMBRE/TITULO DE UNA CANCIÓN*\n\n*➢ EJEMPLO:*\n*${usedPrefix + command} Phonk*`
+try { 
+ var vid = (await youtubeSearch(text)).video[0] 
+ var { title, description, thumbnail, videoId, durationH, durationS, viewH, publishedTime } = vid 
+ var url = 'https://www.youtube.com/watch?v=' + videoId 
+ let vide = `https://yt.btch.bz/download?URL=${url}&videoName=video` 
+ let web = `https://yt.btch.bz/downloadAudio?URL=${url}&videoName=video` 
+ var tmb = thumbnail 
+ let lolhuman = await fetch(`https://api.lolhuman.xyz/api/ytplay?apikey=${lolkeysapi}&query=${title}`)    
+ let lolh = await lolhuman.json() 
+ let n = lolh.result.title || 'error' 
+ var captionvid = `╔═══════❰  *🔰*  ❱══════⬣ 
+ ║ *TITULO | TITLE* 
+ ║ ${title} 
+ ║┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈ 
+ ║ *DESCRIPCIÓN  | DESCRIPTION* 
+ ║ ${description} 
+ ║┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈ 
+ ║ *PUBLICADO | PUBLISHE* 
+ ║ ${publishedTime} 
+ ║┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈ 
+ ║ *DURACION | DURATION* 
+ ║ ${durationH} 
+ ║┈┈┈┈┈┈┈┈┈┈┈┈┈┈ 
+ ║ *VISTAS | VIEWS* 
+ ║ ${viewH} 
+ ║┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈ 
+ ║ *URL* 
+ ║ ${urll} 
+ ╚═══════❰ *${vs}* ❱══════⬣`   
+  
+ if (command == 'play') {         
+ var pesan = await conn.sendMessage(m.chat, { 
+ text: captionvid, 
+ contextInfo: { 
+ externalAdReply: { 
+ title: title, 
+ body: packname, 
+ thumbnailUrl: tmb, 
+ sourceUrl: web, 
+ mediaType: 1, 
+ showAdAttribution: true, 
+ renderLargerThumbnail: true 
+ }}} , { quoted: m }) 
+  
+ await conn.sendMessage(m.chat, { audio: { url: lolh.result.audio.link }, mimetype: 'audio/mpeg', contextInfo: { 
+ externalAdReply: { 
+ title: title, 
+ body: "", 
+ thumbnailUrl: tmb, 
+ sourceUrl: web, 
+ mediaType: 1, 
+ showAdAttribution: true, 
+ renderLargerThumbnail: true 
+ }}} , { quoted: m })    
+ } 
+ if (command == 'play2') { 
+ var pesan = await conn.sendMessage(m.chat, { 
+ text: captionvid, 
+ contextInfo: { 
+ externalAdReply: { 
+ title: title, 
+ body: packname, 
+ thumbnailUrl: tmb , 
+ sourceUrl: web, 
+ mediaType: 1, 
+ showAdAttribution: true, 
+ renderLargerThumbnail: true 
+ }}} , { quoted: m }) 
+ await conn.sendMessage(m.chat, { video: { url: lolh.result.video.link }, fileName: `${ttl}.mp4`, mimetype: 'video/mp4', caption: `${wm}\nTITULO\n ${title}` }, { quoted: m }) 
+ } 
+ } catch (e) { 
+ conn.reply(m.chat, `*[❕] ERROR INTENTALO DE NUEVO.*`, m, { 
+ contextInfo: { externalAdReply :{ mediaUrl: null, mediaType: 1, description: null,  
+ title: 'DORRAT-BOT-MD', 
+ body: 'Super WhatsApp Bot Pro',          
+ previewType: 0, thumbnail: fs.readFileSync("./galeria/menudorrat5.png"), 
+ sourceUrl: `https://github.com/DIEGO-OFC/DORRAT-BOT-MD`}}}) 
+  
+ let res = await fetch("https://violetics.pw/api/media/youtube-play?apikey=beta&query="+text)  
+ let json = await res.json() 
+ conn.sendFile(m.chat, json.result.url, 'error.mp4', `${wm}`, m) 
+ }} 
+ handler.command = ['play', 'play2'] 
+ handler.exp = 0 
+ handler.limit = 1 
+ export default handler 
+  
+ async function cut(url) { 
+ url = encodeURIComponent(url) 
+ let res = await fetch(`https://api.botcahx.live/api/linkshort/bitly?link=${url}&apikey=${btc}`) 
+ if (!res.ok) throw false 
+ return await res.text() 
+ } 
+ async function delay(ms) { 
+ await new Promise(resolve => setTimeout(resolve, ms)) 
+ }
+
+
+/*const _0x235d2a = _0x1518;
 (function (_0x5d2146, _0x2bd7b9) {
     const _0x36b967 = _0x1518, _0x31d1ec = _0x5d2146();
     while (!![]) {
@@ -159,4 +262,4 @@ function _0x5ed5() {
         return _0x187499;
     };
     return _0x5ed5();
-}
+}*/
