@@ -46,7 +46,7 @@ try {
  showAdAttribution: true, 
  renderLargerThumbnail: true 
  }}} , { quoted: m }) 
- m.reply(`*[⏱️]EL AUDIO PUEDE TARDAR EN  ENVIARSE, PORFAVOR TENGA PACIENCIA, SON LAS APIS*`)
+ m.reply(`*[⏱️]EL AUDIO PUEDE TARDAR EN  ENVIARSE, HASTA 10 MINUTOS,  PORFAVOR TENGA PACIENCIA SON LAS APIS*`)
  await conn.sendMessage(m.chat, { audio: { url: lolh.result.audio.link }, mimetype: 'audio/mpeg', contextInfo: { 
  externalAdReply: { 
  title: title, 
