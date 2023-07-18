@@ -10,13 +10,14 @@ var syms = `Actuaras como un Bot de WhatsApp el cual fue creado por DIEGO-OFC, t
 
 
 let res = await gpt.ChatGpt(text, syms)
+let rgapt = `${res.text}
  await await conn.sendMessage(
       m.chat,
       {
         image: {
           url: "https://telegra.ph/file/10e013d9ae4d9cdf5af14.jpg",
         },
-        caption: res.text,
+        caption: rgapt,
         contextInfo: {
           mentionedJid: [m.sender],
           externalAdReply: {
