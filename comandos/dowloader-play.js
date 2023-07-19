@@ -93,7 +93,7 @@ import fetch from "node-fetch"
  } catch { 
  await conn.reply(m.chat, '*[❗] 𝙴𝚁𝚁𝙾𝚁 𝙽𝙾 𝙵𝚄𝙴 𝙿𝙾𝚂𝙸𝙱𝙻𝙴 𝙳𝙴𝚂𝙲𝙰𝚁𝙶𝙰𝚁 𝙴𝙻 𝚅𝙸𝙳𝙴𝙾*', m)}}}     
  }} catch { 
- throw "*[❗𝐈𝐍𝐅𝐎❗] 𝙴𝚁𝚁𝙾𝚁, 𝙿𝙾𝚁 𝙵𝙰𝚅𝙾𝚁 𝚅𝚄𝙴𝙻𝚅𝙰 𝙰 𝙸𝙽𝚃𝙴𝙽𝚃𝙰𝚁𝙻𝙾*"} 
+ throw "*[❕] ERROR INTENTALO DE NUEVO.*"} 
  } 
  handler.help = ["play", "play2"].map((v) => v + " < busqueda >") 
  handler.tags = ["downloader"] 
