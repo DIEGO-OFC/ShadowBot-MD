@@ -21,7 +21,7 @@ import fetch from "node-fetch"
 ║ ${secondString(yt_play[0].duration.seconds)} 
 ║ *VISTAS*: 
 ║ ${`${MilesNumber(yt_play[0].views)}`} 
-║ *AUTOR:
+║ *AUTOR*:
 ║ ${yt_play[0].author.name} 
 ║ *CANAL*: 
 ║ ${yt_play[0].author.url} 
@@ -30,7 +30,8 @@ import fetch from "node-fetch"
 ║ *Tipo:* 
 ║ ${yt_play[0].type} 
 ║ *Link:* ${yt_play[0].url}\n
-║ *_ENVIANDO ${additionalText}, PORFAVOR ESPERE.*`.trim() 
+║ *_ENVIANDO ${additionalText}, PORFAVOR ESPERE.*
+╚═══════❰ *${vs}* ❱══════⬣`.trim() 
  conn.sendMessage(m.chat, { image: { url: yt_play[0].thumbnail }, caption: texto1 }, { quoted: m }) 
  if (command == 'play') { 
  try { 
