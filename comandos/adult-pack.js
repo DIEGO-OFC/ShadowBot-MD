@@ -4,7 +4,7 @@ let handler = async (m, {conn, command}) => {
   let url = pack[Math.floor(Math.random() * pack.length)];
     await conn.sendFile( 
      m.chat, 
-     url, 
+     url.getRandom(), 
      "gimage.jpg", 
      ` 
  pack`.trim(),
