@@ -78,7 +78,7 @@ let hasill223 = `${hasill22.result}`
          contextInfo: { 
            mentionedJid: [m.sender], 
            externalAdReply: { 
-             title: `TOOLS - CHATGPT`, 
+             title: `TOOLS - CHATGPT 2`, 
              sourceUrl: "http://paypal.me/DorratBotOficial", 
              mediaType: 1, 
              showAdAttribution: true, 
@@ -95,7 +95,29 @@ let hasill223 = `${hasill22.result}`
  try {    
  let rres = await fetch(`https://api.ibeng.tech/api/info/openai?text=${text}&apikey=tamvan`) 
  let jjson = await rres.json() 
- m.reply(jjson.data.data.trim())     
+let jsanp = `${jjson.data.data.trim()}`
+  await await conn.sendMessage( 
+       m.chat, 
+       { 
+         image: { 
+           url: "https://telegra.ph/file/10e013d9ae4d9cdf5af14.jpg", 
+         }, 
+         caption: jsanp, 
+         contextInfo: { 
+           mentionedJid: [m.sender], 
+           externalAdReply: { 
+             title: `TOOLS - CHATGPT`, 
+             sourceUrl: "http://paypal.me/DorratBotOficial", 
+             mediaType: 1, 
+             showAdAttribution: true, 
+             thumbnailUrl: "https://telegra.ph/file/10e013d9ae4d9cdf5af14.jpg", 
+           }, 
+         }, 
+       }, 
+       { 
+         quoted: m, 
+       } 
+     )    
  } catch (efe3) {     
  console.log(efe3) 
  try { 
