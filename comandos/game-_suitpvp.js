@@ -1,5 +1,5 @@
 let handler = m => m 
- handler.before = async function (m) { 
+ handler.before = async function (m, text) { 
  this.suit = this.suit ? this.suit : {} 
  if (db.data.users[m.sender].suit < 0) db.data.users[m.sender].suit = 0 
  let room = Object.values(this.suit).find(room => room.id && room.status && [room.p, room.p2].includes(m.sender)) 
