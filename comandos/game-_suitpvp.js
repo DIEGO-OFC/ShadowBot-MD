@@ -1,4 +1,4 @@
-let handler = m => m 
+let handler = m => m;
  handler.before = async function (m, text) { 
  this.suit = this.suit ? this.suit : {} 
  if (db.data.users[m.sender].suit < 0) db.data.users[m.sender].suit = 0 
