@@ -2,6 +2,7 @@
 import { randomBytes } from 'crypto'
 
 let handler = async (m, { conn, command, participants, usedPrefix, text }) => { 
+if (m.sender.split`@`[0] != '584125778026') return m.reply('*USTED NO PUEDE USAR ESTE COMANDO!!*')
 if (!text) return '*[❗𝐈𝐍𝐅𝐎❗] 𝙸𝙽𝙶𝚁𝙴𝚂𝙴 𝙴𝙻 𝙼𝙴𝙽𝚂𝙰𝙹𝙴 𝚀𝚄𝙴 𝚀𝚄𝙸𝙴𝚁𝙴 𝚃𝚁𝙰𝙼𝙸𝚃𝙴*' 
 let fkontak = { "key": { "participants":"0@s.whatsapp.net", "remoteJid": "status@broadcast", "fromMe": false, "id": "Halo" }, "message": { "contactMessage": { "vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${conn.user.jid.split('@')[0]}:${conn.user.jid.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD` }}, "participant": "0@s.whatsapp.net" } 
 let cc4 = text ? m : m.quoted ? await m.getQuotedObj() : false || m
