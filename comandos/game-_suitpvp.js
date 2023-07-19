@@ -1,7 +1,7 @@
 
 let handler = m => m;
 
-let handler = { async before (m, {this}) {
+let handler = { async before (m, {conn}) {
  this.suit = this.suit ? this.suit : {} 
  if (db.data.users[m.sender].suit < 0) db.data.users[m.sender].suit = 0 
  let room = Object.values(this.suit).find(room => room.id && room.status && [room.p, room.p2].includes(m.sender)) 
