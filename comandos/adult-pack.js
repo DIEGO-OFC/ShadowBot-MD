@@ -7,7 +7,7 @@ let handler = async (m, {conn, command}) => {
      url.getRandom(), 
      "gimage.jpg", 
      ` 
- pack`.trim())
+ pack`.trim(), m)
 };
 handler.help = ["pack"];
 handler.tags = ["internet"];
