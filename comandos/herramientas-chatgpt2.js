@@ -39,13 +39,57 @@ let getp = `${response.data.choices[0].message.content}`
  console.log(efe1)     
  try { 
  const BotIA222 = await openaiii.createCompletion({ model: "text-davinci-003", prompt: text, temperature: 0.3, max_tokens: 4097, stop: ["Ai:", "Human:"], top_p: 1, frequency_penalty: 0.2, presence_penalty: 0, }) 
- m.reply(BotIA222.data.choices[0].text.trim())     
+ let trgp = `${BotIA222.data.choices[0].text.trim()}`
+ await await conn.sendMessage( 
+       m.chat, 
+       { 
+         image: { 
+           url: "https://telegra.ph/file/10e013d9ae4d9cdf5af14.jpg", 
+         }, 
+         caption: trgp, 
+         contextInfo: { 
+           mentionedJid: [m.sender], 
+           externalAdReply: { 
+             title: `TOOLS - CHATGPT 2`, 
+             sourceUrl: "http://paypal.me/DorratBotOficial", 
+             mediaType: 1, 
+             showAdAttribution: true, 
+             thumbnailUrl: "https://telegra.ph/file/10e013d9ae4d9cdf5af14.jpg", 
+           }, 
+         }, 
+       }, 
+       { 
+         quoted: m, 
+       } 
+     )
  } catch (efe2) { 
  console.log(efe2)     
  try { 
  let tioress22 = await fetch(`https://api.lolhuman.xyz/api/openai?apikey=${lolkeysapi}&text=${text}&user=${m.sender}`) 
  let hasill22 = await tioress22.json() 
- m.reply(`${hasill22.result}`.trim())          
+let hasill223 = `${hasill22.result}`
+ await await conn.sendMessage( 
+       m.chat, 
+       { 
+         image: { 
+           url: "https://telegra.ph/file/10e013d9ae4d9cdf5af14.jpg", 
+         }, 
+         caption: hasill223, 
+         contextInfo: { 
+           mentionedJid: [m.sender], 
+           externalAdReply: { 
+             title: `TOOLS - CHATGPT`, 
+             sourceUrl: "http://paypal.me/DorratBotOficial", 
+             mediaType: 1, 
+             showAdAttribution: true, 
+             thumbnailUrl: "https://telegra.ph/file/10e013d9ae4d9cdf5af14.jpg", 
+           }, 
+         }, 
+       }, 
+       { 
+         quoted: m, 
+       } 
+     )         
  } catch (efe) { 
  console.log(efe)     
  try {    
