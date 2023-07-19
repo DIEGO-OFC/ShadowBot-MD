@@ -43,7 +43,7 @@ import { youtubedl, youtubedlv2 } from '@bochilteam/scraper'
  } catch (E2) {   
  //console.log('Error 2 ' + E2)    
  try { 
- let lolhuman = await fetch(`https://api.lolhuman.xyz/api/ytvideo2?apikey=${lolkeysapi}&url=${youtubeLink}`)     
+ let lolhuman = await fetch(`http://hujanapi.xyz/api/ytdl?url=${url}&apikey=vWI9FfcmTlL2yx8`)     
  let lolh = await lolhuman.json() 
  let n = lolh.result.title || 'error' 
  let n2 = lolh.result.link 
