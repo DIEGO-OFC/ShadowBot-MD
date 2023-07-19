@@ -18,11 +18,7 @@ let handler = async (m, {conn, isOwner}) => {
       : ""
   }
 *╚═══════════════════·•*`;
-  await conn.sendButton(m.chat, caption, `⚠️ 𝗔𝗗𝗩𝗘𝗥𝗧𝗘𝗡𝗖𝗜𝗔 ⇢ ${warns ? `*${warns}/4*` : "*0/4*"}\n${wm}`, null, [["𝐌 𝐄 𝐍 𝐔 🌠", "/menu"]], m, {
-    mentions: await conn.parseMention(caption),
-  });
-};
-
+await conn.sendMessage(m.chat, { text: caption }, { quoted: m }, { mentions: await conn.parseMention(caption) })}
 handler.command = /^(listaadv|listadv|adv|advlist|advlista)$/i;
 
 export default handler;
