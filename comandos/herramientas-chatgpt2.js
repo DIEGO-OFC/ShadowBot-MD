@@ -12,7 +12,29 @@ import fetch from 'node-fetch'
  const config = { method: 'post', url: 'https://api.openai.com/v1/chat/completions', headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + global.openai_key }, data: JSON.stringify({ 'model': 'gpt-3.5-turbo', 'messages': [{ role: 'system', content: 'Actuaras como un Bot de WhatsApp el cual fue creado por DIEGO-OFC, tu seras Dorratbot' }, ...chgptdb ]})} 
  let response = await axios(config); 
  chgptdb.push({ role: 'assistant', content: response.data.choices[0].message.content })  
- m.reply(response.data.choices[0].message.content) 
+let getp = `${response.data.choices[0].message.content}`
+ await await conn.sendMessage( 
+       m.chat, 
+       { 
+         image: { 
+           url: "https://telegra.ph/file/10e013d9ae4d9cdf5af14.jpg", 
+         }, 
+         caption: getp, 
+         contextInfo: { 
+           mentionedJid: [m.sender], 
+           externalAdReply: { 
+             title: `TOOLS - CHATGPT 2`, 
+             sourceUrl: "http://paypal.me/DorratBotOficial", 
+             mediaType: 1, 
+             showAdAttribution: true, 
+             thumbnailUrl: "https://telegra.ph/file/10e013d9ae4d9cdf5af14.jpg", 
+           }, 
+         }, 
+       }, 
+       { 
+         quoted: m, 
+       } 
+     ) 
  } catch (efe1) { 
  console.log(efe1)     
  try { 
