@@ -167,6 +167,7 @@ export async function handler(chatUpdate) {
           if (!isNumber(user.pas3)) user.pas3 = 0;
           if (!isNumber(user.pas4)) user.pas4 = 0;
           if (!isNumber(user.pas5)) user.pas5 = 0;
+          if (!isNumber(user.lastrobbank)) user.lastrobbank =0;
           if (!isNumber(user.anggur)) user.anggur = 0;
           if (!isNumber(user.apel)) user.apel = 0;
           if (!isNumber(user.bibitanggur)) user.bibitanggur = 0;
@@ -608,6 +609,7 @@ export async function handler(chatUpdate) {
           pas3: 0,
           pas4: 0,
           pas5: 0,
+          lastrobbank: 0,
           agility: 16,
           anakanjing: 0,
           anakcentaur: 0,
