@@ -3,7 +3,7 @@ let handler = async (m, {conn}) => {
   if (m.isGroup) who = m.mentionedJid[0] ? m.mentionedJid[0] : m.sender;
   else who = m.sender;
   let name = conn.getName(who);
-
+  let image = imagen1
   let user = global.db.data.users[who];
   let premium = user.premium;
   const cartera = {
@@ -18,18 +18,7 @@ let handler = async (m, {conn}) => {
     .filter((v) => v)
     .join("\n")
     .trim();
-  await conn.sendButton(
-    m.chat,
-    `🎟️ 𝗣 𝗥 𝗘 𝗠 𝗜 𝗨 𝗠 ⇢ ${premium ? "✅" : "❌"}\n${wm}`,
-    `👝 ⇢ ${name}\n` + recursos + `\n\n*PARA VER MÁS RECURSOS VISITE EL INVENTARIO*`,
-    imagen1,
-    [
-      ["𝙄𝙣𝙫𝙚𝙣𝙩𝙖𝙧𝙞𝙤 🎒", "/inventario"],
-      ["𝙑𝙤𝙡𝙫𝙚𝙧 𝙖𝙡 𝙈𝙚𝙣𝙪́☘️", "/menu"],
-    ],
-    m,
-    md
-  );
+  conn.sendMessage(m.chat, { image: { url: imagen }, caption: `🎟️ 𝗣 𝗥 𝗘 𝗠 𝗜 𝗨 𝗠 ⇢ ${premium ? "✅" : "❌"}\n${wm}\n👝 ⇢ ${name}\n` + recursos + `\n\n*PARA VER MÁS RECURSOS VISITE EL INVENTARIO*` }, { quoted: m })     
 };
 handler.help = ["bal"];
 handler.tags = ["xp"];
