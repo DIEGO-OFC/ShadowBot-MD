@@ -103,6 +103,7 @@ ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
 
 <a href="https://github.com/darlyn1234"><img src="https://github.com/darlyn1234.png" width="100" height="100" alt="darlyn1234"/></a>
 <a href="https://github.com/Zastinian"><img src="https://github.com/Zastinian.png" width="100" height="100" alt="Zastinian"/></a>  <a href="https://github.com/BrunoSobrino"><img src="https://github.com/BrunoSobrino.png" width="100" height="100" alt="BrunoSobrino"/></a>  
+href="https://github.com/Skidy89"><img src="https://github.com/Skidy89.png" width="100" height="100" alt="putos negros"/></a>  
 
 
 
