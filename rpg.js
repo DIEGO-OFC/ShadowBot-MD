@@ -1,11 +1,12 @@
- import {watchFile, unwatchFile} from "fs"; 
+import {watchFile, unwatchFile} from "fs"; 
  import chalk from "chalk"; 
  import {fileURLToPath} from "url"; 
  import fs from "fs"; 
  import cheerio from "cheerio"; 
  import fetch from "node-fetch"; 
  import axios from "axios"; 
- import moment from "moment-timezone";
+ import moment from "moment-timezone"; 
+ import {en, es, pt} from "./lib/idiomas/total-idiomas.js";
  
 
 global.multiplier = 999; // Cuanto más alto, más difícil subir de nivel | The higher, The harder levelup 
