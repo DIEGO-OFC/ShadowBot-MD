@@ -94,7 +94,7 @@ global.openai_org_id = "org-3";
 global.lenguajeGB = es;
 
 /* ______________________________________________ */
-global.creadorname = "𝐃𝐈𝐄𝐆𝐎-𝐎𝐅𝐂";
+global.creadorname = "ᴛʜᴇ ɪᴅᴀɢᴏ ʙᴏᴛ﹣ᴍᴅ";
 global.creatorname = creadorname;
 global.library = "BAILEYS-MD";
 global.vs = "V10";
@@ -109,14 +109,14 @@ global.mes = d.toLocaleDateString("es", {month: "long"});
 global.año = d.toLocaleDateString("es", {year: "numeric"});
 global.tiempo = d.toLocaleString("en-US", {hour: "numeric", minute: "numeric", second: "numeric", hour12: true});
 //------------- Sticker WM -----------
-global.packname = `𝐃𝐈𝐄𝐆𝐎-𝐎𝐅𝐂`;
-global.author = `©⏤͟͟͞𝐓𝐇𝐄 𝐃𝐎𝐑𝐑𝐀𝐓-𝐁𝐎𝐓-𝐌𝐃`;
+global.packname = `𝖉𝖎𝖊𝖌𝖔 シ`;
+global.author = `©⏤͟͟͞ᴛʜᴇ ɪᴅᴀɢᴏ ʙᴏᴛ﹣ᴍᴅ`;
 //_______________
-global.wm = "𝐃𝐎𝐑𝐑𝐀𝐓-𝐁𝐎𝐓 | 𝐃𝐈𝐄𝐆𝐎-𝐎𝐅𝐂";
-global.db3t = `©⏤͟͟͞𝐓𝐇𝐄 𝐃𝐎𝐑𝐑𝐀𝐓-𝐁𝐎𝐓-𝐌𝐃`;
+global.wm = "ᴛʜᴇ ɪᴅᴀɢᴏ ʙᴏᴛ﹣ᴍᴅ | ɪᴅᴀɢᴏ";
+global.db3t = `©⏤͟͟͞ᴛʜᴇ ɪᴅᴀɢᴏ ʙᴏᴛ﹣ᴍᴅ`;
 global.wm3 = db3t;
-global.codex = `Diego-Ofc`;
-global.igfg = "𝑫𝑶𝑹𝑹𝑨𝑻-𝑩𝑶𝑻";
+global.codex = `ɪᴅᴀɢᴏ`;
+global.igfg = "ᴛʜᴇ ɪᴅᴀɢᴏ ʙᴏᴛ";
 global.wait = "*[❕] CARGANDO POR FAVOR ESPERA...*";
 //-------------------
 global.md = "https://chat.whatsapp.com/JuuuUaIQnnE3t4SWQenShg";
@@ -134,15 +134,15 @@ global.fg = "☆━━━━ ⚠️ 𝙵𝙰𝙻𝙻𝙾 ⚠️ ━━━☆";
 global.fallo = fg;
 global.mg = "══ ❎ 𝙻𝙾 𝚄𝚂𝙾 𝙼𝙰𝙻 ❎ ══";
 global.mal = mg;
-global.dorre = "DORRAT-BOT-MD";
+global.dorre "ᴛʜᴇ ɪᴅᴀɢᴏ ʙᴏᴛ﹣ᴍᴅ";
 global.DORRA = dorre;
 
 /* Imagenes___________________ */
 global.imagen1 = fs.readFileSync("./Menu2.jpg");
 global.imagen2 = fs.readFileSync("./galeria/nuevobot.jpg");
 global.imagen3 = fs.readFileSync("./galeria/Pre Bot Publi.png");
-global.imagen4 = fs.readFileSync("./galeria/menudorrat3.jpg");
-global.imagen5 = fs.readFileSync("./galeria/menudorrat5.png");
+global.imagen4 = fs.readFileSync("./galeria/menudiego3.jpg");
+global.imagen5 = fs.readFileSync("./galeria/menudiego5.png");
 global.video1 = fs.readFileSync("./galeria/dorratmini.mp4");
 global.dorratMenu = [imagen1, imagen4];
 global.pdoc = [
@@ -154,8 +154,6 @@ global.pdoc = [
   "application/pdf",
   "text/rtf",
 ];
-global.antiyaoi = ['YAOI', 'yaoi', 'yAoi','yaoI']
-global.sinyaoi = ["como te através a buscar esa perra puta mamada","puto gay no busques mierdas", "puto estorbo social este bot es hetero", "aquí no existe yaoi maricon"]
 global.Key360 = ["964f-0c75-7afc"]; //keys ephoto360
 global.keysZens = ["fiktod", "c2459db922", "BF39D349845E", "675e34de8a", "37CC845916", "0b917b905e6f", "6fb0eff124"];
 global.keysxxx = keysZens[Math.floor(keysZens.length * Math.random())];
