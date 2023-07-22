@@ -24,15 +24,15 @@ m.reply(texto)
  } catch (e2) { 
  try { 
  let p = await fg.tiktok(args[0])  
- //let te = `*𝚄𝚂𝙴𝚁𝙽𝙰𝙼𝙴:* ${p.author || 'Indefinido'}` 
- let te =  `*¡Hola! 🌟*\n*📽️ Aquí tienes tu video de TikTok.*\n\n*Recuerda que si deseas convertir el video en audio, puedes hacerlo fácilmente respondiendo al video con el comando #tomp3 🎧.*` 
+ //let te = `*USUARIO:* ${p.author || 'Indefinido'}` 
+ let te =  `*📽️ Aquí tienes tu video de TikTok.*\n\n*Recuerda que si deseas convertir el video en audio, puedes hacerlo fácilmente respondiendo al video con el comando #tomp3 🎧.*` 
  await conn.sendMessage(m.chat, { video: { url: p.nowm}, caption: te }, { quoted: m })   
  } catch (e3) { 
  try {  
  const { author: { nickname }, video, description } = await tiktokdl(args[0]) 
  const url = video.no_watermark2 || video.no_watermark || 'https://tikcdn.net' + video.no_watermark_raw || video.no_watermark_hd 
- //let cap = `*𝙽𝙸𝙲𝙺𝙽𝙰𝙼𝙴:* ${nickname || 'Indefinido'}` 
- let cap =  `*¡Hola! 🌟*\n*📽️ Aquí tienes tu video de TikTok.*\n\n*Recuerda que si deseas convertir el video en audio, puedes hacerlo fácilmente respondiendo al video con el comando #tomp3 🎧.*` 
+ //let cap = `*USUARIO:* ${nickname || 'Indefinido'}` 
+ let cap =  `**📽️ Aquí tienes tu video de TikTok.*\n\n*Recuerda que si deseas convertir el video en audio, puedes hacerlo fácilmente respondiendo al video con el comando #tomp3 🎧.*` 
  await conn.sendMessage(m.chat, { video: { url: url}, caption: cap }, { quoted: m })   
  } catch { 
  throw `*[⚠️] OCURRIO UN ERROR, INTENTALO DE NUEVO.*` 
