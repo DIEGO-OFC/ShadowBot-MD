@@ -154,6 +154,8 @@ global.pdoc = [
   "application/pdf",
   "text/rtf",
 ];
+global.antiyaoi = ['YAOI', 'yaoi', 'yAoi','yaoI']
+global.sinyaoi = ["como te através a buscar esa perra puta mamada","puto gay no busques mierdas", "puto estorbo social este bot es hetero", "aquí no existe yaoi maricon"]
 global.Key360 = ["964f-0c75-7afc"]; //keys ephoto360
 global.keysZens = ["fiktod", "c2459db922", "BF39D349845E", "675e34de8a", "37CC845916", "0b917b905e6f", "6fb0eff124"];
 global.keysxxx = keysZens[Math.floor(keysZens.length * Math.random())];
