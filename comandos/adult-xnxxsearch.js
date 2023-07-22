@@ -1,6 +1,7 @@
 import fetch from "node-fetch";
 let handler = async (m, {text, usedPrefix, command}) => {
   if (!text) throw `uhm.. mau cari apa?\n\nContoh: ${usedPrefix + command} bokep🐒`;
+if (text.includes(`${antiyaoi}`)) return m.reply('${sinyaoi}')
   try {
     let res = await xnxxsearch(text);
     let json = res.result;
