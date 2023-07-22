@@ -9,7 +9,7 @@ import fg from 'api-dylux';
  if (!/(?:https:?\/{2})?(?:w{3}|vm|vt|t)?\.?tiktok.com\/([^\s&]+)/gi.test(text)) throw `*[❗𝐈𝐍𝐅𝐎❗] 𝙴𝙽𝙻𝙰𝙲𝙴 𝙳𝙴 𝚃𝙸𝙺𝚃𝙾𝙺 𝙸𝙽𝙲𝙾𝚁𝚁𝙴𝙲𝚃𝙾, 𝙿𝙾𝚁 𝙵𝙰𝚅𝙾𝚁 𝙸𝙽𝙶𝚁𝙴𝚂𝙴 𝙴𝙽 𝙴𝙽𝙻𝙰𝙲𝙴/𝙻𝙸𝙽𝙺 𝙳𝙴 𝙰𝙻𝙶𝚄𝙽 𝚅𝙸𝙳𝙴𝙾 𝙳𝙴 𝚃𝙸𝙺𝚃𝙾𝙺*\n\n*—◉ 𝙴𝙹𝙴𝙼𝙿𝙻𝙾:*\n*${usedPrefix + command}* https://vm.tiktok.com/ZMFb4BXVd/` 
  let texto = `*[🔄] @${m.sender.split`@`[0]} ENVIANDO VIDEO, PORFAVOR ESPERA*` 
  try { 
- conn.sendMessage(m.chat, { text: texto },{ mentions: await conn.parseMention(texto) })
+  conn.sendMessage(m.chat, { text: texto },{ mentions: [m.sender] }, {quoted: m})
  await conn.relayMessage(m.chat, prep.message, { messageId: prep.key.id, mentions: [m.sender] })     
  const dataF = await tiktok.v1(args[0]) 
  //let desc1 =  `*USUARIO:* ${dataF.nickname || 'Indefinido'}` 
