@@ -27,8 +27,8 @@
   },
   "license": "GPL-3.0-or-later",
   "dependencies": {
-    "@adiwajshing/baileys": "github:BrunoSobrino/baileys",
-    "@bochilteam/scraper": "^3.0.0",
+    "@adiwajshing/baileys": "npm:@queenanya/baileys2@6.4.1",        
+    "@bochilteam/scraper": "^4.2.4",
     "@shineiichijo/marika": "^2.0.6",
     "@vitalets/google-translate-api": "^8.0.0",
     "acrcloud": "^1.4.0",
