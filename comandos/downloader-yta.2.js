@@ -23,7 +23,7 @@ import { youtubedl, youtubedlv2 } from '@bochilteam/scraper'
  let cap2 = `*◉—⌈📥 YOUTUBE DL 📥⌋—◉*\n🔍 *TITULO:* ${n}\n📦 *PESO:* ${n3}`.trim() 
  await conn.sendMessage(m.chat, { document: { url: n2 }, caption: cap2, mimetype: 'audio/mpeg', fileName: `${n}.mp3`}, {quoted: m}) 
  } catch { 
- await conn.reply(m.chat, '*[❗] 𝙴𝚁𝚁𝙾𝚁 𝙽𝙾 𝙵𝚄𝙴 𝙿𝙾𝚂𝙸𝙱𝙻𝙴 𝙳𝙴𝚂𝙲𝙰𝚁𝙶𝙰𝚁 𝙴𝙻 𝙰𝚄𝙳𝙸𝙾*', m)} 
+ await conn.reply(m.chat, '*[⚠️] ERROR NO SE PUDO DESCARGAR*', m)} 
  }} 
  handler.command = /^ytmp3doc|ytadoc|ytmp3.2|yta.2$/i 
  export default handler
