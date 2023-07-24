@@ -25,14 +25,7 @@ let comchat = `*[ ✔ ] 𝚄𝙽𝙰 𝙿𝙴𝚁𝚂𝙾𝙽𝙰 𝚂𝙴 𝙰�
        this.sendMessage(room.a, { text: comchat }, { quoted: m }) 
         room.b = m.sender;
         room.state = "CHATTING";
-        await this.sendButton(
-          m.chat,
-          "*[ ✔ ] 𝚄𝙽𝙰 𝙿𝙴𝚁𝚂𝙾𝙽𝙰 𝚂𝙴 𝙰𝙷 𝚄𝙽𝙸𝙳𝙾 𝙰𝙻 𝙲𝙷𝙰𝚃 𝙰𝙽𝙾𝙽𝙸𝙼𝙾, 𝙿𝚄𝙴𝙳𝙴𝙽 𝙸𝙽𝙸𝙲𝙸𝙰𝚁 𝙰 𝙲𝙷𝙰𝚃𝙴𝙰𝚁*",
-          author,
-          null,
-          [["𝙸𝚁 𝙰 𝙾𝚃𝚁𝙾 𝙲𝙷𝙰𝚃", `.next`]],
-          m
-        );
+        this.sendMessage(m.chat, { text: comchat }, { quoted: m }) 
       } else {
         let id = +new Date();
         this.anonymous[id] = {
