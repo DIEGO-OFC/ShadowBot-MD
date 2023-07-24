@@ -82,19 +82,8 @@ let handler = async (m, {conn, args, participants}) => {
     ).join`\n`}
 ╚════ ≪ •❈• ≫ ════╝
 `.trim();
-  //await m.reply(text, null, { mentions: conn.parseMention(text) })
-  await conn.sendButton(
-    m.chat,
-    wm,
-    text,
-    null,
-    [
-      ["𝙈𝙚𝙣𝙪 𝙅𝙪𝙚𝙜𝙤𝙨 🎡", "#juegosdelgrupo"],
-      ["𝙍𝙖𝙣𝙜𝙤𝙨 🚹", "#rol"],
-    ],
-    m,
-    {mentions: conn.parseMention(text)}
-  );
+  //await m.reply(text, null, { mentions: conn.parseMention(text) });
+m.reply(text);
 };
 handler.help = ["top"];
 handler.tags = ["xp"];
