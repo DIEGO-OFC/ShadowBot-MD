@@ -1,4 +1,4 @@
-const items = ["limit", "exp"];
+const items = ["limit", "exp", "dolares"];
 let confirmation = {};
 async function handler(m, {conn, args, usedPrefix, command}) {
   if (confirmation[m.sender]) return m.reply("estas haciendo una transferencia");
@@ -12,6 +12,7 @@ async function handler(m, {conn, args, usedPrefix, command}) {
 📍 Artículos transferibles
 ┌──────────────
 ▢ *limit* = diamante
+▢ *dolares* = dolares
 ▢ *exp* = experiencia
 └──────────────
 `.trim();
