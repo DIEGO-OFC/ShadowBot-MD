@@ -12,7 +12,7 @@ this.sendMessage(m.chat, { text: nojugas }, { quoted: m })
       let other = room.other(m.sender);
       if (other)
 let otrouser = `*[❗𝐈𝐍𝐅𝐎❗] 𝙴𝙻 𝙾𝚃𝚁𝙾 𝚄𝚂𝚄𝙰𝚁𝙸𝙾 𝙰𝙷 𝙰𝙱𝙰𝙽𝙳𝙾𝙽𝙰𝙳𝙾 𝙴𝙻 𝙲𝙷𝙰𝚃 𝙰𝙽𝙾𝙽𝙸𝙼𝙾*\n\n*¿𝚀𝚄𝙸𝙴𝚁𝙴𝚂 𝙸𝚁 𝙰 𝙾𝚃𝚁𝙾 𝙲𝙷𝙰𝚃 𝙰𝙽𝙾𝙽𝙸𝙼𝙾?*\n_RESPONDA AL MENSAJE CON EL COMANDO: .start_`.trim()
-this.sendMessage(m.chat, { text: otrouser }, { quoted: m })   
+this.sendMessage(other, { text: otrouser }, { quoted: m })   
       delete this.anonymous[room.id];
       if (command === "leave") break;
     }
