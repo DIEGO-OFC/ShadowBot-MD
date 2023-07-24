@@ -34,9 +34,9 @@ let handler = async (m, { conn, command }) => {
     }
 ║ *💌 NIVEL:* ${level}
 ║ *⚡ RANGO:* ${role}
-║ *💸 DOLARES*: ${dolares}
-║ *🎉 EXPERIENCIA/XP:* ${xp}
-║ *💎 DIAMANTES:* ${limit}
+║ *💸 DOLARES*: ${`${dolares.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`}
+║ *🎉 EXPERIENCIA/XP:* ${`${xp.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`}
+║ *💎 DIAMANTES:* ${`${limit.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`}
 ║ *📦 REGISTRADO:* ${registered ? "Si" : "No"}
 ║ *💳 PREMIUM:* ${prem ? "Si" : "No"}
 ╚════ ≪ •❈• ≫ ════╝`;
