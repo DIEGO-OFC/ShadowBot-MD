@@ -1,9 +1,13 @@
-let handler = async (m, {conn}) => {
+let handler = async (m, { conn }) => {
   let who;
   if (m.isGroup) who = m.mentionedJid[0] ? m.mentionedJid[0] : m.sender;
   else who = m.sender;
+
+  let perfil = await conn
+    .profilePictureUrl(who, "image")
+    .catch((_) => "https://telegra.ph/file/9b1353deceded7f387713.jpg");
   let name = conn.getName(who);
-  let image = imagen1
+  let image = imagen1;
   let user = global.db.data.users[who];
   let premium = user.premium;
   const cartera = {
@@ -18,8 +22,17 @@ let handler = async (m, {conn}) => {
     .filter((v) => v)
     .join("\n")
     .trim();
-  conn.sendMessage(m.chat, {text:  `🎟️ 𝗣 𝗥 𝗘 𝗠 𝗜 𝗨 𝗠 ⇢ ${premium ? "✅" : "❌"}\n${wm}\n👝 ⇢ ${name}\n` + recursos + `\n\n*PARA VER MÁS RECURSOS VISITE EL INVENTARIO*` }, {quoted: m});
-//  conn.sendMessage(m.chat, { image: { url: imagen }, caption: `🎟️ 𝗣 𝗥 𝗘 𝗠 𝗜 𝗨 𝗠 ⇢ ${premium ? "✅" : "❌"}\n${wm}\n👝 ⇢ ${name}\n` + recursos + `\n\n*PARA VER MÁS RECURSOS VISITE EL INVENTARIO*` }, { quoted: m })     
+  conn.sendMessage(
+    m.chat,
+    {
+      image: { url: perfil },
+      caption:
+        `🎟️ 𝗣 𝗥 𝗘 𝗠 𝗜 𝗨 𝗠 ⇢ ${premium ? "✅" : "❌"}\n${wm}\n👝 ⇢ ${name}\n` +
+        recursos +
+        `\n\n*PARA VER MÁS RECURSOS VISITE EL INVENTARIO*`,
+    },
+    { quoted: m },
+  );
 };
 handler.help = ["bal"];
 handler.tags = ["xp"];
