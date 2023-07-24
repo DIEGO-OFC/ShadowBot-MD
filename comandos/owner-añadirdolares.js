@@ -27,8 +27,7 @@ let handler = async (m, {conn, text}) => {
   let users = global.db.data.users;
 
   users[who].dolares += dmt;
-
-m.reply(`╭[ DOLARES 💵 ]⬣\n┃\n┃ღ *PARA:*\n┃ღ *${text}*\n┃┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈\n┃ღ *SE LE AÑADIÓ | NOW YOU HAVE*\n┃ღ *$${dmt} Dolare(s)* 💸\n┃\n╰━━━━━━━━━━━━━━⬣`)
+  conn.sendMessage(m.chat, {text: `╭[ DOLARES 💵 ]⬣\n┃\n┃ღ *PARA:*\n┃ღ *${text}*\n┃┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈\n┃ღ *SE LE AÑADIÓ | NOW YOU HAVE*\n┃ღ *$${dmt} Dolare(s)* 💸\n┃\n╰━━━━━━━━━━━━━━⬣`, mentions: await parseMention(text)}, {quoted: m})
 };
 
 handler.help = ["adddi <@user>"];
