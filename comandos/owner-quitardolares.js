@@ -35,7 +35,7 @@ let pajak = 0;
   
  handler.tags = ["xp"]; 
   
- handler.command = ["añadirdolares", "dardolares", "dardolares"]; 
+ handler.command = ["quitardolares"]; 
   
  handler.group = true; 
   
