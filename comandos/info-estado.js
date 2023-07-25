@@ -37,7 +37,7 @@ ${
     image: pp,
     caption: db,
     footer: wm,
-    buttons: buttons,
+    buttons: null,
     headerType: 4,
     mentions: [m.sender],
   };
