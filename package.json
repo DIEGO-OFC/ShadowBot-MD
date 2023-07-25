@@ -33,6 +33,7 @@
     "@vitalets/google-translate-api": "^8.0.0",
     "@xct007/frieren-scraper": "^0.0.2",
     "acrcloud": "^1.4.0",
+    "puppeteer": "^20.9.0",
     "api-dylux": "^1.2.2",
     "awesome-phonenumber": "^2.68.0",
     "axios": "^0.24.0",
