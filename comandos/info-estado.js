@@ -23,7 +23,7 @@ let handler = async (m, {conn}) => {
  *≡ S E R V E R*
 *🔴 RAM DEL NODO:* ${format(totalmem() - freemem())} / ${format(totalmem())}
 *🔵 RAM DEL BOT:* ${format(freemem())}
-*≡  NodeJS Uso de memoria*`.trim()
+*≡  NodeJS Uso de memoria*
 ${
   "```" +
   Object.keys(used)
