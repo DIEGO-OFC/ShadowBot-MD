@@ -49,7 +49,7 @@ m.reply(`${akuariapiresult1.text}`.trim())
 } catch {
 try {
 conn.sendPresenceUpdate('composing', m.chat)    
-let tioress22 = await fetch(`https://api.lolhuman.xyz/api/openai?apikey=${lolkeysapi}&text=nm?
+let tioress22 = await fetch(`https://api.lolhuman.xyz/api/openai?apikey=${lolkeysapi}&text=${jailbreak}\n${text}?
 ${text}&user=${m.sender}`)
 let hasill22 = await tioress22.json()
 if (hasill22.result == 'error' || hasill22.result == '' || !hasill22.result) return XD //causar error undefined para usar otra api 
