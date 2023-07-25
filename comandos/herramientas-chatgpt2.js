@@ -41,7 +41,7 @@ m.reply(botIA222.data.choices[0].text.trim())
 } catch {
 try {
 conn.sendPresenceUpdate('composing', m.chat)    
-let akuariapi1 = await fetch(`https://api.akuari.my.id/ai/gbard?chat=${text}`)
+let akuariapi1 = await fetch(`https://api.akuari.my.id/ai/gbard?chat=${jailbreak}\n${text}`)
 let akuariapijson1 = await akuariapi1.json()
 if (akuariapijson1.respon == 'error' || akuariapijson1.respon == '' || !akuariapijson1.respon) return XD //causar error undefined para usar otra api 
 let akuariapiresult1 = await translate(`${akuariapijson1.respon}`, { to: 'es', autoCorrect: true })
@@ -49,7 +49,8 @@ m.reply(`${akuariapiresult1.text}`.trim())
 } catch {
 try {
 conn.sendPresenceUpdate('composing', m.chat)    
-let tioress22 = await fetch(`https://api.lolhuman.xyz/api/openai?apikey=${lolkeysapi}&text=${text}&user=${m.sender}`)
+let tioress22 = await fetch(`https://api.lolhuman.xyz/api/openai?apikey=${lolkeysapi}&text=nm?
+${text}&user=${m.sender}`)
 let hasill22 = await tioress22.json()
 if (hasill22.result == 'error' || hasill22.result == '' || !hasill22.result) return XD //causar error undefined para usar otra api 
 let hasill22_result = await translate(`${hasill22.result}`, { to: 'es', autoCorrect: true })  
