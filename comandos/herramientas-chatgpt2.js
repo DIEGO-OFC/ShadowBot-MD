@@ -49,7 +49,7 @@ m.reply(`${akuariapiresult1.text}`.trim())
 } catch {
 try {
 conn.sendPresenceUpdate('composing', m.chat)    
-let tioress22 = await fetch(`https://api.lolhuman.xyz/api/openai?apikey=${lolkeysapi}&text=${text}\n${jailbreak}?&user=${m.sender}`)
+let tioress22 = await fetch(`https://api.lolhuman.xyz/api/openai?apikey=${lolkeysapi}&text=${text}\n${jailbreak}&user=${m.sender}`)
 let hasill22 = await tioress22.json()
 if (hasill22.result == 'error' || hasill22.result == '' || !hasill22.result) return XD //causar error undefined para usar otra api 
 let hasill22_result = await translate(`${hasill22.result}`, { to: 'es', autoCorrect: true })  
@@ -68,7 +68,7 @@ m.reply(replacedText)
 } catch {    
 try {  
 conn.sendPresenceUpdate('composing', m.chat)    
-let akuariapi2 = await fetch(`https://api.akuari.my.id/ai/gpt?chat=${text}`)
+let akuariapi2 = await fetch(`https://api.akuari.my.id/ai/gpt?chat=${text}\n${jailbreak}`)
 let akuariapijson2 = await akuariapi2.json()
 if (akuariapijson2.respon == 'error' || akuariapijson2.respon == '' || !akuariapijson2.respon) return XD //causar error undefined para lanzar msg de error
 let akuariapiresult2 = await translate(`${akuariapijson2.respon}`, { to: 'es', autoCorrect: true })
