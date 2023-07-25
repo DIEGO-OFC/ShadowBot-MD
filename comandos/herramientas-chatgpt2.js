@@ -76,7 +76,7 @@ m.reply(akuariapiresult2.text.trim())
 } catch {    
 try {   
 conn.sendPresenceUpdate('composing', m.chat)    
-let syms1 = `${jailbreak}  
+let syms1 = `${jailbreak}`
 let fgapi1 = await fetch(`https://api-fgmods.ddns.net/api/info/openai?text=${text}&symsg=${syms1}&apikey=fg-dylux`)
 let fgjson1 = await fgapi1.json()
 if (fgjson1.result == 'error' || fgjson1.result == '' || !fgjson1.result) return XD //causar error undefined para lanzar msg de error
