@@ -1,4 +1,34 @@
-import fetch from 'node-fetch'
+import cheerio from 'cheerio' 
+ import gpt from 'api-dylux' 
+ let handler = async (m, { conn, text }) => { 
+  
+ if (!text) throw `✳️ Ingresa el texto` 
+  
+         try { 
+let jailbreak = await fetch('https://raw.githubusercontent.com/Skidy89/chat-gpt-jailbreak/main/Text.txt').then(v => v.text());
+         let syms = `${jailbreak}` 
+         let res = await gpt.ChatGpt(text, syms) 
+          await m.reply(res.text) 
+         } catch { 
+                 m.reply(`❎ Error: intenta más tarde`) 
+         } 
+  
+ } 
+ handler.help = ['ia <text>'] 
+ handler.tags = ['tools'] 
+ handler.command = ['ia', 'ai', 'chatgpt', 'openai', 'gpt'] 
+  
+ export default handler
+
+
+
+
+
+
+
+
+
+/*import fetch from 'node-fetch'
 import cheerio from 'cheerio'
 let handler = async (m, { text, usedPrefix, command }) => {
 if (!text) throw `*[❕] HAGA PETICIÓN, EJEMPLO*
@@ -123,4 +153,4 @@ throw `*[❗] 𝙴𝚁𝚁𝙾𝚁, 𝚅𝚄𝙴𝙻𝚅𝙰 𝙰 𝙸𝙽𝚃�
 }}}}}
 handler.command = ['openai', 'chatgpt', 'ia', 'robot']
 handler.dolares = 3
-export default handler
+export default handler*/
