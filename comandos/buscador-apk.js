@@ -1,140 +1,119 @@
-import {googleImage} from "@bochilteam/scraper";
-import fetch from "node-fetch";
-let handler = async (m, {text, command, conn}) => {
-  if (!text) throw `*[❗] 𝙸𝙽𝙶𝚁𝙴𝙴𝚂𝙴 𝙴𝙻 𝙽𝙾𝙼𝙱𝚁𝙴 𝙳𝙴 𝙻𝙰 𝙰𝙿𝙺 𝚀𝚄𝙴 𝚀𝚄𝙸𝙴𝚁𝙰 𝙱𝚄𝚂𝙲𝙰𝚁*`;
-  const res = await googleImage(text);
-  let image = res.getRandom();
-  let link = image;
 
-  if (command == "apkdone") {
-    let json = await fetch(`https://dhn-api.herokuapp.com/api/apk/apkdone?apps=${text}&apikey=4ca83deeb14d61d16cf0`);
-    let jsons = await json.json();
-    let caption = `*⎔┉━「 ${command} 」━┉⎔*\n`;
-    for (let x of jsons.result) {
-      caption += `
-*𝙽𝙾𝙼𝙱𝚁𝙴:* *${x.apps_name}*
-*𝙻𝙸𝙽𝙺:* ${x.apps_linkdl}
-*𝚅𝙴𝚁𝚂𝙸𝙾𝙽:* ${x.apps_version}
-`;
-    }
-    await conn.sendFile(m.chat, link, "error.mp3", caption, m);
-  }
-  //await conn.reply(m.chat, caption, m)}
-
-  if (command == "apkgoogle") {
-    let json = await fetch(`https://dhn-api.herokuapp.com/api/apk/apkgoogle?apps=${text}&apikey=4ca83deeb14d61d16cf0`);
-    let jsons = await json.json();
-    let caption = `*⎔┉━「 ${command} 」━┉⎔*\n`;
-    for (let x of jsons.result) {
-      caption += `
-*𝙽𝙾𝙼𝙱𝚁𝙴:* *${x.apps_name}*
-*𝙻𝙸𝙽𝙺:* ${x.apps_linkdl}
-`;
-    }
-    await conn.sendFile(m.chat, link, "error.mp3", caption, m);
-  }
-  //await conn.reply(m.chat, caption, m)}
-
-  if (command == "apkmody") {
-    let json = await fetch(`https://dhn-api.herokuapp.com/api/apk/apkmody?apps=${text}&apikey=4ca83deeb14d61d16cf0`);
-    let jsons = await json.json();
-    let caption = `*⎔┉━「 ${command} 」━┉⎔*\n`;
-    for (let x of jsons.result) {
-      caption += `
-*𝙽𝙾𝙼𝙱𝚁𝙴:* *${x.apps_name}*
-*𝙻𝙸𝙽𝙺:* ${x.apps_linkdl}
-*𝙳𝙴𝚂𝙲:* ${x.desc}
-`;
-    }
-    await conn.sendFile(m.chat, link, "error.mp3", caption, m);
-  }
-  //await conn.reply(m.chat, caption, m)}
-
-  if (command == "apkshub") {
-    let json = await fetch(`https://dhn-api.herokuapp.com/api/apk/apkshub?apps=${text}&apikey=4ca83deeb14d61d16cf0`);
-    let jsons = await json.json();
-    let caption = `*⎔┉━「 ${command} 」━┉⎔*\n`;
-    for (let x of jsons.result) {
-      caption += `
-*𝙽𝙾𝙼𝙱𝚁𝙴:* *${x.apps_name}*
-*𝙻𝙸𝙽𝙺:* ${x.apps_linkdl}
-`;
-    }
-    await conn.sendFile(m.chat, link, "error.mp3", caption, m);
-  }
-  //await conn.reply(m.chat, caption, m)}
-
-  if (command == "happymod") {
-    let json = await fetch(`https://dhn-api.herokuapp.com/api/apk/happymod?apps=${text}&apikey=4ca83deeb14d61d16cf0`);
-    let jsons = await json.json();
-    let caption = `*⎔┉━「 ${command} 」━┉⎔*\n`;
-    for (let x of jsons.result) {
-      caption += `
-*𝙽𝙾𝙼𝙱𝚁𝙴:* *${x.apps_name}*
-*𝙻𝙸𝙽𝙺:* ${x.apps_linkdl}
-`;
-    }
-    await conn.sendFile(m.chat, link, "error.mp3", caption, m);
-  }
-  //await conn.reply(m.chat, caption, m)}
-
-  if (command == "hostapk") {
-    let json = await fetch(`https://dhn-api.herokuapp.com/api/apk/hostapk?apps=${text}&apikey=4ca83deeb14d61d16cf0`);
-    let jsons = await json.json();
-    let caption = `*⎔┉━「 ${command} 」━┉⎔*\n`;
-    for (let x of jsons.result) {
-      caption += `
-*𝙽𝙾𝙼𝙱𝚁𝙴:* *${x.apps_name}*
-*𝙻𝙸𝙽𝙺:* ${x.apps_linkdl}
-*𝙳𝙴𝚂𝙲:* ${x.apps_desc}
-`;
-    }
-    await conn.sendFile(m.chat, link, "error.mp3", caption, m);
-  }
-  //await conn.reply(m.chat, caption, m)}
-
-  if (command == "revdl") {
-    let json = await fetch(`https://dhn-api.herokuapp.com/api/apk/revdl?apps=${text}&apikey=4ca83deeb14d61d16cf0`);
-    let jsons = await json.json();
-    let caption = `*⎔┉━「 ${command} 」━┉⎔*\n`;
-    for (let x of jsons.result) {
-      caption += `
-*𝙽𝙾𝙼𝙱𝚁𝙴:* *${x.apps_name}*
-*𝙻𝙸𝙽𝙺:* ${x.apps_linkdl}
-`;
-    }
-    await conn.sendFile(m.chat, link, "error.mp3", caption, m);
-  }
-  //await conn.reply(m.chat, caption, m)}
-
-  if (command == "toraccino") {
-    let json = await fetch(`https://dhn-api.herokuapp.com/api/apk/toraccino?apps=${text}&apikey=4ca83deeb14d61d16cf0`);
-    let jsons = await json.json();
-    let caption = `*⎔┉━「 ${command} 」━┉⎔*\n`;
-    for (let x of jsons.result) {
-      caption += `
-*𝙽𝙾𝙼𝙱𝚁𝙴:* *${x.apps_name}*
-*𝙻𝙸𝙽𝙺:* ${x.apps_linkdl}
-*𝙳𝙴𝚂𝙲:* ${x.apps_desc}
-`;
-    }
-    await conn.sendFile(m.chat, link, "error.mp3", caption, m);
-  }
-  //await conn.reply(m.chat, caption, m)}
-
-  if (command == "uapkpro") {
-    let json = await fetch(`https://dhn-api.herokuapp.com/api/apk/uapkpro?apps=${text}&apikey=4ca83deeb14d61d16cf0`);
-    let jsons = await json.json();
-    let caption = `*⎔┉━「 ${command} 」━┉⎔*\n`;
-    for (let x of jsons.result) {
-      caption += `
-*𝙽𝙾𝙼𝙱𝚁𝙴:* *${x.apps_name}*
-*𝙻𝙸𝙽𝙺:* ${x.apps_linkdl}
-`;
-    }
-    await conn.sendFile(m.chat, link, "error.mp3", caption, m);
-  }
-  //await conn.reply(m.chat, caption, m)}
-};
-handler.command = ["apkdone", "apkgoogle", "apkmody", "apkshub", "happymod", "hostapk", "revdl", "toraccino", "uapkpro"];
-export default handler;
+import cheerio from 'cheerio'; 
+ import fetch from 'node-fetch'; 
+  
+ let handler = async (m, { 
+     conn, 
+     args, 
+     usedPrefix, 
+     text, 
+     command 
+ }) => { 
+  
+     let lister = [ 
+         "search", 
+         "mirror" 
+     ] 
+  
+     let [feature, inputs, inputs_, inputs__, inputs___] = text.split("|") 
+     if (!lister.includes(feature)) return m.reply("*Example:*\n.happymod search|vpn\n\n*Pilih type yg ada*\n" + lister.map((v, index) => "  ○ " + v).join("\n")) 
+  
+     if (lister.includes(feature)) { 
+  
+         if (feature == "search") { 
+             if (!inputs) return m.reply("Input query link\nExample: .happymod search|vpn") 
+             await m.reply(wait) 
+             try { 
+                 let res = await searchHappymod(inputs) 
+                 let teks = res.map((item, index) => { 
+                     return `🔍 *[ RESULT ${index + 1} ]* 
+  
+ 📢 *title:* ${item.title} 
+ 🌐 *url:* ${item.link} 
+ 🖼️ *image:* ${item.image} 
+ 🔖 *star:* ${item.star} 
+ ` 
+  
+                 }).filter(v => v).join("\n\n________________________\n\n") 
+                 await m.reply(teks) 
+             } catch (e) { 
+                 await m.reply(eror) 
+             } 
+         } 
+  
+         if (feature == "mirror") { 
+             if (!inputs) return m.reply("Input query link\nExample: .happymod mirror|link") 
+             await m.reply(wait) 
+             try { 
+                 let res = await mirrorHappymod(inputs) 
+                 let teks = res.map((item, index) => { 
+                     return `🔍 *[ RESULT ${index + 1} ]* 
+  
+ 📢 *title:* ${item.title} 
+ 🌐 *url:* ${item.link} 
+ 🔖 *source:* ${item.source} 
+ ` 
+  
+                 }).filter(v => v).join("\n\n________________________\n\n") 
+                 await m.reply(teks) 
+             } catch (e) { 
+                 await m.reply(eror) 
+             } 
+         } 
+  
+     } 
+ } 
+ handler.help = ["happymod"] 
+ handler.tags = ["internet"] 
+ handler.command = /^(happymod)$/i 
+ export default handler 
+  
+ /* New Line */ 
+ async function searchHappymod(q) { 
+   const response = await fetch('https://happymod.com/search.html?q=' + q); // Ganti URL dengan URL yang sesuai 
+   const body = await response.text(); 
+  
+   const $ = cheerio.load(body); 
+   const sections = []; 
+  
+   $('.container-row.clearfix.container-wrap .container-left section.section-page-white').each((index, element) => { 
+     const section = { 
+       title: $('h3.pdt-app-h3 a', element).text().trim(), 
+       link: 'https://happymod.com' + $('h3.pdt-app-h3 a', element).attr('href'), 
+       image: $('img.lazy', element).attr('data-original'), 
+       star: $('.a-search-num', element).text().trim() 
+     }; 
+  
+     if (Object.values(section).every(value => value)) { 
+       sections.push(section); 
+     } 
+   }); 
+  
+   return sections; 
+ } 
+  
+ async function mirrorHappymod(url) { 
+   try { 
+     const response = await fetch(url.endsWith('download.html') ? url : url + 'download.html'); 
+     const html = await response.text(); 
+     const $ = cheerio.load(html); 
+  
+     const results = []; 
+  
+     $('.cbox.mirror ul a').each((index, element) => { 
+       const link = $(element).attr('href'); 
+       const title = $(element).find('h3').text(); 
+       const source = $(element).find('h4').text(); 
+  
+       results.push({ 
+         link, 
+         title, 
+         source 
+       }); 
+     }); 
+  
+     return results; 
+   } catch (error) { 
+     console.error('Error:', error); 
+   } 
+ }
