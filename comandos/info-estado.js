@@ -20,16 +20,8 @@ let handler = async (m, {conn}) => {
 ║ *=➢ 👑 CREADOR: DIEGO-OFC*
 ║ *=➢ 🔗 PAGINA OFICIAL:* dorrat-bot-oficial.ml
 ╚════════════════
- *≡ S E R V E R*
-*🔴 RAM DEL NODO:* ${format(totalmem() - freemem())} / ${format(totalmem())}
-*🔵 RAM DEL BOT:* ${format(freemem())}
-*≡  NodeJS Uso de memoria*
-${
-  "```" +
-  Object.keys(used)
-    .map((key, _, arr) => `${key.padEnd(Math.max(...arr.map((v) => v.length)), " ")}: ${format(used[key])}`)
-    .join("\n") +
-  "```"
+número del creador:
+wa.me/528442286089
 }
 `.trim();
   //let buttons = [{buttonId: `#menu`, buttonText: {displayText: "𝙼𝙴𝙽𝚄"}, type: 1}];
