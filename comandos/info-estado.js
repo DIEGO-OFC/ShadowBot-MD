@@ -20,9 +20,9 @@ let handler = async (m, {conn}) => {
 ║ *=➢ 👑 CREADOR: DIEGO-OFC*
 ║ *=➢ 🔗 PAGINA OFICIAL:* dorrat-bot-oficial.ml
 ╚════════════════
-número del creador:
+[número del creador]:
 wa.me/528442286089
-}
+
 `.trim();
   //let buttons = [{buttonId: `#menu`, buttonText: {displayText: "𝙼𝙴𝙽𝚄"}, type: 1}];
   let buttonMessage = {
