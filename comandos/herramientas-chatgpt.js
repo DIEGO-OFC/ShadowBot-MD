@@ -16,7 +16,7 @@ let handler = async (m, {
     await m.reply(wait)
     try {
         let res = await ChatGpt(text)
-        await m.reply(res)
+      //  await m.reply(res)
     } catch (e) {
         try {
             let res = await ChatGptV2(text)
