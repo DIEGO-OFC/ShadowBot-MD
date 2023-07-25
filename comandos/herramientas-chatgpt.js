@@ -20,11 +20,11 @@ let handler = async (m, {
     } catch (e) {
         try {
             let res = await ChatGptV2(text)
-           // await m.reply(res.answer)
+           await m.reply(res.answer)
         } catch (e) {
         try {
             let res = await ChatGptV3(text)
-            await m.reply(res[0].generated_text)
+           // await m.reply(res[0].generated_text)
             } catch (e) {
             throw eror
             }
