@@ -21,7 +21,7 @@ import cheerio from 'cheerio';
      if (lister.includes(feature)) { 
   
          if (feature == "search") { 
-             if (!inputs) return m.reply("Input query link\nExample: .happymod search|vpn") 
+             if (!inputs) return m.reply("Input query link\nExample: .happymod search|Minecraft") 
              await m.reply(wait) 
              try { 
                  let res = await searchHappymod(inputs) 
