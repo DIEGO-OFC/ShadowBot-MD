@@ -36,7 +36,7 @@ ${
   let buttonMessage = {
     image: pp,
     caption: db,
-    footer: infobt,
+    footer: wm,
     buttons: buttons,
     headerType: 4,
     mentions: [m.sender],
