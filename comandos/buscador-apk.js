@@ -16,7 +16,7 @@ import cheerio from 'cheerio';
      ] 
   
      let [feature, inputs, inputs_, inputs__, inputs___] = text.split("|") 
-     if (!lister.includes(feature)) return m.reply("*Example:*\n.happymod search|vpn\n\n*Pilih type yg ada*\n" + lister.map((v, index) => "  ○ " + v).join("\n")) 
+     if (!lister.includes(feature)) return m.reply("*Example:*\n.happymod search|Minecraft\n\n*Pilih type yg ada*\n" + lister.map((v, index) => "  ○ " + v).join("\n")) 
   
      if (lister.includes(feature)) { 
   
