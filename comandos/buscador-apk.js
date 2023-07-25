@@ -28,10 +28,10 @@ import cheerio from 'cheerio';
                  let teks = res.map((item, index) => { 
                      return `🔍 *[ RESULT ${index + 1} ]* 
   
- 📢 *title:* ${item.title} 
- 🌐 *url:* ${item.link} 
- 🖼️ *image:* ${item.image} 
- 🔖 *star:* ${item.star} 
+ 📢 *titulo:* ${item.title} 
+ 🌐 *link:* ${item.link} 
+ 🖼️ *imagen:* ${item.image} 
+ 🔖 *estrellas:* ${item.star} 
  ` 
   
                  }).filter(v => v).join("\n\n________________________\n\n") 
@@ -49,8 +49,8 @@ import cheerio from 'cheerio';
                  let teks = res.map((item, index) => { 
                      return `🔍 *[ RESULT ${index + 1} ]* 
   
- 📢 *title:* ${item.title} 
- 🌐 *url:* ${item.link} 
+ 📢 *titulo:* ${item.title} 
+ 🌐 *link:* ${item.link} 
  🔖 *source:* ${item.source} 
  ` 
   
