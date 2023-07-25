@@ -1,3 +1,5 @@
+import { S_WHATSAPP_NET } from "@adiwajshing/baileys";
+
 let handler = async (m, { conn, args, participants }) => {
   let users = Object.entries(global.db.data.users).map(([key, value]) => {
     return { ...value, jid: key };
