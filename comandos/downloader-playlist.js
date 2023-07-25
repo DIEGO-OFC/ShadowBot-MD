@@ -41,7 +41,7 @@ import yts from 'yt-search';
  handler.help = ['playlist *<texto>*']; 
  handler.tags = ['search']; 
  handler.command = /^playlist|playlist2$/i
- handler.dolares = 8
+ handler.dolares = 8;
  export default handler;
 
 
