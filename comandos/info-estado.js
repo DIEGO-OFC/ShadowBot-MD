@@ -19,12 +19,11 @@ let handler = async (m, {conn}) => {
 ║ *=➢ 🤖 TIEMPO ACTIVO:* ${uptime}
 ║ *=➢ 👑 CREADOR: DIEGO-OFC*
 ║ *=➢ 🔗 PAGINA OFICIAL:* dorrat-bot-oficial.ml
-╚════════════════`.trim();
-  let infobt = `
+╚════════════════
  *≡ S E R V E R*
 *🔴 RAM DEL NODO:* ${format(totalmem() - freemem())} / ${format(totalmem())}
 *🔵 RAM DEL BOT:* ${format(freemem())}
-*≡  NodeJS Uso de memoria*
+*≡  NodeJS Uso de memoria*`.trim()
 ${
   "```" +
   Object.keys(used)
@@ -33,7 +32,7 @@ ${
   "```"
 }
 `.trim();
-  let buttons = [{buttonId: `#menu`, buttonText: {displayText: "𝙼𝙴𝙽𝚄"}, type: 1}];
+  //let buttons = [{buttonId: `#menu`, buttonText: {displayText: "𝙼𝙴𝙽𝚄"}, type: 1}];
   let buttonMessage = {
     image: pp,
     caption: db,
