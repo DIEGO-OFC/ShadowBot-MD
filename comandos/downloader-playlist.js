@@ -32,7 +32,7 @@ import yts from 'yt-search';
  ❒ ⏱️ *_Duración :_* ${v.timestamp} 
  ❒ 📥 *_Subido :_* ${v.ago} 
  ❒ 👁 *_Vistas :_* ${v.views}`}).join('\n\n◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦\n\n') 
- conn.sendFile(m.chat, results.all[0].thumbnail, 'yts.jpeg', textoInfo + '\n\n' + teks, m) 
+ await conn.sendFile(m.chat, results.all[0].thumbnail, 'yts.jpeg', textoInfo + '\n\n' + teks, m) 
  global.videoList.push(vids_); 
  } catch {     
     await m.reply("*[⚠️] ERROR, VUELVA A INTENTARLO*");
@@ -40,7 +40,8 @@ import yts from 'yt-search';
  }} 
  handler.help = ['playlist *<texto>*']; 
  handler.tags = ['search']; 
- handler.command = /^playlist|playlist2$/i 
+ handler.command = /^playlist|playlist2$/i
+ handler.dolares = 8
  export default handler;
 
 
