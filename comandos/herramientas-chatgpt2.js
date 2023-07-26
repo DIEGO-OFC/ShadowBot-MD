@@ -81,8 +81,30 @@ let fgapi1 = await fetch(`https://api-fgmods.ddns.net/api/info/openai?text=${tex
 let fgjson1 = await fgapi1.json()
 if (fgjson1.result == 'error' || fgjson1.result == '' || !fgjson1.result) return XD //causar error undefined para lanzar msg de error
 let fgjson1_result = await translate(`${fgjson1.result}`, { to: 'es', autoCorrect: true })  
-m.reply(fgjson1_result.text.trim())    
-} catch {    
+let ppdilufo = `${fgjson1_result.text.trim()}`  
+ await await conn.sendMessage( 
+       m.chat, 
+       { 
+         image: { 
+           url: "https://telegra.ph/file/10e013d9ae4d9cdf5af14.jpg", 
+         }, 
+         caption: ppdilufo, 
+         contextInfo: { 
+           mentionedJid: [m.sender], 
+           externalAdReply: { 
+             title: `TOOLS - CHATGPT`, 
+             sourceUrl: "http://paypal.me/DorratBotOficial", 
+             mediaType: 1, 
+             showAdAttribution: true, 
+             thumbnailUrl: "https://telegra.ph/file/10e013d9ae4d9cdf5af14.jpg", 
+           }, 
+         }, 
+       }, 
+       { 
+         quoted: m, 
+       } 
+     )
+} catch {   
 throw `*[❗] 𝙴𝚁𝚁𝙾𝚁, 𝚅𝚄𝙴𝙻𝚅𝙰 𝙰 𝙸𝙽𝚃𝙴𝙽𝚃𝙰𝚁𝙻𝙾*`   
 }}}}}}}}
 handler.command = ['openai2', 'chatgpt2', 'ia2', 'robot2']
