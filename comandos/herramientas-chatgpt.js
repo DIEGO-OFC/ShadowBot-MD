@@ -10,7 +10,7 @@ await conn.sendPresenceUpdate('composing', m.chat)
 var syms = `${jailbreak}`
 
 
-let diluxgpt = await fetch(`https://api.amosayomide05.cf/gpt/?question=${text}&string_id=${m.sender}`)   
+let diluxgpt = await fetch(`https://api-fgmods.ddns.net/api/info/openai?text=${text}&symsg=${syms}&apikey=fg-dylux`)   
  let gptilux = await diluxgpt.json()
  await await conn.sendMessage(
       m.chat,
