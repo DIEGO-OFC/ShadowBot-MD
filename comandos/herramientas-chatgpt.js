@@ -10,18 +10,15 @@ await conn.sendPresenceUpdate('composing', m.chat)
 var syms = `${jailbreak}`
 
 
-let fgapi1 = await fetch(`https://api-fgmods.ddns.net/api/info/openai?text=${text}&symsg=${syms}&apikey=fg-dylux`)
-let fgjson1 = await fgapi1.json()
-if (fgjson1.result == 'error' || fgjson1.result == '' || !fgjson1.result) return XD //causar error undefined para lanzar msg de error
-let fgjson1_result = await translate(`${fgjson1.result}`, { to: 'es', autoCorrect: true })  
-    let fgresultd = `${fgjson1_result.text.trim()}`
+let diluxgpt = await fetch(`https://api.amosayomide05.cf/gpt/?question=${text}&string_id=${m.sender}`)   
+ let gptilux = await diluxgpt.json()
  await await conn.sendMessage(
       m.chat,
       {
         image: {
           url: "https://telegra.ph/file/10e013d9ae4d9cdf5af14.jpg",
         },
-        caption: fgjson1_result.text.trim(),
+        caption: gptilux,
         contextInfo: {
           mentionedJid: [m.sender],
           externalAdReply: {
