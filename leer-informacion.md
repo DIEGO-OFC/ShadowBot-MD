@@ -2,7 +2,7 @@
 
 Gracias por usar el bot. Si deseas volver a escanear el código QR, borra la carpeta DORRATSESSION o reinicia el bot con el comando "restart" o "start".
 
-- Número del bot oficial: +573122695406
+- Número del bot oficial: ++506 6443 2500
 - Si deseas cambiar los números owners, ve a configuracion.js
 - Creador: DIEGO-OFC número: +528442286089
 - Si tienes errores en la consola, repórtalos al número +528442286089
@@ -11,7 +11,7 @@ Gracias por usar el bot. Si deseas volver a escanear el código QR, borra la car
 - Si necesitas ayuda o soporte, únete al grupo oficial o escribe al número del creador.
 - En este GitHub siempre tendrás actualizaciones.
 - No me hago responsable del mal uso que puedas darle al bot.
-- Los números del bot oficial son: wa.me/573122695406 o wa.me/240555351060
+- Los números del bot oficial son: wa.me/50664432500 o wa.me/240555351060
 - Bot creado para la diversión de los usuarios.
 **DORR∆T-BOT-MD CREATE BY DIEGO-OFC**
 ### Grupo oficial
