@@ -553,8 +553,9 @@ let completomenu = `*╭━━❍𝐃𝐎𝐑𝐑𝐀𝐓-𝐁𝐎𝐓-𝐌𝐃�
 "menucompleto",
  
   ];
-  handler.command = ["menulista",
+  handler.command = [
   "menu",
+  "menucompleto",
   ]
   handler.tags = ["internet"]  
   handler.command = /^(happymod)$/i  
