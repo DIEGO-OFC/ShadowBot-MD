@@ -33,7 +33,7 @@ const owner = [
 /*├➢*/ const prems = ["595986674310"];
 /*└────ׂ─ׂ─ׂ─ׂ───*/
 
-(const.APIs = {
+const APIs = {
   // API Prefix
   // name: 'https://website'
   amel: "https://melcanz.com",
@@ -64,8 +64,8 @@ const owner = [
   kanx: "https://kannxapi.herokuapp.com/",
   dhnjing: "https://dhnjing.xyz",
   violetics: "https://violetics.pw",
-}),
-  (global.APIKeys = {
+},
+  const APIKeys = {
     // APIKey Here
     // 'https://website': 'apikey'
     "https://api-alc.herokuapp.com": "ConfuMods",
@@ -85,7 +85,7 @@ const owner = [
     "https://neoxr-api.herokuapp.com": "yntkts",
     "https://anabotofc.herokuapp.com/": "AnaBot",
     "https://violetics.pw": "beta",
-  });
+  };
 
 global.openai_key = "sk-0";
 /* Consigue tu ApiKey en este enlace: https://platform.openai.com/account/api-keys */
