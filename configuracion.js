@@ -65,7 +65,7 @@ const owner = [
   dhnjing: "https://dhnjing.xyz",
   violetics: "https://violetics.pw",
 }),
- global.APIKeys = {
+ (global.APIKeys = {
     // APIKey Here
     // 'https://website': 'apikey'
     "https://api-alc.herokuapp.com": "ConfuMods",
