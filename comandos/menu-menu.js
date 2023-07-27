@@ -9,7 +9,7 @@ let handler = async (m, {
       conn, 
       args,  
       usedPrefix,  
-      text,  
+      text
   }) => {  
     let d = new Date(new Date() + 3600000); 
    let locale = "es"; 
