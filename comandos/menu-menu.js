@@ -1,10 +1,9 @@
 /********************************************
 *         DORRAT-BOT-MD BY DIEGO-OFC        *
 /********************************************/
-
+import moment from 'moment-timezone';
 import cheerio from 'cheerio';  
-  import fetch from 'node-fetch';  
-  import moment from "moment-timezone";
+import fetch from 'node-fetch';  
     let d = new Date(new Date() + 3600000); 
    let locale = "es"; 
    let week = d.toLocaleDateString(locale, {weekday: "long"}); 
