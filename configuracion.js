@@ -1,13 +1,12 @@
-const {watchFile, unwatchFile} = require("fs");
-const chalk = require("chalk");
-const {fileURLToPath} = require("url");
-const fs = require("fs");
-const cheerio = require("cheerio");
-const fetch = require("node-fetch");
-const axios = require("axios");
-const moment = require("moment-timezone");
-const {en, es, pt} = require("./lib/idiomas/total-idiomas.js");
-
+import {watchFile, unwatchFile} from "fs";
+import chalk from "chalk";
+import {fileURLToPath} from "url";
+import fs from "fs";
+import cheerio from "cheerio";
+import fetch from "node-fetch";
+import axios from "axios";
+import moment from "moment-timezone";
+import {en, es, pt} from "./lib/idiomas/total-idiomas.js";
 //cambia los números que sean propietarios
 const owner = [
 /*╔══════════════════╗*/
