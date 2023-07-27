@@ -6,7 +6,7 @@ const cheerio = require("cheerio");
 const fetch = require("node-fetch");
 const axios = require("axios");
 const moment = require("moment-timezone");
-const {en, es, pt} require("./lib/idiomas/total-idiomas.js");
+const {en, es, pt} = require("./lib/idiomas/total-idiomas.js");
 
 //cambia los números que sean propietarios
 const owner = [
