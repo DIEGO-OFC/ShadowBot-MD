@@ -90,17 +90,16 @@ const owner = [
 var openai_key = "sk-0";
 /* Consigue tu ApiKey en este enlace: https://platform.openai.com/account/api-keys */
 
-const openai_org_id = "org-3";
+var openai_org_id = "org-3";
 /* Consigue tu ID de organizacion en este enlace: https://platform.openai.com/account/org-settings */
 
-global.lenguajeGB = es;
+const lenguajeGB = es;
 
-/* ______________________________________________ */
-global.creadorname = "𝐃𝐈𝐄𝐆𝐎-𝐎𝐅𝐂";
-global.creatorname = creadorname;
-global.library = "BAILEYS-MD";
-global.vs = "V10";
-global.version = vs;
+/* ______________________________________________ */const creadorname = "𝐃𝐈𝐄𝐆𝐎-𝐎𝐅𝐂";
+const creatorname = creadorname;
+const library = "BAILEYS-MD";
+const vs = "V10";
+const version = vs;
 
 //_______tiempp de stickers______________
 global.d = new Date(new Date() + 3600000);
