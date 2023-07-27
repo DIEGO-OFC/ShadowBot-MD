@@ -33,7 +33,7 @@ const owner = [
 /*├➢*/ const prems = ["595986674310"];
 /*└────ׂ─ׂ─ׂ─ׂ───*/
 
-(var APIs = {
+(const APIs = {
   // API Prefix
   // name: 'https://website'
   amel: "https://melcanz.com",
