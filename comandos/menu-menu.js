@@ -25,7 +25,7 @@ import fetch from 'node-fetch';
      }, 
      participant: "0@s.whatsapp.net", 
    }; 
-   m.reply(`[ 𝐂𝐀𝐑𝐆𝐀𝐍𝐃𝐎 𝐌𝐄𝐍𝐔... ]`);
+   
   let handler = async (m, {  
       conn,  
       args,  
@@ -33,7 +33,7 @@ import fetch from 'node-fetch';
       text,  
       command  
   }) => {  
-  
+  m.reply(`[ 𝐂𝐀𝐑𝐆𝐀𝐍𝐃𝐎 𝐌𝐄𝐍𝐔... ]`);
   if (command == "menu") {
 m.reply(`
 tenemos varios tipos de menus
@@ -42,7 +42,7 @@ tenemos varios tipos de menus
 2
 #menudescargas`)}
        
-  let dorrat = ``
+ 
    if (command == "menucompleto") {
                   
 let completomenu = `*╭━━❍𝐃𝐎𝐑𝐑𝐀𝐓-𝐁𝐎𝐓-𝐌𝐃❍━━╮* 
