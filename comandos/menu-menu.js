@@ -1189,4 +1189,4 @@ function ucapan() {
   }
 
   return res;
-}
+}*/
