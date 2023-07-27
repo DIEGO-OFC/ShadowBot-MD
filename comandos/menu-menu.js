@@ -5,11 +5,11 @@ import moment from 'moment-timezone';
 import cheerio from 'cheerio';  
 import fetch from 'node-fetch';  
 let handler = async (m, {  
-      conn,  
+      command, 
+      conn, 
       args,  
       usedPrefix,  
       text,  
-      command  
   }) => {  
     let d = new Date(new Date() + 3600000); 
    let locale = "es"; 
@@ -557,7 +557,6 @@ let completomenu = `*╭━━❍𝐃𝐎𝐑𝐑𝐀𝐓-𝐁𝐎𝐓-𝐌𝐃�
   "menucompleto"
   ];
   handler.tags = ["internet"]  
-  handler.command = /^(happymod)$/i  
   export default handler 
   
   function clockString(ms) { 
