@@ -599,8 +599,7 @@ let completomenu = `*╭━━❍𝐃𝐎𝐑𝐑𝐀𝐓-𝐁𝐎𝐓-𝐌𝐃�
 
 
 
-/*import moment from "moment-timezone";
-let handler = async (m, {conn, usedPrefix, usedPrefix: _p}) => {
+/*let handler = async (m, {conn, usedPrefix, usedPrefix: _p}) => {
   let d = new Date(new Date() + 3600000);
   let locale = "es";
   let week = d.toLocaleDateString(locale, {weekday: "long"});
