@@ -9,7 +9,7 @@ import moment from "moment-timezone";
 import {en, es, pt} from "./lib/idiomas/total-idiomas.js";
 
 //cambia los números que sean propietarios
-global.owner = [
+const owner = [
 /*╔══════════════════╗*/
 /*║ ❒*/ ["5218442286089", "🔰𝐃𝐈𝐄𝐆𝐎-𝐂𝐑𝐄𝐀𝐃𝐎𝐑🔰", true],
 /*║ ❒*/ ["51993138466", "🔰  𝙲𝙾𝙻𝙻𝙰𝙱𝙾𝚁𝙰𝚃𝙾𝚁 1 🔰", true],
