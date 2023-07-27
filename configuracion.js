@@ -95,7 +95,8 @@ var openai_org_id = "org-3";
 
 const lenguajeGB = es;
 
-/* ______________________________________________ */const creadorname = "𝐃𝐈𝐄𝐆𝐎-𝐎𝐅𝐂";
+/* ______________________________________________ */
+const creadorname = "𝐃𝐈𝐄𝐆𝐎-𝐎𝐅𝐂";
 const creatorname = creadorname;
 const library = "BAILEYS-MD";
 const vs = "V10";
@@ -110,15 +111,15 @@ global.mes = d.toLocaleDateString("es", {month: "long"});
 global.año = d.toLocaleDateString("es", {year: "numeric"});
 global.tiempo = d.toLocaleString("en-US", {hour: "numeric", minute: "numeric", second: "numeric", hour12: true});
 //------------- Sticker WM -----------
-global.packname = `𝐃𝐈𝐄𝐆𝐎-𝐎𝐅𝐂`;
-global.author = `©⏤͟͟͞𝐓𝐇𝐄 𝐃𝐎𝐑𝐑𝐀𝐓-𝐁𝐎𝐓-𝐌𝐃`;
+const packname = `𝐃𝐈𝐄𝐆𝐎-𝐎𝐅𝐂`;
+const author = `©⏤͟͟͞𝐓𝐇𝐄 𝐃𝐎𝐑𝐑𝐀𝐓-𝐁𝐎𝐓-𝐌𝐃`;
 //_______________
-global.wm = "𝐃𝐎𝐑𝐑𝐀𝐓-𝐁𝐎𝐓 | 𝐃𝐈𝐄𝐆𝐎-𝐎𝐅𝐂";
-global.db3t = `©⏤͟͟͞𝐓𝐇𝐄 𝐃𝐎𝐑𝐑𝐀𝐓-𝐁𝐎𝐓-𝐌𝐃`;
-global.wm3 = db3t;
-global.codex = `Diego-Ofc`;
-global.igfg = "𝑫𝑶𝑹𝑹𝑨𝑻-𝑩𝑶𝑻";
-global.wait = "*[❕] CARGANDO POR FAVOR ESPERA...*";
+var wm = "𝐃𝐎𝐑𝐑𝐀𝐓-𝐁𝐎𝐓 | 𝐃𝐈𝐄𝐆𝐎-𝐎𝐅𝐂";
+var db3t = `©⏤͟͟͞𝐓𝐇𝐄 𝐃𝐎𝐑𝐑𝐀𝐓-𝐁𝐎𝐓-𝐌𝐃`;
+var wm3 = db3t;
+var codex = `Diego-Ofc`;
+var igfg = "𝑫𝑶𝑹𝑹𝑨𝑻-𝑩𝑶𝑻";
+var wait = "*[❕] CARGANDO POR FAVOR ESPERA...*";
 //-------------------
 global.md = "https://chat.whatsapp.com/JuuuUaIQnnE3t4SWQenShg";
 global.dorramd = md;
