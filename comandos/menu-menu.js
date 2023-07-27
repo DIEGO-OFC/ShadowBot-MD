@@ -4,7 +4,8 @@
 import moment from 'moment-timezone';
 import cheerio from 'cheerio';  
 import fetch from 'node-fetch';  
-let handler = async (m, {conn, usedPrefix, command, usedPrefix: _p}) => {
+let handler async = (m {conn, args, usedPrefix, text, command
+}) => {
     let d = new Date(new Date() + 3600000); 
    let locale = "es"; 
    let week = d.toLocaleDateString(locale, {weekday: "long"}); 
