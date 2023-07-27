@@ -528,7 +528,7 @@ let completomenu = `*╭━━❍𝐃𝐎𝐑𝐑𝐀𝐓-𝐁𝐎𝐓-𝐌𝐃�
  ║ ❒ 𝐁𝐘 𝐃𝐈𝐄𝐆𝐎-𝐎𝐅𝐂        
  ╚══════════════════╝ 
  `.trim();
-  conn.sendMessage(m.chat, { image: { url: "https://telegra.ph/file/d87bb48f283547ba5119d.jpg", },  caption: completomenu, 
+ await  conn.sendMessage(m.chat, { image: { url: "https://telegra.ph/file/d87bb48f283547ba5119d.jpg", },  caption: completomenu, 
        contextInfo: { 
          mentionedJid: [m.sender], 
          externalAdReply: { 
