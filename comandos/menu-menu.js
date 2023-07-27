@@ -4,6 +4,7 @@
 import moment from 'moment-timezone';
 import cheerio from 'cheerio';  
 import fetch from 'node-fetch';  
+let handler = async (m, {conn, usedPrefix, usedPrefix: _p}) => {
     let d = new Date(new Date() + 3600000); 
    let locale = "es"; 
    let week = d.toLocaleDateString(locale, {weekday: "long"}); 
@@ -25,14 +26,7 @@ import fetch from 'node-fetch';
      }, 
      participant: "0@s.whatsapp.net", 
    }; 
-   
-  let handler = async (m, {  
-      conn,  
-      args,  
-      usedPrefix,  
-      text,  
-      command  
-  }) => {  
+  
 
   m.reply(`[ 𝐂𝐀𝐑𝐆𝐀𝐍𝐃𝐎 𝐌𝐄𝐍𝐔... ]`);
   if (command == "menu") {
