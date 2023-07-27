@@ -34,7 +34,7 @@ let handler = async (m, {
    }; 
   
 
-  m.reply(`[ 𝐂𝐀𝐑𝐆𝐀𝐍𝐃𝐎 𝐌𝐄𝐍𝐔... ]`);
+  await m.reply(`[ 𝐂𝐀𝐑𝐆𝐀𝐍𝐃𝐎 𝐌𝐄𝐍𝐔... ]`);
   if (command == "menu") {
 m.reply(`
 tenemos varios tipos de menus
