@@ -33,6 +33,7 @@ import fetch from 'node-fetch';
       text,  
       command  
   }) => {  
+
   m.reply(`[ 𝐂𝐀𝐑𝐆𝐀𝐍𝐃𝐎 𝐌𝐄𝐍𝐔... ]`);
   if (command == "menu") {
 m.reply(`
