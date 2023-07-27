@@ -550,13 +550,12 @@ let completomenu = `*╭━━❍𝐃𝐎𝐑𝐑𝐀𝐓-𝐁𝐎𝐓-𝐌𝐃�
   
   handler.help = [
 "menu",
-"menucompleto",
- 
+"menucompleto"
   ];
   handler.command = [
   "menu",
-  "menucompleto",
-  ]
+  "menucompleto"
+  ];
   handler.tags = ["internet"]  
   handler.command = /^(happymod)$/i  
   export default handler 
