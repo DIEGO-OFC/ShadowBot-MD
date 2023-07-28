@@ -11,17 +11,17 @@ var handler = async (m, {
       usedPrefix,  
       text
   }) => {  
-    let d = new Date(new Date() + 3600000); 
-   let locale = "es"; 
-   let week = d.toLocaleDateString(locale, {weekday: "long"}); 
-   let date = d.toLocaleDateString(locale, {day: "numeric", month: "long", year: "numeric"}); 
-   let _uptime = process.uptime() * 1000; 
-   let uptime = clockString(_uptime); 
-   let {exp, limit, dolares, role} = global.db.data.users[m.sender]; 
-   let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender; 
-   let username = conn.getName(who); 
-   let db = "./galeria/menudorrat3.jpg"; 
-   let fkontak = { 
+    const d = new Date(new Date() + 3600000); 
+   const locale = "es"; 
+   const week = d.toLocaleDateString(locale, {weekday: "long"}); 
+   const date = d.toLocaleDateString(locale, {day: "numeric", month: "long", year: "numeric"}); 
+   const _uptime = process.uptime() * 1000; 
+   const uptime = clockString(_uptime); 
+   const {exp, limit, dolares, role} = global.db.data.users[m.sender]; 
+   const who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender; 
+   const username = conn.getName(who); 
+   const db = "./galeria/menudorrat3.jpg"; 
+   const fkontak = { 
      key: {participants: "0@s.whatsapp.net", remoteJid: "status@broadcast", fromMe: false, id: "Halo"}, 
      message: { 
        contactMessage: { 
