@@ -4,7 +4,7 @@
 import moment from 'moment-timezone';
 import cheerio from 'cheerio';  
 import fetch from 'node-fetch';  
-let handler = async (m, {  
+var handler = async (m, {  
       command, 
       conn, 
       args,  
