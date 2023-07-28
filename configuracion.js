@@ -27,9 +27,9 @@ global.owner = [
 /*║ ❒*/ ["5218442114446"]
 /*╚══════════════════╝*/                     ];
 /*┌--------------*/
-/*├➢*/ const suittag = ["593959425714"];
-/*├➢*/ const mods = ["595986674310"];
-/*├➢*/ const prems = ["595986674310"];
+/*├➢*/ global.suittag = ["593959425714"];
+/*├➢*/ global.mods = ["595986674310"];
+/*├➢*/ global.prems = ["595986674310"];
 /*└────ׂ─ׂ─ׂ─ׂ───*/
 
 (global.APIs = {
@@ -86,20 +86,20 @@ global.owner = [
     "https://violetics.pw": "beta",
   });
 
-const openai_key = "sk-0";
+global.openai_key = "sk-0";
 /* Consigue tu ApiKey en este enlace: https://platform.openai.com/account/api-keys */
 
-const openai_org_id = "org-3";
+global.openai_org_id = "org-3";
 /* Consigue tu ID de organizacion en este enlace: https://platform.openai.com/account/org-settings */
 
 global.lenguajeGB = es;
 
 /* ______________________________________________ */
-const creadorname = "𝐃𝐈𝐄𝐆𝐎-𝐎𝐅𝐂";
-const creatorname = "𝐃𝐈𝐄𝐆𝐎-𝐎𝐅𝐂";
-const library = "BAILEYS-MD";
-const vs = "V10";
-const version = vs;
+global.creadorname = "𝐃𝐈𝐄𝐆𝐎-𝐎𝐅𝐂";
+global.creatorname = "𝐃𝐈𝐄𝐆𝐎-𝐎𝐅𝐂";
+global.library = "BAILEYS-MD";
+global.vs = "V10";
+goobal.version = vs;
 
 //_______tiempp de stickers______________
 global.d = new Date(new Date() + 3600000);
@@ -110,15 +110,15 @@ global.mes = d.toLocaleDateString("es", {month: "long"});
 global.año = d.toLocaleDateString("es", {year: "numeric"});
 global.tiempo = d.toLocaleString("en-US", {hour: "numeric", minute: "numeric", second: "numeric", hour12: true});
 //------------- Sticker WM -----------
-const packname = `𝐃𝐈𝐄𝐆𝐎-𝐎𝐅𝐂`;
-const author = `©⏤͟͟͞𝐓𝐇𝐄 𝐃𝐎𝐑𝐑𝐀𝐓-𝐁𝐎𝐓-𝐌𝐃`;
+global.packname = `𝐃𝐈𝐄𝐆𝐎-𝐎𝐅𝐂`;
+global.author = `©⏤͟͟͞𝐓𝐇𝐄 𝐃𝐎𝐑𝐑𝐀𝐓-𝐁𝐎𝐓-𝐌𝐃`;
 //_______________
-const wm = "𝐃𝐎𝐑𝐑𝐀𝐓-𝐁𝐎𝐓 | 𝐃𝐈𝐄𝐆𝐎-𝐎𝐅𝐂";
-const db3t = `©⏤͟͟͞𝐓𝐇𝐄 𝐃𝐎𝐑𝐑𝐀𝐓-𝐁𝐎𝐓-𝐌𝐃`;
-const wm3 = db3t;
-const codex = `Diego-Ofc`;
-const igfg = "𝑫𝑶𝑹𝑹𝑨𝑻-𝑩𝑶𝑻";
-const wait = "*[❕] CARGANDO POR FAVOR ESPERA...*";
+global.wm = "𝐃𝐎𝐑𝐑𝐀𝐓-𝐁𝐎𝐓 | 𝐃𝐈𝐄𝐆𝐎-𝐎𝐅𝐂";
+global.db3t = `©⏤͟͟͞𝐓𝐇𝐄 𝐃𝐎𝐑𝐑𝐀𝐓-𝐁𝐎𝐓-𝐌𝐃`;
+global.wm3 = db3t;
+global.codex = `Diego-Ofc`;
+global.igfg = "𝑫𝑶𝑹𝑹𝑨𝑻-𝑩𝑶𝑻";
+global.wait = "*[❕] CARGANDO POR FAVOR ESPERA...*";
 //-------------------
 global.md = "https://chat.whatsapp.com/JuuuUaIQnnE3t4SWQenShg";
 global.dorramd = md;
