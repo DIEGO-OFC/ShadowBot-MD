@@ -92,7 +92,7 @@ var openai_key = "sk-0";
 var openai_org_id = "org-3";
 /* Consigue tu ID de organizacion en este enlace: https://platform.openai.com/account/org-settings */
 
-var lenguajeGB = es;
+global.lenguajeGB = es;
 
 /* ______________________________________________ */
 const creadorname = "𝐃𝐈𝐄𝐆𝐎-𝐎𝐅𝐂";
