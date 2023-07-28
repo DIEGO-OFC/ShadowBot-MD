@@ -1,5 +1,5 @@
-let handler = async (m, {conn}) => {
-  let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender;
+var handler = async (m, {conn}) => {
+  const who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender;
   conn.sendFile(
     m.chat,
     global.API("https://some-random-api.com", "/canvas/gay", {
