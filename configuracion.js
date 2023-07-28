@@ -224,5 +224,4 @@ watchFile(file, () => {
   console.log(chalk.redBright("se actualizo 'configuracion.js'"));
   import(`${file}?update=${Date.now()}`);
 });
-const dorratzzz = [owner, mods, prems, suittag, version, library, creadorname, creatorname, vs, author, packname, openai_key, openai_org_id, wm, db3t, wm3, codex, igfg, wait];
-export default dorratzzz
+export default { mods, prems, suittag, version, library, creadorname, creatorname, vs, author, packname, openai_key, openai_org_id, wm, db3t, wm3, codex, igfg, wait }
