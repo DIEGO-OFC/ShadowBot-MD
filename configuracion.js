@@ -86,10 +86,10 @@ const owner = [
     "https://violetics.pw": "beta",
   });
 
-var openai_key = "sk-0";
+const openai_key = "sk-0";
 /* Consigue tu ApiKey en este enlace: https://platform.openai.com/account/api-keys */
 
-var openai_org_id = "org-3";
+const openai_org_id = "org-3";
 /* Consigue tu ID de organizacion en este enlace: https://platform.openai.com/account/org-settings */
 
 global.lenguajeGB = es;
@@ -113,12 +113,12 @@ global.tiempo = d.toLocaleString("en-US", {hour: "numeric", minute: "numeric", s
 const packname = `𝐃𝐈𝐄𝐆𝐎-𝐎𝐅𝐂`;
 const author = `©⏤͟͟͞𝐓𝐇𝐄 𝐃𝐎𝐑𝐑𝐀𝐓-𝐁𝐎𝐓-𝐌𝐃`;
 //_______________
-var wm = "𝐃𝐎𝐑𝐑𝐀𝐓-𝐁𝐎𝐓 | 𝐃𝐈𝐄𝐆𝐎-𝐎𝐅𝐂";
-var db3t = `©⏤͟͟͞𝐓𝐇𝐄 𝐃𝐎𝐑𝐑𝐀𝐓-𝐁𝐎𝐓-𝐌𝐃`;
-var wm3 = db3t;
-var codex = `Diego-Ofc`;
-var igfg = "𝑫𝑶𝑹𝑹𝑨𝑻-𝑩𝑶𝑻";
-var wait = "*[❕] CARGANDO POR FAVOR ESPERA...*";
+const wm = "𝐃𝐎𝐑𝐑𝐀𝐓-𝐁𝐎𝐓 | 𝐃𝐈𝐄𝐆𝐎-𝐎𝐅𝐂";
+const db3t = `©⏤͟͟͞𝐓𝐇𝐄 𝐃𝐎𝐑𝐑𝐀𝐓-𝐁𝐎𝐓-𝐌𝐃`;
+const wm3 = db3t;
+const codex = `Diego-Ofc`;
+const igfg = "𝑫𝑶𝑹𝑹𝑨𝑻-𝑩𝑶𝑻";
+const wait = "*[❕] CARGANDO POR FAVOR ESPERA...*";
 //-------------------
 global.md = "https://chat.whatsapp.com/JuuuUaIQnnE3t4SWQenShg";
 global.dorramd = md;
@@ -224,5 +224,5 @@ watchFile(file, () => {
   console.log(chalk.redBright("se actualizo 'configuracion.js'"));
   import(`${file}?update=${Date.now()}`);
 });
-const dorratzzz = [owner, mods, prems, suittag, version, library, creadorname, creatorname, vs, author, packname];
+const dorratzzz = [owner, mods, prems, suittag, version, library, creadorname, creatorname, vs, author, packname, openai_key, openai_org_id, wm, db3t, wm3, codex, igfg, wait];
 export default dorratzzz
