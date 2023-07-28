@@ -1,6 +1,7 @@
 /********************************************
 *         DORRAT-BOT-MD BY DIEGO-OFC        *
 /********************************************/
+import creatorname from './configuracion.js'
 import moment from 'moment-timezone';
 import cheerio from 'cheerio';  
 import fetch from 'node-fetch';  
