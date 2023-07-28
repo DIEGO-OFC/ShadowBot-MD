@@ -20,11 +20,11 @@ let handler = async (m, {conn, args, usedPrefix, command, isPrems, isOwner, isRO
   let texto1 = `${mg}𝙐𝙎𝙀 𝙀𝙇 𝘾𝙊𝙈𝘼𝙉𝘿𝙊 𝘾𝙊𝙈𝙊 𝙀𝙎𝙏𝙀 𝙀𝙅𝙀𝙈𝙋𝙇𝙊\n*${usedPrefix + command} enlace de Grupo y Número de Token(s)*\n*${
     usedPrefix + command
   } ${grupos.getRandom()} 3*\n\n*3* 𝙏𝙊𝙆𝙀𝙉 🪙 = *30* 𝙈𝙄𝙉𝙐𝙏𝙊𝙎`;
-  let texto2 = `${ag}¡𝙔𝘼 𝙉𝙊 𝙏𝙄𝙀𝙉𝙀𝙎 𝙏𝙊𝙆𝙀𝙉𝙎! 🪙\n\n𝘾𝙊𝙈𝙋𝙍𝘼 𝙏𝙊𝙆𝙀𝙉𝙎 𝙋𝘼𝙍𝘼 𝙋𝙊𝘿𝙀𝙍 𝙐𝙉𝙄𝙍 𝘿𝙤𝙧𝙧𝙖𝙩𝘽𝙊𝙏 𝘼 𝙏𝙐 𝙂𝙍𝙐𝙋𝙊 𝘾𝙊𝙉 𝙀𝙇 𝘾𝙊𝙈𝘼𝙉𝘿𝙊:\n*${usedPrefix}buy joincount 3*`;
-  let texto3 = `${fg}𝙀𝙉𝙇𝘼𝘾𝙀 𝙉𝙊 𝙑𝘼𝙇𝙄𝘿𝙊. 𝘿𝙀𝘽𝙀 𝙎𝙀𝙍 𝙀𝙉𝙇𝘼𝘾𝙀 𝘿𝙀 𝙂𝙍𝙐𝙋𝙊 𝘿𝙀 𝙒𝙃𝘼𝙏𝙎𝘼𝙋𝙋\n*${usedPrefix + command} ${grupos.getRandom()} 3*`;
-  let texto4 = `${mg}𝙄𝙉𝙂𝙍𝙀𝙎𝙀 𝙀𝙇 𝙉𝙐𝙈𝙀𝙍𝙊 𝘿𝙀 𝙏𝙊𝙆𝙀𝙉(𝙎)\n*3* 𝙏𝙊𝙆𝙀𝙉 🪙 = *30* 𝙈𝙄𝙉𝙐𝙏𝙊𝙎`;
-  let texto5 = `${fg}𝙈𝙄𝙉𝙄𝙈𝙊 *3* 𝙏𝙊𝙆𝙀𝙉(𝙎) 𝙋𝘼𝙍𝘼 𝙋𝙊𝘿𝙀𝙍 𝙐𝙉𝙄𝙍 𝘼 𝘿𝙊𝙍𝙍𝘼𝙏𝘽𝙊𝙏`;
-  let texto6 = `${fg}𝙈𝘼𝙓𝙄𝙈𝙊 *3* 𝙏𝙊𝙆𝙀𝙉(𝙎) 𝙋𝘼𝙍𝘼 𝙋𝙊𝘿𝙀𝙍 𝙐𝙉𝙄𝙍 𝘼 𝘿𝙤𝙧𝙧𝙖𝙩𝘽𝙊𝙏`;
+  var texto2 = `${ag}¡𝙔𝘼 𝙉𝙊 𝙏𝙄𝙀𝙉𝙀𝙎 𝙏𝙊𝙆𝙀𝙉𝙎! 🪙\n\n𝘾𝙊𝙈𝙋𝙍𝘼 𝙏𝙊𝙆𝙀𝙉𝙎 𝙋𝘼𝙍𝘼 𝙋𝙊𝘿𝙀𝙍 𝙐𝙉𝙄𝙍 𝘿𝙤𝙧𝙧𝙖𝙩𝘽𝙊𝙏 𝘼 𝙏𝙐 𝙂𝙍𝙐𝙋𝙊 𝘾𝙊𝙉 𝙀𝙇 𝘾𝙊𝙈𝘼𝙉𝘿𝙊:\n*${usedPrefix}buy joincount 3*`;
+  var texto3 = `${fg}𝙀𝙉𝙇𝘼𝘾𝙀 𝙉𝙊 𝙑𝘼𝙇𝙄𝘿𝙊. 𝘿𝙀𝘽𝙀 𝙎𝙀𝙍 𝙀𝙉𝙇𝘼𝘾𝙀 𝘿𝙀 𝙂𝙍𝙐𝙋𝙊 𝘿𝙀 𝙒𝙃𝘼𝙏𝙎𝘼𝙋𝙋\n*${usedPrefix + command} ${grupos.getRandom()} 3*`;
+  var texto4 = `${mg}𝙄𝙉𝙂𝙍𝙀𝙎𝙀 𝙀𝙇 𝙉𝙐𝙈𝙀𝙍𝙊 𝘿𝙀 𝙏𝙊𝙆𝙀𝙉(𝙎)\n*3* 𝙏𝙊𝙆𝙀𝙉 🪙 = *30* 𝙈𝙄𝙉𝙐𝙏𝙊𝙎`;
+  var texto5 = `${fg}𝙈𝙄𝙉𝙄𝙈𝙊 *3* 𝙏𝙊𝙆𝙀𝙉(𝙎) 𝙋𝘼𝙍𝘼 𝙋𝙊𝘿𝙀𝙍 𝙐𝙉𝙄𝙍 𝘼 𝘿𝙊𝙍𝙍𝘼𝙏𝘽𝙊𝙏`;
+  var texto6 = `${fg}𝙈𝘼𝙓𝙄𝙈𝙊 *3* 𝙏𝙊𝙆𝙀𝙉(𝙎) 𝙋𝘼𝙍𝘼 𝙋𝙊𝘿𝙀𝙍 𝙐𝙉𝙄𝙍 𝘼 𝘿𝙤𝙧𝙧𝙖𝙩𝘽𝙊𝙏`;
 
   let texto7 = `✅ 𝙎𝙀 𝙃𝘼 𝙐𝙉𝙄𝘿𝙊 𝘿𝙊𝙍𝙍𝘼𝙏𝘽𝙊𝙏 𝘼𝙇 𝙂𝙍𝙐𝙋𝙊!`;
 
@@ -33,23 +33,12 @@ let handler = async (m, {conn, args, usedPrefix, command, isPrems, isOwner, isRO
   let img2 = "https://img.freepik.com/premium-vector/set-8bit-pixel-graphics-icons-game-art-coins-gold-animation_534389-12.jpg?w=2000";
 
   if (!global.db.data.settings[conn.user.jid].temporal)
-    return conn.sendButton(
-      m.chat,
-      wm,
-      texto0,
-      null,
-      [
-        [`🙌 𝙎𝙊𝙇𝙄𝘾𝙄𝙏𝘼𝙍 𝘾𝙊𝙈𝘼𝙉𝘿𝙊`, `.reporte *Quiero unir a DorratBot en mí Grupo. Por favor Active la función #botemporal*`],
-        [`🍀 𝙈 𝙀 𝙉 𝙐`, `.menu`],
-      ],
-      fkontak,
-      m
-    );
+    return conn.sendMessage(m.chat, { text: texto0 }, { quoted: m }) 
 
-  if (!args[0]) return conn.sendButton(m.chat, wm, texto1, null, [[`🍀 𝙈 𝙀 𝙉 𝙐`, `.menu`]], fkontak, m);
+  if (!args[0]) return conn.sendMessage(m.chat, { text: texto1 }, { quoted: m }) 
   let [_, code] = args[0].match(linkRegex) || [];
 
-  if (!linkRegex.test(args[0])) return conn.sendButton(m.chat, wm, texto3, null, [[`🍀 𝙈 𝙀 𝙉 𝙐`, `.menu`]], fkontak, m);
+  if (!linkRegex.test(args[0])) return conn.sendMessage(m.chat, { text: texto3 }, { quoted: m }) 
   let user = db.data.users[m.sender];
 
   if (!(isPrems || isOwner || isROwner)) {
@@ -60,10 +49,10 @@ let handler = async (m, {conn, args, usedPrefix, command, isPrems, isOwner, isRO
     //if (!args[1]) throw `${mg}*USE EL COMANDO COMO ESTE EJEMPLO*\n*${usedPrefix + command} enlace y Número de Token(s)*\n\n*EJEMPLO*\n*${usedPrefix + command} ${nn} 3*\n\n*3 TOKEN 🪙 = 30 MINUTOS*`
     //if (!linkRegex.test(args[0])) throw `${fg}𝙀𝙉𝙇𝘼𝘾𝙀 𝙉𝙊 𝙑𝘼𝙇𝙄𝘿𝙊.` //Aquí
     if (user.joincount <= 1)
-      return conn.sendButton(m.chat, wm, texto2, img1, [[`🏪 𝘾𝙊𝙈𝙋𝙍𝘼𝙍 : 𝘽𝙐𝙔 3 ${rpgshopp.emoticon("joincount")}`, `.buy joincount 3`]], fkontak, m);
-    if (isNaN(args[1])) return conn.sendButton(m.chat, wm, texto4, img1, [[`🍀 𝙈 𝙀 𝙉 𝙐`, `.menu`]], fkontak, m);
-    if (args[1] < 3) return conn.sendButton(m.chat, wm, texto5, img2, [[`🍀 𝙈 𝙀 𝙉 𝙐`, `.menu`]], fkontak, m);
-    if (args[1] > 3) return conn.sendButton(m.chat, wm, texto6, img2, [[`🍀 𝙈 𝙀 𝙉 𝙐`, `.menu`]], fkontak, m); //Solo ingresará si tiene 3 Token(s)
+      return conn.sendMessage(m.chat, { text: texto2 }, { quoted: m }) 
+    if (isNaN(args[1])) return conn.sendMessage(m.chat, { text: texto4 }, { quoted: m }) 
+    if (args[1] < 3) return conn.sendMessage(m.chat, { text: texto5 }, { quoted: m }) 
+    if (args[1] > 3) return conn.sendMessage(m.chat, { text: texto6 }, { quoted: m })  //Solo ingresará si tiene 3 Token(s)
 
     let res = await conn.groupAcceptInvite(code);
     await conn.sendButton(m.chat, texto7, `${await conn.getName(res)} | ` + wm, null, [[`🍀 𝙈 𝙀 𝙉 𝙐`, `.menu`]], fkontak, m).then(async () => {
