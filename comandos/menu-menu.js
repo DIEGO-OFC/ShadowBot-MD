@@ -36,12 +36,13 @@ var handler = async (m, {
 
   await m.reply(`[ 𝐂𝐀𝐑𝐆𝐀𝐍𝐃𝐎 𝐌𝐄𝐍𝐔... ]`);
   if (command == "menu") {
-m.reply(`
-tenemos varios tipos de menus
+m.reply(`tenemos varios tipos de menus
 1
 #menucompleto
 2
-#menudescargas`)}
+#menudescargas
+ejemplo:
+#menucompleto`)}
        
  
    if (command == "menucompleto") {
