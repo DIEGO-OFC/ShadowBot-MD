@@ -12,9 +12,9 @@ let handler = async (m, {conn, args, usedPrefix, command, isPrems, isOwner, isRO
     },
     participant: "0@s.whatsapp.net",
   };
-  let grupos = [md];
-  let gata = [imagen1, imagen4];
-  let dos = [md];
+  const grupos = [md];
+  const gata = [imagen1, imagen4];
+  const dos = [md];
 
   let texto0 = `${ag}𝙈𝙄 𝘾𝙍𝙀𝘼𝘿𝙊𝙍(𝘼) 𝙃𝘼 𝙍𝙀𝙎𝙏𝙍𝙄𝙉𝙂𝙄𝘿𝙊 𝙀𝙎𝙏𝘼 𝙁𝙐𝙉𝘾𝙄𝙊𝙉 𝘿𝙀 𝙄𝙉𝙂𝙍𝙀𝙎𝘼𝙍 𝙀𝙇 𝘽𝙊𝙏 𝙏𝙀𝙈𝙋𝙊𝙍𝘼𝙇𝙈𝙀𝙉𝙏𝙀 𝘼 𝙂𝙍𝙐𝙋𝙊𝙎 𝙑𝙐𝙀𝙇𝙑𝘼 𝙈𝘼𝙎 𝙏𝘼𝙍𝘿𝙀 𝙊 𝙐𝙎𝙀 𝙇𝘼 𝙁𝙐𝙉𝘾𝙄𝙊𝙉 *${usedPrefix}serbot*`;
   let texto1 = `${mg}𝙐𝙎𝙀 𝙀𝙇 𝘾𝙊𝙈𝘼𝙉𝘿𝙊 𝘾𝙊𝙈𝙊 𝙀𝙎𝙏𝙀 𝙀𝙅𝙀𝙈𝙋𝙇𝙊\n*${usedPrefix + command} enlace de Grupo y Número de Token(s)*\n*${
@@ -55,7 +55,7 @@ let handler = async (m, {conn, args, usedPrefix, command, isPrems, isOwner, isRO
     if (args[1] > 3) return conn.sendMessage(m.chat, { text: texto6 }, { quoted: m })  //Solo ingresará si tiene 3 Token(s)
 
     let res = await conn.groupAcceptInvite(code);
-    await conn.sendButton(m.chat, texto7, `${await conn.getName(res)} | ` + wm, null, [[`🍀 𝙈 𝙀 𝙉 𝙐`, `.menu`]], fkontak, m).then(async () => {
+    await conn.sendMessage(m.chat, { text: texto7 }, { quoted: m }).then(async () => {
       user.joincount -= args[1];
       var jumlahHari = 600000 * args[1]; // 10 minutos | Usuarios
       var now = new Date() * 1;
