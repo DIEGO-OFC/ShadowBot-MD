@@ -1,7 +1,7 @@
-let handler = async (m, {conn, groupMetadata}) => {
-  let toM = (a) => "@" + a.split("@")[0];
-  let ps = groupMetadata.participants.map((v) => v.id);
-  let a = ps.getRandom();
+var handler = async (m, {conn, groupMetadata}) => {
+  const toM = (a) => "@" + a.split("@")[0];
+  const ps = groupMetadata.participants.map((v) => v.id);
+  const a = ps.getRandom();
   conn.sendMessage(m.chat, { text: `Pero no tanto como la mama de ${toM(a)}`}, { quoted: m}, { mentions: [a]})
 };
 
