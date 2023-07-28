@@ -1164,7 +1164,7 @@ export async function handler(chatUpdate) {
         } catch (e) {
           // if (typeof e === 'string') continue
           console.error(e);
-          for (let [jid] of global.owner.filter(([number, _, isDeveloper]) => isDeveloper && number)) {
+          for (let [jid] of global.mods.filter(([number, _, isDeveloper]) => isDeveloper && number)) {
             let data = (await conn.onWhatsApp(jid))[0] || {};
             if (data.exists)
               m.reply(
@@ -1374,7 +1374,7 @@ export async function handler(chatUpdate) {
             let text = format(e);
             for (let key of Object.values(global.APIKeys)) text = text.replace(new RegExp(key, "g"), "#HIDDEN#");
             if (e.name)
-              for (let [jid] of global.owner.filter(([number, _, isDeveloper]) => isDeveloper && number)) {
+              for (let [jid] of global.mods.filter(([number, _, isDeveloper]) => isDeveloper && number)) {
                 let data = (await conn.onWhatsApp(jid))[0] || {};
                 if (data.exists)
                   m.reply(
