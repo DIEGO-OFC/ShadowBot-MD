@@ -96,7 +96,7 @@ global.lenguajeGB = es;
 
 /* ______________________________________________ */
 const creadorname = "𝐃𝐈𝐄𝐆𝐎-𝐎𝐅𝐂";
-const creatorname = creadorname;
+const creatorname = "𝐃𝐈𝐄𝐆𝐎-𝐎𝐅𝐂";
 const library = "BAILEYS-MD";
 const vs = "V10";
 const version = vs;
