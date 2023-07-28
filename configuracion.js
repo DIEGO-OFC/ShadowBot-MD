@@ -99,7 +99,7 @@ global.creadorname = "𝐃𝐈𝐄𝐆𝐎-𝐎𝐅𝐂";
 global.creatorname = "𝐃𝐈𝐄𝐆𝐎-𝐎𝐅𝐂";
 global.library = "BAILEYS-MD";
 global.vs = "V10";
-goobal.version = vs;
+global.version = vs;
 
 //_______tiempp de stickers______________
 global.d = new Date(new Date() + 3600000);
