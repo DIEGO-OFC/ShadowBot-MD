@@ -1,6 +1,6 @@
 let linkRegex = /chat.whatsapp.com\/([0-9A-Za-z]{20,24})/i;
 
-let handler = async (m, {conn, args, usedPrefix, command, isPrems, isOwner, isROwner}) => {
+var handler = async (m, {conn, args, usedPrefix, command, isPrems, isOwner, isROwner}) => {
   let fkontak = {
     key: {participants: "0@s.whatsapp.net", remoteJid: "status@broadcast", fromMe: false, id: "Halo"},
     message: {
@@ -26,9 +26,9 @@ let handler = async (m, {conn, args, usedPrefix, command, isPrems, isOwner, isRO
   var texto5 = `${fg}𝙈𝙄𝙉𝙄𝙈𝙊 *3* 𝙏𝙊𝙆𝙀𝙉(𝙎) 𝙋𝘼𝙍𝘼 𝙋𝙊𝘿𝙀𝙍 𝙐𝙉𝙄𝙍 𝘼 𝘿𝙊𝙍𝙍𝘼𝙏𝘽𝙊𝙏`;
   var texto6 = `${fg}𝙈𝘼𝙓𝙄𝙈𝙊 *3* 𝙏𝙊𝙆𝙀𝙉(𝙎) 𝙋𝘼𝙍𝘼 𝙋𝙊𝘿𝙀𝙍 𝙐𝙉𝙄𝙍 𝘼 𝘿𝙤𝙧𝙧𝙖𝙩𝘽𝙊𝙏`;
 
-  let texto7 = `✅ 𝙎𝙀 𝙃𝘼 𝙐𝙉𝙄𝘿𝙊 𝘿𝙊𝙍𝙍𝘼𝙏𝘽𝙊𝙏 𝘼𝙇 𝙂𝙍𝙐𝙋𝙊!`;
+  var texto7 = `✅ 𝙎𝙀 𝙃𝘼 𝙐𝙉𝙄𝘿𝙊 𝘿𝙊𝙍𝙍𝘼𝙏𝘽𝙊𝙏 𝘼𝙇 𝙂𝙍𝙐𝙋𝙊!`;
 
-  let img1 =
+  var img1 =
     "https://img.freepik.com/vector-premium/animacion-monedas-pixeles-imagenes-animacion-moneda-oro-ilustracion-vectorial_350225-3.jpg?w=2000";
   let img2 = "https://img.freepik.com/premium-vector/set-8bit-pixel-graphics-icons-game-art-coins-gold-animation_534389-12.jpg?w=2000";
 
