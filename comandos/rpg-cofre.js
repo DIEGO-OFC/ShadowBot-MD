@@ -6,10 +6,10 @@ var handler = async (m, {conn}) => {
   const img = "https://telegra.ph/file/b080659cba2c7c486f8a8.jpg";
   const dia = Math.floor(Math.random() * 30);
   const tok = Math.floor(Math.random() * 10);
-  const dorracoins = Math.floor(Math.random() * 10);
+  const dolares = Math.floor(Math.random() * 10);
   const expp = Math.floor(Math.random() * 5000);
 
-  global.db.data.users[m.sender].dorracoins += dorracoins;
+  global.db.data.users[m.sender].dolares += dolares;
   global.db.data.users[m.sender].limit += dia;
   global.db.data.users[m.sender].joincount += tok;
   global.db.data.users[m.sender].exp += expp;
