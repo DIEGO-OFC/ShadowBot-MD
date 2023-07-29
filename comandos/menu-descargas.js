@@ -143,17 +143,17 @@ rows: [
 
   //let name = await conn.getName(m.sender)
 
-  let pp = "./Menu2.jpg";
+  var pp = "./Menu2.jpg";
 
-  let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender;
+  var who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender;
 
-  let username = conn.getName(who);
+  var username = conn.getName(who);
 
   //let user = global.db.data.users[m.sender]
 
   //user.registered = false
 
-  let menu = `
+  const menu = `
 
 💗 *¡HOLA | HI!* ${username}
 ╭━━〔 *${wm}* 〕━━⬣
@@ -191,7 +191,23 @@ rows: [
 ┃🚀➺ _${usedPrefix}historia_
 ╰━━━━━━━━━━━━━━━━━━━⬣`.trim();
 
-  
+  await  conn.sendMessage(m.chat, { image: { url: "https://telegra.ph/file/d87bb48f283547ba5119d.jpg", },  caption: menu,  
+        contextInfo: {  
+          mentionedJid: [m.sender],  
+          externalAdReply: {  
+            title: `MENU - DESCARGAS`,  
+            sourceUrl: "http://paypal.me/DorratBotOficial",  
+            mediaType: 1,  
+            showAdAttribution: true,  
+            thumbnailUrl: "https://telegra.ph/file/d87bb48f283547ba5119d.jpg",  
+          },  
+        },  
+      },  
+      {  
+        quoted: m,  
+      }  
+    ); 
+               }} 
 };
 
 handler.help = ["infomenu"].map((v) => v + "able <option>");
