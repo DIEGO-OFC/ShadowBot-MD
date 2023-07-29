@@ -18,7 +18,7 @@ import pino from "pino";
 import {makeWASocket, protoType, serialize} from "./lib/simple.js";
 import {Low, JSONFile} from "lowdb";
 import store from "./lib/store.js";
-const {DisconnectReason, useMultiFileAuthState, fetchLatestBaileysVersion} = await import("@adiwajshing/baileys");
+const {DisconnectReason, useMultiFileAuthState, MessageRetryMap, fetchLatestBaileysVersion, makeCacheableSignalKeyStore} = await import("@adiwajshing/baileys");
 const {CONNECTING} = ws;
 const {chain} = lodash;
 const PORT = process.env.PORT || process.env.SERVER_PORT || 3000;
