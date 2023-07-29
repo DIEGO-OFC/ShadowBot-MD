@@ -195,10 +195,14 @@ const connectionOptions = {
      return proto.Message.fromObject({}); 
    },
   msgRetryCounterMap,
-  logger: pino({level: "silent"}),
-  auth: state,
-  browser: ["Dorrat-Bot", "Safari", "9.7.0"],
+  logger: pino({level: 'silent'}),
+  auth: {
+    creds: state.creds,
+    keys: makeCacheableSignalKeyStore(state.keys, pino({level: 'silent'})),
+  },
+  browser: ['Dorrat-Bot', 'Safari', '9.7.0'],
   version,
+  defaultQueryTimeoutMs: undefined,
 };
 
 global.conn = makeWASocket(connectionOptions);
