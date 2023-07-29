@@ -51,12 +51,7 @@ let handler = async (m, {conn, text, usedPrefix, command}) => {
         },
       },
       caption: str,
-      footer: `• 𝚂𝙸 𝙳𝙴𝚂𝙴𝙰 𝙳𝙴𝚂𝙲𝙰𝚁𝙶𝙰𝚁 𝚄𝙽\n*𝚁𝙴𝙿𝙾𝚂𝙸𝚃𝙾𝚁𝙸𝙾 𝙳𝙴 𝙶𝙸𝚃𝙷𝚄𝙱*\n*𝙴𝚂𝙲𝚁𝙸𝙱𝙰 ${usedPrefix}gitclone <LINK>*`,
-      buttons: [
-        {buttonId: `${usedPrefix}menu`, buttonText: {displayText: "Menú 🤖"}, type: 1},
-        {buttonId: `${usedPrefix}infobot`, buttonText: {displayText: "Info 📦"}, type: 1},
-      ],
-      headerType: 6,
+      footer: `• 𝚂𝙸 𝙳𝙴𝚂𝙴𝙰 𝙳𝙴𝚂𝙲𝙰𝚁𝙶𝙰𝚁 𝚄𝙽\n*𝚁𝙴𝙿𝙾𝚂𝙸𝚃𝙾𝚁𝙸𝙾 𝙳𝙴 𝙶𝙸𝚃𝙷𝚄𝙱*\n*𝙴𝚂𝙲𝚁𝙸𝙱𝙰 ${usedPrefix}gitclone <LINK>*`, headerType: 6,
     };
     conn.sendMessage(m.chat, buttonMessage, {quoted: m});
   } catch {
