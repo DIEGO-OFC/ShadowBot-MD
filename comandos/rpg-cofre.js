@@ -1,20 +1,20 @@
-let handler = async (m, {conn}) => {
+var handler = async (m, {conn}) => {
   let time = global.db.data.users[m.sender].lastcofre + 86400000; // 36000000 10 Horas //86400000 24 Horas
   if (new Date() - global.db.data.users[m.sender].lastcofre < 86400000)
     throw `[❗𝐈𝐍𝐅𝐎❗] 𝚈𝙰 𝚁𝙴𝙲𝙻𝙰𝙼𝙰𝚂𝚃𝙴 𝚃𝚄 𝙲𝙾𝙵𝚁𝙴\𝚗𝚅𝚄𝙴𝙻𝚅𝙴 𝙴𝙽 *${msToTime(time - new Date())}* 𝙿𝙰𝚁𝙰 𝚅𝙾𝙻𝚅𝙴𝚁 𝙰 𝚁𝙴𝙲𝙻𝙰𝙼𝙰𝚁`;
 
-  let img = "https://telegra.ph/file/b080659cba2c7c486f8a8.jpg";
-  let dia = Math.floor(Math.random() * 30);
-  let tok = Math.floor(Math.random() * 10);
-  let dorracoins = Math.floor(Math.random() * 10);
-  let expp = Math.floor(Math.random() * 5000);
+  const img = "https://telegra.ph/file/b080659cba2c7c486f8a8.jpg";
+  const dia = Math.floor(Math.random() * 30);
+  const tok = Math.floor(Math.random() * 10);
+  const dorracoins = Math.floor(Math.random() * 10);
+  const expp = Math.floor(Math.random() * 5000);
 
   global.db.data.users[m.sender].dorracoins += dorracoins;
   global.db.data.users[m.sender].limit += dia;
   global.db.data.users[m.sender].joincount += tok;
   global.db.data.users[m.sender].exp += expp;
 
-  let texto = `
+  var texto = `
 ╔══🎉═🎉═🎉══⬣
 ║🛒 𝙾𝙱𝚃𝙸𝙴𝙽𝙴𝚂 𝚄𝙽 𝙲𝙾𝙵𝚁𝙴
 ║┈┈┈┈┈┈┈┈┈┈┈┈┈
@@ -41,7 +41,7 @@ let handler = async (m, {conn}) => {
     participant: "0@s.whatsapp.net",
   };
 
-  await conn.sendButton(m.chat, texto, wm, img, [["🔰 𝙼𝙴𝙽𝚄", "/menu"]], fkontak, m);
+  await conn.sendFile(m.chat, img, 'dorrat.jpg', texto, m)
   global.db.data.users[m.sender].lastcofre = new Date() * 1;
 };
 handler.help = ["daily"];
