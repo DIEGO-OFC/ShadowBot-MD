@@ -40,7 +40,7 @@ m.reply(`tenemos varios tipos de menus
 1
 #menucompleto
 2
-#menudescargas
+#descargasmenu
 ejemplo:
 #menucompleto`)}
        
