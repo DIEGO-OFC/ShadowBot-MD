@@ -62,7 +62,7 @@ handler.help = ["githubsearch"].map((v) => v + "");
 handler.tags = ["search"];
 
 handler.command = /^(githubsearch)$/i;
-handler.register = true;
+handler.register = false;
 
 export default handler;
 
