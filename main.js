@@ -184,14 +184,16 @@ const connectionOptions = {
     }
     return message;
   },
-  getMessage: async (key) => {
-    if (store) {
-      const msg = await store.loadMessage(key.remoteJid, key.id);
-      return msg.message || undefined;
-    }
-    return {conversation: "hello, i'm DIEGO-OFC"};
-  },
-  msgRetryCounterMap,
+    getMessage: async (key) => { 
+     if (store) { 
+       console.log(key); 
+       console.log(conn.chats[key.remoteJid] && conn.chats[key.remoteJid].messages[key.id] ? conn.chats[key.remoteJid].messages[key.id].message : undefined); 
+       const msg = await store.loadMessage(key.remoteJid, key.id); 
+       console.log(msg); 
+       return conn.chats[key.remoteJid] && conn.chats[key.remoteJid].messages[key.id] ? conn.chats[key.remoteJid].messages[key.id].message : undefined; 
+     } 
+     return proto.Message.fromObject({}); 
+   },
   logger: pino({level: "silent"}),
   auth: state,
   browser: ["Dorrat-Bot", "Safari", "9.7.0"],
