@@ -1,19 +1,19 @@
 import {xpRange} from "../lib/levelling.js";
 
-let handler = async (m, {conn, usedPrefix, usedPrefix: _p, text}) => {
+var handler = async (m, {conn, usedPrefix, usedPrefix: _p, text}) => {
   let {exp, limit, level, role} = global.db.data.users[m.sender];
 
-  let {min, xp, max} = xpRange(level, global.multiplier);
+  var {min, xp, max} = xpRange(level, global.multiplier);
 
-  let d = new Date(new Date() + 3600000);
+  var d = new Date(new Date() + 3600000);
 
-  let locale = "es";
+  var locale = "es";
 
-  let weton = ["Pahing", "Pon", "Wage", "Kliwon", "Legi"][Math.floor(d / 84600000) % 5];
+   var weton = ["Pahing", "Pon", "Wage", "Kliwon", "Legi"][Math.floor(d / 84600000) % 5];
 
-  let week = d.toLocaleDateString(locale, {weekday: "long"});
+  var week = d.toLocaleDateString(locale, {weekday: "long"});
 
-  let date = d.toLocaleDateString(locale, {
+  var date = d.toLocaleDateString(locale, {
     day: "numeric",
 
     month: "long",
@@ -37,9 +37,9 @@ let handler = async (m, {conn, usedPrefix, usedPrefix: _p, text}) => {
     second: "numeric",
   });
 
-  let _uptime = process.uptime() * 1000;
+  var _uptime = process.uptime() * 1000;
 
-  let _muptime;
+  var _muptime;
 
   if (process.send) {
     process.send("uptime");
@@ -52,17 +52,17 @@ let handler = async (m, {conn, usedPrefix, usedPrefix: _p, text}) => {
       })) * 1000;
   }
 
-  let {money} = global.db.data.users[m.sender];
+  var {money} = global.db.data.users[m.sender];
 
-  let muptime = clockString(_muptime);
+  var muptime = clockString(_muptime);
 
-  let uptime = clockString(_uptime);
+  var uptime = clockString(_uptime);
 
-  let totalreg = Object.keys(global.db.data.users).length;
+  var totalreg = Object.keys(global.db.data.users).length;
 
-  let rtotalreg = Object.values(global.db.data.users).filter((user) => user.registered == true).length;
+  var rtotalreg = Object.values(global.db.data.users).filter((user) => user.registered == true).length;
 
-  let replace = {
+  var replace = {
     "%": "%",
 
     p: _p,
