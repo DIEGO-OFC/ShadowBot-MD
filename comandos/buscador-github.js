@@ -1,11 +1,11 @@
 import fetch from "node-fetch";
-let handler = async (m, {conn, text, usedPrefix, command}) => {
+var handler = async (m, {conn, text, usedPrefix, command}) => {
   try {
     if (!text) throw `⚠️ 𝙄𝙉𝙂𝙍𝙀𝙎𝙀 𝙀𝙇 𝙉𝙊𝙈𝘽𝙍𝙀 𝘿𝙀 𝙐𝙉 𝙍𝙀𝙋𝙊𝙎𝙄𝙏𝙊𝙍𝙄𝙊 𝘿𝙀 𝙂𝙄𝙏𝙃𝙐𝘽\n\n📌 Ejemplo: ${usedPrefix + command} DORRAT-BOT-MD`;
-    let res = await fetch(global.API("https://api.github.com", "/search/repositories", {q: text}));
-    let json = await res.json();
+    const res = await fetch(global.API("https://api.github.com", "/search/repositories", {q: text}));
+    const json = await res.json();
     if (res.status !== 200) throw json;
-    let str = json.items
+    const str = json.items
       .map((repo, index) => {
         return `
 ▢ 📦 Resultado: ${1 + index}
