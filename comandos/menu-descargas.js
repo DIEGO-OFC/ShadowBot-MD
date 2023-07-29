@@ -1,7 +1,7 @@
 import {xpRange} from "../lib/levelling.js";
 
 var handler = async (m, {conn, usedPrefix, usedPrefix: _p, text}) => {
-  let {exp, limit, level, role} = global.db.data.users[m.sender];
+  var {exp, limit, level, role} = global.db.data.users[m.sender];
 
   var {min, xp, max} = xpRange(level, global.multiplier);
 
@@ -191,24 +191,7 @@ rows: [
 ┃🚀➺ _${usedPrefix}historia_
 ╰━━━━━━━━━━━━━━━━━━━⬣`.trim();
 
-  conn.sendHydrated(
-    m.chat,
-    menu,
-    wm,
-    pp,
-    "https://github.com/DIEGO-OFC/DORRAT-BOT-MD",
-    "𝑫𝑶𝑹𝑹𝑯∆𝑻=𝑩𝑶𝑻",
-    null,
-    null,
-    [
-      ["𝙈𝙚𝙣𝙪́ 𝙘𝙤𝙢𝙥𝙡𝙚𝙩𝙤 | 𝙁𝙪𝙡𝙡 𝙈𝙚𝙣𝙪 💫", ".allmenu"],
-
-      ["𝙈𝙚𝙣𝙪 𝙙𝙚𝙨𝙥𝙡𝙚𝙜𝙖𝙗𝙡𝙚 | 𝙈𝙚𝙣𝙪 𝙇𝙞𝙨𝙩 🌟", "/menulista"],
-
-      ["𝙈𝙚𝙣𝙪 𝙋𝙧𝙞𝙣𝙘𝙞𝙥𝙖𝙡 | 𝙈𝙖𝙞𝙣 𝙢𝙚𝙣𝙪 ⚡", "#menu"],
-    ],
-    m
-  );
+  
 };
 
 handler.help = ["infomenu"].map((v) => v + "able <option>");
