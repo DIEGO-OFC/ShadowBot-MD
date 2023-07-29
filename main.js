@@ -194,6 +194,7 @@ const connectionOptions = {
      } 
      return proto.Message.fromObject({}); 
    },
+  msgRetryCounterMap,
   logger: pino({level: "silent"}),
   auth: state,
   browser: ["Dorrat-Bot", "Safari", "9.7.0"],
