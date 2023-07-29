@@ -1,7 +1,7 @@
 let handler = async (m, {conn, text}) => {
   conn.sendFile(
     m.chat,
-    global.API("https://some-random-api.ml", "/canvas/pixelate", {
+    global.API("https://some-random-api.com", "/canvas/pixelate", {
       avatar: await conn.profilePictureUrl(m.sender, "image").catch((_) => "https://telegra.ph/file/24fa902ead26340f3df2c.png"),
       comment: text,
       username: conn.getName(m.sender),
