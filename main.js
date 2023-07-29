@@ -232,17 +232,25 @@ function clearTmp() {
 
 async function connectionUpdate(update) {
   const {connection, lastDisconnect, isNewLogin} = update;
+  global.stopped = connection;
   if (isNewLogin) conn.isInit = true;
   const code = lastDisconnect?.error?.output?.statusCode || lastDisconnect?.error?.output?.payload?.statusCode;
-  if (code && code !== DisconnectReason.loggedOut && conn?.ws.readyState !== CONNECTING) {
+  if (code && code !== DisconnectReason.loggedOut && conn?.ws.socket == null) {
     console.log(await global.reloadHandler(true).catch(console.error));
-    global.timestamp.connect = new Date();
+    global.timestamp.connect = new Date;
   }
   if (global.db.data == null) loadDatabase();
-  if (connection == "open") {
-    console.log(chalk.yellow(lenguajeGB["smsConexion"]()));
+  if (update.qr != 0 && update.qr != undefined) {
+    console.log(chalk.yellow('[🔄]ㅤEscanea este codigo QR, el codigo QR expira en 60 segundos.'));
   }
-}
+  if (connection == 'open') {
+console.log(chalk.yellow(lenguajeGB["smsConexion"]()));  
+  }
+
+  if (connection == 'close') {
+    console.log(chalk.yellow(`[❌]ㅤConexion cerrada, por favor borre la carpeta ${global.authFile} y reescanee el codigo QR`));
+  }
+                                                                                  }
 
 process.on("uncaughtException", console.error);
 
