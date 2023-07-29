@@ -9,13 +9,13 @@ var handler = async (m, {conn, text}) => {
     if (!json.status) throw json;
     var thumb = await (await fetch(json.result.user_picture)).buffer();
     const dorrat = `
-*𝚄𝚂𝚄𝙰𝚁𝙸𝙾:* ${json.result.username}
-*𝙽𝙾𝙼𝙱𝚁𝙴:* ${json.result.nickname}
-*𝚂𝙴𝙶𝚄𝙸𝙳𝙾𝚁𝙴𝚂:* ${json.result.followers}
-*𝚂𝙴𝙶𝚄𝙸𝙳𝙾𝚂:* ${json.result.followings}
-*𝙻𝙸𝙺𝙴𝚂:* ${json.result.likes}
-*𝚅𝙸𝙳𝙴𝙾𝚂:* ${json.result.video}
-*𝙳𝙴𝚂𝙲𝚁𝙸𝙿𝙲𝙸𝙾𝙽:* ${json.result.bio}
+*🔍 USUARIO:* ${json.result.username}
+*👤 NOMBRE:* ${json.result.nickname}
+*🌐 SEGUIDORES:* ${json.result.followers}
+*📦 SEGUIDOS:* ${json.result.followings}
+*👍 LIKES:* ${json.result.likes}
+*📹 VIDEOS:* ${json.result.video}
+*📝 DESCRIPCIÓN:* ${json.result.bio}
 `.trim();
     conn.sendFile(m.chat, res2, "error.jpg", dorrat, m, false);
   } catch (e) {
