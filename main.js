@@ -315,6 +315,24 @@ global.reloadHandler = async function (restatConn) {
   conn.ev.on("call", conn.onCall);
   conn.ev.on("connection.update", conn.connectionUpdate);
   conn.ev.on("creds.update", conn.credsUpdate);
+
+    const currentDateTime = new Date(); 
+   const messageDateTime = new Date(conn.ev); 
+   if (currentDateTime >= messageDateTime) { 
+     const chats = Object.entries(conn.chats).filter(([jid, chat]) => !jid.endsWith('@g.us') && chat.isChats).map((v) => v[0]); 
+   // console.log(chats, conn.ev); 
+   } else { 
+     const chats = Object.entries(conn.chats).filter(([jid, chat]) => !jid.endsWith('@g.us') && chat.isChats).map((v) => v[0]); 
+   } 
+   // console.log(chats, 'Omitiendo mensajes en espera.'); } 
+  
+   conn.ev.on('messages.upsert', conn.handler); 
+   conn.ev.on('group-participants.update', conn.participantsUpdate); 
+   conn.ev.on('groups.update', conn.groupsUpdate); 
+   conn.ev.on('message.delete', conn.onDelete); 
+   conn.ev.on('call', conn.onCall); 
+   conn.ev.on('connection.update', conn.connectionUpdate); 
+   conn.ev.on('creds.update', conn.credsUpdate);
   isInit = false;
   return true;
 };
