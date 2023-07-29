@@ -340,7 +340,7 @@ let baja = `${htki} 𝘽𝘼𝙅𝘼 𝙎𝘼𝙇𝙐𝘿 ${htka}
         user[rewardItem] += total * 1;
         if (total) text += `\n» ${global.rpg.emoticon(rewardItem)} ${total}`;
       }
-conn.sendMessage(m.chat, {image: {url: pp}, caption: `_${text}_`.trim()}, {quoted: m});
+conn.sendFile(m.chat, pp, 'dorrat.jpg', text.trim(), fkontak)
  
     
 
