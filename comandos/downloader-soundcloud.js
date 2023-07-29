@@ -23,4 +23,4 @@ import fetch from 'node-fetch';
    } 
  }; 
  handler.command = /^(soundcloud|cover)$/i;
-
+export default handler;
