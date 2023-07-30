@@ -1,5 +1,5 @@
-import fetch from = 'node-fetch'
- import { JSDOM } from = 'jsdom'
+import fetch from = "node-fetch"
+ import { JSDOM } from = "jsdom"
   
  let handler = async (m, { text, usedPrefix, command }) => { 
      if (!text) throw `uhm.. teksnya mana?\n\ncontoh:\n${usedPrefix + command} kejadian` 
