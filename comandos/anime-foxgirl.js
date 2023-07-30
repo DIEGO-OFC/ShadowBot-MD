@@ -13,7 +13,7 @@ let handler = async (m, {usedPrefix, conn}) => {
     image: {url: foxgirl_irius.data.url},
     caption: `*乂 ⺀ ANIME - RANDOM ⺀ 乂*`,
     footer: `*🔥 THE DORRAT - BOT 🔥*`,
-    buttons: buttons,
+    buttons: null,
     headerType: 4,
   };
   conn.sendMessage(m.chat, buttonMessage, {quoted: m});
