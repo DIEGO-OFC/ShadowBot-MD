@@ -35,7 +35,7 @@ var handler = async (m, {
   
 
   await m.reply(`[ 𝐂𝐀𝐑𝐆𝐀𝐍𝐃𝐎 𝐌𝐄𝐍𝐔... ]`);
-  if (command == "menu") {
+  if (command == "menu", "menú") {
 m.reply(`tenemos varios tipos de menus
 1
 #menucompleto
@@ -538,10 +538,12 @@ var completomenu = `*╭━━❍𝐃𝐎𝐑𝐑𝐀𝐓-𝐁𝐎𝐓-𝐌𝐃�
   
   handler.help = [
 "menu",
+"menú",
 "menucompleto"
   ];
   handler.command = [
   "menu",
+  "menú",
   "menucompleto"
   ];
   handler.tags = ["internet"]  
