@@ -1,10 +1,16 @@
 import fetch from "node-fetch";
+import cheerio from "cheerio";
 let handler = async (m, {conn, usedPrefix, command}) => {
-  let res = await fetch("https://api.waifu.pics/sfw/waifu");
-  if (!res.ok) throw await res.text();
-  let json = await res.json();
-  if (!json.url) throw "Error!";
-  conn.sendButton(m.chat, `𝙰-𝙰𝚁𝙰 𝙰𝚁𝙰 𝚂𝙴𝙼𝙿𝙰𝙸~~`, author, json.url, [["🔄 𝚂𝙸𝙶𝚄𝙸𝙴𝙽𝚃𝙴 🔄", `/${command}`]], m);
+ let waifu = await axios.get(`https://nekos.life/api/v2/img/waifu`);
+  
+let buttonMessage = {
+    image: {url: foxgirl_irius.data.url},
+    caption: `*乂 ⺀ ANIME - WAIFU*`,
+    footer: `*🔥 THE DORRAT - BOT 🔥*`,
+    buttons: null,
+    headerType: 4,
+  };
+  conn.sendMessage(m.chat, buttonMessage, {quoted: m});
 };
 handler.help = ["waifu"];
 handler.tags = ["anime"];
