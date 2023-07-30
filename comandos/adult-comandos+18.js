@@ -61,7 +61,11 @@ let handler = async (m, {command, conn}) => {
     let resError = (await axios.get(`https://raw.githubusercontent.com/DIEGO-OFC/DORRAT-BOT-MD/master/galeria/JSON/tetas.json`)).data;
     let res = await conn.getFile(`https://api-fgmods.ddns.net/api/nsfw/boobs?apikey=fg-dylux`).data;
     if (res == "" || !res || res == null) res = await resError[Math.floor(resError.length * Math.random())];
-    conn.sendButton(m.chat, `_${command}_`.trim(), wm3, res, [["🔄 𝚂𝙸𝙶𝚄𝙸𝙴𝙽𝚃𝙴 🔄", `/${command}`]], m);
+    await conn.sendFile(  
+      m.chat,  
+      res,  
+      "gimage.jpg",  
+      `${command}`.trim(), m)
   }
 
   if (command == "booty") {
