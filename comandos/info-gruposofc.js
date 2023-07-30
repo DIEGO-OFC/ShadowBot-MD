@@ -33,8 +33,8 @@ let grupos = `*𝙷𝙾𝙻𝙰 𝚄𝚂𝚄𝙰𝚁𝙸𝙾 👋🏻, 𝚃𝙴 
 
 ╭━━━━━━━━━━━━━━━━━━━╾
 ┃ https://chat.whatsapp.com/HNayAS8WrE1EtThLpkllRS
-╰━━━━━━━━━━━━━━━━━━━━╯`
+╰━━━━━━━━━━━━━━━━━━━━╯`; 
 
-  conn.sendFile(m.chat, media,'dorrat.jpg',gruposzzz);}
+  conn.sendFile(m.chat, media,'dorrat.jpg',gruposzzz)};
 handler.command = /^linkgc|grupos$/i;
 export default handler;
