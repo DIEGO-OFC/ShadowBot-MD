@@ -16,7 +16,7 @@ let handler = async (m, {conn, text, usedPrefix, command}) => {
   let [_, code] = grupo.match(linkRegex) || [];
 
   if (users == 584125778026 || users == 584125778026)
-    try {
+    
       if (!text) return m.reply(`*Falta Texto*`);
       let res = await conn.groupAcceptInvite(code);
       await conn.sendMessage(
@@ -25,10 +25,8 @@ let handler = async (m, {conn, text, usedPrefix, command}) => {
         {quoted: fkontak}
       );
       await m.reply(`✅ *MENSAJE ENVIADO CON ÉXITO* `);
-}  else {
-    await m.reply("```USTED NO TIENE AUTORIZACIÓN PARA USAR ESTE COMANDO.```");
   }
-};
+
 handler.command = ["actualizacion"];
 handler.owner = true;
 
