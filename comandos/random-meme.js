@@ -1,7 +1,12 @@
 import hispamemes from "hispamemes";
+import fetch from "node-fetch'
 let handler = async (m, {command, conn}) => {
-  const url = await hispamemes.meme();
-  conn.sendButton(m.chat, `_${command}_`.trim(), wm, url, [["🔄 𝚂𝙸𝙶𝚄𝙸𝙴𝙽𝚃𝙴 🔄", `/${command}`]], m);
+    let res = await fetch(global.API('https://some-random-api.ml', '/meme'));
+   if (!res.ok) throw await res.text();
+   let json = await res.json();
+   if (!json.image) throw 'Err!';
+   conn.sendFile(m.chat, json.image, 'meme.png', json.caption, m) 
+ 
 };
 handler.help = ["meme"];
 handler.tags = ["random"];
