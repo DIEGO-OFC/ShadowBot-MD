@@ -1,4 +1,4 @@
-let handler = async (m, {conn, usedPrefix, command, args, isOwner, isAdmin, isROwner}) => {
+var handler = async (m, {conn, usedPrefix, command, args, isOwner, isAdmin, isROwner}) => {
   var optionsFull = `*Opción:* ✨ | WELCOME
 *Comando:* ${usedPrefix + command} welcome
 *Descripción:* Activa o desactiva la bienvenida en el grupo.
