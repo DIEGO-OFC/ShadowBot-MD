@@ -1,4 +1,4 @@
-import fetch from = 'node-fetch'
+
  import  JSDOM from = 'jsdom'
   
  let handler = async (m, { text, usedPrefix, command }) => { 
