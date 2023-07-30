@@ -15,7 +15,8 @@ export async function before(m, {isAdmin, isBotAdmin}) {
       if (m.text.includes(linkThisGroup)) return !0;
     }
     conn.sendMessage(m.chat, {text: `se detecto un enlace serás eliminado ${
-        isBotAdmin ? "" : \n\n*[❗𝐈𝐍𝐅𝐎❗] 𝙴𝙻 𝙱𝙾𝚃 𝙽𝙾 𝙴𝚂 𝙰𝙳𝙼𝙸𝙽, 𝙽𝙾 𝙿𝚄𝙴𝙳𝙴 𝙴𝚇𝚃𝙴𝚁𝙼𝙸𝙽𝙰𝚁 𝙰 𝙻𝙰𝚂 𝙿𝙴𝚁𝚂𝙾𝙽𝙰𝚂*`}}, {quoted: m}) 
+        isBotAdmin ? "" : "\n\n*[❗𝐈𝐍𝐅𝐎❗] 𝙴𝙻 𝙱𝙾𝚃 𝙽𝙾 𝙴𝚂 𝙰𝙳𝙼𝙸𝙽, 𝙽𝙾 𝙿𝚄𝙴𝙳𝙴 𝙴𝚇𝚃𝙴𝚁𝙼𝙸𝙽𝙰𝚁 𝙰 𝙻𝙰𝚂 𝙿𝙴𝚁𝚂𝙾𝙽𝙰𝚂*"
+      }`}, {quoted: m}) 
       if (isBotAdmin) {
       await conn.sendMessage(m.chat, {delete: {remoteJid: m.chat, fromMe: false, id: bang, participant: delet}});
       await conn.groupParticipantsUpdate(m.chat, [m.sender], "remove");
