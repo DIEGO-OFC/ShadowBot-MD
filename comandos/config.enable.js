@@ -1,61 +1,160 @@
 let handler = async (m, {conn, usedPrefix, command, args, isOwner, isAdmin, isROwner}) => {
-  const sections = [
-    {
-      title: `𝐋𝐈𝐒𝐓𝐀 𝐃𝐄 𝐎𝐏𝐂𝐈𝐎𝐍𝐄𝐒`,
-      rows: [
-        {title: "✨ | 𝚆𝙴𝙻𝙲𝙾𝙼𝙴", description: "𝙰𝙲𝚃𝙸𝚅𝙰 𝙾 𝙳𝙴𝚂𝙰𝙲𝚃𝙸𝚅𝙰 𝙻𝙰 𝙱𝙸𝙴𝙽𝚅𝙴𝙽𝙸𝙳𝙰 𝙴𝙽 𝙴𝙻 𝙶𝚁𝚄𝙿𝙾", rowId: `${usedPrefix + command} welcome`},
-        {title: "🌎 | 𝙼𝙾𝙳𝙾 𝙿𝚄𝙱𝙻𝙸𝙲𝙾", description: "𝙴𝙻 𝙱𝙾𝚃 𝚂𝙴 𝚅𝚄𝙴𝙻𝚅𝙴 𝙳𝙴 𝚄𝚂𝙾 𝙿𝚄𝙱𝙻𝙸𝙲𝙾 𝚈/𝙾 𝙿𝚁𝙸𝚅𝙰𝙳𝙾", rowId: `${usedPrefix + command} public`},
-        {title: "🥵 | 𝙼𝙾𝙳𝙾 𝙷𝙾𝚁𝙽𝚈", description: "𝙰𝙲𝚃𝙸𝚅𝙰 𝙾 𝙳𝙴𝚂𝙰𝙲𝚃𝙸𝚅𝙰 𝙻𝙾𝚂 𝙲𝙾𝙼𝙰𝙽𝙳𝙾𝚂 +𝟷𝟾", rowId: `${usedPrefix + command} modohorny`},
-        {title: "🔗 | 𝙰𝙽𝚃𝙸𝙻𝙸𝙽𝙺", description: "𝙰𝙲𝚃𝙸𝚅𝙰 𝙾 𝙳𝙴𝚂𝙰𝙲𝚃𝙸𝚅𝙰 𝙴𝙻 𝙰𝙽𝚃𝙸 𝙴𝙽𝙻𝙰𝙲𝙴𝚂 𝙳𝙴 𝙶𝚁𝚄𝙿𝙾𝚂 𝙳𝙴 𝚆𝙷𝙰𝚃𝚂𝙰𝙿𝙿", rowId: `${usedPrefix + command} antilink`},
-        {
-          title: "🔗 | 𝙰𝙽𝚃𝙸𝙻𝙸𝙽𝙺 𝟸",
-          description: "𝙰𝙲𝚃𝙸𝚅𝙰 𝙾 𝙳𝙴𝚂𝙰𝙲𝚃𝙸𝚅𝙰 𝙴𝙻 𝙰𝙽𝚃𝙸 𝙴𝙽𝙻𝙰𝙲𝙴𝚂 𝚀𝚄𝙴 𝙸𝙽𝙸𝙲𝙸𝙰𝙽 𝙴𝙽 𝙷𝚃𝚃𝙿𝚂",
-          rowId: `${usedPrefix + command} antilink2`,
-        },
-        {
-          title: "🔎 | 𝙳𝙴𝚃𝙴𝙲𝚃",
-          description: "𝙰𝙲𝚃𝙸𝚅𝙰 𝙾 𝙳𝙴𝚂𝙰𝙲𝚃𝙸𝚅𝙰 𝙻𝙰𝚂 𝙽𝙾𝚃𝙸𝙵𝙸𝙲𝙰𝙲𝙸𝙾𝙽𝙴𝚂 𝙳𝙴 𝙽𝚄𝙴𝚅𝙰 𝙼𝙾𝙳𝙸𝙵𝙸𝙲𝙰𝙲𝙸𝙾𝙽 𝙴𝙽 𝚄𝙽 𝙶𝚁𝚄𝙿𝙾",
-          rowId: `${usedPrefix + command} detect`,
-        },
-        {
-          title: "❗ | 𝚁𝙴𝚂𝚃𝚁𝙸𝙲𝚃",
-          description: "𝙰𝙲𝚃𝙸𝚅𝙰 𝙾 𝙳𝙴𝚂𝙰𝙲𝚃𝙸𝚅𝙰 𝙻𝙰𝚂 𝚁𝙴𝚂𝚃𝚁𝙸𝙲𝙲𝙸𝙾𝙽𝙴𝚂 𝙿𝙰𝚁𝙰 𝚂𝙰𝙲𝙰𝚁 𝙶𝙴𝙽𝚃𝙴 𝙳𝙴 𝙶𝚁𝚄𝙿𝙾𝚂",
-          rowId: `${usedPrefix + command} restrict`,
-        },
-        {title: "☑️ | 𝙰𝚄𝚃𝙾𝚁𝙴𝙰𝙳", description: "𝙼𝙰𝚁𝙲𝙰 𝙰𝚄𝚃𝙾𝙼𝙰𝚃𝙸𝙲𝙰𝙼𝙴𝙽𝚃𝙴 𝙻𝙰𝚂 𝙲𝙾𝙽𝚅𝙴𝚁𝚂𝙰𝙲𝙸𝙾𝙽𝙴𝚂 𝙲𝙾𝙼𝙾 𝙻𝙴𝙸𝙳𝙾", rowId: `${usedPrefix + command} autoread`},
-        {
-          title: "⛔ | 𝙱𝙾𝚃 𝚃𝙴𝙼𝙿𝙾𝚁𝙰𝙻",
-          description: "𝙰𝙲𝚃𝙸𝚅𝙰 𝙾 𝙳𝙴𝚂𝙰𝙲𝚃𝙸𝚅𝙰 𝚀𝚄𝙴 𝙴𝙻 𝙱𝙾𝚃 𝚂𝙴 𝚄𝙽𝙰 𝚃𝙴𝙼𝙿𝙾𝚁𝙰𝙻𝙼𝙴𝙽𝚃𝙴 𝙰 𝙶𝚁𝚄𝙿𝙾𝚂",
-          rowId: `${usedPrefix + command} temporal`,
-        },
-        {title: "😃 | 𝚂𝙸𝙼𝙸", description: "𝙰𝙲𝚃𝙸𝚅𝙰 𝙾 𝙳𝙴𝚂𝙰𝙲𝚃𝙸𝚅𝙰 𝚀𝚄𝙴 𝙴𝙻 𝙱𝙾𝚃 𝙷𝙰𝙱𝙻𝙴 𝙴𝙽 𝙴𝙻 𝙲𝙷𝙰𝚃", rowId: `${usedPrefix + command} simi`},
-        {title: "🔊 | 𝙰𝚄𝙳𝙸𝙾𝚂", description: "𝙰𝙲𝚃𝙸𝚅𝙰 𝙾 𝙳𝙴𝚂𝙰𝙲𝚃𝙸𝚅𝙰 𝙻𝙾𝚂 𝙲𝙾𝙼𝙰𝙽𝙳𝙾𝚂 𝙳𝙴 𝙰𝚄𝙳𝙸𝙾𝚂 𝚂𝙸𝙽 𝙿𝚁𝙴𝙵𝙸𝙹𝙾", rowId: `${usedPrefix + command} audios`},
-        {
-          title: "👾 | 𝙰𝚄𝚃𝙾𝚂𝚃𝙸𝙲𝙺𝙴𝚁",
-          description: "𝚃𝙾𝙳𝙰𝚂 𝙻𝙰𝚂 𝙸𝙼𝙰𝙶𝙴𝙽𝙴𝚂, 𝚅𝙸𝙳𝙴𝙾𝚂 𝙾 𝙴𝙽𝙻𝙰𝙲𝙴𝚂 𝙴𝙽𝚅𝙸𝙰𝙳𝙾𝚂 𝚂𝙴 𝙲𝙾𝙽𝚅𝙴𝚁𝚃𝙴𝙽 𝙴𝙽 𝚂𝚃𝙸𝙲𝙺𝙴𝚁",
-          rowId: `${usedPrefix + command} autosticker`,
-        },
-        {title: "💬 | 𝙿𝙲𝙾𝙽𝙻𝚈", description: "𝙴𝙻 𝙱𝙾𝚃 𝚂𝙾𝙻𝙾 𝚁𝙴𝚂𝙿𝙾𝙽𝙳𝙴𝚁𝙰 𝙰 𝙻𝙾𝚂 𝙲𝙾𝙼𝙰𝙽𝙳𝙾𝚂 𝚂𝙸 𝙴𝚂 𝚄𝙽 𝙲𝙷𝙰𝚃 𝙿𝚁𝙸𝚅𝙰𝙳𝙾", rowId: `${usedPrefix + command} pconly`},
-        {title: "🏢 | 𝙶𝙲𝙾𝙽𝙻𝚈", description: "𝙴𝙻 𝙱𝙾𝚃 𝚂𝙾𝙻𝙾 𝚁𝙴𝚂𝙿𝙾𝙽𝙳𝙴𝚁𝙰 𝙰 𝙻𝙾𝚂 𝙲𝙾𝙼𝙰𝙽𝙳𝙾𝚂 𝚂𝙸 𝙴𝚂 𝚄𝙽 𝙶𝚁𝚄𝙿𝙾", rowId: `${usedPrefix + command} gconly`},
-        {title: "❌ | 𝙰𝙽𝚃𝙸𝚅𝙸𝙴𝚆𝙾𝙽𝙲𝙴", description: "𝙰𝙲𝚃𝙸𝚅𝙰 𝙾 𝙳𝙴𝚂𝙰𝙲𝚃𝙸𝚅𝙰 𝙴𝙻 𝙰𝙽𝚃𝙸 𝚅𝙴𝚁 𝚄𝙽𝙰 𝚂𝙾𝙻𝙰 𝚅𝙴𝚉", rowId: `${usedPrefix + command} antiviewonce`},
-        {title: "📵 | 𝙰𝙽𝚃𝙸𝙻𝙻𝙰𝙼𝙰𝙳𝙰", description: "𝙰𝙲𝚃𝙸𝚅𝙰 𝙾 𝙳𝙴𝚂𝙰𝙲𝚃𝙸𝚅𝙰 𝙴𝙻 𝙰𝙽𝚃𝙸 𝙻𝙻𝙰𝙼𝙰𝙳𝙰", rowId: `${usedPrefix + command} anticall`},
-        {
-          title: "💬 | 𝙰𝙽𝚃𝙸𝙿𝚁𝙸𝚅𝙰𝙳𝙾",
-          description: "𝙴𝙻 𝙱𝙾𝚃 𝙱𝙻𝙾𝚀𝚄𝙴𝙰𝚁𝙰 𝙰 𝙻𝙾𝚂 𝚄𝚂𝚄𝙰𝚁𝙸𝙾𝚂 𝚀𝚄𝙴 𝙻𝙴 𝙷𝙰𝙱𝙻𝙴𝙽 𝙰𝙻 𝙿𝚁𝙸𝚅𝙰𝙳𝙾",
-          rowId: `${usedPrefix + command} antiprivado`,
-        },
-        {title: "🤬 | 𝙰𝙽𝚃𝙸𝚃𝙾𝚇𝙸𝙲", description: "𝙰𝙲𝚃𝙸𝚅𝙰 𝙾 𝙳𝙴𝚂𝙰𝙲𝚃𝙸𝚅𝙰 𝙴𝙻 𝙰𝙽𝚃𝙸 𝙼𝙰𝙻𝙰 𝙿𝙰𝙻𝙰𝙱𝚁𝙰", rowId: `${usedPrefix + command} antitoxic`},
-        {title: "🕸️ | 𝙰𝙽𝚃𝙸𝚃𝚁𝙰𝙱𝙰𝚂", description: "𝙰𝙲𝚃𝙸𝚅𝙰 𝙾 𝙳𝙴𝚂𝙰𝙲𝚃𝙸𝚅𝙰 𝙴𝙻 𝙰𝙽𝚃𝙸 𝚃𝚁𝙰𝙱𝙰𝚂", rowId: `${usedPrefix + command} antitraba`},
-        {title: "👎🏻 | 𝙰𝙽𝚃𝙸𝙰𝚁𝙰𝙱𝙴𝚂", description: "𝙰𝙻 𝙴𝙽𝚅𝙸𝙰𝚁 𝙼𝙴𝙽𝚂𝙰𝙹𝙴 𝚄𝙽 𝙽𝚄𝙼𝙴𝚁𝙾 𝙰𝚁𝙰𝙱𝙴, 𝙴𝙻 𝙱𝙾𝚃 𝙻𝙾 𝚂𝙰𝙲𝙰", rowId: `${usedPrefix + command} antiarabes`},
-        {
-          title: "🤖 | 𝙼𝙾𝙳𝙴𝙹𝙰𝙳𝙸𝙱𝙾𝚃",
-          description: "𝙰𝙲𝚃𝙸𝚅𝙰 𝙾 𝙳𝙴𝚂𝙰𝙲𝚃𝙸𝚅𝙰 𝙴𝙻 𝙲𝙾𝙼𝙰𝙽𝙳𝙾 𝙿𝙰𝚁𝙰 𝚂𝚄𝙱 𝙱𝙾𝚃𝚂 (#𝚂𝙴𝚁𝙱𝙾𝚃 / #𝙹𝙰𝙳𝙸𝙱𝙾𝚃)",
-          rowId: `${usedPrefix + command} modejadibot`,
-        },
-        {title: "👑 | 𝙼𝙾𝙳𝙾𝙰𝙳𝙼𝙸𝙽", description: "𝙴𝙻 𝙱𝙾𝚃 𝚂𝙾𝙻𝙾 𝚁𝙴𝚂𝙿𝙾𝙽𝙳𝙴𝚁𝙰 𝙰 𝙻𝙾𝚂 𝙰𝙳𝙼𝙸𝙽𝚂 𝙳𝙴𝙻 𝙶𝚁𝚄𝙿𝙾", rowId: `${usedPrefix + command} modoadmin`},
-      ],
-    },
-  ];
+  var optionsFull = `*Opción:* ✨ | WELCOME
+*Comando:* ${usedPrefix + command} welcome
+*Descripción:* Activa o desactiva la bienvenida en el grupo.
+
+═══════════════════════════
+
+*Opción:* 🌎 | MODO PUBLICO
+*Comando:* ${usedPrefix + command} public
+*Descripción:* El Bot se vuelve de uso publico y/o privado.
+*Nota:* Este comando solo podrá ser usado por owners del Bot.
+
+═══════════════════════════
+
+*Opción:* 🥵 | MODO HORNY
+*Comando:* ${usedPrefix + command} modohorny
+*Descripción:* Activa o desactiva los comandos +18 en el grupo.
+
+═══════════════════════════
+
+*Opción:* 🔗 | ANTILINK
+*Comando:* ${usedPrefix + command} antilink
+*Descripción:* Activa o desactiva el anti-enlaces de WhatsApp.
+*Nota:* Se necesita tener activo el restrict.
+
+═══════════════════════════
+
+*Opción:* 🔗 | ANTILINK 2
+*Comando:* ${usedPrefix + command} antilink2
+*Descripción:* Activa o desactiva el anti-enlaces que inician en HTTPS.
+*Nota:* Se necesita tener activo el restrict.
+
+═══════════════════════════
+
+*Opción:* 🔎 | DETECT
+*Comando:* ${usedPrefix + command} detect
+*Descripción:* Activa o desacriva las notificaciones de cambios en el grupo.
+
+═══════════════════════════
+
+*Opción:* 🔎 | DETECT 2
+*Comando:* ${usedPrefix + command} detect2
+*Descripción:* Detecta modificaciones en el grupo y mantiene una mejor gestion.
+
+═══════════════════════════
+
+*Opción:* ❗ | RESTRICT
+*Comando:* ${usedPrefix + command} restrict
+*Descripción:* Activa o desactiva las restricciones del Bot, como la de sacar o agregar personas a un grupo.
+*Nota:* Este comando solo podrá ser usado por owners del Bot.
+
+═══════════════════════════
+
+*Opción:* ☑️ | AUTOREAD
+*Comando:* ${usedPrefix + command} autoread
+*Descripción:* Marca como leido los mensajes y los estados automáticamente.
+*Nota:* Este comando solo podrá ser usado por owners del Bot.
+
+═══════════════════════════
+
+*Opción:* 🔊 | AUDIOS
+*Comando:* ${usedPrefix + command} audios
+*Descripción:* Activa o desactiva los comandos de audios sin prefijos, en el grupo.
+
+═══════════════════════════
+
+*Opción:* 👾 | AUTOSTICKER
+*Comando:* ${usedPrefix + command} autosticker 
+*Descripción:* Todas las imagenes o videos enviados en el grupo se convierten en stickers. 
+
+═══════════════════════════
+
+*Opción:* 💬 | PCONLY
+*Comando:* ${usedPrefix + command} pconly
+*Descripción:* El Bot solo responderá a los comandos si es un chat privado.
+*Nota:* Este comando solo podrá ser usado por owners del Bot.
+
+═══════════════════════════
+
+*Opción:* 🏢 | GCONLY
+*Comando:* ${usedPrefix + command} gconly
+*Descripción:* El Bot solo respondera a los comandos si es un grupo. 
+*Nota:* Este comando solo podrá ser usado por owners del Bot.
+
+═══════════════════════════
+
+*Opción:* ❌ | ANTIVIEWONCE 
+*Comando:* ${usedPrefix + command} antiviewonce
+*Descripción:* Las imagenes enviadas para ver solo una vez, son reenviadas normal por el Bot. 
+
+═══════════════════════════
+
+*Opción:* 📵 | ANTILLAMADAS
+*Comando:* ${usedPrefix + command} anticall
+*Descripción:* El Bot bloquerá a las personas que llamen al Bot. 
+*Nota:* Este comando solo podra ser usado por owners del Bot.
+
+═══════════════════════════
+
+*Opción:* 💬 | ANTIPRIVADO
+*Comando:* ${usedPrefix + command} antiprivado
+*Descripción:* El Bot bloquerá a las personas que escriban al privado del Bot. 
+*Nota:* Este comando solo podrá ser usado por owners del Bot.
+
+═══════════════════════════
+
+*Opción:* 🤬 | ANTITOXIC
+*Comando:* ${usedPrefix + command} antitoxic
+*Descripción:* Detecta la malas palabras y advierte al participante del grupo, antes de ser eliminado.
+*Nota:* Se necesita tener activo el restrict.
+
+═══════════════════════════
+
+*Opción:* 🕸️ | ANTITRABAS
+*Comando:* ${usedPrefix + command} antitraba
+*Descripción:* El Bot detecta textos largos que podrian ser virus y causar lag en el chat y elimina al usuario.
+*Nota:* Se necesita tener activo el restrict.
+
+═══════════════════════════
+
+*Opción:* 👎 | ANTIARABES
+*Comando:* ${usedPrefix + command} antiarabes
+*Descripción:* Si un numero árabe se uné al grupo, el Bot lo elimina automaticamente.
+*Nota:* Se necesita tener activo el welcome y el restrict.
+
+═══════════════════════════
+
+*Opción:* 👎 | ANTIARABES 2
+*Comando:* ${usedPrefix + command} antiarabes2
+*Descripción:* Si un numero árabe escribe en el grupo, el Bot lo elimina automaticamente.
+*Nota:* Se necesita tener activo el restrict.
+
+═══════════════════════════
+
+*Opción:* 🤖 | MODEJADIBOT
+*Comando:* ${usedPrefix + command} modejadibot
+*Descripción:* Activa o desactiva el uso del comando para sub bots (${usedPrefix}serbot / ${usedPrefix}jadibot). 
+*Nota:* Este comando solo podrá ser usado por owners del Bot.
+
+═══════════════════════════
+
+*Opción:* 👑 | MODOADMIN
+*Comando:* ${usedPrefix + command} modoadmin
+*Descripción:* El Bot solo responderá a los admins del grupo.
+
+═══════════════════════════
+
+*Opción:* 😃 | SIMSIMI
+*Comando:* ${usedPrefix + command} simsimi
+*Descripción:* El Bot empezará a responder a los mensajes usando la IA de SimSimi.
+
+═══════════════════════════
+
+*Opcion*: ⛔ | 𝙱𝙾𝚃 𝚃𝙴𝙼𝙿𝙾𝚁𝙰𝙻
+comando: ${usedPrefix + command} bottemporal
+Descripción: Activa o desactiva que el bot se una temporalmente a grupos`.trim();
+  conn.sendMessage(m.chat, {text: optionsFull}, {quoted: m});
   //let name = await conn.getName(m.sender)
   const listMessage = {
     text: "𝐋𝐈𝐒𝐓𝐀 𝐃𝐄 𝐎𝐏𝐂𝐈𝐎𝐍𝐄𝐒",
