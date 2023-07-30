@@ -154,8 +154,7 @@ let handler = async (m, {conn, usedPrefix, command, args, isOwner, isAdmin, isRO
 *Opcion*: ⛔ | 𝙱𝙾𝚃 𝚃𝙴𝙼𝙿𝙾𝚁𝙰𝙻
 comando: ${usedPrefix + command} bottemporal
 Descripción: Activa o desactiva que el bot se una temporalmente a grupos`.trim();
-  conn.sendMessage(m.chat, {text: optionsFull}, {quoted: m});
-  //let name = await conn.getName(m.sender)
+    //let name = await conn.getName(m.sender)
   /*const listMessage = {
     text: "𝐋𝐈𝐒𝐓𝐀 𝐃𝐄 𝐎𝐏𝐂𝐈𝐎𝐍𝐄𝐒",
     footer: `______________________
@@ -451,7 +450,8 @@ Descripción: Activa o desactiva que el bot se una temporalmente a grupos`.trim(
       chat.antiArab = isEnable;
       break;
     default:
-      if (!/[01]/.test(command)) return await conn.sendMessage(m.chat, listMessage);
+      if (!/[01]/.test(command)) return await conn.sendMessage(m.chat, {text: optionsFull}, {quoted: m});
+          
       throw false;
   }
 
