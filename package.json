@@ -1,7 +1,7 @@
 {
-  "name": "DORRAT-BOT-MD",
+  "nombre": "DORRAT-BOT-MD",
   "version": "1.0.0",
-  "description": "Subscribete al canal de YT DIEGOGAMEPLAYS82",
+  "apoyó": "Subscribete al canal de YT DIEGOGAMEPLAYS82",
   "main": "index-inicio.js",
   "type": "module",
   "directories": {
