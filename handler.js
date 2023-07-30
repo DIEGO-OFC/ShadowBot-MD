@@ -7,7 +7,7 @@ import {unwatchFile, watchFile} from "fs";
 import chalk from "chalk";
 
 /** 
-  * @type {import('@whiskeysockets/baileys')} 
+  * @type {import('@adiwajshing/baileys')} 
   */ 
  const {proto} = (await import('@adiwajshing/baileys')).default; 
  const isNumber = (x) => typeof x === 'number' && !isNaN(x); 
@@ -1427,22 +1427,20 @@ export async function participantsUpdate({id, participants, action}) {
  * @param {import('@adiwajshing/baileys').BaileysEventMap<unknown>['groups.update']} groupsUpdate
  */
 export async function groupsUpdate(groupsUpdate) {
-  if (opts["self"]) return;
+  if (opts['self']) {
+    return;
+  }
   for (const groupUpdate of groupsUpdate) {
     const id = groupUpdate.id;
     if (!id) continue;
-    let chats = global.db.data.chats[id],
-      text = "";
+    if (groupUpdate.size == NaN) continue;
+    if (groupUpdate.subjectTime) continue;
+    const chats = global.db.data.chats[id]; let text = '';
     if (!chats?.detect) continue;
-    if (groupUpdate.desc)
-      text = (chats.sDesc || this.sDesc || conn.sDesc || "```Description has been changed to```\n@desc").replace("@desc", groupUpdate.desc);
-    //if (groupUpdate.subject) text = (chats.sSubject || this.sSubject || conn.sSubject || '```Subject has been changed to```\n@subject').replace('@subject', groupUpdate.subject)
-    if (groupUpdate.icon) text = (chats.sIcon || this.sIcon || conn.sIcon || "```Icon has been changed to```").replace("@icon", groupUpdate.icon);
-    if (groupUpdate.revoke)
-      text = (chats.sRevoke || this.sRevoke || conn.sRevoke || "```Group link has been changed to```\n@revoke").replace(
-        "@revoke",
-        groupUpdate.revoke
-      );
+    if (groupUpdate.desc) text = (chats.sDesc || this.sDesc || conn.sDesc || '```Description has been changed to```\n@desc').replace('@desc', groupUpdate.desc);
+    if (groupUpdate.subject) text = (chats.sSubject || this.sSubject || conn.sSubject || '```Subject has been changed to```\n@subject').replace('@subject', groupUpdate.subject);
+    if (groupUpdate.icon) text = (chats.sIcon || this.sIcon || conn.sIcon || '```Icon has been changed to```').replace('@icon', groupUpdate.icon);
+    if (groupUpdate.revoke) text = (chats.sRevoke || this.sRevoke || conn.sRevoke || '```Group link has been changed to```\n@revoke').replace('@revoke', groupUpdate.revoke);
     if (!text) continue;
     await this.sendMessage(id, {text, mentions: this.parseMention(text)});
   }
