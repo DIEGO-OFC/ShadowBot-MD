@@ -50,7 +50,11 @@ let handler = async (m, {command, conn}) => {
 
   if (command == "nsfworgy") {
     let haha = await conn.getFile(`https://api.xteam.xyz/randomimage/orgy?APIKEY=29d4b59a4aa687ca`);
-    conn.sendButton(m.chat, `_${command}_`.trim(), author, haha.data, [["🔄 𝚂𝙸𝙶𝚄𝙸𝙴𝙽𝚃𝙴 🔄", `/${command}`]], m);
+        await conn.sendFile(  
+      m.chat,  
+      haha.data,  
+      "gimage.jpg",  
+      `${comando}`.trim(), m)
   }
 
   if (command == "tetas") {
