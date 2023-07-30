@@ -4,7 +4,7 @@ let handler = async (m, {conn, usedPrefix, command}) => {
  let waifu = await axios.get(`https://nekos.life/api/v2/img/waifu`);
   
 let buttonMessage = {
-    image: {url: foxgirl_irius.data.url},
+    image: {url: waifu.data.url},
     caption: `*乂 ⺀ ANIME - WAIFU*`,
     footer: `*🔥 THE DORRAT - BOT 🔥*`,
     buttons: null,
