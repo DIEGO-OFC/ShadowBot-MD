@@ -253,7 +253,7 @@ console.log(chalk.yellow(lenguajeGB["smsConexion"]()));
                                                                                   }
 
 process.on('uncaughtException', console.error); 
-conn.ev.on('messages.update', console.log);
+conn.ev.on('messages.update', console.error);
 
 let isInit = true;
 let handler = await import("./handler.js");
