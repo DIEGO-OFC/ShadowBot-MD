@@ -45,7 +45,7 @@ ejemplo:
 #menucompleto`)}
        
  
-   if (command == "menucompleto") {
+   if (command == "menucompleto", "allmenu") {
                   
 var completomenu = `*╭━━❍𝐃𝐎𝐑𝐑𝐀𝐓-𝐁𝐎𝐓-𝐌𝐃❍━━╮* 
  *┣━━━▢ ❤𝐇𝐎𝐋𝐀, ${username}❤*• 
@@ -539,12 +539,15 @@ var completomenu = `*╭━━❍𝐃𝐎𝐑𝐑𝐀𝐓-𝐁𝐎𝐓-𝐌𝐃�
   handler.help = [
 "menu",
 "menú",
-"menucompleto"
+"menucompleto",
+"allmenu"
+
   ];
   handler.command = [
   "menu",
   "menú",
-  "menucompleto"
+  "menucompleto",
+  "allmenu"
   ];
   handler.tags = ["internet"]  
   export default handler 
