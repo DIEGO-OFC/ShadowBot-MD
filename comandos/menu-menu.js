@@ -41,8 +41,8 @@ m.reply(`tenemos varios tipos de menus
 #menucompleto
 2
 #descargasmenu
-ejemplo:
-#menucompleto`)}
+ejemplo: 
+#menucompleto`)};
        
  
    if (command == "menucompleto", "allmenu") {
@@ -532,7 +532,7 @@ var completomenu = `*╭━━❍𝐃𝐎𝐑𝐑𝐀𝐓-𝐁𝐎𝐓-𝐌𝐃�
        quoted: m, 
      } 
    );
-              }}
+              }};
           
 
   
@@ -553,16 +553,16 @@ var completomenu = `*╭━━❍𝐃𝐎𝐑𝐑𝐀𝐓-𝐁𝐎𝐓-𝐌𝐃�
   export default handler 
   
   function clockString(ms) { 
-   let h = isNaN(ms) ? "--" : Math.floor(ms / 3600000); 
-   let m = isNaN(ms) ? "--" : Math.floor(ms / 60000) % 60; 
-   let s = isNaN(ms) ? "--" : Math.floor(ms / 1000) % 60; 
+   const h = isNaN(ms) ? "--" : Math.floor(ms / 3600000); 
+   const m = isNaN(ms) ? "--" : Math.floor(ms / 60000) % 60; 
+   const s = isNaN(ms) ? "--" : Math.floor(ms / 1000) % 60; 
    return [h, m, s].map((v) => v.toString().padStart(2, 0)).join(":"); 
  } 
   
  function ucapan() { 
    const time = moment.tz("America/Los_Angeles").format("HH"); //America/Los_Angeles  Asia/Jakarta   America/Toronto 
   
-   let res = "🌉Buenas madrugadas"; 
+   var res = "🌉Buenas madrugadas"; 
   
    if (time >= 4) { 
      res = "🌇Buenos Días"; 
