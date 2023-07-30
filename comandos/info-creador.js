@@ -57,7 +57,8 @@ let handler = async (m, {conn, command, args}) => {
           conn.reply(m.chat, wm, m, {contextInfo: {mentionedJid: [nowner]}});
           break;
         case "bio":
-          conn.sendHydrated(
+        conn.sendFile(m.chat, pp, 'Dorrat.jpg', teksbio)
+         /* conn.sendHydrated(
             m.chat,
             teksbio,
             wm,
@@ -71,7 +72,7 @@ let handler = async (m, {conn, command, args}) => {
               [null, null],
             ],
             m
-          );
+          );*/
           break;
 
         default:
@@ -87,7 +88,8 @@ let handler = async (m, {conn, command, args}) => {
           break;
 
         default:
-          return conn.sendButton(m.chat, caption, wm, null, [`⋮☰ Menu`, `.menu`], m);
+          return conn.sendFile(m.chat, pp, 'Dorrat.jpg', teksbio)
+          //conn.sendButton(m.chat, caption, wm, null, [`⋮☰ Menu`, `.menu`], m);
       }
     }
   } catch (err) {
