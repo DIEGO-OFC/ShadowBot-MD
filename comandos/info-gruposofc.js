@@ -1,5 +1,5 @@
 
-let handler = async (m, {conn}) => {
+var handler = async (m, {conn}) => {
 const media = './Menu2.jpg';
 const grupos = `*𝙷𝙾𝙻𝙰 𝚄𝚂𝚄𝙰𝚁𝙸𝙾 👋🏻, 𝚃𝙴 𝙸𝙽𝚅𝙸𝚃𝙾 𝙰 𝚄𝙽𝙸𝚁𝚃𝙴 𝙰 𝙻𝙾𝚂 𝙶𝚁𝚄𝙿𝙾𝚂 𝙾𝙵𝙸𝙲𝙸𝙰𝙻𝙴𝚂 𝙳𝙴 †𝐃⃟𝕺𝐑⃯𝐑𝐇⃯𝚵𝐓᪣𝕭⃯𝚹⃯𝐓⃤ 𝙿𝙰𝚁𝙰 𝙲𝙾𝙽𝚅𝙸𝚅𝙸𝚁 𝙲𝙾𝙽 𝙻𝙰 𝙲𝙾𝙼𝚄𝙽𝙸𝙳𝙰𝙳 :D*
 
@@ -20,11 +20,7 @@ const grupos = `*𝙷𝙾𝙻𝙰 𝚄𝚂𝚄𝙰𝚁𝙸𝙾 👋🏻, 𝚃�
 
 ╭━━━━━━━━━━━━━━━━━━━╾•
 ┃1: ${md} ⇚
-┃2: https://chat.whatsapp.com/C3TfpGAEnpYHMqfe5YbZfc ⇚
-┃3: https://chat.whatsapp.com/Gc802vnpuQYFaTfvDrk9yw ⇚
-┃4: https://chat.whatsapp.com/Fs2jKmoWBTT00oPSFVMZJC ⇚
-┃5: https://chat.whatsapp.com/FfxAsnshsAB4vQ1sGIPBlj ⇚
-┃6: https://chat.whatsapp.com/CquA3pNNwFr9b7OMDMuNlw ⇚
+┃2: https://chat.whatsapp.com/BmsElfLOkC6DYTo4rqaQcf
 ╰━━━━━━━━━━━━━━━━━━━━━╯
 
 ╭━━━━━━━━━━━━━━━━━━━╾•
