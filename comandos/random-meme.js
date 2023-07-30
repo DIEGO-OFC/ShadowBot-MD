@@ -1,5 +1,5 @@
 import hispamemes from "hispamemes";
-import fetch from "node-fetch'
+import fetch from "node-fetch"
 let handler = async (m, {command, conn}) => {
     let res = await fetch(global.API('https://some-random-api.ml', '/meme'));
    if (!res.ok) throw await res.text();
