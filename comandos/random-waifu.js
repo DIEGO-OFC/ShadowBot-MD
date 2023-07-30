@@ -1,5 +1,5 @@
 import fetch from "node-fetch";
-import cheerio from "cheerio";
+import axios from "axios";
 let handler = async (m, {conn, usedPrefix, command}) => {
  let waifu = await axios.get(`https://nekos.life/api/v2/img/waifu`);
   
