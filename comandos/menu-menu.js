@@ -63,14 +63,6 @@ var completomenu = `*╭━━❍𝐃𝐎𝐑𝐑𝐀𝐓-𝐁𝐎𝐓-𝐌𝐃�
  *┃╰━━━━━━━━━━━━━━━━╾•* 
  *╰━━━╼𝐃𝐎𝐑𝐑𝐀𝐓-𝐁𝐎𝐓-𝐌𝐃╾━━━╯* 
   
- *═〔 INFO DEL USUARIO 〕⬣═* 
- *║👤 NOMBRE: ${username}* 
- *║🧰 EXPERIENCIA ➟ ${exp}* 
- *║⚓ RANGO ➟* ${role}* 
- *║💎 DIAMANTES ➟ ${limit}* 
- *║💸 DOLARES ➟ ${dolares}* 
- *╰══*═════════════ *✧* 
-  
  ╔═════ INFO-BOT ═════╗  
  ║ ❒  ︎_${usedPrefix}grupos_ 
  ║ ❒ _${usedPrefix}estado_ 
