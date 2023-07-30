@@ -54,7 +54,7 @@ let handler = async (m, {command, conn}) => {
       m.chat,  
       haha.data,  
       "gimage.jpg",  
-      `${comando}`.trim(), m)
+      `${comand}`.trim(), m)
   }
 
   if (command == "tetas") {
