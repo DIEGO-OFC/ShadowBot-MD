@@ -156,7 +156,7 @@ comando: ${usedPrefix + command} bottemporal
 Descripción: Activa o desactiva que el bot se una temporalmente a grupos`.trim();
   conn.sendMessage(m.chat, {text: optionsFull}, {quoted: m});
   //let name = await conn.getName(m.sender)
-  const listMessage = {
+  /*const listMessage = {
     text: "𝐋𝐈𝐒𝐓𝐀 𝐃𝐄 𝐎𝐏𝐂𝐈𝐎𝐍𝐄𝐒",
     footer: `______________________
 |❀ ❍ _${usedPrefix}enable *welcome*_
@@ -207,7 +207,7 @@ Descripción: Activa o desactiva que el bot se una temporalmente a grupos`.trim(
     title: null,
     buttonText: "𝐒𝐄𝐋𝐄𝐂𝐂𝐈𝐎𝐍𝐄 𝐀𝐐𝐔𝐢",
     sections,
-  };
+  };*/
 
   let isEnable = /true|enable|(turn)?on|1/i.test(command);
   let chat = global.db.data.chats[m.chat];
