@@ -34,18 +34,18 @@ var handler = async (m, {
    }; 
   
 
-  await m.reply(`[ 𝐂𝐀𝐑𝐆𝐀𝐍𝐃𝐎 𝐌𝐄𝐍𝐔... ]`);
-  if (command == "menu", "menú") {
+await m.reply(`[ 𝐂𝐀𝐑𝐆𝐀𝐍𝐃𝐎 𝐌𝐄𝐍𝐔... ]`);
+if (command == "menu" || command == "menú") {
 m.reply(`tenemos varios tipos de menus
 1
 #menucompleto
 2
 #descargasmenu
 ejemplo: 
-#menucompleto`)};
+#menucompleto`)
+}
        
- 
-   if (command == "menucompleto", "allmenu") {
+if (command == "menucompleto" || command == "allmenu") {
                   
 var completomenu = `*╭━━❍𝐃𝐎𝐑𝐑𝐀𝐓-𝐁𝐎𝐓-𝐌𝐃❍━━╮* 
  *┣━━━▢ ❤𝐇𝐎𝐋𝐀, ${username}❤*• 
@@ -536,13 +536,7 @@ var completomenu = `*╭━━❍𝐃𝐎𝐑𝐑𝐀𝐓-𝐁𝐎𝐓-𝐌𝐃�
           
 
   
-  handler.help = [
-"menu",
-"menú",
-"menucompleto",
-"allmenu"
-
-  ];
+  
   handler.command = [
   "menu",
   "menú",
