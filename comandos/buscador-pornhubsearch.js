@@ -5,7 +5,7 @@ import fetch from "node-fetch";
  if (text.includes(`${antiyaoi}`)) return m.reply('${sinyaoi}') 
    try { 
      let res = await fetch(`https://api.lolhuman.xyz/api/pornhubSearch?apikey=${lolkeysapi}&query=${text}`); 
-     let json = res.result; 
+     let json = res.json
      let cap = `Hasil Pencarian Dari ${text}\n`; 
      for (let v of json) { 
        cap += `• *Title :* ${v.title} 
