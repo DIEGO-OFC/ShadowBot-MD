@@ -518,7 +518,7 @@ var completomenu = `*╭━━❍𝐃𝐎𝐑𝐑𝐀𝐓-𝐁𝐎𝐓-𝐌𝐃�
  await  conn.sendMessage(m.chat,{ image:      { url:"https://telegra.ph/file/d87bb48f283547ba5119d.jpg", }, caption: completomenu, 
 contextInfo: { mentionedJid: [m.sender], externalAdReply: { title: `MENU - COMPLETO`, 
 sourceUrl: "http://paypal.me/DorratBotOficial", mediaType: 1, showAdAttribution: true, thumbnailUrl: "https://telegra.ph/file/d87bb48f283547ba5119d.jpg", 
-         }, }, }, { quoted: m,});}};
+}, }, }, { quoted: m,});}};
          
   handler.command = [
   "menu",
