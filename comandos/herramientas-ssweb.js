@@ -7,7 +7,7 @@ var handler = async (m, {conn,text, args}) => {
     conn.sendMessage(m.chat, {image: {url: r}}, {quoted: m});
 
  } catch { 
- var link = `https://api.screenshotmachine.com/?key=c04d3a&url=${args[0]}&screenshotmachine.com&dimension=720x720`; 
+ const link = `https://api.screenshotmachine.com/?key=c04d3a&url=${args[0]}&screenshotmachine.com&dimension=720x720`; 
  conn.sendMessage(m.chat, {image: {url: link}}, {quoted: m}); 
 }}};
   handler.help = ["ss", "ssf"].map((v) => v + " <url>");  
