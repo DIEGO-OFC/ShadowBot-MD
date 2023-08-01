@@ -13,7 +13,7 @@ try {
  } catch {         
  var ssweb2 =`https://api.lolhuman.xyz/api/SSWeb2?apikey=${lolkeysapi)&url=${text}` 
  conn.sendMessage(m.chat, {image: {url: ssweb2}}, {quoted: m});  
-}} } 
+}} } }
   handler.help = ["ss", "ssf"].map((v) => v + " <url>");  
   handler.tags = ["internet"];  
   handler.command = /^ss(web)?f?$/i;  
