@@ -1,3 +1,4 @@
+
 import fetch from "node-fetch"; 
  let handler = async (m, {text, usedPrefix, command}) => { 
    if (!text) throw `uhm.. mau cari apa?\n\nContoh: ${usedPrefix + command} bokep🐒`; 
