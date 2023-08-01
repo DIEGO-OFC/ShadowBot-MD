@@ -52,13 +52,11 @@ var completomenu = `*╭━━❍𝐃𝐎𝐑𝐑𝐀𝐓-𝐁𝐎𝐓-𝐌𝐃�
  *┃╭━━━━━━━━━━━━━━━━╾•* 
  *┃┃  ❍ ${ucapan()} ❍* 
  *┃┣━━━━━━━━━━━━━━━━╾•* 
- *┃┃ ⋄ CREADOR DEL BOT:  ${creatorname}* 
  *┃┃ ⋄ NUMERO DEL CREADOR: wa.me/528442286089 (𝐍𝐎 𝐁𝐎𝐓)* 
  *┃┃ ⋄ VERSION » ${vs}* 
  *┃┃ ⋄ FECHA » ${week}, ${date}* 
  *┃┃ ⋄ TIEMPO ACTIVO » ${uptime}* 
  *┃┃ ⋄ LIBRERIA » ${library}* 
- *┃┃ ⋄ LENGUAJE » 𝐄𝐒𝐏𝐀𝐍̃𝐎𝐋* 
  *┃┃ ⋄ USUARIOS » ${Object.keys(global.db.data.users).length}* 
  *┃╰━━━━━━━━━━━━━━━━╾•* 
  *╰━━━╼𝐃𝐎𝐑𝐑𝐀𝐓-𝐁𝐎𝐓-𝐌𝐃╾━━━╯* 
@@ -380,6 +378,7 @@ var completomenu = `*╭━━❍𝐃𝐎𝐑𝐑𝐀𝐓-𝐁𝐎𝐓-𝐌𝐃�
  └────ׂ─ׂ─ׂ─ׂ── 
   
  ┌「🔍𝐁𝐮𝐬𝐜𝐚𝐫」 
+ ├➢_${usedPrefix}wattpad <*texto*>
  ├➢_${usedPrefix}server IP \ puerto 
  ├➢_${usedPrefix}apkpure <*texto*> 
  ├➢_${usedPrefix}covid <*país*> 
