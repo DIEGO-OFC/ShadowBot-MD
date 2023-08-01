@@ -26,11 +26,11 @@ let handler = async (m, {
                 let res = await searchVideo(inputs)
                 let teks = res.map((item, index) => {
                     return `*[ RESULT ${index + 1} ]*
-*Link:* ${item.link}
-*Title:* ${item.title}
-*Uploader:* ${item.uploader}
-*Views:* ${item.views}
-*Duration:* ${item.duration}
+*🧷 Link:* ${item.link}
+*🔍 Titulo:* ${item.title}
+*📑 Uploader:* ${item.uploader}
+*👀 Vistas:* ${item.views}
+*⏰ Duracion:* ${item.duration}
 `
                 }).filter(v => v).join("\n\n________________________\n\n")
                 await m.reply(teks)
