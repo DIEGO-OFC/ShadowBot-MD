@@ -9,11 +9,7 @@ var handler = async (m, {conn,text, args}) => {
  } catch { 
  var link = `https://api.screenshotmachine.com/?key=c04d3a&url=${args[0]}&screenshotmachine.com&dimension=720x720`; 
  conn.sendMessage(m.chat, {image: {url: link}}, {quoted: m}); 
-try {
- } catch {         
- var ssweb2 =`https://api.lolhuman.xyz/api/SSWeb2?apikey=${lolkeysapi)&url=${text}` 
- conn.sendMessage(m.chat, {image: {url: ssweb2}}, {quoted: m});  
-}} } }
+}}};
   handler.help = ["ss", "ssf"].map((v) => v + " <url>");  
   handler.tags = ["internet"];  
   handler.command = /^ss(web)?f?$/i;  
