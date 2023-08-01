@@ -16,5 +16,5 @@ let resultText = translatedResults.join('\n\n°°°°°°°°°°°°°°°°°�
 await m.reply(resultText)   
 }
 handler.command = /^(wattpad)$/i
-
+handler.dolares = 3
 export default handler
