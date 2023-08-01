@@ -1,4 +1,4 @@
-// ADAPTADO POR @gata_dios
+
 
 import fetch from 'node-fetch'
 import translate from '@vitalets/google-translate-api'
