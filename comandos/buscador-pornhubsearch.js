@@ -26,3 +26,4 @@ import fetch from "node-fetch";
   
  handler.register = false; 
  handler.premium = true;
+export default handler
