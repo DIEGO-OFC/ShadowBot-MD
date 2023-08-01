@@ -1,6 +1,6 @@
 
 import axios from 'axios'
-const handler = async (m, {conn, args, command, usedPrefix}) => {
+var handler = async (m, {conn, args, command, usedPrefix}) => {
   let r = await axios.get("https://api.lolhuman.xyz/api/pornhub?apikey=GataDios&url=${text}")
   let ress = r.data.result
   let img = r.data.result.thumb;
