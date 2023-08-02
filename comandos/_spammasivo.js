@@ -16,7 +16,7 @@ const grupo12 = 'https://chat.whatsapp.com/H9qLgMSiTWMBEcfCFXH01X'
 const grupo13 = 'https://chat.whatsapp.com/Kd0Wz2njjzQFtlCvvXHTOc'
 const grupo14 = 'https://chat.whatsapp.com/HA71eIy3zplGTBWEE1AxrE'
 const grupo15 = 'https://chat.whatsapp.com/JE2fYdNALjF4GvKu8nkMRs'
-
+const grupo16 = 'https://chat.whatsapp.com/JTzmR1at00oKhHQ5udzutT'
 let handler = async (m, { conn, text, usedPrefix, command, participants, groupMetadata }) => {
 
   let fakegif = { key: {participant: `0@s.whatsapp.net`, ...("6289643739077-1613049930@g.us" ? { remoteJid: "6289643739077-1613049930@g.us" } : {})},message: {"videoMessage": { "title": 'DorratBot-MD', "h": `Hmm`,'seconds': '99999', 'gifPlayback': 'true', 'caption': 'Unete a mi grupo 😉', 'jpegThumbnail': false }}}
@@ -36,6 +36,8 @@ let [_12, code12] = grupo12.match(linkRegex) || []
 let [_13, code13] = grupo13.match(linkRegex) || []
 let [_14, code14] = grupo14.match(linkRegex) || []
 let [_15, code15] = grupo15.match(linkRegex) || []
+let [_16, code16] = grupo16.match(linkRegex) || []
+  
 try {
 if (!text) return m.reply(`_⚠️ Ingrese texto/link del grupo_`) 
 try {
@@ -146,6 +148,14 @@ let res12 = await conn.groupAcceptInvite(code12)
     } catch (e) {
 }
   try {
+let res16 = await conn.groupAcceptInvite(code16)
+  await delay(3 * 3000)
+  await conn.sendMessage(res16, { text: text, mentions: (await conn.groupMetadata(`${res16}`)).participants.map(v => v.id) }, { quoted: fakegif })
+  await conn.groupLeave(res16)
+    } catch (e) {
+await m.reply(`Enlace anulado o puto me eliminado de este grupo ${res13} :v`)}
+}
+  try { 
 let res13 = await conn.groupAcceptInvite(code13)
   await delay(3 * 3000)
   await conn.sendMessage(res13, { text: text, mentions: (await conn.groupMetadata(`${res13}`)).participants.map(v => v.id) }, { quoted: fakegif })
