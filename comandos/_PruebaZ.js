@@ -5,7 +5,7 @@ if (!text) throw `Linknya Mana?\nExample: *.twitterdl https://www.xnxx.com/video
 m.reply(wait)
   let res = await fetch(`https://api.xyroinee.xyz/api/downloader/pornhub?url=${text}&apikey=uwgflzFEh6`)
   let json = await res.json()
-  conn.sendMessage(m.chat, { video: { url: json.data.files.low }, caption: `Title: ${json.data.title}\nDuration: ${json.data.duration}\nInfo: ${json.data.info}` }, { quoted: m })
+  conn.sendMessage(m.chat, { video: { url: json }, caption: `Title: ${json.data.title}\nDuration: ${json.data.duration}\nInfo: ${json.data.info}` }, { quoted: m })
   }
 handler.help = ['porndl']
 handler.tags = ['downloader']
