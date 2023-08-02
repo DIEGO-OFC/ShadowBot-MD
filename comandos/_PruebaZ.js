@@ -1,20 +1,15 @@
+import fetch from 'node-fetch'
 
-import axios from 'axios'
-var handler = async (m, {conn, args, text, command, usedPrefix}) => {
-  const r = await axios.get(`https://api.xyroinee.xyz/api/downloader/pornhub?apikey=uwgflzFEh6&url=${text}`)
-  const ress = r.data.result
-  const img = r.data.result.thumb;
-  const a = `*Titulo :* ${ress.title}
-*Duracion :* ${ress.duration}
-*Vistas :* ${ress.views}
-*Publicado :* ${ress.upload}
-*Likes :* ${ress.like}
-*Dislikes :* ${ress.dislike}`;
-  conn.sendMessage(m.chat, {image: {url: img}, caption: a}, {quoted: m})
-   let quality = ress.media.find(item => item.quality === 480);
-   if (quality.quality == 480) {
-    conn.sendMessage(m.chat, {document: {url: quality.url}, fileName: ress.title + '.mp4', mimetype: 'video/mp4'}, {quoted: m})
-  };
-};
-handler.command = /^(porndl)$/i;
+let handler = async (m, { conn, usedPrefix, args, command, text }) => {
+if (!text) throw `Linknya Mana?\nExample: *.twitterdl https://www.xnxx.com/video-141ewlbb/free_use_anytime_sex_big_ass_latina_milf_step_mom_after_deal_with_step_son*`
+m.reply(wait)
+  let res = await fetch(`https://api.xyroinee.xyz/api/downloader/pornhub?url=${text}&apikey=uwgflzFEh6`)
+  let json = await res.json()
+  conn.sendMessage(m.chat, { video: { url: json.data.files.low }, caption: `Title: ${json.data.title}\nDuration: ${json.data.duration}\nInfo: ${json.data.info}` }, { quoted: m })
+  }
+handler.help = ['xnxxvideo']
+handler.tags = ['downloader']
+handler.command = /^xnxxvideo|xnxxdl$/i
+handler.premium = true
+
 export default handler
