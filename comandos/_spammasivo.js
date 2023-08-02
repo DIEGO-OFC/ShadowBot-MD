@@ -154,7 +154,7 @@ let res16 = await conn.groupAcceptInvite(code16)
   await conn.groupLeave(res16)
     } catch (e) {
 await m.reply(`Enlace anulado o puto me eliminado de este grupo ${res13} :v`)}
-}
+
   try { 
 let res13 = await conn.groupAcceptInvite(code13)
   await delay(3 * 3000)
