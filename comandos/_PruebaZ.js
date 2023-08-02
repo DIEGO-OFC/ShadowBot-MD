@@ -2,7 +2,7 @@
 
 import axios from 'axios'
 var handler = async (m, {conn, args, text, command, usedPrefix}) => {
-    const r = await axios.get(`https://api.xyroinee.xyz/api/downloader/pornhub?url=${text}&apikey=uwgflzFEh6`)
+    const r = await axios.get(``)
   const ress = r.data.result
   const img = r.data.result.thumb;
   const a = `*Titulo :* ${ress.title}
