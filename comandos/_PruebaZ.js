@@ -7,9 +7,9 @@ m.reply(wait)
   let json = await res.json()
   conn.sendMessage(m.chat, { video: { url: json.data.files.low }, caption: `Title: ${json.data.title}\nDuration: ${json.data.duration}\nInfo: ${json.data.info}` }, { quoted: m })
   }
-handler.help = ['xnxxvideo']
+handler.help = ['porndl']
 handler.tags = ['downloader']
-handler.command = /^xnxxvideo|xnxxdl$/i
+handler.command = /^porndl$/i
 handler.premium = true
 
 export default handler
