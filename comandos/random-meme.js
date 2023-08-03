@@ -1,14 +1,12 @@
-import hispamemes from 'hispamemes';
+import meme from "../lib/memes.js";
 
-var handler = async (m, { conn, usedPrefix, command }) => {
-	const meme = await hispamemes.meme();
-    await conn.sendFile(m.chat, meme, '', '', m);
-    
+var handler = async (m, {conn, usedPrefix, command}) => {
+  const memeGen = meme();
+  await conn.sendFile(m.chat, memeGen, "", "", m);
 };
-handler.help = ['hispamemes'];
-handler.tags = ['internet'];
-handler.command = ['meme', 'memes'];
+handler.help = ["memes"];
+handler.tags = ["internet"];
+handler.command = ["meme", "memes"];
 handler.diamond = true;
 
 export default handler;
-
