@@ -99,15 +99,14 @@ ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
 ## `COLABORADORES DEL BOT` 
 <a href="https://github.com/SinNombre999"><img src="https://github.com/SinNombre999.png" width="100" height="100" alt="SinNombre999"/></a>
 <a href="https://github.com/GataNina-Li"><img src="https://github.com/GataNina-Li.png" width="100" height="100" alt="SinNombre999"/></a>
-<a href="https://github.com/VIRUZOFC"><img src="https://github.com/VIRUZOFC.png" width="100" height="100" alt="VIRUZOFC"/></a>
-<a href="https://github.com/elrebelde21"><img src="https://github.com/elrebelde21.png" width="100" height="100" alt="elrebelde21"/> 
-</a>
-
+<a href="https://github.com/VIRUZOFC"><img src="https://github.com/VIRUZOFC.png" width="100" height="100" alt="VIRUZOFC"/>
 <a href="https://github.com/darlyn1234"><img src="https://github.com/darlyn1234.png" width="100" height="100" alt="darlyn1234"/></a>
 <a href="https://github.com/Zastinian"><img src="https://github.com/Zastinian.png" width="100" height="100" alt="Zastinian"/></a>  <a href="https://github.com/BrunoSobrino"><img src="https://github.com/BrunoSobrino.png" width="100" height="100" alt="BrunoSobrino"/></a>  
 <a
-href="https://github.com/Skidy89"><img src="https://github.com/Skidy89.png" width="100" height="100" alt="putos negros"/></a>  
-
+href="https://github.com/Skidy89"><img src="https://github.com/Skidy89.png" width="100" height="100" alt="putos negros"/>
+</a>
+<a href="https://github.com/elrebelde21"><img src="https://github.com/elrebelde21.png" width="100" height="100" alt="elrebelde21"/> 
+</a>  
 
 
 ## `𝐄𝐃𝐈𝐓𝐎𝐑 𝐘 𝐏𝐎𝐑𝐏𝐈𝐄𝐓𝐀𝐑𝐈𝐎 𝐃𝐄𝐋 𝐁𝐎𝐓` 
