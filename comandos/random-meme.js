@@ -1,7 +1,7 @@
 import hispamemes from 'hispamemes';
 
 let handler = async (m, { conn, usedPrefix, command }) => {
-	const meme = await hispamemes.meme();
+	var meme = await hispamemes.meme();
     await conn.sendFile(m.chat, meme, '', '', m);
     
 };
