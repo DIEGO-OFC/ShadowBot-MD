@@ -39,7 +39,7 @@ let handler = async (m, {conn, text, groupMetadata}) => {
     m.chat,
     `*${total}/${sum}* anggota grup *${await conn.getName(
       m.chat
-    )}* adalah sider dengan alasan :\n1. Tidak aktif selama lebih dari 7 hari\n2. Baru join tetapi tidak pernah nimbrung\n\n_“${pesan}”_\n\n*LIST SIDER :*\n${sider
+    )}* negros inactivos\n\n_“${pesan}”_\n\n*LIST SIDER :*\n${sider
       .map(
         (v) =>
           "  ○ @" +
