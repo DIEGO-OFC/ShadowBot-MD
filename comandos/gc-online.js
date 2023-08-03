@@ -1,80 +1,32 @@
-let handler = async (m, {conn, text, groupMetadata}) => {
-  await conn.sendPresenceUpdate("composing", m.chat);
-  var lama = 86400000 * 7;
-  const now = new Date().toLocaleString("en-US", {
-    timeZone: "Asia/Jakarta",
-  });
-  const milliseconds = new Date(now).getTime();
+handler = async (m, { conn }) => {
+  if (!m.quoted) m.reply('*Reply message*')
+                let msg = await conn.serializeM(await m.getQuotedObj())
+                if (!m.quoted.isBaileys) throw '*The message was not sent by a bot!*'
+                let teks = ''
+                for (let i of msg.userReceipt) {
+                    let read = i.readTimestamp
+                    let unread = i.receiptTimestamp
+                    let waktu = read ? read : unread
+                    teks += `> @${i.userJid.split('@')[0]}\n`
+                    teks += ` ┗━> *TIME :* ${moment(waktu * 1000).format('DD/MM/YY HH:mm:ss')} > *STATUS :* ${read ? 'READ' : 'SENT'}\n\n`
+                }
+                await conn.reply(m.chat, teks, m)
+}
+handler.help = ['sider']
+handler.tags = ['group']
+handler.command = /^(getsider|nyimak|sider)$/i
 
-  let member = groupMetadata.participants.map((v) => v.id);
-  if (!text) {
-    var pesan = "Harap aktif di grup karena akan ada pembersihan member setiap saat";
-  } else {
-    var pesan = text;
-  }
-  var sum;
-  sum = member.length;
-  var total = 0;
-  var sider = [];
-  for (let i = 0; i < sum; i++) {
-    let users = m.isGroup ? groupMetadata.participants.find((u) => u.id == member[i]) : {};
-    if (
-      (typeof global.db.data.users[member[i]] == "undefined" || milliseconds * 1 - global.db.data.users[member[i]].lastseen > lama) &&
-      !users.isAdmin &&
-      !users.isSuperAdmin
-    ) {
-      if (typeof global.db.data.users[member[i]] !== "undefined") {
-        if (global.db.data.users[member[i]].banned == true) {
-          total++;
-          sider.push(member[i]);
-        }
-      } else {
-        total++;
-        sider.push(member[i]);
-      }
-    }
-  }
-  if (total == 0) return conn.reply(m.chat, `*Digrup ini tidak terdapat sider.*`, m);
-  conn.reply(
-    m.chat,
-    `*${total}/${sum}* anggota grup *${await conn.getName(
-      m.chat
-    )}* negros inactivos\n\n_“${pesan}”_\n\n*LIST SIDER :*\n${sider
-      .map(
-        (v) =>
-          "  ○ @" +
-          v.replace(
-            /@.+/,
-            "" + typeof global.db.data.users[v] == "undefined" ? " Sider " : " Off " + msToDate(milliseconds * 1 - global.db.data.users[v].lastseen)
-          )
-      )
-      .join("\n")}`,
-    m,
-    {
-      contextInfo: {
-        mentionedJid: sider,
-      },
-    }
-  );
-};
-handler.help = ["gcsider"];
-handler.tags = ["group"];
-handler.command = /^(gcsider)$/i;
-handler.group = true;
+export default handler
 
-export default handler;
-
-const more = String.fromCharCode(8206);
-const readMore = more.repeat(4001);
-
-function msToDate(ms) {
-  let d = isNaN(ms) ? "--" : Math.floor(ms / 86400000);
-  let h = isNaN(ms) ? "--" : Math.floor(ms / 3600000) % 24;
-  let m = isNaN(ms) ? "--" : Math.floor(ms / 60000) % 60;
-  let s = isNaN(ms) ? "--" : Math.floor(ms / 1000) % 60;
-  if (d == 0 && h == 0 && m == 0) {
-    return "Baru Saja";
-  } else {
-    return [d, "H ", h, "J "].map((v) => v.toString().padStart(2, 0)).join("");
-  }
+function formatDate(n, locale = 'id') {
+  let d = new Date(n)
+  return d.toLocaleDateString(locale, {
+    weekday: 'long',
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric',
+    hour: 'numeric',
+    minute: 'numeric',
+    second: 'numeric'
+  })
 }
