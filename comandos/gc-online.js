@@ -33,14 +33,14 @@ await conn.sendPresenceUpdate('composing', m.chat);
             } else {
                 total++
                 sider.push(member[i])
-            })
+            }
         }
     };
     if (total == 0) return conn.reply(m.chat, `*Digrup ini tidak terdapat sider.*`, m)
     conn.reply(m.chat, `*${total}/${sum}* anggota grup *${await conn.getName(m.chat)}* adalah sider dengan alasan :\n1. Tidak aktif selama lebih dari 7 hari\n2. Baru join tetapi tidak pernah nimbrung\n\n_“${pesan}”_\n\n*LIST SIDER :*\n${sider.map(v => '  ○ @' + v.replace(/@.+/, '' + typeof global.db.data.users[v] == "undefined" ? ' Sider ' : ' Off ' + msToDate(milliseconds * 1 - global.db.data.users[v].lastseen))).join('\n')}`, m, {
         contextInfo: {
             mentionedJid: sider
-        };
+        })
     };
 };
 handler.help = ['gcsider'];
