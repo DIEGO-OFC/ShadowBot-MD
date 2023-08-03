@@ -7,7 +7,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 }
 handler.help = ['hispamemes']
 handler.tags = ['internet']
-handler.command = ['hispamemes', 'hispameme'] 
+handler.command = ['meme', 'memes'] 
 handler.diamond = true
 
 export default handler
