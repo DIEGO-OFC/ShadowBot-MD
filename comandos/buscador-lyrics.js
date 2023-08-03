@@ -1,7 +1,7 @@
 import {find_lyrics} from '@brandond/findthelyrics'; 
  import {getTracks} from '@green-code/music-track-data'; 
  import {googleImage} from '@bochilteam/scraper'; 
- const handler = async (m, {conn, text, usedPrefix, command}) => { 
+ var handler = async (m, {conn, text, usedPrefix, command}) => { 
    const teks = text ? text : m.quoted && m.quoted.text ? m.quoted.text : ''; 
    if (!teks) throw `*[❗𝐈𝐍𝐅𝐎❗] 𝙴𝙹𝙴𝙼𝙿𝙻𝙾 𝙳𝙴 𝚄𝚂𝙾 𝙲𝙾𝚁𝚁𝙴𝙲𝚃𝙾 𝙳𝙴𝙻 𝙲𝙾𝙼𝙰𝙽𝙳𝙾: ${usedPrefix + command} beret ojala*`; 
    try { 
