@@ -1,5 +1,5 @@
 
-handler = async (m, {conn}) => {
+var handler = async (m, {conn}) => {
   if (!m.quoted) m.reply("*Reply message*");
   let msg = await conn.serializeM(await m.getQuotedObj());
   if (!m.quoted.isBaileys) throw "*The message was not sent by a bot!*";
