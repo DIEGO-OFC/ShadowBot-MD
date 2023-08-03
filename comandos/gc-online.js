@@ -4,9 +4,8 @@ var handler = async (m, {conn}) => {
   if (!m.quoted.isBaileys) throw "*The message was not sent by a bot!*";
 
   const teks = [];
-
+  console.log(msg);
   for (let i of msg.userReceipt) {
-    console.log(i);
     let read = i.readTimestamp;
     let unread = i.receiptTimestamp;
     let waktu = read ? read : unread;
