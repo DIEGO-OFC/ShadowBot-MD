@@ -55,8 +55,8 @@ var handler = async (m, {conn, usedPrefix, command, text}) => {
 
 ➢ 𝙿𝙰𝚁𝙰 𝙱𝙾𝚁𝚁𝙰𝚁 𝙾 𝚂𝙰𝙻𝙸𝚁𝚂𝙴 𝙳𝙴 𝙻𝙰 𝙿𝙰𝚁𝚃𝙸𝙳𝙰 𝚄𝚂𝙴 𝙴𝙻 𝙲𝙾𝙼𝙰𝙽𝙳𝙾
 *${usedPrefix}delttt*`.trim()
-     conn.sendMessage(m.chat, { text: ttjuego }, { quoted: m }) 
-conn.game[room.id]
+     conn.sendMessage(m.chat, { text: ttjuego }, { quoted: m });
+conn.game[room.id] = room;
   }
 };
 handler.command = /^(tictactoe|ttc|ttt|xo)$/i;
