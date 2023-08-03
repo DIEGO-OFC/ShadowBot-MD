@@ -1,16 +1,25 @@
-handler = async (m, {conn}) => {
+const handler = async (m, {conn}) => {
   if (!m.quoted) m.reply("*Reply message*");
   let msg = await conn.serializeM(await m.getQuotedObj());
   if (!m.quoted.isBaileys) throw "*The message was not sent by a bot!*";
-  let teks = "";
+
+  const teks = [];
+
   for (let i of msg.userReceipt) {
+    console.log(i);
     let read = i.readTimestamp;
     let unread = i.receiptTimestamp;
     let waktu = read ? read : unread;
-    teks += `> @${i.userJid.split("@")[0]}\n`;
-    teks += ` ┗━> *TIME :* ${formatDate(waktu * 1000)} > *STATUS :* ${read ? "READ" : "SENT"}\n\n`;
+    teks.push({
+      userJid: i.userJid.split("@")[0],
+      readStatus: read ? "READ" : "SENT",
+      time: formatDate(waktu * 1000),
+    });
   }
-  await conn.reply(m.chat, teks, m);
+
+  const formattedText = teks.map(({userJid, readStatus, time}) => `> @${userJid}\n ┗━> *TIME :* ${time} > *STATUS :* ${readStatus}`).join("\n\n");
+
+  await conn.reply(m.chat, formattedText, m);
 };
 
 handler.help = ["sider"];
