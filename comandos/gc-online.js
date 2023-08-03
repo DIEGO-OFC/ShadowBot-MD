@@ -41,7 +41,7 @@ await conn.sendPresenceUpdate('composing', m.chat);
         contextInfo: {
             mentionedJid: sider
         };
-    });
+    };
 };
 handler.help = ['gcsider'];
 handler.tags = ['group'];
