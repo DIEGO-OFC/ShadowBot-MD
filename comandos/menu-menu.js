@@ -20,20 +20,8 @@ var handler = async (m, {
    const {exp, limit, dolares, role} = global.db.data.users[m.sender]; 
    const who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender; 
    const username = conn.getName(who); 
-   const db = "./galeria/menudorrat3.jpg"; 
-   const fkontak = { 
-     key: {participants: "0@s.whatsapp.net", remoteJid: "status@broadcast", fromMe: false, id: "Halo"}, 
-     message: { 
-       contactMessage: { 
-         vcard: `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split("@")[0]}:${ 
-           m.sender.split("@")[0] 
-         }\nitem1.X-ABLabel:Ponsel\nEND:VCARD`, 
-       }, 
-     }, 
-     participant: "0@s.whatsapp.net", 
-   }; 
+   const db = "./galeria/menudorrat3.jpg";
   
-
 await m.reply(`[ 𝐂𝐀𝐑𝐆𝐀𝐍𝐃𝐎 𝐌𝐄𝐍𝐔... ]`);
 if (command == "menu" || command == "menú") {
 m.reply(`╦══════════════════ ⪨
@@ -44,8 +32,8 @@ m.reply(`╦══════════════════ ⪨
 ┃│✾ ⋟ #descargasmenu
 ┃│✾ ⋟ ejemplo: 
 ┃│✾ ⋟ #menucompleto
-┃╰══ ⪨`)
-}
+┃╰══ ⪨`);
+};
        
 if (command == "menucompleto" || command == "allmenu") {
                   
