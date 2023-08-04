@@ -8,7 +8,7 @@ var handler = async (m, { conn, command, args, text, usedPrefix }) => {
  try {
 const yt_play = await search(args.join(" "))
 let additionalText = ''
-if (command === 'musica') {
+if (command === 'musica' || command == "música") {
 additionalText = 'audio 🔊'
 } else if (command === 'play2') {
 additionalText = 'video 🎥'}
@@ -98,7 +98,7 @@ throw "*[❌] ERROR, INTENTALO DE NUEVO*"}
 }
 handler.help = ["musica", "play2"].map((v) => v + " < busqueda >")
 handler.tags = ["downloader"]
-handler.command = ["musica", "play2"]
+handler.command = ["musica", "música", "play2"]
 export default handler
 
 async function search(query, options = {}) {
