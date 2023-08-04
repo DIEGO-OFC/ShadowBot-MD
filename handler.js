@@ -1231,7 +1231,7 @@ import chalk from "chalk";
         if (!isPrems && comandos.dolares && global.db.data.users[m.sender].dolares < comandos.dolares * 1) {
           this.reply(
             m.chat,
-            `${ag}\n*No tiene dólares* 💵\n\n*puede conseguir 💵 con el comando #trabajar o comprando con #buy dolares [cantidad]*`,
+            `${ag}\n*No tiene dólares* 💵\n\n*puede conseguir 💵 con el comando #trabajar*`,
             m
           );
           continue;
