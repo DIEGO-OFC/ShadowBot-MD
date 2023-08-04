@@ -21,7 +21,7 @@ m.reply(play)
 }
 handler.command = [
   "ytmp4",
-  "",
+  "play",
   "",
   ""
   ];
