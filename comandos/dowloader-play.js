@@ -98,7 +98,7 @@ throw "*[❌] ERROR, INTENTALO DE NUEVO*"}
 }
 handler.help = ["musica", "play2"].map((v) => v + " < busqueda >")
 handler.tags = ["downloader"]
-handler.command = /^musica2?$/i
+handler.command = ["musica", "play2"]
 export default handler
 
 async function search(query, options = {}) {
