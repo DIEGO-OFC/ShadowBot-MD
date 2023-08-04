@@ -32,7 +32,7 @@ let texto1 = `*╔═══════❰  *🔰*  ❱══════⬣*
 ║ *Link:* ${yt_play[0].url}\n
 ║ *_ENVIANDO ${additionalText}, PORFAVOR ESPERE.*
 *╚═══════❰ *${vs}* ❱══════⬣*`.trim()
-conn.sendMessage(m.chat, { image: { url: yt_play[0].thumbnail }, caption: texto1 }, { quoted: m })
+await conn.sendMessage(m.chat, { image: { url: yt_play[0].thumbnail }, caption: texto1 }, { quoted: m })
 if (command == 'musica') {
 try {
 let q = '128kbps'
@@ -98,6 +98,7 @@ throw "*[❌] ERROR, INTENTALO DE NUEVO*"}
 }
 handler.help = ["musica", "play2"].map((v) => v + " < busqueda >")
 handler.tags = ["downloader"]
+handler.dolares = 4
 handler.command = ["musica", "música", "play2"]
 export default handler
 
