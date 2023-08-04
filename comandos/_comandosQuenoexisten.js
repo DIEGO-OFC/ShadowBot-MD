@@ -8,22 +8,22 @@ var handler = async (m, {
 
 if (command == "ytmp4" || command == "ytvmp4") {
 let mp4 = `este comando cambio, ahora es:
-${usedPrefix}videomp4`.trim()
+${usedPrefix}videomp4`.trim();
 
-m.reply(mp4)
-}
+m.reply(mp4);
+};
 
 if (command == "play") {
 var play = `este comando cambio, ahora es:
-${usedPrefix}musica`.trim()
-m.reply(play)
-}
-}
+${usedPrefix}musica`.trim();
+m.reply(play);
+};
+};
 handler.command = [
   "ytmp4",
   "play",
   "",
   ""
   ];
-  handler.tags = ["internet"]  
-  export default handler 
+  handler.tags = ["internet"];
+  export default handler;
