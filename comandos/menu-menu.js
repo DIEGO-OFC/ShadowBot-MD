@@ -72,15 +72,7 @@ var completomenu = `*╭━━❍𝐃𝐎𝐑𝐑𝐀𝐓-𝐁𝐎𝐓-𝐌𝐃�
  │ ‣  _${usedPrefix}script_ 
  │ ‣  _Bot_ (𝑢𝑠𝑜 𝑠𝑖𝑛 𝑝𝑟𝑒𝑓𝑖𝑗𝑜) 
  └──···
-  
- ╔═════ REPORTAR ═════╗  
- ║ ❒ _*Reporta con este comando de haber*_ 
- ║ ❒ _*Fallas para poder Solucionar!!*_ 
- ║════════════════════════ 
- ║︎ ❒ _${usedPrefix}reporte *texto*_ 
- ║ ❒ _${usedPrefix}report *texto*_ 
- ╚════ ≪ •❈• ≫ ════╝ 
-  
+ 
  ╔═══ MINECRAFT SERVER  ═══╗  
  ║══════════════ 
  ║ ❒ *IP: nodo5.boxmineworld.com* 
@@ -100,7 +92,30 @@ var completomenu = `*╭━━❍𝐃𝐎𝐑𝐑𝐀𝐓-𝐁𝐎𝐓-𝐌𝐃�
  ║ ❒ ︎_${usedPrefix}stop_ 
  ║ ❒ ︎_${usedPrefix}bots_ 
  ╚════ ≪ •❈• ≫ ════╝ 
-  
+
+  ┌─「💻𝐃𝐎𝐖𝐍𝐋𝐎𝐀𝐃𝐄𝐑」 
+ ├➢${usedPrefix}videodocumento <enlace / link / url 
+ ├➢${usedPrefix}facebook <enlace / link / url 
+ ├➢${usedPrefix}instagram <enlace / link / url 
+ ├➢${usedPrefix}mediafire <enlace / link / url 
+ ├➢${usedPrefix}instagram <enlace / link / url 
+ ├➢${usedPrefix}gitclone <enlace / link / url 
+ ├➢${usedPrefix}tiktok <enlace / link / url 
+ ├➢${usedPrefix}ytmp3 <enlace / link / url 
+ ├➢${usedPrefix}ytmp4 <enlace / link / url 
+ ├➢${usedPrefix}play.1 <texto / enlace / link / url 
+ ├➢${usedPrefix}play.2 <texto / enlace / link / url 
+ ├➢${usedPrefix}play <texto 
+ ├➢${usedPrefix}spotify <texto 
+ ├➢${usedPrefix}imagen <texto 
+ ├➢${usedPrefix}pinteret <texto 
+ ├➢${usedPrefix}wallpaper <texto 
+ ├➢${usedPrefix}wallpaper2 <texto 
+ ├➢${usedPrefix}pptiktok <nombre de usuario 
+ ├➢${usedPrefix}igstalk <nombre de usuario 
+ ├➢${usedPrefix}tiktokstalk <nombre de usuario 
+ └────ׂ─ׂ─ׂ─ׂ── 
+
  ╔═════ RPG ═════╗  
  ║ ❒ ${usedPrefix}cazar 
  ║ ❒ ${usedPrefix}aventura 
@@ -182,29 +197,6 @@ var completomenu = `*╭━━❍𝐃𝐎𝐑𝐑𝐀𝐓-𝐁𝐎𝐓-𝐌𝐃�
  ║ ❒ ${usedPrefix}enable *temporal*_ 
  ║ ❒ ${usedPrefix}disable *temporal*_ 
  ╚════ ≪ •❈• ≫ ════╝ 
-  
- ┌─「💻𝐃𝐎𝐖𝐍𝐋𝐎𝐀𝐃𝐄𝐑」 
- ├➢${usedPrefix}videodocumento <enlace / link / url 
- ├➢${usedPrefix}facebook <enlace / link / url 
- ├➢${usedPrefix}instagram <enlace / link / url 
- ├➢${usedPrefix}mediafire <enlace / link / url 
- ├➢${usedPrefix}instagram <enlace / link / url 
- ├➢${usedPrefix}gitclone <enlace / link / url 
- ├➢${usedPrefix}tiktok <enlace / link / url 
- ├➢${usedPrefix}ytmp3 <enlace / link / url 
- ├➢${usedPrefix}ytmp4 <enlace / link / url 
- ├➢${usedPrefix}play.1 <texto / enlace / link / url 
- ├➢${usedPrefix}play.2 <texto / enlace / link / url 
- ├➢${usedPrefix}play <texto 
- ├➢${usedPrefix}spotify <texto 
- ├➢${usedPrefix}imagen <texto 
- ├➢${usedPrefix}pinteret <texto 
- ├➢${usedPrefix}wallpaper <texto 
- ├➢${usedPrefix}wallpaper2 <texto 
- ├➢${usedPrefix}pptiktok <nombre de usuario 
- ├➢${usedPrefix}igstalk <nombre de usuario 
- ├➢${usedPrefix}tiktokstalk <nombre de usuario 
- └────ׂ─ׂ─ׂ─ׂ── 
   
  ┌──「🏢𝐆𝐑𝐎𝐔𝐏」─ 
  ├➢${usedPrefix}add *<número>* 
@@ -509,6 +501,14 @@ var completomenu = `*╭━━❍𝐃𝐎𝐑𝐑𝐀𝐓-𝐁𝐎𝐓-𝐌𝐃�
  ❀••►☪︎ PARA VER LOS COMANDOS DE OWNER USE: 
  ❀••►☪︎ ${usedPrefix}soloparaelpropietario 
  𒅄 ▬▬▬▬ ◆ ▬▬▬▬ 𒅄 
+
+  ╔═════ REPORTAR ═════╗  
+ ║ ❒ _*Reporta con este comando de haber*_ 
+ ║ ❒ _*Fallas para poder Solucionar!!*_ 
+ ║════════════════════════ 
+ ║︎ ❒ _${usedPrefix}reporte *texto*_ 
+ ║ ❒ _${usedPrefix}report *texto*_ 
+ ╚════ ≪ •❈• ≫ ════╝ 
   
  ╔══════════════════╗  
  ║ ❒ 𝐃𝐎𝐑𝐑𝐀𝐓-𝐁𝐎𝐓-𝐌𝐃      
