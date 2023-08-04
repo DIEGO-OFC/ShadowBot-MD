@@ -15,7 +15,7 @@ m.reply(mp4)
 
 if (command == "play") {
 var play = `este comando cambio, ahora es:
-${usedPrefix}play`.trim()
+${usedPrefix}musica`.trim()
 m.reply(play)
 }
 }
