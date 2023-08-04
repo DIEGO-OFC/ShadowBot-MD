@@ -25,13 +25,13 @@ var handler = async (m, {
 await m.reply(`[ 𝐂𝐀𝐑𝐆𝐀𝐍𝐃𝐎 𝐌𝐄𝐍𝐔... ]`);
 if (command == "menu" || command == "menú") {
 m.reply(`╦══════════════════ ⪨
-┃│✾ ⋟ tenemos varios tipos de menus
+┃│✾ ⋟ *tenemos varios tipos de menus*
 ┃│✾ ⋟ 1
-┃│✾ ⋟ #menucompleto
+┃│✾ ⋟ *#menucompleto*
 ┃│✾ ⋟ 2
-┃│✾ ⋟ #descargasmenu
-┃│✾ ⋟ ejemplo: 
-┃│✾ ⋟ #menucompleto
+┃│✾ ⋟ *#descargasmenu*
+┃│✾ ⋟ *ejemplo:*
+┃│✾ ⋟ *#menucompleto*
 ┃╰══ ⪨`);
 };
        
