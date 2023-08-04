@@ -3,12 +3,12 @@ import yts from "yt-search"
 import ytdl from 'ytdl-core'
 import axios from 'axios'
 import { youtubedl, youtubedlv2 } from '@bochilteam/scraper'
-let handler = async (m, { conn, command, args, text, usedPrefix }) => {
+var handler = async (m, { conn, command, args, text, usedPrefix }) => {
  if (!text) throw `*[❕𝐈𝐍𝐅𝐎❕] NOMBRE DE LA CANCION FALTANTE, POR FAVOR INGRESE EL COMANDO MAS EL NOMBRE/TITULO DE UNA CANCIÓN*\n\n*➢ EJEMPLO:*\n*${usedPrefix + command} Phonk*` 
  try {
 const yt_play = await search(args.join(" "))
 let additionalText = ''
-if (command === 'play') {
+if (command === 'musica') {
 additionalText = 'audio 🔊'
 } else if (command === 'play2') {
 additionalText = 'video 🎥'}
@@ -33,7 +33,7 @@ let texto1 = `*╔═══════❰  *🔰*  ❱══════⬣*
 ║ *_ENVIANDO ${additionalText}, PORFAVOR ESPERE.*
 *╚═══════❰ *${vs}* ❱══════⬣*`.trim()
 conn.sendMessage(m.chat, { image: { url: yt_play[0].thumbnail }, caption: texto1 }, { quoted: m })
-if (command == 'play') {
+if (command == 'musica') {
 try {
 let q = '128kbps'
 let v = yt_play[0].url
@@ -96,7 +96,7 @@ await conn.reply(m.chat, '*[❗] 𝙴𝚁𝚁𝙾𝚁 𝙽𝙾 𝙵𝚄𝙴 𝙿
 }} catch {
 throw "*[❌] ERROR, INTENTALO DE NUEVO*"}
 }
-handler.help = ["play", "play2"].map((v) => v + " < busqueda >")
+handler.help = ["musica", "play2"].map((v) => v + " < busqueda >")
 handler.tags = ["downloader"]
 handler.command = /^play2?$/i
 export default handler
