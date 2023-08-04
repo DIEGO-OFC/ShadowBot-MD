@@ -6,11 +6,16 @@ var handler = async (m, {
       text
   }) => {
 
-if (command == "ytmp4" || command == "") {
+if (command == "ytmp4" || command == "ytvmp4") {
 let mp4 = `este comando cambio, ahora es:
 ${usedPrefix}videomp4`.trim()
 
 m.reply(mp4)
+}
+
+if (command == "play") {
+var play = `este comando cambio, ahora es:
+${usedPrefix}play`.trim()
 }
 }
 handler.command = [
