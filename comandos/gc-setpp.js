@@ -1,5 +1,5 @@
 import {webp2png} from "../lib/webp2mp4.js";
-import {URL_REGEX} from "@adiwajshing/baileys";
+import {URL_REGEX} from "@whiskeysockets/baileys";
 let handler = async (m, {conn, args}) => {
   let q = m.quoted ? m.quoted : m;
   let mime = (q.msg || q).mimetype || q.mediaType || "";
