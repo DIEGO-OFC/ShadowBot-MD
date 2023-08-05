@@ -175,7 +175,7 @@ function _0x54e9() {
 /*------------------------------------------------*/
 global.authFile = `Dorrat-BotSession`;
 const {state, saveState, saveCreds} = await useMultiFileAuthState(global.authFile);
-const msgRetryCounterMap = (MessageRetryMap) => {};
+const msgRetryCounterMap = (MessageRetryMap) => { };
 let {version} = await fetchLatestBaileysVersion();
 
 const connectionOptions = {
@@ -203,13 +203,15 @@ const connectionOptions = {
     creds: state.creds,
     keys: makeCacheableSignalKeyStore(state.keys, pino({level: 'silent'})),
   },
-  browser: ['Dorrat-Bot', 'Safari', '9.7.0'],
+  browser: ['Dorrat-Bot', 'Safari', '1.0.0'],
   version,
   defaultQueryTimeoutMs: undefined,
 };
 
 global.conn = makeWASocket(connectionOptions);
 conn.isInit = false;
+conn.well = false;
+conn.logger.info(`Ƈᴀʀɢᴀɴᴅᴏ．．．\n`);
 
 if (!opts["test"]) {
   if (global.db)
@@ -377,30 +379,27 @@ Object.freeze(global.reload);
 watch(comandosFolder, global.reload);
 await global.reloadHandler();
 async function _quickTest() {
-  let test = await Promise.all(
-    [
-      spawn("ffmpeg"),
-      spawn("ffprobe"),
-      spawn("ffmpeg", ["-hide_banner", "-loglevel", "error", "-filter_complex", "color", "-frames:v", "1", "-f", "webp", "-"]),
-      spawn("convert"),
-      spawn("magick"),
-      spawn("gm"),
-      spawn("find", ["--version"]),
-    ].map((p) => {
-      return Promise.race([
-        new Promise((resolve) => {
-          p.on("close", (code) => {
-            resolve(code !== 127);
-          });
-        }),
-        new Promise((resolve) => {
-          p.on("error", (_) => resolve(false));
-        }),
-      ]);
-    })
-  );
-  let [ffmpeg, ffprobe, ffmpegWebp, convert, magick, gm, find] = test;
-  let s = (global.support = {ffmpeg, ffprobe, ffmpegWebp, convert, magick, gm, find});
+  const test = await Promise.all([
+    spawn('ffmpeg'),
+    spawn('ffprobe'),
+    spawn('ffmpeg', ['-hide_banner', '-loglevel', 'error', '-filter_complex', 'color', '-frames:v', '1', '-f', 'webp', '-']),
+    spawn('convert'),
+    spawn('magick'),
+    spawn('gm'),
+    spawn('find', ['--version']),
+  ].map((p) => {
+    return Promise.race([
+      new Promise((resolve) => {
+        p.on('close', (code) => {
+          resolve(code !== 127);
+        });
+      }),
+      new Promise((resolve) => {
+        p.on('error', (_) => resolve(false));
+      })]);
+  }));
+  const [ffmpeg, ffprobe, ffmpegWebp, convert, magick, gm, find] = test;
+  const s = global.support = {ffmpeg, ffprobe, ffmpegWebp, convert, magick, gm, find};
   Object.freeze(global.support);
 }
 setInterval(async () => {
@@ -409,6 +408,4 @@ setInterval(async () => {
     chalk.cyanBright(`\n▣════════[ 𝐀𝐔𝐓𝐎𝐂𝐋𝐄𝐀𝐑-𝐓𝐌𝐏 ]════════════...\n│\n▣─➢ 𝐁𝐚𝐬𝐮𝐫𝐚 𝐞𝐥𝐢𝐦𝐢𝐧𝐚𝐝𝐚 ✅\n│\n▣═════════════════════════════════════...\n`)
   );
 }, 180000);
-_quickTest()
-  .then(() => conn.logger.info(`Ƈᴀʀɢᴀɴᴅᴏ．．．\n`))
-  .catch(console.error);
+_quickTest().catch(console.error);
