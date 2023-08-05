@@ -1,5 +1,5 @@
 import {sticker} from "../lib/sticker.js";
-import MessageType from "@adiwajshing/baileys";
+import MessageType from "@whiskeysockets/baileys";
 import fetch from "node-fetch";
 import fs from "fs";
 let handler = async (m, {conn, text, args}) => {
