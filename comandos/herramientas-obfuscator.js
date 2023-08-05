@@ -1,4 +1,4 @@
-/*import JavaScriptObfuscator from "javascript-obfuscator";
+import JavaScriptObfuscator from "javascript-obfuscator";
 
 let handler = async (m, {conn, text}) => {
   if (!text) return m.reply("*Ingresa el codigo que vas a ofuscar.*");
@@ -15,4 +15,4 @@ let handler = async (m, {conn, text}) => {
   conn.sendMessage(m.chat, {text: obfuscatedCode}, {quoted: m});
 };
 handler.command = /^(ofuscar|ofuscador)$/i;
-export default handler;*/
+export default handler;
