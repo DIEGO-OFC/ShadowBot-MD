@@ -1,6 +1,6 @@
 /* ⚠ POR FAVOR NO MODIFIQUES NADA DE AQUÍ ⚠ */
 
-import {generateWAMessageFromContent} from "@adiwajshing/baileys";
+import {generateWAMessageFromContent} from "@whiskeysockets/baileys";
 let handler = async (m, {conn}) => {
   let name = await conn.getName(m.sender);
   let donar = `
