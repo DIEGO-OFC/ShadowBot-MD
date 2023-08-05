@@ -1,4 +1,4 @@
-import { S_WHATSAPP_NET } from "@adiwajshing/baileys";
+import { S_WHATSAPP_NET } from "@whiskeysockets/baileys";
 
 let handler = async (m, { conn, args, participants }) => {
   let users = Object.entries(global.db.data.users).map(([key, value]) => {
