@@ -1,4 +1,4 @@
-let {downloadContentFromMessage} = await import("@adiwajshing/baileys");
+let {downloadContentFromMessage} = await import("@whiskeysockets/baileys");
 
 export async function before(m, {}) {
   let chat = db.data.chats[m.chat];
