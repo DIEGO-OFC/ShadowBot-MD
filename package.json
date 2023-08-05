@@ -27,6 +27,7 @@
   },
   "license": "GPL-3.0-or-later",
   "dependencies": {
+    "@adiwajshing/keyed-db": "^0.2.4",
     "@green-code/music-track-data": "^2.0.3",
     "@brandond/findthelyrics": "^2.0.5",
     "@whiskeysockets/baileys": "^6.3.1",
@@ -37,6 +38,7 @@
     "acrcloud": "^1.4.0",
     "puppeteer": "^20.9.0",
     "api-dylux": "^1.2.2",
+    "aptoide-scraper": "^1.0.1",
     "awesome-phonenumber": "^2.68.0",
     "axios": "^0.24.0",
     "cfonts": "^2.10.0",
