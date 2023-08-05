@@ -61,11 +61,10 @@
 > pkg install ffmpeg -y
 > pkg install imagemagick -y
 > pkg install yarn
-> git clone https://github.com/DIEGO-OFC/DORRAT-TERMUX
-> cd DORRAT-TERMUX
+> git clone https://github.com/DIEGO-OFC/DORRAT-BOT-MD
+> cd DORRAT-BOT-MD
 > yarn install 
 > npm install
-> npm update
 > npm install 
 > npm start
 ```
@@ -73,7 +72,7 @@
 ```bash
 ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
 > cd 
-> cd DORRAT-TERMUX
+> cd DORRAT-BOT-MD
 > npm start
 ```
 
@@ -83,7 +82,7 @@ ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
 ```bash
 ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
 > cd 
-> cd DORRAT-TERMUX
+> cd DORRAT-BOT-MD
 > rm -rf DORRATSESSION 
 > npm start
 ```
