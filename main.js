@@ -285,12 +285,12 @@ global.reloadHandler = async function (restatConn) {
   }
 //texto de bienvenida 
   conn.welcome =
-    "┌─❖ 
+    `┌─❖ 
  │「 BIENVENIDO/A 👋 」 
  └┬❖ 「  @user  」 
     │✑  *bienvenido a:*
     │✑  @subject
-    └───────────────┈ ⳹";
+    └───────────────┈`
 //texto de salida
   conn.bye = "*╔══════════════*\n*╟❧ @user*\n*╟❧ 𝙷𝙰𝚂𝚃𝙰 𝙿𝚁𝙾𝙽𝚃𝙾 👋🏻* \n*╚══════════════*";
 //texto de nuevo admin
