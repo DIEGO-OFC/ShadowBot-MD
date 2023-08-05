@@ -2,12 +2,12 @@ process.env["NODE_TLS_REJECT_UNAUTHORIZED"] = "0"; //SI QUIERES TEXTO SIMPLIFICA
 import "./configuracion.js";
 import "./rpg.js";
 import {createRequire} from "module";
-import path, {join} from 'path';
-import {fileURLToPath, pathToFileURL} from 'url';
-import {platform} from 'process';
-import * as ws from 'ws';
-import {readdirSync, statSync, unlinkSync, existsSync, readFileSync, rmSync, watch} from 'fs';
-import yargs from 'yargs';
+import path, {join} from "path";
+import {fileURLToPath, pathToFileURL} from "url";
+import {platform} from "process";
+import * as ws from "ws";
+import {readdirSync, statSync, unlinkSync, existsSync, readFileSync, rmSync, watch} from "fs";
+import yargs from "yargs";
 import {spawn} from 'child_process';
 import lodash from 'lodash';
 import chalk from 'chalk';
