@@ -246,8 +246,8 @@ async function connectionUpdate(update) {
    console.log(chalk.yellow(lenguajeGB['smsConexion']()))}
   if (connection == 'close') {
    console.log(chalk.yellow(`[❌]ㅤConexion cerrada, por favor borre la carpeta ${global.authFile} y reescanee el codigo QR`))}
-}}
-                                                                                  }
+}
+                                                                                  
 process.on('uncaughtException', console.error); 
 //conn.ev.on('messages.update', console.error);
 
