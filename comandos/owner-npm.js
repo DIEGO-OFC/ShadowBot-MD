@@ -1,5 +1,5 @@
 import fetch from "node-fetch";
-import MessageType from '@adiwajshing/baileys'
+import MessageType from '@whiskeysockets/baileys'
 let handler = async (m, { conn, text, usedPrefix, command, groupMetadata }) => {
 
   if (!text) throw `_Ingresa el nombre del paquete npm_\n_Ejemplo_ : ${usedPrefix}npmsearch whatsapp-web.js`;
