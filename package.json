@@ -27,7 +27,7 @@
   },
   "license": "GPL-3.0-or-later",
   "dependencies": {
-        "@adiwajshing/keyed-db": "^0.2.4",
+    "@adiwajshing/keyed-db": "^0.2.4",
     "@bochilteam/scraper": "^4.2.4",
     "@brandond/findthelyrics": "^2.0.5",
     "@green-code/music-track-data": "^2.0.3",
@@ -49,6 +49,7 @@
     "colors": "1.4.0",
     "express": "^4.17.3",
     "fb-downloader-scrapper": "^1.0.1",
+    "emoji-api": "^2.0.1",
     "file-type": "^17.1.1",
     "fluent-ffmpeg": "^2.1.2",
     "formdata-node": "^4.3.2",
