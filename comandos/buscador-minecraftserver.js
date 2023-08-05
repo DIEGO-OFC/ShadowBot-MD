@@ -1,4 +1,4 @@
-import MessageType from "@adiwajshing/baileys";
+import MessageType from "@whiskeysockets/baileys";
 import util from "minecraft-server-util";
 let handler = async (m, {conn, args, usedPrefix, DevMode}) => {
   try {
