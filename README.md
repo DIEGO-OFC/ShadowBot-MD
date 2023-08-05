@@ -52,7 +52,6 @@
 ### <img src="https://github.com/DIEGO-OFC/DORRAT-BOT-MD/blob/main/galeria/unnamed.png" height="30px"> 𝐀𝐂𝐓𝐈𝐕𝐀𝐑 𝐄𝐍 𝐓𝐄𝐑𝐌𝐔𝐗
 - ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
 ```bash
-> cd
 > termux-setup-storage
 > apt update 
 > pkg upgrade 
@@ -71,7 +70,6 @@
 ### `—◉ ☑️ ACTIVAR EN CASO DE APAGARSE EN TERMUX ☑️`
 ```bash
 ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
-> cd 
 > cd DORRAT-BOT-MD
 > npm start
 ```
@@ -81,7 +79,6 @@ ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
 - DETENER EL BOT DANDO CLICK EN EL SIMBOLO CTROL EN TERMUX MAS LA LETRA Z EN SU TECLADO MOVIL HASTA QUE SALGA ALGO EN VERDE SIMILAR A DORRAT-TERMUX $  
 ```bash
 ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
-> cd 
 > cd DORRAT-BOT-MD
 > rm -rf DORRATSESSION 
 > npm start
