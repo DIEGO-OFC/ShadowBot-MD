@@ -1,4 +1,4 @@
-let {proto} = (await import("@adiwajshing/baileys")).default;
+let {proto} = (await import("@whiskeysockets/baileys")).default;
 
 let handler = async (m, {conn, args, usedPrefix, command}) => {
   if (!args[0]) throw `✳️ Responde a un mensaje usando el comando más un emoji para reaccionar\n\n📌Ejemplo ${usedPrefix + command} 🤫`;
