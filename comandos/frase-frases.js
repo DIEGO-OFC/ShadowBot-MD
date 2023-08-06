@@ -14,7 +14,7 @@ let handler = async (m, {conn, command}) => {
 
     if (command == "fraseromantica") {
     var fraseroman = frasesRomanticas;
-      m.reply(`*╭─◆────◈⚘◈─────◆─╮*\n*❥  ${fraseroman}*\n*╰─◆────◈⚘◈─────◆─╯*`);
+      m.reply(`*╭─◆────◈⚘◈─────◆─╮*\n*❥  ${pickRandom(fraseroman)}*\n*╰─◆────◈⚘◈─────◆─╯*`);
     }
 
     if (command == "historiaromantica") {
@@ -39,6 +39,9 @@ handler.tags = ["frases"];
 handler.command = handler.help = ["consejo", "fraseromantica", "historiaromantica"];
 export default handler;
 
+function pickRandom(list) { 
+   return list[Math.floor(list.length * Math.random())]; 
+ }
 
 const frasesRomanticas = [
   "Te amo más que las palabras pueden decir.",
