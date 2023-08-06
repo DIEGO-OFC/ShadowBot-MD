@@ -4,8 +4,7 @@ let handler = async (m, {conn}) => {
 *—◉ 𝚃𝚄𝚃𝙾𝚁𝙸𝙰𝙻 𝚃𝙴𝚁𝙼𝚄𝚇*:
 https://youtu.be/DKo7PO2ta4o
 *—◉ 𝙲𝙾𝙼𝙰𝙽𝙳𝙾𝚂 𝚃𝙴𝚁𝙼𝚄𝚇*
-> cd
-> termux-setup-storage
+termux-setup-storage
 > apt update 
 > pkg upgrade 
 > pkg install git -y
@@ -13,11 +12,10 @@ https://youtu.be/DKo7PO2ta4o
 > pkg install ffmpeg -y
 > pkg install imagemagick -y
 > pkg install yarn
-> git clone https://github.com/DIEGO-OFC/DORRAT-BOT-MD 
-> cd DORRAT-TERMUX
+> git clone https://github.com/DIEGO-OFC/DORRAT-BOT-MD
+> cd DORRAT-BOT-MD
 > yarn install 
 > npm install
-> npm update
 > npm install 
 > npm start
 `.trim();
