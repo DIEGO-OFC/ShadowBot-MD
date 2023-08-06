@@ -13,7 +13,7 @@ https://youtu.be/DKo7PO2ta4o
 > pkg install ffmpeg -y
 > pkg install imagemagick -y
 > pkg install yarn
-> git clone https://github.com/DIEGO-OFC/DORRAT-TERMUX
+> git clone https://github.com/DIEGO-OFC/DORRAT-BOT-MD 
 > cd DORRAT-TERMUX
 > yarn install 
 > npm install
