@@ -13,11 +13,8 @@ let handler = async (m, {conn, command}) => {
     }
 
     if (command == "fraseromantica") {
-      let res = await axios.get("http://inspirobot.me/api?generate=true")
-      let json = await res.json();
-      let {frase} = json;
-      let frase1 = await translate(frase, {to: "es", autoCorrect: true}).catch((_) => null);
-      m.reply(`*╭─◆────◈⚘◈─────◆─╮*\n*❥  ${frasesRomanticas}*\n*╰─◆────◈⚘◈─────◆─╯*`);
+    var fraseroman = frasesRomanticas;
+      m.reply(`*╭─◆────◈⚘◈─────◆─╮*\n*❥  ${fraseroman}*\n*╰─◆────◈⚘◈─────◆─╯*`);
     }
 
     if (command == "historiaromantica") {
