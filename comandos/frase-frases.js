@@ -1,5 +1,6 @@
 import translate from "@vitalets/google-translate-api";
 import fetch from "node-fetch";
+import axios from "axios";
 let handler = async (m, {conn, command}) => {
   try {
     if (command == "consejo") {
@@ -12,7 +13,7 @@ let handler = async (m, {conn, command}) => {
     }
 
     if (command == "fraseromantica") {
-      let res = await fetch("https://supra-api.herokuapp.com/api/romanticafrase?apikey=supraz");
+      let res = await axios.get("http://inspirobot.me/api?generate=true")
       let json = await res.json();
       let {frase} = json;
       let frase1 = await translate(frase, {to: "es", autoCorrect: true}).catch((_) => null);
