@@ -2,7 +2,7 @@ import translate from "@vitalets/google-translate-api";
 import fetch from "node-fetch";
 import axios from "axios";
 let handler = async (m, {conn, command}) => {
-  try {
+  
     if (command == "consejo") {
       let res = await fetch("https://zenzapis.xyz/randomtext/motivasi?apikey=hdiiofficial");
       //let res = await fetch("https://supra-api.herokuapp.com/api/conselho?apikey=supraz")
@@ -32,9 +32,8 @@ ${storytime.text}`,
         m
       );
     }
-  } catch {
-    await m.reply(`*[❗] 𝙾𝙲𝚄𝚁𝚁𝙸𝙾 𝚄𝙽 𝙴𝚁𝚁𝙾𝚁, 𝙿𝙾𝚂𝙸𝙱𝙻𝙴𝙼𝙴𝙽𝚃𝙴 𝙻𝙰 𝙿𝙰𝙶𝙸𝙽𝙰 (𝙰𝙿𝙸) 𝙳𝙴 𝙰𝚈𝚄𝙳𝙰 𝙴𝚂𝚃𝙴 𝙲𝙰𝙸𝙳𝙰 𝚃𝙴𝙼𝙿𝙾𝚁𝙰𝙻𝙼𝙴𝙽𝚃𝙴, 𝙸𝙽𝚃𝙴𝙽𝚃𝙴𝙻𝙾 𝙼𝙰𝚂 𝚃𝙰𝚁𝙳𝙴*`);
-  }
+  
+  
 };
 handler.tags = ["frases"];
 handler.command = handler.help = ["consejo", "fraseromantica", "historiaromantica"];
