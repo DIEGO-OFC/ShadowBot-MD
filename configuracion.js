@@ -101,7 +101,7 @@ global.creatorname = "𝐃𝐈𝐄𝐆𝐎-𝐎𝐅𝐂";
 global.library = "BAILEYS-MD";
 global.vs = "V10";
 global.version = vs;
-
+global.baileys = '@whiskeysockets/baileys'
 //_______tiempp de stickers______________
 global.d = new Date(new Date() + 3600000);
 global.locale = "es";
