@@ -1,6 +1,6 @@
 //by https://github.com/DIEGO-OFC/DORRAT-BOT-MD
 
-import {sandroid1} from "../lib/scrape.js";
+import {sandroid1} from "..lib/comandos/scrape.js";
 let handler = async (m, {conn, text, usedPrefix, command}) => {
   if (!text) return conn.reply(m.chat, "Ingrese la consulta", m);
 
