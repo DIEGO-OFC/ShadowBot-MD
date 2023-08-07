@@ -249,7 +249,7 @@ async function connectionUpdate(update) {
    console.log(chalk.yellow('[🔄]ㅤEscanea este codigo QR, el codigo QR expira en 60 segundos.'))}
   if (connection == 'open') {
    console.log(chalk.yellow(lenguajeGB['smsConexion']()))}
-   const = (connection == 'close') {
+   const (connection == 'close') {
  console.log(chalk.yellow(`[❌]ㅤConexion cerrada, por favor borre la carpeta ${global.authFile} y reescanee el codigo QR`))}
 }
                                                                                   
