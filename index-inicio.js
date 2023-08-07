@@ -1,4 +1,5 @@
 console.log("☑️ㅤIniciando bot...");
+console.log("📦 Comandos cargados correctamente");
 import {join, dirname} from "path";
 import {fileURLToPath} from "url";
 import {setupMaster, fork} from "cluster";
