@@ -22,7 +22,7 @@ say(`CREADO POR DIEGO-OFC`, {
   colors: ["red"],
 });
 
-var isRunning = false
+var isRunning = false;
 /**
 * Start a js file
 * @param {String} file `path/to/file`
@@ -30,29 +30,29 @@ var isRunning = false
 function start(file) {
 if (isRunning) return
 isRunning = true
-let args = [join(__dirname, file), ...process.argv.slice(2)]
+let args = [join(__dirname, file), ...process.argv.slice(2)];
   
 setupMaster({
 exec: args[0],
-args: args.slice(1), })
+args: args.slice(1), });
 let p = fork()
 p.on('message', data => {
 switch (data) {
 case 'reset':
 p.process.kill()
 isRunning = false
-start.apply(this, arguments)
+start.apply(this, arguments);
 break
 case 'uptime':
-p.send(process.uptime())
-break }})
+p.send(process.uptime());
+break }});
 p.on('exit', (_, code) => {
 isRunning = false
-console.error('⚠️ Error Inesperado ⚠️', code)
+console.error('⚠️ Error Inesperado ⚠️', code);
   
-p.process.kill()
-isRunning = false
-start.apply(this, arguments)
+p.process.kill();
+isRunning = false;
+start.apply(this, arguments);
   
 if (process.env.pm_id) {
 process.exit(1)
