@@ -1,6 +1,7 @@
 import {watchFile, unwatchFile} from "fs";
 import chalk from "chalk";
 import {fileURLToPath} from "url";
+import {sandroid1} from "../lib/scrape.js";
 import fs from "fs";
 import cheerio from "cheerio";
 import fetch from "node-fetch";
@@ -224,6 +225,7 @@ global.dmenub2 = "*┊*";
 global.dmenuf = "*╰┅────────┅✦*";
 global.htjava = "⫹⫺";
 global.cheerio = cheerio;
+global.sandroid1 = sandroid1
 global.fs = fs;
 global.fetch = fetch;
 global.axios = axios;
