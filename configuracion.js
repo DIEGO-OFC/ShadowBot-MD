@@ -6,6 +6,7 @@ import cheerio from "cheerio";
 import fetch from "node-fetch";
 import axios from "axios";
 import moment from "moment-timezone";
+import {spin} from "./lib/scrape.js";
 import {sticker} from "./lib/sticker.js";
 import {toPTT} from "./lib/converter.js";
 import {toAudio} from "./lib/converter.js";
@@ -57,8 +58,9 @@ global.webp2png = webp2png;
 global.sandroid1 = sandroid1;
 global.ffmpeg = ffmpeg;
 global.toPTT = toPTT;
+global.spin = spin;
 global.fs = fs;
-global.sticker = sticker
+global.sticker = sticker;
 global.toAudio = toAudio;
 global.fetch = fetch;
 global.axios = axios;
