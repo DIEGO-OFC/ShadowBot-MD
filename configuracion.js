@@ -1,7 +1,7 @@
 import {watchFile, unwatchFile} from "fs";
 import chalk from "chalk";
 import {fileURLToPath} from "url";
-import {sandroid1} from "../lib/scrape.js";
+import {sandroid1} from "./lib/scrape.js";
 import fs from "fs";
 import cheerio from "cheerio";
 import fetch from "node-fetch";
