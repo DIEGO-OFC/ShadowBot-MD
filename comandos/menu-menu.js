@@ -78,14 +78,17 @@ var completomenu = `*╭━━❍𝐃𝐎𝐑𝐑𝐀𝐓-𝐁𝐎𝐓-𝐌𝐃�
 
   ┌─「💻𝐃𝐎𝐖𝐍𝐋𝐎𝐀𝐃𝐄𝐑」 
  ├➢${usedPrefix}videodocumento <enlace / link / url 
- ├➢${usedPrefix}facebook <enlace / link / url 
+ ├➢${usedPrefix}fb <enlace / link / url 
+ ├➢${usedPrefix}twitter *<enlace / link / url>*_
+ ├➢${usedPrefix}xnxxdl *<enlace / link / url>*
+ ├➢${usedPrefix}xvideosdl *<enlace / link / url>*
  ├➢${usedPrefix}instagram <enlace / link / url 
  ├➢${usedPrefix}mediafire <enlace / link / url 
- ├➢${usedPrefix}instagram <enlace / link / url 
+ ├➢${usedPrefix}gdrive *<enlace / link / url>*
  ├➢${usedPrefix}gitclone <enlace / link / url 
  ├➢${usedPrefix}tiktok <enlace / link / url 
  ├➢${usedPrefix}ytmp3 <enlace / link / url 
- ├➢${usedPrefix}ytmp4 <enlace / link / url 
+ ├➢${usedPrefix}video <enlace / link / url 
  ├➢${usedPrefix}play.1 <texto / enlace / link / url 
  ├➢${usedPrefix}play.2 <texto / enlace / link / url 
  ├➢${usedPrefix}play <texto 
@@ -96,6 +99,7 @@ var completomenu = `*╭━━❍𝐃𝐎𝐑𝐑𝐀𝐓-𝐁𝐎𝐓-𝐌𝐃�
  ├➢${usedPrefix}wallpaper2 <texto 
  ├➢${usedPrefix}pptiktok <nombre de usuario 
  ├➢${usedPrefix}igstalk <nombre de usuario 
+ ├➢${usedPrefix}igstory *<nombre de usuario>*_
  ├➢${usedPrefix}tiktokstalk <nombre de usuario 
  └────ׂ─ׂ─ׂ─ׂ── 
 
