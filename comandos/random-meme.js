@@ -1,6 +1,6 @@
 import meme from "../lib/memes.js";
 var handler = async (m, {conn}) => {
-const memeGen = new meme();
+const memeGen = meme();
   await conn.sendFile(m.chat, meme, "", "", m);
 };
 handler.help = ["memes"];
