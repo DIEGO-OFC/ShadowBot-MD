@@ -98,7 +98,7 @@ global.lenguajeGB = es;
 /* ______________________________________________ */
 global.creadorname = "𝐃𝐈𝐄𝐆𝐎-𝐎𝐅𝐂";
 global.creatorname = "𝐃𝐈𝐄𝐆𝐎-𝐎𝐅𝐂";
-const library = "BAILEYS-MD";
+global.library = "BAILEYS-MD";
 global.vs = "V10";
 global.version = vs;
 global.baileys = '@whiskeysockets/baileys'
