@@ -1,6 +1,7 @@
 import {watchFile, unwatchFile} from "fs";
 import chalk from "chalk";
 import {fileURLToPath} from "url";
+import {toAudio} from "./lib/converter.js";
 import uploadFile from "./lib/uploadFile.js";
 import uploadImage from "./lib/uploadImage.js";
 import {webp2png} from "./lib/webp2mp4.js";
@@ -104,6 +105,7 @@ global.uploadFile = uploadFile;
 global.webp2png = webp2png;
 global.sandroid1 = sandroid1;
 global.fs = fs;
+global.toAudio = toAudio;
 global.fetch = fetch;
 global.axios = axios;
 global.moment = moment;
