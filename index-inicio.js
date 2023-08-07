@@ -1,7 +1,7 @@
 console.log("☑️ㅤIniciando bot...");
-console.log("📑 Cargando comandos");
-console.log("📦 Comandos Cargados correctamente");
-console.log("🌐 Cargando")
+console.log("📑  Cargando comandos");
+console.log("📦  Comandos Cargados correctamente");
+console.log("🌐  Cargando")
 import {join, dirname} from "path";
 import {fileURLToPath} from "url";
 import {setupMaster, fork} from "cluster";
