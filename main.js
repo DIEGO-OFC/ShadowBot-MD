@@ -335,7 +335,6 @@ global.reloadHandler = async function (restatConn) {
   return true;
 };
 
-/* 
   
  const comandosFolder = join(__dirname, './comandos'); 
  const comandosFilter = filename => /\.js$/.test(filename); 
