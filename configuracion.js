@@ -1,6 +1,8 @@
 import {watchFile, unwatchFile} from "fs";
 import chalk from "chalk";
 import {fileURLToPath} from "url";
+import uploadFile from "./lib/uploadFile.js";
+import uploadImage from "./lib/uploadImage.js";
 import {webp2png} from "./lib/webp2mp4.js";
 import {sandroid1} from "./lib/scrape.js";
 import fs from "fs";
@@ -96,7 +98,15 @@ global.openai_org_id = "org-3";
 /* Consigue tu ID de organizacion en este enlace: https://platform.openai.com/account/org-settings */
 
 global.lenguajeGB = es;
-
+global.cheerio = cheerio;
+global.uploadImage = uploadImage;
+global.uploadFile = uploadFile;
+global.webp2png = webp2png;
+global.sandroid1 = sandroid1;
+global.fs = fs;
+global.fetch = fetch;
+global.axios = axios;
+global.moment = moment;
 /* ______________________________________________ */
 global.creadorname = "𝐃𝐈𝐄𝐆𝐎-𝐎𝐅𝐂";
 global.creatorname = "𝐃𝐈𝐄𝐆𝐎-𝐎𝐅𝐂";
@@ -225,13 +235,7 @@ global.dmenub = "*┊»*";
 global.dmenub2 = "*┊*";
 global.dmenuf = "*╰┅────────┅✦*";
 global.htjava = "⫹⫺";
-global.cheerio = cheerio;
-global.webp2png = webp2png;
-global.sandroid1 = sandroid1;
-global.fs = fs;
-global.fetch = fetch;
-global.axios = axios;
-global.moment = moment;
+
 global.htki = "*⭑•̩̩͙⊱•••• ☪*";
 global.htka = "*☪ ••••̩̩͙⊰•⭑*";
 
