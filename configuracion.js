@@ -8,7 +8,7 @@ import axios from "axios";
 import moment from "moment-timezone";
 import {en, es, pt} from "./lib/idiomas/total-idiomas.js";
 //cambia los números que sean propietarios
-const owner = [
+global.owner = [
 /*╔══════════════════╗*/
 /*║ ❒*/ ["5218442286089", "🔰𝐃𝐈𝐄𝐆𝐎-𝐂𝐑𝐄𝐀𝐃𝐎𝐑🔰", true],
 /*║ ❒*/ ["51993138466", "🔰  𝙲𝙾𝙻𝙻𝙰𝙱𝙾𝚁𝙰𝚃𝙾𝚁 1 🔰", true],
@@ -98,7 +98,7 @@ global.lenguajeGB = es;
 /* ______________________________________________ */
 global.creadorname = "𝐃𝐈𝐄𝐆𝐎-𝐎𝐅𝐂";
 global.creatorname = "𝐃𝐈𝐄𝐆𝐎-𝐎𝐅𝐂";
-global.library = "BAILEYS-MD";
+const library = "BAILEYS-MD";
 global.vs = "V10";
 global.version = vs;
 global.baileys = '@whiskeysockets/baileys'
@@ -218,7 +218,7 @@ global.fgif = {
     },
   },
 };
-export { owner }
+export { library }
 let file = fileURLToPath(import.meta.url);
 watchFile(file, () => {
   unwatchFile(file);
