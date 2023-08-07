@@ -1,5 +1,7 @@
 //import {sticker} from "../lib/sticker.js";
-import fetch from "node-fetch";
+import fs from 'fs'; 
+ import fetch from 'node-fetch'; 
+ import {googleImage} from '@bochilteam/scraper';
 let handler = async (m, {conn, text, args, usedPrefix, command}) => {
   if (!args[0]) throw `*✳️ EJEMPLO DE USO DEL COMANDO ${usedPrefix + command} Anya Forger*`;
   
