@@ -218,7 +218,6 @@ global.fgif = {
     },
   },
 };
-export { library }
 let file = fileURLToPath(import.meta.url);
 watchFile(file, () => {
   unwatchFile(file);
