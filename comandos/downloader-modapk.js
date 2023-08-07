@@ -15,4 +15,5 @@ import {search, download} from 'aptoide-scraper';
    }     
  }; 
  handler.command = /^(apkmod|modapk|dapk2|aptoide|aptoidedl)$/i; 
+ handler.dolares = 5
  export default handler;
