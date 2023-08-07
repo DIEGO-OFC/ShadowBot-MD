@@ -1,17 +1,18 @@
 import {watchFile, unwatchFile} from "fs";
 import chalk from "chalk";
 import {fileURLToPath} from "url";
+import fs from "fs";
+import cheerio from "cheerio";
+import fetch from "node-fetch";
+import axios from "axios";
+import moment from "moment-timezone";
+import {toPTT} from "./lib/converter.js";
 import {toAudio} from "./lib/converter.js";
 import {ffmpeg} from "./lib/converter.js";
 import uploadFile from "./lib/uploadFile.js";
 import uploadImage from "./lib/uploadImage.js";
 import {webp2png} from "./lib/webp2mp4.js";
 import {sandroid1} from "./lib/scrape.js";
-import fs from "fs";
-import cheerio from "cheerio";
-import fetch from "node-fetch";
-import axios from "axios";
-import moment from "moment-timezone";
 import {en, es, pt} from "./lib/idiomas/total-idiomas.js";
 //cambia los números que sean propietarios
 global.owner = [
@@ -106,6 +107,7 @@ global.uploadFile = uploadFile;
 global.webp2png = webp2png;
 global.sandroid1 = sandroid1;
 global.ffmpeg = ffmpeg;
+global.toPTT = toPTT;
 global.fs = fs;
 global.toAudio = toAudio;
 global.fetch = fetch;
