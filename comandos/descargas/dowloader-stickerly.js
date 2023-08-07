@@ -1,4 +1,4 @@
-import {sticker} from "../lib/sticker.js";
+//import {sticker} from "../lib/sticker.js";
 import fetch from "node-fetch";
 let handler = async (m, {conn, args, usedPrefix, command}) => {
   if (!args[0]) throw `*✳️ EJEMPLO DE USO DEL COMANDO ${usedPrefix + command} Anya Forger*`;
