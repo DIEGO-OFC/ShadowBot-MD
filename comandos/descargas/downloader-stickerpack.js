@@ -1,4 +1,4 @@
-import {sticker} from "../lib/sticker.js";
+//import {sticker} from "../lib/sticker.js";
 import fetch from "node-fetch";
 let handler = async (m, {conn, text, usedPrefix, command}) => {
   if (!text) throw `*[❗] 𝙴𝙹𝙴𝙼𝙿𝙻𝙾 𝙳𝙴 𝚄𝚂𝙾 𝙳𝙴𝙻 𝙲𝙾𝙼𝙰𝙽𝙳𝙾 ${usedPrefix + command} https://getstickerpack.com/stickers/flork-memes-4-1*`;
