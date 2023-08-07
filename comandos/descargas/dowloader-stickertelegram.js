@@ -1,5 +1,5 @@
 import fetch from "node-fetch";
-import {sticker} from "../lib/sticker.js";
+//import {sticker} from "../lib/sticker.js";
 let handler = async (m, {conn, args, usedPrefix, command}) => {
   if (!args[0]) throw `uhm.. url nya mana?\n\ncontoh:\n${usedPrefix + command} https://t.me/addstickers/namapack`;
   if (!args[0].match(/(https:\/\/t.me\/addstickers\/)/gi)) throw `url salah`;
