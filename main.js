@@ -335,24 +335,34 @@ global.reloadHandler = async function (restatConn) {
   return true;
 };
 
-const comandosFolder = global.__dirname(join(__dirname, "./comandos/index"));
-const comandosFilter = (filename) => /\.js$/.test(filename);
-global.comandos = {};
-async function filesInit() {
-  for (let filename of readdirSync(comandosFolder).filter(comandosFilter)) {
-    try {
-      let file = global.__filename(join(comandosFolder, filename));
-      const module = await import(file);
-      global.comandos[filename] = module.default || module;
-    } catch (e) {
-      conn.logger.error(e);
-      delete global.comandos[filename];
-    }
-  }
-}
-filesInit()
-  .then((_) => Object.keys(global.comandos))
-  .catch(console.error);
+/* 
+  
+ const comandosFolder = join(__dirname, './comandos'); 
+ const comandosFilter = filename => /\.js$/.test(filename); 
+ global.comandos = {}; 
+  
+ async function filesInit(folder) { 
+   for (let filename of readdirSync(folder).filter(comandosFilter)) { 
+     try { 
+       let file = join(folder, filename); 
+       const module = await import(file); 
+       global.comandos[file] = module.default || module; 
+     } catch (e) { 
+       console.error(e); 
+       delete global.comandos[filename]; 
+     } 
+   } 
+  
+   for (let subfolder of readdirSync(folder)) { 
+     const subfolderPath = join(folder, subfolder); 
+     if (statSync(subfolderPath).isDirectory()) { 
+       await filesInit(subfolderPath); 
+     } 
+   } 
+ } 
+  
+ await filesInit(comandosFolder).then(_ => Object.keys(global.comandos)).catch(console.error); 
+  
 
 global.reload = async (_ev, filename) => {
   if (comandosFilter(filename)) {
