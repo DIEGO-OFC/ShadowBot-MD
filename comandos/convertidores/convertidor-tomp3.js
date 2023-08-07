@@ -1,4 +1,4 @@
-import {toAudio} from "../lib/converter.js";
+//import {toAudio} from "../lib/converter.js";
 let handler = async (m, {conn}) => {
   let q = m.quoted ? m.quoted : m;
   let mime = (q || q.msg).mimetype || q.mediaType || "";
