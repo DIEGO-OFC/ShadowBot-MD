@@ -46,5 +46,5 @@ import ytdl from 'ytdl-core';
  handler.help = ['ytd']; 
  handler.tags = ['downloader']; 
  handler.command = ['videodoc', 'documentvid', 'videodocumento', 'ytshort']; 
- handler.exp = 3; 
+ handler.dolares = 3; 
  export default handler;
