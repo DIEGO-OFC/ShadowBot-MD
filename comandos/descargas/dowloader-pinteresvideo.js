@@ -1,4 +1,4 @@
-import {spin} from "../lib/scrape.js";
+//import {spin} from "../lib/scrape.js";
 
 let handler = async (m, {conn, args, usedPrefix, command}) => {
   if (!args[0])
