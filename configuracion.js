@@ -47,6 +47,7 @@ global.openai_key = "sk-0";
 global.openai_org_id = "org-3";
 /* Consigue tu ID de organizacion en este enlace: https://platform.openai.com/account/org-settings */
 
+/* NO BORRAR NADA DE AQUÍ ABAJO*/
 global.lenguajeGB = es;
 global.cheerio = cheerio;
 global.uploadImage = uploadImage;
@@ -60,6 +61,8 @@ global.toAudio = toAudio;
 global.fetch = fetch;
 global.axios = axios;
 global.moment = moment;
+/*-----------------------*/
+
 /* ______________________________________________ */
 global.creadorname = "𝐃𝐈𝐄𝐆𝐎-𝐎𝐅𝐂";
 global.creatorname = "𝐃𝐈𝐄𝐆𝐎-𝐎𝐅𝐂";
