@@ -62,14 +62,7 @@ var completomenu = `*╭━━❍𝐃𝐎𝐑𝐑𝐀𝐓-𝐁𝐎𝐓-𝐌𝐃�
  │ ‣  _${usedPrefix}script_ 
  │ ‣  _Bot_ (𝑢𝑠𝑜 𝑠𝑖𝑛 𝑝𝑟𝑒𝑓𝑖𝑗𝑜) 
  └──···
- 
- ╔═══ MINECRAFT SERVER  ═══╗  
- ║══════════════ 
- ║ ❒ *IP: nodo5.boxmineworld.com* 
- ║ ❒ *PUERTO: 4003* 
- ║ ❒ *BEDROCK Y JAVA* 
- ╚════ ≪ •❈• ≫ ════╝ 
-  
+
  ╔═════════════╗  
  ║ *<UNE UN BOT A TU GRUPO/>* 
  ║══════════════════ 
