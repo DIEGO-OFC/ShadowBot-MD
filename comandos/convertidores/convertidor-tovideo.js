@@ -1,4 +1,4 @@
-import {webp2mp4} from "../lib/webp2mp4.js";
+/*import {webp2mp4} from "../lib/webp2mp4.js";*/
 import {ffmpeg} from "../lib/converter.js";
 let handler = async (m, {conn, usedPrefix, command}) => {
   if (!m.quoted) throw `*[❗𝐈𝐍𝐅𝐎❗] 𝚁𝙴𝚂𝙿𝙾𝙽𝙳𝙰 𝙰 𝚄𝙽 𝚂𝚃𝙸𝙲𝙺𝙴𝚁 𝚀𝚄𝙴 𝙳𝙴𝚂𝙴𝙴 𝙲𝙾𝙽𝚅𝙴𝚁𝚃𝙸𝚁 𝙴𝙽 𝚅𝙸𝙳𝙴𝙾 𝙲𝙾𝙽 𝙴𝙻 𝙲𝙾𝙼𝙰𝙽𝙳𝙾 ${usedPrefix + command}*`;
