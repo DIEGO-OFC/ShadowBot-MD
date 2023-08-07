@@ -4,7 +4,7 @@ let handler = async (m, {conn, isPrems}) => {
   if (new Date() - global.db.data.users[m.sender].lastwork < 600000)
     throw `*𝙴𝚜𝚝𝚊𝚜 𝚌𝚊𝚗𝚜𝚊𝚍𝚘, 𝚍𝚎𝚋𝚎𝚜 𝚍𝚎𝚜𝚌𝚊𝚗𝚜𝚊𝚛 𝚌𝚘𝚖𝚘 𝚖𝚒𝚗𝚒𝚖𝚘 ${msToTime(time - new Date())} 𝚙𝚊𝚛𝚊 𝚟𝚘𝚕𝚟𝚎𝚛 𝚊 𝚝𝚛𝚊𝚋𝚊𝚓𝚊𝚛!*`;
   let pp = "galeria/menudorrat3.jpg";
-  m.reply(`*${pickRandom(global.work)} $${d}* *DOLARES*`)
+  m.reply(`*${pickRandom(global.work)} $${d}* *DOLARES*`);
   global.db.data.users[m.sender].dolares += d * 1;
   global.db.data.users[m.sender].lastwork = new Date() * 1;
 };
@@ -64,4 +64,15 @@ global.work = [
   "Trabajas como artista callejera y ganas",
   "¡Hiciste trabajo social por una buena causa! por tu buena causa Recibiste",
   "Llevas mujeres a la tienda por",
+  "Trabajas como entrenador personal y ayudas a tus clientes a alcanzar sus metas de fitness. Ganaste",
+  "Participaste en una encuesta de opinión sobre productos y recibiste",
+  "Cuidaste mascotas mientras sus dueños estaban de vacaciones y ganaste",
+  "Realizaste tareas de transcripción para una empresa y ganaste",
+  "Trabajaste como guía turístico en tu ciudad y ganaste",
+  "Proporcionaste servicios de consultoría en línea y ganaste",
+  "Realizaste labores de jardinería y embellecimiento en el vecindario y ganaste",
+  "Participaste en un experimento psicológico y recibiste",
+  "Brindaste clases de música a estudiantes y ganaste",
+  "Realizaste labores de limpieza en casas locales y ganaste",
+  "Trabajaste en la organización de un evento benéfico y ganaste",
 ];
