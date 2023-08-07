@@ -1,4 +1,4 @@
-import {toPTT} from "../lib/converter.js";
+//import {toPTT} from "../lib/converter.js";
 let handler = async (m, {conn}) => {
   let q = m.quoted ? m.quoted : m;
   let mime = (m.quoted ? m.quoted : m.msg).mimetype || "";
