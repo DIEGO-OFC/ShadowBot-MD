@@ -10,9 +10,9 @@ let handler = async (m) => {
     global.db.data.users[m.sender].lasCrime = new Date() * 1;
   } else {
     m.reply(
-      `Tu intento de robo se vio frustrado cuando la policía confiscó lo que habías tomado y te impuso una comisión equivalente por tu liberación! Te quitaron: $${reward} *DOLARES*`
+      `¡Tu intento de robo se vio frustrado cuando la policía confiscó lo que habías tomado y te impuso una comisión equivalente a la mitad del dinero robado por tu liberación! Te quitaron: $${reward} *DOLARES*`
     );
-    global.db.data.users[m.sender].dolares -= reward * 1;
+    global.db.data.users[m.sender].dolares -= (reward / 2) * 1;
     global.db.data.users[m.sender].lasCrime = new Date() * 1;
   }
 };
