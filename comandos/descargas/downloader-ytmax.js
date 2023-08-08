@@ -6,7 +6,7 @@ var handler = async (m, {conn, args, text}) => {
 let q, v, yt, dl_url, ttl, size, lolhuman, lolh, n, n2, n3, n4, cap, qu, currentQuality
   if (!args[0]) throw '[❌] *_Que quieres que busque en YouTube?_*';
 //if (!args[0]) return m.reply(lenguajeGB.smsMalused2() + `*${usedPrefix + command} https://youtu.be/ejemplo*\n*${usedPrefix + command} https://www.youtube.com/ejemplo*`)
-await conn.reply(m.chat, `*Aguarde un momento*`, m)
+await conn.reply(m.chat, `*[⏰] Aguarde un momento*`, m)
 try {
 q = ''
 v = args[0]
