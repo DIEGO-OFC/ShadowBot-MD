@@ -31,7 +31,7 @@ import { createHash } from 'crypto'
  handler.help = ['reg'].map(v => v + ' <nombre.edad>') 
  handler.tags = ['rg'] 
   
- handler.command = ['verify', 'reg', 'register', 'registrar']  
+ handler.command = ['verify', 'verificar', 'reg', 'register', 'registrar']  
   
  export default handler
          
