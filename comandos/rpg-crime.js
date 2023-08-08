@@ -20,7 +20,7 @@ let handler = async (m) => {
 };
 handler.help = ["crime"];
 handler.tags = ["xp"];
-handler.command = ["crimen"];
+handler.command = ["crime", "crimen"];
 handler.fail = null;
 handler.exp = 0;
 export default handler;
