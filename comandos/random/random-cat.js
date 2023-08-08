@@ -7,7 +7,7 @@ let handler = async (m, {conn}) => {
     let caption = `
 _©The DorrAt - Bot_
 `.trim();
-    conn.sendFile(m.chat, img, "dog.jpg", caption, m);
+    conn.sendFile(m.chat, img, "cat.jpg", caption, m);
   } catch (e) {
     console.log(e);
     throw "*Error!*";
