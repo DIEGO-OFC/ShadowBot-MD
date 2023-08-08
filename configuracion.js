@@ -6,6 +6,7 @@ import cheerio from "cheerio";
 import fetch from "node-fetch";
 import axios from "axios";
 import moment from "moment-timezone";
+import memexd from "./lib/memes.js";
 import {spin} from "./lib/scrape.js";
 import {sticker} from "./lib/sticker.js";
 import {toPTT} from "./lib/converter.js";
@@ -52,6 +53,7 @@ global.openai_org_id = "org-3";
 
 /* NO BORRAR NADA DE AQUÍ ABAJO*/
 global.lenguajeGB = es;
+global.memexd = memexd;
 global.cheerio = cheerio;
 global.uploadImage = uploadImage;
 global.uploadFile = uploadFile;
