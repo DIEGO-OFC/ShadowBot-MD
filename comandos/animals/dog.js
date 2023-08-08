@@ -1,5 +1,5 @@
 import fetch from "node-fetch";
-let handler = async (m, {conn, text}) => {
+let handler = async (m, {conn}) => {
   try {
     let res = await fetch("https://nekos.life/api/v2/img/woof");
     let json = await res.json();
