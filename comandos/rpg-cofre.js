@@ -41,7 +41,7 @@ var handler = async (m, {conn}) => {
     participant: "0@s.whatsapp.net",
   };
 
-  await conn.sendFile(m.chat, img, 'dorrat.jpg', texto, m)
+  await conn.sendFile(m.chat, img, "dorrat.jpg", texto, m);
   global.db.data.users[m.sender].lastcofre = new Date() * 1;
 };
 handler.help = ["daily"];
