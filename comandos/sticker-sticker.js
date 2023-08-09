@@ -1,7 +1,7 @@
-import {sticker} from "../lib/sticker.js";
-import uploadFile from "../lib/uploadFile.js";
-import uploadImage from "../lib/uploadImage.js";
-import {webp2png} from "../lib/webp2mp4.js";
+//import {sticker} from "../lib/sticker.js";
+//import uploadFile from "../lib/uploadFile.js";
+//import uploadImage from "../lib/uploadImage.js";
+//import {webp2png} from "../lib/webp2mp4.js";
 
 let handler = async (m, {conn, args, usedPrefix, command}) => {
   let stiker = false;
@@ -13,9 +13,7 @@ let handler = async (m, {conn, args, usedPrefix, command}) => {
       if (/video/g.test(mime)) if ((q.msg || q).seconds > 11) return m.reply("⚠️ *_Máximo 10 segundos._*");
       let img = await q.download?.();
       if (!img)
-        throw `[❕] RESPONDE A UN VIDEO, IMAGEN O INSERTE EL ENLACE DE UNA IMAGEN CON TERMINACIÓN  .jpg EL CUAL SERA CONVERTIDO  EN STICKER, DEBE RESPONDER O USAR EL COMANDO ${
-          usedPrefix + command
-        }*`;
+        throw `*[❌] Responda a una imagen o video*`;
       let out;
       try {
         stiker = await sticker(img, false, global.packname, global.author);
