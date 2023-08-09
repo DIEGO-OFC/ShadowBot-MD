@@ -5,7 +5,7 @@ let handler = async (m, {conn}) => {
     let json = await res.json();
     let img = await json.url;
     let caption = `
-_©The DorrAt - Bot_
+_©The Zirax - Bot_
 `.trim();
     conn.sendFile(m.chat, img, "lizard.jpg", caption, m);
   } catch (e) {
