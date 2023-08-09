@@ -1,6 +1,6 @@
-# DORR∆T-BOT-MD
+# 𝐙𝐈𝐑𝐀𝐗-𝐁𝐎𝐓-𝐌𝐃 
 
-Gracias por usar el bot. Si deseas volver a escanear el código QR, borra la carpeta DORRATSESSION o reinicia el bot con el comando "restart" o "start".
+Gracias por usar el bot. Si deseas volver a escanear el código QR, borra la carpeta ZiraxSESSION o reinicia el bot con el comando "restart" o "start".
 
 - Número del bot oficial: ++506 6443 2500
 - Si deseas cambiar los números owners, ve a configuracion.js
@@ -13,7 +13,7 @@ Gracias por usar el bot. Si deseas volver a escanear el código QR, borra la car
 - No me hago responsable del mal uso que puedas darle al bot.
 - Los números del bot oficial son: wa.me/50664432500 o wa.me/240555351060
 - Bot creado para la diversión de los usuarios.
-**DORR∆T-BOT-MD CREATE BY DIEGO-OFC**
+**ZIRAX-BOT-MD CREATE BY DIEGO-OFC**
 ### Grupo oficial
 Únete al grupo oficial para obtener ayuda:
 https://chat.whatsapp.com/CrsOmirjZNYKrvnQNT98Oo
