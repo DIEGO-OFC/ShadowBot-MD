@@ -173,7 +173,7 @@ function _0x54e9() {
 }
 
 /*------------------------------------------------*/
-global.authFile = `Dorrat-BotSession`;
+global.authFile = `Zirax-BotSession`;
 const {state, saveState, saveCreds} = await useMultiFileAuthState(global.authFile);
 const msgRetryCounterMap = (MessageRetryMap) => { };
 let {version} = await fetchLatestBaileysVersion();
@@ -203,7 +203,7 @@ const connectionOptions = {
     creds: state.creds,
     keys: makeCacheableSignalKeyStore(state.keys, pino({level: 'silent'})),
   },
-  browser: ['Dorrat-Bot', 'Safari', '1.0.0'],
+  browser: ['Zirax-Bot-MD', 'Safari', '1.0.0'],
   version,
   defaultQueryTimeoutMs: undefined,
 };
