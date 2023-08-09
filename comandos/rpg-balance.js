@@ -9,6 +9,7 @@ let handler = async (m, {usedPrefix}) => {
 ❍ *Diamantes:* ${global.db.data.users[who].limit} 💎
 ❍ *Tokens:* ${global.db.data.users[who].joincount} ☯️
 ❍ *Dólares:* $${global.db.data.users[who].dolares} 💸
+❍ *Dinero en el banco:* $${global.db.data.users[who].bank}
 ╰━━━━━━━━━━━━╾•`.trim();
   conn.sendMessage(
     m.chat,
