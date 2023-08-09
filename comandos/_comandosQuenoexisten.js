@@ -32,6 +32,6 @@ var handler = async (m, {command, conn, args, usedPrefix, text}) => {
   }
 };
 
-handler.command = commands;
+handler.command = ["xd"]
 handler.tags = ["internet"];
 export default handler;
