@@ -5,7 +5,7 @@ let handler = async (m, { args }) => {
   if (m.isGroup) who = m.mentionedJid[0] ? m.mentionedJid[0] : m.sender;
   else who = m.sender;
    
-   let user =  ${global.db.data.users[who]}
+   let users =  global.db.data.users[who]
    if (!args[0]) return m.reply('Ingresa la cantidad de dinero que deseas Depositar.')
    if (args[0] == '--all') {
       let count = parseInt(users.dolares)
