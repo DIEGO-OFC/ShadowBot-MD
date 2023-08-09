@@ -1,5 +1,5 @@
 import fetch from "node-fetch";
-import {webp2png} from "../lib/webp2mp4.js";
+//import {webp2png} from "../lib/webp2mp4.js";
 let handler = async (m, {}) => {
   let q = m.quoted ? m.quoted : m,
     mime = (q || q.msg).mimetype || q.mediaType || "";
@@ -11,5 +11,5 @@ let handler = async (m, {}) => {
     m.reply(json?.ParsedResults?.[0]?.ParsedText);
   } else throw "*[❗] ERROR, POR FAVOR VUELVE A INTENTARLO, NO OLVIDE RESPONDER A UNA IMAGEN*";
 };
-handler.command = /^ocr|totexto$/i;
+handler.command = /^ocr|totexto|leerimagen$/i;
 export default handler;
