@@ -12,7 +12,7 @@ let handler = async (m, {usedPrefix, conn}) => {
   let buttonMessage = {
     image: {url: foxgirl_irius.data.url},
     caption: `*乂 ⺀ ANIME - RANDOM ⺀ 乂*`,
-    footer: `*🔥 THE DORRAT - BOT 🔥*`,
+    footer: `*🔥 THE Zirax - BOT 🔥*`,
     buttons: null,
     headerType: 4,
   };
