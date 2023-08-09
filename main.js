@@ -222,10 +222,10 @@ if (!opts["test"]) {
     }, 30 * 1000);
 }
 
-if (opts["server"]) (await import("./server.js")).default(global.conn, PORT);
+if (opts["server"]) require('./server.js)(global.conn, PORT);
 
 function clearTmp() {
-  const tmp = [tmpdir(), join(__dirname, "./tmp")];
+  const tmp = [tmpdir(), join(__dirname, require("./tmp"))];
   const filename = [];
   tmp.forEach((dirname) => readdirSync(dirname).forEach((file) => filename.push(join(dirname, file))));
   return filename.map((file) => {
@@ -257,10 +257,10 @@ process.on('uncaughtException', console.error);
 //conn.ev.on('messages.update', console.error);
 
 let isInit = true;
-let handler = await import("./handler.js");
+let handler = require("./handler.js");
 global.reloadHandler = async function (restatConn) {
   try {
-    const Handler = await import(`./handler.js?update=${Date.now()}`).catch(console.error);
+    const Handler = require(`./handler.js?update=${Date.now()}`).catch(console.error);
     if (Object.keys(Handler || {}).length) handler = Handler;
   } catch (e) {
     console.error(e);
@@ -344,7 +344,7 @@ global.reloadHandler = async function (restatConn) {
    for (let filename of readdirSync(folder).filter(comandosFilter)) { 
      try { 
        let file = join(folder, filename); 
-       const module = await import(file); 
+       const module = require(file); 
        global.comandos[file] = module.default || module; 
      } catch (e) { 
        console.error(e); 
@@ -390,17 +390,17 @@ global.reload = async (_ev, filename) => {
   }
 };
 Object.freeze(global.reload);
-watch(comandosFolder, global.reload);
+fs.watch(path.join(__dirname,'comandos'), global.reload)
 await global.reloadHandler();
 async function _quickTest() {
   const test = await Promise.all([
-    spawn('ffmpeg'),
-    spawn('ffprobe'),
-    spawn('ffmpeg', ['-hide_banner', '-loglevel', 'error', '-filter_complex', 'color', '-frames:v', '1', '-f', 'webp', '-']),
-    spawn('convert'),
-    spawn('magick'),
-    spawn('gm'),
-    spawn('find', ['--version']),
+    p.spawn('ffmpeg'),
+    p.spawn('ffprobe'),
+    p.spawn('ffmpeg', ['-hide_banner', '-loglevel', 'error', '-filter_complex', 'color', '-frames:v', '1', '-f', 'webp', '-']),
+    p.spawn('convert'),
+    p.spawn('magick'),
+    p.spawn('gm'),
+    p.spawn('find', ['--version']),
   ].map((p) => {
     return Promise.race([
       new Promise((resolve) => {
