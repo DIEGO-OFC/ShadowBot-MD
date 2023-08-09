@@ -1,6 +1,6 @@
 import { sticker } from "../lib/sticker.js";
 
-const handler = (m) => m;
+var handler = (m) => m;
 
 handler.all = async function (m, {}) {
   const chat = global.db.data.chats[m.chat];
