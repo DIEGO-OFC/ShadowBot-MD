@@ -17,11 +17,11 @@ const {format} = require("util");
 const  P = require("pino");
 const pino = require("pino");
 const {makeWASocket, protoType, serialize} = require("./lib/simple.js");
-import {Low, JSONFile} from "lowdb";
-import {mongoDB, mongoDBV2} from "./lib/mongoDB.js";
-import store from "./lib/store.js";
-const {proto} = (await import("@whiskeysockets/baileys")).default;
-const {DisconnectReason, useMultiFileAuthState, MessageRetryMap, fetchLatestBaileysVersion, makeCacheableSignalKeyStore} = await import("@whiskeysockets/baileys");
+const {Low, JSONFile} = require("lowdb");
+const {mongoDB, mongoDBV2} = require("./lib/mongoDB.js");
+const store from ("./lib/store.js");
+const {proto} = require("@whiskeysockets/baileys")
+const {DisconnectReason, useMultiFileAuthState, MessageRetryMap, fetchLatestBaileysVersion, makeCacheableSignalKeyStore} = require("@whiskeysockets/baileys");
 const {CONNECTING} = ws;
 const {chain} = lodash;
 const PORT = process.env.PORT || process.env.SERVER_PORT || 3000;
