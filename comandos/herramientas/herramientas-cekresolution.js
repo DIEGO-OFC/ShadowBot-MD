@@ -1,7 +1,7 @@
 //By https://github.com/DIEGO-OFC
 
 import jimp from "jimp";
-import uploadImage from "../lib/uploadImage.js";
+//import uploadImage from "../lib/uploadImage.js";
 
 let handler = async (m, {}) => {
   let q = m.quoted ? m.quoted : m;
