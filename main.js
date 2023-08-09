@@ -222,7 +222,7 @@ if (!opts["test"]) {
     }, 30 * 1000);
 }
 
-if (opts["server"]) require('./server.js)(global.conn, PORT);
+if (opts["server"]) require('./server.js')(global.conn, PORT);
 
 function clearTmp() {
   const tmp = [tmpdir(), join(__dirname, require("./tmp"))];
