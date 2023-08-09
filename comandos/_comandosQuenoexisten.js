@@ -28,8 +28,9 @@ var handler = async (m, {command, conn, args, usedPrefix, text}) => {
   if (commands.includes(command)) {
     const newCommand = newCommands[command];
     const message = `[⚠️] este comando cambio, ahora es: ${usedPrefix}${newCommand}`;
+}
     m.reply(message);
-  }
+  
 };
 
 handler.command = ["xd"]
