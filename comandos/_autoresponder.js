@@ -8,7 +8,7 @@ handler.all = async function (m, {}) {
     let stiker = await sticker(imagen4, false, global.packname, global.author);
     this.sendFile(m.chat, stiker, "sticker.webp", null, m, false, {
       contextInfo: {
-        externalAdReply: {title: "𝘿𝙊𝙍𝙍𝘼𝙏-𝘽𝙊𝙏-𝙈𝘿", body: "𝑫𝑰𝑬𝑮𝑶-𝑶𝑭𝑪", sourceUrl: `https://github.com/DIEGO-OFC/DORRAT-BOT-MD`, thumbnail: imagen1},
+        externalAdReply: {title: "𝐙𝐈𝐑𝐀𝐗-𝐁𝐎𝐓-𝐌𝐃", body: "𝑫𝑰𝑬𝑮𝑶-𝑶𝑭𝑪", sourceUrl: `https://github.com/DIEGO-OFC/Zirax-Bot-MD`, thumbnail: imagen1},
       },
     });
   }
