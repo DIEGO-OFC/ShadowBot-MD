@@ -55,7 +55,7 @@ let handler = async (m, {conn, args, usedPrefix, command}) => {
         {quoted: m}
       );
     else
-      throw "*[❕] LO SIENTO, OCURRIO UN ERROR , VUELVA A INTENTARLO. NO OLVIDE RESPONDER A UN VIDEO, IMAGEN O INSERTE EL ENLACE DE UNA IMAGEN TERMINACIÓN  .jpg EL CUAL SERA CONVERTIDO EN STICKER.*";
+      throw "*[❌] Responda a una imagen o video*";
   }
 };
 handler.help = ["sticker"];
