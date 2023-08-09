@@ -11,7 +11,7 @@ let handler = async (m, { conn, args, participants }) => {
 
     let pesan = args.join` `
     let oi = `*MENSAJE:* ${pesan}`
-    let text = `[ 👻 *SERAN ELIMINADOS* 👻]\n\n${oi}\n\n*USUARIOS:*\n${listUsers}\n\n${wm}`.trim()
+    let text = `[ 👻 *SERAN ELIMINADOS* 👻]\n\n${oi}\n\n*USUARIOS:*\n${listUsers}\n\n`.trim()
     let txt = text;
 
     let count = 0;
