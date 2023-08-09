@@ -28,9 +28,6 @@ serialize();
 global.__filename = function filename(pathURL = import.meta.url, rmPrefix = platform !== "win32") {
   return rmPrefix ? (/file:\/\/\//.test(pathURL) ? fileURLToPath(pathURL) : pathURL) : pathToFileURL(pathURL).toString();
 };
-global.__dirname = function dirname(pathURL) {
-  return path.dirname(global.__filename(pathURL, true));
-};
 global.__require = function require(dir = import.meta.url) {
   return createRequire(dir);
 };
@@ -46,8 +43,6 @@ global.API = (name, path = "/", query = {}, apikeyqueryname) =>
     : "");
 
 global.timestamp = {start: new Date()};
-
-const __dirname = global.__dirname(import.meta.url);
 
 global.opts = new Object(yargs(process.argv.slice(2)).exitProcess(false).parse());
 global.prefix = new RegExp(
