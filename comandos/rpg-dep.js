@@ -1,7 +1,7 @@
 import db from '../lib/database.js'
 
 let handler = async (m, { args }) => {
-   let user = db.data.users[m.sender]
+   let user = db.data.user[m.sender]
    if (!args[0]) return m.reply('Ingresa la cantidad de dinero que deseas Depositar.')
    if (args[0] == '--all') {
       let count = parseInt(user.dolares)
