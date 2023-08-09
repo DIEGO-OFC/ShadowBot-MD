@@ -1,3 +1,7 @@
+[⚠️] BOT EN MANTENIMIENTO (NO SE RECOMIENDA INSTALAR)
+
+
+
 # ***🔥 Zirax-Bot-MD 🔥***
 
 <p align="center">
