@@ -9,8 +9,8 @@ let handler = async (m, { args }) => {
    if (!args[0]) return m.reply('Ingresa la cantidad de dinero que deseas Depositar.')
    if (args[0] == '--all') {
       let count = parseInt(users.dolares)
-      user.dolares -= count * 1
-      user.bank += count * 1
+      users.dolares -= count * 1
+      users.bank += count * 1
       await m.reply(`*Depositaste ${count} de dinero al Banco.* 🍟`)
       return !0
    }
