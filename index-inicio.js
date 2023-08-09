@@ -1,14 +1,14 @@
 console.log("📑  Cargando comandos");
 console.log("📦  Comandos Cargados correctamente");
 console.log("☑️ㅤIniciando bot...");
-import {join, dirname} from "path";
-import {fileURLToPath} from "url";
-import {setupMaster, fork} from "cluster";
-import cfonts from "cfonts";
-import {createInterface} from "readline";
-import yargs from "yargs";
+const {join, dirname} = require("path");
+const {fileURLToPath} = require("url");
+const {setupMaster, fork} = require("cluster");
+const cfonts = require("cfonts");
+const {createInterface} = require("readline");
+const yargs = require("yargs");
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const {say} = cfonts;
+const {say} = cfonts
 const rl = createInterface(process.stdin, process.stdout);
 
 say("THE DORRAT-BOT-MD", {
