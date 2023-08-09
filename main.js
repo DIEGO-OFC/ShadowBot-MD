@@ -2,27 +2,23 @@ process.env["NODE_TLS_REJECT_UNAUTHORIZED"] = "0"; //SI QUIERES TEXTO SIMPLIFICA
 require("./configuracion.js");
 require("./rpg.js");
 const {createRequire} = require("module");
-const path, {join} = require("path");
+const path = require("path");
+const {join} = require("path");
 const {fileURLToPath, pathToFileURL} = require("url");
 const {platform} = require("process");
-const * as ws = require("ws");
 const {readdirSync, statSync, unlinkSync, existsSync, readFileSync, rmSync, watch} = require("fs");
 const yargs = require("yargs");
-const {spawn} = require("child_process");
 const lodash = require("lodash");
 const chalk = require("chalk");
 const syntaxerror = require("syntax-error");
 const {tmpdir} = require("os");
 const {format} = require("util");
-const  P = require("pino");
 const pino = require("pino");
 const {makeWASocket, protoType, serialize} = require("./lib/simple.js");
 const {Low, JSONFile} = require("lowdb");
-const {mongoDB, mongoDBV2} = require("./lib/mongoDB.js");
-const store require("./lib/store.js");
-const {proto} = require("@whiskeysockets/baileys")
-const {DisconnectReason, useMultiFileAuthState, MessageRetryMap, fetchLatestBaileysVersion, makeCacheableSignalKeyStore} = require("@whiskeysockets/baileys");
-const {CONNECTING} = require("ws")
+const store = require("./lib/store.js");
+const {proto} = require("@whiskeysockets/baileys");
+const {DisconnectReason, useMultiFileAuthState, fetchLatestBaileysVersion, makeCacheableSignalKeyStore} = require("@whiskeysockets/baileys");
 const {chain} = require(lodash);
 const PORT = process.env.PORT || process.env.SERVER_PORT || 3000;
 
@@ -175,7 +171,7 @@ function _0x54e9() {
 /*------------------------------------------------*/
 global.authFile = `Dorrat-BotSession`;
 const {state, saveState, saveCreds} = await useMultiFileAuthState(global.authFile);
-const msgRetryCounterMap = (MessageRetryMap) => { };
+const msgRetryCounterMap = (MessageRetryMap) => {};
 let {version} = await fetchLatestBaileysVersion();
 
 const connectionOptions = {
@@ -187,23 +183,23 @@ const connectionOptions = {
     }
     return message;
   },
-    getMessage: async (key) => { 
-     if (store) { 
-       //console.log(key); 
-       //console.log(conn.chats[key.remoteJid] && conn.chats[key.remoteJid].messages[key.id] ? conn.chats[key.remoteJid].messages[key.id].message : undefined); 
-       const msg = await store.loadMessage(key.remoteJid, key.id); 
-       //console.log(msg); 
-       return conn.chats[key.remoteJid] && conn.chats[key.remoteJid].messages[key.id] ? conn.chats[key.remoteJid].messages[key.id].message : undefined; 
-     } 
-     return proto.Message.fromObject({}); 
-   },
+  getMessage: async (key) => {
+    if (store) {
+      //console.log(key);
+      //console.log(conn.chats[key.remoteJid] && conn.chats[key.remoteJid].messages[key.id] ? conn.chats[key.remoteJid].messages[key.id].message : undefined);
+      const msg = await store.loadMessage(key.remoteJid, key.id);
+      //console.log(msg);
+      return conn.chats[key.remoteJid] && conn.chats[key.remoteJid].messages[key.id] ? conn.chats[key.remoteJid].messages[key.id].message : undefined;
+    }
+    return proto.Message.fromObject({});
+  },
   msgRetryCounterMap,
-  logger: pino({level: 'silent'}),
+  logger: pino({level: "silent"}),
   auth: {
     creds: state.creds,
-    keys: makeCacheableSignalKeyStore(state.keys, pino({level: 'silent'})),
+    keys: makeCacheableSignalKeyStore(state.keys, pino({level: "silent"})),
   },
-  browser: ['Dorrat-Bot', 'Safari', '1.0.0'],
+  browser: ["Dorrat-Bot", "Safari", "1.0.0"],
   version,
   defaultQueryTimeoutMs: undefined,
 };
@@ -222,7 +218,7 @@ if (!opts["test"]) {
     }, 30 * 1000);
 }
 
-if (opts["server"]) require('./server.js')(global.conn, PORT);
+if (opts["server"]) require("./server.js")(global.conn, PORT);
 
 function clearTmp() {
   const tmp = [tmpdir(), join(__dirname, require("./tmp"))];
@@ -236,24 +232,27 @@ function clearTmp() {
 }
 
 async function connectionUpdate(update) {
-  const {connection, lastDisconnect, isNewLogin} = update
+  const {connection, lastDisconnect, isNewLogin} = update;
   global.stopped = connection;
   if (isNewLogin) conn.isInit = true;
   const code = lastDisconnect?.error?.output?.statusCode || lastDisconnect?.error?.output?.payload?.statusCode;
   if (code && code !== DisconnectReason.loggedOut && conn?.ws.socket == null) {
-    console.log(await global.reloadHandler(true).catch(console.error))
-    global.timestamp.connect = new Date;
+    console.log(await global.reloadHandler(true).catch(console.error));
+    global.timestamp.connect = new Date();
   }
-  if (global.db.data == null) loadDatabase()
+  if (global.db.data == null) loadDatabase();
   if (update.qr != 0 && update.qr != undefined) {
-   console.log(chalk.yellow('[🔄]ㅤEscanea este codigo QR, el codigo QR expira en 60 segundos.'))}
-  if (connection == 'open') {
-   console.log(chalk.yellow(lenguajeGB['smsConexion']()))}
-   if (connection == 'close') {
- console.log(chalk.yellow(`[❌]ㅤConexion cerrada, por favor borre la carpeta ${global.authFile} y reescanee el codigo QR`))}
+    console.log(chalk.yellow("[🔄]ㅤEscanea este codigo QR, el codigo QR expira en 60 segundos."));
+  }
+  if (connection == "open") {
+    console.log(chalk.yellow(lenguajeGB["smsConexion"]()));
+  }
+  if (connection == "close") {
+    console.log(chalk.yellow(`[❌]ㅤConexion cerrada, por favor borre la carpeta ${global.authFile} y reescanee el codigo QR`));
+  }
 }
-                                                                                  
-process.on('uncaughtException', console.error); 
+
+process.on("uncaughtException", console.error);
 //conn.ev.on('messages.update', console.error);
 
 let isInit = true;
@@ -283,27 +282,26 @@ global.reloadHandler = async function (restatConn) {
     conn.ev.off("connection.update", conn.connectionUpdate);
     conn.ev.off("creds.update", conn.credsUpdate);
   }
-//texto de bienvenida 
-  conn.welcome =
-    `┌─❖ 
+  //texto de bienvenida
+  conn.welcome = `┌─❖ 
  │「 BIENVENIDO/A 👋 」 
  └┬❖ 「  @user  」 
     │✑  *bienvenido a:*
     │✑  @subject
-    └───────────────┈`
-//texto de salida
+    └───────────────┈`;
+  //texto de salida
   conn.bye = "*╔══════════════*\n*╟❧ @user*\n*╟❧ 𝙷𝙰𝚂𝚃𝙰 𝙿𝚁𝙾𝙽𝚃𝙾 👋🏻* \n*╚══════════════*";
-//texto de nuevo admin
+  //texto de nuevo admin
   conn.spromote = "[✅] *@user ES UN NUEVO ADMINISTRADOR!!*";
-//texto de admin removido
+  //texto de admin removido
   conn.sdemote = "『❗』 *@user 𝙰𝙱𝙰𝙽𝙳𝙾𝙽𝙰 𝙴𝙻 𝙶𝚁𝚄𝙿𝙾 𝙳𝙴 𝙰𝙳𝙼𝙸𝙽𝚂 !!*";
-//texto de descripción cambiada
+  //texto de descripción cambiada
   conn.sDesc = "『❗』 *𝚂𝙴 𝙷𝙰 𝙼𝙾𝙳𝙸𝙵𝙸𝙲𝙰𝙳𝙾 𝙻𝙰 𝙳𝙴𝚂𝙲𝚁𝙸𝙿𝙲𝙸𝙾𝙽 𝙳𝙴𝙻 𝙶𝚁𝚄𝙿𝙾*\n\n*𝙽𝚄𝙴𝚅𝙰 𝙳𝙴𝚂𝙲𝚁𝙸𝙿𝙲𝙸𝙾𝙽:* @desc";
-//texto de nombre cambiado
+  //texto de nombre cambiado
   conn.sSubject = "『❗』*𝚂𝙴 𝙷𝙰 𝙼𝙾𝙳𝙸𝙵𝙸𝙲𝙰𝙳𝙾 𝙴𝙻 𝙽𝙾𝙼𝙱𝚁𝙴 𝙳𝙴𝙻 𝙶𝚁𝚄𝙿𝙾*\n*𝙽𝚄𝙴𝚅𝙾 𝙽𝙾𝙼𝙱𝚁𝙴:* @subject";
-//texto de foto del grupo cambiada
+  //texto de foto del grupo cambiada
   conn.sIcon = "『❗』*𝚂𝙴 𝙷𝙰 𝙲𝙰𝙼𝙱𝙸𝙰𝙳𝙾 𝙻𝙰 𝙵𝙾𝚃𝙾 𝙳𝙴𝙻 𝙶𝚁𝚄𝙿𝙾!!*";
-//texto de nuevo enlace
+  //texto de nuevo enlace
   conn.sRevoke = "『❗』 *𝚂𝙴 𝙷𝙰 𝙰𝙲𝚃𝚄𝙰𝙻𝙸𝚉𝙰𝙳𝙾 𝙴𝙻 𝙻𝙸𝙽𝙺 𝙳𝙴𝙻 𝙶𝚁𝚄𝙿𝙾!!*\n*𝙻𝙸𝙽𝙺 𝙽𝚄𝙴𝚅𝙾:* @revoke";
 
   conn.handler = handler.handler.bind(global.conn);
@@ -313,55 +311,59 @@ global.reloadHandler = async function (restatConn) {
   conn.onCall = handler.callUpdate.bind(global.conn);
   conn.connectionUpdate = connectionUpdate.bind(global.conn);
   conn.credsUpdate = saveCreds.bind(global.conn, true);
-  
-  const currentDateTime = new Date(); 
-   const messageDateTime = new Date(conn.ev); 
-   if (currentDateTime >= messageDateTime) { 
-     const chats = Object.entries(conn.chats).filter(([jid, chat]) => !jid.endsWith('@g.us') && chat.isChats).map((v) => v[0]); 
-   // console.log(chats, conn.ev); 
-   } else { 
-     const chats = Object.entries(conn.chats).filter(([jid, chat]) => !jid.endsWith('@g.us') && chat.isChats).map((v) => v[0]); 
-   } 
-   // console.log(chats, 'Omitiendo mensajes en espera.'); } 
-  
-   conn.ev.on('messages.upsert', conn.handler); 
-   conn.ev.on('group-participants.update', conn.participantsUpdate); 
-   conn.ev.on('groups.update', conn.groupsUpdate); 
-   conn.ev.on('message.delete', conn.onDelete); 
-   conn.ev.on('call', conn.onCall); 
-   conn.ev.on('connection.update', conn.connectionUpdate); 
-   conn.ev.on('creds.update', conn.credsUpdate);
+
+  const currentDateTime = new Date();
+  const messageDateTime = new Date(conn.ev);
+  if (currentDateTime >= messageDateTime) {
+    const chats = Object.entries(conn.chats)
+      .filter(([jid, chat]) => !jid.endsWith("@g.us") && chat.isChats)
+      .map((v) => v[0]);
+    // console.log(chats, conn.ev);
+  } else {
+    const chats = Object.entries(conn.chats)
+      .filter(([jid, chat]) => !jid.endsWith("@g.us") && chat.isChats)
+      .map((v) => v[0]);
+  }
+  // console.log(chats, 'Omitiendo mensajes en espera.'); }
+
+  conn.ev.on("messages.upsert", conn.handler);
+  conn.ev.on("group-participants.update", conn.participantsUpdate);
+  conn.ev.on("groups.update", conn.groupsUpdate);
+  conn.ev.on("message.delete", conn.onDelete);
+  conn.ev.on("call", conn.onCall);
+  conn.ev.on("connection.update", conn.connectionUpdate);
+  conn.ev.on("creds.update", conn.credsUpdate);
   isInit = false;
   return true;
 };
 
-  
- const comandosFolder = join(__dirname, './comandos'); 
- const comandosFilter = filename => /\.js$/.test(filename); 
- global.comandos = {}; 
-  
- async function filesInit(folder) { 
-   for (let filename of readdirSync(folder).filter(comandosFilter)) { 
-     try { 
-       let file = join(folder, filename); 
-       const module = require(file); 
-       global.comandos[file] = module.default || module; 
-     } catch (e) { 
-       console.error(e); 
-       delete global.comandos[filename]; 
-     } 
-   } 
-  
-   for (let subfolder of readdirSync(folder)) { 
-     const subfolderPath = join(folder, subfolder); 
-     if (statSync(subfolderPath).isDirectory()) { 
-       await filesInit(subfolderPath); 
-     } 
-   } 
- } 
-  
- await filesInit(comandosFolder).then(_ => Object.keys(global.comandos)).catch(console.error); 
-  
+const comandosFolder = join(__dirname, "./comandos");
+const comandosFilter = (filename) => /\.js$/.test(filename);
+global.comandos = {};
+
+async function filesInit(folder) {
+  for (let filename of readdirSync(folder).filter(comandosFilter)) {
+    try {
+      let file = join(folder, filename);
+      const module = require(file);
+      global.comandos[file] = module.default || module;
+    } catch (e) {
+      console.error(e);
+      delete global.comandos[filename];
+    }
+  }
+
+  for (let subfolder of readdirSync(folder)) {
+    const subfolderPath = join(folder, subfolder);
+    if (statSync(subfolderPath).isDirectory()) {
+      await filesInit(subfolderPath);
+    }
+  }
+}
+
+await filesInit(comandosFolder)
+  .then((_) => Object.keys(global.comandos))
+  .catch(console.error);
 
 global.reload = async (_ev, filename) => {
   if (comandosFilter(filename)) {
@@ -390,30 +392,33 @@ global.reload = async (_ev, filename) => {
   }
 };
 Object.freeze(global.reload);
-fs.watch(path.join(__dirname,'comandos'), global.reload)
+fs.watch(path.join(__dirname, "comandos"), global.reload);
 await global.reloadHandler();
 async function _quickTest() {
-  const test = await Promise.all([
-    p.spawn('ffmpeg'),
-    p.spawn('ffprobe'),
-    p.spawn('ffmpeg', ['-hide_banner', '-loglevel', 'error', '-filter_complex', 'color', '-frames:v', '1', '-f', 'webp', '-']),
-    p.spawn('convert'),
-    p.spawn('magick'),
-    p.spawn('gm'),
-    p.spawn('find', ['--version']),
-  ].map((p) => {
-    return Promise.race([
-      new Promise((resolve) => {
-        p.on('close', (code) => {
-          resolve(code !== 127);
-        });
-      }),
-      new Promise((resolve) => {
-        p.on('error', (_) => resolve(false));
-      })]);
-  }));
+  const test = await Promise.all(
+    [
+      p.spawn("ffmpeg"),
+      p.spawn("ffprobe"),
+      p.spawn("ffmpeg", ["-hide_banner", "-loglevel", "error", "-filter_complex", "color", "-frames:v", "1", "-f", "webp", "-"]),
+      p.spawn("convert"),
+      p.spawn("magick"),
+      p.spawn("gm"),
+      p.spawn("find", ["--version"]),
+    ].map((p) => {
+      return Promise.race([
+        new Promise((resolve) => {
+          p.on("close", (code) => {
+            resolve(code !== 127);
+          });
+        }),
+        new Promise((resolve) => {
+          p.on("error", (_) => resolve(false));
+        }),
+      ]);
+    })
+  );
   const [ffmpeg, ffprobe, ffmpegWebp, convert, magick, gm, find] = test;
-  const s = global.support = {ffmpeg, ffprobe, ffmpegWebp, convert, magick, gm, find};
+  const s = (global.support = {ffmpeg, ffprobe, ffmpegWebp, convert, magick, gm, find});
   Object.freeze(global.support);
 }
 setInterval(async () => {
