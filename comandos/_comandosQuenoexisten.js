@@ -1,4 +1,4 @@
-*/var handler = async (m, {command, conn, args, usedPrefix, text}) => {
+/*var handler = async (m, {command, conn, args, usedPrefix, text}) => {
   if (command == "ytmp4" || command == "ytvmp4") {
     let mp4 = `este comando cambio, ahora es:
 ${usedPrefix}videomp4`.trim();
