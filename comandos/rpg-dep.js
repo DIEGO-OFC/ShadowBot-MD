@@ -1,7 +1,11 @@
 import db from '../lib/database.js'
 
 let handler = async (m, { args }) => {
-   let user = db.data.user[m.sender]
+   let who;
+  if (m.isGroup) who = m.mentionedJid[0] ? m.mentionedJid[0] : m.sender;
+  else who = m.sender;
+   
+   let user =  ${global.db.data.users[who]}
    if (!args[0]) return m.reply('Ingresa la cantidad de dinero que deseas Depositar.')
    if (args[0] == '--all') {
       let count = parseInt(user.dolares)
