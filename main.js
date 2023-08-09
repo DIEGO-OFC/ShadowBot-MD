@@ -22,8 +22,8 @@ const {mongoDB, mongoDBV2} = require("./lib/mongoDB.js");
 const store from ("./lib/store.js");
 const {proto} = require("@whiskeysockets/baileys")
 const {DisconnectReason, useMultiFileAuthState, MessageRetryMap, fetchLatestBaileysVersion, makeCacheableSignalKeyStore} = require("@whiskeysockets/baileys");
-const {CONNECTING} = ws;
-const {chain} = lodash;
+const {CONNECTING} = require("ws")
+const {chain} = require(lodash);
 const PORT = process.env.PORT || process.env.SERVER_PORT || 3000;
 
 protoType();
