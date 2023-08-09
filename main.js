@@ -1,8 +1,8 @@
 process.env["NODE_TLS_REJECT_UNAUTHORIZED"] = "0"; //SI QUIERES TEXTO SIMPLIFICADO EN LA CONSOLA USA ESTE CÓDIGO
-import "./configuracion.js";
-import "./rpg.js";
-import {createRequire} from "module";
-import path, {join} from "path";
+require("./configuracion.js");
+require("./rpg.js");
+const {createRequire} = require("module");
+const path, {join} = require("path");
 import {fileURLToPath, pathToFileURL} from "url";
 import {platform} from "process";
 import * as ws from "ws";
