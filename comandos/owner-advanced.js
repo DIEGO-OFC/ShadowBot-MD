@@ -67,10 +67,9 @@ let handler = async (m, _2, _msg, _isOwner, _pickRandom) => {
     m.exp = old;
   }
 };
-handler.help = ["> ", "=> "];
+handler.help = ["eval"];
 handler.tags = ["advanced"];
-handler.customPrefix = /=?>|~/;
-handler.command = /(?:)/i;
+handler.command = ['eval'];
 
 handler.rowner = true;
 
