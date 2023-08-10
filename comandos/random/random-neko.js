@@ -3,6 +3,7 @@ import akaneko from "akaneko";
 let handler = async (m, {conn, command}) => {
     const Neko = await akaneko.neko(); 
    await conn.sendFile(m.chat, Neko, "", "", m);
+}
 handler.command = /^(neko)$/i;
 handler.tags = ["anime"];
 handler.limit = 3;
