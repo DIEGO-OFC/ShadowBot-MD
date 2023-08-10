@@ -7,13 +7,7 @@ var  handler = async (m, { usedPrefix, conn }) => {
     image: { url: foxgirl_irius.data.url },
     caption: `*乂 ⺀ ANIME - RANDOM ⺀ 乂*`,
     footer: `*🔥 THE Zirax - BOT 🔥*`,
-    buttons: [
-      {
-        buttonId: `${usedPrefix}foxgirl`,
-        buttonText: { displayText: "Siguiente 🦊" },
-        type: 1,
-      },
-    ],
+    buttons: null,
     headerType: 4,
   };
 
