@@ -1,7 +1,7 @@
-/*import FormData from "form-data";
+import FormData from "form-data";
 import Jimp from "jimp";
 
-let handler = async (m, { conn, usedPrefix, command }) => {
+/*let handler = async (m, { conn, usedPrefix, command }) => {
   let q = m.quoted ? m.quoted : m;
   let mime = (q.msg || q).mimetype || q.mediaType || "";
   if (!mime)
