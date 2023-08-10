@@ -103,14 +103,8 @@ handler.command = ["musica", "música", "play2"]
 export default handler
 
 async function search(query, options = {}) {
-  const yts = require("yts");
-
-  const search = await yts.search({
-    query,
-    hl: "es",
-    gl: "ES",
-    ...options,
-  });
+ const search = await yts.search({ query, hl: "es", gl: "ES", ...options });
+return search.videos};
 
   return search.videos.map((video) => ({
     title: video.title,
