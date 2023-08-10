@@ -34,7 +34,7 @@ let handler = async (m, {conn, text, args}) => {
       }\n*Link ∙* ${x.url}\n`;
       n++;
     }
-    conn.sendMessage(m.chat, {embeds: [{description: tex, image: {url: list[0].image}}]}, {quoted: m});
+    conn.sendMessage(m.chat, {image: {url: list[0].image}, caption: tex}, {quoted: m});
   } catch (error) {
     m.reply(error);
     console.log(error);
