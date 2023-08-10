@@ -17,9 +17,9 @@ const handler = async (m, {command, conn}) => {
   }
 
   if (command == 'nsfwass') {
-    const res = (await axios.get(`https://raw.githubusercontent.com/BrunoSobrino/TheMystic-Bot-MD/master/src/JSON/nsfwass.json`)).data;
-    const haha = await res[Math.floor(res.length * Math.random())];
-    conn.sendMessage(m.chat, {image: {url: haha}, caption: `_${command}_`.trim()}, {quoted: m});
+        const assxd = await akaneko.nsfw.ass();  
+    const caption = `*乂 ⺀ NSFW ASS ⺀ 乂*` 
+    await conn.sendFile(m.chat, assxd, "zirax.jpg", caption, m);
   }
 
   if (command == 'nsfwbdsm') {
