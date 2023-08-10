@@ -68,7 +68,7 @@ const handler = async (m, {command, conn}) => {
   if (command == 'tetas') {
    const tetasgod = axios.get(`https://nekobot.xyz/api/image?type=boobs`)
  const buttonMessage = {
-    image: { url: tetasgod.data.url },
+    image: { url: tetasgod },
     caption: `*乂 ⺀ TETAS - GOD ⺀ 乂*`,
     footer: `*🔥 THE Zirax - BOT 🔥*`,
     buttons: null,
