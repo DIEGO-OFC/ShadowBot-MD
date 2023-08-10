@@ -1,4 +1,4 @@
-import FormData from "form-data";
+/*import FormData from "form-data";
 import Jimp from "jimp";
 
 let handler = async (m, { conn, usedPrefix, command }) => {
@@ -76,4 +76,44 @@ async function remini(imageData, operation) {
       },
     );
   });
+  }*/
+
+
+const remini = async (imageData, operation) => {
+  const baseUrl = "https://inferenceengine.vyro.ai/" + operation + ".vyro";
+  const formData = new FormData();
+  formData.append("image", Buffer.from(imageData), {
+    filename: "enhance_image_body.jpg",
+    contentType: "image/jpeg",
+  });
+
+  formData.append("model_version", 1, {
+    "Content-Transfer-Encoding": "binary",
+    contentType: "multipart/form-data; charset=utf-8",
+  });
+
+  const response = await fetch(baseUrl, {
+    method: "POST",
+    body: formData,
+  });
+
+  if (response.status === 200) {
+    const data = await response.json();
+    return data.image;
+  } else {
+    throw new Error(response.statusText);
   }
+};
+
+let handler = async (m, { conn, usedPrefix, command }) => {
+  const image = await m.quoted ? m.quoted.download() : m.download();
+  const processedImage = await remini(image, "enhance");
+  conn.sendMessage(m.chat, { image: processedImage }, { quoted: m });
+};
+
+handler.help = ["remini", "hd", "enhance"];
+handler.tags = ["ai", "tools"];
+handler.command = ["remini", "hd", "enhance"];
+handler.register = true;
+
+export default handler;
