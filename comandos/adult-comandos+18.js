@@ -67,7 +67,8 @@ const handler = async (m, {command, conn}) => {
   }
 
   if (command == 'tetas') {
-   const tetasgod = ultimate.boobs();  
+  const xtimate = new ultimate();
+   const tetasgod = await xtimate.boobs
     const caption = `*乂 ⺀ NSFW - TETASGOD ⺀ 乂*` 
     await conn.sendFile(m.chat, tetasgod, "zirax.jpg", caption, m); 
  }
