@@ -53,7 +53,7 @@ const handler = async (m, {command, conn}) => {
   }
 
   if (command == 'hentai') {
-        const akafw = await akaneko.hentai();  
+        const akafw = await akaneko.nsfw.hentai();  
     const caption = `*乂 ⺀ HENTAI ⺀ 乂*` 
     await conn.sendFile(m.chat, akafw, "zirax.jpg", caption, m); 
  }
