@@ -67,10 +67,16 @@ const handler = async (m, {command, conn}) => {
 
   if (command == 'tetas') {
    const tetasgod = axios.get(`https://nekobot.xyz/api/image?type=boobs`)
-    const caption = `*乂 ⺀ NSFW - TETASGOD ⺀ 乂*` 
-    await conn.sendFile(m.chat, tetasgod, "zirax.jpg", caption, m); 
- }
+ const buttonMessage = {
+    image: { url: tetasgod.data.url },
+    caption: `*乂 ⺀ TETAS - GOD ⺀ 乂*`,
+    footer: `*🔥 THE Zirax - BOT 🔥*`,
+    buttons: null,
+    headerType: 4,
+  };
 
+  await conn.sendMessage(m.chat, buttonMessage, { quoted: m });
+}
   if (command == 'booty') {
     const resError = (await axios.get(`https://raw.githubusercontent.com/BrunoSobrino/TheMystic-Bot-MD/master/src/JSON/booty.json`)).data;
     let res = await conn.getFile(`https://api-fgmods.ddns.net/api/nsfw/ass?apikey=fg-dylux`).data;
