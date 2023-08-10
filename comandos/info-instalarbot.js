@@ -12,8 +12,8 @@ termux-setup-storage
 > pkg install ffmpeg -y
 > pkg install imagemagick -y
 > pkg install yarn
-> git clone https://github.com/DIEGO-OFC/DORRAT-BOT-MD
-> cd DORRAT-BOT-MD
+> git clone https://github.com/DIEGO-OFC/Zirax-Bot-MD
+> cd Zirax-Bot-MD
 > yarn install 
 > npm install
 > npm install 
@@ -26,10 +26,10 @@ termux-setup-storage
         mediaType: 1,
         description: null,
         title: "𝙸𝙽𝙵𝙾𝚁𝙼𝙰𝙲𝙸𝙾𝙽 - 𝙸𝙽𝚂𝚃𝙰𝙻𝙰𝚁𝙱𝙾𝚃",
-        body: "†𝐃⃟𝕺𝐑⃯𝐑𝐇⃯𝚵𝐓᪣𝕭⃯𝚹⃯𝐓⃤†",
+        body: "Zirax-Bot-MD",
         previewType: 0,
         thumbnail: fs.readFileSync("./Menu2.jpg"),
-        sourceUrl: `https://github.com/DIEGO-OFC/DORRAT-BOT-MD`,
+        sourceUrl: `https://github.com/DIEGO-OFC/Zirax-Bot-MD`,
       },
     },
   });
