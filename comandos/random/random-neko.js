@@ -2,7 +2,8 @@ import fetch from "node-fetch";
 import akaneko from "akaneko";
 let handler = async (m, {conn, command}) => {
     const Neko = await akaneko.neko(); 
-   await conn.sendFile(m.chat, Neko, "", caption: `*乂 ⺀ ANIME - NEKO ⺀ 乂*`, m);
+   const caption = `*乂 ⺀ ANIME - NEKO ⺀ 乂*`
+   await conn.sendFile(m.chat, Neko, "", caption, m);
 }
 handler.command = /^(neko)$/i;
 handler.tags = ["anime"];
