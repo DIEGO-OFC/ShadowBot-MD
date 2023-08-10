@@ -19,7 +19,11 @@ function ConvertMiles(number) {
 }
 
 let handler = async (m, {conn, text, args}) => {
-  if (!text) throw "*[❗𝐈𝐍𝐅𝐎❗] 𝙸𝙽𝚂𝙴𝚁𝚃𝙴 𝙴𝙻 𝙽𝙾𝙼𝙱𝚁𝙴 𝙳𝙴 𝙰𝙻𝙶𝚄𝙽 𝚅𝙸𝙳𝙴𝙾 𝙾 𝙲𝙰𝙽𝙰𝙻 𝙳𝙴 𝚈𝙾𝚄𝚃𝚄𝙱𝙴*";
+  if (!text) {
+    m.reply("*[❗𝐈𝐍𝐅𝐎❗] 𝙸𝙽𝚂𝙴𝚁𝚃𝙴 𝙴𝙻 𝙽𝙾𝙼𝙱𝚁𝙴 𝙳𝙴 𝙰𝙻𝙶𝚄𝙽 𝚅𝙸𝙳𝙴𝙾 𝙾 𝙲𝙰𝙽𝙰𝙻 𝙳𝙴 𝚈𝙾𝚄𝚃𝚄𝙱𝙴*");
+    return;
+  }
+
   try {
     const list = await search(args.join(" "));
     let tex = `*YouTube Search*\n`;
@@ -30,13 +34,15 @@ let handler = async (m, {conn, text, args}) => {
       }\n*Link ∙* ${x.url}\n`;
       n++;
     }
-    conn.sendMessage(m.chat, {image: {url: list[0].image}, caption: tex}, {quoted: m});
+    conn.sendMessage(m.chat, {embeds: [{description: tex, image: {url: list[0].image}}]}, {quoted: m});
   } catch (error) {
     m.reply(error);
     console.log(error);
   }
 };
+
 handler.help = ["", "search"].map((v) => "yts" + v + " < Busqueda >");
 handler.tags = ["tools"];
 handler.command = /^yts(earch)?$/i;
+
 export default handler;
