@@ -66,7 +66,7 @@ const handler = async (m, {command, conn}) => {
   }
 
   if (command == 'tetas') {
-   const tetagod axios.get('https://nekobot.xyz/api/image?type=boobs')
+   const tetagod axios.get(`https://nekobot.xyz/api/image?type=boobs`)
     const caption = `*乂 ⺀ NSFW - TETASGOD ⺀ 乂*` 
     await conn.sendFile(m.chat, tetasgod, "zirax.jpg", caption, m); 
  }
