@@ -2,7 +2,7 @@ import { readdirSync, unlinkSync, existsSync, promises as fs, rmSync } from 'fs'
 import path from 'path';
 
 const handler = async (m, { conn, usedPrefix }) => {
-  if (global.conn.user.jid !== conn.user.jid) {
+  if (m.sender !== global.conn.user.jid) {
     return conn.sendMessage(
       m.chat,
       { text: '*[❗] Utiliza este comando directamente en el número principal del Bot*' },
@@ -17,12 +17,12 @@ const handler = async (m, { conn, usedPrefix }) => {
   const chatId = m.isGroup ? [m.chat, m.sender] : [m.sender];
   const sessionPath = './Dorrat-BotSession/';
   try {
-    const files = await fs.readdir(sessionPath);
+    const files = await readdirSync(sessionPath);
     let filesDeleted = 0;
     for (const file of files) {
       for (const id of chatId) {
         if (file.includes(id.split('@')[0])) {
-          await fs.unlink(path.join(sessionPath, file));
+          fs.unlinkSync(path.join(sessionPath, file));
           filesDeleted++;
           break;
         }
@@ -57,7 +57,9 @@ const handler = async (m, { conn, usedPrefix }) => {
     { quoted: m }
   );
 };
+
 handler.help = ['fixmsgespera'];
 handler.tags = ['fix'];
 handler.command = /^(fixmsgespera|ds)$/i;
+
 export default handler;
