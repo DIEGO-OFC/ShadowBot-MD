@@ -29,10 +29,10 @@ const handler = async (m, {command, conn}) => {
  };
 
   if (command == 'nsfwcum') {
-    const res = (await axios.get(`https://raw.githubusercontent.com/BrunoSobrino/TheMystic-Bot-MD/master/src/JSON/nsfwcum.json`)).data;
-    const haha = await res[Math.floor(res.length * Math.random())];
-    conn.sendMessage(m.chat, {image: {url: haha}, caption: `_${command}_`.trim()}, {quoted: m});
-  }
+     const cumfw = await akaneko.nsfw.cum();  
+    const caption = `*乂 ⺀ NSFW - CUM ⺀ 乂*` 
+    await conn.sendFile(m.chat, cumfw, "zirax.jpg", caption, m); 
+ }
 
   if (command == 'nsfwero') {
     const res = (await axios.get(`https://raw.githubusercontent.com/BrunoSobrino/TheMystic-Bot-MD/master/src/JSON/nsfwero.json`)).data;
