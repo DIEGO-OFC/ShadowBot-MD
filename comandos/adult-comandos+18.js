@@ -23,10 +23,10 @@ const handler = async (m, {command, conn}) => {
   }
 
   if (command == 'nsfwbdsm') {
-    const res = (await axios.get(`https://raw.githubusercontent.com/BrunoSobrino/TheMystic-Bot-MD/master/src/JSON/nsfwbdsm.json`)).data;
-    const haha = await res[Math.floor(res.length * Math.random())];
-    conn.sendMessage(m.chat, {image: {url: haha}, caption: `_${command}_`.trim()}, {quoted: m});
-  }
+       const skidputo = await akaneko.nsfw.bdsm();  
+    const caption = `*乂 ⺀ NSFW - BDSM ⺀ 乂*` 
+    await conn.sendFile(m.chat, skidputo, "zirax.jpg", caption, m); 
+ };
 
   if (command == 'nsfwcum') {
     const res = (await axios.get(`https://raw.githubusercontent.com/BrunoSobrino/TheMystic-Bot-MD/master/src/JSON/nsfwcum.json`)).data;
