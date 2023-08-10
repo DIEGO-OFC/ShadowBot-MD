@@ -7,8 +7,8 @@ let handler = async (m, { conn, command }) => {
 }
 handler.command = /^(neko)$/i;
 handler.tags = ["anime"];
-handler.limit = 3;
 handler.help = ["neko"];
+handler.limit = 3;
 export default handler;
 function pickRandom(list) {
   return list[Math.floor(Math.random() * list.length)];
