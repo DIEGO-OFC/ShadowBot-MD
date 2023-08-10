@@ -137,26 +137,12 @@ const handler = async (m, {command, conn}) => {
     conn.sendMessage(m.chat, {image: {url: url}, caption: `_${command}_`.trim()}, {quoted: m});
   }
 
-  if (command == 'yaoi') {
-    const res = await fetch(`https://nekobot.xyz/api/image?type=yaoi`);
-    const json = await res.json();
-    const url = json.message;
-    conn.sendMessage(m.chat, {image: {url: url}, caption: `_${command}_`.trim()}, {quoted: m});
-  }
-
-  if (command == 'yaoi2') {
-    const res = await fetch(`https://purrbot.site/api/img/nsfw/yaoi/gif`);
-    const json = await res.json();
-    const url = json.link;
-    conn.sendMessage(m.chat, {image: {url: url}, caption: `_${command}_`.trim()}, {quoted: m});
-  }
 
   if (command == 'yuri') {
-    const res = (await axios.get(`https://raw.githubusercontent.com/BrunoSobrino/TheMystic-Bot-MD/master/src/JSON/yuri.json`)).data;
-    const url = await res[Math.floor(res.length * Math.random())];
-    conn.sendMessage(m.chat, {image: {url: url}, caption: `_${command}_`.trim()}, {quoted: m});
-  }
-
+    const akxdSkidputo = await akaneko.nsfw.yuri();  
+    const caption = `*乂 ⺀ NSFW - YURI ⺀ 乂*` 
+    await conn.sendFile(m.chat, akxdSkidputo, "zirax.jpg", caption, m); 
+ }
   if (command == 'yuri2') {
     const resError = (await axios.get(`https://raw.githubusercontent.com/BrunoSobrino/TheMystic-Bot-MD/master/src/JSON/yuri.json`)).data;
     const res = await fetch(`https://purrbot.site/api/img/nsfw/yuri/gif`);
