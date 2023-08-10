@@ -1,7 +1,6 @@
 import { readdirSync, unlinkSync, existsSync, promises as fs, rmSync } from 'fs';
 import path from 'path';
-
-const handler = async (m, { conn, usedPrefix }) => {
+var handler = async (m, { conn, usedPrefix }) => {
   if (m.sender !== global.conn.user.jid) {
     return conn.sendMessage(
       m.chat,
