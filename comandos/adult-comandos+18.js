@@ -105,10 +105,10 @@ const handler = async (m, {command, conn}) => {
   }
 
   if (command == 'panties') {
-    const res = (await axios.get(`https://raw.githubusercontent.com/BrunoSobrino/TheMystic-Bot-MD/master/src/JSON/panties.json`)).data;
-    const url = await res[Math.floor(res.length * Math.random())];
-    conn.sendMessage(m.chat, {image: {url: url}, caption: `_${command}_`.trim()}, {quoted: m});
-  }
+   const pantixd = await akaneko.nsfw.panties();  
+    const caption = `*乂 ⺀ NSFW - PANTIES ⺀ 乂*` 
+    await conn.sendFile(m.chat, pantixd, "zirax.jpg", caption, m); 
+ }
 
   if (command == 'pene') {
     const resError = (await axios.get(`https://raw.githubusercontent.com/BrunoSobrino/TheMystic-Bot-MD/master/src/JSON/pene.json`)).data;
