@@ -17,7 +17,7 @@ let buttonMessage = {
    const waifuxd = new CLUB(); 
    const waifux = await waifuxd.waifu();  
      const caption = `*乂 ⺀ ANIME - WAIFU ⺀ 乂*`  
-     await conn.sendFile(m.chat, tetasgod2, "zirax.jpg", caption, m); }}
+     await conn.sendFile(m.chat, waifux, "zirax.jpg", caption, m); }}
 handler.help = ["waifu"];
 handler.tags = ["anime"];
 handler.limit = 3;
