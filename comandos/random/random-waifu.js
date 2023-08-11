@@ -1,6 +1,7 @@
 import fetch from "node-fetch";
 import axios from "axios";
 let handler = async (m, {conn, usedPrefix, command}) => {
+try {
  let waifu = await axios.get(`https://nekos.life/api/v2/img/waifu`);
   
 let buttonMessage = {
@@ -11,7 +12,8 @@ let buttonMessage = {
     headerType: 4,
   };
   conn.sendMessage(m.chat, buttonMessage, {quoted: m});
-};
+} catch {
+const 
 handler.help = ["waifu"];
 handler.tags = ["anime"];
 handler.limit = 3;
