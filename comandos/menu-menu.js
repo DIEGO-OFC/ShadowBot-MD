@@ -24,6 +24,7 @@ var handler = async (m, {
   
 if (command == "menu" || command == "menú") {
 await conn.reply(m.chat, `╦══════════════════ ⪨
+┃│✾ ⋟ *${ucapan()}*
 ┃│✾ ⋟ *tenemos varios tipos de menus*
 ┃│✾ ⋟ 1
 ┃│✾ ⋟ *#menucompleto*
