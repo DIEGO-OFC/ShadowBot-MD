@@ -75,10 +75,18 @@ var completomenu = `*╭━━❍𝐙𝐈𝐑𝐀𝐗-𝐁𝐎𝐓-𝐌𝐃❍�
  ╚════ ≪ •❈• ≫ ════╝ 
 
   ┌─「💻𝐃𝐎𝐖𝐍𝐋𝐎𝐀𝐃𝐄𝐑」 
- ├➢modapk\nDescripcion: Descargar apks mod\n      Ejemplo: *${usedPrefix}modapk facebook*  
- ├➢videodocumento\nDescripcion: Descargar videos pesados en documento.\nejemplo: *${usedPrefix}videodocumento <enlace>*
- ├➢facebook\nDescripcion: Descargar videos de Facebook\nejemplo: *${usedPrefix}fb <link>*
- ├➢${usedPrefix}twitter *<enlace / link / url>*_
+ ├➢modapk
+ ├Descripcion: Descargar apks mod
+ ├Ejemplo: *${usedPrefix}modapk facebook*  
+ ├➢videodocumento
+ ├Descripcion: Descargar videos pesados en documento.
+ ├ejemplo: *${usedPrefix}videodocumento <enlace>*
+ ├➢facebook
+ ├Descripcion: Descargar videos de Facebook
+ ├ejemplo: *${usedPrefix}fb <link>*
+ ├➢twitter 
+ ├Descripcion: Descargar videos de twitter
+ ├ejemplo: *${usedPrefix}Twitter <link>*_
  ├➢${usedPrefix}xnxxdl *<enlace / link / url>*
  ├➢${usedPrefix}xvideosdl *<enlace / link / url>*
  ├➢${usedPrefix}instagram <enlace / link / url 
