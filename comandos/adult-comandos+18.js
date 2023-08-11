@@ -53,7 +53,12 @@ const handler = async (m, {command, conn}) => {
     await conn.sendFile(m.chat, gatapendeja, "zirax.jpg", caption, m); 
  }  
 
-
+ if (command == 'pussy') {
+   const pussyxd = new CLUB();
+  const skidputoidiota = await pussyxd.pussy(); 
+    const caption = `*乂 ⺀ NSFW - PUSSY ⺀ 乂*` 
+    await conn.sendFile(m.chat, skidputoidiota, "zirax.jpg", caption, m); 
+}
   if (command == 'hentai') {
         const akafw = await akaneko.nsfw.hentai();  
     const caption = `*乂 ⺀ HENTAI ⺀ 乂*` 
