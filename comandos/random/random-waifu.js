@@ -1,5 +1,6 @@
 import fetch from "node-fetch";
 import axios from "axios";
+import CLUB from "club-atticus";
 let handler = async (m, {conn, usedPrefix, command}) => {
 try {
  let waifu = await axios.get(`https://nekos.life/api/v2/img/waifu`);
@@ -13,7 +14,10 @@ let buttonMessage = {
   };
   conn.sendMessage(m.chat, buttonMessage, {quoted: m});
 } catch {
-const 
+   const waifuxd = new CLUB(); 
+   const waifux = await waifuxd.waifu();  
+     const caption = `*乂 ⺀ ANIME - WAIFU ⺀ 乂*`  
+     await conn.sendFile(m.chat, tetasgod2, "zirax.jpg", caption, m); }}
 handler.help = ["waifu"];
 handler.tags = ["anime"];
 handler.limit = 3;
