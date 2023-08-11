@@ -1,5 +1,6 @@
 import axios from 'axios';
 import akaneko from "akaneko";
+import CLUB from "club-atticus";
 import fetch from 'node-fetch';
 const handler = async (m, {command, conn}) => {
   if (!db.data.chats[m.chat].modohorny && m.isGroup) throw '*[❗𝐈𝐍𝐅𝐎❗] 𝙻𝙾𝚂 𝙲𝙾𝙼𝙰𝙽𝙳𝙾𝚂 +𝟷𝟾 𝙴𝚂𝚃𝙰𝙽 𝙳𝙴𝚂𝙰𝙲𝚃𝙸𝚅𝙰𝙳𝙾𝚂 𝙴𝙽 𝙴𝚂𝚃𝙴 𝙶𝚁𝚄𝙿𝙾, 𝚂𝙸 𝙴𝚂 𝙰𝙳𝙼𝙸𝙽 𝚈 𝙳𝙴𝚂𝙴𝙰 𝙰𝙲𝚃𝙸𝚅𝙰𝚁𝙻𝙾𝚂 𝚄𝚂𝙴 𝙴𝙻 𝙲𝙾𝙼𝙰𝙽𝙳𝙾 #enable modohorny*';
@@ -66,16 +67,10 @@ const handler = async (m, {command, conn}) => {
   }
 
   if (command == 'tetas') {
-   const tetasgod = axios.get(`https://nekobot.xyz/api/image?type=boobs`)
- const buttonMessage = {
-    image: { url: tetasgod },
-    caption: `*乂 ⺀ TETAS - GOD ⺀ 乂*`,
-    footer: `*🔥 THE Zirax - BOT 🔥*`,
-    buttons: null,
-    headerType: 4,
-  };
-
-  await conn.sendMessage(m.chat, buttonMessage, { quoted: m });
+   const tetasgodxd = new CLUB();
+  const tetasgod2 = await tetasgodxd.boobs(); 
+    const caption = `*乂 ⺀ NSFW - TETAS ⺀ 乂*` 
+    await conn.sendFile(m.chat, tetasgod2, "zirax.jpg", caption, m); 
 }
   if (command == 'booty') {
     const resError = (await axios.get(`https://raw.githubusercontent.com/BrunoSobrino/TheMystic-Bot-MD/master/src/JSON/booty.json`)).data;
