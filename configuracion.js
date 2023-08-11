@@ -9,12 +9,12 @@ import moment from "moment-timezone";
 import memexd from "./lib/memes.js";
 import { webp2png } from "./lib/webp2mp4.js";
 import { sandroid1 } from "./lib/scrape.js";
-import { en, es, pt } from "./lib/idiomas/total-idiomas.js";
 import { spin } from "./lib/scrape.js";
 import { sticker } from "./lib/sticker.js";
 import { toPTT } from "./lib/converter.js";
 import { toAudio } from "./lib/converter.js";
 import { ffmpeg } from "./lib/converter.js";
+import { en, es, pt } from "./lib/idiomas/total-idiomas.js";
 import uploadFile from "./lib/uploadFile.js";
 import uploadImage from "./lib/uploadImage.js";
 //cambia los números que sean propietarios
