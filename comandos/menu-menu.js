@@ -50,15 +50,24 @@ var completomenu = `*╭━━❍𝐙𝐈𝐑𝐀𝐗-𝐁𝐎𝐓-𝐌𝐃❍�
  *╰━━━╼𝐙𝐈𝐑𝐀𝐗-𝐁𝐎𝐓-𝐌𝐃╾━━━╯* 
   
  ▧ 「 *I N F O R M A C I O N* 」  
- │ ‣ ︎ _${usedPrefix}grupos_ 
- │ ‣  _${usedPrefix}estado_ 
- │ ‣ ︎ _${usedPrefix}terminos_ 
- │ ‣  _${usedPrefix}instalarbot_ 
- │ ‣  _${usedPrefix}infobot_ 
- │ ‣  _${usedPrefix}grouplist_ 
- │ ‣  _${usedPrefix}owner_ 
- │ ‣  _${usedPrefix}script_ 
- │ ‣  _Bot_ (𝑢𝑠𝑜 𝑠𝑖𝑛 𝑝𝑟𝑒𝑓𝑖𝑗𝑜) 
+ ‣ ︎Comando: ${usedPrefix}grupos
+ ‣ Descripción: mirar los grupos oficiales del bot
+ ‣ Comando: ${usedPrefix}estado
+ ‣ Descripción: Mirar el estado del bot
+ ‣ ︎Comando: ${usedPrefix}terminos
+ ‣ Descripción: Mirar los términos y condiciones del bot
+ ‣ Comando: ${usedPrefix}instalarbot
+ ‣ Descripción: información sobre la instalación de zirax
+ ‣ Comando: ${usedPrefix}infobot
+ ‣ Descripción: dar información sobre el bot
+ ‣ Comando: ${usedPrefix}grouplist
+ ‣ Descripción: lista de grupos donde está el bot
+ ‣ Comando: ${usedPrefix}owner
+ ‣ Descripción: Información sobre el creador
+ ‣ Comando: ${usedPrefix}script
+ ‣ Descripción: Mandar script del bot
+ ‣ comando: _Bot_ (𝑢𝑠𝑜 𝑠𝑖𝑛 𝑝𝑟𝑒𝑓𝑖𝑗𝑜) 
+ ‣ Descripción: info del bot
  └──···
 
  ╔═════════════╗  
