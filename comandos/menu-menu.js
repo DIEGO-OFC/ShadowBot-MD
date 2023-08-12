@@ -17,10 +17,10 @@ var handler = async (m, {
    const username = conn.getName(who); 
    let pp = await conn.profilePictureUrl(conn.user.jid).catch(_ => 'https://telegra.ph/file/24fa902ead26340f3df2c.png')
    const fload = { key : { remoteJid: 'status@broadcast', participant : '0@s.whatsapp.net' }, message: { orderMessage: { itemCount : 2023, status: 1, surface : 1, message: '[ 𝐂𝐀𝐑𝐆𝐀𝐍𝐃𝐎 𝐌𝐄𝐍𝐔... ]', orderTitle: `▮Menu ▸`, thumbnail: await (await fetch(pp)).buffer(), sellerJid: '0@s.whatsapp.net' 
-    };
-    };
-    };
-   const db = "./galeria/menudorrat3.jpg";
+    }
+    }
+    }
+   const db = "./galeria/menudorrat3.jpg"
   
 if (command == "menu" || command == "menú") {
 await conn.reply(m.chat, `╦══════════════════ ⪨
