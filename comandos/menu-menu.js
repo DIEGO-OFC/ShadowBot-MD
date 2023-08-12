@@ -108,7 +108,9 @@ var completomenu = `*╭━━❍𝐙𝐈𝐑𝐀𝐗-𝐁𝐎𝐓-𝐌𝐃❍�
  ├➢Comando: ${usedPrefix}mediafire
  ├Descripción: Descargar archivos de mediafire
  ├Ejemplo: ${usedPrefix}Mediafire <enlace / link / url 
- ├➢${usedPrefix}gdrive *<enlace / link / url>*
+ ├➢Comando: ${usedPrefix}gdrive 
+ ├Descripción: Descargar archivos de gdrive
+ ├Ejemolo: ${usedPrefix}gdrive *<enlace / link / url>*
  ├➢${usedPrefix}gitclone <enlace / link / url 
  ├➢${usedPrefix}tiktok <enlace / link / url 
  ├➢${usedPrefix}ytmp3 <enlace / link / url 
