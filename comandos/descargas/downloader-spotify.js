@@ -47,7 +47,7 @@ import fetch from 'node-fetch';
          description: 'Spotify Thumbnail', 
          imageBuffer: await axios.get(spty.data.cover_url, { responseType: "arraybuffer" }).then((response) => Buffer.from(response.data, "binary")), 
        }, 
-       mimetype: 'image/jpeg', 
+       mimetype: './Menu2.jpg', 
        copyright: 'Copyright Darlyn ©2023', 
      }; 
      await fs.promises.writeFile(filePath, spty.audio); 
