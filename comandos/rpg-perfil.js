@@ -50,24 +50,30 @@ var handler = async (m, { conn, command }) => {
     * 📦 REGISTRADO:* ${registered}
     * 💳 PREMIUM:* ${premium}
   `;
-  conn.sendMessage(m.chat, {
-    text: message,
-    image: {
-      url: pp,
-    },
-    contextInfo: {
-      mentionedJid: [sender],
-      externalAdReply: {
-        title: `RPG - PERFIL`,
-        sourceUrl: "http://paypal.me/DorratBotOficial",
-        mediaType: 1,
-        showAdAttribution: true,
-        //thumbnailUrl: "https://telegra.ph/file/7ec5032386dfe878f99ab.jpg",
-        thumbnailUrl: pp,
+ await conn.sendMessage(
+      m.chat,
+      {
+        image: {
+          url: pp,
+        },
+        caption: message,
+        contextInfo: {
+          mentionedJid: [m.sender],
+          externalAdReply: {
+            title: `RPG - PERFIL`,
+            sourceUrl: "http://paypal.me/DorratBotOficial",
+            mediaType: 1,
+            showAdAttribution: true,
+            //thumbnailUrl: "https://telegra.ph/file/7ec5032386dfe878f99ab.jpg",
+            thumbnailUrl: pp,
+          },
+        },
       },
-    },
-  });
-
+      {
+        quoted: m,
+      },
+    );
+  }
   // Send the serial number message
   const snMessage = `*❕ NUMERO DE SERIE: ${sn}*`;
   conn.sendMessage(user, { text: snMessage });
