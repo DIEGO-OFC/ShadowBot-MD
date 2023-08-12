@@ -111,10 +111,18 @@ var completomenu = `*╭━━❍𝐙𝐈𝐑𝐀𝐗-𝐁𝐎𝐓-𝐌𝐃❍�
  ├➢Comando: ${usedPrefix}gdrive 
  ├Descripción: Descargar archivos de gdrive
  ├Ejemolo: ${usedPrefix}gdrive *<enlace / link / url>*
- ├➢${usedPrefix}gitclone <enlace / link / url 
- ├➢${usedPrefix}tiktok <enlace / link / url 
- ├➢${usedPrefix}ytmp3 <enlace / link / url 
- ├➢${usedPrefix}video <enlace / link / url 
+ ├➢Comando: ${usedPrefix}gitclone
+ ├Descripción: Descargar repositorios de Github
+ ├Ejemplo: ${usedPrefix}gitclone *<enlace / link / url>*
+ ├➢Comando: ${usedPrefix}tiktok 
+ ├Descripción: Descargar videos de tintok
+ ├ejemplo:${usedPrefix}Tintok *<enlace / link / url*
+ ├➢Comando: ${usedPrefix}ytmp3
+ ├Descripcion:Descargar Audios de Youtube
+ ├Ejemplo: ${usedPrefix}ytmp3 *<enlace / link / url* 
+ ├➢Comando: ${usedPrefix}video 
+ ├Descripcion: Descargar videos de Youtube
+ ├Ejemplo: ${usedPrefix}video <enlace / link / url 
  ├➢${usedPrefix}play.1 <texto / enlace / link / url 
  ├➢${usedPrefix}play.2 <texto / enlace / link / url 
  ├➢${usedPrefix}play <texto 
