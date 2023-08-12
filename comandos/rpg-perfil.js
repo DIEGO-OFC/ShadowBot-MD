@@ -28,7 +28,9 @@ var handler = async (m, { conn, command }) => {
   const registered = data.registered;
   const premium = global.prems.includes(user.split`@`[0]);
   const sn = createHash("md5").update(user).digest("hex");
-
+  let pp = await conn
+    .profilePictureUrl(who, "image")
+    .catch((_) => "https://telegra.ph/file/9b1353deceded7f387713.jpg");
   // Send the profile message
   const message = `
     * 🔥 NOMBRE:* ${name}
@@ -45,7 +47,7 @@ var handler = async (m, { conn, command }) => {
   conn.sendMessage(m.chat, {
     text: message,
     image: {
-      url: await conn.profilePictureUrl(user, "image"),
+      url: pp,
     },
     contextInfo: {
       mentionedJid: [sender],
@@ -55,7 +57,7 @@ var handler = async (m, { conn, command }) => {
         mediaType: 1,
         showAdAttribution: true,
         //thumbnailUrl: "https://telegra.ph/file/7ec5032386dfe878f99ab.jpg",
-        thumbnailUrl: await conn.profilePictureUrl(user, "image"),
+        thumbnailUrl: pp,
       },
     },
   });
