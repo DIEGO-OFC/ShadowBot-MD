@@ -8,7 +8,7 @@ var handler = async (m, {conn, text}) => {
     let mime = m.quoted.mimetype || "";
     if (!/webp/.test(mime)) throw "*[❌] Responda al sticker con el nombre que le quiera poner*";
     let img = await m.quoted.download();
-    if (!img) throw "*[❌] Responda al sticker con el nombre que le quiera poner";
+    if (!img) throw "*[❌] Responda al sticker con el nombre que le quiera poner*";
     stiker = await addExif(img, packname || "", author || "");
   } catch (e) {
     console.error(e);
