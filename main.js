@@ -296,7 +296,7 @@ global.reloadHandler = async function (restatConn) {
   conn.bye = `┌─❖ 
  │「 ADIOS/BYE 👋 」 
  └┬❖ 「  @user  」 
-  └───────────────┈;
+  └───────────────┈`;
 //texto de nuevo admin
   conn.spromote = "[✅] *@user ES UN NUEVO ADMINISTRADOR!!*";
 //texto de admin removido
