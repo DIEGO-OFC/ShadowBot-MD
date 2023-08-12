@@ -1,9 +1,9 @@
-import {generateWAMessageFromContent} from "@whiskeysockets/baileys";
-import {smsg} from "./lib/simple.js";
-import {format} from "util";
-import {fileURLToPath} from "url";
+import { generateWAMessageFromContent } from "@whiskeysockets/baileys";
+import { smsg } from "./lib/simple.js";
+import { format } from "util";
+import { fileURLToPath } from "url";
 import path, {join} from "path";
-import {unwatchFile, watchFile} from "fs";
+import { unwatchFile, watchFile } from "fs";
 import chalk from "chalk";
 
 /** 
