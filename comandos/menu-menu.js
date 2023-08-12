@@ -129,20 +129,30 @@ var completomenu = `*╭━━❍𝐙𝐈𝐑𝐀𝐗-𝐁𝐎𝐓-𝐌𝐃❍�
  ├➢Comando: ${usedPrefix}play.2 
  ├Descripción:Descargar videos de Youtube
  ├Ejemplo: ${usedPrefix}play.2 <texto / enlace / link / url 
- ├➢${usedPrefix}play <texto 
- ├➢${usedPrefix}spotify <texto 
- ├➢${usedPrefix}imagen <texto 
- ├➢${usedPrefix}pinteret <texto 
- ├➢${usedPrefix}wallpaper <texto 
+ ├➢Comando: ${usedPrefix}musica
+ ├Descripción: Descargar musicas de Youtube
+ ├Ejemplo: ${usedPrefix}musica <texto 
+ ├➢Comando: ${usedPrefix}spotify 
+ ├Descripción: Descargar musica de Spotify
+ ├Ejemplo: ${usedPrefix}spotify *texto*
+ ├➢Comando: ${usedPrefix}imagen 
+ ├Ejemplo: ${usedPrefix}spotify *texto*
+ ├➢Comando: ${usedPrefix}pinteret *texto*
+ ├Descripción: Descargar imágenes de pinterest
+ ├➢Comando: ${usedPrefix}wallpaper 
+ ├Descripcion: Descargar wallpaper/fondos
+ ├Ejemplo: ${usedPrefix}wallpaper *texto*
  ├➢${usedPrefix}wallpaper2 <texto 
- ├➢${usedPrefix}pptiktok <nombre de usuario 
+ ├➢Comando: ${usedPrefix}pptiktok
+ ├Descripción: ver perfiles de tintok
+ ├Ejemplo: ${usedPrefix}pptiktok <nombre de usuario 
  ├➢${usedPrefix}igstalk <nombre de usuario 
  ├➢${usedPrefix}igstory *<nombre de usuario>*_
  ├➢${usedPrefix}tiktokstalk <nombre de usuario 
  └────ׂ─ׂ─ׂ─ׂ── 
 
  ╔═════ RPG ═════╗  
- ║ ❒ ${usedPrefix}cazar 
+ ║ ❒ ${usedPrefix}cazar a 
  ║ ❒ ${usedPrefix}aventura 
  ║ ❒ ${usedPrefix}balance 
  ║ ❒︎ ${usedPrefix}claim 
