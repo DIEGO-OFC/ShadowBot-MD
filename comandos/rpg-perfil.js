@@ -3,6 +3,12 @@ import { createHash } from "crypto";
 import PhoneNumber from "awesome-phonenumber";
 
 var handler = async (m, { conn, command }) => {
+  const who =
+    m.mentionedJid && m.mentionedJid[0]
+      ? m.mentionedJid[0]
+      : m.fromMe
+      ? conn.user.jid
+      : m.sender;
   const sender = m.sender;
   const mentionedJid = m.mentionedJid;
   const user = mentionedJid[0] || sender;
