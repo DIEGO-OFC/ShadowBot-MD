@@ -126,7 +126,9 @@ var completomenu = `*╭━━❍𝐙𝐈𝐑𝐀𝐗-𝐁𝐎𝐓-𝐌𝐃❍�
  ├➢${usedPrefix}play.1 
  ├Descripción: Descargar audios de Youtube
  ├Ejemplo: ${usedPrefix}play.1 <texto / enlace / link / url 
- ├➢${usedPrefix}play.2 <texto / enlace / link / url 
+ ├➢Comando: ${usedPrefix}play.2 
+ ├Descripción:Descargar videos de Youtube
+ ├Ejemplo: ${usedPrefix}play.2 <texto / enlace / link / url 
  ├➢${usedPrefix}play <texto 
  ├➢${usedPrefix}spotify <texto 
  ├➢${usedPrefix}imagen <texto 
