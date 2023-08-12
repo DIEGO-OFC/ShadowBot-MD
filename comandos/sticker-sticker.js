@@ -29,7 +29,7 @@ import {sticker} from '../lib/sticker.js';
        } 
      } else if (args[0]) { 
        if (isUrl(args[0])) stiker = await sticker(false, args[0], global.packname, global.author); 
-       else return m.reply('*[⚠️] El enlace no es válido, debe terminan en .jpg*'); 
+       else return m.reply('*[⚠️] El enlace no es válido, debe terminar en .jpg*'); 
      } 
    } catch (e) { 
      console.error(e); 
