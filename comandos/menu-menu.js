@@ -82,7 +82,7 @@ var completomenu = `*╭━━❍𝐙𝐈𝐑𝐀𝐗-𝐁𝐎𝐓-𝐌𝐃❍�
  ‣ Descripción: Convertirte en un bot
  ‣ Comando: ${usedPrefix}stop
  ‣ Descripción: Apagar tu bot
- ‣ Comando: ${usedPrefix}bot
+ ‣ Comando: ${usedPrefix}bots
  ‣ Descripción: Lista de bots Conectados
  ╚════ ≪ •❈• ≫ ════╝ 
 
