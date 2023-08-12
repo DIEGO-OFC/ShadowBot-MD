@@ -293,7 +293,10 @@ global.reloadHandler = async function (restatConn) {
     │✑  @subject
     └───────────────┈`
 //texto de salida
-  conn.bye = "*╔══════════════*\n*╟❧ @user*\n*╟❧ 𝙷𝙰𝚂𝚃𝙰 𝙿𝚁𝙾𝙽𝚃𝙾 👋🏻* \n*╚══════════════*";
+  conn.bye = `┌─❖ 
+ │「 ADIOS/BYE 👋 」 
+ └┬❖ 「  @user  」 
+  └───────────────┈;
 //texto de nuevo admin
   conn.spromote = "[✅] *@user ES UN NUEVO ADMINISTRADOR!!*";
 //texto de admin removido
