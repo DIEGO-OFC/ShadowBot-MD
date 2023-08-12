@@ -1,62 +1,58 @@
 import { xpRange } from "../lib/levelling.js";
 import { createHash } from "crypto";
 import PhoneNumber from "awesome-phonenumber";
-
-var handler = async (m, { conn, command }) => {
-  const who =
+let handler = async (m, { conn, command }) => {
+  let { dolares } = global.db.data.users[m.sender];
+  let { level, role } = global.db.data.users[m.sender];
+  let { xp } = xpRange(level, global.multiplier);
+  let who =
     m.mentionedJid && m.mentionedJid[0]
       ? m.mentionedJid[0]
       : m.fromMe
       ? conn.user.jid
       : m.sender;
-  const sender = m.sender;
-  const mentionedJid = m.mentionedJid;
-  const user = mentionedJid[0] || sender;
-
-  // Check if the user is registered in the database
-  if (!global.db.data.users.hasOwnProperty(user)) {
-    throw new Error(`El usuario que está mencionando no está registrado en mi base de datos`);
-  }
-
-  // Get the user's data from the database
-  const data = global.db.data.users[user];
-
-  // Format the user's data
-  const name = data.name || "";
-  const phone = PhoneNumber("+" + user.replace("@s.whatsapp.net", "")).getNumber("international");
-  const link = `wa.me/${user.split`@`[0]}`;
-  const age = data.age || "";
-  const level = data.level;
-  const role = data.role;
-  const dollars = data.dolares;
-  const xp = xpRange(level, global.multiplier)[0];
-  const diamonds = data.limit;
-  const registered = data.registered;
-  const premium = global.prems.includes(user.split`@`[0]);
-  const sn = createHash("md5").update(user).digest("hex");
   let pp = await conn
     .profilePictureUrl(who, "image")
     .catch((_) => "https://telegra.ph/file/9b1353deceded7f387713.jpg");
-  // Send the profile message
-  const message = `
-    * 🔥 NOMBRE:* ${name}
-    * #️⃣ NUMERO:* ${phone}
-    * 🔗 LINK:* ${link}
-    * 💌 NIVEL:* ${level}
-    * ⚡ RANGO:* ${role}
-    * 💸 DOLARES:* ${dollars}
-    * 🎉 EXPERIENCIA/XP:* ${xp}
-    * 💎 DIAMANTES:* ${diamonds}
-    * 📦 REGISTRADO:* ${registered}
-    * 💳 PREMIUM:* ${premium}
-  `;
- await conn.sendMessage(
+  if (!(who in global.db.data.users))
+    throw `El usuario que está mencionando no está registrado en mi base de datos`;
+  try {
+  } catch (e) {
+  } finally {
+    let { name, limit, registered, age } = global.db.data.users[who];
+    let username = conn.getName(who);
+    let prem = global.prems.includes(who.split`@`[0]);
+    let sn = createHash("md5").update(who).digest("hex");
+    let info = `*tus datos están guardados en nuestra base de datos.*\n\n${wm3}`;
+    let str = `╔═════「 *${command}* 」═════╗
+║ *🔥 NOMBRE:* ${username} ${registered ? "(" + name + ") " : ""}
+║ *#️⃣ NUMERO:* ${PhoneNumber(
+      "+" + who.replace("@s.whatsapp.net", ""),
+    ).getNumber("international")}
+║ *🔗 LINK:* wa.me/${who.split`@`[0]}${
+      registered ? "\n*𝙴𝙳𝙰𝙳:* " + age + " años" : ""
+    }
+║ *💌 NIVEL:* ${level}
+║ *⚡ RANGO:* ${role}
+║ *💸 DOLARES*: ${`${dolares.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`}
+║ *🎉 EXPERIENCIA/XP:* ${`${xp.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`}
+║ *💎 DIAMANTES:* ${`${limit.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`}
+║ *📦 REGISTRADO:* ${registered ? "Si" : "No"}
+║ *💳 PREMIUM:* ${prem ? "Si" : "No"}
+╚════ ≪ •❈• ≫ ════╝`;
+    conn.sendMessage(
+      who,
+      { text: `*❕ NUMERO DE SERIE: ${sn}*` },
+      { quoted: m },
+    );
+
+    await conn.sendMessage(
       m.chat,
       {
         image: {
           url: pp,
         },
-        caption: message,
+        caption: str,
         contextInfo: {
           mentionedJid: [m.sender],
           externalAdReply: {
@@ -74,13 +70,8 @@ var handler = async (m, { conn, command }) => {
       },
     );
   }
-  // Send the serial number message
-  const snMessage = `*❕ NUMERO DE SERIE: ${sn}*`;
-  conn.sendMessage(user, { text: snMessage });
 };
-
 handler.help = ["profile [@user]"];
 handler.tags = ["xp"];
 handler.command = /^perfil|profile?$/i;
-
 export default handler;
