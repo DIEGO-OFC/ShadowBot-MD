@@ -16,7 +16,7 @@ var handler = async (m, {conn, text}) => {
   } finally {
     if (stiker) conn.sendFile(m.chat, stiker, "wm.webp", "", m, false, {asSticker: true});
     else
-      throw "*[⚠️] OCURRIO UN ERROR.";
+      throw "*[⚠️] OCURRIO UN ERROR.*";
   }
 };
 handler.help = ["wm <packname>|<author>"];
