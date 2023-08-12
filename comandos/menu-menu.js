@@ -78,9 +78,12 @@ var completomenu = `*╭━━❍𝐙𝐈𝐑𝐀𝐗-𝐁𝐎𝐓-𝐌𝐃❍�
  ╚════ ≪ •❈• ≫ ════╝ 
   
  ╔═════ JADIBOT 🤖 ═════╗  
- ║ ❒ ︎_${usedPrefix}serbot_ 
- ║ ❒ ︎_${usedPrefix}stop_ 
- ║ ❒ ︎_${usedPrefix}bots_ 
+ ‣ Comando: ${usedPrefix}serbot
+ ‣ Descripción: Convertirte en un bot
+ ‣ Comando: ${usedPrefix}stop
+ ‣ Descripción: Apagar tu bot
+ ‣ Comando: ${usedPrefix}bot
+ ‣ Descripción: Lista de bots Conectados
  ╚════ ≪ •❈• ≫ ════╝ 
 
   ┌─「💻𝐃𝐎𝐖𝐍𝐋𝐎𝐀𝐃𝐄𝐑」 
