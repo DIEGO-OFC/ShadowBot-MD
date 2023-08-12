@@ -17,9 +17,9 @@ var handler = async (m, {
    const username = conn.getName(who); 
    let pp = await conn.profilePictureUrl(conn.user.jid).catch(_ => 'https://telegra.ph/file/24fa902ead26340f3df2c.png')
    const fload = { key : { remoteJid: 'status@broadcast', participant : '0@s.whatsapp.net' }, message: { orderMessage: { itemCount : 2023, status: 1, surface : 1, message: '[ 𝐂𝐀𝐑𝐆𝐀𝐍𝐃𝐎 𝐌𝐄𝐍𝐔... ]', orderTitle: `▮Menu ▸`, thumbnail: await (await fetch(pp)).buffer(), sellerJid: '0@s.whatsapp.net' 
-    }
-    }
-    }
+    };
+    };
+    };
    const db = "./galeria/menudorrat3.jpg";
   
 if (command == "menu" || command == "menú") {
@@ -32,7 +32,7 @@ await conn.reply(m.chat, `╦═════════════════
 ┃│✾ ⋟ *#descargasmenu*
 ┃│✾ ⋟ *ejemplo:*
 ┃│✾ ⋟ *#menucompleto*
-┃╰══ ⪨`, fload)}     
+┃╰══ ⪨`, fload)};   
 if (command == "menucompleto" || command == "allmenu") {
 await m.reply(`[ 𝐂𝐀𝐑𝐆𝐀𝐍𝐃𝐎 𝐌𝐄𝐍𝐔... ]`);                 
 var completomenu = `*╭━━❍𝐙𝐈𝐑𝐀𝐗-𝐁𝐎𝐓-𝐌𝐃❍━━╮* 
@@ -87,22 +87,27 @@ var completomenu = `*╭━━❍𝐙𝐈𝐑𝐀𝐗-𝐁𝐎𝐓-𝐌𝐃❍�
  ╚════ ≪ •❈• ≫ ════╝ 
 
   ┌─「💻𝐃𝐎𝐖𝐍𝐋𝐎𝐀𝐃𝐄𝐑」 
- ├➢modapk
+ ├Comando: ${usedPrefix}modapk
  ├Descripcion: Descargar apks mod
- ├Ejemplo: *${usedPrefix}modapk facebook*  
- ├➢videodocumento
+ ├Ejemplo: ${usedPrefix}modapk Facebook 
+ ├➢Comando: ${usedPrefix}videodocumento
  ├Descripcion: Descargar videos pesados en documento.
  ├ejemplo: *${usedPrefix}videodocumento <enlace>*
- ├➢facebook
+ ├➢Comando: ${usedPrefix}fb
  ├Descripcion: Descargar videos de Facebook
  ├ejemplo: *${usedPrefix}fb <link>*
- ├➢twitter 
+ ├➢Comando: ${usedPrefix}twitter 
  ├Descripcion: Descargar videos de twitter
  ├ejemplo: *${usedPrefix}Twitter <link>*_
- ├➢${usedPrefix}xnxxdl *<enlace / link / url>*
- ├➢${usedPrefix}xvideosdl *<enlace / link / url>*
- ├➢${usedPrefix}instagram <enlace / link / url 
- ├➢${usedPrefix}mediafire <enlace / link / url 
+ ├➢Comando: ${usedPrefix}xnxxdl
+ ├Descripción: descargar videos de xnxx.com
+ ├Ejemplo: ${usedPrefix}xnxxdl *<enlace / link / url>*
+ ├➢Comando: ${usedPrefix}instagram
+ ├Descripciob: Descargar videos de instagram 
+ ├ejemplo: *${usedPrefix}ig <enlace / link / url*
+ ├➢Comando: ${usedPrefix}mediafire
+ ├Descripción: Descargar archivos de mediafire
+ ├Ejemplo: ${usedPrefix}Mediafire <enlace / link / url 
  ├➢${usedPrefix}gdrive *<enlace / link / url>*
  ├➢${usedPrefix}gitclone <enlace / link / url 
  ├➢${usedPrefix}tiktok <enlace / link / url 
