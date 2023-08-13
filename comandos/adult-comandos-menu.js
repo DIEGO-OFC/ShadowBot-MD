@@ -127,6 +127,7 @@ rows: [
   ├➢ *${usedPrefix}nsfwuniform*
   ├➢ *${usedPrefix}nsfwbdsm*
   ├➢ *${usedPrefix}nsfwcum*
+  ├➢ *${usedPrefix}nsfwfeet*
   ├➢ *${usedPrefix}nsfwero*
   ├➢ *${usedPrefix}nsfwfemdom*
   ├➢ *${usedPrefix}nsfwglass*
