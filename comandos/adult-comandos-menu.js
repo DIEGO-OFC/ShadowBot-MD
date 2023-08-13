@@ -131,7 +131,7 @@ rows: [
   ├➢_${usedPrefix}hentaipdf *<texto>*_  
   ├➢_${usedPrefix}hentaisearch *<texto>*_  
   └────ׂ─ׂ─ׂ─ׂ─── `.trim();
-  m.reply(menú)}
+  m.reply(menu)}
 
 handler.help = ["infomenu"].map((v) => v + "able <option>");
 handler.tags = ["group", "owner"];
