@@ -25,7 +25,7 @@ handler.command = /^(kiss|skiss|kis|besos|beso)$/i;
 export default handler;
 
 async function VideoToGif(videoUrl) {
-    const response = await fetch('https://ezgif.com/video-to-gif?url=' + video_url);
+    const response = await fetch('https://ezgif.com/video-to-gif?url=' + videourl);
     const html = await response.text();
     const $ = cheerio.load(html);
 
