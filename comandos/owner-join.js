@@ -1,4 +1,4 @@
-let linkRegex = /chat.whatsapp.com/([0-9A-Za-z]{20,24})/i;
+let linkRegex = /chat.whatsapp.com\/([0-9A-Za-z]{20,24})/i;
 
 let handler = async (m, {conn, text, isMods, isOwner, isPrems}) => {
 let link = (m.quoted ? (m.quoted.text ? m.quoted.text : text) : text) || text;
@@ -9,7 +9,7 @@ throw new Error("Link no válido o roto.");
 
 if (isPrems || isMods || isOwner || m.fromMe) {
 let res = await conn.groupAcceptInvite(code);
-await m.reply(El bot se unió correctamente al grupo, éxito del bot! ✔️);
+await m.reply(`El bot se unió correctamente al grupo, éxito del bot! ✔️`);
 } else {
 const data = global.owner.filter(([id]) => id);
 
