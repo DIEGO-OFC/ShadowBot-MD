@@ -120,21 +120,21 @@ rows: [
   ├➢ *${usedPrefix}yuri2*
   ├➢ *${usedPrefix}trapito*
   ├➢ *${usedPrefix}hentai*
-  ├➢ *${usedPrefix}nsfwloli*
-  ├➢ *${usedPrefix}nsfworgy*
-  ├➢ *${usedPrefix}nsfwfoot*
-  ├➢ *${usedPrefix}nsfwass* 
-  ├➢ *${usedPrefix}nsfwuniform*
-  ├➢ *${usedPrefix}nsfwbdsm*
-  ├➢ *${usedPrefix}nsfwcum*
-  ├➢ *${usedPrefix}nsfwfeet*
-  ├➢ *${usedPrefix}nsfwero*
-  ├➢ *${usedPrefix}nsfwfemdom*
-  ├➢ *${usedPrefix}nsfwglass*
-  ├➢ *${usedPrefix}nsfwsuccubus*
-  ├➢ *${usedPrefix}nsfwchupada
-  ├➢ *${usedPrefix}nsfwmuslos*
-  ├➢ *${usedPrefix}nsfwschool*
+  ├➢ *${usedPrefix}pornololi*
+  ├➢ *${usedPrefix}pornoorgy*
+  ├➢ *${usedPrefix}pornofoot*
+  ├➢ *${usedPrefix}pornoass* 
+  ├➢ *${usedPrefix}pornouniform*
+  ├➢ *${usedPrefix}pornobdsm*
+  ├➢ *${usedPrefix}pornocum*
+  ├➢ *${usedPrefix}pornofeet*
+  ├➢ *${usedPrefix}pornoero*
+  ├➢ *${usedPrefix}pornofemdom*
+  ├➢ *${usedPrefix}pornoglass*
+  ├➢ *${usedPrefix}pornosuccubus*
+  ├➢ *${usedPrefix} pornouniform chupada
+  ├➢ *${usedPrefix}pornomuslos*
+  ├➢ *${usedPrefix}pornoschool*
   ├➢ *${usedPrefix}hentaipdf* *<texto>*_  
   ├➢ *${usedPrefix}hentaisearch* *<texto>*
   └────ׂ─ׂ─ׂ─ׂ─── `.trim();
