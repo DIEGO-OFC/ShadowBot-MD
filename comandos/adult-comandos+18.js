@@ -16,6 +16,12 @@ const handler = async (m, {command, conn}) => {
     const haha = await res[Math.floor(res.length * Math.random())];
     conn.sendMessage(m.chat, {image: {url: haha}, caption: `_${command}_`.trim()}, {quoted: m});
   }
+if (command == 'feed') {
+const feedx = new CLUB();
+  const feed = await feedx.feed(); 
+    const caption = `*乂 ⺀ NSFW - PUSSY ⺀ 乂*` 
+    await conn.sendFile(m.chat, feed, "zirax.jpg", caption, m); 
+  }
 
   if (command == 'nsfwass') {
         const assxd = await akaneko.nsfw.ass();  
