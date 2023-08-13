@@ -123,7 +123,8 @@ rows: [
   ├➢ *${usedPrefix}nsfwloli*
   ├➢ *${usedPrefix}nsfworgy*
   ├➢ *${usedPrefix}nsfwfoot*
-  ├➢ *${usedPrefix}nsfwass*
+  ├➢ *${usedPrefix}nsfwass* 
+  ├➢ *${usedPrefix}nsfwuniform*
   ├➢ *${usedPrefix}nsfwbdsm*
   ├➢ *${usedPrefix}nsfwcum*
   ├➢ *${usedPrefix}nsfwero*
