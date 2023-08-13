@@ -19,7 +19,7 @@ const handler = async (m, {command, conn}) => {
 if (command == 'feed') {
 const feedx = new CLUB();
   const feed = await feedx.feed(); 
-    const caption = `*乂 ⺀ NSFW - PUSSY ⺀ 乂*` 
+    const caption = `*乂 ⺀ NSFW - FEED ⺀ 乂*` 
     await conn.sendFile(m.chat, feed, "zirax.jpg", caption, m); 
   }
 
