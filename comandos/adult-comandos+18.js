@@ -69,7 +69,7 @@ const handler = async (m, {command, conn}) => {
 
   if (command == 'tetas') {
    const tetasgodxd = new CLUB();
-  const tetasgod2 = await tetasgodxd.boobs(); 
+  const tetasgod2 = await tetasgodxd.hboobs(); 
     const caption = `*乂 ⺀ NSFW - TETAS ⺀ 乂*` 
     await conn.sendFile(m.chat, tetasgod2, "zirax.jpg", caption, m); 
 }
