@@ -10,7 +10,8 @@ import {sticker} from '../lib/sticker.js';
      const {url} = json; 
      const text2 = `+${m.sender.split('@')[0]} Te dio besos ${text}`.trim()
   m.reply(text2, null, {mentions: conn.parseMention(text2)});
-     conn.sendFile(m.chat, url, null, {asSticker: true}); 
+const stiker = await sticker(null, url, `+${m.sender.split('@')[0]} le dio besos a ${m.mentionedJid.map((user)=>(user === m.sender)? 'alguien ': `+${user.split('@')[0]}`).join(', ')}`); 
+conn.sendFile(m.chat, stiker, null, {asSticker: true}); 
    } catch (e) { } 
  }; 
  handler.command = /^(kiss|skiss|kis|besos|beso)$/i; 
