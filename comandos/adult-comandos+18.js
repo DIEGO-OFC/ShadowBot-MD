@@ -13,7 +13,7 @@ const handler = async (m, {command, conn}) => {
 
 if (command == 'nsfwchupada') {
         const bloxd = await akaneko.nsfw.blowjob();  
-    const caption = `*乂 ⺀ NSFW blowjob ⺀ 乂*` 
+    const caption = `*乂 ⺀ NSFW CHUPADA ⺀ 乂*` 
     await conn.sendFile(m.chat, bloxd, "zirax.jpg", caption, m);
   }
 
