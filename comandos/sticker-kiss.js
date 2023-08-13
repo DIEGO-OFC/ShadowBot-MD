@@ -3,7 +3,7 @@ import fetch from "node-fetch";
 import axios from "axios";
 import fs from "fs";
 import ffmpeg from 'ffmpeg-static'
-import exec from 'child_process'
+import { exec } from 'child_process'
 
 let handler = async (m, { conn }) => {
   let besoo = await axios.get(`https://nekos.life/api/kiss`);
