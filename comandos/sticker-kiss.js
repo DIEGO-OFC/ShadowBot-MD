@@ -6,7 +6,7 @@ import ffmpeg from "fluent-ffmpeg";
 let handler = async (m, {conn}) => {
   let besoo = await axios.get(`https://nekos.life/api/kiss`);
   let videoUrl = besoo.data.url;
-  let gifData = await convertMP4toGIF(videoUrl);
+  let gifData = await VideoToGif(videoUrl);
 
   let Menssage = {
     video: {url: `data:image/gif;base64,${gifData}`},
