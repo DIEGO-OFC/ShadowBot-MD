@@ -130,7 +130,6 @@ rows: [
   ├➢ *${usedPrefix}nsfwero*
   ├➢ *${usedPrefix}nsfwfemdom*
   ├➢ *${usedPrefix}nsfwglass*
-  ├➢ *${usedPrefix}nsfwuniform*
   ├➢ *${usedPrefix}nsfwchupada
   ├➢ *${usedPrefix}nsfwschool*
   ├➢ *${usedPrefix}hentaipdf* *<texto>*_  
