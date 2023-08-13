@@ -5,79 +5,79 @@ import fetch from "node-fetch";
 const handler = async (m, {command, conn}) => {
   if (!db.data.chats[m.chat].modohorny && m.isGroup) throw '*[❗𝐈𝐍𝐅𝐎❗] 𝙻𝙾𝚂 𝙲𝙾𝙼𝙰𝙽𝙳𝙾𝚂 +𝟷𝟾 𝙴𝚂𝚃𝙰𝙽 𝙳𝙴𝚂𝙰𝙲𝚃𝙸𝚅𝙰𝙳𝙾𝚂 𝙴𝙽 𝙴𝚂𝚃𝙴 𝙶𝚁𝚄𝙿𝙾, 𝚂𝙸 𝙴𝚂 𝙰𝙳𝙼𝙸𝙽 𝚈 𝙳𝙴𝚂𝙴𝙰 𝙰𝙲𝚃𝙸𝚅𝙰𝚁𝙻𝙾𝚂 𝚄𝚂𝙴 𝙴𝙻 𝙲𝙾𝙼𝙰𝙽𝙳𝙾 #enable modohorny*';
 
-if (command == 'nsfwmuslos') {
+if (command == 'pornomuslos') {
         const muslo = await akaneko.nsfw.thighs();  
     const caption = `*乂 ⺀ NSFW MUSLOS ⺀ 乂*` 
     await conn.sendFile(m.chat, muslo, "zirax.jpg", caption, m);
   }
 
-if (command == 'nsfwsuccubus') {
+if (command == 'pornosuccubus') {
         const sucu = await akaneko.nsfw.succubus();  
     const caption = `*乂 ⺀ NSFW SUCCUBUS ⺀ 乂*` 
     await conn.sendFile(m.chat, sucu, "zirax.jpg", caption, m);
   }
 
-if (command == 'nsfwfeet') {
+if (command == 'pornofeet') {
   const pies = await akaneko.nsfw.feet();  
     const caption = `*乂 ⺀ NSFW PIES⺀ 乂*` 
     await conn.sendFile(m.chat, pies, "zirax.jpg", caption, m); 
  }  
 
-  if (command == 'nsfwloli') {
+  if (command == 'pornololi') {
     const res = (await axios.get(`https://raw.githubusercontent.com/BrunoSobrino/TheMystic-Bot-MD/master/src/JSON/nsfwloli.json`)).data;
     const haha = await res[Math.floor(res.length * Math.random())];
     conn.sendMessage(m.chat, {image: {url: haha}, caption: `_${command}_`.trim()}, {quoted: m});
   }
 
-if (command == 'nsfwchupada') {
+if (command == 'pornochupada') {
         const bloxd = await akaneko.nsfw.blowjob();  
     const caption = `*乂 ⺀ NSFW CHUPADA ⺀ 乂*` 
     await conn.sendFile(m.chat, bloxd, "zirax.jpg", caption, m);
   }
 
-if (command == 'nsfwuniform') {
+if (command == 'pormouniform') {
   const uniform = await akaneko.nsfw.uniform();  
     const caption = `*乂 ⺀ NSFW UNIFORM ⺀ 乂*` 
     await conn.sendFile(m.chat, uniform, "zirax.jpg", caption, m); 
  }  
 
-if (command == 'nsfwschool') {
+if (command == 'pornoschool') {
   const Ziraxpro = await akaneko.nsfw.school();  
     const caption = `*乂 ⺀ NSFW SCHOOL ⺀ 乂*` 
     await conn.sendFile(m.chat, Ziraxpro, "zirax.jpg", caption, m); 
  }  
 
-  if (command == 'nsfwass') {
+  if (command == 'pornoass') {
         const assxd = await akaneko.nsfw.ass();  
     const caption = `*乂 ⺀ NSFW ASS ⺀ 乂*` 
     await conn.sendFile(m.chat, assxd, "zirax.jpg", caption, m);
   }
 
-  if (command == 'nsfwbdsm') {
+  if (command == 'pornobdsm') {
        const skidputo = await akaneko.nsfw.bdsm();  
     const caption = `*乂 ⺀ NSFW - BDSM ⺀ 乂*` 
     await conn.sendFile(m.chat, skidputo, "zirax.jpg", caption, m); 
  };
 
-  if (command == 'nsfwcum') {
+  if (command == 'pornocum') {
      const cumfw = await akaneko.nsfw.cum();  
     const caption = `*乂 ⺀ NSFW - CUM ⺀ 乂*` 
     await conn.sendFile(m.chat, cumfw, "zirax.jpg", caption, m); 
  }
 
-  if (command == 'nsfwero') {
+  if (command == 'pornoero') {
     const res = (await axios.get(`https://raw.githubusercontent.com/BrunoSobrino/TheMystic-Bot-MD/master/src/JSON/nsfwero.json`)).data;
     const haha = await res[Math.floor(res.length * Math.random())];
     conn.sendMessage(m.chat, {image: {url: haha}, caption: `_${command}_`.trim()}, {quoted: m});
   }
 
-  if (command == 'nsfwfemdom') {
+  if (command == 'pornofemdom') {
     const elpepexd = await akaneko.nsfw.femdom();  
     const caption = `*乂 ⺀ NSFW - FEMDOM ⺀ 乂*` 
     await conn.sendFile(m.chat, elpepexd, "zirax.jpg", caption, m); 
  }
 
-  if (command == 'nsfwglass') {
+  if (command == 'pornoglass') {
   const gatapendeja = await akaneko.nsfw.glasses();  
     const caption = `*乂 ⺀ NSFW GLASS ⺀ 乂*` 
     await conn.sendFile(m.chat, gatapendeja, "zirax.jpg", caption, m); 
@@ -101,7 +101,7 @@ if (command == 'tetas2') {
     await conn.sendFile(m.chat, tetasgodV, "zirax.jpg", caption, m); 
 }
 
-  if (command == 'nsfworgy') {
+  if (command == 'pornoorgy') {
     const res = (await axios.get(`https://raw.githubusercontent.com/BrunoSobrino/TheMystic-Bot-MD/master/src/JSON/nsfworgy.json`)).data;
     const haha = await res[Math.floor(res.length * Math.random())];
     conn.sendMessage(m.chat, {image: {url: haha}, caption: `_${command}_`.trim()}, {quoted: m});
@@ -195,8 +195,8 @@ if (command == 'tetas2') {
   }
 };
 
-handler.help = ['nsfwloli', 'nsfwfoot', 'nsfwass', 'nsfwbdsm', 'nsfwcum', 'nsfwero', 'nsfwfemdom', 'nsfwfoot', 'nsfwglass', 'nsfworgy', 'yuri', 'yuri2', 'panties', 'tetas', 'booty', 'ecchi', 'furro', 'hentai', 'trapito', 'imagenlesbians', 'pene', 'porno', 'randomxxx', 'pechos', 'pussy', 'tetas2', 'nsfwuniform', 'nsfwschool', 'nsfwchupada', 'nsfwfeet', 'nsfwsuccubus', 'nsfwmuslos'];
-handler.command = ['nsfwloli', 'nsfwfoot', 'nsfwass', 'nsfwbdsm', 'nsfwcum', 'nsfwero', 'nsfwfemdom', 'nsfwfoot', 'nsfwglass', 'nsfworgy', 'yuri', 'yuri2', 'panties', 'tetas', 'booty', 'ecchi', 'furro', 'hentai', 'trapito', 'imagenlesbians', 'pene', 'porno', 'randomxxx', 'pechos', 'pussy', 'tetas2', 'nsfwuniform', 'nsfwschool', 'nsfwchupada', 'nsfwfeet', 'nsfwsuccubus', 'nsfwmuslos'];
+handler.help = ['pornololi', 'pornofoot', 'pornoass', 'pornobdsm', 'pornocum', 'pornoero', 'pornofemdom', 'pornofoot', 'pornoglass', 'pornoorgy', 'yuri', 'yuri2', 'panties', 'tetas', 'booty', 'ecchi', 'furro', 'hentai', 'trapito', 'imagenlesbians', 'pene', 'porno', 'randomxxx', 'pechos', 'pussy', 'tetas2', 'pornouniform', 'pornoschool', 'pornochupada', 'pornofeet', 'pornosuccubus', 'pornomuslos'];
+handler.command = ['pornololi', 'pornofoot', 'pornoass', 'pornobdsm', 'pornocum', 'pornoero', 'pornofemdom', 'pornofoot', 'pornoglass', 'pornoorgy', 'yuri', 'yuri2', 'panties', 'tetas', 'booty', 'ecchi', 'furro', 'hentai', 'trapito', 'imagenlesbians', 'pene', 'porno', 'randomxxx', 'pechos', 'pussy', 'tetas2', 'pornouniform', 'pornoschool', 'pornochupada', 'pornofeet', 'pornosuccubus', 'pornomuslos'];
 handler.tags = ['nsfw'];
 handler.dolares = 7
 export default handler
