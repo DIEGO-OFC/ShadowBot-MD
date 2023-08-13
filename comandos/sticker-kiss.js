@@ -22,14 +22,6 @@ let handler = async (m, { conn }) => {
 
   fs.writeFileSync(inputPath, attachmentData);
 
-  const cmd = `"${ffmpeg}" -i "${inputPath}" -vf "fps=10,scale=320:-1:flags=lanczos" "${outputPath}"`;
-
-  exec(cmd, (err) => {
-    if (err) {
-      console.error(err);
-      return;
-    }
-
     const gifData = fs.readFileSync(outputPath);
 
     conn.sendMessage(m.chat, gifData, { sendMediaAsSticker: true, quoted: m });
