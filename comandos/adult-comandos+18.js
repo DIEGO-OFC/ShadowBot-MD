@@ -35,7 +35,7 @@ if (command == 'pornochupada') {
     await conn.sendFile(m.chat, bloxd, "zirax.jpg", caption, m);
   }
 
-if (command == 'pormouniform') {
+if (command == 'pornouniform') {
   const uniform = await akaneko.nsfw.uniform();  
     const caption = `*乂 ⺀ NSFW UNIFORM ⺀ 乂*` 
     await conn.sendFile(m.chat, uniform, "zirax.jpg", caption, m); 
