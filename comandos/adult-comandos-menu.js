@@ -105,6 +105,7 @@ rows: [
   ├➢ *${usedPrefix}videoxxx*
   ├➢ *${usedPrefix}videolesbixxx*
   ├➢ *${usedPrefix}tetas*
+  ├➢ *${usedPrefix}tetas2*
   ├➢ *${usedPrefix}booty*
   ├➢ *${usedPrefix}ecchi*
   ├➢ *${usedPrefix}furro*
