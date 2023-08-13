@@ -11,7 +11,7 @@ const handler = async (m, {command, conn}) => {
     conn.sendMessage(m.chat, {image: {url: haha}, caption: `_${command}_`.trim()}, {quoted: m});
   }
 
-if (command == 'blowjob') {
+if (command == 'nsfwchupando') {
         const bloxd = await akaneko.nsfw.blowjob();  
     const caption = `*乂 ⺀ NSFW blowjob ⺀ 乂*` 
     await conn.sendFile(m.chat, bloxd, "zirax.jpg", caption, m);
@@ -177,8 +177,8 @@ if (command == 'tetas2') {
   }
 };
 
-handler.help = ['nsfwloli', 'nsfwfoot', 'nsfwass', 'nsfwbdsm', 'nsfwcum', 'nsfwero', 'nsfwfemdom', 'nsfwfoot', 'nsfwglass', 'nsfworgy', 'yuri', 'yuri2', 'panties', 'tetas', 'booty', 'ecchi', 'furro', 'hentai', 'trapito', 'imagenlesbians', 'pene', 'porno', 'randomxxx', 'pechos', 'pussy', 'tetas2', 'nsfwuniform', 'nsfwschool', 'blowjob'];
-handler.command = ['nsfwloli', 'nsfwfoot', 'nsfwass', 'nsfwbdsm', 'nsfwcum', 'nsfwero', 'nsfwfemdom', 'nsfwfoot', 'nsfwglass', 'nsfworgy', 'yuri', 'yuri2', 'panties', 'tetas', 'booty', 'ecchi', 'furro', 'hentai', 'trapito', 'imagenlesbians', 'pene', 'porno', 'randomxxx', 'pechos', 'pussy', 'tetas2', 'nsfwuniform', 'nsfwschool', 'blowjob'];
+handler.help = ['nsfwloli', 'nsfwfoot', 'nsfwass', 'nsfwbdsm', 'nsfwcum', 'nsfwero', 'nsfwfemdom', 'nsfwfoot', 'nsfwglass', 'nsfworgy', 'yuri', 'yuri2', 'panties', 'tetas', 'booty', 'ecchi', 'furro', 'hentai', 'trapito', 'imagenlesbians', 'pene', 'porno', 'randomxxx', 'pechos', 'pussy', 'tetas2', 'nsfwuniform', 'nsfwschool', 'nsfwchupando'];
+handler.command = ['nsfwloli', 'nsfwfoot', 'nsfwass', 'nsfwbdsm', 'nsfwcum', 'nsfwero', 'nsfwfemdom', 'nsfwfoot', 'nsfwglass', 'nsfworgy', 'yuri', 'yuri2', 'panties', 'tetas', 'booty', 'ecchi', 'furro', 'hentai', 'trapito', 'imagenlesbians', 'pene', 'porno', 'randomxxx', 'pechos', 'pussy', 'tetas2', 'nsfwuniform', 'nsfwschool', 'nsfwchupando'];
 handler.tags = ['nsfw'];
 handler.dolares = 7
 export default handler
