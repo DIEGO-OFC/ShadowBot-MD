@@ -107,7 +107,6 @@ rows: [
   ├➢ *${usedPrefix}tetas*
   ├➢ *${usedPrefix}tetas2*
   ├➢ *${usedPrefix}booty*
-  ├➢ *${usedPrefix}blowjob
   ├➢ *${usedPrefix}ecchi*
   ├➢ *${usedPrefix}furro*
   ├➢ *${usedPrefix}imagenlesbians*
@@ -132,6 +131,7 @@ rows: [
   ├➢ *${usedPrefix}nsfwfemdom*
   ├➢ *${usedPrefix}nsfwglass*
   ├➢ *${usedPrefix}nsfwuniform*
+  ├➢ *${usedPrefix}nsfwschupada
   ├➢ *${usedPrefix}nsfwschool*
   ├➢ *${usedPrefix}hentaipdf* *<texto>*_  
   ├➢ *${usedPrefix}hentaisearch* *<texto>*
