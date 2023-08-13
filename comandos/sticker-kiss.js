@@ -24,7 +24,7 @@ let handler = async (m, { conn }) => {
 
     const gifData = fs.readFileSync(outputPath);
 
-        conn.sendFile(m.chat, gifData, null, {asSticker: true});
+        conn.sendMessage(m.chat, gifData, {asSticker: true, quoted: m});
 };
 
 handler.command = /^(kiss|skiss|kis|besos|beso)$/i;
