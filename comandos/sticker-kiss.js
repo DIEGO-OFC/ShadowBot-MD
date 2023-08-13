@@ -24,8 +24,34 @@ handler.command = /^(kiss|skiss|kis|besos|beso)$/i;
 
 export default handler;
 
-async function convertMP4toGIF(videoUrl) {
-  const output = await ffmpeg(`-i ${videoUrl} -vf "fps=10" -f gif -y output.gif`);
-  const data = await fetch(output).buffer();
-  return data.toString("base64");
+async function VideoToGif(videoUrl) {
+    const response = await fetch('https://ezgif.com/video-to-gif?url=' + video_url);
+    const html = await response.text();
+    const $ = cheerio.load(html);
+
+    const data = new URLSearchParams({
+        file: $('input[name="file"]').val(),
+        start: $('#start').val(),
+        end: $('#end').val(),
+        size: $('#size').val(),
+        fps: $('#fps').val(),
+        method: $('#method').val(),
+        diff: $('input[name="diff"]').prop('checked') ? 'on' : '',
+    });
+
+    const postResponse = await fetch($('form.ajax-form').attr('action'), {
+        method: 'POST',
+        body: data
+    });
+    const postHtml = await postResponse.text();
+    const $$ = cheerio.load(postHtml);
+
+    return {
+        outputImageUrl: 'https:' + $$('#output .outfile img').attr('src'),
+        fileSize: $$('#output .filestats strong').text(),
+        width: $$('#output .filestats').text().match(/width: (\d+)/)[1],
+        height: $$('#output .filestats').text().match(/height: (\d+)/)[1],
+        frames: $$('#output .filestats').text().match(/frames: (\d+)/)[1],
+        fileType: $$('#output .filestats').text().match(/type: (\w+)/)[1],
+    };
 }
