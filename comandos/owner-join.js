@@ -14,8 +14,7 @@ await m.reply(El bot se unió correctamente al grupo, éxito del bot! ✔️);
 const data = global.owner.filter(([id]) => id);
 
 for (let jid of data.map(([id]) => [id] + "@s.whatsapp.net").filter((v) => v != conn.user.jid))
-  await m.reply(
-    "*[📌 𝐈𝐍𝐅𝐎 📌] Nuevo enlace para el bot para un grupo [❗𝐈𝐍𝐅𝐎❗]*\n\n*—◉ Nombre del propietario:* " +
+  await m.reply(`*[📌 𝐈𝐍𝐅𝐎 📌] Nuevo enlace para el bot para un grupo [❗𝐈𝐍𝐅𝐎❗]*\n\n*—◉ Nombre del propietario:* ` +
       "wa.me/" +
       m.sender.split("@")[0] +
       "\n*—◉ Enlace del grupo que no ha aceptado el bot:* " +
