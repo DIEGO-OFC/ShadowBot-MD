@@ -1,8 +1,9 @@
 import {sticker} from '../lib/sticker.js'; 
  import fetch from 'node-fetch'; 
  import MessageType from '@whiskeysockets/baileys'; 
- const handler = async (m, {conn, text}) => { 
-   try { 
+ const handler = async (m, {conn, text, groupMetadata}) => { 
+   try {
+    let _user = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted.sender;
   let who; 
 
    if (m.isGroup) who = m.mentionedJid[0] ? m.mentionedJid[0] : m.sender; 
