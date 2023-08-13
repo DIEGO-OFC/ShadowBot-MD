@@ -60,6 +60,12 @@ const handler = async (m, {command, conn}) => {
     const caption = `*乂 ⺀ HENTAI ⺀ 乂*` 
     await conn.sendFile(m.chat, akafw, "zirax.jpg", caption, m); 
  }
+if (command == 'tetas2') {
+   const tetasgodx = new CLUB();
+  const tetasgodV = await tetasgodx.hboobs(); 
+    const caption = `*乂 ⺀ NSFW - TETAS ⺀ 乂*` 
+    await conn.sendFile(m.chat, tetasgodV, "zirax.jpg", caption, m); 
+}
 
   if (command == 'nsfworgy') {
     const res = (await axios.get(`https://raw.githubusercontent.com/BrunoSobrino/TheMystic-Bot-MD/master/src/JSON/nsfworgy.json`)).data;
@@ -69,7 +75,7 @@ const handler = async (m, {command, conn}) => {
 
   if (command == 'tetas') {
    const tetasgodxd = new CLUB();
-  const tetasgod2 = await tetasgodxd.hboobs(); 
+  const tetasgod2 = await tetasgodxd.boobs(); 
     const caption = `*乂 ⺀ NSFW - TETAS ⺀ 乂*` 
     await conn.sendFile(m.chat, tetasgod2, "zirax.jpg", caption, m); 
 }
@@ -154,8 +160,8 @@ const handler = async (m, {command, conn}) => {
     conn.sendMessage(m.chat, {image: {url: url}, caption: `_${command}_`.trim()}, {quoted: m});
   }
 };
-handler.help = ['nsfwloli', 'nsfwfoot', 'nsfwass', 'nsfwbdsm', 'nsfwcum', 'nsfwero', 'nsfwfemdom', 'nsfwfoot', 'nsfwglass', 'nsfworgy', 'yuri', 'yuri2', 'panties', 'tetas', 'booty', 'ecchi', 'furro', 'hentai', 'trapito', 'imagenlesbians', 'pene', 'porno', 'randomxxx', 'pechos', 'pussy', 'food'];
-handler.command = ['nsfwloli', 'nsfwfoot', 'nsfwass', 'nsfwbdsm', 'nsfwcum', 'nsfwero', 'nsfwfemdom', 'nsfwfoot', 'nsfwglass', 'nsfworgy', 'yuri', 'yuri2', 'yaoi', 'yaoi2', 'panties', 'tetas', 'booty', 'ecchi', 'furro', 'hentai', 'trapito', 'imagenlesbians', 'pene', 'porno', 'randomxxx', 'pechos', 'pussy', 'food'];
+handler.help = ['nsfwloli', 'nsfwfoot', 'nsfwass', 'nsfwbdsm', 'nsfwcum', 'nsfwero', 'nsfwfemdom', 'nsfwfoot', 'nsfwglass', 'nsfworgy', 'yuri', 'yuri2', 'panties', 'tetas', 'booty', 'ecchi', 'furro', 'hentai', 'trapito', 'imagenlesbians', 'pene', 'porno', 'randomxxx', 'pechos', 'pussy', 'tetas2'];
+handler.command = ['nsfwloli', 'nsfwfoot', 'nsfwass', 'nsfwbdsm', 'nsfwcum', 'nsfwero', 'nsfwfemdom', 'nsfwfoot', 'nsfwglass', 'nsfworgy', 'yuri', 'yuri2', 'yaoi', 'yaoi2', 'panties', 'tetas', 'booty', 'ecchi', 'furro', 'hentai', 'trapito', 'imagenlesbians', 'pene', 'porno', 'randomxxx', 'pechos', 'pussy', 'tetas2'];
 handler.tags = ['nsfw'];
 handler.dolares = 7
 export default handler
