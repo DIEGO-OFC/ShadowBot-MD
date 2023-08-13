@@ -104,7 +104,7 @@ if (command == 'tetas2') {
   if (command == 'pornoorgy') {
 const orgy = await akaneko.nsfw.orgy();  
     const caption = `*乂 ⺀ NSFW ORGY ⺀ 乂*` 
-    await conn.sendFile(m.chat, orgt, "zirax.jpg", caption, m);
+    await conn.sendFile(m.chat, orgy, "zirax.jpg", caption, m);
   }
 
   if (command == 'tetas') {
