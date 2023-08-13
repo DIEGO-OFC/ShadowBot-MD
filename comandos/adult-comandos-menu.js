@@ -1,5 +1,5 @@
-import {xpRange} from "../lib/levelling.js";
-let handler = async (m, {conn, usedPrefix, usedPrefix: _p, text}) => {
+import { xpRange } from "../lib/levelling.js";
+var handler = async (m, {conn, usedPrefix, usedPrefix: _p, text}) => {
   if (!db.data.chats[m.chat].modohorny && m.isGroup)
     throw `${ag}𝙇𝙊𝙎 𝘾𝙊𝙈𝘼𝙉𝘿𝙊𝙎 +18 𝙀𝙎𝙏𝘼𝙉 𝘿𝙀𝙎𝘼𝘾𝙏𝙄𝙑𝘼𝘿𝙊𝙎 𝙐𝙎𝙀 #𝙤𝙣 𝙢𝙤𝙙𝙤𝙝𝙤𝙧𝙣𝙮 𝙋𝘼𝙍𝘼 𝘼𝘾𝙏𝙄𝙑𝘼𝙍\n\n+18 𝘾𝙊𝙈𝙈𝘼𝙉𝘿𝙎 𝘼𝙍𝙀 𝘿𝙄𝙎𝘼𝘽𝙇𝙀𝘿 𝙐𝙎𝙀 #𝙤𝙣 𝙢𝙤𝙙𝙤𝙝𝙤𝙧𝙣𝙮 𝙏𝙊 𝙀𝙉𝘼𝘽𝙇𝙀`;
 
@@ -98,80 +98,40 @@ rows: [
 ┃😏😏😏😏😏😏😏😏😏
 ╰━━━━━━〔 𓃠 *${vs}* 〕━━━━━━⬣
 
-╭━━━━〔 𝙈𝙀𝙉𝙐 *+18* 〕━━━━⬣
-┃🔞➺ _${usedPrefix}nsfwloli_
-┃🔞➺ _${usedPrefix}nsfwfoot_
-┃🔞➺ _${usedPrefix}nsfwass_
-┃🔞➺ _${usedPrefix}nsfwbdsm_
-┃🔞➺ _${usedPrefix}nsfwcum_
-┃🔞➺ _${usedPrefix}nsfwero_
-┃🔞➺ _${usedPrefix}nsfwfemdom_
-┃🔞➺ _${usedPrefix}nsfwfoot_
-┃🔞➺ _${usedPrefix}nsfwglss_
-┃🔞➺ _${usedPrefix}nsfworgy_
-┃🔞➺ _${usedPrefix}pies_
-┃🔞➺ _${usedPrefix}yuri_
-┃🔞➺ _${usedPrefix}yuri2_ 
-┃🔞➺ _${usedPrefix}yaoi_
-┃🔞➺ _${usedPrefix}yaoi2_
-┃🔞➺ _${usedPrefix}panties_ 
-┃🔞➺ _${usedPrefix}tetas_ 
-┃🔞➺ _${usedPrefix}booty_
-┃🔞➺ _${usedPrefix}ecchi_
-┃🔞➺ _${usedPrefix}furro_
-┃🔞➺ _${usedPrefix}hentai_
-┃🔞➺ _${usedPrefix}trapito_
-┃🔞➺ _${usedPrefix}imagenlesbians_
-┃🔞➺ _${usedPrefix}pene_
-┃🔞➺ _${usedPrefix}porno_
-┃🔞➺ _${usedPrefix}porno2_
-┃🔞➺ _${usedPrefix}randomxxx_
-┃🔞➺ _${usedPrefix}pechos_
-┃🔞➺ _${usedPrefix}pack_
-┃🔞➺ _${usedPrefix}pack2_
-┃🔞➺ _${usedPrefix}pack3_
-┃🔞➺ _${usedPrefix}videoxxx_
-┃┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
-┃ 🥵 𝘾𝙊𝙉𝙏𝙀𝙉𝙄𝘿𝙊 𝘿𝙄𝙉𝘼𝙈𝙄𝘾𝙊 🥵
-┃┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
-┃»🥵 _${usedPrefix}pornovideo | pornovid_
-┃»🥵 _${usedPrefix}pornovidgay | pornogayv_
-┃»🥵 _${usedPrefix}pornolesbivid | pornolesbiv_
-┃»🥵 _${usedPrefix}pornobisexualvid | pornobiv_
-┃┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
-┃ ❤️‍🔥 𝘽𝙐𝙎𝘾𝘼 𝙔 𝘿𝙀𝙎𝘾𝘼𝙍𝙂𝘼 ❤️‍🔥
-┃┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
-┃❤️‍🔥➺ _${usedPrefix}xnxxsearch | buscarxnxx *texto*_
-┃❤️‍🔥➺ _${usedPrefix}xvideossearch *texto*_
-┃❤️‍🔥➺ _${usedPrefix}xnxxdl | xnxx *enlace*_
-┃❤️‍🔥➺ _${usedPrefix}xvideosdl | xvideos *enlace*_
-┃┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
-┃ 🔥 𝘾𝙊𝙉𝙏𝙀𝙉𝙄𝘿𝙊 𝙋𝙇𝙐𝙎 🔥
-┃┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
-┃ *Usar bajo su responsabilidad* 
-┃ *Vídeos +18 aleatorios*
-┃ *Puede tardar en enviar*
-┃ *Contenido de Calidad*
-┃┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
-┃»🔥 _${usedPrefix}pornopremium_
-╰━━━━━━━━━━━━━━━━━━━⬣`.trim();
-  conn.sendHydrated(
-    m.chat,
-    menu,
-    wm,
-    pp,
-    "https://chat.whatsapp.com/CrsOmirjZNYKrvnQNT98Oo",
-    "🔰𝙶𝚁𝚄𝙿𝙾-𝙾𝙵𝙸𝙲𝙸𝙰𝙻🔰",
-    null,
-    null,
-    [
-      ["𝙈𝙚𝙣𝙪́ 𝙘𝙤𝙢𝙥𝙡𝙚𝙩𝙤 | 𝙁𝙪𝙡𝙡 𝙈𝙚𝙣𝙪 💫", ".allmenu"],
-      ["𝙈𝙚𝙣𝙪 𝙙𝙚𝙨𝙥𝙡𝙚𝙜𝙖𝙗𝙡𝙚 | 𝙈𝙚𝙣𝙪 𝙇𝙞𝙨𝙩 🌟", "/menulista"],
-      ["𝙈𝙚𝙣𝙪 𝙖𝙪𝙙𝙞𝙤𝙨 | 𝙈𝙖𝙞𝙣 𝙖𝙪𝙙𝙞𝙤𝙨 🔊", "/audios"],
-    ],
-    m
-  );
-};
+ ┌──「🔞𝐂𝐨𝐦𝐚𝐧𝐝𝐨𝐬 +𝟏𝟖」  
+  ├➢_${usedPrefix}pack_  
+  ├➢_${usedPrefix}pack2_  
+  ├➢_${usedPrefix}pack3_  
+  ├➢_${usedPrefix}videoxxx_  
+  ├➢_${usedPrefix}videolesbixxx_  
+  ├➢_${usedPrefix}tetas_  
+  ├➢_${usedPrefix}booty_  
+  ├➢_${usedPrefix}ecchi_  
+  ├➢_${usedPrefix}furro_  
+  ├➢_${usedPrefix}imagenlesbians_  
+  ├➢_${usedPrefix}pussy_ 
+  ├➢_${usedPrefix}panties_  
+  ├➢_${usedPrefix}pene_  
+  ├➢_${usedPrefix}porno_  
+  ├➢_${usedPrefix}randomxxx_  
+  ├➢_${usedPrefix}pechos_  
+  ├➢_${usedPrefix}yuri_  
+  ├➢_${usedPrefix}yuri2_  
+  ├➢_${usedPrefix}trapito_  
+  ├➢_${usedPrefix}hentai_  
+  ├➢_${usedPrefix}nsfwloli_  
+  ├➢_${usedPrefix}nsfworgy_  
+  ├➢_${usedPrefix}nsfwfoot_  
+  ├➢_${usedPrefix}nsfwass_  
+  ├➢_${usedPrefix}nsfwbdsm_  
+  ├➢_${usedPrefix}nsfwcum_  
+  ├➢_${usedPrefix}nsfwero_  
+  ├➢_${usedPrefix}nsfwfemdom_  
+  ├➢_${usedPrefix}nsfwglass_  
+  ├➢_${usedPrefix}hentaipdf *<texto>*_  
+  ├➢_${usedPrefix}hentaisearch *<texto>*_  
+  └────ׂ─ׂ─ׂ─ׂ─── .trim();
+  m.reply(menú)}
 
 handler.help = ["infomenu"].map((v) => v + "able <option>");
 handler.tags = ["group", "owner"];
