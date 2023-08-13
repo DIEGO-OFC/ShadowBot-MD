@@ -1,7 +1,7 @@
 import fetch from "node-fetch";
 let handler = async (m, {conn}) => {
   try {
-    let res = await fetch("https://api.sefinek.net/api/v1/animals/fish");
+    let res = await fetch(`https://api.sefinek.net/api/v1/animals/fish`);
     let json = await res.json();
     let img = await json.url;
     let caption = `
