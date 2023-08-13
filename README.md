@@ -49,7 +49,7 @@
 - CLONAR EL REPOSITORIO [Aqui](https://github.com/DIEGO-OFC/Zirax-Bot-MD/fork)
 - CAMBIAR NÚMERO DEL OWNER [Aqui](https://github.com/DIEGO-OFC/Zirax-Bot-MD/blob/main/configuracion.js)
 
-### <img src="https://github.com/DIEGO-OFC/DORRAT-BOT-MD/blob/main/galeria/unnamed.png" height="30px"> 𝐀𝐂𝐓𝐈𝐕𝐀𝐑 𝐄𝐍 𝐓𝐄𝐑𝐌𝐔𝐗
+### <img src="https://github.com/DIEGO-OFC/Zirax-Bot-MD/blob/main/galeria/unnamed.png" height="30px"> 𝐀𝐂𝐓𝐈𝐕𝐀𝐑 𝐄𝐍 𝐓𝐄𝐑𝐌𝐔𝐗
 - ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
 ```bash
 > termux-setup-storage
@@ -61,7 +61,7 @@
 > pkg install imagemagick -y
 > pkg install yarn
 > git clone https://github.com/DIEGO-OFC/Zirax-Bot-MD 
-> cd DORRAT-BOT-MD
+> cd Zirax-Bot-MD 
 > yarn install 
 > npm install
 > npm install 
