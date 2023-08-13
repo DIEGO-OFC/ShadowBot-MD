@@ -132,7 +132,7 @@ rows: [
   ├➢ *${usedPrefix}pornofemdom*
   ├➢ *${usedPrefix}pornoglass*
   ├➢ *${usedPrefix}pornosuccubus*
-  ├➢ *${usedPrefix} pornouniform chupada
+  ├➢ *${usedPrefix}pornochupada
   ├➢ *${usedPrefix}pornomuslos*
   ├➢ *${usedPrefix}pornoschool*
   ├➢ *${usedPrefix}hentaipdf* *<texto>*_  
