@@ -130,7 +130,7 @@ rows: [
   ├➢_${usedPrefix}nsfwglass_  
   ├➢_${usedPrefix}hentaipdf *<texto>*_  
   ├➢_${usedPrefix}hentaisearch *<texto>*_  
-  └────ׂ─ׂ─ׂ─ׂ─── .trim();
+  └────ׂ─ׂ─ׂ─ׂ─── `.trim();
   m.reply(menú)}
 
 handler.help = ["infomenu"].map((v) => v + "able <option>");
