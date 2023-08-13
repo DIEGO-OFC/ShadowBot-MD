@@ -3,7 +3,8 @@
 <p align="center">
 <img src="https://github.com/DIEGO-OFC/DORRAT-BOT-MD/blob/main/galeria/zirax-bot.jpg" alt="DORRAT-BOT-MD" width="900"/>
 </p>
-# Anterior nombre: Dorrat-Bot-MD 
+
+#  ***Anterior nombre: Dorrat-Bot-MD***
 Dorrat se seguira usando para distintas cosas y funciones.
 
 ### `—◉ ❤️BOTS OFICIALES`
