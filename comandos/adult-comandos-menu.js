@@ -130,6 +130,8 @@ rows: [
   ├➢ *${usedPrefix}nsfwero*
   ├➢ *${usedPrefix}nsfwfemdom*
   ├➢ *${usedPrefix}nsfwglass*
+  ├➢ *${usedPrefix}nsfwuniform*
+  ├➢ *${usedPrefix}nsfwschool*
   ├➢ *${usedPrefix}hentaipdf* *<texto>*_  
   ├➢ *${usedPrefix}hentaisearch* *<texto>*
   └────ׂ─ׂ─ׂ─ׂ─── `.trim();
