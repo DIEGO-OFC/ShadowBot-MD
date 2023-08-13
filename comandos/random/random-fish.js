@@ -7,5 +7,5 @@ let json = await res.json()
 conn.sendMessage(m.chat, {image: {url: json.message }}, {quoted: m})
 }
 handler.help = ['fish']
-handler.command = ['pescado', 'fish']
+handler.command = ['pescado']
 export default handler 
