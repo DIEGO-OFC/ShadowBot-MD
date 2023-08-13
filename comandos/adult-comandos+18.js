@@ -17,6 +17,12 @@ if (command == 'nsfwuniform') {
     await conn.sendFile(m.chat, uniform, "zirax.jpg", caption, m); 
  }  
 
+if (command == 'nsfwschool') {
+  const Ziraxpro = await akaneko.nsfw.school();  
+    const caption = `*乂 ⺀ NSFW SCHOOL ⺀ 乂*` 
+    await conn.sendFile(m.chat, Ziraxpro, "zirax.jpg", caption, m); 
+ }  
+
   if (command == 'nsfwass') {
         const assxd = await akaneko.nsfw.ass();  
     const caption = `*乂 ⺀ NSFW ASS ⺀ 乂*` 
