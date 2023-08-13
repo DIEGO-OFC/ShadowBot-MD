@@ -131,7 +131,7 @@ rows: [
   ├➢ *${usedPrefix}nsfwfemdom*
   ├➢ *${usedPrefix}nsfwglass*
   ├➢ *${usedPrefix}nsfwuniform*
-  ├➢ *${usedPrefix}nsfwschupada
+  ├➢ *${usedPrefix}nsfwchupada
   ├➢ *${usedPrefix}nsfwschool*
   ├➢ *${usedPrefix}hentaipdf* *<texto>*_  
   ├➢ *${usedPrefix}hentaisearch* *<texto>*
