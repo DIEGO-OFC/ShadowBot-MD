@@ -25,7 +25,6 @@ handler.command = /^(kiss|skiss|kis|besos|beso)$/i;
 export default handler;
 
 async function convertMP4toGIF(videoUrl) {
-  const ffmpeg = new ffmpeg();
   const output = await ffmpeg.run(`-i ${videoUrl} -vf "fps=10" -f gif -y output.gif`);
   const data = await fetch(output).buffer();
   return data.toString("base64");
