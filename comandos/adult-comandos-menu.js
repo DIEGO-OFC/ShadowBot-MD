@@ -99,37 +99,37 @@ rows: [
 ╰━━━━━━〔 𓃠 *${vs}* 〕━━━━━━⬣
 
  ┌──「🔞𝐂𝐨𝐦𝐚𝐧𝐝𝐨𝐬 +𝟏𝟖」  
-  ├➢ _${usedPrefix}pack_  
-  ├➢ _${usedPrefix}pack2_  
-  ├➢ _${usedPrefix}pack3_  
-  ├➢ _${usedPrefix}videoxxx_  
-  ├➢ _${usedPrefix}videolesbixxx_  
-  ├➢ _${usedPrefix}tetas_  
-  ├➢ _${usedPrefix}booty_  
-  ├➢ _${usedPrefix}ecchi_  
-  ├➢ _${usedPrefix}furro_  
-  ├➢ _${usedPrefix}imagenlesbians_  
-  ├➢ _${usedPrefix}pussy_ 
-  ├➢ _${usedPrefix}panties_  
-  ├➢ _${usedPrefix}pene_  
-  ├➢ _${usedPrefix}porno_  
-  ├➢ _${usedPrefix}randomxxx_  
-  ├➢ _${usedPrefix}pechos_  
-  ├➢ _${usedPrefix}yuri_  
-  ├➢ _${usedPrefix}yuri2_  
-  ├➢ _${usedPrefix}trapito_  
-  ├➢ _${usedPrefix}hentai_  
-  ├➢ _${usedPrefix}nsfwloli_  
-  ├➢ _${usedPrefix}nsfworgy_  
-  ├➢ _${usedPrefix}nsfwfoot_  
-  ├➢ _${usedPrefix}nsfwass_  
-  ├➢ _${usedPrefix}nsfwbdsm_  
-  ├➢ _${usedPrefix}nsfwcum_  
-  ├➢ _${usedPrefix}nsfwero_  
-  ├➢ _${usedPrefix}nsfwfemdom_  
-  ├➢ _${usedPrefix}nsfwglass_  
-  ├➢ _${usedPrefix}hentaipdf *<texto>*_  
-  ├➢ _${usedPrefix}hentaisearch *<texto>*_  
+  ├➢ *${usedPrefix}pack*
+  ├➢ *${usedPrefix}pack2*
+  ├➢ *${usedPrefix}pack3*
+  ├➢ *${usedPrefix}videoxxx*
+  ├➢ *${usedPrefix}videolesbixxx*
+  ├➢ *${usedPrefix}tetas*
+  ├➢ *${usedPrefix}booty*
+  ├➢ *${usedPrefix}ecchi*
+  ├➢ *${usedPrefix}furro*
+  ├➢ *${usedPrefix}imagenlesbians*
+  ├➢ *${usedPrefix}pussy*
+  ├➢ *${usedPrefix}panties*
+  ├➢ *${usedPrefix}pene*
+  ├➢ *${usedPrefix}porno*
+  ├➢ *${usedPrefix}randomxxx*
+  ├➢ *${usedPrefix}pechos*
+  ├➢ *${usedPrefix}yuri*
+  ├➢ *${usedPrefix}yuri2*
+  ├➢ *${usedPrefix}trapito*
+  ├➢ *${usedPrefix}hentai*
+  ├➢ *${usedPrefix}nsfwloli*
+  ├➢ *${usedPrefix}nsfworgy*
+  ├➢ *${usedPrefix}nsfwfoot*
+  ├➢ *${usedPrefix}nsfwass*
+  ├➢ *${usedPrefix}nsfwbdsm*
+  ├➢ *${usedPrefix}nsfwcum*
+  ├➢ *${usedPrefix}nsfwero*
+  ├➢ *${usedPrefix}nsfwfemdom*
+  ├➢ *${usedPrefix}nsfwglass*
+  ├➢ *${usedPrefix}hentaipdf* *<texto>*_  
+  ├➢ *${usedPrefix}hentaisearch* *<texto>*
   └────ׂ─ׂ─ׂ─ׂ─── `.trim();
   m.reply(menu)}
 
