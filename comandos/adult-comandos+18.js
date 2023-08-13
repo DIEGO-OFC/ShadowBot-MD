@@ -11,12 +11,7 @@ const handler = async (m, {command, conn}) => {
     conn.sendMessage(m.chat, {image: {url: haha}, caption: `_${command}_`.trim()}, {quoted: m});
   }
 
-if (command == 'food') {
-const foodxd = new CLUB();
-  const fodx = await foodxd.food(); 
-    const caption = `*乂 ⺀ NSFW - FEED ⺀ 乂*` 
-    await conn.sendFile(m.chat, fodx, "zirax.jpg", caption, m); 
-  }
+
 
   if (command == 'nsfwass') {
         const assxd = await akaneko.nsfw.ass();  
@@ -74,7 +69,7 @@ const foodxd = new CLUB();
 
   if (command == 'tetas') {
    const tetasgodxd = new CLUB();
-  const tetasgod2 = await tetasgodxd.boobs(); 
+  const tetasgod2 = await tetasgodxd.hthigh(); 
     const caption = `*乂 ⺀ NSFW - TETAS ⺀ 乂*` 
     await conn.sendFile(m.chat, tetasgod2, "zirax.jpg", caption, m); 
 }
