@@ -1,7 +1,7 @@
 import { sticker } from "../lib/sticker.js";
 import fetch from "node-fetch";
 import axios from "axios";
-import fs from "fs";
+import {readdirSync, statSync, unlinkSync, existsSync, readFileSync, rmSync, watch} from "fs";
 import ffmpeg from 'ffmpeg-static'
 import { exec } from 'child_process'
 
