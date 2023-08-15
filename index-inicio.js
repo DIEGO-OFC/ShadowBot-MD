@@ -5,7 +5,7 @@ import { setupMaster, fork } from "cluster";
 import cfonts from "cfonts";
 import { createInterface } from "readline";
 import yargs from "yargs";
-
+import syntaxerror from "syntax-error";
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const { say } = cfonts;
 const rl = createInterface(process.stdin, process.stdout);
