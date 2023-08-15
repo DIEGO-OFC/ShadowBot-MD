@@ -1,12 +1,12 @@
-import { readdirSync, statSync, unlinkSync, existsSync, readFileSync, rmSync, watch } from "fs"
-import { createRequire } from "module"
-import path, {join} from "path";
-import { fileURLToPath, pathToFileURL } from "url"
-import { setupMaster, fork } from "cluster"
-import cfonts from "cfonts"
-import { createInterface } from "readline"
-import yargs from "yargs"
-import syntaxerror from "syntax-error"
+  
+import { join, dirname } from "path";
+import { fileURLToPath } from "url";
+import { setupMaster, fork } from "cluster";
+import cfonts from "cfonts";
+import { createInterface } from "readline";
+import yargs from "yargs";
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
 const { say } = cfonts;
 const rl = createInterface(process.stdin, process.stdout);
 
@@ -67,4 +67,14 @@ function start(file) {
     }
   });
 
-  start("main.js");
+  const opts = yargs(process.argv.slice(2)).exitProcess(false).parse();
+  if (!opts["test"]) {
+    if (!rl.listenerCount()) {
+      rl.on("line", (line) => {
+        p.emit("message", line.trim());
+      });
+    }
+  }
+}
+
+start("main.js");
