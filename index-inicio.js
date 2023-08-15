@@ -133,7 +133,7 @@ global.reload = async (_ev, filename) => {
     if (err) conn.logger.error(`syntax error while loading '${filename}'\n${format(err)}`);
     else
       try {
-        const module = await import(`${global.__filename(dir)}?update=${Date.now()}`);
+        const module = await import(`${__filename(dir)}?update=${Date.now()}`);
         global.comandos[filename] = module.default || module;
       } catch (e) {
         conn.logger.error(`error require plugin '${filename}\n${format(e)}'`);
