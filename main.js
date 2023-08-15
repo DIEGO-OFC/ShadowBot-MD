@@ -39,6 +39,7 @@ global.__dirname = function dirname(pathURL) {
 global.__require = function require(dir = import.meta.url) {
   return createRequire(dir);
 };
+global.opts = new Object(yargs(process.argv.slice(2)).exitProcess(false).parse());
 
 global.API = (name, path = "/", query = {}, apikeyqueryname) =>
   (name in global.APIs ? global.APIs[name] : name) +
