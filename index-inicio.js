@@ -87,9 +87,8 @@ let handler = await import("./handler.js");
      if (Object.keys(Handler || {}).length) handler = Handler; 
    } catch (e) { 
      console.error(e); 
-   }
-
- 
+  }
+ }
  const comandosFolder = join(__dirname, './comandos'); 
  const comandosFilter = filename => /\.js$/.test(filename); 
  global.comandos = {}; 
