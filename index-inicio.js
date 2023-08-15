@@ -7,9 +7,14 @@ import cfonts from "cfonts";
 import { createInterface } from "readline";
 import yargs from "yargs";
 import syntaxerror from "syntax-error";
-const __dirname = dirname(fileURLToPath(import.meta.url));
 const { say } = cfonts;
 const rl = createInterface(process.stdin, process.stdout);
+global.__filename = function filename(pathURL = import.meta.url, rmPrefix = platform !== "win32") {
+  return rmPrefix ? (/file:\/\/\//.test(pathURL) ? fileURLToPath(pathURL) : pathURL) : pathToFileURL(pathURL).toString();
+};
+global.__dirname = function dirname(pathURL) {
+  return path.dirname(global.__filename(pathURL, true));
+};
 
 say("ZIRAX-BOT-MD", {
   font: "tiny",
