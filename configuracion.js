@@ -3,6 +3,7 @@ import chalk from "chalk";
 import {fileURLToPath} from "url";
 import fs from "fs";
 import cheerio from "cheerio";
+import yargs from "yargs";
 import fetch from "node-fetch";
 import axios from "axios";
 import moment from "moment-timezone";
@@ -44,7 +45,10 @@ global.owner = [
 /*├➢*/ global.mods = ["595986674310"];
 /*├➢*/ global.prems = ["595986674310"];
 /*└────ׂ─ׂ─ׂ─ׂ───*/
-
+global.opts = new Object(yargs(process.argv.slice(2)).exitProcess(false).parse());
+global.prefix = new RegExp(
+  "^[" + (opts["prefix"] || "xzXZ/i!#$%+£¢€¥^°=¶∆×÷π√✓©®:;?&.\\-HhhHBb.aA").replace(/[|\\{}()[\]^$+*?.\-\^]/g, "\\$&") + "]"
+);
 
 global.openai_key = "sk-0";
 /* Consigue tu ApiKey en este enlace: https://platform.openai.com/account/api-keys */
