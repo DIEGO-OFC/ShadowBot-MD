@@ -1525,11 +1525,7 @@ global.dfail = (type, m, conn) => {
 global.zds = ["VeyaaGG"];
 
 
-let file = global.__filename(import.meta.url, true);
-watchFile(file, async () => {
-  unwatchFile(file);
-  console.log(chalk.redBright("Update 'handler.js'"));
-  if (global.reloadHandler) console.log(await global.reloadHandler());
-});
+
+  if (global.reloadHandler) console.log(await global.reloadHandler())
 global.listkatakotor =
   /k(o?a)ngk(o?a)ng|yat(e?i)m|ancrit|bokep|anj(k|g)|sundala|ajn?(g|k)|a?njin(g|k)|bajingan|cabul|lonte|b(a?n)?gsa?t|ko?nto?l|me?me?(k|q)|pe?pe?(k|q)|meki|titi(t|d)|pe?ler|tetek|toket|ngewe|go?blo?k|to?lo?l|idiot|(k|ng)e?nto?(t|d)|jembut|bego|dajj?al|janc(u|o)k|pantek|puki ?(mak)?|kimak|kampang|lonte|col(i|mek?)|pelacur|henceu?t|nigga|fuck|dick|bitch|tits|bastard|gay|lesbi|asshole/g;
