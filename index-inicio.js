@@ -79,6 +79,14 @@ function start(file) {
 
 start("main.js");
 
+let handler = await import("./handler.js"); 
+ global.reloadHandler = async function (restatConn) { 
+   try { 
+     const Handler = await import(`./handler.js?update=${Date.now()}`).catch(console.error); 
+     if (Object.keys(Handler || {}).length) handler = Handler; 
+   } catch (e) { 
+     console.error(e); 
+   }
 
  
  const comandosFolder = join(__dirname, './comandos'); 
