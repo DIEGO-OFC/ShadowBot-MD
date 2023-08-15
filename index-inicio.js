@@ -1,6 +1,6 @@
 import { readdirSync, statSync, unlinkSync, existsSync, readFileSync, rmSync, watch } from "fs"
-import path, {join} from "path";
 import { createRequire } from "module"
+import path, {join} from "path";
 import { fileURLToPath, pathToFileURL } from "url"
 import { setupMaster, fork } from "cluster"
 import cfonts from "cfonts"
