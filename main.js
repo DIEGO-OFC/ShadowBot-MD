@@ -30,11 +30,6 @@ const PORT = process.env.PORT || process.env.SERVER_PORT || 3000;
 protoType();
 serialize();
 
-
-global.__require = function require(dir = import.meta.url) {
-  return createRequire(dir);
-};
-
 global.API = (name, path = "/", query = {}, apikeyqueryname) =>
   (name in global.APIs ? global.APIs[name] : name) +
   path +
@@ -47,7 +42,6 @@ global.API = (name, path = "/", query = {}, apikeyqueryname) =>
 
 global.timestamp = {start: new Date()};
 
-const __dirname = global.__dirname(import.meta.url);
 
 global.db = new Low(
   /https?:\/\//.test(opts["db"] || "") ? new cloudDBAdapter(opts["db"]) : new JSONFile(`${opts._[0] ? opts._[0] + "_" : ""}database.json`)
