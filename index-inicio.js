@@ -1,5 +1,5 @@
 import { readdirSync, statSync, unlinkSync, existsSync, readFileSync, rmSync, watch } from "fs"
-import { join, dirname } from "path"
+import path, {join} from "path";
 import { createRequire } from "module"
 import { fileURLToPath, pathToFileURL } from "url"
 import { setupMaster, fork } from "cluster"
