@@ -10,7 +10,7 @@ import syntaxerror from "syntax-error"
 const { say } = cfonts;
 const rl = createInterface(process.stdin, process.stdout);
 
-global.__filename = function filename(pathURL = import.meta.url, rmPrefix = process.platform !== "win32" {
+global.__filename = function filename(pathURL = import.meta.url, rmPrefix = process.platform !== "win32") {
   return rmPrefix ? (/file:\/\/\//.test(pathURL) ? fileURLToPath(pathURL) : pathURL) : pathToFileURL(pathURL).toString();
 }
 global.__dirname = function dirname(pathURL) {
