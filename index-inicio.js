@@ -19,7 +19,7 @@ global.__dirname = function dirname(pathURL) {
 global.__require = function require(dir = import.meta.url) { 
    return createRequire(dir); 
  };
-
+const __dirname = global.__dirname(import.meta.url);
 say("ZIRAX-BOT-MD", {
   font: "tiny",
   align: "center",
