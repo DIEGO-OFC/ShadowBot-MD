@@ -45,7 +45,7 @@ global.owner = [
 /*├➢*/ global.mods = ["595986674310"];
 /*├➢*/ global.prems = ["595986674310"];
 /*└────ׂ─ׂ─ׂ─ׂ───*/
-global.opts = new Object(yargs(process.argv.slice(2)).exitProcess(false).parse());
+const opts = new Object(yargs(process.argv.slice(2)).exitProcess(false).parse());
 global.prefix = new RegExp(
   "^[" + (opts["prefix"] || "xzXZ/i!#$%+£¢€¥^°=¶∆×÷π√✓©®:;?&.\\-HhhHBb.aA").replace(/[|\\{}()[\]^$+*?.\-\^]/g, "\\$&") + "]"
 );
