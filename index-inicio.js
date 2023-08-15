@@ -1,17 +1,19 @@
-import {readdirSync, statSync, unlinkSync, existsSync, readFileSync, rmSync, watch} from "fs";
-import { join, dirname } from "path";
-import {createRequire} from "module";
-import {fileURLToPath, pathToFileURL} from "url";
-import { setupMaster, fork } from "cluster";
-import cfonts from "cfonts";
-import { createInterface } from "readline";
-import yargs from "yargs";
-import syntaxerror from "syntax-error";
+import { readdirSync, statSync, unlinkSync, existsSync, readFileSync, rmSync, watch } from "fs"
+import { join, dirname } from "path"
+import { createRequire } from "module"
+import { fileURLToPath, pathToFileURL } from "url"
+import { setupMaster, fork } from "luster"
+import cfonts from "cfonts"
+import { createInterface } from "readline"
+import yargs from "yargs"
+import syntaxerror from "syntax-error"
 const { say } = cfonts;
 const rl = createInterface(process.stdin, process.stdout);
-global.__filename = function filename(pathURL = import.meta.url, rmPrefix = platform !== "win32") {
-  return rmPrefix ? (/file:\/\/\//.test(pathURL) ? fileURLToPath(pathURL) : pathURL) : pathToFileURL(pathURL).toString();
+
+global.__filename = function filename(pathURL = import.meta.url, rmPrefix = process.platform !== \win32\ {
+  return rmPrefix ? (/file:\\/\\/\\//.test(pathURL) ? fileURLToPath(pathURL) : pathURL) : pathToFileURL(pathURL).toString();
 };
+
 global.__dirname = function dirname(pathURL) {
   return path.dirname(global.__filename(pathURL, true));
 };
