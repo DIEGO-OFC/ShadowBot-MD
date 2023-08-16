@@ -216,7 +216,7 @@ rows: [
   ├➢${usedPrefix}igstalk <nombre de usuario  
   ├➢${usedPrefix}igstory *<nombre de usuario>*_ 
   ├➢${usedPrefix}tiktokstalk <nombre de usuario  
-  └────ׂ─ׂ─ׂ─ׂ── 〔`.trim();
+  └────ׂ─ׂ─ׂ─ׂ──`.trim();
 
   await  conn.sendMessage(m.chat, { image: { url: "https://telegra.ph/file/d87bb48f283547ba5119d.jpg", },  caption: menu,  
         contextInfo: {  
