@@ -52,7 +52,7 @@ await conn.sendMessage(from, {
   "sourceUrl": `https://chat.whatsapp.com/BmsElfLOkC6DYTo4rqaQcf`  
   }  
   }  
-  }, { quoted: floc })
+  }, { quoted: m })
 }  
 if (command == "menucompleto" || command == "allmenu") {
 await m.reply(`[ 𝐂𝐀𝐑𝐆𝐀𝐍𝐃𝐎 𝐌𝐄𝐍𝐔... ]`);                 
