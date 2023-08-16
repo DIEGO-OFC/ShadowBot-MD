@@ -23,7 +23,7 @@ var handler = async (m, {
    const db = "./galeria/menudorrat3.jpg"
   
 if (command == "menu" || command == "menú") {
-await conn.reply(m.chat, `╦══════════════════ ⪨
+let uwu`╦══════════════════ ⪨
 ┃│✾ ⋟ *${ucapan()}*
 ┃│✾ ⋟ *tenemos varios tipos de menus*
 ┃│✾ ⋟ 1
@@ -32,7 +32,28 @@ await conn.reply(m.chat, `╦═════════════════
 ┃│✾ ⋟ *#descargasmenu*
 ┃│✾ ⋟ *ejemplo:*
 ┃│✾ ⋟ *#menucompleto*
-┃╰══ ⪨`, fload)};   
+┃╰══ ⪨`
+
+await conn.sendMessage(from, {   
+  text: uwu,  
+  contextInfo:{  
+  forwardingScore: 9999999,  
+  isForwarded: true,   
+  mentionedJid:[m.sender],  
+  "externalAdReply": {  
+  "showAdAttribution": true,  
+  "containsAutoReply": true,
+  "renderLargerThumbnail": true,  
+  "title": wm,   
+  "containsAutoReply": true,  
+  "mediaType": 1,   
+  "thumbnail": global.imagen1,  
+  "mediaUrl": `https://chat.whatsapp.com/BmsElfLOkC6DYTo4rqaQcf`,  
+  "sourceUrl": `https://chat.whatsapp.com/BmsElfLOkC6DYTo4rqaQcf`  
+  }  
+  }  
+  }, { quoted: floc })
+}  
 if (command == "menucompleto" || command == "allmenu") {
 await m.reply(`[ 𝐂𝐀𝐑𝐆𝐀𝐍𝐃𝐎 𝐌𝐄𝐍𝐔... ]`);                 
 var completomenu = `*╭━━❍𝐙𝐈𝐑𝐀𝐗-𝐁𝐎𝐓-𝐌𝐃❍━━╮* 
