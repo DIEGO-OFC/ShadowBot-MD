@@ -153,24 +153,7 @@ let handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text}) => 
 ├➢🌠 _${usedPrefix}stickerfilter *<efecto> <responder a imagen>*_ 
 └────ׂ─ׂ─ׂ─ׂ───`.trim();
 
-    conn.sendHydrated2(
-      m.chat,
-      str,
-      wm,
-      pp,
-      "https://www.paypal.me/TheShadowBrokers133",
-      "𝙿𝙰𝚈𝙿𝙰𝙻",
-      "https://github.com/DIEGO-OFC/DORRAT-BOT-MD",
-      "𝙶𝙸𝚃𝙷𝚄𝙱",
-      [
-        ["💎 𝙶𝚁𝚄𝙿𝙾𝚂 𝙾𝙵𝙸𝙲𝙸𝙰𝙻𝙴𝚂 💎", "/grupos"],
-
-        ["🤴 𝙾𝚆𝙽𝙴𝚁S 🤴", "/owner"],
-
-        ["🔰 𝙸𝙽𝙵𝙾𝙱𝙾𝚃 🔰", "/infobot"],
-      ],
-      m
-    );
+    m.reply(str)
 
     //await conn.sendFile(m.chat, vn, 'menu.mp3', null, m, true, {
 
