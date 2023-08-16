@@ -34,7 +34,7 @@ let uwu`╦══════════════════ ⪨
 ┃│✾ ⋟ *#menucompleto*
 ┃╰══ ⪨`
 
-await conn.sendMessage(from, {   
+await conn.sendMessage(m.chat, {   
   text: uwu,  
   contextInfo:{  
   forwardingScore: 9999999,  
