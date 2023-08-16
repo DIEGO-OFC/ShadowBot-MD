@@ -23,7 +23,7 @@ var handler = async (m, {
    const db = "./galeria/menudorrat3.jpg"
   
 if (command == "menu" || command == "menú") {
-let uwu`╦══════════════════ ⪨
+let uwu = `╦══════════════════ ⪨
 ┃│✾ ⋟ *${ucapan()}*
 ┃│✾ ⋟ *tenemos varios tipos de menus*
 ┃│✾ ⋟ 1
