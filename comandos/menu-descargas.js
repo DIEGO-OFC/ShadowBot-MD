@@ -218,7 +218,7 @@ rows: [
   ├➢${usedPrefix}tiktokstalk <nombre de usuario  
   └────ׂ─ׂ─ׂ─ׂ──`.trim();
 
-  await  conn.sendMessage(m.chat, { image: { url: "https://telegra.ph/file/d87bb48f283547ba5119d.jpg", },  caption: menu,  
+  await  conn.sendMessage(m.chat, { image: { url: "https://telegra.ph/file/d16309ef53a954c16d0f9.jpg", },  caption: menu,  
         contextInfo: {  
           mentionedJid: [m.sender],  
           externalAdReply: {  
@@ -226,7 +226,7 @@ rows: [
             sourceUrl: "http://paypal.me/DorratBotOficial",  
             mediaType: 1,  
             showAdAttribution: true,  
-            thumbnailUrl: "https://telegra.ph/file/d87bb48f283547ba5119d.jpg",  
+            thumbnailUrl: "https://telegra.ph/file/d16309ef53a954c16d0f9.jpg",  
           },  
         },  
       },  
