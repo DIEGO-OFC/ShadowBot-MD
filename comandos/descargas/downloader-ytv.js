@@ -1,10 +1,10 @@
- import { youtubedl, youtubedlv2 } from '@bochilteam/scraper'
+import { youtubedl, youtubedlv2 } from '@bochilteam/scraper'
 import fetch from 'node-fetch'
 import yts from 'yt-search'
 import ytdl from 'ytdl-core'
 import axios from 'axios'
 let handler = async (m, { conn, args, usedPrefix, command }) => {
-if (!args[0]) throw '*『 ✘ 』Y EL ENLACE*'
+if (!args[0]) throw '*[❗𝐈𝐍𝐅𝐎❗] 𝙸𝙽𝚂𝙴𝚁𝚃𝙴 𝙴𝙻 𝙲𝙾𝙼𝙰𝙽𝙳𝙾 𝙼𝙰𝚂 𝙴𝙻 𝙴𝙽𝙻𝙰𝙲𝙴 / 𝙻𝙸𝙽𝙺 𝙳𝙴 𝚄𝙽 𝚅𝙸𝙳𝙴𝙾 𝙳𝙴 𝚈𝙾𝚄𝚃𝚄𝙱𝙴*'
   
 let youtubeLink = '';
 if (args[0].includes('you')) {
@@ -24,8 +24,8 @@ throw `*[❗] 𝙿𝙰𝚁𝙰 𝙿𝙾𝙳𝙴𝚁 𝚄𝚂𝙰𝚁 𝙴𝚂�
 }} else {
 throw `*[❗] 𝙿𝙰𝚁𝙰 𝙿𝙾𝙳𝙴𝚁 𝚄𝚂𝙰𝚁 𝙴𝚂𝚃𝙴 𝙲𝙾𝙼𝙰𝙽𝙳𝙾 𝙳𝙴 𝙴𝚂𝚃𝙰 𝙵𝙾𝚁𝙼𝙰 (${usedPrefix + command} <numero>), 𝙿𝙾𝚁 𝙵𝙰𝚅𝙾𝚁 𝚁𝙴𝙰𝙻𝙸𝚉𝙰 𝙻𝙰 𝙱𝚄𝚂𝚀𝚄𝙴𝙳𝙰 𝙳𝙴 𝚅𝙸𝙳𝙴𝙾𝚂 𝙲𝙾𝙽 𝙴𝙻 𝙲𝙾𝙼𝙰𝙽𝙳𝙾 ${usedPrefix}playlist <texto>*`;
 }}}  
- var info  = `*_⏰ Enviando video... ⏰_*\n\n*🔄 SI NO SE ENVIA PRUEBE CON #ytmp4doc◉*`;
-  await conn.sendMessage(m.chat, {image: fs.readFileSync("./menu2.jpg"), caption: info}, {quoted: m});
+ let info = `*_⏰ Enviando video... ⏰_*\n\n*🔄 Sɪ Sᴜ ᴠɪᴅᴇᴏ ɴᴏ ᴇs ᴇɴᴠɪᴀᴅᴏ, ᴘʀᴜᴇʙᴇ ᴄᴏɴ ᴇʟ ᴄᴏᴍᴀɴᴅᴏ #playdoc ᴏ #play.2 ᴏ #ytmp4doc ◉*`;
+  await conn.sendMessage(m.chat, {image: fs.readFileSync("./galeria/menudorrat5.png"), caption: info}, {quoted: m});
  
 try {
 let qu = args[1] || '360'
@@ -50,10 +50,10 @@ let n = lolh.result.title || 'error'
 let n2 = lolh.result.link
 let n3 = lolh.result.size
 let n4 = lolh.result.thumbnail
-await conn.sendMessage(m.chat, { video: { url: n2 }, fileName: `${n}.mp4`, mimetype: 'video/mp4', caption: ` *𝅘𝅥𝅮 NOMBRE*: ${n}\n *𝄛 PESO*: ${n3}`, thumbnail: await fetch(n4) }, { quoted: m })
+await conn.sendMessage(m.chat, { video: { url: n2 }, fileName: `${n}.mp4`, mimetype: 'video/mp4', caption: `🔍 *NOMBRE*: ${n}\n📦 *PESO*: ${n3}`, thumbnail: await fetch(n4) }, { quoted: m })
 } catch (E3) {
 //console.log('Error 3 ' + E3)   
-await conn.reply(m.chat, '*『 ✘ 』 ERROR NO SE PUDO DESCARGAR EL VIDEO*', m)}
+await conn.reply(m.chat, '*[❗] 𝙴𝚁𝚁𝙾𝚁 𝙽𝙾 𝙵𝚄𝙴 𝙿𝙾𝚂𝙸𝙱𝙻𝙴 𝙳𝙴𝚂𝙲𝙰𝚁𝙶𝙰𝚁 𝙴𝙻 𝚅𝙸𝙳𝙴𝙾*', m)}
 }}}
 handler.command = /^videomp4?$/i
 export default handler
