@@ -47,7 +47,7 @@ await conn.sendMessage(m.chat, {
   "title": wm,   
   "containsAutoReply": true,  
   "mediaType": 1,   
-  "thumbnail": global.fotogodzx,  
+  "thumbnail": fotogodzx,  
   "mediaUrl": `https://chat.whatsapp.com/BmsElfLOkC6DYTo4rqaQcf`,  
   "sourceUrl": `https://chat.whatsapp.com/BmsElfLOkC6DYTo4rqaQcf`  
   }  
