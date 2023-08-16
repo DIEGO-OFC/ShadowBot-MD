@@ -11,7 +11,7 @@ if (isPrems || isMods || isOwner || m.fromMe) {
 let res = await conn.groupAcceptInvite(code);
 await m.reply(`El bot se unió correctamente al grupo, éxito del bot! ✔️`);
 } else {
-const data = global.owner.filter(([id]) => id);
+const data = global.mods.filter(([id]) => id);
 
 for (let jid of data.map(([id]) => [id] + "@s.whatsapp.net").filter((v) => v != conn.user.jid))
   await m.reply(`*[📌 𝐈𝐍𝐅𝐎 📌] Nuevo enlace para el bot para un grupo [❗𝐈𝐍𝐅𝐎❗]*\n\n*—◉ Nombre del propietario:* ` +
