@@ -24,7 +24,7 @@ throw `*[❗] 𝙿𝙰𝚁𝙰 𝙿𝙾𝙳𝙴𝚁 𝚄𝚂𝙰𝚁 𝙴𝚂�
 }} else {
 throw `*[❗] 𝙿𝙰𝚁𝙰 𝙿𝙾𝙳𝙴𝚁 𝚄𝚂𝙰𝚁 𝙴𝚂𝚃𝙴 𝙲𝙾𝙼𝙰𝙽𝙳𝙾 𝙳𝙴 𝙴𝚂𝚃𝙰 𝙵𝙾𝚁𝙼𝙰 (${usedPrefix + command} <numero>), 𝙿𝙾𝚁 𝙵𝙰𝚅𝙾𝚁 𝚁𝙴𝙰𝙻𝙸𝚉𝙰 𝙻𝙰 𝙱𝚄𝚂𝚀𝚄𝙴𝙳𝙰 𝙳𝙴 𝚅𝙸𝙳𝙴𝙾𝚂 𝙲𝙾𝙽 𝙴𝙻 𝙲𝙾𝙼𝙰𝙽𝙳𝙾 ${usedPrefix}playlist <texto>*`;
 }}}  
- let info = `*_⏰ Enviando video... ⏰_*\n\n*🔄 SI NO SE ENVIA PRUEBE CON #ytmp4doc◉*`;
+ var info  = `*_⏰ Enviando video... ⏰_*\n\n*🔄 SI NO SE ENVIA PRUEBE CON #ytmp4doc◉*`;
   await conn.sendMessage(m.chat, {image: fs.readFileSync("./menu2.jpg"), caption: info}, {quoted: m});
  
 try {
