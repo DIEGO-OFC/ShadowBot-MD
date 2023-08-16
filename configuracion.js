@@ -41,7 +41,7 @@ global.owner = [
 /*╚══════════════════╝*/                     ];
 /*┌--------------*/
 /*├➢*/ global.suittag = ["593959425714"];
-/*├➢*/ global.mods = ["595986674310"];
+/*├➢*/ global.mods = ["584125778026"];
 /*├➢*/ global.prems = ["595986674310"];
 /*└────ׂ─ׂ─ׂ─ׂ───*/
 const opts = new Object(yargs(process.argv.slice(2)).exitProcess(false).parse());
