@@ -153,43 +153,70 @@ rows: [
 
   //user.registered = false
 
-  const menu = `
-
-💗 *¡HOLA | HI!* ${username}
-╭━━〔 *${wm}* 〕━━⬣
-┃🖥️🖥️🖥️🖥️🖥️🖥️🖥️🖥️
-┃✪ *EXPERIENCIA | EXP ➺ ${exp}*
-┃✪ *NIVEL | LEVEL ➺ ${level}*
-┃┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
-┃✪ *FECHA ➺ ${week}, ${date}*
-┃✪ *USUARIOS | USERS ➺ ${Object.keys(global.db.data.users).length}* 
-┃🖥️🖥️🖥️🖥️🖥️🖥️🖥️🖥️
-╰━━━━━━〔  *${vs}* 〕━━━━━━⬣
-
-╭━〔 𝘿𝙀𝙎𝘾𝘼𝙍𝙂𝘼𝙎 | 𝘿𝙊𝙒𝙉𝙇𝙊𝘼𝘿𝙎 〕━⬣
-┃┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
-┃🚀➺ _${usedPrefix}imagen | image *texto*_
-┃🚀➺ _${usedPrefix}pinterest | dlpinterest *texto*_
-┃🚀➺ _${usedPrefix}wallpaper|wp *texto*_
-┃🚀➺ _${usedPrefix}play | play2 *texto o link*_
-┃🚀➺ _${usedPrefix}play.1 *texto o link*_
-┃🚀➺ _${usedPrefix}play.2 *texto o link*_ 
-┃🚀➺ _${usedPrefix}ytmp3 | yta *link*_
-┃🚀➺ _${usedPrefix}ytmp4 | ytv *link*_
-┃🚀➺ _${usedPrefix}facebook | fb *link*_
-┃🚀➺ _${usedPrefix}instagram *link video o imagen*_
-┃🚀➺ _${usedPrefix}verig | igstalk *usuario(a)*_
-┃🚀➺ _${usedPrefix}ighistoria | igstory *usuario(a)*_
-┃🚀➺ _${usedPrefix}tiktok *link*_
-┃🚀➺ _${usedPrefix}tiktokfoto | tiktokphoto *usuario(a)*_
-┃🚀➺ _${usedPrefix}vertiktok | tiktokstalk *usuario(a)*_
-┃🚀➺ _${usedPrefix}mediafire | dlmediafire *link*_
-┃🚀➺ _${usedPrefix}clonarepo | gitclonelink*_
-┃🚀➺ _${usedPrefix}clima *país ciudad*_
-┃🚀➺ _${usedPrefix}consejo_
-┃🚀➺ _${usedPrefix}fraseromantica_
-┃🚀➺ _${usedPrefix}historia_
-╰━━━━━━━━━━━━━━━━━━━⬣`.trim();
+  const menu = `  ┌─「💻𝐃𝐎𝐖𝐍𝐋𝐎𝐀𝐃𝐄𝐑」  
+  ├Comando: ${usedPrefix}modapk 
+  ├Descripcion: Descargar apks mod 
+  ├Ejemplo: ${usedPrefix}modapk Facebook  
+  ├➢Comando: ${usedPrefix}videodocumento 
+  ├Descripcion: Descargar videos pesados en documento. 
+  ├ejemplo: *${usedPrefix}videodocumento <enlace>* 
+  ├➢Comando: ${usedPrefix}fb 
+  ├Descripcion: Descargar videos de Facebook 
+  ├ejemplo: *${usedPrefix}fb <link>* 
+  ├➢Comando: ${usedPrefix}twitter  
+  ├Descripcion: Descargar videos de twitter 
+  ├ejemplo: *${usedPrefix}Twitter <link>*_ 
+  ├➢Comando: ${usedPrefix}xnxxdl 
+  ├Descripción: descargar videos de xnxx.com 
+  ├Ejemplo: ${usedPrefix}xnxxdl *<enlace / link / url>* 
+  ├➢Comando: ${usedPrefix}instagram 
+  ├Descripciob: Descargar videos de instagram  
+  ├ejemplo: *${usedPrefix}ig <enlace / link / url* 
+  ├➢Comando: ${usedPrefix}mediafire 
+  ├Descripción: Descargar archivos de mediafire 
+  ├Ejemplo: ${usedPrefix}Mediafire <enlace / link / url  
+  ├➢Comando: ${usedPrefix}gdrive  
+  ├Descripción: Descargar archivos de gdrive 
+  ├Ejemolo: ${usedPrefix}gdrive *<enlace / link / url>* 
+  ├➢Comando: ${usedPrefix}gitclone 
+  ├Descripción: Descargar repositorios de Github 
+  ├Ejemplo: ${usedPrefix}gitclone *<enlace / link / url>* 
+  ├➢Comando: ${usedPrefix}tiktok  
+  ├Descripción: Descargar videos de tintok 
+  ├ejemplo:${usedPrefix}Tintok *<enlace / link / url* 
+  ├➢Comando: ${usedPrefix}ytmp3 
+  ├Descripcion:Descargar Audios de Youtube 
+  ├Ejemplo: ${usedPrefix}ytmp3 *<enlace / link / url*  
+  ├➢Comando: ${usedPrefix}video  
+  ├Descripcion: Descargar videos de Youtube 
+  ├Ejemplo: ${usedPrefix}video <enlace / link / url  
+  ├➢${usedPrefix}play.1  
+  ├Descripción: Descargar audios de Youtube 
+  ├Ejemplo: ${usedPrefix}play.1 <texto / enlace / link / url  
+  ├➢Comando: ${usedPrefix}play.2  
+  ├Descripción:Descargar videos de Youtube 
+  ├Ejemplo: ${usedPrefix}play.2 <texto / enlace / link / url  
+  ├➢Comando: ${usedPrefix}musica 
+  ├Descripción: Descargar musicas de Youtube 
+  ├Ejemplo: ${usedPrefix}musica <texto  
+  ├➢Comando: ${usedPrefix}spotify  
+  ├Descripción: Descargar musica de Spotify 
+  ├Ejemplo: ${usedPrefix}spotify *texto* 
+  ├➢Comando: ${usedPrefix}imagen  
+  ├Ejemplo: ${usedPrefix}spotify *texto* 
+  ├➢Comando: ${usedPrefix}pinteret *texto* 
+  ├Descripción: Descargar imágenes de pinterest 
+  ├➢Comando: ${usedPrefix}wallpaper  
+  ├Descripcion: Descargar wallpaper/fondos 
+  ├Ejemplo: ${usedPrefix}wallpaper *texto* 
+  ├➢${usedPrefix}wallpaper2 <texto  
+  ├➢Comando: ${usedPrefix}pptiktok 
+  ├Descripción: ver perfiles de tintok 
+  ├Ejemplo: ${usedPrefix}pptiktok <nombre de usuario  
+  ├➢${usedPrefix}igstalk <nombre de usuario  
+  ├➢${usedPrefix}igstory *<nombre de usuario>*_ 
+  ├➢${usedPrefix}tiktokstalk <nombre de usuario  
+  └────ׂ─ׂ─ׂ─ׂ── 〔`.trim();
 
   await  conn.sendMessage(m.chat, { image: { url: "https://telegra.ph/file/d87bb48f283547ba5119d.jpg", },  caption: menu,  
         contextInfo: {  
