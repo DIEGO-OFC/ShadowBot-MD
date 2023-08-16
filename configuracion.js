@@ -123,6 +123,7 @@ global.DORRA = dorre;
 global.imagen1 = fs.readFileSync("./Menu2.jpg");
 global.imagen2 = fs.readFileSync("./galeria/nuevobot.jpg");
 global.imagen3 = fs.readFileSync("./galeria/Pre Bot Publi.png");
+global.fotogodzx = fs.readFileSync(".galeria/");
 global.imagen4 = fs.readFileSync("./galeria/menudorrat3.jpg");
 global.imagen5 = fs.readFileSync("./galeria/menudorrat5.png");
 global.video1 = fs.readFileSync("./galeria/dorratmini.mp4");
