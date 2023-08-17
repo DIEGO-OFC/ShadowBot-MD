@@ -5,7 +5,7 @@ import {performance} from "perf_hooks";
 import {sizeFormatter} from "human-readable";
 import {cpus as _cpus} from "os";
 let handler = async (m, {conn, usedPrefix}) => {
-let format = sizeFormatter({ std: "JEDEC", decimalPlaces: 2, keepTrailingZeroes: false, render: (literal, symbol) => `${literal} ${symbol}B` })
+
   let _uptime = process.uptime() * 1000
   let uptime = clockString(_uptime)
   let totalreg = Object.keys(global.db.data.users).length;
@@ -14,10 +14,22 @@ let format = sizeFormatter({ std: "JEDEC", decimalPlaces: 2, keepTrailingZeroes:
   const groups = chats.filter(([id]) => id.endsWith("@g.us"))
   const {restrict, antiCall, antiprivado} = global.db.data.settings[conn.user.jid] || {}
   const {autoread, gconly, pconly, self} = global.opts || {}
-  let pp = "./galeria/menudorrat3.jpg"
-  let neww = performance.now()
-  let ram = await si.mem()
-  let json = { memory: format(ram.free) + " libre de " + format(ram.total), memory_used: ram.used }
+  let pp = "./galeria/menudorrat3.jpg"  
+ let formatSize = sizeFormatter({ 
+   std: "JEDEC", 
+   decimalPlaces: 2, 
+   keepTrailingZeroes: false, 
+   render: (literal, symbol) => `${literal} ${symbol}B`, 
+ }); 
+ let ram = await si.mem(); 
+ let cpu = await si.cpuCurrentSpeed(); 
+ let disk = await si.fsSize(); 
+ let json = { 
+   memory: formatSize(ram.free) + " de " + formatSize(ram.total), 
+   memory_used: formatSize(ram.used), 
+   cpu: cpu.avg + " Ghz", 
+   disk: formatSize(disk[0].available), 
+ };
 let info = `
 ╠═〘 𝐈𝐍𝐅𝐎 𝐃𝐄𝐋 𝐁𝐎𝐓 〙 ═
 ╠
