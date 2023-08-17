@@ -48,7 +48,9 @@ let info = `
 ║❒  [💬] *PCONLY*: ${pconly ? "*𝚊𝚌𝚝𝚒𝚟𝚊𝚍𝚘*" : "*𝚍𝚎𝚜𝚊𝚌𝚝𝚒𝚟𝚊𝚍𝚘*"}
 ║❒  [🏢] *GCONLY*: ${gconly ? "*𝚊𝚌𝚝𝚒𝚟𝚊𝚍𝚘*" : "*𝚍𝚎𝚜𝚊𝚌𝚝𝚒𝚟𝚊𝚍𝚘*"}
 ║❒  [🗺️] *MODO*: ${self ? "*𝚙𝚛𝚒𝚟𝚊𝚍𝚘*" : "*𝚙𝚞𝚋𝚕𝚒𝚌𝚘*"}
-║❒  [🔴] *RAM:* ${format(json.memory)}
+║❒  [🔴] *RAM USADA:* ${json.memory_used}
+║❒  [📦] *DISCO DURO:*  ${json.disk}
+║❒  [🖥️] *CPU USADA:*  ${json.cpu} 
 ╠
 *╠═〘 Dorrat-Bot-MD 〙 ═*`.trim();
   
