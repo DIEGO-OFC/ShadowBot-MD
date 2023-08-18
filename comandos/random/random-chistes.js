@@ -1,5 +1,5 @@
 let handler = async (m, {conn, usedPrefix, command}) => {
-m.reply(${pickRandom(jokes)})}
+m.reply(`${pickRandom(jokes)}`)}
 handler.help = ["chistes"];
 handler.tags = ["internet"];
 handler.command = /^(chistes)$/i;
