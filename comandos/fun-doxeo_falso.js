@@ -1,204 +1,113 @@
-import {performance} from "perf_hooks";
-let handler = async (m, {conn, text}) => {
-  let start = `*☠ ¡¡𝙸𝙽𝙸𝙲𝙸𝙰𝙽𝙳𝙾 𝙳𝙾𝚇𝚇𝙴𝙾!! ☠*`;
-  let boost = `*${pickRandom([
-    "0",
-    "1",
-    "2",
-    "3",
-    "4",
-    "5",
-    "6",
-    "7",
-    "8",
-    "9",
-    "10",
-    "11",
-    "12",
-    "13",
-    "14",
-    "15",
-    "16",
-    "17",
-    "18",
-    "19",
-    "20",
-  ])}%*`;
-  let boost2 = `*${pickRandom(["21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "36", "37", "38", "39", "40"])}%*`;
-  let boost3 = `*${pickRandom([
-    "41",
-    "42",
-    "43",
-    "44",
-    "45",
-    "46",
-    "47",
-    "48",
-    "49",
-    "50",
-    "51",
-    "52",
-    "53",
-    "54",
-    "55",
-    "56",
-    "57",
-    "58",
-    "59",
-    "60",
-  ])}%*`;
-  let boost4 = `*${pickRandom([
-    "61",
-    "62",
-    "63",
-    "64",
-    "65",
-    "66",
-    "67",
-    "68",
-    "69",
-    "70",
-    "71",
-    "72",
-    "73",
-    "74",
-    "75",
-    "76",
-    "77",
-    "78",
-    "79",
-    "80",
-  ])}%*`;
-  let boost5 = `*${pickRandom([
-    "81",
-    "82",
-    "83",
-    "84",
-    "85",
-    "86",
-    "87",
-    "88",
-    "89",
-    "90",
-    "91",
-    "92",
-    "93",
-    "94",
-    "95",
-    "96",
-    "97",
-    "98",
-    "99",
-    "100",
-  ])}%*`;
-  await m.reply(start);
-  await m.reply(boost);
-  await m.reply(boost3);
-  await m.reply(boost5);
-  let old = performance.now();
-  let neww = performance.now();
-  let speed = `${neww - old}`;
-  let doxeo = `*[ ✔ ] 𝙿𝙴𝚁𝚂𝙾𝙽𝙰 𝙳𝙾𝚇𝚇𝙴𝙰𝙳𝙰 𝙲𝙾𝙽 𝙴𝚇𝙸𝚃𝙾*\n*⏳ 𝙳𝙾𝚇𝚇𝙴𝙰𝙳𝙾 𝙴𝙽: ${speed} 𝚜𝚎𝚐𝚞𝚗𝚍𝚘𝚜!* 
+import {performance} from 'perf_hooks'; 
+ const handler = async (m, {conn, text}) => { 
   
- *𝚁𝙴𝚂𝚄𝙻𝚃𝙰𝙳𝙾𝚂 𝙾𝙱𝚃𝙴𝙽𝙸𝙳𝙾𝚂:* 
+ const start = performance.now();     
+ const end = performance.now(); 
+ const executionTime = (end - start); 
   
- *Nombre:* ${text} 
- *Ip:* ${pickRandom([
-   "81",
-   "82",
-   "83",
-   "84",
-   "85",
-   "86",
-   "87",
-   "88",
-   "89",
-   "90",
-   "91",
-   "92",
-   "93",
-   "94",
-   "95",
-   "96",
-   "97",
-   "98",
-   "99",
-   "100",
- ])}.${pickRandom([
-    "818",
-    "842",
-    "823",
-    "854",
-    "850",
-    "861",
-    "187",
-    "88",
-    "9",
-    "907",
-    "1",
-    "42",
-    "74",
-    "92",
-    "925",
-    "236",
-    "197",
-    "50",
-    "67",
-    "10",
-  ])}.${pickRandom(["21", "12", "10", "8", "15", "6", "37", "9", "4", "10", "31", "39", "33", "14", "45", "0", "17", "38", "29", "40"])}.${pickRandom(
-    ["231", "489", "83", "224", "145", "809", "387", "88", "415", "215", "341", "52", "443", "74", "235", "926", "917", "982", "199", "650"]
-  )} 
- *N:* ${pickRandom(["43 7462", "52 4284", "72 6397", "91 2763", "92 7234", "82 2976", "47 8239", "24 1975"])} 
- *W:* ${pickRandom(["12.4893", "63,5732", "46.3622", "74.2532", "32.5346", "45.6463"])} 
- *SS NUMBER:* ${pickRandom([
-   "6979191519182016",
-   "82638826389365286",
-   "75166372839625537",
-   "154325254356265",
-   "462537276372678386",
-   "263525563754328763",
-   "5627838828383623",
-   "43528663839486623",
-   "56117736283763",
- ])} 
- *IPV6:* ${pickRandom(["fe80::5dcd::ef69::fb22::d9888%12", "fe30::8dcd::ef52::fb43::d96552%32", "fe52::8dcd::ef65::fb72::d81653%10"])} 
- *UPNP:* ${pickRandom(["ENABLE", "DISABLE"])} 
- *DMZ:* ${pickRandom(["10.112.42.15", "83.173.72.18", "81.196.27.48", "17.726.29.49", "27.919.25.84", "38.926.48.71", "38.826.37.82"])} 
- *MAC:* ${pickRandom(["3A:78:3E:7E:00", "3N:82:2B:2E:71", "8S:67:3D:7S:18"])} 
- *ISP:* Ucom unversal  
- *DNS:* 8.8.8.8 
- *ALT DNS:* 1.1.1.8.1   
- *DNS SUFFIX:* Dlink 
- *WAN:* 100.23.10.15 
- *WAN TYPE:* private nat 
- *GATEWAY:* 192.168.0.1 
- *SUBNET MASK:* 255.255.0.255 
- *UDP OPEN PORTS:* 8080.80 
- *TCP OPEN PORTS:* 443 
- *ROUTER VENDEDOR:* ERICCSON 
- *DEVICE VENDEDOR:* WIN32-X 
- *CONNECTION TYPE:* TPLINK COMPANY 
- *ICMPHOPS:* 192.168.0.1 192.168.1.1 100.73.43.4 
- host-132.12.32.167.ucom.com 
- host-132.12.111.ucom.com 
- 36.134.67.189 216.239.78.11 
- Sof02s32inf14.1e100.net 
- *HTTP:* 192.168.3.1:433-->92.28.211.234:80 
- *Http:* 192.168.625-->92.28.211.455:80 
- *Http:* 192.168.817-->92.28.211.8:971 
- *Upd:* 192.168452-->92.28.211:7265288 
- *Tcp:* 192.168.682-->92.28.211:62227.7 
- *Tcp:* 192.168.725-->92.28.211:67wu2 
- *Tcp:* 192.168.629-->92.28.211.167:8615 
- *EXTERNAL MAC:* 6U:77:89:ER:O4 
- *MODEM JUMPS:* 64`;
-  m.reply(doxeo, null, {mentions: conn.parseMention(doxeo)});
-};
-handler.help = ["doxear <nombre> | <@tag>"];
-handler.tags = ["fun"];
-handler.command = /^Doxxeo|doxxeo|doxxear|Doxxear|doxeo|doxear|doxxeame|doxeame/i;
-export default handler;
-
-function pickRandom(list) {
-  return list[Math.floor(Math.random() * list.length)];
-}
+ const ipParts = []; 
+ for (let i = 0; i < 4; i++) { 
+ ipParts.push(Math.floor(Math.random() * 256))}; 
+ const ipAddress = ipParts.join('.'); 
+ const fakeData = { 
+ name_tag: '', 
+ ip: `${Math.floor(Math.random() * 256)}.${Math.floor(Math.random() * 256)}.${Math.floor(Math.random() * 256)}.${Math.floor(Math.random() * 256)}`, 
+ fakeCameraLink: `http://${ipAddress}.com/camera-feed`,     
+ n: Math.floor(Math.random() * 100000), 
+ w: (Math.random() * (20 - 10) + 10).toFixed(4), 
+ ssNumber: Math.floor(Math.random() * 10000000000000000), 
+ ipv6: `fe80:${(Math.random() * 65535).toString(16)}:${(Math.random() * 65535).toString(16)}:${(Math.random() * 65535).toString(16)}:${(Math.random() * 65535).toString(16)}%${Math.floor(Math.random() * 100)}`, 
+ upnp: getRandomValue(['Enabled', 'Disabled']), 
+ dmz: `${Math.floor(Math.random() * 256)}.${Math.floor(Math.random() * 256)}.${Math.floor(Math.random() * 256)}.${Math.floor(Math.random() * 256)}`, 
+ mac: `${Math.floor(Math.random() * 256).toString(16).toUpperCase()}:${Math.floor(Math.random() * 256).toString(16).toUpperCase()}:${Math.floor(Math.random() * 256).toString(16).toUpperCase()}:${Math.floor(Math.random() * 256).toString(16).toUpperCase()}:${Math.floor(Math.random() * 256).toString(16).toUpperCase()}:${Math.floor(Math.random() * 256).toString(16).toUpperCase()}`, 
+ isp: getRandomValue(['Ucom universal', 'ISP Co', 'Internet Solutions Inc']), 
+ dns: `${Math.floor(Math.random() * 256)}.${Math.floor(Math.random() * 256)}.${Math.floor(Math.random() * 256)}.${Math.floor(Math.random() * 256)}`, 
+ altDns: `${Math.floor(Math.random() * 256)}.${Math.floor(Math.random() * 256)}.${Math.floor(Math.random() * 256)}.${Math.floor(Math.random() * 256)}`, 
+ dnsSuffix: getRandomValue(['Dlink', 'DNS', 'ISPsuffix']), 
+ wan: `${Math.floor(Math.random() * 256)}.${Math.floor(Math.random() * 256)}.${Math.floor(Math.random() * 256)}.${Math.floor(Math.random() * 256)}`, 
+ wanType: getRandomValue(['private nat', 'public nat', 'Dynamic IP']), 
+ gateway: `192.${Math.floor(Math.random() * 256)}.0.1`, 
+ subnetMask: `255.255.${Math.floor(Math.random() * 256)}.0`, 
+ udpOpenPorts: `${Math.floor(Math.random() * 10000)}.${Math.floor(Math.random() * 10000)}`, 
+ tcpOpenPorts: `${Math.floor(Math.random() * 10000)}`, 
+ routerVendor: getRandomValue(['ERICCSON', 'TPLINK', 'Cisco']), 
+ deviceVendor: getRandomValue(['WIN32-X', 'Device Co', 'SecureTech']), 
+ connectionType: getRandomValue(['TPLINK COMPANY', 'ISP Connect', 'Home Network']), 
+ icmphops: `192.${Math.floor(Math.random() * 256)}.0.1 192.${Math.floor(Math.random() * 256)}.1.1 100.${Math.floor(Math.random() * 256)}.43.4`, 
+ http: `192.168.${Math.floor(Math.random() * 256)}.1:433-->92.28.211.234:80`, 
+ http2: `192.168.${Math.floor(Math.random() * 256)}.625-->92.28.211.455:80`, 
+ http3: `192.168.${Math.floor(Math.random() * 256)}.817-->92.28.211.8:971`, 
+ udp: `192.168.${Math.floor(Math.random() * 256)}.452-->92.28.211.7265288`, 
+ tcp1: `192.168.${Math.floor(Math.random() * 256)}.682-->92.28.211.62227.7`, 
+ tcp2: `192.168.${Math.floor(Math.random() * 256)}.725-->92.28.211.67wu2`, 
+ tcp3: `192.168.${Math.floor(Math.random() * 256)}.629-->92.28.211.167:8615`, 
+ externalMac: `${Math.floor(Math.random() * 256).toString(16).toUpperCase()}:${Math.floor(Math.random() * 256).toString(16).toUpperCase()}:${Math.floor(Math.random() * 256).toString(16).toUpperCase()}:${Math.floor(Math.random() * 256).toString(16).toUpperCase()}:${Math.floor(Math.random() * 256).toString(16).toUpperCase()}:${Math.floor(Math.random() * 256).toString(16).toUpperCase()}`, 
+ modemJumps: Math.floor(Math.random() * 100) 
+ }; 
+ if (m.mentionedJid[0]) { 
+ fakeData.name_tag = text //`@${m.mentionedJid[0].split('@')[0]}` //conn.getName(m.mentionedJid[0]) 
+ } else { 
+ fakeData.name_tag = text     
+ } 
+  
+ const doxeo = `*[ ✔ ] Persona doxxeada con éxito.*\n\n*—◉ Doxxeo realizado en:*\n*◉ ${executionTime} segundos.*\n*—◉ Resultados obtenidos del doxxeo:* 
+  
+ *Nombre:* ${fakeData.name_tag} 
+ *Ip:* ${fakeData.ip} 
+ *N:* ${fakeData.n} 
+ *W:* ${fakeData.w} 
+ *SS NUMBER:* ${fakeData.ssNumber} 
+ *CAMARA DEL CELULAR:* ${fakeData.fakeCameraLink} 
+ *IPV6:* ${fakeData.ipv6} 
+ *UPNP:* ${fakeData.upnp} 
+ *DMZ:* ${fakeData.dmz} 
+ *MAC:* ${fakeData.mac} 
+ *ISP:* ${fakeData.isp} 
+ *DNS:* ${fakeData.dns} 
+ *ALT DNS:* ${fakeData.altDns} 
+ *DNS SUFFIX:* ${fakeData.dnsSuffix} 
+ *WAN:* ${fakeData.wan} 
+ *WAN TYPE:* ${fakeData.wanType} 
+ *GATEWAY:* ${fakeData.gateway} 
+ *SUBNET MASK:* ${fakeData.subnetMask} 
+ *UDP OPEN PORTS:* ${fakeData.udpOpenPorts} 
+ *TCP OPEN PORTS:* ${fakeData.tcpOpenPorts} 
+ *ROUTER VENDEDOR:* ${fakeData.routerVendor} 
+ *DEVICE VENDEDOR:* ${fakeData.deviceVendor} 
+ *CONNECTION TYPE:* ${fakeData.connectionType} 
+ *ICMPHOPS:* ${fakeData.icmphops} 
+ *HTTP:* ${fakeData.http} 
+ *Http:* ${fakeData.http2} 
+ *Http:* ${fakeData.http3} 
+ *Upd:* ${fakeData.udp} 
+ *Tcp:* ${fakeData.tcp1} 
+ *Tcp:* ${fakeData.tcp2} 
+ *Tcp:* ${fakeData.tcp3} 
+ *EXTERNAL MAC:* ${fakeData.externalMac} 
+ *MODEM JUMPS:* ${fakeData.modemJumps}`; 
+  
+ async function loading() { 
+ var hawemod = [ 
+ "《 █▒▒▒▒▒▒▒▒▒▒▒》10%", 
+ "《 ████▒▒▒▒▒▒▒▒》30%", 
+ "《 ███████▒▒▒▒▒》50%", 
+ "《 ██████████▒▒》80%", 
+ "《 ████████████》100%" 
+ ] 
+       let { key } = await conn.sendMessage(m.chat, {text: `*☠ ¡¡INICIANDO DOXXEO!! ☠*`}, {quoted: m}) 
+  for (let i = 0; i < hawemod.length; i++) { 
+    await new Promise(resolve => setTimeout(resolve, 1000));  
+    await conn.sendMessage(m.chat, {text: hawemod[i], edit: key}, {quoted: m});  
+   } 
+   await conn.sendMessage(m.chat, {text: doxeo, edit: key, mentions: conn.parseMention(doxeo)}, {quoted: m});          
+  } 
+ loading()     
+ }; 
+ handler.help = ['doxear <nombre> | <@tag>']; 
+ handler.tags = ['fun']; 
+ handler.command = /^Doxxeo|doxxeo|doxxear|Doxxear|doxeo|doxear|doxxeame|doxeame/i; 
+ export default handler; 
+  
+ function getRandomValue(arr) { 
+     return arr[Math.floor(Math.random() * arr.length)]; 
+ }
