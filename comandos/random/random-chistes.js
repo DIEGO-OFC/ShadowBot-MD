@@ -1,3 +1,4 @@
+//por diegoOfc | Skid programa con chathpt
 let handler = async (m, {conn, usedPrefix, command}) => {
 m.reply(`${pickRandom(jokes)}`)}
 handler.help = ["chistes"];
