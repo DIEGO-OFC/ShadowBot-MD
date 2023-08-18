@@ -168,7 +168,7 @@ let handler = async (m, { conn, args, command, jid, text, usedPrefix }) => {
           'seconds': '999999999',
           'gifPlayback': 'true',
           'caption': bottime,
-          'jpegThumbnail': fs.readFileSync('.Menu2.jpg')
+          'jpegThumbnail': fs.readFileSync("./Menu2.jpg")
         }
       }
     }
