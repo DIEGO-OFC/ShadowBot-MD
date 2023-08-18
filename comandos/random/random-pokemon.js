@@ -1,6 +1,6 @@
-import pokemon from 'pokemon';
+import RandoMon from 'randomon';
 let handler = async (m, {conn, usedPrefix, command}) => {
-   const poke = pokemon.random('es')
+   const poke = RandoMon();
      const caption = `*乂 ⺀ RANDOM - POKEMON ⺀ 乂*`  
      await conn.sendFile(m.chat, poke, "zirax.jpg", caption, m);
  };
