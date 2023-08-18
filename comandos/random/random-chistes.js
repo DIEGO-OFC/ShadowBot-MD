@@ -1,9 +1,13 @@
 let handler = async (m, {conn, usedPrefix, command}) => {
-m.reply(jokes)}
+m.reply(${pickRandom(jokes)})}
 handler.help = ["chistes"];
 handler.tags = ["internet"];
 handler.command = /^(chistes)$/i;
 export default handler;
+
+function pickRandom(list) { 
+   return list[Math.floor(list.length * Math.random())]; 
+}
 
 const jokes = [
 
