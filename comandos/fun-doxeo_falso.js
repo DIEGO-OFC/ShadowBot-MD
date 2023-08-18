@@ -1,5 +1,5 @@
 import {performance} from 'perf_hooks'; 
- const handler = async (m, {conn, text}) => { 
+var handler = async (m, {conn, text}) => { 
   
  const start = performance.now();     
  const end = performance.now(); 
