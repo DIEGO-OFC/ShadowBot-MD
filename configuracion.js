@@ -95,7 +95,7 @@ global.año = d.toLocaleDateString("es", {year: "numeric"});
 global.tiempo = d.toLocaleString("en-US", {hour: "numeric", minute: "numeric", second: "numeric", hour12: true});
 //------------- Sticker WM -----------
 global.packname = `𝐃𝐈𝐄𝐆𝐎-𝐎𝐅𝐂`;
-global.author = `© The Shadow Brokers - Bot - MD`;
+global.author = `© The Shadow Brokers - Bot`;
 //_______________
 global.wm = "𝐙𝐈𝐑𝐀𝐗-𝐁𝐎𝐓 | 𝐃𝐈𝐄𝐆𝐎-𝐎𝐅𝐂";
 global.db3t = `©⏤͟͟͞𝐓𝐇𝐄 𝐙𝐈𝐑𝐀𝐗-𝐁𝐎𝐓-𝐌𝐃 `;
