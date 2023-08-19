@@ -12,7 +12,7 @@ termux-setup-storage
 > pkg install ffmpeg -y
 > pkg install imagemagick -y
 > pkg install yarn
-> git clone https://github.com/DIEGO-OFC/Zirax-Bot-MD
+> git clone https://github.com/DIEGO-OFC/ShadowBot-MD
 > cd Zirax-Bot-MD
 > yarn install 
 > npm install
