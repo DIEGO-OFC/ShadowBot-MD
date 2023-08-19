@@ -1,7 +1,7 @@
 # ***🔥 Zirax-Bot-MD 🔥***
 
 <p align="center">
-<img src="https://github.com/DIEGO-OFC/DORRAT-BOT-MD/blob/main/galeria/zirax-bot.jpg" alt="DORRAT-BOT-MD" width="900"/>
+<img src="https://github.com/DIEGO-OFC/ShadowBotV4-MD/blob/master/src/sinfoto.jpg" alt="DORRAT-BOT-MD" width="900"/>
 </p>
 
 #  ***Anterior nombre: Dorrat-Bot-MD***
