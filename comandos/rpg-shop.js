@@ -273,7 +273,7 @@ ${Object.keys(listItems)
   const total = Math.floor(isNumber(args[1]) ? Math.min(Math.max(parseInt(args[1]), 1), Number.MAX_SAFE_INTEGER) : 1) * 1;
   let premium = user.premium;
 
-  if (!listItems[item]) return conn.sendFile(m.chat, image, 'zirax.jpg', footer)
+  if (!listItems[item]) return conn.sendMessage(m.chat, {image: {url: imagen1}, caption: footer, mentions: conn.parseMention(footer)}, {ephemeralExpiration: 24*60*100, disappearingMessagesInChat: 24*60*100})
   // conn.sendButton(m.chat, text, footer, imagen1, buttons, m);
   if (command.toLowerCase() == "buy") {
     let paymentMethod = Object.keys(listItems[item]).find((v) => v in user);
