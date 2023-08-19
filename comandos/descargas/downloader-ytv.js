@@ -3,9 +3,10 @@ import {youtubedl, youtubedlv2} from '@bochilteam/scraper';
  import fetch from 'node-fetch'; 
  import yts from 'yt-search'; 
  import ytdl from 'ytdl-core'; 
- import axios from 'axios'; 
- import {bestFormat, getUrlDl} from '../lib/y2dl.js'; 
- const handler = async (m, {conn, args, usedPrefix, command}) => { 
+ import axios from 'axios';
+// import {bestFormat, getUrlDl} from '../lib/y2dl.js'; 
+
+ var handler = async (m, {conn, args, usedPrefix, command}) => { 
    if (!args[0]) throw '*[❗] Uso incorrecto del comando, ingrese un enlace / link de YouTube.*'; 
    let enviando; 
    if (enviando) return   
