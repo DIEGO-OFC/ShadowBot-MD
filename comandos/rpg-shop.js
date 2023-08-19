@@ -214,7 +214,10 @@ ${htki} *VENDER* ${htka}
 `.trim();
   footer =
     command.toLowerCase() == "buy"
-      ? `
+      ? `${htki} *COMPRAR : BUY* ${htka}
+ 
+ ${htki} *VENDER* ${htka}
+ 
 🔖 𝙻𝙸𝚂𝚃𝙰 𝙳𝙴 𝙰𝚁𝚃𝙸𝙲𝚄𝙻𝙾𝚂 : 
 ${Object.keys(listItems)
   .map((v) => {
@@ -270,7 +273,8 @@ ${Object.keys(listItems)
   const total = Math.floor(isNumber(args[1]) ? Math.min(Math.max(parseInt(args[1]), 1), Number.MAX_SAFE_INTEGER) : 1) * 1;
   let premium = user.premium;
 
-  if (!listItems[item]) return conn.sendButton(m.chat, text, footer, imagen1, buttons, m);
+  if (!listItems[item]) return conn.sendFile(m.chat, image, 'zirax.jpg', footer)
+  // conn.sendButton(m.chat, text, footer, imagen1, buttons, m);
   if (command.toLowerCase() == "buy") {
     let paymentMethod = Object.keys(listItems[item]).find((v) => v in user);
     if (user[paymentMethod] < listItems[item][paymentMethod] * total)
@@ -294,7 +298,10 @@ ${Object.keys(listItems)
 *𝙰𝙷𝙾𝚁𝙰 𝚃𝙸𝙴𝙽𝙴: ${user[item]} ${global.rpgshopp.emoticon(item)}`)
   } else {
     if (user[item] < total)
-      return conn.sendButton(
+      return conn.reply(`🎟️ 𝗣 𝗥 𝗘 𝗠 𝗜 𝗨 𝗠 ⇢ ${premium ? "✅" : "❌"}\n${wm}\n\n*No tienes suficiente ${global.rpgshop.emoticon(item)} para vender solo tienes ${user[item]} ${global.rpgshopp.emoticon(
+          item
+        )}*\n\n*You dont have enough ${global.rpgshop.emoticon(item)} to sell, you only have ${user[item]} ${global.rpgshopp.emoticon(item)}*`)
+      /*conn.sendButton(
         m.chat,
         `🎟️ 𝗣 𝗥 𝗘 𝗠 𝗜 𝗨 𝗠 ⇢ ${premium ? "✅" : "❌"}\n${wm}`,
         `*No tienes suficiente ${global.rpgshop.emoticon(item)} para vender solo tienes ${user[item]} ${global.rpgshopp.emoticon(
@@ -306,13 +313,18 @@ ${Object.keys(listItems)
           ["𝙑𝙤𝙡𝙫𝙚𝙧 𝙖𝙡 𝙈𝙚𝙣𝙪́ | 𝘽𝙖𝙘𝙠 𝙩𝙤 𝙈𝙚𝙣𝙪 ☘️", "/menu"],
         ],
         m
-      );
+      );*/
 
     let paymentMethod = Object.keys(listItems[item]).find((v) => v in user);
     user[item] -= total;
     user[paymentMethod] += listItems[item][paymentMethod] * total;
 
-    return conn.sendButton(
+    return conn.reply(`*––『 VENDIDO 』––*\n\n${conn.getName(m.sender)} 
+*𝙷𝙰𝚂 𝚅𝙴𝙽𝙳𝙸𝙳𝙾 ${item} » ${total} ${global.rpgshop.emoticon(item)}*.
+*--------------------------------------------*
+*𝙶𝙰𝙽𝙰𝙽𝙲𝙸𝙰𝚂: ${listItems[item][paymentMethod] * total} ${global.rpgshop.emoticon(paymentMethod)}*
+*𝙰𝙷𝙾𝚁𝙰 𝚃𝙸𝙴𝙽𝙴: ${user[paymentMethod]} ${global.rpgshopp.emoticon(paymentMethod)}*`)
+    /*conn.sendButton(
       m.chat,
       `*––『 VENDIDO 』––*`,
       `${conn.getName(m.sender)} 
@@ -328,7 +340,7 @@ ${Object.keys(listItems)
       ],
       fkontak,
       m
-    );
+    );*/
   }
 };
 handler.help = ["buy", "sell"].map((v) => v + " [item] [count]");
@@ -346,4 +358,4 @@ function isNumber(number) {
   if (!number) return number;
   number = parseInt(number);
   return typeof number == "number" && !isNaN(number);
-}
+      }
