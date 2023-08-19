@@ -41,7 +41,7 @@ Dorrat se seguira usando para distintas cosas y funciones.
   
 ### `—◉ 🛡️ ACTIVAR EN REPLIT 🛡️`
 
-[![Run on Repl.it](https://repl.it/badge/github/DIEGO-OFC/DORRAT-BOT-MD)](https://repl.it/github/DIEGO-OFC/DORRAT-BOT-MD)
+[![Run on Repl.it](https://repl.it/badge/github/DIEGO-OFC/Shadow-Bot-MD)](https://repl.it/github/DIEGO-OFC/Shadow-Bot-MD)
 > [❗ obligatorio ❗] si vas a instalar en replit edita la carpeta index-inicio.js y ponle index.js
 > Es obligatorio o no funcionará en replit
 
