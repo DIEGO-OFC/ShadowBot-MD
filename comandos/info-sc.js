@@ -11,7 +11,7 @@ let handler = async (m, {conn, usedPrefix: _p}) => {
     var seconds = Math.floor(seconds % 60);
 
     //return pad(hours) + ':' + pad(minutes) + ':' + pad(seconds)
-    return `❍ https://github.com/DIEGO-OFC/Zirax-Bot-MD\n\n*⏰ TIEMPO ACTIVO*\n \t${pad(days)} Dias\t ${pad(hours)} Horas ${pad(
+    return `❍ https://github.com/DIEGO-OFC/ShadowBot-MD\n\n*⏰ TIEMPO ACTIVO*\n \t${pad(days)} Dias\t ${pad(hours)} Horas ${pad(
       minutes
     )} Minutos ${pad(seconds)} Segudos \t\n`;
   }
