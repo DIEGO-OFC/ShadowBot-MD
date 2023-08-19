@@ -13,7 +13,7 @@ let handler = async (m, {conn}) => {
   let uptime = clockString(_uptime);
   let taguser = "@" + m.sender.split("@s.whatsapp.net")[0];
   let pp = imagen4;
-  let db = `╔═[ *∆.𝑫𝑶𝑹𝑹𝑯∆𝑻-𝑩𝑶𝑻.∆* ]
+  let db = `╔═[ *∆.𝐒𝐡𝐚𝐝𝐨𝐰𝐁𝐨𝐭.∆* ]
 ║ *➤ 𝙷𝙾𝙻𝙰 ${taguser}*
 ║
 ║ *=➢ 🤖 TIEMPO ACTIVO:* ${uptime}
