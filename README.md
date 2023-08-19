@@ -1,4 +1,4 @@
-# ***🔥 Zirax-Bot-MD 🔥***
+# ***🔥 Shadow-Bot-MD 🔥***
 
 <p align="center">
 <img src="https://github.com/DIEGO-OFC/ShadowBotV4-MD/blob/master/src/sinfoto.jpg" alt="DORRAT-BOT-MD" width="900"/>
