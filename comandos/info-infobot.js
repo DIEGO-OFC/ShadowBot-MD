@@ -52,7 +52,7 @@ let info = `
 ║❒  [📦] *DISCO DURO:*  ${json.disk}
 ║❒  [🖥️] *CPU USADA:*  ${json.cpu} 
 ╠
-*╠═〘 Dorrat-Bot-MD 〙 ═*`.trim();
+*╠═〘 𝐓𝐡𝐞 𝐒𝐡𝐚𝐝𝐨𝐰 𝐁𝐫𝐨𝐜𝐤𝐞𝐫𝐬 - 𝐁𝐨𝐭 〙 ═*`.trim();
   
 conn.sendMessage(m.chat, { image: { url: "https://telegra.ph/file/7ec5032386dfe878f99ab.jpg", }, caption: info,
 contextInfo: {
