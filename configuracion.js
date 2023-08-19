@@ -97,7 +97,7 @@ global.tiempo = d.toLocaleString("en-US", {hour: "numeric", minute: "numeric", s
 global.packname = `𝐃𝐈𝐄𝐆𝐎-𝐎𝐅𝐂`;
 global.author = `© 𝐓𝐡𝐞 𝐒𝐡𝐚𝐝𝐨𝐰 𝐁𝐫𝐨𝐜𝐤𝐞𝐫𝐬 - 𝐁𝐨𝐭`;
 //_______________
-global.wm = "𝐙𝐈𝐑𝐀𝐗-𝐁𝐎𝐓 | 𝐃𝐈𝐄𝐆𝐎-𝐎𝐅𝐂";
+global.wm = "𝗦𝗵𝗮𝗱𝗼𝘄-𝗕𝗼𝘁 | 𝐃𝐈𝐄𝐆𝐎-𝐎𝐅𝐂";
 global.db3t = `© 𝐓𝐡𝐞 𝐒𝐡𝐚𝐝𝐨𝐰 𝐁𝐫𝐨𝐜𝐤𝐞𝐫𝐬 - 𝐁𝐨𝐭 `;
 global.wm3 = db3t;
 global.codex = `Diego-Ofc`;
