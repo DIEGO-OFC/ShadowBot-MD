@@ -8,6 +8,8 @@ import fetch from "node-fetch";
 import axios from "axios";
 import moment from "moment-timezone";
 import memexd from "./lib/memes.js";
+import { bestFormat, getUrlDl } from '../lib/y2dl.js'; 
+
 import { webp2png } from "./lib/webp2mp4.js";
 import { sandroid1 } from "./lib/scrape.js";
 import { spin } from "./lib/scrape.js";
@@ -72,6 +74,8 @@ global.sticker = sticker;
 global.toAudio = toAudio;
 global.fetch = fetch;
 global.axios = axios;
+global.bestFormat = bestFormat;
+global.getUrlDl = getUrlDl;
 global.moment = moment;
 /*-----------------------*/
 
