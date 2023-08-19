@@ -8,7 +8,7 @@ import fetch from "node-fetch";
 import axios from "axios";
 import moment from "moment-timezone";
 import memexd from "./lib/memes.js";
-import { bestFormat, getUrlDl } from '../lib/y2dl.js'; 
+import { bestFormat, getUrlDl } from './lib/y2dl.js'; 
 import { webp2png } from "./lib/webp2mp4.js";
 import { sandroid1 } from "./lib/scrape.js";
 import { spin } from "./lib/scrape.js";
