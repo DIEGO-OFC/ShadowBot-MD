@@ -49,10 +49,10 @@ Dorrat se seguira usando para distintas cosas y funciones.
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/DIEGO-OFC/Zirax-Bot-MD)
 
 ### `—◉ ⚒️ 𝐀𝐉𝐔𝐒𝐓𝐄𝐒 ⚒️`
-- CLONAR EL REPOSITORIO [Aqui](https://github.com/DIEGO-OFC/Zirax-Bot-MD/fork)
-- CAMBIAR NÚMERO DEL OWNER [Aqui](https://github.com/DIEGO-OFC/Zirax-Bot-MD/blob/main/configuracion.js)
+- CLONAR EL REPOSITORIO [Aqui](https://github.com/DIEGO-OFC/Shadow-Bot-MD/fork)
+- CAMBIAR NÚMERO DEL OWNER [Aqui](https://github.com/DIEGO-OFC/Shadow-Bot-MD/blob/main/configuracion.js)
 
-### <img src="https://github.com/DIEGO-OFC/Zirax-Bot-MD/blob/main/galeria/unnamed.png" height="30px"> 𝐀𝐂𝐓𝐈𝐕𝐀𝐑 𝐄𝐍 𝐓𝐄𝐑𝐌𝐔𝐗
+### <img src="https://github.com/DIEGO-OFC/Shadow-Bot-MD/blob/main/galeria/unnamed.png" height="30px"> 𝐀𝐂𝐓𝐈𝐕𝐀𝐑 𝐄𝐍 𝐓𝐄𝐑𝐌𝐔𝐗
 - ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
 ```bash
 > termux-setup-storage
@@ -63,7 +63,7 @@ Dorrat se seguira usando para distintas cosas y funciones.
 > pkg install ffmpeg -y
 > pkg install imagemagick -y
 > pkg install yarn
-> git clone https://github.com/DIEGO-OFC/Zirax-Bot-MD 
+> git clone https://github.com/DIEGO-OFC/Shadow-Bot-MD
 > cd Zirax-Bot-MD 
 > yarn install 
 > npm install
@@ -73,16 +73,16 @@ Dorrat se seguira usando para distintas cosas y funciones.
 ### `—◉ ☑️ ACTIVAR EN CASO DE APAGARSE EN TERMUX ☑️`
 ```bash
 ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
-> cd DORRAT-BOT-MD
+> cd Shadow-Bot-MD
 > npm start
 ```
 
-### `—◉ 𝐎𝐁𝐓𝐄𝐍𝐄𝐑 𝐎𝐓𝐑𝐎 𝐂𝐎𝐃𝐈𝐆𝐎 𝐐𝐑` <img src="https://github.com/DIEGO-OFC/Zirax-Bot-MD/blob/main/galeria/qrcode_30531084_.png" height="30px">
+### `—◉ 𝐎𝐁𝐓𝐄𝐍𝐄𝐑 𝐎𝐓𝐑𝐎 𝐂𝐎𝐃𝐈𝐆𝐎 𝐐𝐑` <img src="https://github.com/DIEGO-OFC/Shadow-Bot-MD/blob/main/galeria/qrcode_30531084_.png" height="30px">
 
 - DETENER EL BOT DANDO CLICK EN EL SIMBOLO CTROL EN TERMUX MAS LA LETRA Z EN SU TECLADO MOVIL HASTA QUE SALGA ALGO EN VERDE SIMILAR A DORRAT-TERMUX $  
 ```bash
 ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
-> cd DORRAT-BOT-MD
+> cd Shadow-Bot-MD
 > rm -rf DORRATSESSION 
 > npm start
 ```
@@ -107,4 +107,4 @@ ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
 ## `𝐄𝐃𝐈𝐓𝐎𝐑 𝐘 𝐏𝐎𝐑𝐏𝐈𝐄𝐓𝐀𝐑𝐈𝐎 𝐃𝐄𝐋 𝐁𝐎𝐓` 
 <a href="https://github.com/DIEGO-OFC"><img src="https://github.com/DIEGO-OFC.png" width="300" height="300" alt="DIEGO-OFC"/></a>
 
-> The Zirax - bot - MD_ By DIEGO OFC 
+> The Shadow - Brockers - Bot - MD_ By DIEGO OFC 
