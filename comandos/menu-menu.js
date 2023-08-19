@@ -56,7 +56,7 @@ await conn.sendMessage(m.chat, {
 }  
 if (command == "menucompleto" || command == "allmenu") {
 await m.reply(`[ 𝐂𝐀𝐑𝐆𝐀𝐍𝐃𝐎 𝐌𝐄𝐍𝐔... ]`);                 
-var completomenu = `*╭━━❍𝐙𝐈𝐑𝐀𝐗-𝐁𝐎𝐓-𝐌𝐃❍━━╮* 
+var completomenu = `*╭━━❍𝑺𝒉𝒂𝒅𝒐𝒘𝑩𝒐𝒕❍━━╮* 
  *┣━━━▢ ❤𝐇𝐎𝐋𝐀, ${username}❤*• 
  *┃╭━━━━━━━━━━━━━━━━╾•* 
  *┃┃  ❍ ${ucapan()} ❍* 
@@ -68,7 +68,7 @@ var completomenu = `*╭━━❍𝐙𝐈𝐑𝐀𝐗-𝐁𝐎𝐓-𝐌𝐃❍�
  *┃┃ ⋄ LIBRERIA » ${library}* 
  *┃┃ ⋄ USUARIOS » ${Object.keys(global.db.data.users).length}* 
  *┃╰━━━━━━━━━━━━━━━━╾•* 
- *╰━━━╼𝐙𝐈𝐑𝐀𝐗-𝐁𝐎𝐓-𝐌𝐃╾━━━╯* 
+ *╰━━━╼𝑺𝒉𝒂𝒅𝒐𝒘𝑩𝒐𝒕╾━━━╯* 
   
  ▧ 「 *I N F O R M A C I O N* 」  
  ‣ ︎Comando: ${usedPrefix}grupos
