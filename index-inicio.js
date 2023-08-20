@@ -35,30 +35,28 @@ function start(file) {
 
   setupMaster({
     exec: args[0],
-    args: args.slice(1),
-  });
-
+    args: args.slice(1)});
   const p = fork();
-  p.on("message", (data) => {
+  p.on('message', (data) => {
+    console.log('[RECEIVED]', data);
     switch (data) {
-      case "reset":
+      case 'reset':
         p.process.kill();
         isRunning = false;
-        start(file);
+        start.apply(this, arguments);
         break;
-      case "uptime":
+      case 'uptime':
         p.send(process.uptime());
         break;
     }
   });
-
-  p.on("exit", (_, code) => {
+  p.on('exit', (_, code) => {
     isRunning = false;
-    console.error("⚠️ Error Inesperado ⚠️", code);
+    console.error('❎ㅤOcurrio un error inesperado:', code);
 
     p.process.kill();
     isRunning = false;
-    start(file);
+    start.apply(this, arguments);
 
     if (process.env.pm_id) {
       process.exit(1);
@@ -66,15 +64,13 @@ function start(file) {
       process.exit();
     }
   });
-
-  const opts = yargs(process.argv.slice(2)).exitProcess(false).parse();
-  if (!opts["test"]) {
+  const opts = new Object(yargs(process.argv.slice(2)).exitProcess(false).parse());
+  if (!opts['test']) {
     if (!rl.listenerCount()) {
-      rl.on("line", (line) => {
-        p.emit("message", line.trim());
+      rl.on('line', (line) => {
+        p.emit('message', line.trim());
       });
     }
   }
 }
-
-start("main.js");
+start('main.js');
