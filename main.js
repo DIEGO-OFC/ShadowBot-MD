@@ -1,4 +1,4 @@
-  process.env["NODE_TLS_REJECT_UNAUTHORIZED"] = "0"; 
+process.env["NODE_TLS_REJECT_UNAUTHORIZED"] = "0"; 
 process.on('uncaughtException', console.error);
 import "./configuracion.js";
 import "./rpg.js";
@@ -296,9 +296,9 @@ async function connectionUpdate(update) {
   if (update.qr != 0 && update.qr != undefined) {
     console.log(chalk.yellow('[✳️]ㅤEscanea este codigo QR, el codigo QR expira en 60 segundos.'));
   }
-  if (connection == 'open') {
-    console.log(chalk.yellow('[✳️] Escanea este codigo QR, el codigo QR expira en 60 segundos'));
-  }
+    if (connection == 'open') { 
+     console.log(chalk.yellow(`╭──────────────────────────────✧•°•°···\n│➢ 𝐁𝐎𝐓 𝐂𝐎𝐍𝐄𝐂𝐓𝐀𝐃𝐎 𝐂𝐎𝐑𝐑𝐄𝐂𝐓𝐀𝐌𝐄𝐍𝐓𝐄 ☑️\n│❏ 𝐁𝐎𝐓 𝐈𝐍𝐒𝐓𝐀𝐋𝐀𝐃𝐎:𝐓𝐡𝐞 𝐒𝐡𝐚𝐝𝐨𝐰 𝐁𝐫𝐨𝐜𝐤𝐞𝐫𝐬 - 𝐁𝐨𝐭 ☑️\n╰──────────────────────────────✧•°•°···`)); 
+   }
 let reason = new Boom(lastDisconnect?.error)?.output?.statusCode;
 if (connection === 'close') {
     if (reason === DisconnectReason.badSession) {
