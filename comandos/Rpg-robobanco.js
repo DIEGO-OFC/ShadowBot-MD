@@ -1,4 +1,4 @@
-
+/*
 let handler = async (m, { conn, isPrems }) => {
     let d = 0;
     let success = Math.random() >= 0.9;
