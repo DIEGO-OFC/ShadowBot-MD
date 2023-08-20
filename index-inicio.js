@@ -10,7 +10,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const { say } = cfonts;
 const rl = createInterface(process.stdin, process.stdout);
 
-say("ZIRAX-BOT-MD", {
+say("THE SHADOW BROCKERS - BOT", {
   font: "tiny",
   align: "center",
   colors: ["#ff8000"],
