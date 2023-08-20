@@ -21,7 +21,7 @@ let handler = async (m, {text, usedPrefix, command, conn}) => {
 *Grabacion ∙* ${x.Country || "-"}
 
    ❕Pedido por @${m.sender.split("@")[0]}
-*🔥 ${wm2} 🔥*`;
+*🔥 ${wm3} 🔥*`;
 
   conn.sendMessage(m.chat, {image: {url: x.Poster}, caption: mov_txt, mentions: [m.sender]}, {quoted: m});
 };
