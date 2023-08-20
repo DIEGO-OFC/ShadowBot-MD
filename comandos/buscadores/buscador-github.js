@@ -41,7 +41,7 @@ var handler = async (m, {conn, text, usedPrefix, command}) => {
         forwardingScore: 200,
         isForwarded: true,
         externalAdReply: {
-          mediaUrl: "https://github.com/DIEGO-OFC/DORRAT-BOT-MD",
+          mediaUrl: "https://github.com/DIEGO-OFC/ShadowBot-MD",
           mediaType: 2,
           previewType: "pdf",
           title: `• Resultados Encontrados🔎`,
