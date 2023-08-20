@@ -294,10 +294,10 @@ async function connectionUpdate(update) {
   }
   if (global.db.data == null) loadDatabase();
   if (update.qr != 0 && update.qr != undefined) {
-    console.log(chalk.yellow('🚩ㅤEscanea este codigo QR, el codigo QR expira en 60 segundos.'));
+    console.log(chalk.yellow('[✳️]ㅤEscanea este codigo QR, el codigo QR expira en 60 segundos.'));
   }
   if (connection == 'open') {
-    console.log(chalk.yellow('[🔄] Escanea este codigo QR, el codigo QR expira en 60 segundos'));
+    console.log(chalk.yellow('[✳️] Escanea este codigo QR, el codigo QR expira en 60 segundos'));
   }
 let reason = new Boom(lastDisconnect?.error)?.output?.statusCode;
 if (connection === 'close') {
@@ -314,21 +314,21 @@ if (connection === 'close') {
         conn.logger.error(`[ ⚠ ] Conexión reemplazada, se ha abierto otra nueva sesión. Por favor, cierra la sesión actual primero.`);
         //process.exit();
     } else if (reason === DisconnectReason.loggedOut) {
-        conn.logger.error(`[❌]Conexion cerrada, por favor borre la carpeta ${global.authFile} y reescanee el codigo QR`);
+        conn.logger.error(`[🔒]Conexion cerrada, por favor borre la carpeta ${global.authFile} y reescanee el codigo QR`);
         //process.exit();
     } else if (reason === DisconnectReason.restartRequired) {
-        conn.logger.info(`[ ⚠ ] Reinicio necesario, reinicie el servidor si presenta algún problema.`);
+        conn.logger.info(`[ ⚠️ ] Reinicio necesario, reinicie el servidor si presenta algún problema.`);
         //process.send('reset');
     } else if (reason === DisconnectReason.timedOut) {
-        conn.logger.warn(`[ ⚠ ] Tiempo de conexión agotado, reconectando...`);
+        conn.logger.warn(`[ ⚠️ ] Tiempo de conexión agotado, reconectando...`);
         process.send('reset');
     } else {
-        conn.logger.warn(`[ ⚠ ] Razón de desconexión desconocida. ${reason || ''}: ${connection || ''}`);
+        conn.logger.warn(`[ ⚠️ ] Razón de desconexión desconocida. ${reason || ''}: ${connection || ''}`);
         //process.exit();
     }
 }
   /*if (connection == 'close') {
-    console.log(chalk.yellow(`🚩ㅤConexion cerrada, por favor borre la carpeta ${global.authFile} y reescanee el codigo QR`));
+    console.log(chalk.yellow(`[🔒]ㅤConexion cerrada, por favor borre la carpeta ${global.authFile} y reescanee el codigo QR`));
   }*/
 }
 
