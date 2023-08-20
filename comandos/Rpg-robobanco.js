@@ -52,5 +52,5 @@ function pickRandom(list) {
     return list[Math.floor(list.length * Math.random())];
 }
 
-global.robBank = ["Robas el banco de Santavilla y te llevas"];
+global.robBank = ["Robas el banco de Santavilla y te llevas"];*/
 
