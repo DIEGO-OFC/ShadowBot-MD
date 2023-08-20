@@ -8,7 +8,7 @@ try {
 let buttonMessage = {
     image: {url: waifu.data.url},
     caption: `*乂 ⺀ ANIME - WAIFU*`,
-    footer: `*🔥 THE ZIRAX - BOT 🔥*`,
+    footer: wm,
     buttons: null,
     headerType: 4,
   };
