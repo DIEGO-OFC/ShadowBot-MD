@@ -4,9 +4,7 @@ let handler = async (m, {conn}) => {
     let res = await fetch("https://nekos.life/api/v2/img/woof");
     let json = await res.json();
     let img = await json.url;
-    let caption = `
-_©The Zirax - Bot_
-`.trim();
+    let caption = `${wm}`
     conn.sendFile(m.chat, img, "dog.jpg", caption, m);
   } catch (e) {
     console.log(e);
