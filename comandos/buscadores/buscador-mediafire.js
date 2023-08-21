@@ -1,22 +1,7 @@
 //creado por https://github.com/DIEGO-OFC
 
-let handler = async (m, {conn, usedPrefix}) => {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*  //Juegos 🎮
+/*let handler = async (m, {conn, usedPrefix}) => {
+//Juegos 🎮
   //Si se cae un enlace cambialo.
   let fnaf1 = `https://www.mediafire.com/file/5y7jq06rb8i3vl1/Fnaf_1.apk/file`;
   let fnaf2 = `https://www.mediafire.com/file/io8lmvb8z0gsrqx/Fnaf_2.apk/file`;
