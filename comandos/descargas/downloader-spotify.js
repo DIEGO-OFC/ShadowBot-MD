@@ -14,7 +14,7 @@
   
  const handler = async (m, { conn, text }) => { 
   if (!text) throw `*[✳️] Ingrese el nombre de alguna canción de spotify.*`; 
-   try { 
+   //try { 
      const resDL = await fetch(`https://api.lolhuman.xyz/api/spotifysearch?apikey=${lolkeysapi}&query=${text}`); 
      const jsonDL = await resDL.json(); 
      const linkDL = jsonDL.result[0].link; 
@@ -56,10 +56,10 @@
      const spotifyi = `❒═════❬ 𝐒𝐏𝐎𝐓𝐈𝐅𝐘 ❭═════╾❒\n┬\n├‣✨ *TÍTULO:* ${spty.data.name}\n┴\n┬\n├‣🗣️ *ARTISTA:* ${spty.data.artists}\n┴\n┬\n├‣🌐 *𝚄𝚁𝙻*: ${linkDL}\n┴`; 
      await conn.sendFile(m.chat, spty.data.cover_url, 'error.jpg', spotifyi, m); 
      await conn.sendMessage(m.chat, { audio: fs.readFileSync(`./tmp/${randomName}`), fileName: `${spty.data.name}.mp3`, mimetype: 'audio/mpeg' }, { quoted: m }); 
-   } catch (error) { 
+ /*  } catch (error) { 
      console.error(error); 
      throw '*[❗] Error, no se encontraron resultados.*'; 
-   } 
+   }*/
  }; 
  handler.command = /^(spotify|music)$/i; 
  export default handler; 
