@@ -37,7 +37,7 @@ import {youtubedl, youtubedlv2} from '@bochilteam/scraper';
      } 
    } 
    let info = `*_⏰ Enviando video... ⏰_*\n\n*🔄 Sɪ Sᴜ ᴠɪᴅᴇᴏ ɴᴏ ᴇs ᴇɴᴠɪᴀᴅᴏ, ᴘʀᴜᴇʙᴇ ᴄᴏɴ ᴇʟ ᴄᴏᴍᴀɴᴅᴏ #playdoc ᴏ #play.2 ᴏ #ytmp4doc ◉*`;
-   const { key } = await conn.sendMessage(m.chat, {image: fs.readFileSync("./galeria/Shadow.png"), caption: info}, {quoted: m});
+   const { key } = await conn.sendMessage(m.chat, {image: fs.readFileSync("./galeria/Shadow.jpg"), caption: info}, {quoted: m});
    try { 
      const formats = await bestFormat(youtubeLink, 'video'); 
      const buff = await getBuffer(formats.url); 
