@@ -1,5 +1,6 @@
 
-import fetch from 'node-fetch'; 
+/* Creditos de los tags a @darlyn1234 */ 
+ import fetch from 'node-fetch'; 
  import Spotify from 'spotifydl-x'; 
  import fs from 'fs'; 
  import NodeID3 from 'node-id3'; 
@@ -11,8 +12,8 @@ import fetch from 'node-fetch';
  }; 
  const spotify = new Spotify.default(credentials); 
   
- var handler = async (m, { conn, text }) => { 
-  if (!text) throw `*[✖️] Escriba el nombre de una cancion.*`; 
+ const handler = async (m, { conn, text }) => { 
+  if (!text) throw `*[✳️] Ingrese el nombre de alguna canción de spotify.*`; 
    try { 
      const resDL = await fetch(`https://api.lolhuman.xyz/api/spotifysearch?apikey=${lolkeysapi}&query=${text}`); 
      const jsonDL = await resDL.json(); 
@@ -32,14 +33,14 @@ import fetch from 'node-fetch';
        genre: '-', 
        comment: { 
          language: 'spa', 
-         text: '🤴🏻 вσтωнαιтα є∂ιт ƒαвяι115© 🤖', 
+         text: '🤴🏻  Descarga por DIEGO-OFC & TheShadowBrockers-Bot 🤖', 
        }, 
        unsynchronisedLyrics: { 
          language: 'spa', 
-         text: '🤴🏻 вσтωнαιтα є∂ιт ƒαвяι115© 🤖', 
+         text: '🤴🏻 Descarga por DIEGO-OFC & TheShadowBrockers-Bot 🤖', 
        }, 
        image: { 
-         mime: './Menu2.jpg', 
+         mime: 'image/jpeg', 
          type: { 
            id: 3, 
            name: 'front cover', 
@@ -47,17 +48,17 @@ import fetch from 'node-fetch';
          description: 'Spotify Thumbnail', 
          imageBuffer: await axios.get(spty.data.cover_url, { responseType: "arraybuffer" }).then((response) => Buffer.from(response.data, "binary")), 
        }, 
-       mimetype: './Menu2.jpg', 
+       mimetype: 'image/jpeg', 
        copyright: 'Copyright Darlyn ©2023', 
      }; 
      await fs.promises.writeFile(filePath, spty.audio); 
      await NodeID3.write(tags, filePath); 
-     const spotifyi = `❒═════❬ 𝐒𝐏𝐎𝐓𝐈𝐅𝐘 ❭═════╾❒\n┬\n├‣🔍 *TÍTOLO:* ${spty.data.name}\n┴\n┬\n├‣🗣️ *ARTISTA:* ${spty.data.artists}\n┴\n┬\n├‣🌐 *𝚄𝚁𝙻*: ${linkDL}\n┴`; 
+     const spotifyi = `❒═════❬ 𝐒𝐏𝐎𝐓𝐈𝐅𝐘 ❭═════╾❒\n┬\n├‣✨ *TÍTULO:* ${spty.data.name}\n┴\n┬\n├‣🗣️ *ARTISTA:* ${spty.data.artists}\n┴\n┬\n├‣🌐 *𝚄𝚁𝙻*: ${linkDL}\n┴`; 
      await conn.sendFile(m.chat, spty.data.cover_url, 'error.jpg', spotifyi, m); 
-     await conn.sendMessage(m.chat, { audio: fs.readFileSync(`./tmp/${randomName}`), fileName: `${spty.data.name}.mp3`, mimetype: 'audio/mp4' }, { quoted: m }); 
+     await conn.sendMessage(m.chat, { audio: fs.readFileSync(`./tmp/${randomName}`), fileName: `${spty.data.name}.mp3`, mimetype: 'audio/mpeg' }, { quoted: m }); 
    } catch (error) { 
      console.error(error); 
-     throw '*[❗] Errore.*'; 
+     throw '*[❗] Error, no se encontraron resultados.*'; 
    } 
  }; 
  handler.command = /^(spotify|music)$/i; 
@@ -69,7 +70,7 @@ import fetch from 'node-fetch';
        const res = await spotify.getTrack(url); 
        const timeoutPromise = new Promise((_, reject) => { 
          setTimeout(() => { 
-           reject(new Error('Tempo esaurito')); 
+           reject(new Error('Tiempo de espera agotado')); 
          }, 300000); 
        }); 
        const audioPromise = spotify.downloadTrack(url); 
