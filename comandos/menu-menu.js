@@ -1,5 +1,5 @@
 import moment from 'moment-timezone';
-var handler = async (m, {  
+var shadow = async (m, {  
       command, 
       conn, 
       args,  
@@ -576,14 +576,14 @@ contextInfo: { mentionedJid: [m.sender], externalAdReply: { title: `MENU - COMPL
 sourceUrl: "http://paypal.me/DorratBotOficial", mediaType: 1, showAdAttribution: true, thumbnailUrl: "https://telegra.ph/file/dde9bd1f999297449d139.jpg", 
 }, }, }, { quoted: m,});}};
          
-  handler.command = [
+  shadow.command = [
   "menu",
   "menú",
   "menucompleto",
   "allmenu"
   ];
-  handler.tags = ["internet"]  
-  export default handler 
+  shadow.tags = ["internet"]  
+  export default shadow 
   
   function clockString(ms) { 
    const h = isNaN(ms) ? "--" : Math.floor(ms / 3600000); 
