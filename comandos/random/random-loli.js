@@ -2,7 +2,7 @@ import Booru from 'booru'
 import fetch from 'node-fetch'
 let sites = ['sb', 'kn', 'kc']
 
-let handler = async (m, { conn, usedPrefix, command }) => {
+var handler = async (m, { conn, usedPrefix, command }) => {
 	let res = await Booru.search(sites.getRandom(), ['loli'], { random: true })
 	let url = res[0].fileUrl
 let caption = `${wm3}`
