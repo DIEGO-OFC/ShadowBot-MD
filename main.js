@@ -26,7 +26,7 @@ import {mongoDB, mongoDBV2} from "./lib/mongoDB.js";
 const {proto} = (await import("@whiskeysockets/baileys")).default;
 const {DisconnectReason, useMultiFileAuthState, MessageRetryMap, fetchLatestBaileysVersion, makeCacheableSignalKeyStore} = await import("@whiskeysockets/baileys")
 //const {CONNECTING} = ws;
-const {chain} = lodash;
+//const {chain} = lodash;
 //const PORT = process.env.PORT || process.env.SERVER_PORT || 3000;
 
 protoType();
