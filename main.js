@@ -20,7 +20,7 @@ import {format} from "util";
 import P from "pino";
 import Pino from "pino";
 import {Boom} from '@hapi/boom';
-import {makeWASocket, protoType, serialize} from "./lib/simple.js";
+import {makeWaSocket, protoType, serialize} from "./lib/simple.js";
 import {Low, JSONFile} from "lowdb";
 import {mongoDB, mongoDBV2} from "./lib/mongoDB.js";
 //import store from "./lib/store.js"
@@ -39,6 +39,15 @@ const {    DisconnectReason,
 //const {chain} = lodash;
 //const PORT = process.env.PORT || process.env.SERVER_PORT || 3000;
 
+global.__filename = function filename(pathURL = import.meta.url, rmPrefix = platform !== "win32") {
+  return rmPrefix ? (/file:\/\/\//.test(pathURL) ? fileURLToPath(pathURL) : pathURL) : pathToFileURL(pathURL).toString();
+};
+global.__dirname = function dirname(pathURL) {
+  return path.dirname(global.__filename(pathURL, true));
+};
+global.__require = function require(dir = import.meta.url) {
+  return createRequire(dir);
+};
 
 const store = makeInMemoryStore({ 
      logger: Pino().child({ 
