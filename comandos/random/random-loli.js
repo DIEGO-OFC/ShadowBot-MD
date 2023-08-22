@@ -10,7 +10,7 @@ let caption = `${wm3}`
 }
 handler.help = ['loli']
 handler.tags = ['random']
-handler.command = /^(fotololi)$/i
+handler.command = /^(loli)$/i
 
 export default handler
 
