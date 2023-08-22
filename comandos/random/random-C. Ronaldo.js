@@ -1,21 +1,8 @@
-import fetch from 'node-fetch' 
- let handler = async (m, {conn}) => { 
- let res = await fetch(`https:\/\/fifa15.content.easports.com\/fifa\/fltOnlineAssets\/8D941B48-51BB-4B87-960A-06A61A62EBC0\/2015\/fut\/items\/images`) 
-  
- let json = await res.json() 
-  
- conn.sendMessage(m.chat, {image: {url: json.message }}, {quoted: m}) 
- } 
- handler.help = ['fish'] 
- handler.command = ['cr7', 'cris'] 
- export default handler 
 
-
-
-
-/*import axios from 'axios'
+import axios from 'axios'
 var shadow = async(m, { conn, usedPrefix, command }) => {
-let cristiano = (await axios.get(`https://raw.githubusercontent.com/DIEGO-OFC/DORRAT-BOT-MD/master/galeria/JSON/CristianoRonaldo.json`)).data  
+//let cristiano = (await axios.get(`https://raw.githubusercontent.com/DIEGO-OFC/DORRAT-BOT-MD/master/galeria/JSON/CristianoRonaldo.json`)).data 
+let cristiano = (await axios.get(`https://raw.githubusercontent.com/felipecsl/63e16660a58071250b51/raw/b32e55d90ac24504c3499d6f9fd33d3f1f608194/cristiano_ronaldo.json`)).data  
 let ronaldo = await cristiano[Math.floor(cristiano.length * Math.random())]
 let caption = `${wm3}\n\nSIUUUU`
 conn.sendFile(m.chat, ronaldo, "cr7.jpg", caption, m);
@@ -23,4 +10,4 @@ conn.sendFile(m.chat, ronaldo, "cr7.jpg", caption, m);
 shadow.help = ['cristianoronaldo', 'cr7']
 shadow.tags = ['internet']
 shadow.command = /^(cristianoronaldo|cr7)$/i
-export default shadow*/
+export default shadow
