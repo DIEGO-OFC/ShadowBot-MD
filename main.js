@@ -51,8 +51,8 @@ global.__require = function require(dir = import.meta.url) {
 /*ADAPTADO POR https://github.com/DIEGO-OFC
 
 
-:V*/
-/********************
+:V**********************/
+
 const store = makeInMemoryStore({ 
      logger: Pino().child({ 
          level: 'fatal', 
