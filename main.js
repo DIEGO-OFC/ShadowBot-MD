@@ -14,9 +14,7 @@ import lodash from "lodash";
 import chalk from "chalk";
 import syntaxerror from "syntax-error";
 import {tmpdir} from "os";
-import { 
-     parsePhoneNumber 
- } from "libphonenumber-js"
+import parsePhoneNumber from "awesome-phonenumber-js"
 import {format} from "util";
 import P from "pino";
 import pino from "pino";
