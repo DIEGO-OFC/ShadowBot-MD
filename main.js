@@ -48,10 +48,6 @@ global.__dirname = function dirname(pathURL) {
 global.__require = function require(dir = import.meta.url) {
   return createRequire(dir);
 };
-/*ADAPTADO POR https://github.com/DIEGO-OFC
-
-
-:V**********************/
 
 const store = makeInMemoryStore({ 
      logger: Pino().child({ 
@@ -459,7 +455,7 @@ global.reloadHandler = async function (restatConn) {
       global.conn.ws.close();
     } catch {}
     conn.ev.removeAllListeners();
-    global.conn = makeWASocket(connectionOptions, {chats: oldChats});
+    global.conn = makeWaSocket(connectionOptions, {chats: oldChats});
     isInit = true;
   }
   if (!isInit) {
