@@ -52,6 +52,7 @@ global.__require = function require(dir = import.meta.url) {
 
 
 :V*/
+/********************
 const store = makeInMemoryStore({ 
      logger: Pino().child({ 
          level: 'fatal', 
