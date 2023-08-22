@@ -206,7 +206,7 @@ global.chatgpt = new Low(new JSONFile(path.join(__dirname, '/db/chatgpt.json')))
      }, 
      msgRetryCounterMap, 
      logger: Pino({ 
-         level: 'fatal' 
+         level: 'Shadow' 
      }), 
      auth: { 
          creds: state.creds, 
