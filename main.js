@@ -22,8 +22,8 @@ import {Boom} from '@hapi/boom';
 import {makeWASocket, protoType, serialize} from "./lib/simple.js";
 import {Low, JSONFile} from "lowdb";
 import {mongoDB, mongoDBV2} from "./lib/mongoDB.js";
-//import store from "./lib/store.js";
-const {proto} = (await import("@whiskeysockets/baileys")).default;
+//import store from "./lib/store.js"
+//const {proto} = (await import("@whiskeysockets/baileys")).default;
 const {    DisconnectReason, 
      useMultiFileAuthState, 
      MessageRetryMap, 
@@ -38,8 +38,7 @@ const {    DisconnectReason,
 //const {chain} = lodash;
 //const PORT = process.env.PORT || process.env.SERVER_PORT || 3000;
 
-protoType();
-serialize();
+
 const store = makeInMemoryStore({ 
      logger: Pino().child({ 
          level: 'fatal', 
