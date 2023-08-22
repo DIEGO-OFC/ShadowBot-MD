@@ -20,8 +20,9 @@ let handler = async (m, {conn}) => {
 ➢ 🧰 Nivel : *${user.level}*
 ➢ 👑 XP : *${`${ConvertMiles(user.exp - min)}`} / ${`${ConvertMiles(xp)}`}*
 ╚══════════════
-
 Te falta *${`${ConvertMiles(max - user.exp)}`}* de *XP* para subir de nivel
+
+${wm3}
 `.trim();
   }
   let before = user.level * 1;
