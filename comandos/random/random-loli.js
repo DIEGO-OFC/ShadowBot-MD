@@ -6,7 +6,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 	let res = await Booru.search(sites.getRandom(), ['loli'], { random: true })
 	let url = res[0].fileUrl
 let caption = `${wm3}`
-    conn.sendFile(m.chat, await shortUrl(url), url, "loli", caption, m);
+    conn.sendFile(m.chat, await shortUrl(url), "loli", caption, m);
 }
 handler.help = ['loli']
 handler.tags = ['random']
