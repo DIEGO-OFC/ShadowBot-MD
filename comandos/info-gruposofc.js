@@ -31,6 +31,6 @@ const grupos = `*𝙷𝙾𝙻𝙰 𝚄𝚂𝚄𝙰𝚁𝙸𝙾 👋🏻, 𝚃�
 ┃ https://chat.whatsapp.com/HNayAS8WrE1EtThLpkllRS
 ╰━━━━━━━━━━━━━━━━━━━━╯`; 
 
-  conn.sendFile(m.chat, media,'dorrat.jpg',grupos)};
+  conn.sendFile(m.chat, media,'Shadow.jpg',grupos)};
 handler.command = /^linkgc|grupos$/i;
 export default handler;
