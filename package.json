@@ -10,7 +10,7 @@
     "comandos": "comandos"
   },
   "scripts": {
-    "start": "node index-inicio.js",
+    "start": "node index-inicio.js --qr",
     "test": "node test.js",
     "test2": "nodemon index-inicio.js"
   },
