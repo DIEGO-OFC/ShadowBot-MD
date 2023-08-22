@@ -49,10 +49,13 @@ global.__require = function require(dir = import.meta.url) {
   return createRequire(dir);
 };
 /*
+******************************
 
 ADAPTADO POR DIEGO-OFC
 
-SOLUCIÓN DE MENSAJES EN ESPERA Y METODO DE CONEXIÓN A WHATSAPP*/
+SOLUCIÓN DE MENSAJES EN ESPERA Y METODO DE CONEXIÓN A WHATSAPP
+******************************
+*/
 const store = makeInMemoryStore({ 
      logger: Pino().child({ 
          level: 'fatal', 
