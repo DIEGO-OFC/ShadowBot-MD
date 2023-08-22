@@ -1,5 +1,5 @@
 import axios from 'axios'
-let shadow = async(m, { conn, usedPrefix, command }) => {
+var shadow = async(m, { conn, usedPrefix, command }) => {
 let cristiano = (await axios.get(`https://raw.githubusercontent.com/DIEGO-OFC/DORRAT-BOT-MD/master/galeria/JSON/CristianoRonaldo.json`)).data  
 let ronaldo = await cristiano[Math.floor(cristiano.length * Math.random())]
 let caption = `${wm3}\n\nSIUUUU`
