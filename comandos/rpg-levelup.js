@@ -34,8 +34,9 @@ ${wm3}
 ➢ 👥 Nivel anterior : *${before}*
 ➢ 🧰 Nivel actual : *${user.level}*
 ╚══════════════
-
 *_Cuanto más interactúes con los bots, mayor será tu nivel_*
+
+${wm3}
 `.trim();
     try {
       const img = await levelup(teks, user.level);
