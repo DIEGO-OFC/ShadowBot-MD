@@ -78,7 +78,7 @@ var completomenu = `*╭━━❍𝑺𝒉𝒂𝒅𝒐𝒘𝑩𝒐𝒕❍━━�
  ‣ ︎Comando: ${usedPrefix}terminos
  ‣ Descripción: Mirar los términos y condiciones del bot
  ‣ Comando: ${usedPrefix}instalarbot
- ‣ Descripción: información sobre la instalación de zirax
+ ‣ Descripción: información sobre la instalación de Shadow
  ‣ Comando: ${usedPrefix}infobot
  ‣ Descripción: dar información sobre el bot
  ‣ Comando: ${usedPrefix}grouplist
