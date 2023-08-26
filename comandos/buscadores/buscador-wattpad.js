@@ -3,7 +3,7 @@
 import axios from "axios";
 
 const handler = async (m, { text }) => {
-    let name = encodeURIComponent('${text}'); 
+    let name = `${text}`
      let link = `https://www.bing.com/search?q=${name}`;
 m.reply(`${text}\n${link}`)
 }
