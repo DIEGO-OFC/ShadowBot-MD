@@ -1,6 +1,5 @@
 //hecho por DIEGO-OFC pro
 
-
 import axios from "axios";
 
 const handler = async (m, { text }) => {
