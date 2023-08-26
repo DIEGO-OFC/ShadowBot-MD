@@ -2,9 +2,9 @@
 
 import axios from "axios";
 
-const bingSearchUrl = "https://www.bing.com/search";
-
 const handler = async (m, { text }) => {
+const bingSearchUrl = "https://www.bing.com/search?q=${text}";
+
   const term = text.toLowerCase();
 
   const options = {
