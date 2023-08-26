@@ -22,7 +22,7 @@ const handler = async (m, { text, conn }) => {
 
     const results = response.data.webPages;
 
-    m.reply(results.map(({ title, url }) => `${title} - ${url}`));
+    m.reply(results);
   } catch (error) {
     m.reply(error.message);
   }
