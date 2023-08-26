@@ -1,5 +1,6 @@
-//hecho por DIEGO-OFC PRO
-import fetch from "node-fetch";
+//hecho por DIEGO-OFC pro
+
+import axios from "axios";
 
 // Define el handler
 const handler = async (m, { text, conn }) => {
@@ -7,23 +8,22 @@ const handler = async (m, { text, conn }) => {
   const term = text.toLowerCase();
 
   // Realiza la solicitud de búsqueda
-  const response = await fetch("https://www.bing.com/search", {
-    method: "GET",
+  const response = await axios.get("https://www.bing.com/search", {
     params: {
       q: term,
     },
   });
 
   // Verifica si hay algún error
-  if (response.status !== 200) {
+  if (response.status === 400) {
     throw new Error(`Error al buscar "${term}"`);
   }
 
   // Obtén los resultados de la búsqueda
-    let results = await response.json();
+  const results = response.data.webPages;
 
   // Imprime los resultados de la búsqueda
-  m.reply(results.webPages.map(({ title, url }) => `${title} - ${url}`));
+  m.reply(results.map(({ title, url }) => `${title} - ${url}`));
 };
 
 // Define los comandos
