@@ -1,7 +1,4 @@
 
-Claro, aquí tienes el código con node-fetch:
-
-JavaScript
 import fetch from "node-fetch";
 
 // Define el handler
