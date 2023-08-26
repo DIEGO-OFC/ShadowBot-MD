@@ -13,7 +13,7 @@ const handler = async (m, { text }) => {
         },
     };
 
-    try {
+   // try {
         const response = await axios.get(bingSearchUrl, options);
 
         if (response.status === 200) {
@@ -23,7 +23,7 @@ const handler = async (m, { text }) => {
                 const results = webPages.value;
                 const resultTitles = results.map(result => result.name);
                 m.reply(`Los resultados de la búsqueda de "${text}" son: ${resultTitles.join(", ")}`);
-            } else {
+           /* } else {
                 throw new Error(`No se encontraron resultados válidos para "${text}"`);
             }
         } else {
@@ -31,7 +31,7 @@ const handler = async (m, { text }) => {
         }
     } catch (error) {
         m.reply(error.message);
-    }
+    }*/
 };
 
 handler.command = ["bing"];
