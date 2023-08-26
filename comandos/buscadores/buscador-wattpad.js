@@ -1,4 +1,4 @@
-
+//hecho por DIEGO-OFC PRO
 import fetch from "node-fetch";
 
 // Define el handler
