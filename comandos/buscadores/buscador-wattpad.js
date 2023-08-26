@@ -3,8 +3,8 @@
 import axios from "axios";
 
 const handler = async (m, { text }) => {
-  const bingSearchUrl = `https://www.bing.com/search?q=`
-  const term = encodeURIComponent(text.toLowerCase());
+    const term = encodeURIComponent(text.toLowerCase());
+const bingSearchUrl = `https://www.bing.com/search?q=${term}`
 
   const options = {
     params: {
