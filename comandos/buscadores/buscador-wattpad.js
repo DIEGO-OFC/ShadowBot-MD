@@ -32,8 +32,9 @@ const handler = async (m, { text }) => {
     } catch (error) {
         m.reply(error.message);
     }*/
-};
-
+}
+}
+}
 handler.command = ["bing"];
 
 export default handler;
