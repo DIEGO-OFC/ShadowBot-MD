@@ -20,7 +20,7 @@ const handler = async (m, { text, conn }) => {
   }
 
   // Obtén los resultados de la búsqueda
-  const results = await response.json();
+    let resulta = await response.json();
 
   // Imprime los resultados de la búsqueda
   m.reply(results.webPages.map(({ title, url }) => `${title} - ${url}`));
