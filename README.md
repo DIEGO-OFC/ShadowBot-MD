@@ -1,3 +1,7 @@
+
+
+# **POR AHORA ESTE REPOSITORIO NO TENDRA ACTUALIZACIONES, SE VA A HACER UNA VERSIÓN PRIVADA**
+
 # ***🔥 Shadow-Bot-MD 🔥***
 
 <p align="center">
