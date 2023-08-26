@@ -20,9 +20,9 @@ import axios from "axios";
      if (webPages && webPages.value && Array.isArray(webPages.value)) { 
        const results = webPages.value; 
        const resultTitles = results.map(result => result.name); 
-       }}
+       }
        m.reply(`Los resultados de la búsqueda de "${text}" son: ${resultTitles.join(", ")}`); 
-       
+}       
  }; 
   
  handler.command = ["bing"]; 
