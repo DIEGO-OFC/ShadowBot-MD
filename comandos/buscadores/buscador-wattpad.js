@@ -4,7 +4,7 @@ import axios from "axios";
 
 const bingSearchUrl = "https://www.bing.com/search";
 
-const handler = async (m, { text, conn }) => {
+const handler = async (m, { text }) => {
   const term = text.toLowerCase();
 
   const options = {
@@ -22,7 +22,7 @@ const handler = async (m, { text, conn }) => {
 
     const results = response.data.webPages;
 
-    m.reply(results);
+    m.reply(`Los resultados de la búsqueda de "${term}" son: ${results}`);
   } catch (error) {
     m.reply(error.message);
   }
