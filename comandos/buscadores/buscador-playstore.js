@@ -7,14 +7,14 @@ import fetch from 'node-fetch';
      const json = await fetch(`https://latam-api.vercel.app/api/playstore?apikey=Diego-Ofc&q=${enc}`); 
      const gPlay = await json.json(); 
   
-     const mystic = await translate(`${gPlay.descripcion}`, {to: 'es', autoCorrect: true}); 
+     const shadowgod = await translate(`${gPlay.descripcion}`, {to: 'es', autoCorrect: true}); 
      if (!gPlay.titulo) return m.reply(`[ ! ] Sin resultados`); 
      conn.sendMessage(m.chat, {image: {url: gPlay.imagen}, caption: `🔍 Resultado: ${gPlay.titulo} 
  🧬 Identificador: ${gPlay.id} 
  ⛓️ Link: ${gPlay.link} 
  🖼️ Imagen: ${gPlay.imagen} 
  ✍️ Desarrollador: ${gPlay.desarrollador} 
- 📜 Descripcion: ${mystic.text} 
+ 📜 Descripcion: ${shadowgod.text} 
  💲 Moneda: ${gPlay.moneda} 
  🎭 Gratis?: ${gPlay.gratis} 
  💸 Precio: ${gPlay.precio} 
