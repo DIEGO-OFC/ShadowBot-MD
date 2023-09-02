@@ -8,18 +8,20 @@ let handler = async (m, { conn, args, participants }) => {
   let sortedLim = users.map(toNumber("limit")).sort(sort("limit"));
   let sortedLevel = users.map(toNumber("level")).sort(sort("level"));
   let sortedRole = users.map(toNumber("role")).sort(sort("role"));
-  let sortedDolares = users.map(toNumber("dorracoins")).sort(sort("dolares"));
+  let sortedDolares = users.map(toNumber("dolares")).sort(sort("dolares"));
   let sortedJoincount = users
     .map(toNumber("joincount"))
     .sort(sort("joincount"));
   let sortedPremium = users.map(toNumber("premium")).sort(sort("premium"));
-
+let sortedbank = users.map(toNumber("bank")).sort(sort("bank"));
+    
   let usersExp = sortedExp.map(enumGetKey);
   let usersLim = sortedLim.map(enumGetKey);
   let usersLevel = sortedLevel.map(enumGetKey);
   let usersDolares = sortedDolares.map(enumGetKey);
   let usersJoincount = sortedJoincount.map(enumGetKey);
-
+let usersbank = sortedbank.map(enumGetKey);
+    
   const parseMention = (text) =>
     [...text.matchAll(/@?([0-9]{5,16}|0)/g)].map((v) => v[1] + S_WHATSAPP_NET);
 
@@ -84,17 +86,19 @@ let handler = async (m, { conn, args, participants }) => {
         }${jid.split`@`[0]} ${role}`,
     ).join`\n`}
 ║═════════════════
-║ ➢ *TOP USUARIOS ${len} PREMIUM 🎟️* 
-║ Tú : *${usersLevel.indexOf(m.sender) + 1}* de *${usersLevel.length} Usuarios*
-║ ${sortedLim
+║ ➢ *TOP ${len} Dolares BANK 💵*
+║ Tú : *${usersbank.indexOf(m.sender) + 1}* de *${
+    usersbank.length
+  } Usuarios*
+║ ${sortedbank
     .slice(0, len)
     .map(
-      ({ jid, premium }, i) =>
+      ({ jid, bank }, i) =>
         `${i + 1}. ${
           participants.some((p) => jid === p.jid)
             ? `(${conn.getName(jid)}) wa.me/`
             : "@"
-        }${jid.split`@`[0]} *${premium ? `✅` : `❌`} 🎟️*`,
+        }${jid.split`@`[0]} *${bank}  💸*`,
     ).join`\n`}
 ║═════════════════
 ║ ➢ *TOP ${len} DIAMANTES 💎* 
@@ -108,6 +112,19 @@ let handler = async (m, { conn, args, participants }) => {
             ? `(${conn.getName(jid)}) wa.me/`
             : "@"
         }${jid.split`@`[0]} *${limit} 💎*`,
+    ).join`\n`}
+    ║═════════════════
+║ ➢ *TOP USUARIOS ${len} PREMIUM 🎟️* 
+║ Tú : *${usersLevel.indexOf(m.sender) + 1}* de *${usersLevel.length} Usuarios*
+║ ${sortedLim
+    .slice(0, len)
+    .map(
+      ({ jid, premium }, i) =>
+        `${i + 1}. ${
+          participants.some((p) => jid === p.jid)
+            ? `(${conn.getName(jid)}) wa.me/`
+            : "@"
+        }${jid.split`@`[0]} *${premium ? `✅` : `❌`} 🎟️*`,
     ).join`\n`}
 ═════════════════
 ║ ➢ *TOP ${len} TOKENS  ☯️* 
@@ -162,4 +179,5 @@ function toNumber(property, _default = 0) {
 
 function enumGetKey(a) {
   return a.jid;
-}
+       }
+                            
