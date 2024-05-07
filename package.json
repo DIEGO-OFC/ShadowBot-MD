@@ -1,5 +1,5 @@
 {
-  "name": "NovaBot-MD",
+  "name": "sdw-MD",
   "version": "1.0.0",
   "description": "Bot de whatsapp",
   "main": "index.js",
@@ -8,11 +8,11 @@
      "test": "node test.js", 
      "test2": "nodemon index.js" 
    },
-  "author": "elrebelde21",
+  "author": "DIEGO-OFC",
   "license": "ISC",
   "dependencies": {
    "megajs": "1.1.3",
-   "@whiskeysockets/baileys": "github:WhiskeySockets/Baileys",
+   "@whiskeysockets/baileys": "^6.7.1",
    "aptoide-scraper": "^1.0.1",
   "@xct007/frieren-scraper": "0.0.2",     "@vitalets/google-translate-api": "^8.0.0",
 "awesome-phonenumber": "^5.10.0",
