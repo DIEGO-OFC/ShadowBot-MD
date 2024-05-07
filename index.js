@@ -322,7 +322,7 @@ const miembros = metadata.participants.length
 sock.sendMessage(anu.id, { 
 text: `*Hola* @${name.split("@")[0]} ¿COMO ESTAS?😃
 💫 *Grupos :* ${metadata.subject}
-💫 *Participarte : ${miembros}*
+💫 *Participantes : ${miembros}*
 💫 *Fecha :* ${date}
 ${global.db.data.chats[m.chat].antilink ? '✅ *Antilink Esta activo* (aqui no se permite compartir enlace de otros grupos)' : '❌ *Antilink Esta desactivado* (aqui si se permite compartir enlaces)'}
 
