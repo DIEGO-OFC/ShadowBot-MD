@@ -17,8 +17,8 @@ import {tmpdir} from "os";
 import readline from "readline"
 import parsePhoneNumber from "awesome-phonenumber"
 import {format} from "util";
-import P from "pino";
-import Pino from "pino";
+import pino from 'pino';
+import Pino from 'pino';
 import NodeCache from 'node-cache';
 import {Boom} from '@hapi/boom';
 import {makeWaSocket, protoType, serialize} from "./lib/simple.js";
