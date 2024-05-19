@@ -215,7 +215,7 @@ import _0x407e4f from 'fs';
 import _0x1504b8 from 'pino';
 import * as _0x223524 from 'ws';
 const {child, spawn, exec} = await import(_0x4d1317(0x224)), {CONNECTING} = _0x223524;
-import { makeWaSocket } from '../lib/simple.js';
+import { makeWASocket } from '../lib/simple.js';
 let crm1 = _0x4d1317(0x216), crm2 = _0x4d1317(0x267), crm3 = _0x4d1317(0x200), crm4 = _0x4d1317(0x21a), drm1 = _0x4d1317(0x1f6), drm2 = _0x4d1317(0x20f), rtx = '*👑\x20𝐓𝐇𝐄\x20𝐒𝐇𝐀𝐃𝐎𝐖\x20𝐁𝐑𝐎𝐂𝐊𝐄𝐑𝐒-𝐁𝐎𝐓\x20👑*\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20*𝐒𝐄𝐑\x20𝐒𝐔𝐁𝐁𝐎𝐓*\x0a\x0a*Escanea\x20este\x20codigo\x20QR\x20para\x20convertirte\x20en\x20un\x20Bot\x20(SubBot),\x20puedes\x20usar\x20otro\x20dispositivo\x20para\x20escanear*\x0a\x0a*Pasos\x20para\x20escanear:*\x0a*1.-\x20Haga\x20click\x20en\x20los\x203\x20puntos\x20ubicados\x20en\x20la\x20esquina\x20superior\x20derecha\x20en\x20el\x20inicio\x20de\x20su\x20WhatsApp*\x0a*2.-\x20Toca\x20en\x20donde\x20dice\x20WhatsApp\x20web\x20o\x20dispositivos\x20vinculados*\x0a*3.-\x20Escanee\x20este\x20codigo\x20QR*\x0a*El\x20codigo\x20QR\x20expira\x20en\x2060\x20segundos!!*\x0a\x0a*—◉\x20The\x20Shadow\x20Brokers\x20-\x20Bot\x20\x20no\x20se\x20hace\x20respondable\x20del\x20uso,\x20numeros,\x20mensajes,\x20multimedias,\x20etcétera\x20enviado,\x20usado\x20o\x20gestionado\x20por\x20ustedes\x20o\x20el\x20Bot*';
 function _0x38b2(_0x1a2111, _0x46ff09) {
     const _0x20d04b = _0x3ed4();
