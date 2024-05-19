@@ -38,309 +38,181 @@ const {    DisconnectReason,
 //const {CONNECTING} = ws;
 //const {chain} = lodash;
 //const PORT = process.env.PORT || process.env.SERVER_PORT || 3000;
+protoType();
+serialize();
 
-global.__filename = function filename(pathURL = import.meta.url, rmPrefix = platform !== "win32") {
-  return rmPrefix ? (/file:\/\/\//.test(pathURL) ? fileURLToPath(pathURL) : pathURL) : pathToFileURL(pathURL).toString();
-};
-global.__dirname = function dirname(pathURL) {
+global.__filename = function filename(pathURL = import.meta.url, rmPrefix = platform !== 'win32') {
+  return rmPrefix ? /file:\/\/\//.test(pathURL) ? fileURLToPath(pathURL) : pathURL : pathToFileURL(pathURL).toString();
+}; global.__dirname = function dirname(pathURL) {
   return path.dirname(global.__filename(pathURL, true));
-};
-global.__require = function require(dir = import.meta.url) {
+}; global.__require = function require(dir = import.meta.url) {
   return createRequire(dir);
 };
-/*
-******************************
 
-ADAPTADO POR DIEGO-OFC
+global.API = (name, path = '/', query = {}, apikeyqueryname) => (name in global.APIs ? global.APIs[name] : name) + path + (query || apikeyqueryname ? '?' + new URLSearchParams(Object.entries({...query, ...(apikeyqueryname ? {[apikeyqueryname]: global.APIKeys[name in global.APIs ? global.APIs[name] : name]} : {})})) : '');
 
-SOLUCIÓN DE MENSAJES EN ESPERA Y NUEVO METODO DE CONEXIÓN A WHATSAPP
-******************************
-*/
-const store = makeInMemoryStore({ 
-     logger: Pino().child({ 
-         level: 'fatal', 
-         stream: 'store' 
-     }) 
- }) 
-  
- const pairingCode = process.argv.includes("--pairing-code") 
- const useMobile = process.argv.includes("--mobile") 
- const useQr = process.argv.includes("--qr") 
-  
- const rl = readline.createInterface({ 
-     input: process.stdin, 
-     output: process.stdout 
- }) 
- const question = (text) => new Promise((resolve) => rl.question(text, resolve)) 
- import NodeCache from "node-cache" 
- const msgRetryCounterCache = new NodeCache() 
- const { 
-     CONNECTING 
- } = ws 
- const { 
-     chain 
- } = lodash 
- const PORT = process.env.PORT || process.env.SERVER_PORT || 3000 
-  
- protoType() 
- serialize() 
-  
- global.API = (name, path = '/', query = {}, apikeyqueryname) => (name in global.APIs ? global.APIs[name] : name) + path + (query || apikeyqueryname ? '?' + new URLSearchParams(Object.entries({ 
-     ...query, 
-     ...(apikeyqueryname ? { 
-         [apikeyqueryname]: global.APIKeys[name in global.APIs ? global.APIs[name] : name] 
-     } : {}) 
- })) : '') 
- global.timestamp = { 
-     start: new Date 
- } 
-  
- const __dirname = global.__dirname(import.meta.url) 
- global.opts = new Object(yargs(process.argv.slice(2)).exitProcess(false).parse()) 
- const symbolRegex = /^[^\w\s\d]/; 
- const emojiRegex = /^(\p{Emoji}|[\uFE0F\u200D])/u; 
- global.db = new Low(/https?:\/\//.test(opts['db'] || '') ? new cloudDBAdapter(opts['db']) : new JSONFile(`${opts._[0] ? opts._[0] + '_' : ''}database.json`)) 
-  
-  
- global.DATABASE = global.db 
- global.loadDatabase = async function loadDatabase() { 
-     if (global.db.READ) return new Promise((resolve) => setInterval(async function() { 
-         if (!global.db.READ) { 
-             clearInterval(this) 
-             resolve(global.db.data == null ? global.loadDatabase() : global.db.data) 
-         } 
-     }, 1 * 1000)) 
-     if (global.db.data !== null) return 
-     global.db.READ = true 
-     await global.db.read().catch(console.error) 
-     global.db.READ = null 
-     global.db.data = { 
-         users: {}, 
-         chats: {}, 
-         stats: {}, 
-         msgs: {}, 
-         sticker: {}, 
-         settings: {}, 
-         ...(global.db.data || {}) 
-     } 
-     global.db.chain = chain(global.db.data) 
- } 
- loadDatabase() 
-  
-global.chatgpt = new Low(new JSONFile(path.join(__dirname, '/db/chatgpt.json'))); 
- global.loadChatgptDB = async function loadChatgptDB() { 
-   if (global.chatgpt.READ) { 
-     return new Promise((resolve) => 
-       setInterval(async function() { 
-         if (!global.chatgpt.READ) { 
-           clearInterval(this); 
-           resolve( global.chatgpt.data === null ? global.loadChatgptDB() : global.chatgpt.data ); 
-         } 
-       }, 1 * 1000)); 
-   } 
-   if (global.chatgpt.data !== null) return; 
-   global.chatgpt.READ = true; 
-   await global.chatgpt.read().catch(console.error); 
-   global.chatgpt.READ = null; 
-   global.chatgpt.data = { 
-     users: {}, 
-     ...(global.chatgpt.data || {}), 
-   }; 
-   global.chatgpt.chain = lodash.chain(global.chatgpt.data); 
- }; 
- loadChatgptDB();
+global.timestamp = {start: new Date};
+global.videoList = [];
+global.videoListXXX = [];
 
- global.authFile = `ShadowSession`; 
- const { 
-     state, 
-     saveState, 
-     saveCreds 
- } = await useMultiFileAuthState(global.authFile); 
- const msgRetryCounterMap = (MessageRetryMap) => {}; 
- const { 
-     version 
- } = await fetchLatestBaileysVersion(); 
-  
- if (!pairingCode && !useMobile && !useQr) { 
-     const title = "INFO"; 
-     const message = "Please use one of the options: --pairing-code, --mobile, --qr"; 
-     const boxWidth = 40; 
-     const horizontalLine = chalk.redBright("─".repeat(boxWidth)); 
-  
-     const formatText = (text, bgColor, textColor) => chalk[bgColor](chalk[textColor](text.padStart(boxWidth / 2 + text.length / 2).padEnd(boxWidth))); 
-  
-     console.log(`╭${horizontalLine}╮ 
- |${formatText(title, 'bgRed', 'white')}| 
- ├${horizontalLine}┤ 
- |${formatText(message, 'bgWhite', 'red')}| 
- ╰${horizontalLine}╯`); 
- } 
-  
- const connectionOptions = { 
-     ...(!pairingCode && !useMobile && !useQr && { 
-         printQRInTerminal: false, 
-         mobile: false 
-     }), 
-     ...(pairingCode && { 
-         printQRInTerminal: !pairingCode 
-     }), 
-     ...(useMobile && { 
-         mobile: true 
-     }), 
-     ...(useQr && { 
-         printQRInTerminal: true 
-     }), 
-     patchMessageBeforeSending: (message) => { 
-         const requiresPatch = !!(message.buttonsMessage || message.templateMessage || message.listMessage); 
-         if (requiresPatch) { 
-             message = { 
-                 viewOnceMessage: { 
-                     message: { 
-                         messageContextInfo: { 
-                             deviceListMetadataVersion: 2, 
-                             deviceListMetadata: {} 
-                         }, 
-                         ...message 
-                     } 
-                 } 
-             }; 
-         } 
-         return message; 
-     }, 
-     msgRetryCounterMap, 
-     logger: Pino({ 
-         level: 'fatal' 
-     }), 
-     auth: { 
-         creds: state.creds, 
-         keys: makeCacheableSignalKeyStore(state.keys, Pino().child({ 
-             level: 'fatal', 
-             stream: 'store' 
-         })), 
-     }, 
-     browser: Browsers.macOS('Desktop'), 
-     version, 
-     getMessage: async (key) => { 
-         let jid = jidNormalizedUser(key.remoteJid) 
-         let msg = await store.loadMessage(jid, key.id) 
-         return msg?.message || "" 
-     }, 
-     msgRetryCounterCache, 
-     connectTimeoutMs: 60_000, 
-     defaultQueryTimeoutMs: 0, 
-     keepAliveIntervalMs: 10000, 
-     emitOwnEvents: true, 
-     fireInitQueries: true, 
-     generateHighQualityLinkPreview: true, 
-     syncFullHistory: true, 
-     markOnlineOnConnect: true 
- }; 
-  
- global.conn = makeWaSocket(connectionOptions); 
- store.bind(conn.ev) 
- conn.isInit = false 
-  
- if (pairingCode && !conn.authState.creds.registered) { 
-     if (useMobile) conn.logger.error('Cannot use pairing code with mobile api') 
-     console.log(chalk.cyan('╭──────────────────────────────────────···')); 
-     console.log(`📨 ${chalk.redBright('Please type your WhatsApp number')}:`); 
-     console.log(chalk.cyan('├──────────────────────────────────────···')); 
-     let phoneNumber = await question(`   ${chalk.cyan('- Number')}: `); 
-     console.log(chalk.cyan('╰──────────────────────────────────────···')); 
-     phoneNumber = phoneNumber.replace(/[^0-9]/g, '') 
-     if (!Object.keys(PHONENUMBER_MCC).some(v => phoneNumber.startsWith(v))) { 
-         console.log(chalk.cyan('╭─────────────────────────────────────────────────···')); 
-         console.log(`💬 ${chalk.redBright("Start with your country's WhatsApp code, Example 62xxx")}:`); 
-         console.log(chalk.cyan('╰─────────────────────────────────────────────────···')); 
-         console.log(chalk.cyan('╭──────────────────────────────────────···')); 
-         console.log(`📨 ${chalk.redBright('Please type your WhatsApp number')}:`); 
-         console.log(chalk.cyan('├──────────────────────────────────────···')); 
-         phoneNumber = await question(`   ${chalk.cyan('- Number')}: `); 
-         console.log(chalk.cyan('╰──────────────────────────────────────···')); 
-         phoneNumber = phoneNumber.replace(/[^0-9]/g, '') 
-     } 
-     let code = await conn.requestPairingCode(phoneNumber) 
-     code = code?.match(/.{1,4}/g)?.join("-") || code 
-     console.log(chalk.cyan('╭──────────────────────────────────────···')); 
-     console.log(` 💻 ${chalk.redBright('Your Pairing Code')}:`); 
-     console.log(chalk.cyan('├──────────────────────────────────────···')); 
-     console.log(`   ${chalk.cyan('- Code')}: ${code}`); 
-     console.log(chalk.cyan('╰──────────────────────────────────────···')); 
-     rl.close() 
- } 
-  
- if (useMobile && !conn.authState.creds.registered) { 
-     const { 
-         registration 
-     } = conn.authState.creds || { 
-         registration: {} 
-     } 
-     if (!registration.phoneNumber) { 
-         console.log(chalk.cyan('╭──────────────────────────────────────···')); 
-         console.log(`📨 ${chalk.redBright('Please type your WhatsApp number')}:`); 
-         console.log(chalk.cyan('├──────────────────────────────────────···')); 
-         let phoneNumber = await question(`   ${chalk.cyan('- Number')}: `); 
-         console.log(chalk.cyan('╰──────────────────────────────────────···')); 
-         phoneNumber = phoneNumber.replace(/[^0-9]/g, '') 
-         if (!Object.keys(PHONENUMBER_MCC).some(v => phoneNumber.startsWith(v))) { 
-             console.log(chalk.cyan('╭─────────────────────────────────────────────────···')); 
-             console.log(`💬 ${chalk.redBright("Start with your country's WhatsApp code, Example 62xxx")}:`); 
-             console.log(chalk.cyan('╰─────────────────────────────────────────────────···')); 
-             console.log(chalk.cyan('╭──────────────────────────────────────···')); 
-             console.log(`📨 ${chalk.redBright('Please type your WhatsApp number')}:`); 
-             console.log(chalk.cyan('├──────────────────────────────────────···')); 
-             phoneNumber = await question(`   ${chalk.cyan('- Number')}: `); 
-             console.log(chalk.cyan('╰──────────────────────────────────────···')); 
-             phoneNumber = phoneNumber.replace(/[^0-9]/g, '') 
-         } 
-         registration.phoneNumber = "+" + phoneNumber 
-     } 
-  
-     const phoneNumber = parsePhoneNumber(registration.phoneNumber) 
-     if (!phoneNumber.isValid()) conn.logger.error('Invalid phone number: ' + registration.phoneNumber) 
-     registration.phoneNumber = phoneNumber.format("E.164") 
-     registration.phoneNumberCountryCode = phoneNumber.countryCallingCode 
-     registration.phoneNumberNationalNumber = phoneNumber.nationalNumber 
-     const mcc = PHONENUMBER_MCC[phoneNumber.countryCallingCode] 
-     registration.phoneNumberMobileCountryCode = mcc 
-     async function enterCode() { 
-         try { 
-             console.log(chalk.cyan('╭──────────────────────────────────────···')); 
-             console.log(`📨 ${chalk.redBright('Please Enter Your OTP Code')}:`); 
-             console.log(chalk.cyan('├──────────────────────────────────────···')); 
-             const code = await question(`   ${chalk.cyan('- Code')}: `); 
-             console.log(chalk.cyan('╰──────────────────────────────────────···')); 
-             const response = await conn.register(code.replace(/[^0-9]/g, '').trim().toLowerCase()) 
-             console.log(chalk.cyan('╭─────────────────────────────────────────────────···')); 
-             console.log(`💬 ${chalk.redBright("Successfully registered your phone number.")}`); 
-             console.log(chalk.cyan('╰─────────────────────────────────────────────────···')); 
-             console.log(response) 
-             rl.close() 
-         } catch (error) { 
-             conn.logger.error('Failed to register your phone number. Please try again.\n', error) 
-             await askOTP() 
-         } 
-     } 
-  
-     async function askOTP() { 
-         console.log(chalk.cyan('╭──────────────────────────────────────···')); 
-         console.log(`📨 ${chalk.redBright('What method do you want to use? "sms" or "voice"')}`); 
-         console.log(chalk.cyan('├──────────────────────────────────────···')); 
-         let code = await question(`   ${chalk.cyan('- Method')}: `); 
-         console.log(chalk.cyan('╰──────────────────────────────────────···')); 
-         code = code.replace(/["']/g, '').trim().toLowerCase() 
-         if (code !== 'sms' && code !== 'voice') return await askOTP() 
-         registration.method = code 
-         try { 
-             await conn.requestRegistrationCode(registration) 
-             await enterCode() 
-         } catch (error) { 
-             conn.logger.error('Failed to request registration code. Please try again.\n', error) 
-             await askOTP() 
-         } 
-     } 
-     await askOTP() 
- } 
+const __dirname = global.__dirname(import.meta.url);
+
+global.opts = new Object(yargs(process.argv.slice(2)).exitProcess(false).parse());
+global.prefix = new RegExp('^[' + (opts['prefix'] || '*/i!#$%+£¢€¥^°=¶∆×÷π√✓©®:;?&.\\-.@').replace(/[|\\{}()[\]^$+*?.\-\^]/g, '\\$&') + ']');
+
+global.db = new Low(/https?:\/\//.test(opts['db'] || '') ? new cloudDBAdapter(opts['db']) : new JSONFile(`${opts._[0] ? opts._[0] + '_' : ''}database.json`));
+
+global.DATABASE = global.db; 
+global.loadDatabase = async function loadDatabase() {
+  if (global.db.READ) {
+    return new Promise((resolve) => setInterval(async function() {
+      if (!global.db.READ) {
+        clearInterval(this);
+        resolve(global.db.data == null ? global.loadDatabase() : global.db.data);
+      }
+    }, 1 * 1000));
+  }
+  if (global.db.data !== null) return;
+  global.db.READ = true;
+  await global.db.read().catch(console.error);
+  global.db.READ = null;
+  global.db.data = {
+    users: {},
+    chats: {},
+    stats: {},
+    msgs: {},
+    sticker: {},
+    settings: {},
+    ...(global.db.data || {}),
+  };
+  global.db.chain = chain(global.db.data);
+};
+loadDatabase();
+
+/* Creditos a Otosaka (https://wa.me/51993966345) */
+
+global.chatgpt = new Low(new JSONFile(path.join(__dirname, '/db/chatgpt.json')));
+global.loadChatgptDB = async function loadChatgptDB() {
+  if (global.chatgpt.READ) {
+    return new Promise((resolve) =>
+      setInterval(async function() {
+        if (!global.chatgpt.READ) {
+          clearInterval(this);
+          resolve( global.chatgpt.data === null ? global.loadChatgptDB() : global.chatgpt.data );
+        }
+      }, 1 * 1000));
+  }
+  if (global.chatgpt.data !== null) return;
+  global.chatgpt.READ = true;
+  await global.chatgpt.read().catch(console.error);
+  global.chatgpt.READ = null;
+  global.chatgpt.data = {
+    users: {},
+    ...(global.chatgpt.data || {}),
+  };
+  global.chatgpt.chain = lodash.chain(global.chatgpt.data);
+};
+loadChatgptDB();
+
+/* ------------------------------------------------*/
+
+global.authFile = `ShadowSession`;
+const {state, saveState, saveCreds} = await useMultiFileAuthState(global.authFile);
+const msgRetryCounterMap = (MessageRetryMap) => { };
+const msgRetryCounterCache = new NodeCache()
+const {version} = await fetchLatestBaileysVersion();
+let phoneNumber = global.botnumber
+
+const methodCodeQR = process.argv.includes("qr")
+const methodCode = !!phoneNumber || process.argv.includes("code")
+const MethodMobile = process.argv.includes("mobile")
+const rl = readline.createInterface({ input: process.stdin, output: process.stdout })
+const question = (texto) => new Promise((resolver) => rl.question(texto, resolver))
+
+//Código adaptado para la compatibilidad de ser bot con el código de 8 digitos. Hecho por: https://github.com/GataNina-Li
+let opcion
+if (methodCodeQR) {
+opcion = '1'
+}
+if (!methodCodeQR && !methodCode && !fs.existsSync(`./${authFile}/creds.json`)) {
+do {
+let lineM = '⋯ ⋯ ⋯ ⋯ ⋯ ⋯ ⋯ ⋯ ⋯ ⋯ ⋯ 》'
+opcion = await question('[ ℹ️ ] Seleccione una opción:\n1. Con código QR\n2. Con código de texto de 8 dígitos\n---> ')
+//if (fs.existsSync(`./${authFile}/creds.json`)) {
+//console.log(chalk.bold.redBright(`PRIMERO BORRE EL ARCHIVO ${chalk.bold.greenBright("creds.json")} QUE SE ENCUENTRA EN LA CARPETA ${chalk.bold.greenBright(authFile)} Y REINICIE.`))
+//process.exit()
+if (!/^[1-2]$/.test(opcion)) {
+console.log('[ ❗ ] Por favor, seleccione solo 1 o 2.\n')
+}} while (opcion !== '1' && opcion !== '2' || fs.existsSync(`./${authFile}/creds.json`))
+}
+
+console.info = () => {} //dejará de aparecer la molesta "pre-key"
+const connectionOptions = {
+logger: pino({ level: 'silent' }),
+printQRInTerminal: opcion == '1' ? true : methodCodeQR ? true : false,
+mobile: MethodMobile, 
+browser: opcion == '1' ? ['TheMystic-Bot-MD', 'Safari', '2.0.0'] : methodCodeQR ? ['shadow-Bot-MD', 'Safari', '2.0.0'] : ['Ubuntu', 'Chrome', '20.0.04'],
+auth: {
+creds: state.creds,
+keys: makeCacheableSignalKeyStore(state.keys, Pino({ level: "fatal" }).child({ level: "fatal" })),
+},
+markOnlineOnConnect: true, 
+generateHighQualityLinkPreview: true, 
+getMessage: async (clave) => {
+let jid = jidNormalizedUser(clave.remoteJid)
+let msg = await store.loadMessage(jid, clave.id)
+return msg?.message || ""
+},
+msgRetryCounterCache,
+msgRetryCounterMap,
+defaultQueryTimeoutMs: undefined,   
+version
+}
+
+global.conn = makeWASocket(connectionOptions);
+
+if (!fs.existsSync(`./${authFile}/creds.json`)) {
+if (opcion === '2' || methodCode) {
+//if (fs.existsSync(`./${authFile}/creds.json`)) {
+//console.log(chalk.bold.redBright(`PRIMERO BORRE EL ARCHIVO ${chalk.bold.greenBright("creds.json")} QUE SE ENCUENTRA EN LA CARPETA ${chalk.bold.greenBright(authFile)} Y REINICIE.`))
+//process.exit()
+//}
+opcion = '2'
+if (!conn.authState.creds.registered) {  
+if (MethodMobile) throw new Error('No se puede usar un código de emparejamiento con la API móvil')
+
+let numeroTelefono
+if (!!phoneNumber) {
+numeroTelefono = phoneNumber.replace(/[^0-9]/g, '')
+if (!Object.keys(PHONENUMBER_MCC).some(v => numeroTelefono.startsWith(v))) {
+console.log(chalk.bgBlack(chalk.bold.redBright("Comience con el código de país de su número de WhatsApp.\nEjemplo: +5219992095479\n")))
+process.exit(0)
+}} else {
+while (true) {
+numeroTelefono = await question(chalk.bgBlack(chalk.bold.yellowBright('Por favor, escriba su número de WhatsApp.\nEjemplo: +5219992095479\n')))
+numeroTelefono = numeroTelefono.replace(/[^0-9]/g, '')
+
+if (numeroTelefono.match(/^\d+$/) && Object.keys(PHONENUMBER_MCC).some(v => numeroTelefono.startsWith(v))) {
+break 
+} else {
+console.log(chalk.bgBlack(chalk.bold.redBright("Por favor, escriba su número de WhatsApp.\nEjemplo: +5219992095479.\n")))
+}}
+rl.close()  
+} 
+
+        setTimeout(async () => {
+            let codigo = await conn.requestPairingCode(numeroTelefono)
+            codigo = codigo?.match(/.{1,4}/g)?.join("-") || codigo
+            console.log(chalk.yellow('[ ℹ️ ] introduce el código de emparejamiento en WhatsApp.'));
+            console.log(chalk.black(chalk.bgGreen(`Su código de emparejamiento: `)), chalk.black(chalk.white(codigo)))
+        }, 3000)
+}}
+}
+
+conn.isInit = false;
+conn.well = false;
+conn.logger.info(`[ ℹ️ ] Cargando...\n`);
+          
 if (!opts['test']) { 
    if (global.db) { 
      setInterval(async () => { 
