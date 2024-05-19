@@ -286,8 +286,9 @@ console.log(chalk.bold.green(`Archivo ${file} borrado con éxito`))
 console.log(chalk.bold.red(`Archivo ${file} no borrado` + err))
 } }) }) }) })
 }
-
 async function connectionUpdate(update) {
+  
+
   const {connection, lastDisconnect, isNewLogin} = update;
   global.stopped = connection;
   if (isNewLogin) conn.isInit = true;
@@ -298,44 +299,50 @@ async function connectionUpdate(update) {
     global.timestamp.connect = new Date;
   }
   if (global.db.data == null) loadDatabase();
-  if (update.qr != 0 && update.qr != undefined) {
-    console.log(chalk.yellow('[✳️]ㅤEscanea este codigo QR, el codigo QR expira en 60 segundos.'));
+if (update.qr != 0 && update.qr != undefined || methodCodeQR) {
+if (opcion == '1' || methodCodeQR) {
+    console.log(chalk.yellow('[ ℹ️ ] Escanea el código QR.'));
+ }}
+  if (connection == 'open') {
+    console.log(chalk.yellow('[ ℹ️ ] Conectado correctamente.'));
   }
-    if (connection == 'open') { 
-     console.log(chalk.yellow(`╭──────────────────────────────✧•°•°···\n│➢ 𝐁𝐎𝐓 𝐂𝐎𝐍𝐄𝐂𝐓𝐀𝐃𝐎 𝐂𝐎𝐑𝐑𝐄𝐂𝐓𝐀𝐌𝐄𝐍𝐓𝐄 ☑️\n│❏ 𝐁𝐎𝐓 𝐈𝐍𝐒𝐓𝐀𝐋𝐀𝐃𝐎:𝐓𝐡𝐞 𝐒𝐡𝐚𝐝𝐨𝐰 𝐁𝐫𝐨𝐜𝐤𝐞𝐫𝐬 - 𝐁𝐨𝐭 ☑️\n╰──────────────────────────────✧•°•°···`)); 
-   }
 let reason = new Boom(lastDisconnect?.error)?.output?.statusCode;
+if (reason == 405) {
+await fs.unlinkSync("./ShadowSession/" + "creds.json")
+console.log(chalk.bold.redBright(`[ ⚠ ] Conexión replazada, Por favor espere un momento me voy a reiniciar...\nSi aparecen error vuelve a iniciar con : npm start`)) 
+process.send('reset')}
 if (connection === 'close') {
     if (reason === DisconnectReason.badSession) {
         conn.logger.error(`[ ⚠ ] Sesión incorrecta, por favor elimina la carpeta ${global.authFile} y escanea nuevamente.`);
         //process.exit();
     } else if (reason === DisconnectReason.connectionClosed) {
         conn.logger.warn(`[ ⚠ ] Conexión cerrada, reconectando...`);
-        process.send('reset');
+        await global.reloadHandler(true).catch(console.error);
     } else if (reason === DisconnectReason.connectionLost) {
         conn.logger.warn(`[ ⚠ ] Conexión perdida con el servidor, reconectando...`);
-        process.send('reset');
+        await global.reloadHandler(true).catch(console.error);
     } else if (reason === DisconnectReason.connectionReplaced) {
         conn.logger.error(`[ ⚠ ] Conexión reemplazada, se ha abierto otra nueva sesión. Por favor, cierra la sesión actual primero.`);
         //process.exit();
     } else if (reason === DisconnectReason.loggedOut) {
-        conn.logger.error(`[🔒]Conexion cerrada, por favor borre la carpeta ${global.authFile} y reescanee el codigo QR`);
+        conn.logger.error(`[ ⚠ ] Conexion cerrada, por favor elimina la carpeta ${global.authFile} y escanea nuevamente.`);
         //process.exit();
     } else if (reason === DisconnectReason.restartRequired) {
-        conn.logger.info(`[ ⚠️ ] Reinicio necesario, reinicie el servidor si presenta algún problema.`);
-        //process.send('reset');
+        conn.logger.info(`[ ⚠ ] Reinicio necesario, reinicie el servidor si presenta algún problema.`);
+        await global.reloadHandler(true).catch(console.error);
     } else if (reason === DisconnectReason.timedOut) {
-        conn.logger.warn(`[ ⚠️ ] Tiempo de conexión agotado, reconectando...`);
-        process.send('reset');
+        conn.logger.warn(`[ ⚠ ] Tiempo de conexión agotado, reconectando...`);
+        await global.reloadHandler(true).catch(console.error);
     } else {
-        conn.logger.warn(`[ ⚠️ ] Razón de desconexión desconocida. ${reason || ''}: ${connection || ''}`);
-        //process.exit();
+        conn.logger.warn(`[ ⚠ ] Razón de desconexión desconocida. ${reason || ''}: ${connection || ''}`);
+        await global.reloadHandler(true).catch(console.error);
     }
 }
   /*if (connection == 'close') {
-    console.log(chalk.yellow(`[🔒]ㅤConexion cerrada, por favor borre la carpeta ${global.authFile} y reescanee el codigo QR`));
+    console.log(chalk.yellow(`🚩ㅤConexion cerrada, por favor borre la carpeta ${global.authFile} y reescanee el codigo QR`));
   }*/
 }
+
 
 process.on('uncaughtException', console.error);
 //conn.ev.on('messages.update', console.error);
