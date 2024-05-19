@@ -21,7 +21,7 @@ import pino from 'pino';
 import Pino from 'pino';
 import NodeCache from 'node-cache';
 import {Boom} from '@hapi/boom';
-import {makeWASocket, protoType, serialize} from './lib/simple.js';
+import {makeWASocket, protoType, serialize} from "./lib/simple.js"
 import {Low, JSONFile} from "lowdb";
 import {mongoDB, mongoDBV2} from "./lib/mongoDB.js";
 const {chain} = lodash;
