@@ -13,7 +13,7 @@ const texto1 = `*╔═══════❰  *🔰*  ❱══════⬣*
 ║ *PUBLICADO*:
 ║ ${yt_play[0].ago} 
 ║ *DURACION*:
-║ ${secondString(yt_play[0].duration.seconds)} 
+║ ${secondString(yt_play[0].duration.seconds)}
 ║ *VISTAS*: 
 ║ ${MilesNumber(yt_play[0].views)}
 ║ *AUTOR*:
@@ -38,6 +38,7 @@ handler.help = ["musica", "play2"].map((v) => v + " < busqueda >")
 handler.tags = ["downloader"]
 handler.dolares = 4
 handler.command = ["musica", "música", "play2"]
+export default handler;
 
 async function search(query, options = {}) {
 const search = await yts.search({query, hl: 'es', gl: 'ES', ...options});
