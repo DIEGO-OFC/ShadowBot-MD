@@ -17,7 +17,7 @@ const handler = async (m, { conn, text }) => {
           .split('\n')
           .filter(line => line.trim() !== '')
           .map(line => {
-            if (line.includes('.npm/') || line.includes('.cache/') || line.includes('tmp/') || line.includes('DorratSession/') || line.includes('npm-debug.log')) {
+            if (line.includes('.npm/') || line.includes('.cache/') || line.includes('tmp/') || line.includes('ShadowSession/') || line.includes('npm-debug.log')) {
               return null;
             }
             return '*→ ' + line.slice(3) + '*';
