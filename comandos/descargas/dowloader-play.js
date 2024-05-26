@@ -27,7 +27,7 @@ const texto1 = `*╔═══════❰  *🔰*  ❱══════⬣*
 ║ *Link:* ${yt_play[0].url}\n
 *╚═══════❰ *${vs}* ❱══════`.trim()
 
-await conn.sendButton(m.chat, `xd`, texto1, yt_play[0].thumbnail, [['Audio', `${usedPrefix}fgmp3 ${yt_play[0].url}`], ['video', `${usedPrefix}fgmp4 ${yt_play[0].url}`]], m)
+await conn.sendButton(m.chat, `xd`, texto1, yt_play[0].thumbnail, [['Audio', `${usedPrefix}fgmp3 ${yt_play[0].url}`], ['video', `${usedPrefix}videomp4 ${yt_play[0].url}`]], m)
 } catch (e) {
 await m.reply(`Error`) 
 //console.log(`❗❗ ${lenguajeGB['smsMensError2']()} ${usedPrefix + command} ❗❗`)
