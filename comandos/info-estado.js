@@ -18,7 +18,7 @@ let handler = async (m, {conn}) => {
 ║
 ║ *=➢ 🤖 TIEMPO ACTIVO:* ${uptime}
 ║ *=➢ 👑 CREADOR: DIEGO-OFC*
-║ *=➢ 🔗 PAGINA OFICIAL:* dorrat-bot-oficial.ml
+║ *=➢ 🔗 PAGINA OFICIAL:* web-shadow.vercel.app
 ╚════════════════
 [número del creador]:
 wa.me/528442286089
