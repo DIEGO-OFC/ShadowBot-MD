@@ -89,6 +89,12 @@ global.baileys = '@whiskeysockets/baileys'
 //_______tiempp de stickers______________
 global.d = new Date(new Date() + 3600000);
 global.locale = "es";
+global.MyApiRestBaseUrl = 'https://api.cafirexos.com'; // Bloqueo de IP -> usar esta para no ser bloqueado: 'https://api-brunosobrino.onrender.com';
+global.MyApiRestApikey = 'BrunoSobrino';
+
+global.MyApiRestBaseUrl2 = 'https://api-brunosobrino-dcaf9040.koyeb.app';
+
+global.MyApiRestBaseUrl3 = 'https://api-brunosobrino.onrender.com'; 
 global.dia = d.toLocaleDateString(locale, {weekday: "long"});
 global.fecha = d.toLocaleDateString("es", {day: "numeric", month: "numeric", year: "numeric"});
 global.mes = d.toLocaleDateString("es", {month: "long"});
