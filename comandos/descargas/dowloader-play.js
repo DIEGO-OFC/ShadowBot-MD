@@ -25,7 +25,6 @@ const texto1 = `*╔═══════❰  *🔰*  ❱══════⬣*
 ║ *Tipo:* 
 ║ ${yt_play[0].type} 
 ║ *Link:* ${yt_play[0].url}\n
-║ *_ENVIANDO ${additionalText}, PORFAVOR ESPERE.*
 *╚═══════❰ *${vs}* ❱══════`.trim()
 
 await conn.sendButton(m.chat, `xd`, texto1, yt_play[0].thumbnail, [['Audio', `yta ${yt_play[0].url}`]], m)
