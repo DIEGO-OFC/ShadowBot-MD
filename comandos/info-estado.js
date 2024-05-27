@@ -21,7 +21,7 @@ let handler = async (m, {conn}) => {
 ║ *=➢ 🔗 PAGINA OFICIAL:* web-shadow.vercel.app
 ╚════════════════
 [número del creador]:
-wa.me/528442286089
+wa.me/51906662557
 
 `.trim();
   //let buttons = [{buttonId: `#menu`, buttonText: {displayText: "𝙼𝙴𝙽𝚄"}, type: 1}];
