@@ -10,5 +10,5 @@ global.mc = `┏━━━━━━━━━━━━━┓
 ║≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋
 ┣ • *IP: node.asif.panel-infinitywa.store
 ┣ • *PUERTO: 3000*
-┣ • *BEDROCK Y JAVA*
+┣ • *Vanilla bedrock*
 ┗━━━━━━━━━━━━━┛`;
