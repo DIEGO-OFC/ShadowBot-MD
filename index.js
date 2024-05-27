@@ -10,7 +10,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const { say } = cfonts;
 const rl = createInterface(process.stdin, process.stdout);
 
-say("DORRAT BOT", {
+say("SHADOW BOT", {
   font: "tiny",
   align: "center",
   colors: ["#ff8000"],
