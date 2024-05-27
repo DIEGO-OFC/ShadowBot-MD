@@ -102,13 +102,13 @@ global.año = d.toLocaleDateString("es", {year: "numeric"});
 global.tiempo = d.toLocaleString("en-US", {hour: "numeric", minute: "numeric", second: "numeric", hour12: true});
 //------------- Sticker WM -----------
 global.packname = `𝐃𝐈𝐄𝐆𝐎-𝐎𝐅𝐂`;
-global.author = `© 𝐓𝐡𝐞 𝐒𝐡𝐚𝐝𝐨𝐰 𝐁𝐫𝐨𝐜𝐤𝐞𝐫𝐬 - 𝐁𝐨𝐭`;
+global.author = `卍 ᗪㄖ尺尺卂ㄒ-乃ㄖㄒ-爪ᗪ`;
 //_______________
-global.wm = "𝗦𝗵𝗮𝗱𝗼𝘄-𝗕𝗼𝘁 | 𝐃𝐈𝐄𝐆𝐎-𝐎𝐅𝐂";
-global.db3t = `© 𝐓𝐡𝐞 𝐒𝐡𝐚𝐝𝐨𝐰 𝐁𝐫𝐨𝐜𝐤𝐞𝐫𝐬 - 𝐁𝐨𝐭 `;
+global.wm = "𝔻𝕆ℝℝ𝔸𝕋 𝔹𝕆𝕋 𝕄𝔻 | 𝐃𝐈𝐄𝐆𝐎-𝐎𝐅𝐂";
+global.db3t = `卍 ᗪㄖ尺尺卂ㄒ-乃ㄖㄒ-爪ᗪ`;
 global.wm3 = db3t;
 global.codex = `Diego-Ofc`;
-global.igfg = "𝐒𝐡𝐚𝐝𝐨𝐰 𝐁𝐫𝐨𝐜𝐤𝐞𝐫𝐬 - 𝐁𝐨𝐭";
+global.igfg = "🅓︎🅞︎🅡︎🅡︎🅐︎🅣︎ 🅑︎🅞︎🅣︎ 🅜︎🅓︎";
 global.wait = "*[❕] CARGANDO POR FAVOR ESPERA...*";
 //-------------------
 global.md = "https://chat.whatsapp.com/JuuuUaIQnnE3t4SWQenShg";
