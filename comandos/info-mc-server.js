@@ -8,7 +8,7 @@ export default handler;
 global.mc = `┏━━━━━━━━━━━━━┓
 ┃ *<MINECRAFT SERVER/>*
 ║≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋
-┣ • *IP: nodo5.boxmineworld.com*
-┣ • *PUERTO: 4003*
+┣ • *IP: node.asif.panel-infinitywa.store
+┣ • *PUERTO: 3000*
 ┣ • *BEDROCK Y JAVA*
 ┗━━━━━━━━━━━━━┛`;
