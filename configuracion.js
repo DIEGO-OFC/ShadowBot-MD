@@ -102,13 +102,13 @@ global.año = d.toLocaleDateString("es", {year: "numeric"});
 global.tiempo = d.toLocaleString("en-US", {hour: "numeric", minute: "numeric", second: "numeric", hour12: true});
 //------------- Sticker WM -----------
 global.packname = `𝐃𝐈𝐄𝐆𝐎-𝐎𝐅𝐂`;
-global.author = `卍 ᗪㄖ尺尺卂ㄒ-乃ㄖㄒ-爪ᗪ`;
+global.author = `卍 SHADOW-乃ㄖㄒ-爪ᗪ`;
 //_______________
-global.wm = "𝔻𝕆ℝℝ𝔸𝕋 𝔹𝕆𝕋 𝕄𝔻 | 𝐃𝐈𝐄𝐆𝐎-𝐎𝐅𝐂";
-global.db3t = `卍 ᗪㄖ尺尺卂ㄒ-乃ㄖㄒ-爪ᗪ`;
+global.wm = "SHADOW 𝔹𝕆𝕋 𝕄𝔻 | 𝐃𝐈𝐄𝐆𝐎-𝐎𝐅𝐂";
+global.db3t = `卍 SHADOW-乃ㄖㄒ-爪ᗪ`;
 global.wm3 = db3t;
 global.codex = `Diego-Ofc`;
-global.igfg = "🅓︎🅞︎🅡︎🅡︎🅐︎🅣︎ 🅑︎🅞︎🅣︎ 🅜︎🅓︎";
+global.igfg = "SHADOW 🅑︎🅞︎🅣︎ 🅜︎🅓︎";
 global.wait = "*[❕] CARGANDO POR FAVOR ESPERA...*";
 //-------------------
 global.md = "https://chat.whatsapp.com/JuuuUaIQnnE3t4SWQenShg";
@@ -126,7 +126,7 @@ global.fg = "☆━━━━ ⚠️ 𝙵𝙰𝙻𝙻𝙾 ⚠️ ━━━☆";
 global.fallo = fg;
 global.mg = "══ ❎ 𝙻𝙾 𝚄𝚂𝙾 𝙼𝙰𝙻 ❎ ══";
 global.mal = mg;
-global.dorre = "ᗪㄖ尺尺卂ㄒ 乃ㄖㄒ";
+global.dorre = "shadow 乃ㄖㄒ";
 global.DORRA = dorre;
 
 /* Imagenes___________________ */
