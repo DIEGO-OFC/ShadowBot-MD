@@ -34,7 +34,7 @@ let info = `
 ╠═〘 𝐈𝐍𝐅𝐎 𝐃𝐄𝐋 𝐁𝐎𝐓 〙 ═
 ╠
 ║❒  [👑] *CREADOR: DIEGO-OFC*
-║❒  [#️⃣] *NUMERO: +528442286089*
+║❒  [#️⃣] *NUMERO: +51906662557*
 ║❒  [🛠️] *PREFIJO: ${usedPrefix}*
 ║❒  [💬] *CHATS PRIVADOS: ${chats.length - groups.length}*
 ║❒  [💭] *CHAT DE GRUPOS: ${groups.length}* 
