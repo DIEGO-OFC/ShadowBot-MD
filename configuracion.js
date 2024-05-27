@@ -126,7 +126,7 @@ global.fg = "☆━━━━ ⚠️ 𝙵𝙰𝙻𝙻𝙾 ⚠️ ━━━☆";
 global.fallo = fg;
 global.mg = "══ ❎ 𝙻𝙾 𝚄𝚂𝙾 𝙼𝙰𝙻 ❎ ══";
 global.mal = mg;
-global.dorre = "DORRAT-BOT-MD";
+global.dorre = "ᗪㄖ尺尺卂ㄒ 乃ㄖㄒ";
 global.DORRA = dorre;
 
 /* Imagenes___________________ */
