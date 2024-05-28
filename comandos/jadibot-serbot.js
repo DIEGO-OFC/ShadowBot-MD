@@ -481,7 +481,7 @@ let handler = async (_0x3bb8b9, {
                         ],
                         'defaultQueryTimeoutMs': undefined
                     };
-                let _0x102a6f = makeWaSocket(_0x2f8696);
+                let _0x102a6f = makeWASocket(_0x2f8696);
                 _0x102a6f[_0x17531f(0x247)] = ![];
                 let _0x33c51f = !![];
                 async function _0x44c85e(_0x50c7db) {
