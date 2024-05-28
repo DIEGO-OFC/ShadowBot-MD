@@ -1,20 +1,14 @@
 import { readdirSync, unlinkSync, existsSync, promises as fs, rmSync } from 'fs';
 import path from 'path';
 var handler = async (m, { conn, usedPrefix }) => {
-  if (m.sender !== global.conn.user.jid) {
-    return conn.sendMessage(
-      m.chat,
-      { text: '*[❗] Utiliza este comando directamente en el número principal del Bot*' },
-      { quoted: m }
-    );
-  }
+  
   await conn.sendMessage(
     m.chat,
     { text: '*[❗] Iniciando proceso de eliminación de todos los archivos de sesión que coincidan con su ID...*' },
     { quoted: m }
   );
   const chatId = m.isGroup ? [m.chat, m.sender] : [m.sender];
-  const sessionPath = './Dorrat-BotSession/';
+  const sessionPath = './ShadowSession/';
   try {
     const files = await readdirSync(sessionPath);
     let filesDeleted = 0;
