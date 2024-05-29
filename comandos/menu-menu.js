@@ -26,12 +26,13 @@ if (command == "menu" || command == "menú") {
 let uwu = `╦══════════════════ ⪨
 ┃│✾ ⋟ *${ucapan()}*
 ┃│✾ ⋟ *tenemos varios tipos de menus*
-┃│✾ ⋟ 1
+┃│✾ ⋟ 
 ┃│✾ ⋟ *#menucompleto*
-┃│✾ ⋟ 2
+┃│✾ ⋟ *_Muestra el menu completo_*
 ┃│✾ ⋟ *#descargasmenu*
-┃│✾ ⋟ *ejemplo:*
-┃│✾ ⋟ *#menucompleto*
+┃│✾ ⋟ *_Muestra el menu de descargas_*
+┃│✾ ⋟ *#hornymenu*
+┃│✾ ⋟ *_muestra el menu +18_*
 ┃╰══ ⪨`
 conn.sendButton(m.chat, uwu, null, imagen1, [
 ['🌐 menucompleto', '.allmenu'],
@@ -53,7 +54,7 @@ var completomenu = `*╭━━❍𝑺𝒉𝒂𝒅𝒐𝒘𝑩𝒐𝒕❍━━�
  *┃┃ ⋄ LIBRERIA » ${library}* 
  *┃┃ ⋄ USUARIOS » ${Object.keys(global.db.data.users).length}* 
  *┃╰━━━━━━━━━━━━━━━━╾•* 
- *╰━━━╼𝑺𝒉𝒂𝒅𝒐𝒘𝑩𝒐𝒕╾━━━╯* 
+ *╰━━━╼_SHADOW-乃ㄖㄒ-爪ᗪ_╾━━━╯* 
   
  ▧ 「 *I N F O R M A C I O N* 」  
  ‣ ︎Comando: ${usedPrefix}grupos
@@ -80,7 +81,7 @@ var completomenu = `*╭━━❍𝑺𝒉𝒂𝒅𝒐𝒘𝑩𝒐𝒕❍━━�
  ║ *<UNE UN BOT A TU GRUPO/>* 
  ║══════════════════ 
  ║ ➱_${usedPrefix}join *link del grupo*_  
- ║ ➱_*minimo 30 miembros*_ 
+ ║ ➱_*minimo 150 miembros*_ (hay excepciones)
  ╚════ ≪ •❈• ≫ ════╝ 
   
  ╔═════ JADIBOT 🤖 ═════╗  
@@ -546,6 +547,7 @@ var completomenu = `*╭━━❍𝑺𝒉𝒂𝒅𝒐𝒘𝑩𝒐𝒕❍━━�
   ╔═════ REPORTAR ═════╗  
  ║ ❒ _*Reporta con este comando de haber*_ 
  ║ ❒ _*Fallas para poder Solucionar!!*_ 
+ ┃│✾ ⋟ si lo usas para joder seras baneado
  ║════════════════════════ 
  ║︎ ❒ _${usedPrefix}reporte *texto*_ 
  ║ ❒ _${usedPrefix}report *texto*_ 
