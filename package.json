@@ -35,6 +35,7 @@
     "@vitalets/google-translate-api": "^8.0.0",
     "@whiskeysockets/baileys": "^6.7.2",
     "puppeteer": "^20.9.0",
+    "@sasmeee/igdl": "npm:@sasmeee/igdl",
     "minecraft-server-util": "^3.5.2",
     "@xct007/frieren-scraper": "^0.0.2",
     "acrcloud": "^1.4.0",
