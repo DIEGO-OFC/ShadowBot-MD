@@ -14,8 +14,8 @@ let handler = async (m, { conn, command }) => {
   let pp = await conn
     .profilePictureUrl(who, "image")
     .catch((_) => "https://telegra.ph/file/9b1353deceded7f387713.jpg");
-  //if (!(who in global.db.data.users))
-    throw `El usuario que está mencionando no está registrado en mi base de datos`;
+  /*if (!(who in global.db.data.users))
+    throw `El usuario que está mencionando no está registrado en mi base de datos`;*/
   try {
   } catch (e) {
   } finally {
