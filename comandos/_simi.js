@@ -8,12 +8,12 @@ handler.before = async (m) => {
     if (/false|disnable|(turn)?off|0/i.test(m.text)) return;
     const textodem = m.text;
     try {
-      const response = await fetch(`https://api.simsimi.net/v2/?text=${encodeURIComponent(textodem)}&lc=es`);
-      const data = await response.json();
+    let gpt = await fetch(`https://delirius-api-oficial.vercel.app/api/simi?text=${encodeURIComponent(textodem)}`)
+let res = await gpt.json()
       if (data.success === "No sé lo que estás diciendo. Por favor enséñame.") {
         return m.reply(`${lol}`); // EL TEXTO "lol" NO ESTA DEFINIDO PARA DAR ERROR Y USAR LA OTRA API
       }
-      return m.reply(data.success);
+      return m.reply(res.data.message);
     } catch {
       // SI DA ERROR USARA ESTA OTRA OPCION DE API DE IA QUE RECUERDA EL NOMBRE DE LA PERSONA
       if (textodem.includes("Hola")) textodem = textodem.replace("Hola", "Hello");
