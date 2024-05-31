@@ -11,10 +11,9 @@ let handler = async (m, {text, usedPrefix, command}) => {
     );
     throw false;
   }
-  let res = await fetch(global.API("https://api.simsimi.net", "/v2/", {text: encodeURIComponent(text), lc: "es"}, ""));
-  let json = await res.json();
-  if (json.success) m.reply(json.success);
-  else throw json;
+   let gpt = await fetch(`https://delirius-api-oficial.vercel.app/api/simi?text=${text}`)
+let res = await gpt.json()
+await m.reply(res.data.message)
 };
 handler.help = ["simi", "bot"].map((v) => v + " <teks>");
 handler.tags = ["fun"];
