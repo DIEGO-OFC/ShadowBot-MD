@@ -1510,9 +1510,9 @@ global.dfail = (type, m, conn) => {
          contextInfo: { 
            externalAdReply: { 
              title: "[ ⚠ ] 𝐀𝐕𝐈𝐒𝐎 - 𝐀𝐋𝐄𝐑𝐓𝐀", 
-             body: "𝙳𝚘𝚛𝚛𝚊𝚝-𝙱𝚘𝚝-𝙼𝙳", 
+             body: Shadow-𝙱𝚘𝚝-𝙼𝙳", 
              thumbnail: imagen1, 
-             sourceUrl: "https://github.com/DIEGO-OFC/DORRAT-BOT-MD", 
+             sourceUrl: "https://github.com/DIEGO-OFC/ShadowBot-MD", 
            }, 
          }, 
        }, 
