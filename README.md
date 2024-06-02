@@ -102,8 +102,7 @@ ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
 <a href="https://github.com/Zastinian"><img src="https://github.com/Zastinian.png" width="100" height="100" alt="Zastinian"/></a>  <a href="https://github.com/BrunoSobrino"><img src="https://github.com/BrunoSobrino.png" width="100" height="100" alt="BrunoSobrino"/></a> <a href="https://github.com/Skidy89"><img src="https://github.com/Skidy89.png" width="100" height="100" alt="putos negros"/>
 </a>
 <a href="https://github.com/elrebelde21"><img src="https://github.com/elrebelde21.png" width="100" height="100" alt="elrebelde21"/> 
-</a>  
-<img src="https://github.com/Alba070503.png" width="100" height="100" alt="Alba070503"/> </a>  
+</a> <img src="https://github.com/Alba070503.png" width="100" height="100" alt="Alba070503"/> </a>  
 <img src="https://github.com/VIRUZOFC.png" width="100" height="100" alt="VIRUZOFC"/> 
 </a>  
 
