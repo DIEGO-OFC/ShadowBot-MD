@@ -1,3 +1,5 @@
+//Código hecho por matias-crypto y //modificado por Diego 
+
 //import animeNames from '../lib/anime_names.json';
 
 var handler = async (m, { conn }) => {
