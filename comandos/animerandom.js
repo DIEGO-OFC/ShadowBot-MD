@@ -6,5 +6,5 @@ var handler = async (m, { conn }) => {
 };
 handler.help = ["anime"];
 handler.tags = ["random"];
-handler.command = "";
+handler.command = ["randoma", "animr"];
 export default handler;
