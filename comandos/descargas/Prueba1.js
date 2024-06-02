@@ -72,7 +72,7 @@ renderLargerThumbnail: true
 } catch {
 }}}}}
 }  
-if (command == 'play5') {
+if (command == 'play6') {
 try {
 let qu = '360'
 let q = qu + 'p'
@@ -98,7 +98,7 @@ await conn.sendMessage(m.chat, { video: { url: n2 }, fileName: `${n}.mp4`, mimet
 } catch {
 }}}}} catch {
 }}
-handler.command = ['play', 'play2']
+handler.command = ['play5', 'play6']
 handler.exp = 0
 export default handler
 
