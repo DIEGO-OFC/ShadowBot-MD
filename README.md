@@ -105,7 +105,8 @@ ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
 </a>  
 <img src="https://github.com/Alba070503.png" width="100" height="100" alt="Alba070503"/> 
 </a>  
-
+<img src="https://github.com/VIRUZOFC.png" width="100" height="100" alt="VIRUZOFC"/> 
+</a>  
 
 ## `𝐄𝐃𝐈𝐓𝐎𝐑 𝐘 𝐏𝐎𝐑𝐏𝐈𝐄𝐓𝐀𝐑𝐈𝐎 𝐃𝐄𝐋 𝐁𝐎𝐓` 
 <a href="https://github.com/DIEGO-OFC"><img src="https://github.com/DIEGO-OFC.png" width="300" height="300" alt="DIEGO-OFC"/></a>
