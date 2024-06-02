@@ -1,4 +1,4 @@
-import animeNames from './anime_names.json';
+import animeNames from './anime_r.json';
 
 var handler = async (m, { conn }) => {
   const randomAnime = animeNames[Math.floor(Math.random() * animeNames.length)];
