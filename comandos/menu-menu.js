@@ -303,6 +303,8 @@ var completomenu = `*╭━━❍𝑺𝒉𝒂𝒅𝒐𝒘𝑩𝒐𝒕❍━━�
  ├➢_${usedPrefix}consejo_ 
  ├➢_${usedPrefix}fraseromantica_ 
  ├➢_${usedPrefix}historiaromantica_ 
+ ├➢_${usedPrefix}motivacion_
+ ├➢_${usedPrefix}chiste_
  └────ׂ─ׂ─ׂ─ׂ── 
   
  ┌──「⛩️𝐀𝐍𝐈𝐌𝐄𝐒」─ 
@@ -353,6 +355,7 @@ var completomenu = `*╭━━❍𝑺𝒉𝒂𝒅𝒐𝒘𝑩𝒐𝒕❍━━�
  ├➢${usedPrefix}sasuke 
  ├➢${usedPrefix}sakura 
  ├➢${usedPrefix}cosplay 
+ ├➢_${usedPrefix}randoma_
  └────ׂ─ׂ─ׂ─ׂ─── 
  
  ┌──「🔞𝐂𝐨𝐦𝐚𝐧𝐝𝐨𝐬 +𝟏𝟖」 
