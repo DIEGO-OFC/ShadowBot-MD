@@ -1,3 +1,5 @@
+//Código hecho por matias-crypto y modificado por Mario
+
 import fetch from 'node-fetch';
 import translate from '@vitalets/google-translate-api';
 
