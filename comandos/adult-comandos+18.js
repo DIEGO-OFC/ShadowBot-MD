@@ -8,37 +8,43 @@ const handler = async (m, {command, conn}) => {
 if (command == 'pornonetorare') {
         const ziraxElmejor = await akaneko.nsfw.netorare();  
     const caption = `*乂 ⺀ NSFW NETERORARE ⺀ 乂*` 
-    await conn.sendFile(m.chat, ziraxElmejor, "zirax.jpg", caption, m);
+    await conn.sendButton(m.chat, caption, author, ziraxElmejor, [['🔄 𝚂𝙸𝙶𝚄𝙸𝙴𝙽𝚃𝙴 🔄', `/${command}`]], null, null, m)
+  //conn.sendFile(m.chat, ziraxElmejor, "zirax.jpg", caption, m);
   }
 
 if (command == 'pornomuslos') {
         const muslo = await akaneko.nsfw.thighs();  
     const caption = `*乂 ⺀ NSFW MUSLOS ⺀ 乂*` 
-    await conn.sendFile(m.chat, muslo, "zirax.jpg", caption, m);
+    await conn.sendButton(m.chat, caption, author, muslo, [['🔄 𝚂𝙸𝙶𝚄𝙸𝙴𝙽𝚃𝙴 🔄', `/${command}`]], null, null, m)
+    //conn.sendFile(m.chat, muslo, "zirax.jpg", caption, m);
   }
 
 if (command == 'pornosuccubus') {
         const sucu = await akaneko.nsfw.succubus();  
     const caption = `*乂 ⺀ NSFW SUCCUBUS ⺀ 乂*` 
-    await conn.sendFile(m.chat, sucu, "zirax.jpg", caption, m);
+    await conn.sendButton(m.chat, caption, author, sucu, [['🔄 𝚂𝙸𝙶𝚄𝙸𝙴𝙽𝚃𝙴 🔄', `/${command}`]], null, null, m)
+  //conn.sendFile(m.chat, sucu, "zirax.jpg", caption, m);
   }
 
 if (command == 'pornofeet') {
   const pies = await akaneko.nsfw.feet();  
     const caption = `*乂 ⺀ NSFW PIES⺀ 乂*` 
-    await conn.sendFile(m.chat, pies, "zirax.jpg", caption, m); 
+    await  conn.sendButton(m.chat, caption, author, pies, [['🔄 𝚂𝙸𝙶𝚄𝙸𝙴𝙽𝚃𝙴 🔄', `/${command}`]], null, null, m)
+  //conn.sendFile(m.chat, pies, "zirax.jpg", caption, m); 
  }  
 
   if (command == 'pornololi') {
     const res = (await axios.get(`https://raw.githubusercontent.com/BrunoSobrino/TheMystic-Bot-MD/master/src/JSON/nsfwloli.json`)).data;
     const haha = await res[Math.floor(res.length * Math.random())];
-    conn.sendMessage(m.chat, {image: {url: haha}, caption: `_${command}_`.trim()}, {quoted: m});
+    conn.sendButton(m.chat, `_${command}_`, author, haha, [['🔄 𝚂𝙸𝙶𝚄𝙸𝙴𝙽𝚃𝙴 🔄', `/${command}`]], null, null, m)
+   // conn.sendMessage(m.chat, {image: {url: haha}, caption: `_${command}_`.trim()}, {quoted: m});
   }
 
 if (command == 'pornochupada') {
         const bloxd = await akaneko.nsfw.blowjob();  
     const caption = `*乂 ⺀ NSFW CHUPADA ⺀ 乂*` 
-    await conn.sendFile(m.chat, bloxd, "zirax.jpg", caption, m);
+    await conn.sendButton(m.chat, caption, author, bloxd, [['🔄 𝚂𝙸𝙶𝚄𝙸𝙴𝙽𝚃𝙴 🔄', `/${command}`]], null, null, m)
+  //conn.sendFile(m.chat, bloxd, "zirax.jpg", caption, m);
   }
 
 if (command == 'pornouniform') {
@@ -98,13 +104,15 @@ if (command == 'pornoschool') {
   if (command == 'hentai') {
         const akafw = await akaneko.nsfw.hentai();  
     const caption = `*乂 ⺀ HENTAI ⺀ 乂*` 
-    await conn.sendFile(m.chat, akafw, "zirax.jpg", caption, m); 
+    await conn.sendButton(m.chat, caption, author, akafw, [['🔄 𝚂𝙸𝙶𝚄𝙸𝙴𝙽𝚃𝙴 🔄', `/${command}`]], null, null, m)
+  //conn.sendFile(m.chat, akafw, "zirax.jpg", caption, m); 
  }
 if (command == 'tetas2') {
    const tetasgodx = new CLUB();
   const tetasgodV = await tetasgodx.hboobs(); 
     const caption = `*乂 ⺀ NSFW - TETAS ⺀ 乂*` 
-    await conn.sendFile(m.chat, tetasgodV, "zirax.jpg", caption, m); 
+    await conn.sendButton(m.chat, caption, author, tetasgodV, [['🔄 𝚂𝙸𝙶𝚄𝙸𝙴𝙽𝚃𝙴 🔄', `/${command}`]], null, null, m)
+    //conn.sendFile(m.chat, tetasgodV, "zirax.jpg", caption, m); 
 }
 
   if (command == 'pornoorgy') {
@@ -117,7 +125,8 @@ const orgy = await akaneko.nsfw.orgy();
    const tetasgodxd = new CLUB();
   const tetasgod2 = await tetasgodxd.boobs(); 
     const caption = `*乂 ⺀ NSFW - TETAS ⺀ 乂*` 
-    await conn.sendFile(m.chat, tetasgod2, "zirax.jpg", caption, m); 
+    await  conn.sendButton(m.chat, caption, author, tetasgod2, [['🔄 𝚂𝙸𝙶𝚄𝙸𝙴𝙽𝚃𝙴 🔄', `/${command}`]], null, null, m)
+  //conn.sendFile(m.chat, tetasgod2, "zirax.jpg", caption, m); 
 }
   if (command == 'booty') {
     const resError = (await axios.get(`https://raw.githubusercontent.com/BrunoSobrino/TheMystic-Bot-MD/master/src/JSON/booty.json`)).data;
@@ -182,7 +191,7 @@ const orgy = await akaneko.nsfw.orgy();
   if (command == 'pechos') {
     const res = (await axios.get(`https://raw.githubusercontent.com/BrunoSobrino/TheMystic-Bot-MD/master/src/JSON/pechos.json`)).data;
     const url = await res[Math.floor(res.length * Math.random())];
-    conn.sendMessage(m.chat, {image: {url: url}, caption: `_${command}_`.trim()}, {quoted: m});
+   conn.sendMessage(m.chat, {image: {url: url}, caption: `_${command}_`.trim()}, {quoted: m});
   }
 
 
