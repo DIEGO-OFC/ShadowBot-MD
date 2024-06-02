@@ -11,7 +11,7 @@ const handler = async (m, { conn, text, usedPrefix: prefijo }) => {
     const datas = global;
     const device = await getDevice(m.key.id);
     
-  if (!text) throw `⚠️ *Error*`;
+  if (!text) throw `*[❕] INGRESA UNA CANCION PARA ENVIAR LA LISTA, EJEMPLO*:\n*■ ${usedPrefix + command} phonk*`;
     
   if (device !== 'desktop' || device !== 'web') {      
     
