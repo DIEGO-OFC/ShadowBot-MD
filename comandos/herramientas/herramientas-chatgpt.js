@@ -90,16 +90,14 @@ let chatgt = `${jjJson.data.data.trim()}`
     )
 } catch {      
 try {    
-let tioress = await fetch(`https://api.lolhuman.xyz/api/openai?apikey=BrunoSobrino&text=${text}&user=${m.sender}`)
-let hasill = await tioress.json()
-let gpt = `${hasill.result}`
+const ia = await axios.get(`https://delirius-api-oficial.vercel.app/api/chatgpt?q=${text}`)
    await await conn.sendMessage(
       m.chat,
       {
         image: {
           url: "https://telegra.ph/file/10e013d9ae4d9cdf5af14.jpg",
         },
-        caption: gpt,
+        caption: ia.data.data,
         contextInfo: {
           mentionedJid: [m.sender],
           externalAdReply: {
