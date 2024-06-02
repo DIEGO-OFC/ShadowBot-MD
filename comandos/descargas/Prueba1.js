@@ -9,9 +9,9 @@ if (!text) throw `*🤔Que esta buscado? 🤔*\n*Ingrese el nombre del la canci�
 try {
 const yt_play = await search(args.join(" "))
 let additionalText = ''
-if (command === 'play.1') {
+if (command === 'play5') {
 additionalText = 'audio 🔊'
-} else if (command === 'play.2') {
+} else if (command === 'play6') {
 additionalText = 'video 🎥'}
 await conn.sendMessage(m.chat, {
 text: `${yt_play[0].title}
@@ -28,7 +28,7 @@ mediaType: 1,
 showAdAttribution: true,
 renderLargerThumbnail: true
 }}} , { quoted: m })
-if (command == 'play.1') {	
+if (command == 'play5') {	
 try {
 let q = '128kbps'
 let v = yt_play[0].url
@@ -72,7 +72,7 @@ renderLargerThumbnail: true
 } catch {
 }}}}}
 }  
-if (command == 'play.2') {
+if (command == 'play5') {
 try {
 let qu = '360'
 let q = qu + 'p'
