@@ -11,13 +11,7 @@ let handler = async (m, { usedPrefix, command }) => {
       let translatedSetup = await translate(json.setup, { to: 'es' });
       let translatedPunchline = await translate(json.punchline, { to: 'es' });
       
-      m.reply(`╔═══════════════════
-║*😂 𝐂𝐇𝐈𝐒𝐓𝐄 𝐀𝐋𝐄𝐀𝐓𝐎𝐑𝐈𝐎 😂*
-║-----------------------
-║ *𝙲𝙷𝙸𝚂𝚃𝙴:* ${translatedSetup.text}
-║-----------------------
-║ *𝙿𝚄𝙽𝙲𝙷𝙻𝙸𝙽𝙴:* ${translatedPunchline.text}
-╚═══════════════════`);
+      m.reply(`${translatedSetup.text}`);
     } else {
       throw new Error('Invalid');
     }
