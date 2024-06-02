@@ -1,17 +1,28 @@
 import fetch from 'node-fetch';
+import translate from '@vitalets/google-translate-api';
 
 let handler = async (m, { usedPrefix, command }) => {
-  let res = await fetch('https://official-joke-api.appspot.com/random_joke');
-  let json = await res.json();
-  if (json.setup && json.punchline)
-    m.reply(`╔═══════════════════
+  try {
+    let res = await fetch('https://official-joke-api.appspot.com/random_joke');
+    let json = await res.json();
+
+    if (json.setup && json.punchline) {     
+      let translatedSetup = await translate(json.setup, { to: 'es' });
+      let translatedPunchline = await translate(json.punchline, { to: 'es' });
+      m.reply(`╔═══════════════════
 ║*😂 𝐂𝐇𝐈𝐒𝐓𝐄 𝐀𝐋𝐄𝐀𝐓𝐎𝐑𝐈𝐎 😂*
 ║-----------------------
-║ *𝙲𝙷𝙸𝚂𝚃𝙴:* ${json.setup}
+║ *𝙲𝙷𝙸𝚂𝚃𝙴:* ${translatedSetup.text}
 ║-----------------------
-║ *𝙿𝚄𝙽𝙲𝙷𝙻𝙸𝙽𝙴:* ${json.punchline}
+║ *𝙿𝚄𝙽𝙲𝙷𝙻𝙸𝙽𝙴:* ${translatedPunchline.text}
 ╚═══════════════════`);
-  else throw json;
+    } else {
+      throw json;
+    }
+  } catch (e) {
+    console.error(e);
+    m.reply('Ocurrió un error.');
+  }
 };
 
 handler.help = ["chiste"];
