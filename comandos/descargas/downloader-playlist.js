@@ -1,92 +1,90 @@
-import yts from 'yt-search'; 
- import fs from 'fs'; 
- let handler = async (m, { conn, text, usedPrefix, command }) => { 
- if (!text) throw `*[❕] INGRESA UNA CANCION PARA ENVIAR LA LISTA, EJEMPLO*:\n*■ ${usedPrefix + command} phonk*`;
- try { 
- let vids_ = {  
- from: m.sender,  
- urls: []  
- } 
- if (!global.videoList) { 
- global.videoList = []; 
- } 
- /*if (global.videoList[0]?.from == m.sender) { 
- delete global.videoList; 
- }*/ 
- if (global.videoList[0]?.from == m.sender) { 
-   global.videoList.splice(0, global.videoList.length); 
- } 
- let results = await yts(text); 
- let textoInfo = `*[❗] Puedes descargar el video que quieras de la siguiente forma:* 
- ❍ ${usedPrefix}audio <numero> 
- ❍ ${usedPrefix}video <numero>  
-  
- *➢ Ejemplos:* 
- *❍ ${usedPrefix}audio 5* 
- *❍ ${usedPrefix}video 8*`.trim()   
- let teks = results.all.map((v, i) => { 
- let link = v.url; 
- vids_.urls.push(link); 
- return `[${i + 1}] ${v.title} 
- ❒ 🧷 *_Link :_* ${v.url} 
- ❒ ⏱️ *_Duración :_* ${v.timestamp} 
- ❒ 📥 *_Subido :_* ${v.ago} 
- ❒ 👁 *_Vistas :_* ${v.views}`}).join('\n\n◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦\n\n') 
- await conn.sendFile(m.chat, results.all[0].thumbnail, 'yts.jpeg', textoInfo + '\n\n' + teks, m) 
- global.videoList.push(vids_); 
- } catch {     
-    await m.reply("*[⚠️] ERROR, VUELVA A INTENTARLO*");
- 
- }} 
- handler.help = ['playlist *<texto>*']; 
- handler.tags = ['search']; 
- handler.command = /^playlist|playlist2$/i
- handler.dolares = 8;
- export default handler;
+/*
 
+- ESTE CODE ESTA HECHO POR BY @ALBA070503 PARA SHADOWBOT-MD BY DIEGO-OFC
 
+*/
+import { prepareWAMessageMedia, generateWAMessageFromContent, getDevice } from '@whiskeysockets/baileys'
+import yts from 'yt-search';
+import fs from 'fs';
 
+const handler = async (m, { conn, text, usedPrefix: prefijo }) => {
+    const datas = global;
+    const device = await getDevice(m.key.id);
+    
+  if (!text) throw `⚠️ *Error*`;
+    
+  if (device !== 'desktop' || device !== 'web') {      
+    
+  const results = await yts(text);
+  const videos = results.videos.slice(0, 20);
+  const randomIndex = Math.floor(Math.random() * videos.length);
+  const randomVideo = videos[randomIndex];
 
-
-
-
-/*import {youtubeSearch} from "@bochilteam/scraper";
-let handler = async (m, {conn, args, usedPrefix, command, text}) => {
-  if (!text) throw `*[❕] INGRESA UNA CANCION PARA ENVIAR LA LISTA, EJEMPLO*:\n*■ ${usedPrefix + command} phonk*`;
-  try {
-    const {video} = await youtubeSearch(text);
-    const listSections = [];
-    let teks = [...video]
-      .map((v) => {
-        switch (v.type) {
-          case "video": {
-            listSections.push([
-              `${v.title}`,
-              [
-                ["Video 🎦", `${usedPrefix}ytmp4 ${v.url}`, `descargar: ${v.title} (${v.url})`],
-                ["Videodoc 🎦", `${usedPrefix}ytmp4doc ${v.url}`, `descargar: ${v.title} (${v.url})`],
-                ["Audio 🎵", `${usedPrefix}ytmp3 ${v.url}`, `descargar: ${v.title} (${v.url})`],
-                ["Audiodoc 🎵", `${usedPrefix}ytmp3doc ${v.url}`, `descargar: ${v.title} (${v.url})`],
-              ],
-            ]);
-          }
+  var messa = await prepareWAMessageMedia({ image: {url: randomVideo.thumbnail}}, { upload: conn.waUploadToServer })
+  const interactiveMessage = {
+    body: { text: `*—◉ Resultados obtenidos:* ${results.videos.length}\n*—◉ Video aleatorio:*\n*-› Title:* ${randomVideo.title}\n*-› Author:* ${randomVideo.author.name}\n*-› Views:* ${randomVideo.views}\n*-› Url:* ${randomVideo.url}\n*-› Imagen:* ${randomVideo.thumbnail}`.trim() },
+    footer: { text: `${global.wm}`.trim() },  
+      header: {
+          title: `*< YouTube Search />*\n`,
+          hasMediaAttachment: true,
+          imageMessage: messa.imageMessage,
+      },
+    nativeFlowMessage: {
+      buttons: [
+        {
+          name: 'single_select',
+          buttonParamsJson: JSON.stringify({
+            title: 'OPCIONES DISPONIBLES',
+            sections: videos.map((video) => ({
+              title: video.title,
+              rows: [
+                {
+                  header: video.title,
+                  title: video.author.name,
+                  description: 'Descargar MP3',
+                  id: `${prefijo}ytmp3 ${video.url}`
+                },
+                {
+                  header: video.title,
+                  title: video.author.name,
+                  description: 'Descargar MP4',
+                  id: `${prefijo}videomp4 ${video.url}`
+                }
+              ]
+            }))
+          })
         }
-      })
-      .filter((v) => v)
-      .join("\n\n========================\n\n");
-    conn.sendList(
-      m.chat,
-      " *『 LISTA YOUTUBE  』*",
-      `*📍 Musica relacionada con: ${args.join(" ")}*`,
-      "*📗 Elije una opción y presiona enviar*",
-      "*[🔍 RESULTADOS 🔍]*",
-      listSections,
-      m
-    );
-  } catch {
-    await m.reply("*[⚠️] ERROR, VUELVA A INTENTARLO*");
-  }
+      ],
+      messageParamsJson: ''
+    }
+  };        
+            
+        let msg = generateWAMessageFromContent(m.chat, {
+            viewOnceMessage: {
+                message: {
+                    interactiveMessage,
+                },
+            },
+        }, { userJid: conn.user.jid, quoted: m })
+      conn.relayMessage(m.chat, msg.message, { messageId: msg.key.id});
+
+  } else {
+  const results = await yts(text);
+  const tes = results.all;
+  const teks = results.all.map((v) => {
+    switch (v.type) {
+      case 'video': return `
+° *_${v.title}_*
+↳ 🫐 *_Url_* ${v.url}
+↳ 🕒 *_Fecha_* ${v.timestamp}
+↳ 📥 *_fecha_* ${v.ago}
+↳ 👁 *_Vista_* ${v.views}`;
+    }
+  }).filter((v) => v).join('\n\n◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦\n\n');
+  conn.sendFile(m.chat, tes[0].thumbnail, 'error.jpg', teks.trim(), m);      
+  }    
 };
-handler.dorracoins = 5;
-handler.command = /^playlist|playlist2$/i;
-export default handler;*/
+handler.help = ['ytsearch <texto>'];
+handler.tags = ['search'];
+handler.command = /^(playlist|yts|searchyt|buscaryt|videosearch|audiosearch)$/i;
+export default handler;
