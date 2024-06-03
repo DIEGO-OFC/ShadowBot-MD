@@ -117,5 +117,5 @@ const ia = await axios.get(`https://delirius-api-oficial.vercel.app/api/chatgpt?
 throw `*[❗] 𝙴𝚁𝚁𝙾𝚁, 𝚅𝚄𝙴𝙻𝚅𝙰 𝙰 𝙸𝙽𝚃𝙴𝙽𝚃𝙰𝚁𝙻𝙾*`
 }}}}}
 handler.command = ['openai', 'chatgpt', 'ia', 'robot']
-handler.dolares = 3
+handler.dolares = 1
 export default handler
