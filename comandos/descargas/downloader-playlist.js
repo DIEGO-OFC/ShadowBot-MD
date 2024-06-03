@@ -42,13 +42,13 @@ const handler = async (m, { conn, text, usedPrefix: prefijo }) => {
                   header: video.title,
                   title: video.author.name,
                   description: 'Descargar MP3',
-                  id: `${usedPrefix}play.1 ${V.url}`
+                  id: `${prefijo}play.1 ${video.url}`
                 },
                 {
                   header: video.title,
                   title: video.author.name,
                   description: 'Descargar MP4',
-                  id: `${usedPrefix}play.2 ${V.url}`
+                  id: `${prefijo}play.2 ${video.url}`
                 }
               ]
             }))
