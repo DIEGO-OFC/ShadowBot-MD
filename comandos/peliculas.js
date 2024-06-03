@@ -55,7 +55,28 @@ async function getMovieRecommendations(genre) {
 
         let genre = args[0].toLowerCase();
         if (!genres.hasOwnProperty(genre)) {
-           
+            m.reply(`Género no encontrado. Géneros disponibles: ${Object.keys(genres).map(genre => genre.charAt(0).toUpperCase() + genre.slice(1)).join(", ")}`);
+            return;
+        }
+
+        let genreId = genres[genre];
+        let movies = await getMovieRecommendations(genreId);
+
+        let message = `Recomendaciones de películas en el género ${genre.charAt(0).toUpperCase() + genre.slice(1)}:\n\n`;
+        movies.forEach(movie => {
+            message += `Título: ${movie.title}\n`;
+            message += `Año: ${movie.year}\n`;
+            message += `Rating: ${movie.rating}\n`;
+            message += `Resumen: ${movie.summary}\n\n`;
+        });
+
+        m.reply(message);
+    } catch (e) {
+        console.error(e);
+        m.reply('Ocurrió un error al obtener las recomendaciones de películas.');
+    }
+};
+
 handler.help = ["películas"];
 handler.tags = ["pelis "];
 handler.command = ["películas, palis"];
