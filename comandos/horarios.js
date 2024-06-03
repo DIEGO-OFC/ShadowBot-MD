@@ -1,4 +1,4 @@
-
+//comando desde 0 hecho en Shadow bot y créditos a Mathias crypto
 import fetch from 'node-fetch';
 
 let handler = async (m, { usedPrefix, command, args }) => {
