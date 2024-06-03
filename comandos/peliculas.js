@@ -77,4 +77,7 @@ let handler = async (m, { usedPrefix, command, args }) => {
     }
 };
 
+
+handler.command = ["pelicula"]; 
+
 export default handler;
