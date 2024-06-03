@@ -77,5 +77,5 @@ async function getMovieRecommendations(genre) {
 
 handler.help = ["peliculas"];
 handler.tags = ["pelis"];
-handler.command = ["películas", "pelicula", "pelis", "balance", "banco"];
+handler.command = ["películas", "pelicula", "pelis"];
 export default handler;
