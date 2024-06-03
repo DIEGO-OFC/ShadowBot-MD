@@ -75,7 +75,7 @@ async function getMovieRecommendations(genre) {
     }
 };
 
-handler.help = ["peliculas"]; 
-handler.command = ["peliculas, pelicula"]; 
-
+handler.help = ["peliculas"];
+handler.tags = ["pelis"];
+handler.command = ["películas", "pelicula", "pelis", "balance", "banco"];
 export default handler;
