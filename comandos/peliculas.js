@@ -1,6 +1,6 @@
 import fetch from 'node-fetch';
 import cheerio from 'cheerio';
-
+let handler = async (m, { usedPrefix, command, args }) => {
 // Feature to get IMDb movie recommendations 
 async function getMovieRecommendations(genre) {
     const url = `https://www.imdb.com/search/title/?genres=${genre}&sort=popularity,desc`;
@@ -22,8 +22,6 @@ async function getMovieRecommendations(genre) {
 
     return movies;
 }
-
-let handler = async (m, { usedPrefix, command, args }) => {
     try {
         const genres = {
             "acción": "action",
