@@ -4,7 +4,7 @@
 
 var handler = async (m, { conn }) => {
   const randomAnime = animeNames[Math.floor(Math.random() * animeNames.length)];
-  conn.reply(m.chat, `🎬 Nombre de anime aleatorio: *${randomAnime}*`, m);
+  conn.reply(m.chat, `🍀 𝑁𝑜𝑚𝑏𝑟𝑒 𝑑𝑒 𝑎𝑛𝑖𝑚𝑚𝑒 𝑎𝑙𝑒𝑎𝑡𝑜𝑟𝑖𝑜: *${randomAnime}*`, m);
 };
 handler.help = ["anime"];
 handler.tags = ["random"];
