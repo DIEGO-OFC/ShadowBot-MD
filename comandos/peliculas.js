@@ -11,7 +11,7 @@ async function getMovieRecommendations(genre) {
     const movies = [];
 
     $('.lister-item-content').each((index, element) => {
-        if (index < 5) {
+        if (index < 5) { 
             const title = $(element).find('h3.lister-item-header a').text().trim();
             const year = $(element).find('h3.lister-item-header .lister-item-year').text().trim();
             const rating = $(element).find('div.ratings-bar strong').text().trim();
@@ -22,6 +22,7 @@ async function getMovieRecommendations(genre) {
 
     return movies;
 }
+
 
     try {
         const genres = {
@@ -55,7 +56,8 @@ async function getMovieRecommendations(genre) {
         let genre = args[0].toLowerCase();
         if (!genres.hasOwnProperty(genre)) {
            
-handler.help = ["peliculas"];
-handler.tags = ["pelis"];
-handler.command = ["películas", "pelicula", "pelis"];
+handler.help = ["películas"];
+handler.tags = ["pelis "];
+handler.command = ["películas, palis"];
+
 export default handler;
