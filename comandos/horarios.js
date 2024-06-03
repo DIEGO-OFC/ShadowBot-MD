@@ -1,3 +1,5 @@
+
+
 import fetch from 'node-fetch';
 
 let handler = async (m, { usedPrefix, command, args }) => {
@@ -38,6 +40,6 @@ let handler = async (m, { usedPrefix, command, args }) => {
 
 handler.help = ["horarios"];
 handler.tags = ["info"];
-handler.command = ["horarios"];
+handler.command = ["horarios", "horario"]; // Detectar en minúsculas
 
 export default handler;
