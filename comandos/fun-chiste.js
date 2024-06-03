@@ -17,12 +17,18 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 
       // Obtener imagen aleatoria
       let imageUrl = 'https://picsum.photos/500/300';
-
+      
       // Formatear mensaje
       let caption = `*Chiste aleatorio:*\n\n${translatedSetup.text}\n${translatedPunchline.text}`;
 
+      // Esperar a que la imagen esté lista
+      let imgRes = await fetch(imageUrl);
+      if (!imgRes.ok) throw new Error('No se pudo obtener la imagen');
+
+      let buffer = await imgRes.buffer();
+
       // Enviar imagen con chiste
-      await conn.sendMessage(m.chat, { image: { url: imageUrl }, caption: caption });
+      await conn.sendMessage(m.chat, { image: buffer, caption: caption });
     } else {
       throw new Error('Invalid');
     }
