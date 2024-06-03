@@ -236,7 +236,7 @@ global.chatgpt = new Low(new JSONFile(path.join(__dirname, '/db/chatgpt.json')))
      markOnlineOnConnect: true 
  }; 
   
- global.conn = makeWaSocket(connectionOptions); 
+ global.conn = makeWASocket(connectionOptions); 
  store.bind(conn.ev) 
  conn.isInit = false 
   
