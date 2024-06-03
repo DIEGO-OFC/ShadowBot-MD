@@ -956,6 +956,7 @@ import chalk from "chalk";
         if (!("antiArab" in chat)) chat.antiArab = false;
         if (!("antiTraba" in chat)) chat.antiTraba = false;
         if (!("simi" in chat)) chat.simi = false;
+       if (!('game' in chat)) chat.game = true;
         if (!isNumber(chat.expired)) chat.expired = 0;
       } else
         global.db.data.chats[m.chat] = {
@@ -986,6 +987,7 @@ import chalk from "chalk";
           reaction: true,
           antiArab: false,
           simi: false,
+          game: true, 
           antiviewonce: false,
           antitoxic: true,
           expired: 0,
