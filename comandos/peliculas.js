@@ -77,7 +77,7 @@ let handler = async (m, { usedPrefix, command, args }) => {
     }
 };
 
-
-handler.command = ["pelicula"]; 
+handler.help = ["peliculas"]; 
+handler.command = ["peliculas, pelicula"]; 
 
 export default handler;
