@@ -4,11 +4,11 @@ import fetch from 'node-fetch';
 let handler = async (m, { usedPrefix, command, args }) => {
   try {
     const timeZones = {
-      "mexico": "America/Mexico_City",
+      "méxico": "America/Mexico_City",
       "argentina": "America/Argentina/Buenos_Aires",
       "chile": "America/Santiago",
       "colombia": "America/Bogota",
-      "peru": "America/Lima"
+      "perú": "America/Lima"
     };
 
     if (args.length === 0) {
