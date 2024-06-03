@@ -440,6 +440,14 @@ Descripción: Activa o desactiva que el bot se una temporalmente a grupos`.trim(
       }
       chat.antiTraba = isEnable;
       break;
+case 'game': case 'juegos': case 'fun': case 'ruleta':
+if (m.isGroup) {
+if (!(isAdmin || isOwner)) {
+global.dfail('admin', m, conn)
+throw false
+}}
+chat.game = isEnable          
+break;  
     case "antiarabes":
       if (m.isGroup) {
         if (!(isAdmin || isOwner)) {
