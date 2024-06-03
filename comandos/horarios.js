@@ -1,15 +1,14 @@
 
-
 import fetch from 'node-fetch';
 
 let handler = async (m, { usedPrefix, command, args }) => {
   try {
     const timeZones = {
-      "méxico": "America/Mexico_City",
+      "mexico": "America/Mexico_City",
       "argentina": "America/Argentina/Buenos_Aires",
       "chile": "America/Santiago",
       "colombia": "America/Bogota",
-      "perú": "America/Lima"
+      "peru": "America/Lima"
     };
 
     if (args.length === 0) {
@@ -18,7 +17,10 @@ let handler = async (m, { usedPrefix, command, args }) => {
       return;
     }
 
-    let city = args[0].toLowerCase();
+   
+    let normalize = (str) => str.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+    let city = normalize(args[0]);
+
     if (!timeZones.hasOwnProperty(city)) {
       m.reply(`Ciudad no encontrada. Ciudades disponibles: ${Object.keys(timeZones).map(city => city.charAt(0).toUpperCase() + city.slice(1)).join(", ")}`);
       return;
@@ -40,6 +42,6 @@ let handler = async (m, { usedPrefix, command, args }) => {
 
 handler.help = ["horarios"];
 handler.tags = ["info"];
-handler.command = ["horarios", "horario"]; // Detectar en minúsculas
+handler.command = ["horarios", "horario"]; 
 
 export default handler;
