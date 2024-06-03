@@ -10,12 +10,12 @@ async function getMovieRecommendations(genre) {
     const $ = cheerio.load(html);
     const movies = [];
 
-    $('.lister-item').each((index, element) => {
-        if (index < 5) { 
-            const title = $(element).find('.lister-item-header a').text().trim();
-            const year = $(element).find('.lister-item-header .lister-item-year').text().trim();
-            const rating = $(element).find('.ratings-imdb-rating strong').text().trim();
-            const summary = $(element).find('.ratings-bar + .text-muted').text().trim();
+    $('.lister-item-content').each((index, element) => {
+        if (index < 5) {
+            const title = $(element).find('h3.lister-item-header a').text().trim();
+            const year = $(element).find('h3.lister-item-header .lister-item-year').text().trim();
+            const rating = $(element).find('div.ratings-bar strong').text().trim();
+            const summary = $(element).find('p.text-muted').last().text().trim();
             movies.push({ title, year, rating, summary });
         }
     });
@@ -54,30 +54,8 @@ async function getMovieRecommendations(genre) {
 
         let genre = args[0].toLowerCase();
         if (!genres.hasOwnProperty(genre)) {
-            m.reply(`Género no encontrado. Géneros disponibles: ${Object.keys(genres).map(genre => genre.charAt(0).toUpperCase() + genre.slice(1)).join(", ")}`);
-            return;
-        }
-
-        let genreId = genres[genre];
-        let movies = await getMovieRecommendations(genreId);
-
-        let message = `Recomendaciones de películas en el género ${genre.charAt(0).toUpperCase() + genre.slice(1)}:\n\n`;
-        movies.forEach(movie => {
-            message += `Título: ${movie.title}\n`;
-            message += `Año: ${movie.year}\n`;
-            message += `Rating: ${movie.rating}\n`;
-            message += `Resumen: ${movie.summary}\n\n`;
-        });
-
-        m.reply(message);
-    } catch (e) {
-        console.error(e);
-        m.reply('Ocurrió un error al obtener las recomendaciones de películas.');
-    }
-};
-
-handler.help = ["películas"];
+           
+handler.help = ["peliculas"];
 handler.tags = ["pelis"];
-handler.command = ["películas"];
-
+handler.command = ["películas", "pelicula", "pelis"];
 export default handler;
