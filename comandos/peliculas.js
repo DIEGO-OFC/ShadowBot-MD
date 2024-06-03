@@ -1,8 +1,7 @@
 import fetch from 'node-fetch';
 import cheerio from 'cheerio';
-let handler = async (m, { usedPrefix, command, args, text }) => {
-const genr = `${text}`
-// Feature to get IMDb movie recommendations 
+
+let handler = async (m, { usedPrefix, command, args }) => {
 async function getMovieRecommendations(genre) {
     const url = `https://www.imdb.com/search/title/?genres=${genre}&sort=popularity,desc`;
     const response = await fetch(url);
@@ -11,18 +10,19 @@ async function getMovieRecommendations(genre) {
     const $ = cheerio.load(html);
     const movies = [];
 
-    $('.lister-item-content').each((index, element) => {
-        if (index < 5) { //Get only the top 5 movies 
+    $('.lister-item').each((index, element) => {
+        if (index < 5) { 
             const title = $(element).find('.lister-item-header a').text().trim();
             const year = $(element).find('.lister-item-header .lister-item-year').text().trim();
-            const rating = $(element).find('.ratings-imdb-rating .ratings-imdb-rating strong').text().trim();
-            const summary = $(element).find('.ratings-bar + p').text().trim();
+            const rating = $(element).find('.ratings-imdb-rating strong').text().trim();
+            const summary = $(element).find('.ratings-bar + .text-muted').text().trim();
             movies.push({ title, year, rating, summary });
         }
     });
 
     return movies;
 }
+
     try {
         const genres = {
             "acción": "action",
@@ -72,11 +72,12 @@ async function getMovieRecommendations(genre) {
         m.reply(message);
     } catch (e) {
         console.error(e);
-        m.reply('Ocurrió un error al obtener las recomendaciones de películas. :/');
+        m.reply('Ocurrió un error al obtener las recomendaciones de películas.');
     }
 };
 
-handler.help = ["peliculas"];
+handler.help = ["películas"];
 handler.tags = ["pelis"];
-handler.command = ["películas", "pelicula", "pelis"];
+handler.command = ["películas"];
+
 export default handler;
