@@ -9,7 +9,7 @@ var handler = async (m, { conn }) => {
 handler.help = ["anime"];
 handler.tags = ["random"];
 handler.command = ["randoma", "animr"];
-handler.dolares = 3
+
 export default handler;
 
 global.animeNames = 
