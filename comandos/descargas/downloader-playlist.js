@@ -48,7 +48,7 @@ const handler = async (m, { conn, text, usedPrefix: prefijo }) => {
                   header: video.title,
                   title: video.author.name,
                   description: 'Descargar MP4',
-                  id: `${prefijo}fgmp4 ${video.url}`
+                  id: `${prefijo}videomp4 ${video.url}`
                 }
               ]
             }))
