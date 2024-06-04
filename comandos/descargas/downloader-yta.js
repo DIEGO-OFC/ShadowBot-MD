@@ -3,7 +3,7 @@ import fetch from 'node-fetch'
 import yts from 'yt-search'
 import ytdl from 'ytdl-core'
 let handler = async (m, { text, conn, args, usedPrefix, command }) => {
-if (!args[0]) return conn.reply(m.chat, `⚡ *USAR EL COMANDO DE ESTA FORMA:*\n\n*${usedPrefix + command} https://youtu.be/c5gJRzCi0f0*`, m)
+if (!args[0]) return conn.reply(m.chat, `⚡ *USAR EL COMANDO DE ESTA FORMA:*\n\n*${usedPrefix + command} https://youtu.be/c5gJRzC*`, m)
 let youtubeLink = ''
 if (args[0].includes('you')) {
 youtubeLink = args[0]
