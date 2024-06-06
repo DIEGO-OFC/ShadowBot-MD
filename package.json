@@ -2,7 +2,7 @@
   "nombre": "ShadowBot-MD",
   "version": "1.0.0",
   "apoyó": "Subscribete al canal de YT DIEGOGAMEPLAYS82",
-  "main": "index-inicio.js",
+  "main": "index.js",
   "type": "module",
   "directories": {
     "lib": "lib",
@@ -10,9 +10,9 @@
     "comandos": "comandos"
   },
   "scripts": {
-    "start": "node index-inicio.js --qr",
+    "start": "node index.js --qr",
     "test": "node test.js",
-    "test2": "nodemon index-inicio.js"
+    "test2": "nodemon index.js"
   },
   "homepage": "https://github.com/DIEGO-OFC/ShadowBot-MD",
   "author": {
