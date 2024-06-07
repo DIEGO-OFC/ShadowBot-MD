@@ -1213,7 +1213,7 @@ case 'ytmp4': case 'ytvideo': {
 const ytdl = require('ytdl-core') 
 const { pipeline } = require('stream') 
 const { promisify } = require('util') 
-const os = reauire('os') 
+const os = require('os') 
 const fg = require('api-dylux') 
 const fetch = require('node-fetch') 
   if (!args || !args[0]) return reply('*ingrese un link?*');
