@@ -1209,6 +1209,7 @@ if (global.db.data.users[m.sender].registered < true) return reply(info.unreg)
    }} 
    break 
   
+  
 case 'ytmp4': case 'ytvideo': {
 const ytdl = require('ytdl-core') 
 const { pipeline } = require('stream') 
@@ -1231,8 +1232,9 @@ conn.sendMessage(from, { video: { url: dl_url}, mimetype: 'video/mp4', fileName:
   	
 	const { title, dl_url } = await ytmp3(args[0]);
   conn.sendMessage(from, { video: { url: dl_url}, mimetype: 'video/mp4', fileName: `Shadow.mp4` }, { quoted: m })		
-        } catch {
-			await m.reply(`❌ Error`)
+        } catch (e) {
+			//await m.reply(`❌ Error`)
+			console.log(e)
 } }}
 break
 
