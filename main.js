@@ -14,6 +14,11 @@ const ytdl = require('ytdl-core')
 const {savefrom, lyrics, lyricsv2, youtubedl, youtubedlv2} = require('@bochilteam/scraper') 
 
   const axios = require('axios')  
+  
+  
+  
+  
+  
   const cheerio = require('cheerio') 
   const util = require('util')  
   const createHash = require('crypto') 
@@ -1210,33 +1215,35 @@ if (global.db.data.users[m.sender].registered < true) return reply(info.unreg)
    break 
   
   
-case 'ytmp4': case 'ytvideo': {
-const ytdl = require('ytdl-core') 
-const { pipeline } = require('stream') 
-const { promisify } = require('util') 
-const os = require('os') 
-const fg = require('api-dylux') 
-const fetch = require('node-fetch') 
-  if (!args || !args[0]) return reply('*ingrese un link?*');
-  if (!args[0].match(/youtu/gi)) return reply('*ingrese un link?*');
- let chat = global.db.data.chats[m.chat]
- let q = '128kbps'
- try {
- reply(`enviando video, porfavor espera :D`)
-		const yt = await fg.yta(args[0]) 
-		let { title, dl_url, quality, size, sizeB } = yt
-		
-conn.sendMessage(from, { video: { url: dl_url}, mimetype: 'video/mp4', fileName: `Shadow.mp4` }, { quoted: m })		
- 	} catch {
-  try {
-  	
-	const { title, dl_url } = await ytmp3(args[0]);
-  conn.sendMessage(from, { video: { url: dl_url}, mimetype: 'video/mp4', fileName: `Shadow.mp4` }, { quoted: m })		
-        } catch (e) {
-			//await m.reply(`❌ Error`)
-			console.log(e)
-} }}
-break
+case 'ytmp4':
+case 'ytvideo': {
+    if (!args || !args[0]) return reply('*ingrese un link?*');
+    if (!args[0].match(/youtu/gi)) return reply('*ingrese un link válido?*');
+
+    let chat = global.db.data.chats[m.chat];
+    let q = '128kbps';
+
+    try {
+        reply(`Enviando video, por favor espera :D`);
+        
+        const yt = await fg.yta(args[0]);
+        let { title, dl_url, quality, size, sizeB } = yt;
+
+        conn.sendMessage(from, { video: { url: dl_url }, mimetype: 'video/mp4', fileName: `Shadow.mp4` }, { quoted: m });
+    } catch (err) {
+        console.error('Error en fg.yta:', err);
+
+        try {
+            const { title, dl_url } = await ytmp3(args[0]);
+            conn.sendMessage(from, { video: { url: dl_url }, mimetype: 'video/mp4', fileName: `Shadow.mp4` }, { quoted: m });
+        } catch (err) {
+            console.error('Error en ytmp3:', err);
+            await m.reply(`❌ Error: ${err.message}`);
+        }
+    }
+}
+break;
+
 
  case 'apk': case 'modapk': {
  aptoide(conn, m, text, args, command)}
