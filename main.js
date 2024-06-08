@@ -9,7 +9,7 @@
   const {toqr, fakechat} = require('./extras/extras.js')
 const { default: makeWASocket, proto } = require("@whiskeysockets/baileys") 
 const yts = require('yt-search') 
-const gpt = require('api-dylux')
+const fg = require('api-dylux')
 const ytdl = require('ytdl-core') 
 const {savefrom, lyrics, lyricsv2, youtubedl, youtubedlv2} = require('@bochilteam/scraper') 
 
