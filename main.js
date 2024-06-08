@@ -36,7 +36,7 @@ const {savefrom, lyrics, lyricsv2, youtubedl, youtubedlv2} = require('@bochiltea
 const JavaScriptObfuscator = require('javascript-obfuscator')
 
 const { play } = require('./plugins/play.js') 
-const { mp3, mp4 } = require('./plugins/ytmp3.js') 
+const { mp3 } = require('./plugins/ytmp3.js') 
   const { youtube } = require("@xct007/frieren-scraper")  
   const { jadibot2 } = require('./serbot2.js')  
   const speed = require("performance-now")  
@@ -1216,6 +1216,7 @@ if (global.db.data.users[m.sender].registered < true) return reply(info.unreg)
   
   
 case 'ytmp4': case 'ytvideo': {
+	const { mp4 } = require('./plugins/ytmp4.js') 
 await mp4(conn, m, command, text, args)  	
 }   
 break;
