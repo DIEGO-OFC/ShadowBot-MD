@@ -36,7 +36,7 @@ const {savefrom, lyrics, lyricsv2, youtubedl, youtubedlv2} = require('@bochiltea
 const JavaScriptObfuscator = require('javascript-obfuscator')
 
 const { play } = require('./plugins/play.js') 
-const { mp3 } = require('./plugins/ytmp3.js') 
+const { mp3, mp4 } = require('./plugins/ytmp3.js') 
   const { youtube } = require("@xct007/frieren-scraper")  
   const { jadibot2 } = require('./serbot2.js')  
   const speed = require("performance-now")  
@@ -1215,33 +1215,9 @@ if (global.db.data.users[m.sender].registered < true) return reply(info.unreg)
    break 
   
   
-case 'ytmp4':
-case 'ytvideo': {
-    if (!args || !args[0]) return reply('*ingrese un link?*');
-    if (!args[0].match(/youtu/gi)) return reply('*ingrese un link válido?*');
-
-    let chat = global.db.data.chats[m.chat];
-    let q = '128kbps';
-
-    try {
-        reply(`Enviando video, por favor espera :D`);
-        
-        const yt = await fg.yta(args[0]);
-        let { title, dl_url, quality, size, sizeB } = yt;
-
-        conn.sendMessage(from, { video: { url: dl_url }, mimetype: 'video/mp4', fileName: `Shadow.mp4` }, { quoted: m });
-    } catch (err) {
-        console.error('Error en fg.yta:', err);
-
-        try {
-            const { title, dl_url } = await ytmp3(args[0]);
-            conn.sendMessage(from, { video: { url: dl_url }, mimetype: 'video/mp4', fileName: `Shadow.mp4` }, { quoted: m });
-        } catch (err) {
-            console.error('Error en ytmp3:', err);
-            await m.reply(`❌ Error: ${err.message}`);
-        }
-    }
-}
+case 'ytmp4': case 'ytvideo': {
+await mp4(conn, m, command, text, args)  	
+}   
 break;
 
 
