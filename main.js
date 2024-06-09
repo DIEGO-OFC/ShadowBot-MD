@@ -12,7 +12,7 @@ const yts = require('yt-search')
 const gpt = require('api-dylux')
 const ytdl = require('ytdl-core') 
 const {savefrom, lyrics, lyricsv2, youtubedl, youtubedlv2} = require('@bochilteam/scraper') 
-  const axios = require('axios')  
+  const axios = require('axios')   
   const cheerio = require('cheerio') 
   const util = require('util')  
   const createHash = require('crypto') 
@@ -1563,7 +1563,7 @@ if (global.db.data.users[m.sender].registered < true) return reply(info.unreg)
   await new Promise((resolve) => setTimeout(resolve, 2000));     
   await fs.unlinkSync(encmedia)    
   } else {    
-  reply(`*Y LA IMAGEN?*`)    
+  reply(`*[🌺] 𝑌 𝐿𝐴 𝐼𝑀𝐴𝐺𝐸𝑁᭄?*`)    
   }}    
   break;   
   
