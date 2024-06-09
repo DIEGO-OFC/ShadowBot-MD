@@ -171,7 +171,6 @@ const socketSettings = {
 printQRInTerminal: true,
 logger: pino({ level: 'silent' }),
 auth: { creds: state.creds, keys: makeCacheableSignalKeyStore(state.keys, pino({level: 'silent'})) },
-mobile: MethodMobile, 
 browser: ["ShadowBot-MD", "Chrome", "20.0.04"],
 msgRetry,
 msgRetryCache,
