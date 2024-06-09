@@ -1,8 +1,9 @@
 (async () => {
 require("./settings")
-const { default: makeWASocket, makeInMemoryStore, useMultiFileAuthState, DisconnectReason, proto , jidNormalizedUser,WAMessageStubType, generateForwardMessageContent, prepareWAMessageMedia, generateWAMessageFromContent, generateMessageID, downloadContentFromMessage, msgRetryCounterMap, makeCacheableSignalKeyStore, fetchLatestBaileysVersion } = require("@whiskeysockets/baileys")
+const { default: makeWASocket, CONNECTING, PHONENUMBER_MCC, Browsers, makeInMemoryStore, useMultiFileAuthState, DisconnectReason, proto , jidNormalizedUser,WAMessageStubType, generateForwardMessageContent, prepareWAMessageMedia, generateWAMessageFromContent, generateMessageID, downloadContentFromMessage, msgRetryCounterMap, makeCacheableSignalKeyStore, fetchLatestBaileysVersion, getAggregateVotesInPollMessage } = require("@whiskeysockets/baileys")
 const { state, saveCreds } = await useMultiFileAuthState('./ShadowSession')
 const chalk = require('chalk')
+const figlet = require('figlet')
 const moment = require('moment')
 const fs = require('fs')
 const yargs = require('yargs/yargs')
@@ -13,6 +14,7 @@ const os = require('os')
 const { execSync } = require('child_process')
 const util = require('util')
 const pino = require('pino')
+const Pino = require("pino")
 const cfonts = require('cfonts') 
 const { tmpdir } = require('os')
 const { join } = require('path')
@@ -62,14 +64,13 @@ setting: {},
 others: {},
 sticker: {},
 ...(global.db.data || {})}
-  global.db.chain = _.chain(global.db.data)}
-loadDatabase() //Gracias aiden pro 😎 
-//skid chinga tu madre :v
+ global.db.chain = _.chain(global.db.data)}
+loadDatabase() //@aidenlogin
 
 if (global.db) setInterval(async () => {
-    if (global.db.data) await global.db.write()
-  }, 30 * 1000)
-
+if (global.db.data) await global.db.write()
+}, 30 * 1000)
+//_________________
 
 //tmp
 function clearTmp() {
@@ -157,7 +158,7 @@ setInterval(async () => {
   console.log(chalk.cyanBright(`▣════════[ AUTO_PURGE_OLDFILES ]════════════...\n│\n▣─➢ ARCHIVOS ELIMINADOS ✅\n│\n▣═════════════════════════════════════...`));
 }, 1000 * 60 * 60);
 //___________
-    
+        
 async function startBot() {
 
 console.info = () => {}
@@ -170,25 +171,26 @@ const socketSettings = {
 printQRInTerminal: true,
 logger: pino({ level: 'silent' }),
 auth: { creds: state.creds, keys: makeCacheableSignalKeyStore(state.keys, pino({level: 'silent'})) },
-browser: [`ShadowBot-MD`,'Safari','3.0'], 
+mobile: MethodMobile, 
+browser: ["ShadowBot-MD", "Chrome", "20.0.04"],
 msgRetry,
 msgRetryCache,
 version,
 syncFullHistory: true,
 getMessage: async (key) => {
-if (store) {
-const msg = store.loadMessage(key.remoteJid, key.id)
-return msg.message && undefined
-} return {
-conversation: 'ShadowBot-MD',
-}}}
+if (store) { 
+const msg = await store.loadMessage(key.remoteJid, key.id); 
+return sock.chats[key.remoteJid] && sock.chats[key.remoteJid].messages[key.id] ? sock.chats[key.remoteJid].messages[key.id].message : undefined; 
+} 
+return proto.Message.fromObject({}); 
+}}
 
 const sock = makeWASocket(socketSettings)
 
 async function getMessage(key) {
 if (store) {
 const msg = store.loadMessage(key.remoteJid, key.id)
-return msg.message && undefined
+return msg.message
 } return {
 conversation: '',
 }}
@@ -198,30 +200,35 @@ sock.ev.on('messages.upsert', async chatUpdate => {
 try {
 chatUpdate.messages.forEach(async (mek) => {
 try {
-//mek = (Object.keys(chatUpdate.messages[0])[0] !== "senderKeyDistributionMessage") ?  chatUpdate.messages[0] : chatUpdate.messages[1]
-
+mek = chatUpdate.messages[0]
 if (!mek.message) return
-//console.log(chatUpdate.type)
 mek.message = (Object.keys(mek.message)[0] === 'ephemeralMessage') ? mek.message.ephemeralMessage.message : mek.message
 if (mek.key && mek.key.remoteJid === 'status@broadcast') return
-    
-if (!sock.public && !m.key.fromMe && !chatUpdate.type === 'notify') return
-m = smsg(sock, mek)
-//if (m.key.fromMe === true) return
-//if (m.mtype === 'senderKeyDistributionMessage') mek = chatUpdate.messages[1]
+if (!sock.public && !mek.key.fromMe && chatUpdate.type === 'notify') return
+if (mek.key.id.startsWith('BAE5') && mek.key.id.length === 16) return
+if (mek.key.id.startsWith('FatihArridho_')) return
 global.numBot = sock.user.id.split(":")[0] + "@s.whatsapp.net"
 global.numBot2 = sock.user.id
-try {
-require("./main")(sock, m, chatUpdate, mek)
+m = smsg(sock, mek)
+require("./main")(sock, m, chatUpdate, mek, store)
 } catch (e) {
-let sktext = util.format(e)
-console.log(sktext)
-}} catch (e) {
 console.log(e)
 }})
 } catch (err) {
 console.log(err)
 }})
+
+sock.ev.on('messages.update', async chatUpdate => {
+for(const { key, update } of chatUpdate) {
+if (update.pollUpdates && key.fromMe) {
+const pollCreation = await getMessage(key)
+if (pollCreation) {
+const pollUpdate = await getAggregateVotesInPollMessage({message: pollCreation, pollUpdates: update.pollUpdates, })
+var toCmd = pollUpdate.filter(v => v.voters.length !== 0)[0]?.name
+if (toCmd == undefined) return
+var prefCmd = prefix+toCmd
+sock.appenTextMessage(prefCmd, chatUpdate)
+}}}})
 
 //anticall
 sock.ev.on('call', async (fuckedcall) => { 
@@ -391,6 +398,12 @@ sock.sendMessage(anu.id, { text: `『❗』 *@${name.split("@")[0]}  𝙰𝙱�
 console.log(err)
 }})
 
+function pickRandom(list) {
+return list[Math.floor(list.length * Math.random())]
+}  
+
+const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms))
+
 sock.ev.on('connection.update', async (update) => {
 const { connection, lastDisconnect, qr, receivedPendingNotifications, isNewLogin} = update;
 console.log(receivedPendingNotifications)
@@ -411,25 +424,17 @@ say(`CREADO POR DIEGO-OFC`, {
   align: "center",
   colors: ["red"],
 });
-
+ 
+} else if (connection === "close" && lastDisconnect && lastDisconnect.error && lastDisconnect.error.output.statusCode != 401) {
+console.log(color('[SYS]', '#009FFF'),
+color(moment().format('DD/MM/YY HH:mm:ss'), '#A1FFCE'),
+color(`[❌] Conexion cerrada, por favor borre la carpeta sessions y reescanee el codigo QR`, '#f64f59'));
+startBot()
 } else if (qr !== undefined) {
 console.log(color('[SYS]', '#009FFF'),
 color(moment().format('DD/MM/YY HH:mm:ss'), '#A1FFCE'),
 color(`\n[🔄] Escanea este codigo QR, el codigo QR expira en 60 segundos`, '#f12711')
 )
-} else if (connection === 'close') {
-console.log(
-color('[SYS]', '#009FFF'),
-color(moment().format('DD/MM/YY HH:mm:ss'), '#A1FFCE'),
-color(`[❌] Conexion cerrada, por favor borre la carpeta sessions y reescanee el codigo QR`, '#f64f59')
-);
-lastDisconnect.error?.output?.statusCode !== DisconnectReason.loggedOut
-? startBot()
-: console.log(
-color('[SYS]', '#009FFF'), 
-color(moment().format('DD/MM/YY HH:mm:ss'), '#A1FFCE'),
-color(`Wa Web logged Out`, '#f64f59')
-);;
 } else if (connection == 'open') {
 console.log(color(` `,'magenta'))
 console.log(color(JSON.stringify(sock.user, null, 2), 'yellow'))
@@ -437,7 +442,25 @@ console.log(color('[SYS]', '#009FFF'),
 color(moment().format('DD/MM/YY HH:mm:ss'), '#A1FFCE'),
 color(`\n╭──────────────────────────────✧•°•°···\n│➢ 𝐁𝐎𝐓 𝐂𝐎𝐍𝐄𝐂𝐓𝐀𝐃𝐎 𝐂𝐎𝐑𝐑𝐄𝐂𝐓𝐀𝐌𝐄𝐍𝐓𝐄 ☑️\n│❏ 𝐁𝐎𝐓 𝐈𝐍𝐒𝐓𝐀𝐋𝐀𝐃𝐎:SHADOW-BOT-MD ☑️\n╰──────────────────────────────✧•°•°···` + receivedPendingNotifications, '#38ef7d')
 );
-}});
+
+/*if (!sock.user.connect) {
+await delay(3 * 1000)
+await sock.groupAcceptInvite(global.nna2)
+sock.user.connect = true
+return !1;*/
+}}});
+
+const rainbowColors = ['red', 'yellow', 'green', 'blue', 'purple'];
+let index = 0;
+  
+function printRainbowMessage() {
+const color = rainbowColors[index];
+console.log(chalk.keyword(color)('\n[UPTIME]'));
+index = (index + 1) % rainbowColors.length;
+setTimeout(printRainbowMessage, 60000) //Ajuste el tiempo de espera a la velocidad deseada
+}
+
+printRainbowMessage();
 
 sock.public = true
 store.bind(sock.ev)
