@@ -12,7 +12,7 @@ const yts = require('yt-search')
 const gpt = require('api-dylux')
 const ytdl = require('ytdl-core') 
 const {savefrom, lyrics, lyricsv2, youtubedl, youtubedlv2} = require('@bochilteam/scraper') 
-  const axios = require('axios')    
+  const axios = require('axios')   
   const cheerio = require('cheerio') 
   const util = require('util')  
   const createHash = require('crypto') 
@@ -947,20 +947,12 @@ await m.reply(res.data.message)}
 case 'chatgpt2': case 'ia2': {
 if (!text) return conn.sendMessage(from, { text: `Ejemplo: ${prefix + command} Recomienda un top 10 de películas de acción` }, { quoted: msg })   
 await conn.sendPresenceUpdate('composing', m.chat) 
-let gpt = await fetch(`https://delirius-api-oficial.vercel.app/api/ia2?text=${text}`);
+let  {key} = await conn.sendMessage(m.chat, {image : { url: "https://telegra.ph/file/10e013d9ae4d9cdf5af14.jpg", }, caption: "𝔏𝔬𝔞𝔡𝔦𝔫𝔤...."}, fkontak);
+let rndid = m.sender.replace(/[^0-9]/g, '')
+let gpt = await fetch(`https://llama.guruapi.tech/user?username=${rndid}&text=${text}`);
 let res = await gpt.json()
-await conn.sendMessage(m.chat, {image: { url: "https://telegra.ph/file/10e013d9ae4d9cdf5af14.jpg", }, caption: res.gpt, contextInfo: {
-          mentionedJid: [m.sender],
-          externalAdReply: {
-            title: `TOOLS - CHATGPT`,
-            sourceUrl: "http://paypal.me/DorratBotOficial",
-            mediaType: 1,
-            showAdAttribution: true,
-            thumbnailUrl: "https://telegra.ph/file/10e013d9ae4d9cdf5af14.jpg", },
-        }, 
-        }, 
-   { quoted: m, })
-//m.reply(res.gpt)
+let nigg = res.result;
+await conn.editmsgwithimg(key,nigg,"2")
 }
 break
 

@@ -1142,6 +1142,46 @@ const {key} = await conn.sendMessage(jid, { text: text }, { quoted: quoted ? quo
 await delay(1000 * seconds); // message in seconds?? (delay)
 await conn.sendMessage(m.chat, { text: editedText, edit: key }); 
 }
+
+ /**
+    * @param {*} key
+    * @param {*} editedText
+    * @param {*} seconds
+    */
+conn.editmsgwithimg = async (key, editedText, seconds) => {
+await delay(1000 * seconds); // message in seconds?? (delay)
+await conn.relayMessage(
+  m.chat,
+  {
+    protocolMessage: {
+      key,
+      type: 14,
+      editedMessage: {
+        imageMessage: { caption: editedText },
+      },
+    },
+  },
+  {}
+)
+}
+
+    /**
+     * @param {*} jid
+     * @param {*} text
+     * @param {*} editedText
+     * @param {*} quoted
+     */
+conn.typeeffect = async (jid, text, editedText, quoted) => {
+  const { key } = await conn.sendMessage(jid, { text }, { quoted: quoted ? quoted : m, ephemeralExpiration: 24*60*100, disappearingMessagesInChat: 24*60*100 });
+  let currentText = ""; 
+  const words = editedText.split(' '); 
+  for (const word of editedText.split(' ')) {
+    currentText += word + " ";  
+    await delay(1 * 1000); 
+    await conn.sendMessage(m.chat, { text: currentText, edit: key });
+  }
+};
+
     
     /**
     * @param {*} jid
