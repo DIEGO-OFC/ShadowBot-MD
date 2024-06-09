@@ -448,7 +448,7 @@ await delay(3 * 1000)
 await sock.groupAcceptInvite(global.nna2)
 sock.user.connect = true
 return !1;*/
-}}});
+}});
 
 const rainbowColors = ['red', 'yellow', 'green', 'blue', 'purple'];
 let index = 0;
