@@ -2007,7 +2007,7 @@ async function ytmp3(url) {
   process.on('uncaughtException', function (err) {  
   console.log('Caught exception: ', err)  
   })}}}}} 
-  
+  const fs = global.fs
   let file = require.resolve(__filename)  
   fs.watchFile(file, () => {  
   fs.unwatchFile(file)  
