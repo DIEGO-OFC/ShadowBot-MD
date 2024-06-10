@@ -185,8 +185,8 @@ const { mp3 } = require('./plugins/ytmp3.js')
   }} */  
   
   //autoread  
-/*if (m.message) {  
-  conn.readMessages([m.key])}*/
+if (m.message) {  
+  conn.readMessages([m.key])}
   
   if (global.db.data.chats[m.chat].antifake && !isGroupAdmins) {          
   if (m.chat && m.sender.startsWith('1')) return conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')}  
