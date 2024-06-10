@@ -6,7 +6,7 @@ const baileys = require('@whiskeysockets/baileys');
  const moment = require('moment-timezone')
  const {getBuffer, getSizeMedia} = require('./libs/fuctions.js')
  const chalk = require('chalk')  
-
+const FormData = require('form-data')  
 global.botNumberCode = "" //Ejemplo: +59309090909
 global.phoneNumber = ""
 
@@ -21,6 +21,7 @@ global.phoneNumber = ""
  global.place = 'America/Bogota' // Aquí puede encontrar su ubicación https://momentjs.com/timezone/ 
 global.baileys = baileys
 global.axios = axios
+global.FormData = FormData
 global.getBuffer = getBuffer
 global.getSizeMedia = getSizeMedia
 global.moment = moment
