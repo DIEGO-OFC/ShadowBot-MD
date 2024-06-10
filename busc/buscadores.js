@@ -187,7 +187,7 @@ await conn.sendMessage(m.chat, {image: { url: "https://telegra.ph/file/10e013d9a
   mentionedJid: [m.sender],
   isForwarded: true,
   forwardedNewsletterMessageInfo: {
-    newsletterJid: '120363178281296360@newsletter',
+    newsletterJid: 'https://github.com/DIEGO-OFC/ShadowBot-MD',
     newsletterName: "Haz clic aquí o eres gay.",
     serverMessageId: -1,
   },
