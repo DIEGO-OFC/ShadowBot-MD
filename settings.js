@@ -6,7 +6,7 @@ const baileys = require('@whiskeysockets/baileys');
  const moment = require('moment-timezone')
  const {getBuffer, getSizeMedia} = require('./libs/fuctions.js')
  const chalk = require('chalk')  
-const FormData = require('form-data')  
+ const FormData = require('form-data')  
 global.botNumberCode = "" //Ejemplo: +59309090909
 global.phoneNumber = ""
 
