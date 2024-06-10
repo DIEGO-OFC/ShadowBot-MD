@@ -1,6 +1,5 @@
   const gradient = require('gradient-string')  
   const { exec, spawn, execSync } = require("child_process"); 
-  const chalk = require('chalk')   
   const os = require('os')   
   const fs = require('fs')   
   const fetch = require('node-fetch')
