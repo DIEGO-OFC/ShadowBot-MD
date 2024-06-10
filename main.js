@@ -1,8 +1,5 @@
   const gradient = require('gradient-string')  
   const { exec, spawn, execSync } = require("child_process"); 
-  const os = require('os')   
-  const fs = require('fs')   
-  const fetch = require('node-fetch')
   const {rob, bal, reg, work, mine, buy, afk, claim, levelxd, tranferSdw, quitardolares, addDolares, cazar, lb} = require('./economy/economy.js')
   const {toqr, fakechat} = require('./extras/extras.js')
 const { default: makeWASocket, proto } = require("@whiskeysockets/baileys") 
