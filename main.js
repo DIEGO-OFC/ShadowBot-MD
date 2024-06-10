@@ -2,7 +2,6 @@
   const { exec, spawn, execSync } = require("child_process"); 
   const chalk = require('chalk')   
   const os = require('os')   
-  const FormData = require('form-data')  
   const fs = require('fs')   
   const fetch = require('node-fetch')
   const {rob, bal, reg, work, mine, buy, afk, claim, levelxd, tranferSdw, quitardolares, addDolares, cazar, lb} = require('./economy/economy.js')
