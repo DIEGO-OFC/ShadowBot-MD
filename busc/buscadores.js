@@ -183,13 +183,24 @@ async function ia(conn, m, text, quoted) {
 if (!text) return m.reply(`*ingresa un texto para hablar con chatgpt*`) 
           let gpt = await fetch(`https://delirius-api-oficial.vercel.app/api/chatgpt?q=${text}`);
 let res = await gpt.json()
-await conn.sendMessage(m.chat, {image: { url: "https://telegra.ph/file/10e013d9ae4d9cdf5af14.jpg", }, caption: res.data, contextInfo: { externalAdReply: {
-            title: `TOOLS - CHATGPT`,
-            sourceUrl: "http://paypal.me/DorratBotOficial",
-            mediaType: 1,
-            showAdAttribution: true,
-            thumbnailUrl: "https://telegra.ph/file/10e013d9ae4d9cdf5af14.jpg", },
-        }, 
+await conn.sendMessage(m.chat, {image: { url: "https://telegra.ph/file/10e013d9ae4d9cdf5af14.jpg", }, caption: res.data, contextInfo: {
+  mentionedJid: [m.sender],
+  isForwarded: true,
+  forwardedNewsletterMessageInfo: {
+    newsletterJid: '120363178281296360@newsletter',
+    newsletterName: "Haz clic aquí o eres gay.",
+    serverMessageId: -1,
+  },
+  forwardingScore: 999,
+  externalAdReply: {
+    title: 'TOOLS - CHATGPT',
+    body: global.botname,
+    thumbnailUrl: "https://i.pinimg.com/originals/80/93/2e/80932e57b837a4df10e9f928894d3b05.jpg",
+    sourceUrl: 'http://paypal.me/DorratBotOficial',
+    mediaType: 1,
+    renderLargerThumbnail: false,
+  },
+},
         }, 
    { quoted: m, })
 //m.reply(res.data)
