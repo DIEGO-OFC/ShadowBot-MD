@@ -168,6 +168,9 @@ const { mp3 } = require('./plugins/ytmp3.js')
   let mathGame = global.db.data.game.math = []   
   let ppt = global.db.data.game.ppt = []  
   let ttt = global.db.data.game.ppt = []  
+let tebaklagu = global.db.data.game.tebaklagu = [] 
+let kuismath = global.db.data.game.math = []
+let tekateki = global.db.data.game.tekateki = []
   
   //autobio  
   /*if (global.db.data.settings[numBot].autobio) {  
@@ -180,10 +183,47 @@ const { mp3 } = require('./plugins/ytmp3.js')
   }} */  
   
   //autoread  
-if (m.message) {  
-  conn.readMessages([m.key])}
+if (!conn.autoread && m.message && prefix) {
+//await delay(1 * 1000) 
+await conn.sendPresenceUpdate('composing', m.chat)
+conn.readMessages([m.key])}
   
-  if (global.db.data.chats[m.chat].antifake && !isGroupAdmins) {          
+//Antispam
+if (global.db.data.chats[m.chat].antispam && prefix) {
+let user = global.db.data.users[m.sender]
+const date = global.db.data.users[m.sender].spam + 3000; //600000 
+if (new Date - global.db.data.users[m.sender].spam < 3000) return console.log(`[ SPAM ] ➢ ${command} [${args.length}]`)  
+global.db.data.users[m.sender].spam = new Date * 1;
+}
+  
+//viewOnceMessage
+if (m.mtype == 'viewOnceMessageV2') { 
+if (global.db.data.chats[m.chat].viewonce) return
+teks = `\`𝙰𝚀𝚄𝙸 𝙽𝙾 𝚂𝙴 𝙿𝙴𝚁𝙼𝙸𝚃𝙴 𝙾𝙲𝚄𝙻𝚃𝙰𝚁 𝙽𝙰𝙳𝙰\``
+let msg = m.message.viewOnceMessageV2.message
+let type = Object.keys(msg)[0]
+let media = await downloadContentFromMessage(msg[type], type == 'imageMessage' ? 'image' : 'video')
+let buffer = Buffer.from([])
+for await (const chunk of media) {
+buffer = Buffer.concat([buffer, chunk])}
+if (/video/.test(type)) {
+return conn.sendFile(m.chat, buffer, 'error.mp4', `${msg[type].caption} ${teks}`, m)
+} else if (/image/.test(type)) {
+return conn.sendFile(m.chat, buffer, 'error.jpg', `${msg[type].caption} ${teks}`, m)
+}}
+  
+//Antiprivado  
+if (!m.isGroup && !isCreator) {  
+//const bot = global.db.data.users[m.sender] || {};
+if (global.db.data.settings[numBot].antiprivado) {
+conn.sendMessage(m.chat, {text: `[❕] Hola @${sender.split`@`[0]}, está prohibido hablar al privado del bot serás bloqueado.\npuedes usar el bot en: ${nnn}`, mentions: [m.sender], }, {quoted: m}) 
+await delay(2 * 2000) 
+await conn.updateBlockStatus(m.chat, 'block')   
+return 
+}}
+  
+//antifake
+if (global.db.data.chats[m.chat].antifake && !isGroupAdmins) {          
   if (m.chat && m.sender.startsWith('1')) return conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')}  
   if (global.db.data.chats[m.chat].antiarabe && !isGroupAdmins) {  
   if (m.chat && m.sender.startsWith('212')) return conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')}  
@@ -209,13 +249,12 @@ if (m.message) {
   if (!m.key.fromMe) return  
   }                  
   //Banea chat  
-  if (global.db.data.chats[m.chat].ban && !isCreator) {  
-  return  
-  }  
-  //modoadmin  
-  if (global.db.data.chats[m.chat].modeadmin && !isGroupAdmins) {  
-  return  
-  }  
+if (global.db.data.chats[m.chat].isBanned && !isCreator) {
+return }
+
+//modoadmins
+if (global.db.data.chats[m.chat].modeadmin && !isGroupAdmins) {
+return }   
   
   // Tiempo de Actividad del bot  
   const used = process.memoryUsage()  
@@ -262,11 +301,10 @@ if (m.message) {
   chalk.bold.yellow('\n│📑TIPO (SMS): ') + chalk.yellowBright(`${type}`),   
   chalk.bold.cyan('\n│📊USUARIO: ') + chalk.cyanBright(pushname) + ' ➜', gradient.rainbow(userSender),   
   m.isGroup ? chalk.bold.greenBright('\n│📤GRUPO: ') + chalk.greenBright(groupName) + ' ➜ ' + gradient.rainbow(from) : chalk.bold.greenBright('\n│📥PRIVADO'),   
-  //chalk.bold.red('\nETIQUETA: ') + chalk.redBright(`[${isBaneed ? 'Banned' : ''}]`),  
+ //chalk.bold.red('\nETIQUETA: ') + chalk.redBright(`[${isBaneed ? 'Banned' : ''}]`),  
   chalk.bold.white('\n│💬MENSAJE: ') + chalk.whiteBright(`\n▣────────────···\n${msgs(m.text)}\n`))  
   )}  
-  
-  
+    
   //afk  
   let mentionUser = [...new Set([...(m.mentionedJid || []), ...(m.quoted ? [m.quoted.sender] : [])])]  
   for (let jid of mentionUser) {  
@@ -282,11 +320,86 @@ if (m.message) {
   user.afkTime = -1  
   user.afkReason = ''   
   }  
-  
-  //Marcar como (Escribiendo...)   
-  /*if (command) {  
-  await conn.sendPresenceUpdate('composing', m.chat)  
-  }*/ 
+
+//TicTacToe
+let winScore = 4999
+let playScore = 99
+this.game = this.game ? this.game : {}
+let room13 = Object.values(this.game).find(room13 => room13.id && room13.game && room13.state && room13.id.startsWith('tictactoe') && [room13.game.playerX, room13.game.playerO].includes(m.sender) && room13.state == 'PLAYING')
+if (room13) {
+let ok
+let isWin = !1
+let isTie = !1
+let isSurrender = !1
+//reply(`[DEBUG]\n${parseInt(m.text)}`)
+if (!/^([1-9]|(me)?give up|surr?ender|off|skip)$/i.test(m.text)) return
+isSurrender = !/^[1-9]$/.test(m.text)
+if (m.sender !== room13.game.currentTurn) { 
+if (!isSurrender) return !0
+}
+if (!isSurrender && 1 > (ok = room13.game.turn(m.sender === room13.game.playerO, parseInt(m.text) - 1))) {
+m.reply({'-3': 'El juego ha terminado',
+'-2': 'Inválido',
+'-1': 'Posición inválida',
+0: 'Posición inválida', }[ok])
+return !0
+}
+if (m.sender === room13.game.winner) isWin = true
+else if (room13.game.board === 511) isTie = true
+let arr = room13.game.render().map(v => {
+return {X: '❎',
+O: '❌',
+1: '1️⃣',
+2: '2️⃣',
+3: '3️⃣',
+4: '4️⃣',
+5: '5️⃣',
+6: '6️⃣',
+7: '7️⃣',
+8: '8️⃣',
+9: '9️⃣',
+}[v]})
+if (isSurrender) {
+room13.game._currentTurn = m.sender === room13.game.playerX
+isWin = true
+}
+let winner = isSurrender ? room13.game.currentTurn : room13.game.winner
+let str = `🫂 𝙹𝚄𝙶𝙰𝙳𝙾𝚁𝙴𝚂
+*═════════*
+❎ = @${room13.game.playerX.split('@')[0]}
+❌ = @${room13.game.playerO.split('@')[0]}
+*═════════*
+       ${arr.slice(0, 3).join('')}
+       ${arr.slice(3, 6).join('')} 
+       ${arr.slice(6).join('')}
+*═════════*	    
+
+${isWin ? `@${winner.split('@')[0]} 😎🏆 *GANASTE!!*\n*POR HABER GANADO OBTIENES:* ${winScore} XP` : isTie ? `*EMPATE!!* 🤨\n` : `𝚃𝚄𝚁𝙽𝙾 𝙳𝙴 : ${['❎', '❌'][1 * room13.game._currentTurn]} (@${room13.game.currentTurn.split('@')[0]})`}` //`
+let users = global.db.data.users
+if ((room13.game._currentTurn ^ isSurrender ? room13.x : room13.o) !== m.chat)
+room13[room13.game._currentTurn ^ isSurrender ? 'x' : 'o'] = m.chat
+if (room13.x !== room13.o) await conn.sendText(room13.x, str, m, { mentions: parseMention(str) } )
+await conn.sendText(room13.o, str, m, { mentions: parseMention(str) } )
+         
+if (isTie || isWin) {
+users[room13.game.playerX].exp += playScore
+users[room13.game.playerO].exp += playScore
+delete this.game[room13.id]
+if (isWin)
+users[winner].exp += winScore - playScore
+}}
+	    
+//math
+if (kuismath.hasOwnProperty(m.sender.split('@')[0]) && isCmd) {
+kuis = true
+jawaban = kuismath[m.sender.split('@')[0]]
+if (budy.toLowerCase() == jawaban) { 
+const exp = Math.floor(Math.random() * 600)
+global.db.data.users[m.sender].exp += exp;
+await conn.sendButton(m.chat, `*𝚁𝙴𝚂𝙿𝚄𝙴𝚂 𝙲𝙾𝚁𝚁𝙴𝙲𝚃𝙰!!*\n*𝙷𝙰𝚉 𝙶𝙰𝙽𝙰𝙳𝙾: ${exp} `, `xd`, null, [['𝚅𝙾𝙻𝚅𝙴𝚁 𝙰 𝙹𝚄𝙶𝙰𝚁', `.math ${math.mode}`]], null, null, m)  
+m.react(`✅`) 
+delete kuismath[m.sender.split('@')[0]]
+} else m.react(`❌`)} 
   
 if (m.mtype === 'interactiveResponseMessage') {   
 let msg = m.message[m.mtype]  || m.msg
@@ -303,7 +416,7 @@ return conn.ev.emit('messages.upsert', { messages : [ emit ] ,  type : 'notify'}
 }}}  
 
   //ARRANCA LA DIVERSIÓN  
-  switch (command) {  
+  switch (prefix && command) {  
   
 case 'test': {
 const test = generateWAMessageFromContent(from, { viewOnceMessage: { 
@@ -336,9 +449,10 @@ conn.relayMessage(test.key.remoteJid, test.message, { messageId: test.key.id }, 
 }
 break
 
-  case 'yts': 
+case 'yts': 
  await yt(conn, m, text, from, command, fkontak, prefix) 
  break
+ 
    case 'nowa':  
       let regex = /x/g  
       if (!text) m.reply('⚠️ Falto el número.') 
@@ -359,19 +473,33 @@ break
       let d = new Date(n)  
       return d.toLocaleDateString(locale, { timeZone: 'Asia/Jakarta' })}  
      break  
-  case 'serbot': case 'jadibot':  
-        if (m.isGroup) return m.reply(info.private)   
-        await jadibot(conn, m, command)    
-        break   
-        case 'deljadibot':  
-        killJadibot(conn, m, command)  
-        break  
+     
+case 'serbot': case 'jadibot':  
+if (m.isGroup) return m.reply(info.private)   
+await jadibot(conn, m, command)    
+break   
+case 'deljadibot': killJadibot(conn, m, command)  
+break  
+case 'sercode': jadibot2(conn, m, command, text) 
+break   
+case 'bots': case 'listbots':  
+  try {   
+  let user = [... new Set([...global.listJadibot.filter(conn => conn.user).map(conn => conn.user)])]   
+  te = "*Lista de subbots*\n\n"   
+  for (let i of user){   
+  y = await conn.decodeJid(i.id)   
+  te += " ❑ Usuario : @" + y.split("@")[0] + "\n"   
+  te += " ❑ Nombre : " + i.name + "\n\n"   
+  }   
+  conn.sendMessage(from ,{text: te, mentions: [y], },{quoted: m})   
+  } catch (err) {   
+  reply(`*[❌] No hay subbots activos en este momento intente mas tarde*`)}   
+  break   
+                
   case 'toqr': {
   toqr(conn, m,  text, sender)}
   break  
-   case 'sercode':  
-      jadibot2(conn, m, command, text)  
-      break   
+     
   case 'ofuscar':
        if (!text) return m.reply("*Ingresa el codigo que vas a ofuscar.*"); 
          function obfuscateCode(code) { 
@@ -386,22 +514,11 @@ break
       let obfuscatedCode = await obfuscateCode(text); 
        conn.sendMessage(m.chat, {text: obfuscatedCode}, {quoted: m});
        break
-  case 'bots': case 'listbots':  
-  try {   
-  let user = [... new Set([...global.listJadibot.filter(conn => conn.user).map(conn => conn.user)])]   
-  te = "*Lista de subbots*\n\n"   
-  for (let i of user){   
-  y = await conn.decodeJid(i.id)   
-  te += " ❑ Usuario : @" + y.split("@")[0] + "\n"   
-  te += " ❑ Nombre : " + i.name + "\n\n"   
-  }   
-  conn.sendMessage(from ,{text: te, mentions: [y], },{quoted: m})   
-  } catch (err) {   
-  reply(`*[❌] No hay subbots activos en este momento intente mas tarde*`)}   
-  break   
+         
  case 'acortar': 
  await acortar(conn, m, text, command)   
  break 
+ 
  case 'mangainfo': {
 kataAnime(conn, m, text, command)}
 break
@@ -414,6 +531,7 @@ break
  case 'imagen': { 
  await imagen(conn, m, text, command)} 
  break
+ 
   case 'attp':  
   if (global.db.data.users[m.sender].registered < true) return reply(info.registra)  
   if (!text) return reply('ingresa algo para convertirlo a sticker :v')  
@@ -423,6 +541,7 @@ break
   case 'traducir': case 'translate': { 
  await tran(conn, m, args, quoted, prefix, command)} 
  break
+ 
   case 'hd': {  
     let q = m.quoted ? m.quoted : m;   
      let mime = (q.msg || q).mimetype || q.mediaType || "";   
@@ -444,6 +563,7 @@ break
      } 
    };  
    break;  
+   
   //info  
   case 'estado':  
   if (global.db.data.users[m.sender].registered < true) return reply(info.unreg)  
@@ -493,12 +613,11 @@ break
   case 'owner': case 'creador':  
   if (global.db.data.users[m.sender].registered < true) return reply(info.unreg)    
   let vcard = `BEGIN:VCARD\nVERSION:3.0\nN:;OWNER 👑;;;\nFN:OWNER\nORG:OWNER 👑\nTITLE:\nitem1.TEL;waid=584125778026:+58 412 5778026\nitem1.X-ABLabel:OWNER 👑\nX-WA-BIZ-DESCRIPTION:ᴇsᴄʀɪʙɪ sᴏʟᴏ ᴘᴏʀ ᴄᴏsᴀs ᴅᴇʟ ʙᴏᴛ.\nX-WA-BIZ-NAME:Owner 👑\nEND:VCARD`  
-  let a = await conn.sendMessage(from, { contacts: { displayName: 'shadowʙᴏᴛ-ᴍᴅ 👑', contacts: [{ vcard }] }}, {quoted: m})  
-  conn.sendMessage(from, { text : `Hola @${sender.split("@")[0]}, este bot esta en desarrollo si quiere contactar con mi creador aqui te dejo su número`, mentions: [sender]}, { quoted: a })  
+await conn.sendMessage(from, { contacts: { displayName: 'shadowʙᴏᴛ-ᴍᴅ 👑', contacts: [{ vcard }] }}, {quoted: m})  
   break   
   
   case 'grupos': case 'grupoficiales':   
-  if (global.db.data.users[m.sender].registered < true) return reply(info.unreg)  
+if (global.db.data.users[m.sender].registered < true) return reply(info.unreg)  
 let img1 = fs.readFileSync('./media/grupos-oficiales.jpg')
 await conn.sendMessage(m.chat, {image: img1, caption: `*𝙷𝙾𝙻𝙰 𝚄𝚂𝚄𝙰𝚁𝙸𝙾 👋🏻, 𝚃𝙴 𝙸𝙽𝚅𝙸𝚃𝙾 𝙰 𝚄𝙽𝙸𝚁𝚃𝙴 𝙰 𝙻𝙾𝚂 𝙶𝚁𝚄𝙿𝙾𝚂 𝙾𝙵𝙸𝙲𝙸𝙰𝙻𝙴𝚂 𝙳𝙴 †shadow-bot⃤ 𝙿𝙰𝚁𝙰 𝙲𝙾𝙽𝚅𝙸𝚅𝙸𝚁 𝙲𝙾𝙽 𝙻𝙰 𝙲𝙾𝙼𝚄𝙽𝙸𝙳𝙰𝙳 :D*
 
@@ -596,7 +715,7 @@ break
   if (!m.isGroup) return reply(info.group);    
   if (!isBotAdmins) return reply(info.botAdmin)  
   if (!isGroupAdmins) return reply(info.admin)  
-  if (!text) return reply(`*Accion mal usaba*\n\n*Use de esta forma:*\n*${prefix + command} abrir*\n*${prefix + command} cerrar*`)  
+  if (!text) return conn.sendButton(m.chat, `*Accion mal usaba*\n\n*Use de esta forma:*\n*${prefix + command} abrir*\n*${prefix + command} cerrar*`, wm, null, [['ABRIR', `${prefix + command} cerrar`], ['CERRAR', `${prefix + command} off`]], null, null, m)
   if (args[0] === 'abrir') {  
   if (args[0] === 'open') {  
   m.reply(`*GRUPO ABIERTO CON EXITO✅*`)  
@@ -607,7 +726,7 @@ break
   await conn.groupSettingUpdate(from, 'announcement')  
   }}  
   break  
-  
+   
   case 'delete': case 'del': {  
   if (!m.quoted) throw false  
   if (!isBotAdmins) return reply(info.botAdmin)  
@@ -617,10 +736,12 @@ break
   let bang = m.message.extendedTextMessage.contextInfo.stanzaId  
   return conn.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: false, id: bang, participant: delet }})}  
   break    
+  
   case 'reset': {
    if (!isCreator) return conn.sendMessage(from, { text: info.owner }, { quoted: msg });     
   tranferSdw(conn, m, sender, text, command)}
  break
+ 
   case 'public': case 'publico': {  
   if (!isCreator) return reply(info.owner)  
   conn.public = true  
@@ -631,85 +752,258 @@ break
   conn.public = false  
   reply('✅ Cambio con exito a uso privado')}  
   break          
-  case 'math': {
-  gameMate(conn, m, command, text, quoted)      }
-break
-  case 'autoadmin': case 'tenerpoder': {  
+    case 'autoadmin': case 'tenerpoder': {  
   if (!m.isGroup) return reply(info.group)  
   if (!isCreator) return reply(info.owner)  
   m.reply('Ya eres admin mi jefe 😎')   
   await conn.groupParticipantsUpdate(m.chat, [m.sender], "promote")}  
   break   
   
-  case 'welcome':  
-  case 'audios':  
-  case 'modeadmin':  
-  case 'antifake': case 'antinternacional':  
-  case 'antiarabe':  
-  case 'detect':  
-  case 'antilink': {  
-   if (global.db.data.users[m.sender].registered < true) return reply(info.unreg)  
-  if (!m.isGroup) return reply(info.group)  
-  
+  case 'math': case 'matematicas': { 
+if (kuismath.hasOwnProperty(m.sender.split('@')[0])) return m.reply('*[❗𝐈𝐍𝐅𝐎❗] 𝚃𝙾𝙳𝙰𝚅𝙸𝙰 𝙷𝙰𝚈 𝙿𝚁𝙴𝙶𝚄𝙽𝚃𝙰𝚂 𝚂𝙸𝙽 𝚁𝙴𝚂𝙿𝙾𝙽𝙳𝙴𝚁 𝙴𝙽 𝙴𝚂𝚃𝙴 𝙲𝙷𝙰𝚃!*') 
+let { genMath, modes } = require('./libs/math')
+ let mat = `*[❗𝐈𝐍𝐅𝐎❗] 𝙸𝙽𝙶𝚁𝙴𝚂𝙴 𝙻𝙰 𝙳𝙸𝙵𝙸𝙲𝚄𝙻𝚃𝙰𝙳𝙾 𝙲𝙾𝙽 𝙻𝙰 𝚀𝚄𝙴 𝙳𝙴𝚂𝙴𝙰 𝙹𝚄𝙶𝙰𝚁*
+
+*𝙳𝙸𝙵𝙸𝙲𝚄𝙻𝚃𝙰𝙳𝙴𝚂 𝙳𝙸𝚂𝙿𝙾𝙽𝙸𝙱𝙻𝙴𝚂: ${Object.keys(modes).join(' | ')}*
+*𝙴𝙹𝙴𝙼𝙿𝙻𝙾 𝙳𝙴 𝚄𝚂𝙾: ${prefix}mates medium*
+`.trim();    
+if (!text) return conn.sendButton(m.chat, mat, `xd`, null, [['𝙼𝙰𝚃𝙴𝚂 𝙴𝙰𝚂𝚈', `.math easy`], ['𝙼𝙰𝚃𝙴𝚂 𝙼𝙴𝙳𝙸𝚄𝙼', `.math medium`], ['𝙼𝙰𝚃𝙴𝚂 𝙷𝙰𝚁𝙳', `math hard`]], null, null, m) 
+let result = await genMath(text.toLowerCase())         
+conn.sendText(m.chat, `𝙲𝚄𝙰𝙽𝚃𝙾 𝙴𝚂 𝙴𝙻 𝚁𝙴𝚂𝚄𝙻𝚃𝙰𝙳𝙾 𝙳𝙴 *${result.soal.toLowerCase()}*?\n\n*⏳ 𝚃𝙸𝙴𝙼𝙿𝙾: ${(result.waktu / 1000).toFixed(2)}  𝚜𝚎𝚐𝚞𝚗𝚍𝚘𝚜*\n*𝚁𝙴𝚂𝙿𝙾𝙽𝙳𝙴 𝙰 𝙴𝚂𝚃𝙴 𝙼𝙴𝙽𝚂𝙰𝙹𝙴 𝙲𝙾𝙽 𝙻𝙰 𝚁𝙴𝚂𝙿𝚄𝙴𝚂𝚃𝙰*`, m).then(() => {
+kuismath[m.sender.split('@')[0]] = result.jawaban
+})
+await sleep(result.waktu)
+if (kuismath.hasOwnProperty(m.sender.split('@')[0])) {
+conn.sendButton(m.chat, `[❗𝐈𝐍𝐅𝐎❗] 𝚂𝙴 𝙰𝙷 𝙵𝙸𝙽𝙰𝙻𝙸𝚉𝙰𝙳𝙾 𝙴𝙻 𝚃𝙸𝙴𝙼𝙿𝙾 𝙿𝙰𝚁𝙰 𝚁𝙴𝚂𝙿𝙾𝙽𝙳𝙴𝚁*\n\n*𝙻𝙰 𝚁𝙴𝚂𝙿𝚄𝙴𝚂𝚃𝙰 𝙴𝚂: ${kuismath[m.sender.split('@')[0]]}`, `xd`, null, [['𝚅𝙾𝙻𝚅𝙴𝚁 𝙰 𝙹𝚄𝙶𝙰𝚁', `.math ${math.mode}`]], null, null, m)
+delete kuismath[m.sender.split('@')[0]]
+}}
+break 
+
+case 'ttc': case 'ttt': case 'tictactoe': {
+let TicTacToe = require("./libs/tictactoe")
+this.game = this.game ? this.game : {}
+if (Object.values(this.game).find(room13 => room13.id.startsWith('tictactoe') && [room13.game.playerX, room13.game.playerO].includes(m.sender))) return m.reply(`*[❗] 𝙰𝚄𝙽 𝙴𝚂𝚃𝙰𝚂 𝙴𝙽 𝚄𝙽 𝙹𝚄𝙴𝙶𝙾 𝙲𝙾𝙽 𝙰𝙻𝙶𝚄𝙸𝙴𝙽*`)
+let room13 = Object.values(this.game).find(room13 => room13.state === 'WAITING' && (text ? room13.name === text : true))
+if (room13) {
+room13.o = m.chat
+room13.game.playerO = m.sender
+room13.state = 'PLAYING'
+let arr = room13.game.render().map(v => {
+return {X: '❎',
+O: '❌',
+1: '1️⃣',
+2: '2️⃣',
+3: '3️⃣',
+4: '4️⃣',
+5: '5️⃣',
+6: '6️⃣',
+7: '7️⃣',
+8: '8️⃣',
+9: '9️⃣', }[v]})
+let str = `💖 𝙹𝚄𝙴𝙶𝙾 𝚃𝚁𝙴𝚂 𝙴𝙽 𝚁𝙰𝚈𝙰 | 𝙻𝙰 𝚅𝙸𝙴𝙹𝙰
+🫂 *𝙹𝚄𝙶𝙰𝙳𝙾𝚁𝙴𝚂*:
+*═════════*
+
+🎮👾 ᴇsᴘᴇʀᴀɴᴅᴏ ᴀ @${room13.game.currentTurn.split('@')[0]} ᴄᴏᴍᴏ ᴘʀɪᴍᴇʀ ᴊᴜɢᴀᴅᴏʀ
+
+*═════════*
+
+${arr.slice(0, 3).join('')}
+${arr.slice(3, 6).join('')}
+${arr.slice(6).join('')}
+
+*═════════*
+▢ *𝐒𝐀𝐋𝐀 :* ${room13.id}
+*═════════*
+ 
+▢ *𝐑𝐄𝐆𝐋𝐀𝐒 :*
+* ʜᴀᴢ 3 ғɪʟᴀs ᴅᴇ sɪᴍʙᴏʟᴏs ᴠᴇʀᴛɪᴄᴀʟᴇs, ʜᴏʀɪᴢᴏɴᴛᴀʟᴇs ᴏ ᴅɪᴀɢᴏɴᴀʟᴇs ᴘᴀʀᴀ ɢᴀɴᴀʀ
+* ᴇsᴄʀɪʙᴇ *rendirse* para rendirte y admitir la derrota.`
+if (room13.x !== room13.o) await conn.sendText(room13.x, str, m, { mentions: parseMention(str) } )
+await conn.sendText(room13.o, str, m, { mentions: parseMention(str) } )
+} else {
+room13 = {id: 'tictactoe-' + (+new Date),
+x: m.chat,
+o: '',
+game: new TicTacToe(m.sender, 'o'),
+state: 'WAITING'
+}
+if (text) room13.name = text
+m.reply('*⏳ ᴇsᴘᴇʀᴀɴᴅᴏ ᴀʟ sɪɢᴜɪᴇɴᴛᴇ ᴊᴜɢᴀᴅᴏ*' + (text ? ` *ᴇsᴄʀɪʙᴀ ᴇʟ sɪɢᴜɪᴇɴᴛᴇ ᴄᴏᴍᴀɴᴅᴏ: ${prefix + command} ${text}*\n\n🎁 ʀᴇᴄᴏᴍᴘᴇɴsᴀ : *4999 XP*` : ''))
+this.game[room13.id] = room13
+}}
+break
+
+case 'delttc': case 'delttt': {
+this.game = this.game ? this.game : {}
+try {
+if (this.game) {
+delete this.game
+conn.sendText(m.chat, `*[ ✔ ] 𝚂𝙴 𝙴𝙻𝙸𝙼𝙸𝙽𝙾 𝙻𝙰 𝚂𝙰𝙻𝙰 𝙳𝙴 𝙹𝚄𝙴𝙶𝙾 𝙳𝙴 𝚃𝚁𝙴𝚂 𝙴𝙽 𝚁𝙰𝚈𝙰*`, m)
+} else if (!this.game) {
+conn.sendButton(m.chat, `*[❗] 𝙽𝙾 𝙴𝚂𝚃𝙰𝚂 𝙴𝙽 𝙽𝙸𝙽𝙶𝚄𝙽𝙰 𝙿𝙰𝚁𝚃𝙸𝙳𝙰 𝙳𝙴 𝚃𝚁𝙴𝚂 𝙴𝙽 𝚁𝙰𝚈𝙰*`, `xd`, null, [['𝙸𝙽𝙸𝙲𝙸𝙰𝚁 𝚂𝙰𝙻𝙰 𝙳𝙴 𝙹𝚄𝙴𝙶𝙾', '.ttt partida nueva']], null, null, m)
+} else throw '?'
+} catch (e) {
+m.reply('Nose que paso? hubor error pon de nuevo el comando jjjj')
+}}
+break
+
+case 'welcome': {
+if (!m.isGroup) return reply(info.group)  
+if (!isGroupAdmins) return conn.sendButton(m.chat, `*Accion mal usaba*\n\n*Use de esta forma ejemplo:*\n*${prefix + command} on*\n*${prefix + command} off*`, wm, null, [['ACTIVAR', `${prefix + command} on`], ['DESACTIVAR', `${prefix + command} off`]], null, null, m)
+if (args[0] === "on") {
+global.db.data.chats[m.chat].welcome = true
+reply(`*✅El ${command} se activo con exito*`)  
+} else if (args[0] === "off") {
+global.db.data.chats[m.chat].welcome = false
+reply(`*${command} desactivado!*`)}}
+break
+         
+case 'modeadmin':  {
+if (!m.isGroup) return reply(info.group)  
   if (!isGroupAdmins) return reply(info.admin)  
-  if (!text) return reply(`*Use de esta forma ejemplo:*\n*${prefix + command} on*\n*${prefix + command} off*`)  
-  if (args[0] === "on") {  
-  if (!global.db.data.chats[m.chat].detect)   
-  if (!global.db.data.chats[m.chat].antilink)   
-  if (!global.db.data.chats[m.chat].audios)   
-  if (!global.db.data.chats[m.chat].welcome)  
-  if (!global.db.data.chats[m.chat].modeadmin)  
-  if (!global.db.data.chats[m.chat].antifake)  
-  if (!global.db.data.chats[m.chat].antiarabe)  
-  global.db.data.chats[m.chat].detect = true  
-  global.db.data.chats[m.chat].antilink = true  
-  global.db.data.chats[m.chat].audios = true  
-  global.db.data.chats[m.chat].welcome = true  
-  global.db.data.chats[m.chat].modeadmin = true  
-  global.db.data.chats[m.chat].antifake = true  
-  global.db.data.chats[m.chat].antiarabe = true  
-  reply(`*✅El ${command} se activo con exito*`)  
-  } else if (args[0] === "off") {  
-  if (!global.db.data.chats[m.chat].detect)   
-  if (!global.db.data.chats[m.chat].antilink)  
-  if (!global.db.data.chats[m.chat].audios)   
-  if (!global.db.data.chats[m.chat].welcome)   
-  if (!global.db.data.chats[m.chat].modeadmin)  
-  if (!global.db.data.chats[m.chat].antifake)  
-  if (!global.db.data.chats[m.chat].antiarabe)  
-  global.db.data.chats[m.chat].detect = false  
-  global.db.data.chats[m.chat].antilink = false  
-  global.db.data.chats[m.chat].audios = false  
-  global.db.data.chats[m.chat].welcome = false  
-  global.db.data.chats[m.chat].modeadmin = false  
-  global.db.data.chats[m.chat].antifake = false  
-  global.db.data.chats[m.chat].antiarabe = false  
-  reply(`*${command} desactivado!*`)}}  
-  case 'modojadibot':  
-  case 'anticall':   
-  if (!isCreator) return reply(info.owner)  
-  if (args[0] === "on") {  
-  if (db.data.chats[m.chat].modojadibot)  
-  if (db.data.settings[numBot].anticall)  
-  db.data.chats[m.chat].modojadibot = true  
-  db.data.settings[numBot].anticall = true  
-  reply(`*✅El ${command} se activo con exito*`)  
-  } else if (args[0] === "off") {  
-  if (db.data.chats[m.chat].modojadibot)  
-  if (db.data.settings[numBot].anticall)  
-  db.data.settings[numBot].anticall = false  
-  db.data.chats[m.chat].modojadibot = false  
-  reply(`*${command} desactivado!*`)}  
-  break  
+  if (!text) return conn.sendButton(m.chat, `*Accion mal usaba*\n\n*Use de esta forma ejemplo:*\n*${prefix + command} on*\n*${prefix + command} off*`, wm, null, [['ACTIVAR', `${prefix + command} on`], ['DESACTIVAR', `${prefix + command} off`]], null, null, m)
+if (args[0] === "on") {
+global.db.data.chats[m.chat].modeadmin = true
+reply(`*✅El ${command} se activo con exito*`)  
+} else if (args[0] === "off") {
+global.db.data.chats[m.chat].modeadmin = false
+reply(`*${command} desactivado!*`)}}
+break
+
+case 'antifake': case 'antinternacional':  {
+if (!m.isGroup) return reply(info.group)  
+  if (!isGroupAdmins) return reply(info.admin)  
+  if (!text) return conn.sendButton(m.chat, `*Accion mal usaba*\n\n*Use de esta forma ejemplo:*\n*${prefix + command} on*\n*${prefix + command} off*`, wm, null, [['ACTIVAR', `${prefix + command} on`], ['DESACTIVAR', `${prefix + command} off`]], null, null, m)
+if (args[0] === "on") {
+global.db.data.chats[m.chat].antifake = true
+reply(`*✅El ${command} se activo con exito*`)  
+} else if (args[0] === "off") {
+global.db.data.chats[m.chat].antifake = false
+reply(`*${command} desactivado!*`)}}
+break
+          
+case 'antiarabe':  {
+if (!m.isGroup) return reply(info.group)  
+  if (!isGroupAdmins) return reply(info.admin)  
+  if (!text) return conn.sendButton(m.chat, `*Accion mal usaba*\n\n*Use de esta forma ejemplo:*\n*${prefix + command} on*\n*${prefix + command} off*`, wm, null, [['ACTIVAR', `${prefix + command} on`], ['DESACTIVAR', `${prefix + command} off`]], null, null, m)
+if (args[0] === "on") {
+global.db.data.chats[m.chat].antiarabe = true
+reply(`*✅El ${command} se activo con exito*`)  
+} else if (args[0] === "off") {
+global.db.data.chats[m.chat].antiarabe = false
+reply(`*${command} desactivado!*`)}}
+break
+
+case 'detect':  {
+if (!m.isGroup) return reply(info.group)  
+  if (!isGroupAdmins) return reply(info.admin)  
+  if (!text) return conn.sendButton(m.chat, `*Accion mal usaba*\n\n*Use de esta forma ejemplo:*\n*${prefix + command} on*\n*${prefix + command} off*`, wm, null, [['ACTIVAR', `${prefix + command} on`], ['DESACTIVAR', `${prefix + command} off`]], null, null, m)
+if (args[0] === "on") {
+global.db.data.chats[m.chat].detect = true
+reply(`*✅El ${command} se activo con exito*`)  
+} else if (args[0] === "off") {
+global.db.data.chats[m.chat].detect = false
+reply(`*${command} desactivado!*`)}}
+break
+
+case 'viewonce': { 
+if (!m.isGroup) return reply(info.group)  
+  if (!isGroupAdmins) return reply(info.admin)  
+  if (!text) return conn.sendButton(m.chat, `*Accion mal usaba*\n\n*Use de esta forma ejemplo:*\n*${prefix + command} on*\n*${prefix + command} off*`, wm, null, [['ACTIVAR', `${prefix + command} on`], ['DESACTIVAR', `${prefix + command} off`]], null, null, m)
+if (args[0] === "on") {
+global.db.data.chats[m.chat].viewonce = true
+reply(`*✅El ${command} se activo con exito*`)  
+} else if (args[0] === "off") {
+global.db.data.chats[m.chat].viewonce = false
+reply(`*${command} desactivado!*`)}}
+break
+
+case 'antilink': { 
+if (!m.isGroup) return reply(info.group)  
+  if (!isGroupAdmins) return reply(info.admin)  
+  if (!text) return conn.sendButton(m.chat, `*Accion mal usaba*\n\n*Use de esta forma ejemplo:*\n*${prefix + command} on*\n*${prefix + command} off*`, wm, null, [['ACTIVAR', `${prefix + command} on`], ['DESACTIVAR', `${prefix + command} off`]], null, null, m)
+if (args[0] === "on") {
+global.db.data.chats[m.chat].antilink = true
+reply(`*✅El ${command} se activo con exito*`)  
+} else if (args[0] === "off") {
+global.db.data.chats[m.chat].antilink = false
+reply(`*${command} desactivado!*`)}}
+break
+          
+case 'audios': { 
+if (!text) return conn.sendButton(m.chat, `*Accion mal usaba*\n\n*Use de esta forma ejemplo:*\n*${prefix + command} on*\n*${prefix + command} off*`, wm, null, [['ACTIVAR', `${prefix + command} on`], ['DESACTIVAR', `${prefix + command} off`]], null, null, m)
+if (args[0] === "on") {
+global.db.data.chats[m.chat].audios = true
+reply(`*✅El ${command} se activo con exito*`)  
+} else if (args[0] === "off") {
+global.db.data.chats[m.chat].audios = false
+reply(`*${command} desactivado!*`)}}
+break          
+
+case 'antiprivado': case 'AntiPv': case 'AntiPrivado': {
+if (!isCreator) return reply(info.owner)  
+if (!text) return conn.sendButton(m.chat, `*Accion mal usaba*\n\n*Use de esta forma ejemplo:*\n*${prefix + command} on*\n*${prefix + command} off*`, wm, null, [['ACTIVAR', `${prefix + command} on`], ['DESACTIVAR', `${prefix + command} off`]], null, null, m)
+if (args[0] === "on") {
+global.db.data.chats[m.chat].antiprivado = true
+reply(`*✅El ${command} se activo con exito*`)  
+} else if (args[0] === "off") {
+global.db.data.chats[m.chat].antiprivado = false
+reply(`*${command} desactivado!*`)}}
+break          
+
+  case 'modojadibot':  {
+if (!isCreator) return reply(info.owner)  
+if (!text) return conn.sendButton(m.chat, `*Accion mal usaba*\n\n*Use de esta forma ejemplo:*\n*${prefix + command} on*\n*${prefix + command} off*`, wm, null, [['ACTIVAR', `${prefix + command} on`], ['DESACTIVAR', `${prefix + command} off`]], null, null, m)
+if (args[0] === "on") {
+global.db.data.chats[m.chat].modojadibot = true
+reply(`*✅El ${command} se activo con exito*`)  
+} else if (args[0] === "off") {
+global.db.data.chats[m.chat].modojadibot = false
+reply(`*${command} desactivado!*`)}}
+break          
   
-  case 'join': {  
-  if (!isCreator) return reply(info.owner)  
-  if (!text) return reply(`*Y EL LINK DEL GRUPO?*`)  
-  if (!isUrl(args[0]) && !args[0].includes('whatsapp.com')) return reply(`*Link incorrecto!*`)  
-  reply(`*YA ME UNISTE ✳️*`)  
-  let result = args[0].split('https://chat.whatsapp.com/')[1]  
-  await conn.groupAcceptInvite(result).then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))}  
-  break  
+case 'anticall':   {
+ if (!isCreator) return reply(info.owner)  
+if (!text) return conn.sendButton(m.chat, `*Accion mal usaba*\n\n*Use de esta forma ejemplo:*\n*${prefix + command} on*\n*${prefix + command} off*`, wm, null, [['ACTIVAR', `${prefix + command} on`], ['DESACTIVAR', `${prefix + command} off`]], null, null, m)
+if (args[0] === "on") {
+global.db.data.chats[m.chat].anticall = true
+reply(`*✅El ${command} se activo con exito*`)  
+} else if (args[0] === "off") {
+global.db.data.chats[m.chat].anticall = false
+reply(`*${command} desactivado!*`)}}
+break          
+
+case 'antispam': case 'AntiSpam': {
+ if (!isCreator) return reply(info.owner)  
+if (!text) return conn.sendButton(m.chat, `*Accion mal usaba*\n\n*Use de esta forma ejemplo:*\n*${prefix + command} on*\n*${prefix + command} off*`, wm, null, [['ACTIVAR', `${prefix + command} on`], ['DESACTIVAR', `${prefix + command} off`]], null, null, m)
+if (args[0] === "on") {
+global.db.data.chats[m.chat].antispam = true
+reply(`*✅El ${command} se activo con exito*`)  
+} else if (args[0] === "off") {
+global.db.data.chats[m.chat].antispam = false
+reply(`*${command} desactivado!*`)}}
+break          
+
+case 'join': {  
+let linkRegex = /chat.whatsapp.com\/([0-9A-Za-z]{20,24})/i
+let link = (m.quoted ? m.quoted.text ? m.quoted.text : text : text) || text
+let [_, code] = link.match(linkRegex) || []
+if (global.db.data.users[m.sender].registered < true) return m.reply(info.registra)
+if (!code) return reply(`*Y EL LINK DEL GRUPO?*`)  
+if (isCreator || m.fromMe) {
+reply(`*YA ME UNISTE ✳️*`)  
+await delay(3 * 3000)
+let res = await conn.groupAcceptInvite(code).then((code) => m.reply(jsonformat(code))).catch((err) => m.reply(jsonformat(err)))
+//await conn.groupAcceptInvite(code)
+} else {
+const data = global.owner.filter(([number, _, isDeveloper]) => isDeveloper && number)
+await delay(2 * 2000)
+m.reply(`*[❗] El link de su grupo fue enviado a mi propietario/a.*\n\n*—◉ Su grupo estará en evaluación y el propietario/a del Bot decidirá si agrega o no al Bot.*\n\n*—◉ Algunas de las razones por la cual su solicitud puede ser rechazada son:*\n*1.- El Bot está saturado.*\n*2.- El Bot fue eliminado del grupo recientemente.*\n*3.- El link del grupo ha sido restablecido.*\n*4.-El Bot no se agrega a grupos por decisión del propietario/a.*\n\n*—◉ El proceso de evaluación puede tomar algo de tiempo, incluso dias, tenga paciencia.*`)
+await delay(3 * 3000)
+for (let jid of data.map(([id]) => [id] + '@s.whatsapp.net').filter(v => v != conn.user.jid)) m.reply(`*[❗] NUEVA SOLICITUD DE UN BOT PARA UN GRUPO [❗]*\n\n*—◉ Solicitante:* wa.me/${m.sender.split('@')[0]}\n\n—◉ Link del grupo:*\n${link}`, jid)
+}}
+break  
 
 case 'speedtest': case 'speed': {
 const cp = require('child_process') 
@@ -756,6 +1050,7 @@ break
   await conn.groupUpdateSubject(m.chat, text)  
   await reply(`*✅El nombre del grupo se cambio correctamente*`)}  
   break  
+  
   case 'setdesc': case 'descripción': {  
   if (!m.isGroup) return reply(info.group)   
   if (!isBotAdmins) return reply(info.botAdmin)  
@@ -864,17 +1159,14 @@ if (!isCreator) return reply(info.owner)
                   break*/
   case 'banchat': {  
   if (!m.isGroup) return reply(info.group)   
-  if (!isBotAdmins) return reply(info.botAdmin)  
-  if (!isGroupAdmins) return reply(info.admin)  
-  if (!text) return reply(`*Accion mal usaba*\n\n*Use de esta forma:*\n*${prefix + command} on*\n*${prefix + command} off*`)  
-  if (args[0] === "on") {  
-  if (db.data.chats[m.chat].ban) return reply(`*Ya esta baneado este chat*`)  
-  db.data.chats[m.chat].ban = true  
-  reply(`*BOT OFF*`)  
-  } else if (args[0] === "off") {  
-  if (!db.data.chats[m.chat].ban) return reply(`*Este chat ya esta desbaneado*`)  
-  db.data.chats[m.chat].ban = false  
-  reply(`*BOT ONLINE YA ESTOY DISPONIBLE ✅*`)}}  
+  if (!isCreator) return reply(info.owner)  
+  if (!text) return conn.sendButton(m.chat, `*Accion mal usaba*\n\n*Use de esta forma:*\n*${prefix + command} on*\n*${prefix + command} off*`, wm, null, [['ON', '.banchat on'], ['OFF', `.banchat off`]], null, null, m)
+if (args[0] === "on") {
+global.db.data.chats[m.chat].isBanned = true
+conn.sendButton(m.chat, `*BOT OFF*`, wm, null, [['Apagar', '.banchat off']], null, null, m)
+} else if (args[0] === "off") {  
+global.db.data.chats[m.chat].isBanned = false
+conn.sendButton(m.chat, `*BOT ONLINE YA ESTOY DISPONIBLE ✅*`, wm, null, [['Activar', '.banchat on']], null, null, m)}}  
   break  
   
   case 'tagall': {  
@@ -918,14 +1210,7 @@ if (!isCreator) return reply(info.owner)
   const texttospeechurl = SpeakEngine.getAudioUrl(texttosay, {lang: "es", slow: false, host: "https://translate.google.com",});  
   conn.sendMessage(m.chat, { audio: { url: texttospeechurl }, contextInfo: { "externalAdReply": { "title": botname, "body": ``, "previewType": "PHOTO", "thumbnailUrl": null,"thumbnail": imagen1, "sourceUrl": md, "showAdAttribution": true}}, seconds: '4556', ptt: true, mimetype: 'audio/mpeg', fileName: `error.mp3` }, { quoted: m })  
   break                  
-  
-  case "a":  
-  if (!global.db.data.chats[m.chat].audios) return  
-  let vn = './media/a.mp3'  
-  await conn.sendPresenceUpdate('recording', m.chat)  
-  conn.sendMessage(m.chat, { audio: { url: vn }, contextInfo: { "externalAdReply": { "title": botname, "body": ``, "previewType": "PHOTO", "thumbnailUrl": null,"thumbnail": imagen1, "sourceUrl": md, "showAdAttribution": true}}, seconds: '4556', ptt: true, mimetype: 'audio/mpeg', fileName: `error.mp3` }, { quoted: m })  
-  break  
-  
+    
   case 'simi': case 'bot': {  
 if (global.db.data.users[m.sender].registered < true) return reply(info.unreg)  
   if (!text) return conn.sendMessage(from, { text: `*INGRESE UN TEXTO PARA HABLAR CONMIGO*`}, { quoted: msg })  
@@ -1971,8 +2256,38 @@ async function ytmp3(url) {
     };
 }
 
+default:  
+if (budy.includes(`a`)) {
+  if (!global.db.data.chats[m.chat].audios) return  
+  let vn = './media/a.mp3'  
+  await conn.sendPresenceUpdate('recording', m.chat)  
+  conn.sendMessage(m.chat, { audio: { url: vn }, contextInfo: { "externalAdReply": { "title": botname, "body": ``, "previewType": "PHOTO", "thumbnailUrl": null,"thumbnail": imagen1, "sourceUrl": md, "showAdAttribution": true}}, seconds: '4556', ptt: true, mimetype: 'audio/mpeg', fileName: `error.mp3` }, { quoted: m })  
+}
+if (budy.includes(`reglas`) || budy.includes(`normas`) || budy.includes(`Reglas`)) {
+m.reply(`╭┅〘 ⚠️ 𝗢𝗯𝗲𝗱𝗲𝗰𝗲 𝗹𝗮𝘀 𝗿𝗲𝗴𝗹𝗮𝘀 ⚠️ 〙*
+➽❌ 𝐏𝐫𝐨𝐡𝐢𝐛𝐢𝐝𝐨 𝐥𝐥𝐚𝐦𝐚𝐫 𝐚𝐥 𝐁𝐨𝐭
+➽❌ 𝐏𝐫𝐨𝐡𝐢𝐛𝐢𝐝𝐨 𝐒𝐩𝐚𝐦 𝐚𝐥 𝐁𝐨𝐭
+➽❌ 𝐍𝐨 𝐚𝐠𝐫𝐞𝐠𝐚𝐫 𝐚𝐥 𝐁𝐨𝐭
+➽❌ 𝐑𝐞𝐬𝐩𝐞𝐭𝐚 𝐥𝐨𝐬 𝐭𝐞𝐫𝐦𝐢𝐧𝐨𝐬 𝐲 𝐜𝐨𝐧𝐝𝐢𝐜𝐢𝐨𝐧𝐞𝐬
+*╰═┅ৡৢ͜͡✦═╡ DIEGO-OFC ╞═┅ৡৢ͜͡✦═╯*`) 
+}
+if (budy.includes(`¿que es un bot?`) || budy.includes(`Que es un bot`)) {
+m.reply(`╭┄〔 *${wm}* 〕┄⊱
+┆ ——————«•»——————
+┆ ☆::¿𝐐𝐮𝐞́ 𝐞𝐬 𝐮𝐧 𝐁𝐨𝐭 𝐝𝐞 𝐖𝐡𝐚𝐭𝐬𝐀𝐩𝐩?::☆*
+┆——————«•»——————
+┆ 𝐔𝐧 𝐁𝐨𝐭 𝐞𝐬 𝐮𝐧𝐚 𝐢𝐧𝐭𝐞𝐥𝐢𝐠𝐞𝐧𝐜𝐢𝐚 𝐚𝐫𝐭𝐢𝐟𝐢𝐜𝐢𝐚𝐥 𝐪𝐮𝐞 𝐫𝐞𝐚𝐥𝐢𝐳𝐚 𝐭𝐚𝐫𝐞𝐚𝐬
+┆ 𝐪𝐮𝐞 𝐥𝐞 𝐢𝐧𝐝𝐢𝐪𝐮𝐞 𝐜𝐨𝐧 𝐜𝐨𝐦𝐚𝐧𝐝𝐨𝐬, 𝐞𝐧 𝐞𝐥 𝐜𝐚𝐬𝐨 𝐝𝐞 𝐖𝐡𝐚𝐭𝐬𝐀𝐩𝐩 
+┆ 𝐩𝐮𝐞𝐝𝐞𝐬 𝐜𝐫𝐞𝐚𝐫 𝐬𝐭𝐢𝐜𝐤𝐞𝐫𝐬, 𝐝𝐞𝐬𝐜𝐚𝐫𝐠𝐚𝐫 𝐦𝐮́𝐬𝐢𝐜𝐚, 𝐯𝐢𝐝𝐞𝐨𝐬, 
+┆ 𝐜𝐫𝐞𝐚𝐫 𝐥𝐨𝐠𝐨𝐬 𝐩𝐞𝐫𝐬𝐨𝐧𝐚𝐥𝐢𝐳𝐚𝐝𝐨𝐬 𝐲 𝐦𝐮𝐜𝐡𝐨 𝐦𝐚𝐬, 
+┆ 𝐞𝐬𝐭𝐨 𝐝𝐞 𝐟𝐨𝐫𝐦𝐚 𝐚𝐮𝐭𝐨𝐦𝐚𝐭𝐢𝐳𝐚𝐝𝐚, 𝐨 𝐬𝐞𝐚 𝐪𝐮𝐞 𝐮𝐧 𝐡𝐮𝐦𝐚𝐧𝐨 
+┆ 𝐧𝐨 𝐢𝐧𝐭𝐞𝐫𝐟𝐢𝐞𝐫𝐞 𝐞𝐧 𝐞𝐥 𝐩𝐫𝐨𝐜𝐞𝐬𝐨 
+┆ 𝐏𝐚𝐫𝐚 𝐯𝐞𝐫 𝐞𝐥 𝐦𝐞𝐧𝐮́ 𝐝𝐞 𝐜𝐨𝐦𝐚𝐧𝐝𝐨𝐬 𝐩𝐮𝐞𝐝𝐞𝐬 𝐮𝐬𝐚𝐫 #menu
+┆ 
+┆ 「 DORRAT-BOT-MD 」
+╰━━━⊰ ${vs} ⊱━━━━დ*`) 
+}
 
-          default:  
               if (budy.startsWith('>')) {  
                   if (!isCreator) return  
                   try {  

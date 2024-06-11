@@ -158,7 +158,32 @@ setInterval(async () => {
   console.log(chalk.cyanBright(`▣════════[ AUTO_PURGE_OLDFILES ]════════════...\n│\n▣─➢ ARCHIVOS ELIMINADOS ✅\n│\n▣═════════════════════════════════════...`));
 }, 1000 * 60 * 60);
 //___________
-        
+    
+//configuración 
+const methodCodeQR = process.argv.includes("qr")
+const pairingCode = !!phoneNumber || process.argv.includes("--pairing-code")
+const methodCode = !!phoneNumber || process.argv.includes("code")
+const useMobile = process.argv.includes("--mobile")
+const MethodMobile = process.argv.includes("mobile")
+const rl = readline.createInterface({ input: process.stdin, output: process.stdout })
+const question = (text) => new Promise((resolve) => rl.question(text, resolve))
+let { version, isLatest } = await fetchLatestBaileysVersion()
+const msgRetryCounterCache = new NodeCache() //para mensaje de reintento, "mensaje en espera"
+    
+//codigo adaptado por: https://github.com/GataNina-Li && https://github.com/elrebelde21
+let opcion
+if (methodCodeQR) {
+opcion = '1'
+}
+if (!methodCodeQR && !methodCode && !fs.existsSync(`./ShadowSession/creds.json`)) {
+do {        
+let lineM = '┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅'
+opcion = await question('[ ℹ️ ] Seleccione una opción:\n1. Con código QR\n2. Con código de texto de 8 dígitos\n---> ')
+if (!/^[1-2]$/.test(opcion)) {
+console.log(chalk.bold.redBright(`[ ❗ ] Por favor, seleccione solo 1 o 2.`))
+}} while (opcion !== '1' && opcion !== '2' || fs.existsSync(`./ShadowSession/creds.json`))
+}
+    
 async function startBot() {
 
 console.info = () => {}
@@ -168,10 +193,11 @@ const msgRetryCache = new NodeCache()
 let { version, isLatest } = await fetchLatestBaileysVersion();   
 
 const socketSettings = {
-printQRInTerminal: true,
+printQRInTerminal: opcion == '1' ? true : methodCodeQR ? true : false,
 logger: pino({ level: 'silent' }),
 auth: { creds: state.creds, keys: makeCacheableSignalKeyStore(state.keys, pino({level: 'silent'})) },
-browser: ["ShadowBot-MD", "Chrome", "20.0.04"],
+mobile: MethodMobile, 
+browser: opcion == '1' ? ['ShadowBot-MD', 'Safari', '1.0.0'] : methodCodeQR ? ['ShadowBot-MD', 'Safari', '1.0.0'] : ["Ubuntu", "Chrome", "20.0.04"],
 msgRetry,
 msgRetryCache,
 version,
@@ -186,15 +212,47 @@ return proto.Message.fromObject({});
 
 const sock = makeWASocket(socketSettings)
 
+if (!fs.existsSync(`./ShadowSession/creds.json`)) {
+if (opcion === '2' || methodCode) {
+opcion = '2'
+if (!sock.authState.creds.registered) {  
+let addNumber
+if (!!phoneNumber) {
+addNumber = phoneNumber.replace(/[^0-9]/g, '')
+if (!Object.keys(PHONENUMBER_MCC).some(v => addNumber.startsWith(v))) {
+console.log(chalk.bgBlack(chalk.bold.redBright("🟢 Comience con el código de país de su número de WhatsApp, ejemplo: +59178862672"))) 
+process.exit(0)
+}} else {
+while (true) {
+addNumber = await question(chalk.bgBlack(chalk.bold.greenBright(`🟢 Ingresa el número que sera bot\nPor ejemplo: +59178862672 `)))
+addNumber = addNumber.replace(/[^0-9]/g, '')
+  
+if (addNumber.match(/^\d+$/) && Object.keys(PHONENUMBER_MCC).some(v => addNumber.startsWith(v))) {
+break 
+} else {
+console.log(chalk.bold.redBright("❌ Asegúrese de agregar el código de país."))
+}}
+rl.close()  
+}
+
+setTimeout(async () => {
+let codeBot = await sock.requestPairingCode(addNumber)
+codeBot = codeBot?.match(/.{1,4}/g)?.join("-") || codeBot
+console.log(chalk.bold.white(chalk.bgMagenta(`👑 CÓDIGO DE VINCULACIÓN 👑: `)), chalk.bold.white(chalk.white(codeBot)))
+}, 2000)
+}}
+}
+
 async function getMessage(key) {
 if (store) {
 const msg = store.loadMessage(key.remoteJid, key.id)
 return msg.message
 } return {
-conversation: '',
+conversation: 'SimpleBot',
 }}
 
 sock.ev.on('messages.upsert', async chatUpdate => {
+//console.log(JSON.stringify(chatUpdate, undefined, 2))
 try {
 chatUpdate.messages.forEach(async (mek) => {
 try {
@@ -428,11 +486,12 @@ console.log(color('[SYS]', '#009FFF'),
 color(moment().format('DD/MM/YY HH:mm:ss'), '#A1FFCE'),
 color(`[❌] Conexion cerrada, por favor borre la carpeta sessions y reescanee el codigo QR`, '#f64f59'));
 startBot()
-} else if (qr !== undefined) {
+} else if (opcion == '1' || methodCodeQR && qr !== undefined) {
+if (opcion == '1' || methodCodeQR) {
 console.log(color('[SYS]', '#009FFF'),
 color(moment().format('DD/MM/YY HH:mm:ss'), '#A1FFCE'),
-color(`\n[🔄] Escanea este codigo QR, el codigo QR expira en 60 segundos`, '#f12711')
-)
+color(`\n[🔄] Escanea este codigo QR, el codigo QR expira en 60 segundos`, '#f12711'))
+}
 } else if (connection == 'open') {
 console.log(color(` `,'magenta'))
 console.log(color(JSON.stringify(sock.user, null, 2), 'yellow'))
@@ -445,20 +504,21 @@ color(`\n╭──────────────────────�
 await delay(3 * 1000)
 await sock.groupAcceptInvite(global.nna2)
 sock.user.connect = true
-return !1;*/
+return !1;
+}*/
 }});
 
 const rainbowColors = ['red', 'yellow', 'green', 'blue', 'purple'];
 let index = 0;
   
-/*function printRainbowMessage() {
+function printRainbowMessage() {
 const color = rainbowColors[index];
 console.log(chalk.keyword(color)('\n[UPTIME]'));
 index = (index + 1) % rainbowColors.length;
 setTimeout(printRainbowMessage, 60000) //Ajuste el tiempo de espera a la velocidad deseada
-}*/
+}
 
-//printRainbowMessage();
+printRainbowMessage();
 
 sock.public = true
 store.bind(sock.ev)
