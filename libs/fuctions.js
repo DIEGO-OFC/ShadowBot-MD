@@ -579,6 +579,8 @@ if (!isNumber(user.bank)) user.bank = 0;
          if (!isNumber(user.suplabu)) user.suplabu = 0; 
          if (!isNumber(user.sushi)) user.sushi = 0; 
          if (!isNumber(user.sword)) user.sword = 0; 
+        if (!isNumber(user.spam)) user.spam = 0
+if (!isNumber(user.spam2)) user.spam2 = 0
          if (!isNumber(user.sworddurability)) user.sworddurability = 0; 
          if (!isNumber(user.tigame)) user.tigame = 50; 
          if (!isNumber(user.tiketcoin)) user.tiketcoin = 0; 
@@ -818,7 +820,7 @@ if (!isNumber(user.bank)) user.bank = 0;
    if (typeof chats !== 'object') global.db.data.chats[m.chat] = {}   
    if (chats) {   
    if (!('antilink' in chats)) chats.antilink = false   
-   if (!('ban' in chats)) chats.ban = false   
+  if (!('isBanned' in chats)) chats.isBanned = false
    if (!('modeadmin' in chats)) chats.modeadmin = false   
    if (!('welcome' in chats)) chats.welcome = true 
    if (!('audios' in chats)) chats.audios = true 
@@ -826,10 +828,11 @@ if (!isNumber(user.bank)) user.bank = 0;
    if (!('antispam' in chats)) chats.antispam = true 
    if (!('antiFake' in chats)) chats.antiFake = false 
    if (!('antiArabe' in chats)) chats.antiArabe = false 
+   if (!('viewonce' in chats)) chats.viewonce = true 
    if (!('detect' in chats)) chats.detect = true 
    } else global.db.data.chats[m.chat] = {   
    antilink: false,   
-   ban: false,    
+   isBanned: false,    
    modeAdmin: false,   
    welcome: true,  
    audios: true,  
@@ -837,6 +840,7 @@ if (!isNumber(user.bank)) user.bank = 0;
    antispam: true,  
    antiFake: false, 
    antiArabe: false, 
+   viewonce: true, 
    Detect: true,  
    } 
   
@@ -847,12 +851,14 @@ if (!isNumber(user.bank)) user.bank = 0;
    if (!('autobio' in setting)) setting.autobio = true 
    if (!('jadibot' in setting)) setting.jadibot = true  
    if (!('antiCall' in setting)) setting.antiCall = true 
+   if (!('antiprivado' in setting)) setting.antiprivado = false
    if (!('privado' in setting)) setting.privado = false 
    } else global.db.data.settings[conn.user.jid] = {   
    status: 0,   
    autobio: true, 
    jadibot: true, 
    antiCall: true,  
+   antiprivado: false, 
    privado: false 
    }  
   
