@@ -451,12 +451,12 @@ return !1;*/
 const rainbowColors = ['red', 'yellow', 'green', 'blue', 'purple'];
 let index = 0;
   
-function printRainbowMessage() {
+/*function printRainbowMessage() {
 const color = rainbowColors[index];
 console.log(chalk.keyword(color)('\n[UPTIME]'));
 index = (index + 1) % rainbowColors.length;
 setTimeout(printRainbowMessage, 60000) //Ajuste el tiempo de espera a la velocidad deseada
-}
+}*/
 
 printRainbowMessage();
 
