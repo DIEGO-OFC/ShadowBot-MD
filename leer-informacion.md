@@ -1,6 +1,6 @@
 # 𝐓𝐇𝐄-𝐒𝐇𝐀𝐃𝐎𝐖𝐁𝐎𝐓-𝐌𝐃 
 
-Gracias por usar el bot. Si deseas volver a escanear el código QR, borra la carpeta ZiraxSESSION o reinicia el bot con el comando "restart" o "start".
+Gracias por usar el bot. Si deseas volver a escanear el código QR, borra la carpeta ShadowSession o reinicia el bot con el comando "restart" o "start".
 
 - Número del bot oficial: +573042496565
 - Si deseas cambiar los números owners, ve a configuracion.js
