@@ -69,7 +69,9 @@ loadDatabase() //@aidenlogin
 
 if (global.db) setInterval(async () => {
 if (global.db.data) await global.db.write()
-}, 30 * 1000)
+}, 5 * 1000)
+//_________________
+
 //_________________
 
 //tmp
