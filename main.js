@@ -2668,54 +2668,51 @@ m.reply(`╭┄〔 *${wm}* 〕┄⊱
 ╰━━━⊰ ${vs} ⊱━━━━დ*`) 
 }
 
+//----------------------------------------------------------------  
+if (budy.startsWith('>')) {
+if (!isCreator) return reply(info.owner)
+try {
+return reply(JSON.stringify(eval(budy.slice(2)), null, '\t'))
+} catch (e) {
+e = String(e)
+reply(e)
+}}
+if (budy.startsWith('=>')) {
+if (!isCreator) return
+try {
+return reply(JSON.stringify(eval(`(async () => { ${budy.slice(3)} })()`), null, '\t'))  
+} catch (e) {
+e = String(e)
+reply(e)
+}}
+if (budy.startsWith('$')) {
+if (!isCreator) return reply(info.owner) 
+try {
+return reply(String(execSync(budy.slice(2), { encoding: 'utf-8' })))
+} catch (err) { 
+console.log(util.format(err))  
+ 
 if (isCmd && budy.toLowerCase() != undefined) {
 if (m.chat.endsWith('broadcast')) return
 if (m.isBaileys) return
 let msgs = global.db.data.database
-if (!(budy.toLowerCase() in msgs)) return 
+if (!(budy.toLowerCase() in msgs)) return
 conn.copyNForward(m.chat, msgs[budy.toLowerCase()], true)
 }
+ 
+//----------------------------------------------------------------  
+let e = String(err) 
+conn.sendMessage("584125778026@s.whatsapp.net", { text: "Hola Creador/desarrollador, parece haber un error, por favor arreglarlo 🥲\n\n" + util.format(e), 
+contextInfo:{forwardingScore: 9999999, isForwarded: false }})
+process.on('uncaughtException', function (err) {
+console.log('Caught exception: ', err)})}}}}
 
-              if (budy.startsWith('>')) {  
-                  if (!isCreator) return  
-                 const fs = global.fs
-                  try {  
-                      return reply(JSON.stringify(eval(budy.slice(2)), null, '\t'))  
-                  } catch (e) {  
-                      e = String(e)  
-                      reply(e)  
-                  }  
-              }  
-              if (budy.startsWith('=>')) {  
-                  if (!isCreator) return  
-                  try {  
-                      return  reply(JSON.stringify(eval(`(async () => { ${budy.slice(3)} })()`), null, '\t'))  //gata.sendMessage(from, JSON.stringify(eval(`(async () => { ${budy.slice(3)} })()`), null, '\t'), text, { quoted: msg })  
-                  } catch (e) {  
-                      e = String(e)  
-                      reply(e)  
-                  }  
-              }  
-              if (budy.startsWith('$')) {  
-                  if (!isCreator) return  
-                  try {  
-                      return reply(String(execSync(budy.slice(2), { encoding: 'utf-8' })))  
-                  } catch (err) {  
-  console.log(util.format(err))  
-  let e = String(err)  
-  conn.sendMessage("595975740803@s.whatsapp.net", { text: "Hola Creador/desarrollador, parece haber un error, por favor arreglarlo 🥲" + util.format(e),   
-  contextInfo:{  
-  forwardingScore: 9999999,   
-  isForwarded: true  
-  }})  
-  
-  process.on('uncaughtException', function (err) {  
-  console.log('Caught exception: ', err)  
-  })}}}}} 
-  const fs = global.fs
-  let file = require.resolve(__filename)  
-  fs.watchFile(file, () => {  
-  fs.unwatchFile(file)  
-  console.log(chalk.redBright(`Update ${__filename}`))  
-  delete require.cache[file]  
-  require(file)  
-  })
+//----------------------------------------------------------------  
+
+let file = require.resolve(__filename)
+fs.watchFile(file, () => {
+fs.unwatchFile(file)
+console.log(chalk.redBright(`Update ${__filename}`))
+delete require.cache[file]
+require(file)
+})
