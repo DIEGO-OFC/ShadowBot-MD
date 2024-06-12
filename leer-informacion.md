@@ -16,7 +16,8 @@ Gracias por usar el bot. Si deseas volver a escanear el código QR, borra la car
 **ZIRAX-BOT-MD CREATE BY DIEGO-OFC**
 ### Grupo oficial
 Únete al grupo oficial para obtener ayuda:
-https://chat.whatsapp.com/CrsOmirjZNYKrvnQNT98Oo
+https://chat.whatsapp.com/JuuuUaIQnnE3t4SWQenShg
+
 Gracias por leer.
 **—◉ 𝚃𝚄𝚃𝙾𝚁𝙸𝙰𝙻 𝚃𝙴𝚁𝙼𝚄𝚇:**
 https://youtu.be/DKo7PO2ta4o
