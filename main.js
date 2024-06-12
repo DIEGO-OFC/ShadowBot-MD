@@ -2627,12 +2627,21 @@ function generaArrayCasuale(array, ripetizioni) {
 }
 
 default:  
-if (budy.includes(`a`)) {
-  if (!global.db.data.chats[m.chat].audios) return  
-  let vn = './media/a.mp3'  
-  await conn.sendPresenceUpdate('recording', m.chat)  
-  conn.sendMessage(m.chat, { audio: { url: vn }, contextInfo: { "externalAdReply": { "title": botname, "body": ``, "previewType": "PHOTO", "thumbnailUrl": null,"thumbnail": imagen1, "sourceUrl": md, "showAdAttribution": true}}, seconds: '4556', ptt: true, mimetype: 'audio/mpeg', fileName: `error.mp3` }, { quoted: m })  
+if (m.mentionedJid.includes(conn.user.jid)) {
+let noetiqueta = 'https://qu.ax/lqFC.webp'
+conn.sendFile(m.chat, noetiqueta, 'sticker.webp', '',m, true, { contextInfo: { 'forwardingScore': 200, 'isForwarded': false, externalAdReply:{ showAdAttribution: false, title: 'Yo que?', mediaType: 2, sourceUrl: md, thumbnail: imagen1}}}, { quoted: m, ephemeralExpiration: 24*60*100, disappearingMessagesInChat: 24*60*100})
 }
+if (budy.includes(`bot`) {
+let vn = "./media/bot.mp3";
+await conn.sendPresenceUpdate('recording', m.chat)  
+conn.sendButton(m.chat, `*𝙷𝙾𝙻𝙰, ¿𝙲𝙾𝙼𝙾 𝚃𝙴 𝙿𝚄𝙴𝙳𝙾 𝙰𝚈𝚄𝙳𝙰𝚁?*`, wm, null, [['𝙼𝙴𝙽𝚄 𝙳𝙴 𝙲𝙾𝙼𝙰𝙽𝙳𝙾𝚂', `.menu`]], null, null, m)
+conn.sendAudio(m.chat, vn, m)}
+if (budy.includes(`ª`)) {
+if (!global.db.data.chats[m.chat].audios) return  
+let vn = './media/a.mp3'  
+await conn.sendPresenceUpdate('recording', m.chat)  
+conn.sendMessage(m.chat, { audio: { url: vn }, contextInfo: { "externalAdReply": { "title": botname, "body": ``, "previewType": "PHOTO", "thumbnailUrl": null,"thumbnail": imagen1, "sourceUrl": md, "showAdAttribution": true}}, seconds: '4556', ptt: true, mimetype: 'audio/mpeg', fileName: `error.mp3` }, { quoted: m })  
+} 
 if (/^facil|es facil|fácil|es fácil|fasil|es fasil|la chupa bien|se le da bien chupar|chupa bn|chupa bien|la chupa bn$/i.test(budy)) {
 const toM = (a) => "@" + a.split("@")[0];
   const ps = groupMetadata.participants.map((v) => v.id);
