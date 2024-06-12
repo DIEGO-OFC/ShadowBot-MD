@@ -2669,28 +2669,30 @@ m.reply(`╭┄〔 *${wm}* 〕┄⊱
 }
 
 //----------------------------------------------------------------  
-if (budy.startsWith('>')) {
-if (!isCreator) return reply(info.owner)
-try {
-return reply(JSON.stringify(eval(budy.slice(2)), null, '\t'))
-} catch (e) {
-e = String(e)
-reply(e)
-}}
-if (budy.startsWith('=>')) {
-if (!isCreator) return
-try {
-return reply(JSON.stringify(eval(`(async () => { ${budy.slice(3)} })()`), null, '\t'))  
-} catch (e) {
-e = String(e)
-reply(e)
-}}
+            if (budy.startsWith('>')) {
+                if (!isCreator) return
+                try {
+                    return reply(JSON.stringify(eval(budy.slice(2)), null, '\t'))
+                } catch (e) {
+                    e = String(e)
+                    reply(e)
+                }
+            }
+            if (budy.startsWith('=>')) {
+                if (!isCreator) return
+                try {
+                    return  reply(JSON.stringify(eval(`(async () => { ${budy.slice(3)} })()`), null, '\t'))  //gata.sendMessage(from, JSON.stringify(eval(`(async () => { ${budy.slice(3)} })()`), null, '\t'), text, { quoted: msg })
+                } catch (e) {
+                    e = String(e)
+                    reply(e)
+                }
+            }
 if (budy.startsWith('$')) {
-if (!isCreator) return reply(info.owner) 
-try {
-return reply(String(execSync(budy.slice(2), { encoding: 'utf-8' })))
-} catch (err) { 
-console.log(util.format(err))  
+                if (!isCreator) return
+                try {
+                    return reply(String(execSync(budy.slice(2), { encoding: 'utf-8' })))
+} catch (err) {
+console.log(util.format(err))}}
  
 if (isCmd && budy.toLowerCase() != undefined) {
 if (m.chat.endsWith('broadcast')) return
@@ -2701,12 +2703,14 @@ conn.copyNForward(m.chat, msgs[budy.toLowerCase()], true)
 }
  
 //----------------------------------------------------------------  
-let e = String(err) 
-conn.sendMessage("584125778026@s.whatsapp.net", { text: "Hola Creador/desarrollador, parece haber un error, por favor arreglarlo 🥲\n\n" + util.format(e), 
-contextInfo:{forwardingScore: 9999999, isForwarded: false }})
+let e = String(err)
+conn.sendMessage("584125778026@s.whatsapp.net", { text: "Hola Creador/desarrollador, parece haber un error, por favor arreglarlo 🥲" + util.format(e), 
+contextInfo:{
+forwardingScore: 9999999, 
+isForwarded: true
+}})
 process.on('uncaughtException', function (err) {
-console.log('Caught exception: ', err)
-})}}}}} 
+console.log('Caught exception: ', err)})}}}
 
 //----------------------------------------------------------------  
 
