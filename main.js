@@ -1035,7 +1035,7 @@ conn.sendMessage(m.chat, { text: love, mentions: [m.sender, text.replace('@', ''
 break
 
 case 'personalidad': {
-if (!text) return m.reply(lenguaje.juegos.text18) 
+if (!text) return m.reply(`Nombra / etiqueta a una persona con el @tag`) 
 let personalidad = `┏━━°❀❬ *PERSONALIDAD* ❭❀°━━┓
 *┃*
 *┃• Nombre* : ${text}
@@ -1057,14 +1057,14 @@ case 'slot': case 'apuesta': {
 if (!args[0]) return m.reply(`*[❗] 𝙸𝙽𝙶𝚁𝙴𝚂𝙰 𝙻𝙰 𝙲𝙰𝙽𝚃𝙸𝙳𝙰𝙳 𝚀𝚄𝙴 𝙳𝙴𝚂𝙴𝙰 𝙰𝙿𝙾𝚂𝚃𝙰𝚁* 
 
 *📌 𝙴𝙹𝙴𝙼𝙿𝙻𝙾:*\n*${prefix + command} 100*`)
-if (isNaN(args[0])) return m.reply(`${lenguaje.juegos.text20}\n*${prefix + command} 100*`)
+if (isNaN(args[0])) return m.reply(`Error\n*${prefix + command} 100*`)
 const apuesta = parseInt(args[0]);
 const users = global.db.data.users[m.sender];
 const time = users.lastslot + 30000;//30 seg
 if (new Date - users.lastslot < 30000) return m.reply(`*⏳ 𝙴𝚂𝙿𝙴𝚁𝙴 ${msToTime(time - new Date())} 𝙿𝙰𝚁𝙰 𝚅𝙾𝙻𝚅𝙴𝚁 𝙰 𝙰𝙿𝙾𝚂𝚃𝙰𝚁`) 
-if (apuesta < 100) return m.reply(lenguaje.juegos.text23) 
+if (apuesta < 100) return m.reply(`No tiene suficiente Exp para aportar`) 
 if (users.exp < apuesta) {
-return m.reply(lenguaje.juegos.text24)}
+return m.reply(`Apuesta`)}
 const emojis = ["🐋", "🐉", "🕊️"];
 let a = Math.floor(Math.random() * emojis.length);
 let b = Math.floor(Math.random() * emojis.length);
@@ -1144,7 +1144,7 @@ case 'doxear': case 'doxxeo': {
 let who
 if (m.isGroup) who = m.mentionedJid[0]
 else who = m.chat
-if (!who) return m.reply(lenguaje.juegos.text19) 
+if (!who) return m.reply(`Ingrese el @tag del algún usuario para Boxxearlo xD`) 
 let start = `*😱 ¡¡Empezando Doxxeo!! 😱*`
 let boost = `*${pickRandom(['0','1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20'])}%*`
 let boost2 = `*${pickRandom(['21','22','23','24','25','26','27','28','29','30','31','32','33','34','35','36','37','38','39','40'])}%*`
