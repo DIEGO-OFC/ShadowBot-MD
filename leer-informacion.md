@@ -1,4 +1,4 @@
-# 𝐙𝐈𝐑𝐀𝐗-𝐁𝐎𝐓-𝐌𝐃 
+# 𝐓𝐇𝐄-𝐒𝐇𝐀𝐃𝐎𝐖𝐁𝐎𝐓-𝐌𝐃 
 
 Gracias por usar el bot. Si deseas volver a escanear el código QR, borra la carpeta ZiraxSESSION o reinicia el bot con el comando "restart" o "start".
 
@@ -7,7 +7,7 @@ Gracias por usar el bot. Si deseas volver a escanear el código QR, borra la car
 - Creador: DIEGO-OFC número: +528442286089
 - Si tienes errores en la consola, repórtalos al número +528442286089
 - Puedes editar el bot como desees.
-- Host recomendados: boxmineworld.com o Termux.
+- Host recomendados: dashboard.infinitywa.xyz o Termux.
 - Si necesitas ayuda o soporte, únete al grupo oficial o escribe al número del creador.
 - En este GitHub siempre tendrás actualizaciones.
 - No me hago responsable del mal uso que puedas darle al bot.
