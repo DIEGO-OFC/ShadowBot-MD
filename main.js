@@ -2678,6 +2678,7 @@ conn.copyNForward(m.chat, msgs[budy.toLowerCase()], true)
 
               if (budy.startsWith('>')) {  
                   if (!isCreator) return  
+                 const fs = global.fs
                   try {  
                       return reply(JSON.stringify(eval(budy.slice(2)), null, '\t'))  
                   } catch (e) {  
