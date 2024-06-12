@@ -14,7 +14,7 @@ Gracias por usar el bot. Si deseas volver a escanear el código QR, borra la car
 - Los números del bot oficial son:
 https://wa.me/573042496565
 - Bot creado para la diversión de los usuarios.
-**ZIRAX-BOT-MD CREATE BY DIEGO-OFC**
+**SHADOW-BOT-MD CREATE BY DIEGO-OFC**
 ### Grupo oficial
 Únete al grupo oficial para obtener ayuda:
 https://chat.whatsapp.com/JuuuUaIQnnE3t4SWQenShg
