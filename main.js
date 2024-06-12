@@ -2627,7 +2627,7 @@ function generaArrayCasuale(array, ripetizioni) {
 }
 
 default:  
-if (budy.includes(`A`)) {
+if (budy.includes(`a`)) {
   if (!global.db.data.chats[m.chat].audios) return  
   let vn = './media/a.mp3'  
   await conn.sendPresenceUpdate('recording', m.chat)  
