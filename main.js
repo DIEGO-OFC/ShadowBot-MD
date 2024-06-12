@@ -24,6 +24,7 @@ const {savefrom, lyrics, lyricsv2, youtubedl, youtubedlv2} = require('@bochiltea
  // const { youtubedl, snapsave } = require("@bochilteam/scraper") 
 const JavaScriptObfuscator = require('javascript-obfuscator')
 
+const { game } = require('./plugins/game.js') 
 const { play } = require('./plugins/play.js') 
 const { mp3 } = require('./plugins/ytmp3.js') 
   const { youtube } = require("@xct007/frieren-scraper")  
@@ -41,57 +42,45 @@ const { mp3 } = require('./plugins/ytmp3.js')
   const { state } = require('./plugins/info.js')  
   
   const msgs = (message) => {   
-  if (message.length >= 10) {   
-  return `${message.substr(0, 500)}`   
-  } else {   
-  return `${message}`}}     
-  const addCmd = (cmd, id) =>  {  
-  const stickerdb = global.db.data.sticker //gracias a aiden  
-  stickerdb[id] = {id: id,  
-  cmd: cmd  
-  }}  
-  const getCmd = (id) => {  
-  const stickerdb = global.db.data.sticker  
-  let anu = null;    
-  Object.keys(stickerdb).forEach(nganu => {   
-  if (stickerdb[nganu].id === id) {   
-  anu = nganu    
-  }})    
-  if (anu !== null) {    
-  return stickerdb[anu].cmd    
-  }}  
-  const getFileBuffer = async (mediakey, MediaType) => {  
-  const stream = await downloadContentFromMessage(mediakey, MediaType)  
-  let buffer = Buffer.from([])  
-  for await(const chunk of stream) {  
-  buffer = Buffer.concat([buffer, chunk]) }  
-  return buffer}    
-  let blockList = []  
-  module.exports = shadow = async (shadow, m, chatUpdate, mek) => {   
-  module.exports = conn = async (conn, m, chatUpdate, mek) => {   
-  var body = (m.mtype === 'conversation') ? m.message.conversation : (m.mtype == 'imageMessage' && m.message.imageMessage.caption) ? m.message.imageMessage.caption : (m.mtype == 'videoMessage' && m.message.videoMessage.caption ) ? m.message.videoMessage.caption : (m.mtype == 'extendedTextMessage') ? m.message.extendedTextMessage.text : (m.mtype == 'buttonsResponseMessage') ? m.message.buttonsResponseMessage.selectedButtonId : (m.mtype == 'listResponseMessage') ? m.message.listResponseMessage.singleSelectReply.selectedRowId : (m.mtype == 'templateButtonReplyMessage') ? m.message.templateButtonReplyMessage.selectedId : (m.mtype === 'messageContextInfo') ? m.message.listResponseMessage.singleSelectReply.selectedRowId :  (m.mtype == 'stickerMessage') && (getCmd(m.message.stickerMessage.fileSha256.toString()) !== null && getCmd(m.message.stickerMessage.fileSha256.toString()) !== undefined) ? getCmd(m.message.stickerMessage.fileSha256.toString()) : ''  
-  if (m.key.id.startsWith("BAE5")) return    
-    var budy = (typeof m.text == 'string' ? m.text : '')   
-    var _prefix = /^[°•π÷×¶∆£¢€¥®™+✓_=|~!?@#$%^&.©^]/gi.test(body) ? body.match(/^[°•π÷×¶∆£¢€¥®™+✓_=|~!?@#$%^&.©^]/gi)[0] : ""  
-  global.prefix = _prefix   
-  const isCmd = body.startsWith(prefix)  
-  const from = m.chat  
-  const msg = JSON.parse(JSON.stringify(mek, undefined, 2))   
-  const content = JSON.stringify(m.message)   
-  const type = m.mtype   
-  const arg = body.substring(body.indexOf(' ') + 1)   
-  const command = body.replace(prefix, '').trim().split(/ +/).shift().toLowerCase()   
-  const args = body.trim().split(/ +/).slice(1)   
+if (message.length >= 10) { 
+return `${message.substr(0, 500)}` 
+} else {  
+return `${message}`}}
+const getFileBuffer = async (mediakey, MediaType) => {  
+const stream = await downloadContentFromMessage(mediakey, MediaType)  
+let buffer = Buffer.from([])  
+for await(const chunk of stream) {  
+buffer = Buffer.concat([buffer, chunk]) }  
+return buffer }   
+let blockList = []  
+  
+module.exports = shadow = async (shadow, m, chatUpdate, mek) => {   
+module.exports = conn = async (conn, m, chatUpdate, mek) => {   
+  var body =  (m.mtype === 'conversation') ? m.message.conversation : (m.mtype == 'imageMessage') ? m.message.imageMessage.caption : (m.mtype == 'videoMessage') ? m.message.videoMessage.caption : (m.mtype == 'extendedTextMessage') ? m.message.extendedTextMessage.text : (m.mtype == 'buttonsResponseMessage') ? m.message.buttonsResponseMessage.selectedButtonId : (m.mtype == 'listResponseMessage') ? m.message.listResponseMessage.singleSelectReply.selectedRowId : (m.mtype == 'templateButtonReplyMessage') ? m.message.templateButtonReplyMessage.selectedId : (m.mtype === 'messageContextInfo') ? (m.message.buttonsResponseMessage?.selectedButtonId || m.message.listResponseMessage?.singleSelectReply.selectedRowId || m.text) : '' 
+  
+if (m.key.id.startsWith("BAE5")) return    
+var budy = (typeof m.text == 'string' ? m.text : '')     
+var prefix = /^[°•π÷×¶∆£¢€¥®™+✓_=|~!?@#$%^&.©^]/gi.test(body) ? body.match(/^[°•π÷×¶∆£¢€¥®™+✓_=|~!?@#$%^&.©^]/gi)[0] : ""  
+const isCmd = body.startsWith(prefix)  
+const command = isCmd ? body.slice(1).trim().split(/ +/).shift().toLocaleLowerCase() : null
+const args = body.trim().split(/ +/).slice(1) 
+ const from = m.chat  
+const msg = JSON.parse(JSON.stringify(m, undefined, 2))
+  const content = JSON.stringify(m.message) 
+const type = m.mtype 
+  const arg = body.substring(body.indexOf(' ') + 1)     
   const q = args.join(" ")   
   let t = m.messageTimestamp   
   const pushname = m.pushName || "Sin nombre"   
   const botnm = conn.user.id.split(":")[0] + "@s.whatsapp.net"  
   const userSender = m.key.fromMe ? botnm : m.isGroup && m.key.participant.includes(":") ? m.key.participant.split(":")[0] + "@s.whatsapp.net" : m.key.remoteJid.includes(":") ? m.key.remoteJid.split(":")[0] + "@s.whatsapp.net" : m.key.fromMe ? botnm : m.isGroup ? m.key.participant : m.key.remoteJid  
-  const mentionByTag = type == 'extendedTextMessage' && m.message.extendedTextMessage.contextInfo != null ? m.message.extendedTextMessage.contextInfo.mentionedJid : []  
+ 
+const mentionByTag = type == 'extendedTextMessage' && m.message.extendedTextMessage.contextInfo != null ? m.message.extendedTextMessage.contextInfo.mentionedJid : []  
           const mentionByReply = type == 'extendedTextMessage' && m.message.extendedTextMessage.contextInfo != null ? m.message.extendedTextMessage.contextInfo.participant || '' : ''  
           const numberQuery = q.replace(new RegExp('[()+-/ +/]', 'gi'), '') + '@s.whatsapp.net'  
           const usernya = mentionByReply ? mentionByReply : mentionByTag[0]  
           const Input = mentionByTag[0] ? mentionByTag[0] : mentionByReply ? mentionByReply : q ? numberQuery : false  
+          
  const isImage = (type == 'imageMessage')   
   const isCreator = global.owner.map(([numero]) => numero.replace(/[^\d\s().+:]/g, '').replace(/\s/g, '') + '@s.whatsapp.net').includes(userSender) 
   const itsMe = m.sender == conn.user.id ? true : false
@@ -104,12 +93,12 @@ const { mp3 } = require('./plugins/ytmp3.js')
   const numBot = conn.user.id.split(":")[0] + "@s.whatsapp.net" 
   const numBot2 = conn.user.id // Número de teléfono del bot  
   const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms))  
-  const mentions = []  
-  if (m.message[type].contextInfo) {   
-  if (m.message[type].contextInfo.mentionedJid) {  
-  const msd = m.message[type].contextInfo.mentionedJid  
-  for (let i = 0; i < msd.length; i++) {  
-  mentions.push(msd[i])}}}  
+const mentions = []  
+if (m.message[type].contextInfo) {   
+if (m.message[type].contextInfo.mentionedJid) {  
+const msd = m.message[type].contextInfo.mentionedJid  
+for (let i = 0; i < msd.length; i++) {  
+mentions.push(msd[i])}}}  
   
   // ‿︵‿︵ʚɞ『 GRUPO 』ʚɞ‿︵‿︵  
         const groupMetadata = m.isGroup ? await conn.groupMetadata(from) : '' 
@@ -146,20 +135,20 @@ const { mp3 } = require('./plugins/ytmp3.js')
   function pickRandom(list) {  
   return list[Math.floor(list.length * Math.random())]  
   }  
-  if (isMedia && m.msg.fileSha256 && (m.msg.fileSha256.toString('base64') in global.db.data.sticker)) { 
- let hash = global.db.data.sticker[m.msg.fileSha256.toString('base64')] 
- let { text, mentionedJid } = hash 
- let messages = await generateWAMessage(m.chat, { text: text, mentions: mentionedJid }, {userJid: conn.user.id, 
- quoted: m.quoted && m.quoted.fakeObj 
- }) 
- messages.key.fromMe = areJidsSameUser(m.sender, conn.user.id) 
- messages.key.id = m.key.id 
- messages.pushName = m.pushName 
- if (m.isGroup) messages.participant = m.sender 
- let msg = {...chatUpdate, messages: [proto.WebMessageInfo.fromObject(messages)], 
- type: 'append' 
- } 
- conn.ev.emit('messages.upsert', msg)} 
+  
+  // Responder cmd con medios
+ if (isMedia && m.msg.fileSha256 && (m.msg.fileSha256.toString('base64') in global.db.data.sticker)) {
+let hash = global.db.data.sticker[m.msg.fileSha256.toString('base64')]
+let { text, mentionedJid } = hash
+let messages = await generateWAMessage(m.chat, { text: text, mentions: mentionedJid }, {
+userJid: conn.user.id,
+quoted: m.quoted && m.quoted.fakeObj })
+messages.key.fromMe = areJidsSameUser(m.sender, conn.user.id)
+messages.key.id = m.key.id
+messages.pushName = m.pushName
+if (m.isGroup) messages.participant = m.sender
+let msg = {...chatUpdate, messages: [proto.WebMessageInfo.fromObject(messages)], type: 'append' }
+conn.ev.emit('messages.upsert', msg)}
  
   //base de datos  
   let user = global.db.data.users[m.sender]  
@@ -244,11 +233,11 @@ if (global.db.data.chats[m.chat].antifake && !isGroupAdmins) {
   conn.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: false, id: bang, participant: delet }})  
   conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')}}  
   
-  //modo public & privado  
+//modo public & privado  
   if (!conn.public && !isCreator) {  
-  if (!m.key.fromMe) return  
-  }                  
-  //Banea chat  
+  if (!m.key.fromMe) return }                  
+  
+//Banea chat  
 if (global.db.data.chats[m.chat].isBanned && !isCreator) {
 return }
 
@@ -304,22 +293,6 @@ return }
  //chalk.bold.red('\nETIQUETA: ') + chalk.redBright(`[${isBaneed ? 'Banned' : ''}]`),  
   chalk.bold.white('\n│💬MENSAJE: ') + chalk.whiteBright(`\n▣────────────···\n${msgs(m.text)}\n`))  
   )}  
-    
-  //afk  
-  let mentionUser = [...new Set([...(m.mentionedJid || []), ...(m.quoted ? [m.quoted.sender] : [])])]  
-  for (let jid of mentionUser) {  
-  let user = global.db.data.users[jid]  
-  if (!user) continue  
-  let afkTime = user.afkTime  
-  if (!afkTime || afkTime < 0) continue  
-  let reason = user.afkReason || ''  
-  m.reply(`💤 𝙽𝙾 𝙻𝙾𝚂 𝙴𝚃𝙸𝚀𝚄𝙴𝚃𝙴 💤\n𝙴𝚜𝚝𝚎 𝚞𝚜𝚞𝚊𝚛𝚒𝚘 𝚚𝚞𝚎 𝚖𝚎𝚗𝚌𝚒𝚘𝚗𝚊𝚜 𝚎𝚜𝚝𝚊 𝙰𝙵𝙺\n\n${reason ? '🔸️ *𝚁𝙰𝚉𝙾𝙽* : ' + reason : '🔸️ *𝚁𝙰𝚉𝙾𝙽* : 𝚂𝚒𝚗 𝚛𝚊𝚣𝚘𝚗'}\n🔸️ *𝙴𝚂𝚃𝚄𝚅𝙾 𝙸𝙽𝙰𝙲𝚃𝙸𝚅𝙾 𝙳𝚄𝚁𝙰𝙽𝚃𝙴 : ${clockString(new Date - afkTime)}`.trim())}  
-  if (global.db.data.users[m.sender].afkTime > -1) {  
-  let user = global.db.data.users[m.sender]  
-  m.reply(`╭━─━─━─≪☣️≫─━─━─━╮\n┃𝙳𝙴𝙹𝙰𝚂𝚃𝙴 𝙳𝙴 𝙴𝚂𝚃𝙰R 𝙰𝙵𝙺\n┃${user.afkReason ? '\n┃🔸️ *𝚁𝙰𝚉𝙾𝙽 :* ' + user.afkReason : ''}\n┃🔸 *𝙴𝚂𝚃𝚄𝚅𝙾 𝙸𝙽𝙰𝙲𝚃𝙸𝚅𝙾 𝙳𝚄𝚁𝙰𝙽𝚃𝙴* ${clockString(new Date - user.afkTime)}\n╰━─━─━─≪☣️≫─━─━─━╯`.trim())  
-  user.afkTime = -1  
-  user.afkReason = ''   
-  }  
 
 //TicTacToe
 let winScore = 4999
@@ -400,7 +373,23 @@ await conn.sendButton(m.chat, `*𝚁𝙴𝚂𝙿𝚄𝙴𝚂 𝙲𝙾𝚁𝚁�
 m.react(`✅`) 
 delete kuismath[m.sender.split('@')[0]]
 } else m.react(`❌`)} 
-  
+    
+  //afk  
+  let mentionUser = [...new Set([...(m.mentionedJid || []), ...(m.quoted ? [m.quoted.sender] : [])])]  
+  for (let jid of mentionUser) {  
+  let user = global.db.data.users[jid]  
+  if (!user) continue  
+  let afkTime = user.afkTime  
+  if (!afkTime || afkTime < 0) continue  
+  let reason = user.afkReason || ''  
+  m.reply(`💤 𝙽𝙾 𝙻𝙾𝚂 𝙴𝚃𝙸𝚀𝚄𝙴𝚃𝙴 💤\n𝙴𝚜𝚝𝚎 𝚞𝚜𝚞𝚊𝚛𝚒𝚘 𝚚𝚞𝚎 𝚖𝚎𝚗𝚌𝚒𝚘𝚗𝚊𝚜 𝚎𝚜𝚝𝚊 𝙰𝙵𝙺\n\n${reason ? '🔸️ *𝚁𝙰𝚉𝙾𝙽* : ' + reason : '🔸️ *𝚁𝙰𝚉𝙾𝙽* : 𝚂𝚒𝚗 𝚛𝚊𝚣𝚘𝚗'}\n🔸️ *𝙴𝚂𝚃𝚄𝚅𝙾 𝙸𝙽𝙰𝙲𝚃𝙸𝚅𝙾 𝙳𝚄𝚁𝙰𝙽𝚃𝙴 : ${clockString(new Date - afkTime)}`.trim())}  
+  if (global.db.data.users[m.sender].afkTime > -1) {  
+  let user = global.db.data.users[m.sender]  
+  m.reply(`╭━─━─━─≪☣️≫─━─━─━╮\n┃𝙳𝙴𝙹𝙰𝚂𝚃𝙴 𝙳𝙴 𝙴𝚂𝚃𝙰R 𝙰𝙵𝙺\n┃${user.afkReason ? '\n┃🔸️ *𝚁𝙰𝚉𝙾𝙽 :* ' + user.afkReason : ''}\n┃🔸 *𝙴𝚂𝚃𝚄𝚅𝙾 𝙸𝙽𝙰𝙲𝚃𝙸𝚅𝙾 𝙳𝚄𝚁𝙰𝙽𝚃𝙴* ${clockString(new Date - user.afkTime)}\n╰━─━─━─≪☣️≫─━─━─━╯`.trim())  
+  user.afkTime = -1  
+  user.afkReason = ''   
+  }  
+
 if (m.mtype === 'interactiveResponseMessage') {   
 let msg = m.message[m.mtype]  || m.msg
 if (msg.nativeFlowResponseMessage && !m.isBot ) { 
@@ -417,7 +406,7 @@ return conn.ev.emit('messages.upsert', { messages : [ emit ] ,  type : 'notify'}
 
   //ARRANCA LA DIVERSIÓN  
   switch (prefix && command) {  
-  
+   
 case 'test': {
 const test = generateWAMessageFromContent(from, { viewOnceMessage: { 
 message: { "messageContextInfo": {
@@ -774,7 +763,7 @@ kuismath[m.sender.split('@')[0]] = result.jawaban
 })
 await sleep(result.waktu)
 if (kuismath.hasOwnProperty(m.sender.split('@')[0])) {
-conn.sendButton(m.chat, `[❗𝐈𝐍𝐅𝐎❗] 𝚂𝙴 𝙰𝙷 𝙵𝙸𝙽𝙰𝙻𝙸𝚉𝙰𝙳𝙾 𝙴𝙻 𝚃𝙸𝙴𝙼𝙿𝙾 𝙿𝙰𝚁𝙰 𝚁𝙴𝚂𝙿𝙾𝙽𝙳𝙴𝚁*\n\n*𝙻𝙰 𝚁𝙴𝚂𝙿𝚄𝙴𝚂𝚃𝙰 𝙴𝚂: ${kuismath[m.sender.split('@')[0]]}`, `xd`, null, [['𝚅𝙾𝙻𝚅𝙴𝚁 𝙰 𝙹𝚄𝙶𝙰𝚁', `.math ${math.mode}`]], null, null, m)
+m.reply(`*[❗𝐈𝐍𝐅𝐎❗] 𝚂𝙴 𝙰𝙷 𝙵𝙸𝙽𝙰𝙻𝙸𝚉𝙰𝙳𝙾 𝙴𝙻 𝚃𝙸𝙴𝙼𝙿𝙾 𝙿𝙰𝚁𝙰 𝚁𝙴𝚂𝙿𝙾𝙽𝙳𝙴𝚁*\n\n*𝙻𝙰 𝚁𝙴𝚂𝙿𝚄𝙴𝚂𝚃𝙰 𝙴𝚂:* ` + kuismath[m.sender.split('@')[0]])
 delete kuismath[m.sender.split('@')[0]]
 }}
 break 
@@ -846,6 +835,379 @@ conn.sendButton(m.chat, `*[❗] 𝙽𝙾 𝙴𝚂𝚃𝙰𝚂 𝙴𝙽 𝙽𝙸�
 } catch (e) {
 m.reply('Nose que paso? hubor error pon de nuevo el comando jjjj')
 }}
+break
+
+case 'ppt': case 'suit': {
+if (!text) return conn.sendButton(m.chat, `*𝐏𝐢𝐞𝐝𝐫𝐚 🗿, 𝐏𝐚𝐩𝐞𝐥 📄 𝐨 𝐓𝐢𝐣𝐞𝐫𝐚 ✂️*\n\n*—◉  𝙿𝚎𝚍𝚎𝚜 𝚞𝚜𝚊𝚛 𝚕𝚘𝚜 𝚋𝚘𝚝𝚘𝚗𝚎𝚜 𝚙𝚊𝚛𝚊 𝚓𝚞𝚐𝚊𝚛 𝚘 𝚝𝚊𝚖𝚋𝚒𝚎𝚗 𝚙𝚞𝚎𝚍𝚎𝚜 𝚞𝚜𝚊𝚛 𝚎𝚜𝚝𝚘𝚜 𝚌𝚘𝚖𝚊𝚗𝚍𝚘𝚜:*\n*◉ ${prefix + command} piedra*\n*◉ ${prefix + command} papel*\n*◉ ${prefix + command} tijera*`, `xd`, null, [['Piedra 🗿', `${prefix + command} piedra`], ['Papel 📄', `${prefix + command} papel`], ['Tijera ✂️', `${prefix + command} tijera`]], null, null, m)
+var astro = Math.random()
+if (astro < 0.34) {
+astro = 'piedra' 
+} else if (astro > 0.34 && astro < 0.67) {
+astro = 'tijera' 
+} else {
+astro = 'papel'
+}
+if (text == astro) {
+global.db.data.users[m.sender].exp += 500
+m.reply(`🔰 EMPATE! 🤝\n\n👉🏻 TU: ${text}\n👉🏻 EL BOT: ${astro}\n🎁 PREMIOS +500 XP`)
+} else if (text == 'papel') {
+if (astro == 'piedra') {
+global.db.data.users[m.sender].exp += 2000
+m.reply(`🥳 HA GANADO! 🎉\n\n👉🏻 TU: ${text}\n👉🏻 EL BOT: ${astro}\n🎁 PREMIO +2000 XP`)
+} else {
+global.db.data.users[m.sender].exp -= 300
+m.reply(`HA PERDIDO ! 🤡\n\n👉🏻 TU: ${text}\n👉🏻 EL BOT: ${astro}\n❌ PREMIO -300 XP`)
+}
+} else if (text == 'tijera') {
+if (astro == 'papel') {
+global.db.data.users[m.sender].exp += 1000
+m.reply(`🥳 HA GANADO! 🎉\n\n👉🏻 TU: ${text}\n👉🏻 EL BOT: ${astro}\n🎁 PREMIO +1000 XP`)
+} else {
+global.db.data.users[m.sender].exp -= 300
+m.reply(`HA PERDIDO! 🤡\n\n👉🏻 TU: ${text}\n👉🏻 EL BOT: ${astro}\n❌ PREMIO -300 XP`)
+}
+} else if (text == 'tijera') {
+if (astro == 'papel') {
+global.db.data.users[m.sender].exp += 1000
+m.reply(`🥳 HA GANADO! 🎉\n\n👉🏻 TU: ${text}\n👉🏻 EL BOT: ${astro}\n🎁 PREMIO +1000 XP`)
+} else {
+global.db.data.users[m.sender].exp -= 300
+m.reply(`HA PERDIDO! 🤡\n\n👉🏻 TU: ${text}\n👉🏻 EL BOT: ${astro}\n❌ PREMIO -300 XP`)
+}
+} else if (text == 'papel') {
+if (astro == 'piedra') {
+global.db.data.users[m.sender].exp += 1000
+m.reply(`🥳 HA GANADO! 🎉\n\n👉🏻 TU: ${text}\n👉🏻 EL BOT: ${astro}\n🎁 PREMIO +1000 XP`)
+} else {
+global.db.data.users[m.sender].exp -= 300
+m.reply(`HA PERDIDO! 🤡\n\n👉🏻 TU: ${text}\n👉🏻 EL BOT: ${astro}\n❌ PREMIO -300 XP`)
+}
+} else if (text == 'piedra') {
+if (astro == 'tijera') {
+global.db.data.users[m.sender].exp += 1000
+m.reply(`🥳 HA GANADO! 🎉\n\n👉🏻 TU: ${text}\n👉🏻 EL BOT: ${astro}\n🎁 PREMIO +1000 XP`)
+} else {
+global.db.data.users[m.sender].exp -= 300
+m.reply(`HA PERDIDO! 🤡\n\n👉🏻 TU: ${text}\n👉🏻 EL BOT: ${astro}\n❌ PREMIO -300 XP`)
+}}}
+break
+
+case 'follar': case 'cojer': {
+if (!text) return m.reply(`Nombra / etiquete algun usuarios con el @tag`) 
+let user = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted.sender
+conn.sendMessage(m.chat, { text: `🥵 te acabas acabas de coger a ${text}!🥵 
+    
+  te acabas de coger a la puta de ${text} ⁩mientras gemia como una maldita puta
+    
+  ${text} ¡te han cogido! 😏`, mentions: [m.sender, text.replace('@', '') + '@s.whatsapp.net']}, { quoted: m, ephemeralExpiration: 24*60*100, disappearingMessagesInChat: 24*60*100})}  
+break
+
+case 'formarpareja': case 'formarparejas': {
+let toM = (a) => "@" + a.split("@")[0];
+  let ps = groupMetadata.participants.map((v) => v.id);
+  let a = ps[Math.floor(Math.random() * ps.length)]
+  let b;
+  do b = ps[Math.floor(Math.random() * ps.length)]
+  while (b === a);
+conn.sendMessage(m.chat, { text: `*${toM(a)}, 𝙳𝙴𝙱𝙴𝚁𝙸𝙰𝚂 𝙲𝙰𝚂𝙰𝚁𝚃𝙴 💍 𝚈 𝙲𝙾𝙹𝙴𝚁 𝙲𝙾𝙽 ${toM(b)}, 𝙷𝙰𝙲𝙴𝙽 𝚄𝙽𝙰 𝙱𝚄𝙴𝙽𝙰 𝙿𝙰𝚁𝙴𝙹𝙰 💓*`, mentions: [a, b]}, { quoted: m, ephemeralExpiration: 24*60*100, disappearingMessagesInChat: 24*60*100})}    
+break
+
+case 'pregunta': case 'preg': {
+if (!text) return m.reply(`[❕𝐈𝐍𝐅𝐎❕] *Ejemplo :*\n\n *${prefix + command}* me baño?`) 
+m.react('🤔') 
+let pr = ['no', 'si', 'nose', 'puede ser', 'no creo', 'olvio', 'Que pregunta mas boluda', 'A', 'pendejo', 'pues nose']
+let preg = pr[Math.floor(Math.random() * pr.length)]
+m.reply(`╔═══════════════════
+║≡ *❗ 𝐏𝐑𝐄𝐆𝐔𝐍𝐓𝐀𝐒 ❗*
+║-----------------------
+║➢ *𝙿𝚁𝙴𝙶𝚄𝙽𝚃𝙰:* ${text}
+║-----------------------
+║➢ *𝚁𝙴𝚂𝙿𝚄𝙴𝚂𝚃𝙰:* ${preg}
+╚═══════════════════ `)}
+break
+
+case 'verdad': case 'reto': case 'piropo': 
+game(m, command, sendImageAsUrl, pickRandom) 
+break 
+
+case 'formapareja5': case 'top': case 'topgays': case 'topotakus': {
+let member = participants.map(u => u.id)
+let me = m.sender
+let a = member[Math.floor(Math.random() * member.length)]
+let b = member[Math.floor(Math.random() * member.length)]
+let c = member[Math.floor(Math.random() * member.length)]
+let d = member[Math.floor(Math.random() * member.length)]
+let e = member[Math.floor(Math.random() * member.length)]
+let f = member[Math.floor(Math.random() * member.length)]
+let g = member[Math.floor(Math.random() * member.length)]
+let h = member[Math.floor(Math.random() * member.length)]
+let i = member[Math.floor(Math.random() * member.length)]
+let j = member[Math.floor(Math.random() * member.length)]
+
+if (command == 'formapareja5') {
+conn.sendMessage(m.chat, { text: `
+*_😍Las 5 mejores parejas del grupo😍_*
+    
+*_1.- @${a.split('@')[0]} y @${b.split('@')[0]}_*
+- Esta pareja esta destinada a estar junta 💙
+
+*_2.- @${c.split('@')[0]} y @${d.split('@')[0]}_*
+- Esta pareja son dos pequeños tortolitos enamorados ✨
+
+*_3.- @${e.split('@')[0]} y @${f.split('@')[0]}_*
+- Ufff y que decir de esta pareja, ya hasta familia deberian tener 🤱🧑‍🍼
+
+*_4.- @${g.split('@')[0]} y @${h.split('@')[0]}_*
+- Estos ya se casaron en secreto 💍
+
+*_5.- @${i.split('@')[0]} y @${j.split('@')[0]}_*
+- Esta pareja se esta de luna de miel ✨🥵😍❤️`, contextInfo:{mentionedJid:[a, b, c, d, e, f, g, h, i, j]}}, { quoted: m, ephemeralExpiration: 24*60*100, disappearingMessagesInChat: 24*60*100})}
+
+if (command == 'top') { 
+if (!text) return m.reply(`*Ejemplo de uso:*\n.top *texto*`) 
+let member = participants.map(u => u.id)
+  const k = Math.floor(Math.random() * 70);
+  const x = `${pickRandom(['🤓', '😅', '😂', '😳', '😎', '🥵', '😱', '🤑', '🙄', '💩', '🍑', '🤨', '🥴', '🔥', '👇🏻', '😔', '👀', '🌚'])}`;
+const l = Math.floor(Math.random() * x.length);
+const vn = `https://hansxd.nasihosting.com/sound/sound${k}.mp3`;
+const top = `*${x} Top 5 ${text} ${x}*
+    
+*1. @${a.split('@')[0]}*
+*2. @${b.split('@')[0]}*
+*3. @${c.split('@')[0]}*
+*4 @${d.split('@')[0]}*
+*5 @${e.split('@')[0]}*`;
+conn.sendMessage(m.chat, { text: top, contextInfo:{
+mentionedJid:[a, b, c, d, e],
+forwardingScore: 9999999,
+isForwarded: false, }}, { quoted: m })
+conn.sendMessage(m.chat, { audio: { url: vn }, fileName: 'error.mp3', mimetype: 'audio/mp4', ptt: true }, { quoted : m, ephemeralExpiration: 24*60*100, disappearingMessagesInChat: 24*60*100})}
+
+if (command == 'topgays') { 
+const vn = 'https://qu.ax/HfeP.mp3';
+const top = `*🌈TOP 10 GAYS/LESBIANAS DEL GRUPO🌈*
+    
+*1. @${a.split('@')[0]}*
+*2. @${b.split('@')[0]}*
+*3. @${c.split('@')[0]}*
+*4 @${d.split('@')[0]}*
+*5 @${e.split('@')[0]}*
+*6 @${f.split('@')[0]}*
+*7 @${g.split('@')[0]}*
+*8 @${h.split('@')[0]}*
+*9 @${i.split('@')[0]}*
+*10 @${j.split('@')[0]}*`;
+conn.sendMessage(m.chat, { text: top, contextInfo:{
+mentionedJid:[a, b, c, d, e, f, g, h, i, j],
+forwardingScore: 9999999,
+isForwarded: false, }}, { quoted: m })
+await conn.sendMessage(m.chat, { audio: { url: vn }, fileName: 'error.mp3', mimetype: 'audio/mp4', ptt: true }, { quoted : m, ephemeralExpiration: 24*60*100, disappearingMessagesInChat: 24*60*100})}
+if (command == 'topotakus') {
+const vn = 'https://qu.ax/ZgFZ.mp3';
+const top = `*🌸 TOP 10 OTAKUS DEL GRUPO 🌸*
+    
+*1. @${a.split('@')[0]}*
+*2. @${b.split('@')[0]}*
+*3. @${c.split('@')[0]}*
+*4 @${d.split('@')[0]}*
+*5 @${e.split('@')[0]}*
+*6 @${f.split('@')[0]}*
+*7 @${g.split('@')[0]}*
+*8 @${h.split('@')[0]}*
+*9 @${i.split('@')[0]}*
+*10 @${j.split('@')[0]}*`;
+conn.sendMessage(m.chat, { text: top, contextInfo:{
+mentionedJid:[a, b, c, d, e, f, g, h, i, j],
+forwardingScore: 9999999,
+isForwarded: false, }}, { quoted: m })
+await conn.sendMessage(m.chat, { audio: { url: vn }, fileName: 'error.mp3', mimetype: 'audio/mp4', ptt: true }, { quoted : m, ephemeralExpiration: 24*60*100, disappearingMessagesInChat: 24*60*100})}
+}
+break
+
+case 'love': {
+let love = `*❤️❤️ MEDIDOR DE AMOR ❤️❤️*
+
+*El amor de ${text} por ti es de* *${Math.floor(Math.random() * 100)}%* *de un 100%*
+*Deberias pedirle que sea tu  novia/o ?*
+`.trim() 
+m.react('💞') 
+conn.sendMessage(m.chat, { text: love, mentions: [m.sender, text.replace('@', '') + '@s.whatsapp.net']}, { quoted: m, ephemeralExpiration: 24*60*100, disappearingMessagesInChat: 24*60*100})}
+break
+
+case 'personalidad': {
+if (!text) return m.reply(lenguaje.juegos.text18) 
+let personalidad = `┏━━°❀❬ *PERSONALIDAD* ❭❀°━━┓
+*┃*
+*┃• Nombre* : ${text}
+*┃• Buena Moral* : ${pickRandom(['6%','12%','20%','27%','35%','41%','49%','54%','60%','66%','73%','78%','84%','92%','93%','94%','96%','98,3%','99,7%','99,9%','1%','2,9%','0%','0,4%'])}
+*┃• Mala Moral* : ${pickRandom(['6%','12%','20%','27%','35%','41%','49%','54%','60%','66%','73%','78%','84%','92%','93%','94%','96%','98,3%','99,7%','99,9%','1%','2,9%','0%','0,4%'])}
+*┃• Tipo de persona* : ${pickRandom(['De buen corazón','Arrogante','Tacaño','Generoso','Humilde','Tímido','Cobarde','Entrometido','Cristal','No binarie XD', 'Pendejo'])}
+*┃• Siempre* : ${pickRandom(['Pesado','De malas','Distraido','De molestoso','Chismoso','Pasa jalandosela','De compras','Viendo anime','Chatea en WhatsApp porque esta soltero','Acostado bueno para nada','De mujeriego','En el celular'])}
+*┃• Inteligencia* : ${pickRandom(['6%','12%','20%','27%','35%','41%','49%','54%','60%','66%','73%','78%','84%','92%','93%','94%','96%','98,3%','99,7%','99,9%','1%','2,9%','0%','0,4%'])}
+*┃• Morosidad* : ${pickRandom(['6%','12%','20%','27%','35%','41%','49%','54%','60%','66%','73%','78%','84%','92%','93%','94%','96%','98,3%','99,7%','99,9%','1%','2,9%','0%','0,4%'])}
+*┃• Coraje* : ${pickRandom(['6%','12%','20%','27%','35%','41%','49%','54%','60%','66%','73%','78%','84%','92%','93%','94%','96%','98,3%','99,7%','99,9%','1%','2,9%','0%','0,4%'])}
+*┃• Miedo* : ${pickRandom(['6%','12%','20%','27%','35%','41%','49%','54%','60%','66%','73%','78%','84%','92%','93%','94%','96%','98,3%','99,7%','99,9%','1%','2,9%','0%','0,4%'])}
+*┃• Fama* : ${pickRandom(['6%','12%','20%','27%','35%','41%','49%','54%','60%','66%','73%','78%','84%','92%','93%','94%','96%','98,3%','99,7%','99,9%','1%','2,9%','0%','0,4%'])}
+*┃• Género* : ${pickRandom(['Hombre', 'Mujer', 'Homosexual', 'Bisexual', 'Pansexual', 'Feminista', 'Heterosexual', 'Macho alfa', 'Mujerzona', 'Marimacha', 'Palosexual', 'PlayStationSexual', 'Sr. Manuela', 'Pollosexual'])}
+┗━━━━━━━━━━━━━━━━`
+m.reply(personalidad)}
+break
+
+case 'slot': case 'apuesta': {
+if (!args[0]) return m.reply(`*[❗] 𝙸𝙽𝙶𝚁𝙴𝚂𝙰 𝙻𝙰 𝙲𝙰𝙽𝚃𝙸𝙳𝙰𝙳 𝚀𝚄𝙴 𝙳𝙴𝚂𝙴𝙰 𝙰𝙿𝙾𝚂𝚃𝙰𝚁* 
+
+*📌 𝙴𝙹𝙴𝙼𝙿𝙻𝙾:*\n*${prefix + command} 100*`)
+if (isNaN(args[0])) return m.reply(`${lenguaje.juegos.text20}\n*${prefix + command} 100*`)
+const apuesta = parseInt(args[0]);
+const users = global.db.data.users[m.sender];
+const time = users.lastslot + 30000;//30 seg
+if (new Date - users.lastslot < 30000) return m.reply(`*⏳ 𝙴𝚂𝙿𝙴𝚁𝙴 ${msToTime(time - new Date())} 𝙿𝙰𝚁𝙰 𝚅𝙾𝙻𝚅𝙴𝚁 𝙰 𝙰𝙿𝙾𝚂𝚃𝙰𝚁`) 
+if (apuesta < 100) return m.reply(lenguaje.juegos.text23) 
+if (users.exp < apuesta) {
+return m.reply(lenguaje.juegos.text24)}
+const emojis = ["🐋", "🐉", "🕊️"];
+let a = Math.floor(Math.random() * emojis.length);
+let b = Math.floor(Math.random() * emojis.length);
+let c = Math.floor(Math.random() * emojis.length);
+const x = [];
+const y = [];
+const z = [];
+for (let i = 0; i < 3; i++) {
+x[i] = emojis[a];
+a++;
+if (a == emojis.length) a = 0;
+}
+for (let i = 0; i < 3; i++) {
+y[i] = emojis[b];
+b++;
+if (b == emojis.length) b = 0;
+}
+for (let i = 0; i < 3; i++) {
+z[i] = emojis[c];
+c++;
+if (c == emojis.length) c = 0;
+}
+let end;
+if (a == b && b == c) {
+end = `*𝙶𝙰𝙽𝙰𝚂𝚃𝙴! 🎁 +${apuesta + apuesta} ᥊⍴`;
+users.exp += apuesta += apuesta += apuesta
+} else if (a == b || a == c || b == c) {
+end = `*🔮 𝙲𝙰𝚂𝙸 𝙻𝙾 𝙻𝙾𝙶𝚁𝙰𝚂!, 𝚂𝙸𝙶𝚄𝙴 𝙸𝙽𝚃𝙴𝙽𝚃𝙰𝙽𝙳𝙾*\n*𝚃𝙾𝙼𝙰 +10 XP*`;
+users.exp += 20;
+} else {
+end = `*❌ 𝙿𝙴𝚁𝙳𝙸𝚂𝚃𝙴 -${apuesta} ᥊⍴`;
+users.exp -= apuesta;
+}
+users.lastslot = new Date * 1;
+
+var hawemod = [
+`${x[1]} : ${y[0]} : ${z[0]}
+${z[0]} : ${y[1]} : ${x[1]}
+${z[1]} : ${x[2]} : ${y[0]}`, 
+`${x[0]} : ${y[1]} : ${z[2]}
+${y[1]} : ${z[2]} : ${x[1]}
+${x[2]} : ${y[0]} : ${z[0]}`, 
+`${x[1]} : ${y[2]} : ${z[1]}
+${y[0]} : ${z[0]} : ${x[2]}
+${x[2]} : ${y[1]} : ${z[0]}`
+]
+
+const maxIterations = 25;
+const arrayCasuale = generaArrayCasuale(hawemod, maxIterations);
+
+const array = [...arrayCasuale, ];
+  
+let { key } = await conn.sendMessage(m.chat, { text: `🕹` }, { quoted: m });
+
+for (let i = 0; i < maxIterations; i++) {
+
+await conn.sendMessage(m.chat, { text: `•╼≪ *🎰 | SLOTS | 🎰* ≫╼•\n` + `${array[i]}` + `\n•╼≪ *🎰 | SLOTS | 🎰* ≫╼•`, edit: key }, { quoted: m });
+await new Promise((resolve) => setTimeout(resolve, 1))}
+  
+return await conn.sendMessage(m.chat, {text: `   •╼≪ *🎰 | SLOTS | 🎰* ≫╼•
+      ${x[0]} : ${y[0]} : ${z[0]}
+      ${x[1]} : ${y[1]} : ${z[1]}
+      ${x[2]} : ${y[2]} : ${z[2]}
+  •╼≪ *🎰 | SLOTS | 🎰* ≫╼•\n\n${end}`, edit: key}, {quoted: m})}
+break
+
+case 'ship': {
+if (!text) return m.reply(`Ingrese el. nombre de 2 personas para calcular sus amor`) 
+let [text1, ...text2] = text.split(' ')
+text2 = (text2 || []).join(' ')
+if (!text2) return m.reply(`Falta el segundo nombre`) 
+let lovetext = `❤️ *${text1}* tu oportunidad de enamorarte de *${text2}* es de *${Math.floor(Math.random() * 100)}%*👩🏻‍❤️‍👨🏻`.trim()
+conn.sendTextWithMentions(m.chat, lovetext)}
+break
+
+case 'doxear': case 'doxxeo': {
+let who
+if (m.isGroup) who = m.mentionedJid[0]
+else who = m.chat
+if (!who) return m.reply(lenguaje.juegos.text19) 
+let start = `*😱 ¡¡Empezando Doxxeo!! 😱*`
+let boost = `*${pickRandom(['0','1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20'])}%*`
+let boost2 = `*${pickRandom(['21','22','23','24','25','26','27','28','29','30','31','32','33','34','35','36','37','38','39','40'])}%*`
+let boost3 = `*${pickRandom(['41','42','43','44','45','46','47','48','49','50','51','52','53','54','55','56','57','58','59','60'])}%*`
+let boost4 = `*${pickRandom(['61','62','63','64','65','66','67','68','69','70','71','72','73','74','75','76','77','78','79','80'])}%*`
+let boost5 = `*${pickRandom(['81','82','83','84','85','86','87','88','89','90','91','92','93','94','95','96','97','98','99','100'])}%*`
+const { key } = await conn.sendMessage(m.chat, {text: start, contextInfo: {mentionedJid:[text]}}, {quoted: m});
+await conn.sendMessage(m.chat, {text: boost, edit: key});
+await conn.sendMessage(m.chat, {text: boost3, edit: key});
+await conn.sendMessage(m.chat, {text: boost5, edit: key});
+let old = performance.now()
+let neww = performance.now()
+let speed = `${neww - old}`
+let doxeo = `*_🤣 Persona Hackeada/doxxeada con éxito 🤣_*\n\n*_Tiempo: ${speed} segundos!_*
+
+*RESULTADOS:*
+
+*Nombre:* ${text}
+*Ip:* 92.28.211.234
+*N:* 43 7462
+*W:* 12.4893
+*SS NUMBER:* 6979191519182016
+*IPV6:* fe80::5dcd::ef69::fb22::d9888%12 
+*UPNP:* Enabled
+*DMZ:* 10.112.42.15
+*MAC:* 5A:78:3E:7E:00
+*ISP:* Ucom unversal 
+*DNS:* 8.8.8.8
+*ALT DNS:* 1.1.1.8.1  
+*DNS SUFFIX:* Dlink
+*WAN:* 100.23.10.15
+*WAN TYPE:* private nat
+*GATEWAY:* 192.168.0.1
+*SUBNET MASK:* 255.255.0.255
+*UDP OPEN PORTS:* 8080.80
+*TCP OPEN PORTS:* 443
+*ROUTER VENDEDOR:* ERICCSON
+*DEVICE VENDEDOR:* WIN32-X
+*CONNECTION TYPE:* TPLINK COMPANY
+*ICMPHOPS:* 192.168.0.1 192.168.1.1 100.73.43.4
+host-132.12.32.167.ucom.com
+host-132.12.111.ucom.com
+36.134.67.189 216.239.78.11
+Sof02s32inf14.1e100.net
+*HTTP:* 192.168.3.1:433-->92.28.211.234:80
+*Http:* 192.168.625-->92.28.211.455:80
+*Http:* 192.168.817-->92.28.211.8:971
+*Upd:* 192.168452-->92.28.211:7265288
+*Tcp:* 192.168.682-->92.28.211:62227.7
+*Tcp:* 192.168.725-->92.28.211:67wu2
+*Tcp:* 192.168.629-->92.28.211.167:8615
+*EXTERNAL MAC:* 6U:77:89:ER:O4
+*MODEM JUMPS:* 64`
+conn.sendMessage(m.chat, {text: doxeo, edit: key})}
+break
+
+case 'racista': {
+rate = body.slice(9)
+let random = `${Math.floor(Math.random() * 100)}`
+racista = random
+if (racista < 20 ) {ra = 'Tu no eres racista 👏'} else if (racista == 21 ) {ra = 'Mmm tengos mi dudas 🧐'} else if (racista == 23 ) {ra = 'Mmm tengos mi dudas 🧐'} else if (racista == 24 ) {ra = 'Mmm tengos mi dudas 🧐'} else if (racista == 25 ) {ra = 'Mmm tengos mi dudas 🧐'} else if (racista == 26 ) {ra = 'Mmm tengos mi dudas 🧐'} else if (racista == 27 ) {ra = 'Mmm tengos mi dudas 🧐'} else if (racista == 28 ) {ra = 'Mmm tengos mi dudas 🧐'} else if (racista == 29 ) {ra = 'Mmm tengos mi dudas 🧐'} else if (racista == 30 ) {ra = 'Mmm tengos mi dudas 🧐'} else if (racista == 31 ) {ra = 'Eres racista en secreto 🙀'} else if (racista == 32 ) {ra = 'Eres racista en secreto 🙀'} else if (racista == 33 ) {ra = 'Eres racista en secreto 🙀'} else if (racista == 34 ) {ra = 'Eres racista en secreto 🙀'} else if (racista == 35 ) {ra = 'Eres racista en secreto 🙀'} else if (racista == 36 ) {ra = 'Eres racista en secreto 🙀'} else if (racista == 37 ) {ra = 'Eres racista en secreto 🙀'} else if (racista == 38 ) {ra = 'Eres racista en secreto 🙀'} else if (racista == 39 ) {ra = 'Eres racista en secreto 🙀'} else if (racista == 40 ) {ra = 'Eres racista en secreto 🙀'} else if (racista == 41 ) {ra = 'Fuck men alto racista 😡'} else if (racista == 42 ) {ra = 'Fuck men alto racista 😡'} else if (racista == 43 ) {ra = 'Fuck men alto racista 😡'} else if (racista == 44 ) {ra = 'Fuck men alto racista 😡'} else if (racista == 45 ) {ra = 'Fuck men alto racista 😡'} else if (racista == 46 ) {ra = 'Fuck men alto racista 😡'} else if (racista == 47 ) {ra = 'Fuck men alto racista 😡'} else if (racista == 48 ) {ra = 'Fuck men alto racista 😡'} else if (racista == 49 ) {ra = 'Fuck men alto racista 😡'} else if (racista == 50 ) {ra = 'Fuck men alto racista 😡'} else if (racista > 51) {ra = 'UN AUTENTICO RACISTA 🥸'}
+hasil = `${rate} Usted es ${random}% racista\n\n${ra}`
+m.reply(hasil)}
 break
 
 case 'welcome': {
@@ -1023,7 +1385,7 @@ const match2 = stderr.match(/http[^"]+\.png/);
 const urlImagen2 = match2 ? match2[0] : null;    
 await conn.sendMessage(m.chat, {image: {url: urlImagen2}, caption: stderr.trim()}, {quoted: m});
 }} catch (e) {
-o = e.message;
+o = e.message; 
 return m.reply(o)
 console.log(e)}}
 break 
@@ -1961,7 +2323,7 @@ if (global.db.data.users[m.sender].registered < true) return reply(info.unreg)
   
   case 'addcase':  
   if (!isCreator) return conn.sendMessage(from, { text: info.owner }, { quoted: msg });   
-  if (!text) throw 'envia el case'  
+  if (!text) return m.reply('envia el case') 
   try {  
   const addcase =[fs.readFileSync('main.js', 'utf8').slice(0, fs.readFileSync('main.js', 'utf8').lastIndexOf('break') + 5), q, fs.readFileSync('main.js', 'utf8').slice(fs.readFileSync('main.js', 'utf8').lastIndexOf('break') + 5)].join('\n');  
   fs.writeFileSync('main.js', addcase)  
@@ -2256,12 +2618,30 @@ async function ytmp3(url) {
     };
 }
 
+function generaArrayCasuale(array, ripetizioni) {
+  let risultato = [];
+  for (let i = 0; i < ripetizioni; i++) {
+    risultato = risultato.concat(array);
+  }
+  return risultato;
+}
+
 default:  
-if (budy.includes(`a`)) {
+if (budy.includes(`A`)) {
   if (!global.db.data.chats[m.chat].audios) return  
   let vn = './media/a.mp3'  
   await conn.sendPresenceUpdate('recording', m.chat)  
   conn.sendMessage(m.chat, { audio: { url: vn }, contextInfo: { "externalAdReply": { "title": botname, "body": ``, "previewType": "PHOTO", "thumbnailUrl": null,"thumbnail": imagen1, "sourceUrl": md, "showAdAttribution": true}}, seconds: '4556', ptt: true, mimetype: 'audio/mpeg', fileName: `error.mp3` }, { quoted: m })  
+}
+if (/^facil|es facil|fácil|es fácil|fasil|es fasil|la chupa bien|se le da bien chupar|chupa bn|chupa bien|la chupa bn$/i.test(budy)) {
+const toM = (a) => "@" + a.split("@")[0];
+  const ps = groupMetadata.participants.map((v) => v.id);
+  const a = ps[Math.floor(Math.random() * ps.length)]
+  conn.sendMessage(
+    m.chat,
+    { text: `Pero no tanto como la mama de ${toM(a)}`, mentions: [a] },
+    { quoted: m },
+  )
 }
 if (budy.includes(`reglas`) || budy.includes(`normas`) || budy.includes(`Reglas`)) {
 m.reply(`╭┅〘 ⚠️ 𝗢𝗯𝗲𝗱𝗲𝗰𝗲 𝗹𝗮𝘀 𝗿𝗲𝗴𝗹𝗮𝘀 ⚠️ 〙*
@@ -2286,6 +2666,14 @@ m.reply(`╭┄〔 *${wm}* 〕┄⊱
 ┆ 
 ┆ 「 DORRAT-BOT-MD 」
 ╰━━━⊰ ${vs} ⊱━━━━დ*`) 
+}
+
+if (isCmd && budy.toLowerCase() != undefined) {
+if (m.chat.endsWith('broadcast')) return
+if (m.isBaileys) return
+let msgs = global.db.data.database
+if (!(budy.toLowerCase() in msgs)) return 
+conn.copyNForward(m.chat, msgs[budy.toLowerCase()], true)
 }
 
               if (budy.startsWith('>')) {  
