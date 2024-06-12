@@ -2631,7 +2631,7 @@ if (m.mentionedJid.includes(conn.user.jid)) {
 let noetiqueta = 'https://qu.ax/lqFC.webp'
 conn.sendFile(m.chat, noetiqueta, 'sticker.webp', '',m, true, { contextInfo: { 'forwardingScore': 200, 'isForwarded': false, externalAdReply:{ showAdAttribution: false, title: 'Yo que?', mediaType: 2, sourceUrl: md, thumbnail: imagen1}}}, { quoted: m, ephemeralExpiration: 24*60*100, disappearingMessagesInChat: 24*60*100})
 }
-if (budy.includes(`bot`) {
+if (budy.includes(`bot`)) {
 let vn = "./media/bot.mp3";
 await conn.sendPresenceUpdate('recording', m.chat)  
 conn.sendButton(m.chat, `*𝙷𝙾𝙻𝙰, ¿𝙲𝙾𝙼𝙾 𝚃𝙴 𝙿𝚄𝙴𝙳𝙾 𝙰𝚈𝚄𝙳𝙰𝚁?*`, wm, null, [['𝙼𝙴𝙽𝚄 𝙳𝙴 𝙲𝙾𝙼𝙰𝙽𝙳𝙾𝚂', `.menu`]], null, null, m)
