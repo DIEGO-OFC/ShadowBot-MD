@@ -482,6 +482,11 @@ say(`CREADO POR DIEGO-OFC`, {
   align: "center",
   colors: ["red"],
 });
+say(`SHIP: DIEGO-OFC X GataNina-Li`, {
+  font: "console",
+  align: "center",
+  colors: ["red"],
+});
  
 } else if (connection === "close" && lastDisconnect && lastDisconnect.error && lastDisconnect.error.output.statusCode != 401) {
 console.log(color('[SYS]', '#009FFF'),
