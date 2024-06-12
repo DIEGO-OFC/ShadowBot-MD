@@ -2171,7 +2171,7 @@ case 'rob': case 'robar': {
   
      let users =  global.db.data.users[m.sender];  
      if (!text) return m.reply('[❌] Ingresa la cantidad de dinero que deseas Depositar.');  
-     if (!text == '__all') {  
+     if (!text == '_all') {  
         let count = parseInt(users.dolares);  
         users.dolares -= count * 1  
         users.bank += count * 1  
