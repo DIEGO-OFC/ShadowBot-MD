@@ -90,6 +90,35 @@ return `*╭━━❍SHADOW-𝐁𝐎𝐓-𝐌𝐃❍━━╮*
  ├➢${prefix}tiktokstalk <nombre de usuario 
  └────ׂ─ׂ─ׂ─ׂ── 
 
+┌─「👾 ᘜᗩᗰᗴ 」 
+├➢ ${prefix}simi
+├➢ ${prefix}ppt 
+├➢ ${prefix}tictactoe
+├➢ ${prefix}ttt
+├➢ ${prefix}delttt
+├➢ ${prefix}formarpareja
+├➢ ${prefix}follar
+├➢ ${prefix}cojer
+├➢ ${prefix}pregunta
+├➢ ${prefix}preg
+├➢ ${prefix}verdad
+├➢ ${prefix}reto
+├➢ ${prefix}piropo
+├➢ ${prefix}formapareja5
+├➢ ${prefix}top
+├➢ ${prefix}topgays
+├➢ ${prefix}topotakus
+├➢ ${prefix}love
+├➢ ${prefix}personalidad
+├➢ ${prefix}slot
+├➢ ${prefix}apuesta
+├➢ ${prefix}ship
+├➢ ${prefix}doxear
+├➢ ${prefix}doxxeo
+├➢ ${prefix}racista
+├➢ ${prefix}fake
+└────ׂ─ׂ─ׂ─ׂ── 
+ 
 *╭─╮─᤻─᳒─᤻᳒᯽⃟ᰳᰬᰶ┈*🔰⃐ＧＲＵＰＯＳ*️⃟ᬽ፝֟━*
 ├❥ᰰຼ ❏ ${prefix}antilink _(Elimina a los que manda link de otro grupo)_
 ├❥ᰰຼ ❏ ${prefix}antifake _(eliminar a los números virtuales)_
@@ -121,15 +150,6 @@ return `*╭━━❍SHADOW-𝐁𝐎𝐓-𝐌𝐃❍━━╮*
 ├❥ᰰຼ ❏ ${prefix}otakudesu (ingresa un texto)
 ├❥ᰰຼ ❏ ${prefix}ss 
 ├❥ᰰຼ _(ingresa un link para manda captura)_
-*╰┄̸࣭࣭࣭࣭࣭ٜ۫┄࣭࣭࣭۫┄̸࣭۫┄̸࣭࣭࣭࣭࣭ٜ۫┄࣭࣭࣭۫┄̸࣭۫┄̸࣭࣭࣭࣭࣭ٜ۫┄̸࣭࣭࣭࣭࣭ٜ۫┄࣭۫*
-
-*╭─╮─᤻─᳒─᤻᳒᯽⃟ᰳᰬᰶ┈*⃐👾ＪＵＥＧＯＳ*️⃟ᬽ፝֟━*
-├❥ᰰຼ ❏ ${prefix}simi 
-├❥ᰰຼ _(Hablar con el bot)_
-├❥ᰰຼ ❏ ${prefix}ppt
-├❥ᰰຼ _(Esta mantenimiento funciona pero responde cuando quiere xd)_
-├❥ᰰຼ ❏ ${prefix}fake
-├❥ᰰຼ _(Ingresa el texto + tag para joder a alguien con chat fake😹)_
 *╰┄̸࣭࣭࣭࣭࣭ٜ۫┄࣭࣭࣭۫┄̸࣭۫┄̸࣭࣭࣭࣭࣭ٜ۫┄࣭࣭࣭۫┄̸࣭۫┄̸࣭࣭࣭࣭࣭ٜ۫┄̸࣭࣭࣭࣭࣭ٜ۫┄࣭۫*
 
 *╭─╮─᤻─᳒─᤻᳒᯽⃟ᰳᰬᰶ┈*⃐🥵COMANDO +18*️⃟ᬽ፝֟━*
