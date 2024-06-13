@@ -1804,8 +1804,9 @@ if (global.db.data.users[m.sender].registered < true) return reply(info.unreg)
 
 case 'mediafire': case 'mediafireDl': {
 const { mediafireDl } = require('./libs/mediafire.js') 
-if (!text) return m.reply(`Ejemplo\n${prefix + command} https://www.mediafire.com/file/admrdma1ff3cq10/Siete-Ocho.zip/file`) 
+if (!text) return reply(`*Ingresa el enlace, ejemplo ${prefix + command} https://www.mediafire.com/file/admrdma1ff3cq10/Siete-Ocho.zip/file`)     
 m.react("📥") 
+try { 
 const baby1 = await mediafireDl(text)
 if (baby1[0].size.split('MB')[0] >= 1500) return reply(`Archivo muy pesado no puedo descargar ` + util.format(baby1))
 const result4 = `┏━━━━━⟬MEDIAFIRE⟭━━━━━┓
@@ -1816,16 +1817,19 @@ const result4 = `┏━━━━━⟬MEDIAFIRE⟭━━━━━┓
 ┃• Calidad: ${baby1[0].mime}
 ┗━━━━━⟬MEDIAFIRE⟭━━━━━┛\n\nDescargado espera...` 
 m.reply(`${result4}`) 
-conn.sendMessage(m.chat, { document : { url : baby1[0].link}, fileName : baby1[0].nama, mimetype: baby1[0].mime ,  quoted : m, contextInfo: { externalAdReply:{ 
-   title:"Shadow-Bot-ᴠ5",  
-    body:"Entra a mi web ofc",  
-   showAdAttribution: true, 
-   mediaType:2, 
-   thumbnail: fs.readFileSync(`./media/menu.jpg`) , 
-   mediaUrl: "https://web-shadow.vercel.app/",  
- sourceUrl: "https://web-shadow.vercel.app/" }}}, {quoted: m, ephemeralExpiration: 24*60*100, disappearingMessagesInChat: 24*60*100})
- db.data.users[m.sender].limit -= 3
-m.reply('3 Dolares usando ')}
+conn.sendMessage(from, { document :{ url: baby1[0].link }, fileName: baby1[0].nama, mimetype: baby1[0].mime }, {quoted: m })
+db.data.users[m.sender].limit -= 3
+m.reply('3 Dolares usando ')
+} catch {
+try {
+var document = await fetch(`https://api-aswin-sparky.koyeb.app/api/downloader/mediafire?url=${text}`);
+var zip = await document.json();
+conn.sendMessage(from, { document :{ url: zip.data.link }, fileName: `${zip.data.name}` , mimetype: "application/zip" }, {quoted: m })
+db.data.users[m.sender].limit -= 3
+m.reply('3 Dolares usando ')
+} catch (e) {
+m.reply(`Error\n` + e) 
+console.log(e)}}}
 break 
 	
  case 'ytplay': { 
