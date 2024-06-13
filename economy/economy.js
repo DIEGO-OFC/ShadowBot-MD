@@ -348,12 +348,16 @@ let user = global.db.data.users[m.sender]
     else who = m.sender;  
      if (!(who in global.db.data.users)) return m.reply(`✳️ ᴇʟ ᴜsᴜᴀʀɪᴏ ɴᴏ sᴇ ᴇɴᴄᴜᴇɴᴛʀᴀ ᴇɴ ᴍɪ ʙᴀsᴇ ᴅᴇ ᴅᴀᴛᴏs`)  
   //  let name = conn.getName(who);  
-    let db = await conn.profilePictureUrl(who, "image").catch((_) => "https://telegra.ph/file/e01c177fb1c61f453c659.jpg");  
+    let db = await conn.profilePictureUrl(who, "image").catch((_) => "https://telegra.ph/file/e01c177fb1c61f453c659.jpg");
+const response = await fetch(`https://delirios-api-delta.vercel.app/tools/country?text=34613288116`);
+    const data = await response.json();
+  
     let bank = `╭━━━━ 𝐁𝐀𝐍𝐂𝐎 🏦 ━━━╾•  
   ❍ *Nombre:* @${who.split('@')[0]} 
   ❍ *Diamantes:* ${global.db.data.users[who].limit} 💎  
   ❍ *Dolares:* $${global.db.data.users[who].dolares} 💸  
- ❍ *Banco:* ${global.db.data.users[who].bank}  
+ ❍ *Banco:* ${global.db.data.users[who].bank} 
+prueba : ${data.result.code}
   ╰━━━━━━━━━━━━╾•`.trim();  
      
   conn.sendMessage(m.chat, { react: { text: "💳" , key: m.key }})
