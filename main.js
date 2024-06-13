@@ -1801,36 +1801,33 @@ if (global.db.data.users[m.sender].registered < true) return reply(info.unreg)
 		  
 	  }
         break
-  case 'mediafire': { 
-  
- if (!text) return reply(`*Ingresa el enlace, ejemplo ${prefix + command} https://www.mediafire.com/file/admrdma1ff3cq10/Siete-Ocho.zip/file`)  
- if (global.db.data.users[m.sender].dolares < 1) return reply(info.sindolares)  
- const baby1 = await mediafireDl(text) 
- if (baby1[0].size.split('MB')[0] >= 1500) return reply('minimo 900 MB ' + util.format(baby1)) 
- const result4 = `  
-  ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  
-      ⟮ _*◉Mᴇᴅɪᴀꜰɪʀᴇ Dᴏᴡɴʟᴏᴀᴅ◉*_ ⟯   
-              
-  *NAME* : ${baby1[0].nama}  
-  *SIZE* : ${baby1[0].size}  
-  *MIME* : ${baby1[0].mime}  
-  *LINK* : ${baby1[0].link}\n  
-    
-   _scraping metadata...._   
-  *${botname}*`  
-  reply(`${result4}`)  
-  conn.sendMessage(m.chat, { document : { url : baby1[0].link}, fileName : baby1[0].nama, mimetype: baby1[0].mime ,  quoted : m, contextInfo: { externalAdReply:{  
-    title:"Shadow-Bot-ᴠ5",  
+
+case 'mediafire': case 'mediafireDl': {
+const { mediafireDl } = require('./libs/mediafire.js') 
+if (!text) return m.reply(`Ejemplo\n${prefix + command} https://www.mediafire.com/file/admrdma1ff3cq10/Siete-Ocho.zip/file`) 
+m.react("📥") 
+const baby1 = await mediafireDl(text)
+if (baby1[0].size.split('MB')[0] >= 1500) return reply(`Archivo muy pesado no puedo descargar ` + util.format(baby1))
+const result4 = `┏━━━━━⟬MEDIAFIRE⟭━━━━━┓
+┃• NAME: ${baby1[0].nama} 
+┃——————«•»——————
+┃• Pesa: ${baby1[0].size} 
+┃——————«•»——————
+┃• Calidad: ${baby1[0].mime}
+┗━━━━━⟬MEDIAFIRE⟭━━━━━┛\n\nDescargado espera...` 
+m.reply(`${result4}`) 
+conn.sendMessage(m.chat, { document : { url : baby1[0].link}, fileName : baby1[0].nama, mimetype: baby1[0].mime ,  quoted : m, contextInfo: { externalAdReply:{ 
+   title:"Shadow-Bot-ᴠ5",  
     body:"Entra a mi web ofc",  
-    showAdAttribution: true,  
-    mediaType:2,  
-    thumbnail: fs.readFileSync(`./media/menu.jpg`) ,  
-    mediaUrl:`https://web-shadow.vercel.app/`,   
-  sourceUrl: `https://web-shadow.vercel.app/` }}}, {quoted: m}) 
-  db.data.users[m.sender].dolares -= 8
-  reply(info.dolares8) 
-  } 
-  break  
+   showAdAttribution: true, 
+   mediaType:2, 
+   thumbnail: fs.readFileSync(`./media/menu.jpg`) , 
+   mediaUrl: "https://web-shadow.vercel.app/",  
+ sourceUrl: "https://web-shadow.vercel.app/" }}}, {quoted: m, ephemeralExpiration: 24*60*100, disappearingMessagesInChat: 24*60*100})
+ db.data.users[m.sender].limit -= 3
+m.reply('3 Dolares usando ')}}
+break 
+	
  case 'ytplay': { 
    if (!text) return reply(`example:\n${prefix + command} kokoronashi`) 
    const ytplay = await youtube.search(text) 
