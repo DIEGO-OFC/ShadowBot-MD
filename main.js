@@ -1482,7 +1482,40 @@ break
   await conn.groupParticipantsUpdate(m.chat, [users], 'demote').then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))  
   }  
   break  
-  
+
+case "volaudio": {
+if (!args.join(" ")) return reply(`Example: ${prefix + command} 10`);
+media = await conn.downloadAndSaveMediaMessage(quoted, "volume" );
+rname = getRandom(".mp3");
+exec(`ffmpeg -i ${media} -filter:a volume=${args[0]} ${rname}`, (err, stderr, stdout) => {
+fs.unlinkSync(media);
+if (err) return reply("Error!");
+jadie = fs.readFileSync(rname);
+conn.sendMessage(from, { audio: jadie, mimetype: "audio/mp4", ptt: true }, { quoted: m });
+fs.unlinkSync(rname)}
+)}
+break;
+
+case 'backup': case 'copia': {
+try {
+let d = new Date
+let date = d.toLocaleDateString('fr', { day: 'numeric', month: 'long', year: 'numeric' })
+let database = await fs.readFileSync(`./database.json`)
+let creds = await fs.readFileSync(`./ShadowSession/creds.json`)
+await m.reply(`𝙴𝙽𝚅𝙸𝙰𝙽𝙳𝙾 𝙲𝙾𝙿𝙸𝙰 𝙳𝙴 𝚂𝙴𝙶𝚄𝚁𝙸𝙳𝙰𝙳 𝙰 𝚂𝚄𝚂 𝙿𝚁𝙸𝚅𝙰𝙳𝙾....`)
+await conn.sendMessage(m.sender, {document: database, mimetype: 'application/json', fileName: `database.json`}, { quoted: m, ephemeralExpiration: 24*60*100, disappearingMessagesInChat: 24*60*100})
+await conn.sendMessage(m.sender, {document: creds, mimetype: 'application/json', fileName: `creds.json`}, { quoted: m, ephemeralExpiration: 24*60*100, disappearingMessagesInChat: 24*60*100})
+} catch (e) {
+console.log(e)}}
+break
+
+case 'reiniciar': case 'restart':
+if (!process.send) throw 'Dont: node main.js\nDo: node index.js'
+m.reply(`Reiniciando....`) 
+delay(3000)
+process.send('reset')
+break 
+		  
   case 'link': case 'linkgc': {  
   if (global.db.data.users[m.sender].registered < true) return reply(info.unreg)  
   if (!m.isGroup) return reply(info.group)   
