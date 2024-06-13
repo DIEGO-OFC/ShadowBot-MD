@@ -1793,7 +1793,7 @@ if (global.db.data.users[m.sender].registered < true) return reply(info.unreg)
            await conn.sendMessage(from, { document: data, mimetype: "application/pdf", fileName: `${file.name}.pdf` }, { quoted: msg }) 
          } 
          break       
-	  case 'mediafire2' {
+	  case 'mediafire2': {
     if (!text) return reply(`*Ingresa el enlace, ejemplo ${prefix + command} https://www.mediafire.com/file/admrdma1ff3cq10/Siete-Ocho.zip/file`)     
    var document = await fetch(`https://api-aswin-sparky.koyeb.app/api/downloader/mediafire?url=${text}`);
         var zip = await document.json();
