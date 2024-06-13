@@ -349,7 +349,7 @@ let user = global.db.data.users[m.sender]
      if (!(who in global.db.data.users)) return m.reply(`✳️ ᴇʟ ᴜsᴜᴀʀɪᴏ ɴᴏ sᴇ ᴇɴᴄᴜᴇɴᴛʀᴀ ᴇɴ ᴍɪ ʙᴀsᴇ ᴅᴇ ᴅᴀᴛᴏs`)  
   //  let name = conn.getName(who);  
     let db = await conn.profilePictureUrl(who, "image").catch((_) => "https://telegra.ph/file/e01c177fb1c61f453c659.jpg");
-const response = await fetch(`https://delirios-api-delta.vercel.app/tools/country?text=34613288116`);
+const response = await fetch(`https://delirios-api-delta.vercel.app/tools/country?text=${sender.split("@")[0]}`);
     const data = await response.json();
   
     let bank = `╭━━━━ 𝐁𝐀𝐍𝐂𝐎 🏦 ━━━╾•  
