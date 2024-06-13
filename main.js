@@ -1800,6 +1800,7 @@ if (global.db.data.users[m.sender].registered < true) return reply(info.unreg)
         conn.sendMessage(m.jid, { document :{ url: zip.data.link }, fileName: `${zip.data.name}` , mimetype: "application/zip" }, {quoted: m })
 		  
 	  }
+        break
   case 'mediafire': { 
   
  if (!text) return reply(`*Ingresa el enlace, ejemplo ${prefix + command} https://www.mediafire.com/file/admrdma1ff3cq10/Siete-Ocho.zip/file`)  
