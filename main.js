@@ -1825,7 +1825,7 @@ conn.sendMessage(m.chat, { document : { url : baby1[0].link}, fileName : baby1[0
    mediaUrl: "https://web-shadow.vercel.app/",  
  sourceUrl: "https://web-shadow.vercel.app/" }}}, {quoted: m, ephemeralExpiration: 24*60*100, disappearingMessagesInChat: 24*60*100})
  db.data.users[m.sender].limit -= 3
-m.reply('3 Dolares usando ')}}
+m.reply('3 Dolares usando ')}
 break 
 	
  case 'ytplay': { 
