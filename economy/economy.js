@@ -357,7 +357,7 @@ const response = await fetch(`https://delirios-api-delta.vercel.app/tools/countr
   ❍ *Diamantes:* ${global.db.data.users[who].limit} 💎  
   ❍ *Dolares:* $${global.db.data.users[who].dolares} 💸  
  ❍ *Banco:* ${global.db.data.users[who].bank} 
-prueba : ${data.result.code}
+ ❍ *Pais:* ${data.result.name}
   ╰━━━━━━━━━━━━╾•`.trim();  
      
   conn.sendMessage(m.chat, { react: { text: "💳" , key: m.key }})
