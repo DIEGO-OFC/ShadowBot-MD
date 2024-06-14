@@ -119,6 +119,47 @@ return `*╭━━❍SHADOW-𝐁𝐎𝐓-𝐌𝐃❍━━╮*
 ├➢ ${prefix}fake
 └────ׂ─ׂ─ׂ─ׂ── 
  
+ ┌──「🔞𝐂𝐨𝐦𝐚𝐧𝐝𝐨𝐬 +𝟏𝟖」  
+  ├➢ *${prefix}pack*
+  ├➢ *${prefix}pack2*
+  ├➢ *${prefix}pack3*
+  ├➢ *${prefix}videoxxx*
+  ├➢ *${prefix}videolesbixxx*
+  ├➢ *${prefix}tetas*
+  ├➢ *${prefix}tetas2*
+  ├➢ *${prefix}booty*
+  ├➢ *${prefix}ecchi*
+  ├➢ *${prefix}furro*
+  ├➢ *${prefix}imagenlesbians*
+  ├➢ *${prefix}pussy*
+  ├➢ *${prefix}panties*
+  ├➢ *${prefix}pene*
+  ├➢ *${prefix}porno*
+  ├➢ *${prefix}randomxxx*
+  ├➢ *${prefix}pechos*
+  ├➢ *${prefix}yuri*
+  ├➢ *${prefix}yuri2*
+  ├➢ *${prefix}trapito*
+  ├➢ *${prefix}hentai*
+  ├➢ *${prefix}pornololi*
+  ├➢ *${prefix}pornoorgy*
+  ├➢ *${prefix}pornofoot*
+  ├➢ *${prefix}pornoass* 
+  ├➢ *${prefix}pornouniform*
+  ├➢ *${prefix}pornobdsm*
+  ├➢ *${prefix}pornocum*
+  ├➢ *${prefix}pornonetorare
+  ├➢ *${prefix}pornofeet*
+  ├➢ *${prefix}pornoero*
+  ├➢ *${prefix}pornofemdom*
+  ├➢ *${prefix}pornoglass*
+  ├➢ *${prefix}pornosuccubus*
+  ├➢ *${prefix}pornochupada
+  ├➢ *${prefix}pornomuslos*
+  ├➢ *${prefix}pornoschool*
+  ├➢ *${prefix}hentaipdf* *<texto>*_  
+  └────ׂ─ׂ─ׂ─ׂ─── 
+   
 *╭─╮─᤻─᳒─᤻᳒᯽⃟ᰳᰬᰶ┈*🔰⃐ＧＲＵＰＯＳ*️⃟ᬽ፝֟━*
 ├❥ᰰຼ ❏ ${prefix}antilink _(Elimina a los que manda link de otro grupo)_
 ├❥ᰰຼ ❏ ${prefix}antifake _(eliminar a los números virtuales)_
@@ -152,39 +193,6 @@ return `*╭━━❍SHADOW-𝐁𝐎𝐓-𝐌𝐃❍━━╮*
 ├❥ᰰຼ _(ingresa un link para manda captura)_
 *╰┄̸࣭࣭࣭࣭࣭ٜ۫┄࣭࣭࣭۫┄̸࣭۫┄̸࣭࣭࣭࣭࣭ٜ۫┄࣭࣭࣭۫┄̸࣭۫┄̸࣭࣭࣭࣭࣭ٜ۫┄̸࣭࣭࣭࣭࣭ٜ۫┄࣭۫*
 
-*╭─╮─᤻─᳒─᤻᳒᯽⃟ᰳᰬᰶ┈*⃐🥵COMANDO +18*️⃟ᬽ፝֟━*
-├❥ᰰຼ  *Activa con (antiNsfw on)*
-├ *✧･ﾟ: *✧･ﾟ:*✧･ﾟ: *✧･ﾟ:*✧･ﾟ: *✧･ﾟ:
-├❥ᰰຼ ❏ ${prefix}waifu
-├❥ᰰຼ ❏ ${prefix}pussy
-├❥ᰰຼ ❏ ${prefix}nsfwloli
-├❥ᰰຼ ❏ ${prefix}hentai
-├❥ᰰຼ ❏ ${prefix}lewd'
-├❥ᰰຼ ❏ ${prefix}feed'
-├❥ᰰຼ ❏ ${prefix}gasm
-├❥ᰰຼ ❏ ${prefix}anal	    	
-├❥ᰰຼ ❏ ${prefix}holo	    	
-├❥ᰰຼ ❏ ${prefix}tits	    	
-├❥ᰰຼ ❏ ${prefix}kuni
-├❥ᰰຼ ❏ ${prefix}kiss
-├❥ᰰຼ ❏ ${prefix}erok
-├❥ᰰຼ ❏ ${prefix}smug
-├❥ᰰຼ ❏ ${prefix}solog
-├❥ᰰຼ ❏ ${prefix}feetg
-├❥ᰰຼ ❏ ${prefix}lewdk    
-├❥ᰰຼ ❏ ${prefix}femdom
-├❥ᰰຼ ❏ ${prefix}cuddle
-├❥ᰰຼ ❏ ${prefix}eroyuri
-├❥ᰰຼ ❏ ${prefix}cum	    
-├❥ᰰຼ ❏ ${prefix}blowjob
-├❥ᰰຼ ❏ ${prefix}holoero
-├❥ᰰຼ ❏ ${prefix}erokemo
-├❥ᰰຼ ❏ ${prefix}fox_girl
-├❥ᰰຼ ❏ ${prefix}futanari
-├❥ᰰຼ ❏ ${prefix}wallpaper	   
-├❥ᰰຼ *Nota: usarlo baja tu responsabilidad*
-*╰┄̸࣭࣭࣭࣭࣭ٜ۫┄࣭࣭࣭۫┄̸࣭۫┄̸࣭࣭࣭࣭࣭ٜ۫┄࣭࣭࣭۫┄̸࣭۫┄̸࣭࣭࣭࣭࣭ٜ۫┄̸࣭࣭࣭࣭࣭ٜ۫┄࣭۫* 	
-	
 *╭─╮─᤻─᳒─᤻᳒᯽⃟ᰳᰬᰶ┈*⃐🪙 ＥＣＯＮＯＭＩＡ*️⃟ᬽ፝֟━*
 ├❥ᰰຼ ❏ ${prefix}minar _(para minar exp)_
 ├❥ᰰຼ ❏ ${prefix}robar
