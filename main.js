@@ -445,10 +445,7 @@ case 'yts':
  break
 
 case 'bratzmon'
-    const handler = async (m, { command, conn }) => {
-
     if (!db.data.chats[m.chat].modohorny && m.isGroup) throw `_*Los comandos +18 estan desactivados*_`;
-
     const randomImage = images[Math.floor(Math.random() * images.length)];
 
     const msg = '💜 *Bratzmon* 💜';
@@ -457,7 +454,6 @@ case 'bratzmon'
       ['Siguiente 🖼️', `.bratzmon`]
     ], m);
 
-};
 break
  
    case 'nowa':  
