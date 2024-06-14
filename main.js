@@ -41,7 +41,6 @@ const { mp3 } = require('./plugins/ytmp3.js')
   const { menu2 } = require('./plugins/menu2.js')  
   const { mediafireDl } = require('./libs/mediafire.js')  
   const { state } = require('./plugins/info.js')  
-import { images } from '../src/nsfw/onlyf/bratzmon.js';
   
   const msgs = (message) => {   
 if (message.length >= 10) { 
@@ -446,6 +445,7 @@ case 'yts':
 
 case 'bratzmon': {
     if (!db.data.chats[m.chat].modohorny && m.isGroup) return  m.reply(`_*Los comandos +18 estan desactivados*_`);
+    const { images } = require('../src/nsfw/onlyf/bratzmon.js');
     const randomImage = images[Math.floor(Math.random() * images.length)];
 
     const msg = '💜 *Bratzmon* 💜';
