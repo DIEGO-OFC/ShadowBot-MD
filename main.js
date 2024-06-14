@@ -1351,6 +1351,13 @@ global.db.data.chats[m.chat].antispam = false
 reply(`*${command} desactivado!*`)}}
 break          
 
+case 'bot': {
+let vn = "./media/bot.mp3";
+await conn.sendPresenceUpdate('recording', m.chat)  
+conn.sendButton(m.chat, `*𝙷𝙾𝙻𝙰, ¿𝙲𝙾𝙼𝙾 𝚃𝙴 𝙿𝚄𝙴𝙳𝙾 𝙰𝚈𝚄𝙳𝙰𝚁?*`, wm, null, [['𝙼𝙴𝙽𝚄 𝙳𝙴 𝙲𝙾𝙼𝙰𝙽𝙳𝙾𝚂', `.menu`]], null, null, m)
+conn.sendAudio(m.chat, vn, m)}
+break
+
 case 'join': {  
 let linkRegex = /chat.whatsapp.com\/([0-9A-Za-z]{20,24})/i
 let link = (m.quoted ? m.quoted.text ? m.quoted.text : text : text) || text
@@ -1610,9 +1617,9 @@ conn.sendButton(m.chat, `*BOT ONLINE YA ESTOY DISPONIBLE ✅*`, wm, null, [['Act
   conn.sendMessage(m.chat, { audio: { url: texttospeechurl }, contextInfo: { "externalAdReply": { "title": botname, "body": ``, "previewType": "PHOTO", "thumbnailUrl": null,"thumbnail": imagen1, "sourceUrl": md, "showAdAttribution": true}}, seconds: '4556', ptt: true, mimetype: 'audio/mpeg', fileName: `error.mp3` }, { quoted: m })  
   break                  
     
-  case 'simi': case 'bot': {  
+case 'simi': {  
 if (global.db.data.users[m.sender].registered < true) return reply(info.unreg)  
-  if (!text) return conn.sendMessage(from, { text: `*INGRESE UN TEXTO PARA HABLAR CONMIGO*`}, { quoted: msg })  
+if (!text) return conn.sendMessage(from, { text: `Hola *${pushname}* Quieres charlar un rato?\nResponde con *${prefix + command}* (tu mensaje) \n\n*_📌 Ejemplo :_* *${prefix + command}* Hola bot*`}, { quoted: msg })  
 await conn.sendPresenceUpdate('composing', m.chat) 
  let gpt = await fetch(`https://delirius-api-oficial.vercel.app/api/simi?text=${text}`)
 let res = await gpt.json()
@@ -2677,11 +2684,13 @@ if (m.mentionedJid.includes(conn.user.jid)) {
 let noetiqueta = 'https://qu.ax/lqFC.webp'
 conn.sendFile(m.chat, noetiqueta, 'sticker.webp', '',m, true, { contextInfo: { 'forwardingScore': 200, 'isForwarded': false, externalAdReply:{ showAdAttribution: false, title: 'Yo que?', mediaType: 2, sourceUrl: md, thumbnail: imagen1}}}, { quoted: m, ephemeralExpiration: 24*60*100, disappearingMessagesInChat: 24*60*100})
 }
-if (budy.includes(`bot`)) {
-let vn = "./media/bot.mp3";
-await conn.sendPresenceUpdate('recording', m.chat)  
-conn.sendButton(m.chat, `*𝙷𝙾𝙻𝙰, ¿𝙲𝙾𝙼𝙾 𝚃𝙴 𝙿𝚄𝙴𝙳𝙾 𝙰𝚈𝚄𝙳𝙰𝚁?*`, wm, null, [['𝙼𝙴𝙽𝚄 𝙳𝙴 𝙲𝙾𝙼𝙰𝙽𝙳𝙾𝚂', `.menu`]], null, null, m)
-conn.sendAudio(m.chat, vn, m)}
+if (budy.includes(`Bot`) || budy.includes(`simi`) || || budy.includes(`bot`) || || budy.includes(`alexa`)) {   
+if (!text) return m.reply(`Hola *${pushname}* Quieres charlar un rato?\nResponde con: Bot (tu mensaje) \n\n*_📌 Ejemplo :_* Bot Hola bot`) 
+await conn.sendPresenceUpdate('composing', m.chat)
+let gpt = await fetch(`https://delirius-api-oficial.vercel.app/api/simi?text=${text}`)
+let res = await gpt.json()
+await m.reply(res.data.message)
+}
 if (budy.includes(`ª`)) {
 if (!global.db.data.chats[m.chat].audios) return  
 let vn = './media/a.mp3'  
