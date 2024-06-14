@@ -41,6 +41,7 @@ const { mp3 } = require('./plugins/ytmp3.js')
   const { menu2 } = require('./plugins/menu2.js')  
   const { mediafireDl } = require('./libs/mediafire.js')  
   const { state } = require('./plugins/info.js')  
+import { images } from '../src/nsfw/onlyf/bratzmon.js';
   
   const msgs = (message) => {   
 if (message.length >= 10) { 
@@ -442,6 +443,22 @@ break
 case 'yts': 
  await yt(conn, m, text, from, command, fkontak, prefix) 
  break
+
+case 'bratzmon'
+    const handler = async (m, { command, conn }) => {
+
+    if (!db.data.chats[m.chat].modohorny && m.isGroup) throw `_*Los comandos +18 estan desactivados*_`;
+
+    const randomImage = images[Math.floor(Math.random() * images.length)];
+
+    const msg = '💜 *Bratzmon* 💜';
+
+    await conn.sendButton(m.chat, msg, null, randomImage, [
+      ['Siguiente 🖼️', `.bratzmon`]
+    ], m);
+
+};
+break
  
    case 'nowa':  
       let regex = /x/g  
