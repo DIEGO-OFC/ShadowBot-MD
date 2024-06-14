@@ -2684,7 +2684,7 @@ if (m.mentionedJid.includes(conn.user.jid)) {
 let noetiqueta = 'https://qu.ax/lqFC.webp'
 conn.sendFile(m.chat, noetiqueta, 'sticker.webp', '',m, true, { contextInfo: { 'forwardingScore': 200, 'isForwarded': false, externalAdReply:{ showAdAttribution: false, title: 'Yo que?', mediaType: 2, sourceUrl: md, thumbnail: imagen1}}}, { quoted: m, ephemeralExpiration: 24*60*100, disappearingMessagesInChat: 24*60*100})
 }
-if (budy.includes(`Bot`) || budy.includes(`simi`) || || budy.includes(`bot`) || || budy.includes(`alexa`)) {   
+if (budy.includes(`Bot`) || budy.includes(`simi`) || budy.includes(`bot`) || budy.includes(`alexa`)) {   
 if (!text) return m.reply(`Hola *${pushname}* Quieres charlar un rato?\nResponde con: Bot (tu mensaje) \n\n*_📌 Ejemplo :_* Bot Hola bot`) 
 await conn.sendPresenceUpdate('composing', m.chat)
 let gpt = await fetch(`https://delirius-api-oficial.vercel.app/api/simi?text=${text}`)
