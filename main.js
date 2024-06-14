@@ -24,6 +24,7 @@ const {savefrom, lyrics, lyricsv2, youtubedl, youtubedlv2} = require('@bochiltea
  // const { youtubedl, snapsave } = require("@bochilteam/scraper") 
 const JavaScriptObfuscator = require('javascript-obfuscator')
 
+const {nsfw} = require('./plugins/nsfw.js')  
 const { game } = require('./plugins/game.js') 
 const { play } = require('./plugins/play.js') 
 const { mp3 } = require('./plugins/ytmp3.js') 
@@ -488,7 +489,10 @@ case 'bots': case 'listbots':
   case 'toqr': {
   toqr(conn, m,  text, sender)}
   break  
-     
+
+case 'hentai': case 'nsfwloli': case 'lewd': case 'feed': case 'gasm': case 'anal': case 'holo': case 'tits': case 'kuni': case 'kiss': case 'erok': case 'smug': case 'solog': case 'feetg': case 'lewdk': case 'waifu': case 'pussy': case 'femdom': case 'cuddle': case 'eroyuri': case 'cum_jpg': case 'blowjob': case 'holoero': case 'erokemo': case 'fox_girl': case 'futanari': case 'wallpaper': case 'hentai2': case 'porno': case 'pack': case 'pack2': case 'pack3': case 'videoxxx': case 'vídeoxxx': case 'videoxxxlesbi': case 'videolesbixxx': case 'pornolesbivid': case 'pornolesbianavid': case 'pornolesbiv': case 'pornolesbianav': case 'tetas': case 'pechos': nsfw(m, sender, command, pickRandom, conn, sendImageAsUrl)
+break   
+		  
   case 'ofuscar':
        if (!text) return m.reply("*Ingresa el codigo que vas a ofuscar.*"); 
          function obfuscateCode(code) { 
