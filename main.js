@@ -444,8 +444,8 @@ case 'yts':
  await yt(conn, m, text, from, command, fkontak, prefix) 
  break
 
-case 'bratzmon'
-    if (!db.data.chats[m.chat].modohorny && m.isGroup) throw `_*Los comandos +18 estan desactivados*_`;
+case 'bratzmon': {
+    if (!db.data.chats[m.chat].modohorny && m.isGroup) return  m.reply(`_*Los comandos +18 estan desactivados*_`);
     const randomImage = images[Math.floor(Math.random() * images.length)];
 
     const msg = '💜 *Bratzmon* 💜';
@@ -453,7 +453,7 @@ case 'bratzmon'
     await conn.sendButton(m.chat, msg, null, randomImage, [
       ['Siguiente 🖼️', `.bratzmon`]
     ], m);
-
+}
 break
  
    case 'nowa':  
