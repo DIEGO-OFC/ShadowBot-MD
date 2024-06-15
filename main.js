@@ -506,7 +506,7 @@ case 'yts':
  break
 
 case 'bratzmon': {
-    if (!db.data.chats[m.chat].modohorny && m.isGroup) return  m.reply(`_*Los comandos +18 estan desactivados*_`);
+    
     const { images } = require('../src/nsfw/onlyf/bratzmon.js');
     const randomImage = images[Math.floor(Math.random() * images.length)];
 
