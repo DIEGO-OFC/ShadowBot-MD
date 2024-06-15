@@ -1765,29 +1765,7 @@ if (global.db.data.users[m.sender].registered < true) return reply(info.unreg)
   case 'fake': {
 await fakechat(conn, text, prefix, command, body, from, m, sender, quoted)}
   break  
-  
-  case 'hentai':  
-if (global.db.data.users[m.sender].registered < true) return reply(info.unreg)  
-  if (!m.isGroup) return reply(info.group)   
-  if (!global.db.data.chats[m.chat].antiNsfw) return reply(info.nsfw)  
-  var hentai = JSON.parse(fs.readFileSync('./src/nsfw/neko.json'))  
-  var hentairesult = pickRandom(hentai)  
-  conn.sendMessage(m.chat, { caption: `🥵`, image: { url: hentairesult.url } }, { quoted: m })  
-  break  
-  case 'nsfwloli':  
-  if (global.db.data.users[m.sender].registered < true) return reply(info.unreg)  
-  if (!m.isGroup) return reply(info.group)   
-  if (!global.db.data.chats[m.chat].antiNsfw) return reply(info.nsfw)  
-  var nsfw = JSON.parse(fs.readFileSync('./src/nsfw/nsfwloli.json'))  
-  var result = pickRandom(nsfw)  
-  conn.sendMessage(m.chat, { caption: 'Yo soy tu loli 🥵', image: { url: result.url } }, { quoted: m })  
-  break  
-  case 'lewd': case 'feed': case 'gasm': case 'anal': case 'holo': case 'tits': case 'kuni': case 'kiss': case 'erok': case 'smug': case 'solog': case 'feetg': case 'lewdk': case 'waifu': case 'pussy': case 'femdom': case 'cuddle': case 'eroyuri': case 'cum_jpg': case 'blowjob': case 'holoero': case 'erokemo': case 'fox_girl': case 'futanari': case 'wallpaper':  
-  if (global.db.data.users[m.sender].registered < true) return reply(info.unreg)  
-  if (!m.isGroup) return reply(info.group)   
-  if (!global.db.data.chats[m.chat].antiNsfw) return reply(info.nsfw)  
-  sendImageAsUrl(`https://api.lolhuman.xyz/api/random2/${command}?apikey=${lolkeysapi}`, `*🔥 ${command} 🔥*`)  
-  break  
+
   case 'spotifydl':case 'spotify': { 
  const Spotify = require('spotifydl-x'); 
  const fs = require('fs') 
