@@ -409,7 +409,14 @@ return conn.ev.emit('messages.upsert', { messages : [ emit ] ,  type : 'notify'}
 
   //ARRANCA LA DIVERSIÓN  
 switch (prefix && command) {  
-
+case 'corean': {
+  conn.sendMessage(m.chat, {image: {url: 'https://delirios-api-delta.vercel.app/nsfw/corean'} }, {quoted: m});
+}
+break;
+case 'boobs': {
+  conn.sendMessage(m.chat, {image: {url: 'https://delirios-api-delta.vercel.app/nsfw/boobs'} }, {quoted: m});
+}
+break;
 case 'get': case 'fetch': {
   try {
       if (!text) return m.reply('*🚩 Ingresa un enlace.*')
