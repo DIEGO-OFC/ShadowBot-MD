@@ -408,7 +408,33 @@ return conn.ev.emit('messages.upsert', { messages : [ emit ] ,  type : 'notify'}
 }}}  
 
   //ARRANCA LA DIVERSIÓN  
-switch (prefix && command) {  
+switch (prefix && command) {
+case 'instagram':
+case 'ig':
+case 'igdl': {
+  try {
+    if (args.length === 0) {
+      return m.reply("*◦ Ingresa el link de un post de Instagram.*\n  *◦ Ejemplo:* " + prefix + command + "\thttps://www.instagram.com/p/Ck9R1K8hzcY/?utm_source=ig_web_copy_link");
+    }
+    if (!(text.includes("instagram.com/p/") || text.includes("instagram.com/reel/") || text.includes("instagram.com/tv/") || text.includes("instagram.com/stories/") || text.includes("instagram.com/s/"))) {
+      return m.reply("¡URL errónea! Solo se pueden descargar videos, tv, carretes, historias o contenido de Instagram con formato 's'.");
+    }
+    axios.get('https://delirius-api-tau.vercel.app/api/instagram', { params: { url: text } }).then(async (response) => {
+      const results = response.data.data;
+      for (let i = 0; i < results.length; i++) {
+        const item = results[i];
+        if (item.type === 'image') {
+          conn.sendMessage(m.chat, { image: { url: item.url } }, { quoted: m });
+        } else if (item.type === 'video') {
+          conn.sendMessage(m.chat, { video: { url: item.url } }, { quoted: m });
+        }
+      }
+    });
+  } catch (e) {
+    m.reply(new Error(e).message);
+  }
+}
+break;
 case 'corean': {
   conn.sendMessage(m.chat, {image: {url: 'https://delirios-api-delta.vercel.app/nsfw/corean'} }, {quoted: m});
 }
