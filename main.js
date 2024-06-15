@@ -173,10 +173,10 @@ let tekateki = global.db.data.game.tekateki = []
   }} */  
   
   //autoread  
-if (!conn.autoread && m.message && prefix) {
+/*if (!conn.autoread && m.message && prefix) {
 //await delay(1 * 1000) 
 await conn.sendPresenceUpdate('composing', m.chat)
-conn.readMessages([m.key])}
+conn.readMessages([m.key])}*/
   
 //Antispam
 if (global.db.data.chats[m.chat].antispam && prefix) {
