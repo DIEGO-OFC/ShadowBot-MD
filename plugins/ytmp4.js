@@ -15,7 +15,7 @@ m.react("🚀")
 let vid = (await yts(text)).all[0]
 const yt_play = await search(args.join(" "))
 let { title, description, url, thumbnail, videoId, timestamp, views, published } = vid
-m.reply(`*Descarga sus video: ${yt_play[0].title}* espere...`) 
+m.reply(`*Descarga sus audio: ${yt_play[0].title}* espere...`) 
 const q = '128kbps';
 const v = yt_play[0].url;
 const yt = await youtubedl(v).catch(async (_) => await youtubedlv2(v));
