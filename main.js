@@ -1,4 +1,4 @@
-  const gradient = require('gradient-string')  
+const gradient = require('gradient-string')  
   const { exec, spawn, execSync } = require("child_process"); 
   const {rob, bal, reg, work, mine, buy, afk, claim, levelxd, tranferSdw, quitardolares, addDolares, cazar, lb} = require('./economy/economy.js')
   const {toqr, fakechat} = require('./extras/extras.js')
@@ -20,6 +20,7 @@ const {savefrom, lyrics, lyricsv2, youtubedl, youtubedlv2} = require('@bochiltea
   const scp1 = require('./libs/scraper')   
   const { facebook } = require('./libs/facebook')  
   const { instagram } = require('./libs/instagram')  
+  const { antiSpam } = require('./libs/antispam')
   const { jadibot, listJadibot, killJadibot } = require('./serbot.js') 
  // const { youtubedl, snapsave } = require("@bochilteam/scraper") 
 const JavaScriptObfuscator = require('javascript-obfuscator')
@@ -42,7 +43,7 @@ const { mp3 } = require('./plugins/ytmp3.js')
   const { mediafireDl } = require('./libs/mediafire.js')  
   const { state } = require('./plugins/info.js')  
   
-  const msgs = (message) => {   
+const msgs = (message) => {  
 if (message.length >= 10) { 
 return `${message.substr(0, 500)}` 
 } else {  
@@ -52,92 +53,87 @@ const stream = await downloadContentFromMessage(mediakey, MediaType)
 let buffer = Buffer.from([])  
 for await(const chunk of stream) {  
 buffer = Buffer.concat([buffer, chunk]) }  
-return buffer }   
-let blockList = []  
+return buffer 
+}        
   
-module.exports = shadow = async (shadow, m, chatUpdate, mek) => {   
-module.exports = conn = async (conn, m, chatUpdate, mek) => {   
-  var body =  (m.mtype === 'conversation') ? m.message.conversation : (m.mtype == 'imageMessage') ? m.message.imageMessage.caption : (m.mtype == 'videoMessage') ? m.message.videoMessage.caption : (m.mtype == 'extendedTextMessage') ? m.message.extendedTextMessage.text : (m.mtype == 'buttonsResponseMessage') ? m.message.buttonsResponseMessage.selectedButtonId : (m.mtype == 'listResponseMessage') ? m.message.listResponseMessage.singleSelectReply.selectedRowId : (m.mtype == 'templateButtonReplyMessage') ? m.message.templateButtonReplyMessage.selectedId : (m.mtype === 'messageContextInfo') ? (m.message.buttonsResponseMessage?.selectedButtonId || m.message.listResponseMessage?.singleSelectReply.selectedRowId || m.text) : '' 
-  
+module.exports = conn = async (conn, m, chatUpdate, mek, store) => {  
+var body =  (m.mtype === 'conversation') ? m.message.conversation : (m.mtype == 'imageMessage') ? m.message.imageMessage.caption : (m.mtype == 'videoMessage') ? m.message.videoMessage.caption : (m.mtype == 'extendedTextMessage') ? m.message.extendedTextMessage.text : (m.mtype == 'buttonsResponseMessage') ? m.message.buttonsResponseMessage.selectedButtonId : (m.mtype == 'listResponseMessage') ? m.message.listResponseMessage.singleSelectReply.selectedRowId : (m.mtype == 'templateButtonReplyMessage') ? m.message.templateButtonReplyMessage.selectedId : (m.mtype === 'messageContextInfo') ? (m.message.buttonsResponseMessage?.selectedButtonId || m.message.listResponseMessage?.singleSelectReply.selectedRowId || m.text) : '' 
+ 
+//----------------------[ ATRIBUTOS ]-------------------------  
 if (m.key.id.startsWith("BAE5")) return    
-var budy = (typeof m.text == 'string' ? m.text : '')     
-var prefix = /^[°•π÷×¶∆£¢€¥®™+✓_=|~!?@#$%^&.©^]/gi.test(body) ? body.match(/^[°•π÷×¶∆£¢€¥®™+✓_=|~!?@#$%^&.©^]/gi)[0] : ""  
-const isCmd = body.startsWith(prefix)  
+var budy = (typeof m.text == 'string' ? m.text : '')   
+  var prefix = /^[°•π÷×¶∆£¢€¥®™+✓_=|~!?@#$%^&.©^]/gi.test(body) ? body.match(/^[°•π÷×¶∆£¢€¥®™+✓_=|~!?@#$%^&.©^]/gi)[0] : ""
+//var prefix = body.match(/^[/.*#]/)   
+const isCmd = body.startsWith(prefix) 
 const command = isCmd ? body.slice(1).trim().split(/ +/).shift().toLocaleLowerCase() : null
 const args = body.trim().split(/ +/).slice(1) 
- const from = m.chat  
-const msg = JSON.parse(JSON.stringify(m, undefined, 2))
-  const content = JSON.stringify(m.message) 
+const from = m.chat 
+const msg = JSON.parse(JSON.stringify(m, undefined, 2)) 
+const content = JSON.stringify(m.message) 
 const type = m.mtype 
-  const arg = body.substring(body.indexOf(' ') + 1)     
-  const q = args.join(" ")   
-  let t = m.messageTimestamp   
-  const pushname = m.pushName || "Sin nombre"   
-  const botnm = conn.user.id.split(":")[0] + "@s.whatsapp.net"  
-  const userSender = m.key.fromMe ? botnm : m.isGroup && m.key.participant.includes(":") ? m.key.participant.split(":")[0] + "@s.whatsapp.net" : m.key.remoteJid.includes(":") ? m.key.remoteJid.split(":")[0] + "@s.whatsapp.net" : m.key.fromMe ? botnm : m.isGroup ? m.key.participant : m.key.remoteJid  
- 
-const mentionByTag = type == 'extendedTextMessage' && m.message.extendedTextMessage.contextInfo != null ? m.message.extendedTextMessage.contextInfo.mentionedJid : []  
-          const mentionByReply = type == 'extendedTextMessage' && m.message.extendedTextMessage.contextInfo != null ? m.message.extendedTextMessage.contextInfo.participant || '' : ''  
-          const numberQuery = q.replace(new RegExp('[()+-/ +/]', 'gi'), '') + '@s.whatsapp.net'  
-          const usernya = mentionByReply ? mentionByReply : mentionByTag[0]  
-          const Input = mentionByTag[0] ? mentionByTag[0] : mentionByReply ? mentionByReply : q ? numberQuery : false  
-          
- const isImage = (type == 'imageMessage')   
-  const isCreator = global.owner.map(([numero]) => numero.replace(/[^\d\s().+:]/g, '').replace(/\s/g, '') + '@s.whatsapp.net').includes(userSender) 
-  const itsMe = m.sender == conn.user.id ? true : false
-  const text = args.join(" ") 
-  const quoted = m.quoted ? m.quoted : m  
-  const qmsg = (quoted.msg || quoted) 
-  const sender = m.key.fromMe ? botnm : m.isGroup ? m.key.participant : m.key.remoteJid 
-  const mime = (quoted.msg || quoted).mimetype || '' 
-  const isMedia = /image|video|sticker|audio/.test(mime)
-  const numBot = conn.user.id.split(":")[0] + "@s.whatsapp.net" 
-  const numBot2 = conn.user.id // Número de teléfono del bot  
-  const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms))  
+let t = m.messageTimestamp 
+const pushname = m.pushName || "Sin nombre" 
+const botnm = conn.user.id.split(":")[0] + "@s.whatsapp.net"  
+const _isBot = conn.user.jid
+const userSender = m.key.fromMe ? botnm : m.isGroup && m.key.participant.includes(":") ? m.key.participant.split(":")[0] + "@s.whatsapp.net" : m.key.remoteJid.includes(":") ? m.key.remoteJid.split(":")[0] + "@s.whatsapp.net" : m.key.fromMe ? botnm : m.isGroup ? m.key.participant : m.key.remoteJid  
+const isCreator = [conn.decodeJid(conn.user.id), ...global.owner.map(([numero]) => numero)].map((v) => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender);
+const isOwner = isCreator || m.fromMe;
+const isMods = isOwner || global.mods.map((v) => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender);
+//const isCreator = global.owner.map(([numero]) => numero.replace(/[^\d\s().+:]/g, '').replace(/\s/g, '') + '@s.whatsapp.net').includes(userSender) 
+const itsMe = m.sender == conn.user.id ? true : false 
+const text = args.join(" ") 
+const q = args.join(" ") 
+const quoted = m.quoted ? m.quoted : m 
+const sender = m.key.fromMe ? botnm : m.isGroup ? m.key.participant : m.key.remoteJid 
+const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms))
+const mime = (quoted.msg || quoted).mimetype || ''  
+const isMedia = /image|video|sticker|audio/.test(mime)
 const mentions = []  
 if (m.message[type].contextInfo) {   
 if (m.message[type].contextInfo.mentionedJid) {  
 const msd = m.message[type].contextInfo.mentionedJid  
 for (let i = 0; i < msd.length; i++) {  
-mentions.push(msd[i])}}}  
+mentions.push(msd[i])}}}
   
-  // ‿︵‿︵ʚɞ『 GRUPO 』ʚɞ‿︵‿︵  
-        const groupMetadata = m.isGroup ? await conn.groupMetadata(from) : '' 
-   const groupName = m.isGroup ? groupMetadata.subject : ''  
-   const participants = m.isGroup ? await groupMetadata.participants : ''
-     const groupAdmins = m.isGroup ? await getGroupAdmins(participants) : '' 
-  // // Lista de administradores del grupo  
+//----------------------[ FUNCION/GRUPO ]-------------------------
+const groupMetadata = m.isGroup ? await conn.groupMetadata(from) : ''
+const groupName = m.isGroup ? groupMetadata.subject : '' 
+const participants = m.isGroup ? await groupMetadata.participants : '' 
+const groupAdmins = m.isGroup ? await getGroupAdmins(participants) : '' 
+const isBotAdmins = m.isGroup ? groupAdmins.includes(botnm) : false  
+const isGroupAdmins = m.isGroup ? groupAdmins.includes(userSender) : false 
+const isBaneed = m.isGroup ? blockList.includes(userSender) : false 
+const isPremium = m.isGroup ? premium.includes(userSender) : false   
+const who = m.quoted ? m.quoted.sender : m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender;
+const thumb = fs.readFileSync("./media/menu2.jpg")
+const fkontak = { "key": { "participants":"0@s.whatsapp.net", "remoteJid": "status@broadcast", "fromMe": false, "id": "Halo" }, "message": { "contactMessage": { "vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${userSender.split('@')[0]}:${userSender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD` }}, "participant": "0@s.whatsapp.net" }
+const ftroli ={key: {fromMe: false,"participant":"0@s.whatsapp.net", "remoteJid": "status@broadcast"}, "message": {orderMessage: {itemCount: 2022,status: 200, thumbnail: thumb, surface: 200, message: "ɴᴏᴠᴀʙᴏᴛ-ᴍᴅ", orderTitle: "sᴜᴘᴇʀ ʙᴏᴛ ᴅᴇ ᴡʜᴀᴛsᴀᴘᴘ", sellerJid: '0@s.whatsapp.net'}}, contextInfo: {"forwardingScore":999,"isForwarded":true},sendEphemeral: true}
+const fdoc = {key : {participant : '0@s.whatsapp.net', ...(from ? { remoteJid: `status@broadcast` } : {}) },message: {documentMessage: {title: botname, jpegThumbnail: null}}}
+const kick = function (from, orangnya) {   
+for (let i of orangnya) {   
+conn.groupParticipantsUpdate(m.chat, [i], "remove")}}  
+const time = moment(Number(msg.messageTimestamp + "000")).locale("es-mx").tz("America/Asuncion").format('MMMM Do YYYY, h:mm:ss a')   
   
-  const isBotAdmins = m.isGroup ? groupAdmins.includes(numBot) : false // Verifica si el bot es un administrador del grupo  
-  const isGroupAdmins = m.isGroup ? groupAdmins.includes(userSender) : false // Verifica si el remitente del mensaje es un administrador del grupo  
-  const isBaneed = m.isGroup ? blockList.includes(userSender) : false // Verifica si el remitente del mensaje está en la lista de bloqueados  
+const reply = (text) => {  
+m.reply(text)} 
+const sendAdMessage = (text, title, body, image, url) => { conn.sendMessage(m.chat, {text: text, contextInfo: { externalAdReply: { title: title, body: body, mediaUrl: url, sourceUrl: url, previewType: 'PHOTO', showAdAttribution: true, thumbnail: image, sourceUrl: url }}}, {})}  
+const sendImage = ( image, caption ) => { conn.sendMessage(m.chat, { image: image, caption: caption }, {quoted: m, ephemeralExpiration: 24*60*100, disappearingMessagesInChat: 24*60*100})}  
+const sendImageAsUrl = ( url, caption ) => { conn.sendMessage(m.chat, { image:  {url: url }, caption: caption }, {quoted: m, ephemeralExpiration: 24*60*100, disappearingMessagesInChat: 24*60*100})}  
+
+//-------------[ TIPOS DE MENSAJES Y CITADOS ]----------------
+const isAudio = type == 'audioMessage' // Mensaje de Audio  
+const isSticker = type == 'stickerMessage' // Mensaje de Sticker  
+const isContact = type == 'contactMessage' // Mensaje de Contacto  
+const isLocation = type == 'locationMessage' // Mensaje de Localización   
+const isQuotedImage = type === 'extendedTextMessage' && content.includes('imageMessage')  
+const isQuotedVideo = type === 'extendedTextMessage' && content.includes('videoMessage')  
+const isQuotedAudio = type === 'extendedTextMessage' && content.includes('audioMessage')  
+const isQuotedSticker = type === 'extendedTextMessage' && content.includes('stickerMessage')  
+const isQuotedDocument = type === 'extendedTextMessage' && content.includes('documentMessage')  
+const isQuotedMsg = type === 'extendedTextMessage' && content.includes('Message') // Mensaje citado de cualquier tipo  
+const isViewOnce = (type === 'viewOnceMessage') // Verifica si el tipo de mensaje es (mensaje de vista única)  
   
-  // ‿︵‿︵ʚɞ『 TIPOS DE MENSAJES Y CITADOS 』ʚɞ‿︵‿︵  
-  const reply = (text) => {  
-   m.reply(text)} // Enviar una respuesta   
-   const sendAdMessage = (text, edit, title, body, image, url) => { conn.sendMessage(from, {text: text, edit: key, contextInfo: { externalAdReply: { title: title, body: body, mediaUrl: url, sourceUrl: url, previewType: 'PHOTO', showAdAttribution: true, thumbnail: image, sourceUrl: url }}}, {})}   
-   const sendImage = ( image, caption ) => { conn.sendMessage(from, { image: image, caption: caption }, { quoted: m })}   
-   const sendImageAsUrl = ( url, caption ) => { conn.sendMessage(from, { image:  {url: url }, caption: caption }, { quoted: m })}  
-  const sendSticker = ( image, fkontak) => { conn.sendMessage(m.chat, { sticker: image }, { quoted: fkontak})}  
-  
-  const isAudio = type == 'audioMessage' // Mensaje de Audio  
-  const isSticker = type == 'stickerMessage' // Mensaje de Sticker  
-  const isContact = type == 'contactMessage' // Mensaje de Contacto  
-  const isLocation = type == 'locationMessage' // Mensaje de Localización   
-  const isQuotedImage = type === 'extendedTextMessage' && content.includes('imageMessage')  
-  const isQuotedVideo = type === 'extendedTextMessage' && content.includes('videoMessage')  
-  const isQuotedAudio = type === 'extendedTextMessage' && content.includes('audioMessage')  
-  const isQuotedSticker = type === 'extendedTextMessage' && content.includes('stickerMessage')  
-  const isQuotedDocument = type === 'extendedTextMessage' && content.includes('documentMessage')  
-  const isQuotedMsg = type === 'extendedTextMessage' && content.includes('Message') // Mensaje citado de cualquier tipo  
-  const isViewOnce = (type === 'viewOnceMessage') // Verifica si el tipo de mensaje es (mensaje de vista única)  
-  
-  //función pickrandow  
-  function pickRandom(list) {  
-  return list[Math.floor(list.length * Math.random())]  
-  }  
-  
-  // Responder cmd con medios
+// Responder cmd con medios
  if (isMedia && m.msg.fileSha256 && (m.msg.fileSha256.toString('base64') in global.db.data.sticker)) {
 let hash = global.db.data.sticker[m.msg.fileSha256.toString('base64')]
 let { text, mentionedJid } = hash
@@ -161,7 +157,12 @@ conn.ev.emit('messages.upsert', msg)}
 let tebaklagu = global.db.data.game.tebaklagu = [] 
 let kuismath = global.db.data.game.math = []
 let tekateki = global.db.data.game.tekateki = []
- 
+
+  //función pickrandow  
+  function pickRandom(list) {  
+  return list[Math.floor(list.length * Math.random())]  
+  }  
+   
   //autobio  
   /*if (global.db.data.settings[numBot].autobio) {  
   let setting = global.db.data.settings[numBot]  
@@ -179,12 +180,23 @@ await conn.sendPresenceUpdate('composing', m.chat)
 conn.readMessages([m.key])}*/
   
 //Antispam
-if (global.db.data.chats[m.chat].antispam && prefix) {
+if (isCmd && antiSpam.isFiltered(from) && !m.isGroup && prefix) {
+console.log(color('[ SPAM ]', 'red'), color('', 'yellow'), color(`${command} [${args.length}]`), 'from', color(pushname))
+return conn.fakeReply(m.chat, `_Espere unos segundos antes de usar otro comando..._ ✓`, '0@s.whatsapp.net', 'Dejar spam puta')
+}
+
+if (isCmd && antiSpam.isFiltered(from) && m.isGroup && prefix) {
+console.log(color('[ SPAM ]', 'red'), color(``, 'yellow'), color(`${command} [${args.length}]`), 'from', color(pushname), 'in', color(groupName))
+return conn.fakeReply(m.chat, `_Espere unos segundos antes de usar otro comando..._ ✓`, '0@s.whatsapp.net', 'Dejar spam puta')
+}
+
+if (isCmd && !isCreator) antiSpam.addFilter(from)
+/*if (global.db.data.chats[m.chat].antispam && prefix) {
 let user = global.db.data.users[m.sender]
 const date = global.db.data.users[m.sender].spam + 3000; //600000 
 if (new Date - global.db.data.users[m.sender].spam < 3000) return console.log(`[ SPAM ] ➢ ${command} [${args.length}]`)  
 global.db.data.users[m.sender].spam = new Date * 1;
-}
+}*/
   
 //viewOnceMessage
 if (m.mtype == 'viewOnceMessageV2') { 
@@ -272,17 +284,7 @@ return }
   sys: 0,  
   idle: 0,  
   irq: 0  
-  }})  
-  
-  const thumb = fs.readFileSync("./media/test.jpg")  
-  let fkontak = { "key": { "participants":"0@s.whatsapp.net", "remoteJid": "status@broadcast", "fromMe": false, "id": "Halo" }, "message": { "contactMessage": { "vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${userSender.split('@')[0]}:${userSender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD` }}, "participant": "0@s.whatsapp.net" }  
-  const ftroli ={key: {fromMe: false,"participant":"0@s.whatsapp.net", "remoteJid": "status@broadcast"}, "message": {orderMessage: {itemCount: 2022,status: 200, thumbnail: thumb, surface: 200, message: "ɴᴏᴠᴀʙᴏᴛ-ᴍᴅ", orderTitle: "sᴜᴘᴇʀ ʙᴏᴛ ᴅᴇ ᴡʜᴀᴛsᴀᴘᴘ", sellerJid: '0@s.whatsapp.net'}}, contextInfo: {"forwardingScore":999,"isForwarded":true},sendEphemeral: true}  
-  const fdoc = {key : {participant : '0@s.whatsapp.net', ...(from ? { remoteJid: `status@broadcast` } : {}) },message: {documentMessage: {title: "A", jpegThumbnail: null}}}  
-  const kick = function (from, orangnya) {  
-  for (let i of orangnya) {  
-  conn.groupParticipantsUpdate(from, [i], "remove");  
-  }}  
-  const time = moment(Number(msg.messageTimestamp + "000")).locale("es-mx").tz("America/Bogota").format('MMMM Do YYYY, h:mm:ss a')  
+  }})    
   
   // ‿︵‿︵ʚɞ『 INFO CONSOLE 』ʚɞ‿︵‿︵          
   if (m.message) {  
@@ -406,7 +408,7 @@ return conn.ev.emit('messages.upsert', { messages : [ emit ] ,  type : 'notify'}
 }}}  
 
   //ARRANCA LA DIVERSIÓN  
-  switch (prefix && command) {  
+switch (prefix && command) {  
    
 case 'test': {
 const test = generateWAMessageFromContent(from, { viewOnceMessage: { 
@@ -2693,10 +2695,10 @@ function generaArrayCasuale(array, ripetizioni) {
 }
 
 default:  
-if (m.mentionedJid.includes(conn.user.jid)) {
+/*if (m.mentionedJid.includes(conn.user.jid)) {
 let noetiqueta = 'https://qu.ax/lqFC.webp'
 conn.sendFile(m.chat, noetiqueta, 'sticker.webp', '',m, true, { contextInfo: { 'forwardingScore': 200, 'isForwarded': false, externalAdReply:{ showAdAttribution: false, title: 'Yo que?', mediaType: 2, sourceUrl: md, thumbnail: imagen1}}}, { quoted: m, ephemeralExpiration: 24*60*100, disappearingMessagesInChat: 24*60*100})
-}
+}*/
 if (budy.includes(`Bot`) || budy.includes(`simi`) || budy.includes(`bot`) || budy.includes(`alexa`)) {   
 if (!text) return m.reply(`Hola *${pushname}* Quieres charlar un rato?\nResponde con: Bot (tu mensaje) \n\n*_📌 Ejemplo :_* Bot Hola bot`) 
 await conn.sendPresenceUpdate('composing', m.chat)
@@ -2787,7 +2789,7 @@ forwardingScore: 9999999,
 isForwarded: true
 }})
 process.on('uncaughtException', function (err) {
-console.log('Caught exception: ', err)})}}}
+console.log('Caught exception: ', err)})}}
 
 //----------------------------------------------------------------  
 
