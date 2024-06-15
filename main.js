@@ -182,12 +182,12 @@ conn.readMessages([m.key])}*/
 //Antispam
 if (isCmd && antiSpam.isFiltered(from) && !m.isGroup && prefix) {
 console.log(color('[ SPAM ]', 'red'), color('', 'yellow'), color(`${command} [${args.length}]`), 'from', color(pushname))
-return conn.fakeReply(m.chat, `_Espere unos segundos antes de usar otro comando..._ ✓`, '0@s.whatsapp.net', 'Dejar spam puta')
+return //conn.fakeReply(m.chat, `_Espere unos segundos antes de usar otro comando..._ ✓`, '0@s.whatsapp.net', 'Dejar spam puta')
 }
 
 if (isCmd && antiSpam.isFiltered(from) && m.isGroup && prefix) {
 console.log(color('[ SPAM ]', 'red'), color(``, 'yellow'), color(`${command} [${args.length}]`), 'from', color(pushname), 'in', color(groupName))
-return conn.fakeReply(m.chat, `_Espere unos segundos antes de usar otro comando..._ ✓`, '0@s.whatsapp.net', 'Dejar spam puta')
+return //conn.fakeReply(m.chat, `_Espere unos segundos antes de usar otro comando..._ ✓`, '0@s.whatsapp.net', 'Dejar spam puta')
 }
 
 if (isCmd && !isCreator) antiSpam.addFilter(from)
