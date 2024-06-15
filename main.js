@@ -1490,21 +1490,59 @@ break
   await conn.groupLeave(m.chat)}  
   break  
 
-case 'myip': {
+case 'listgc': {
+let anulistg = await store.chats.all().filter(v => v.id.endsWith('@g.us')).map(v => v.id)
+let teks = `*[ LISTA DE CHAT GRUPAL ]*\n\n Grupo total: ${anulistg.length}\n\n`
+for (let i of anulistg) {
+let metadata = await conn.groupMetadata(i)
+teks += `• *Nombre :* ${metadata.subject}\n*• Owner :* ${metadata.owner !== undefined ? '@' + metadata.owner.split`@`[0] : 'Unknown'}\n*• ID :* ${metadata.id}\n*• Made :* ${moment(metadata.creation * 1000).tz('Asia/Kolkata').format('DD/MM/YYYY HH:mm:ss')}\n*• Member :* ${metadata.participants.length}\n\n────────────────────────\n\n`
+                 }
+ conn.sendTextWithMentions(m.chat, teks, m)
+             }
+             break
+             
+      case 'broadcastimage': case 'bcimage': case 'broadcastvideo': case 'broadcastvid':
 if (!isCreator) return conn.sendMessage(from, { text: info.owner }, { quoted: msg });      
-                var http = require('http')
-                http.get({
-                    'host': 'api.ipify.org',
-                    'port': 80,
-                    'path': '/'
-                }, function(resp) {
-                    resp.on('data', function(ip) {
-                        reply("🔎 Mi dirección IP pública es: " + ip)
-                    })
-                })
-            }
+        if (!q) return reply(`Ingrese texto`) 
+        let getGroups = await conn.groupFetchAllParticipating()
+        let groups = Object.entries(getGroups).slice(0).map(entry => entry[1]) 
+        let tot = groups.map(v => v.id)
+        reply(`Transmitiendo en: ${tot.length} Chat grupal, en ${tot.length * 1.5} seg`)
+        for (let i of tot) {
+let txt = `${wm} Difusión\n\nMensaje : ${q}`
+if(/image/.test(mime)) {
+let media = await quoted.download()
+await conn.sendMessage(i, { image:media,  caption: txt,mentions:participants.map(a => a.id) })
+}
+if(/video/.test(mime)){
+let media = await quoted.download()
+await conn.sendMessage(i, { video:media,  caption: txt, mentions:participants.map(a => a.id) })
+}}
+        reply(`Transmitido exitosamente en ${xeoncast.length} Grupos`)      
         break  
-		
+        
+case 'setexif': {
+if (!isCreator) return conn.sendMessage(from, { text: info.owner }, { quoted: msg });   
+               if (!text) return reply(`Ejemplo : ${prefix + command} packname|author`)
+          global.packname = text.split("|")[0]
+          global.author = text.split("|")[1]
+          reply(`ha sido cambiado exitosamente a\n\n• Packname : ${global.packname}\n• Author : ${global.author}`)
+            }
+            break
+                       
+case 'tinyurl':{
+   if(!q) return reply('link?')
+   const request = require('request')
+   request(`https://tinyurl.com/api-create.php?url=${q}`, function (error, response, body) {
+   try {
+  reply(body)
+  } catch (e) {
+  reply(e)
+  }
+  })
+  }
+ break        		
+	
   case 'setppname': case 'nuevonombre': case 'newnombre': {  
   if (!m.isGroup) return reply(info.group)   
   if (!isBotAdmins) return reply(info.botAdmin)  
