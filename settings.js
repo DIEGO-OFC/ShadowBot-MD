@@ -14,7 +14,8 @@ global.phoneNumber = ""
 
  global.owner = [ 
  ["584125778026", "Owner", true], 
- ["5492266613038"]
+ ["5492266613038"],
+ ["5217779091180"]
  ] 
 
 global.mods = []
