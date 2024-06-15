@@ -1550,7 +1550,27 @@ break
   conn.sendText(m.chat, `https://chat.whatsapp.com/${response}`, m, { detectLink: true })}  
   break  
   
-
+case 'addowner': {
+if (!isCreator) return reply(info.owner)
+const who = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text ? text.replace(/[^0-9]/g, '') + '@s.whatsapp.net' : false;
+if (!who) return conn.sendTextWithMentions(m.chat, `⚠️ Uso incorrecto del comando.*\n\n*Ejemplo:* ${prefix + command} @0`);    
+const nuevoNumero = who;
+global.owner.push([nuevoNumero]);
+await m.reply('⚠️ *Nuevo número agregado con éxito a la lista de owners.*')}
+break;
+case 'delowner': {
+if (!isCreator) return reply(info.owner)
+const who = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text ? text.replace(/[^0-9]/g, '') + '@s.whatsapp.net' : false;
+const numeroAEliminar = who;
+const index = global.owner.findIndex(owner => owner[0] === numeroAEliminar);
+if (index !== -1) {
+global.owner.splice(index, 1);
+await m.reply('*[❗] El número fue eliminado con éxito de la lista de owners.*');
+} else {
+await m.reply('*[❗] El número ingresado no existe en la lista de owners.*');
+}}
+break; 
+		
   case 'block': case 'bloquear': {  
   if (!isCreator) return reply(info.owner)  
   reply(`*El usuario fue bloqueado del bot*`)  
