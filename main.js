@@ -412,6 +412,7 @@ switch (prefix && command) {
 
 case 'get': case 'fetch': {
   try {
+      if (!text) return m.reply('*🚩 Ingresa un enlace.*')
       if (!/^https?:\/\//.test(text)) {
         return m.reply('*🚩 Ingresa un enlace https://*');
       }
