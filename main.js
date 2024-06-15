@@ -1489,7 +1489,22 @@ break
   reply(m.chat, `*Adios fue un gusto estar aqui hasta pronto 👋*`)  
   await conn.groupLeave(m.chat)}  
   break  
-  
+
+case 'myip': {
+if (!isCreator) return conn.sendMessage(from, { text: info.owner }, { quoted: msg });      
+                var http = require('http')
+                http.get({
+                    'host': 'api.ipify.org',
+                    'port': 80,
+                    'path': '/'
+                }, function(resp) {
+                    resp.on('data', function(ip) {
+                        reply("🔎 Mi dirección IP pública es: " + ip)
+                    })
+                })
+            }
+        break  
+		
   case 'setppname': case 'nuevonombre': case 'newnombre': {  
   if (!m.isGroup) return reply(info.group)   
   if (!isBotAdmins) return reply(info.botAdmin)  
