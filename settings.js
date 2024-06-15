@@ -16,7 +16,11 @@ global.phoneNumber = ""
  ["584125778026", "Owner", true], 
  ["5492266613038"]
  ] 
-  
+
+global.mods = []
+global.premium = []  
+global.blockList = []  
+
  global.botname = "SHADOW-乃ㄖㄒ-爪ᗪ+" 
  global.wm = 'SHADOW-🅑︎🅞︎🅣︎+' 
  global.vs = '1.0.0' 
