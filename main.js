@@ -409,7 +409,33 @@ return conn.ev.emit('messages.upsert', { messages : [ emit ] ,  type : 'notify'}
 
   //ARRANCA LA DIVERSIÓN  
 switch (prefix && command) {  
-   
+
+case 'get': case 'fetch': {
+  try {
+      if (!/^https?:\/\//.test(text)) {
+        return m.reply('*🚩 Ingresa un enlace https://*');
+      }
+      const res = await fetch(text);
+      if (res.headers.get('content-length') > 100 * 1024 * 1024 * 1024) {
+        throw `Content-Length: ${res.headers.get('content-length')}`;
+      }
+      if (!/text|json/.test(res.headers.get('content-type'))) {
+        return;
+      }
+      let txt = await res.text();
+      try {
+        txt = format(JSON.parse(txt));
+      } catch (e) {
+        txt = txt + '';
+      } finally {
+        m.reply(txt.slice(0, 65536) + '');
+      }
+    } catch (error) {
+      m.reply('*🚩 :* ' + new Error(error).message);
+      console.log(new Error(error).message);
+    }
+}
+break;
 case 'test': {
 const test = generateWAMessageFromContent(from, { viewOnceMessage: { 
 message: { "messageContextInfo": {
