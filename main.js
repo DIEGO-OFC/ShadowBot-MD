@@ -507,7 +507,7 @@ case 'yts':
 
 case 'bratzmon': {
     
-    const { images } = require('../src/nsfw/onlyf/bratzmon.js');
+    const { images } = require('https://raw.githubusercontent.com/DIEGO-OFC/ShadowBot-MD/main/src/nsfw/onlyf/bratzmon.js');
     const randomImage = images[Math.floor(Math.random() * images.length)];
 
     const msg = '💜 *Bratzmon* 💜';
