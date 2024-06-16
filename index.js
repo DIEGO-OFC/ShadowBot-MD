@@ -514,7 +514,6 @@ sock.user.connect = true
 return !1;
 }*/
 }});
-
 const rainbowColors = ['red', 'yellow', 'green', 'blue', 'purple'];
 let index = 0;
   
