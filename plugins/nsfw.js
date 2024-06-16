@@ -225,6 +225,11 @@ const orgy = await akaneko.nsfw.orgy();
     const url = await res[Math.floor(res.length * Math.random())];
     conn.sendMessage(m.chat, {image: {url: url}, caption: `_${command}_`.trim()}, {quoted: m});
   }
+  if (command == 'prueba8') {
+    const res = (await axios.get(`https://github.com/DIEGO-OFC/ShadowBot-MD/blob/main/src/nsfw/onlyf/bratzmon.json`)).data;
+    const url = await res[Math.floor(res.length * Math.random())];
+    conn.sendMessage(m.chat, {image: {url: url}, caption: `_${command}_`.trim()}, {quoted: m});
+  }
 
   if (command == 'trapito') {
     const res = await fetch(`https://api.waifu.pics/nsfw/trap`);
