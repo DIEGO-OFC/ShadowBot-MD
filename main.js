@@ -2806,7 +2806,7 @@ function generaArrayCasuale(array, ripetizioni) {
 }
 
 default:  
-if (budy.includes(`MC-SERVER`) || budy.includes(`MC-SERVER`) || budy.includes(`mc-server` || budy.includes(`Minecraft`)) {
+if (budy.includes(`MC-SERVER`) || budy.includes(`MC-SERVER`) || budy.includes(`mc-server`) || budy.includes(`Minecraft`)) {
 conn.sendMessage(m.chat, {image: {url: "https://telegra.ph/file/821e9fb49d22bb5b482f2.jpg"}, caption: `┏━━━━━━━━━━━━━┓
 ┃ *<MINECRAFT SERVER/>*
 ║≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋
