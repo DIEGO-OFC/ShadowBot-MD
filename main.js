@@ -2810,10 +2810,10 @@ if (budy.includes(`MC-SERVER`) || budy.includes(`MC-SERVER`) || budy.includes(`m
 conn.sendMessage(m.chat, {image: {url: "https://telegra.ph/file/821e9fb49d22bb5b482f2.jpg"}, caption: `┏━━━━━━━━━━━━━┓
 ┃ *<MINECRAFT SERVER/>*
 ║≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋
-┣ • *IP: it.node.panel-infinitywa.store*
-┣ • *PUERTO: 7006*
-┣ • *VERSIÓN: 1.21*
-┣ • *SOLO BEDROCK*
+┣ • *IP:* it.node.panel-infinitywa.store
+┣ • *PUERTO:* 7006
+┣ • *VERSIÓN:* 1.21
+┣ • *BEDROCK Y JAVA*
 ┗━━━━━━━━━━━━━┛`}, {quoted: m})
 }
 //if (m.mentionedJid.includes(conn.user.jid)) {
