@@ -174,13 +174,12 @@ let tekateki = global.db.data.game.tekateki = []
   }} */  
   
   //autoread  
-/*if (!conn.autoread && m.message && prefix) {
-//await delay(1 * 1000) 
+if (!conn.autoread && m.message && prefix) {
 await conn.sendPresenceUpdate('composing', m.chat)
-conn.readMessages([m.key])}*/
+conn.readMessages([m.key])}
   
 //Antispam
-if (isCmd && antiSpam.isFiltered(from) && !m.isGroup && prefix) {
+/*if (isCmd && antiSpam.isFiltered(from) && !m.isGroup && prefix) {
 console.log(color('[ SPAM ]', 'red'), color('', 'yellow'), color(`${command} [${args.length}]`), 'from', color(pushname))
 return //conn.fakeReply(m.chat, `_Espere unos segundos antes de usar otro comando..._ ✓`, '0@s.whatsapp.net', 'Dejar spam puta')
 }
@@ -191,7 +190,7 @@ return //conn.fakeReply(m.chat, `_Espere unos segundos antes de usar otro comand
 }
 
 if (isCmd && !isCreator) antiSpam.addFilter(from)
-/*if (global.db.data.chats[m.chat].antispam && prefix) {
+if (global.db.data.chats[m.chat].antispam && prefix) {
 let user = global.db.data.users[m.sender]
 const date = global.db.data.users[m.sender].spam + 3000; //600000 
 if (new Date - global.db.data.users[m.sender].spam < 3000) return console.log(`[ SPAM ] ➢ ${command} [${args.length}]`)  
