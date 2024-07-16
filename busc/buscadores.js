@@ -181,7 +181,7 @@ conn.sendMessage(m.chat, { audio: { url: texttospeechurl }, contextInfo: { "exte
 
 async function ia(conn, m, text, quoted) {
 if (!text) return m.reply(`*ingresa un texto para hablar con chatgpt*`) 
-          let gpt = await fetch(`https://delirius-api-oficial.vercel.app/api/chatgpt?q=${text}`);
+          let gpt = await fetch(`https://deliriusapi-official.vercel.app/api/chatgpt?q=${text}`);
 let res = await gpt.json()
 await conn.sendMessage(m.chat, {image: { url: "https://telegra.ph/file/10e013d9ae4d9cdf5af14.jpg", }, caption: res.data, contextInfo: {
   mentionedJid: [m.sender],
