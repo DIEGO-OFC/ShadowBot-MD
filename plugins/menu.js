@@ -36,7 +36,7 @@ return `*╭━━❍SHADOW-𝐁𝐎𝐓-𝐌𝐃❍━━╮*
  *┃┃ ⋄ USUARIOS » ${Object.keys(global.db.data.users).length}*
  *┃┃ ⋄ MODO » ${conn.public ? 'publico' : 'privado'}*
  *┃╰━━━━━━━━━━━━━━━━╾•* 
- *╰━━━╼SHADOW-𝐁𝐎𝐓-𝐌𝐃╾━━━╯* 
+ *╰━━━╼FAKE YT-𝐁𝐎𝐓-𝐌𝐃╾━━━╯* 
 
  ▧ 「 *I N F O R M A C I O N* 」  
  │ ‣ ︎ _${prefix}grupos_ 
