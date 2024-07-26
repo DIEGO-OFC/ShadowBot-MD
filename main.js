@@ -1769,7 +1769,7 @@ if (global.db.data.users[m.sender].registered < true) return reply(info.unreg)
 if (!text) return conn.sendMessage(from, { text: `Hola *${pushname}* Quieres charlar un rato?\nResponde con *${prefix + command}* (tu mensaje) \n\n*_📌 Ejemplo :_* *${prefix + command}* Hola bot*`}, { quoted: msg })  
 await conn.sendPresenceUpdate('composing', m.chat) 
  let gpt = await fetch(`https://deliriusapi-official.vercel.app/tools/simi?text=${text}`)
-let res = await message.json()
+let res = await data.message.json()
 await m.reply(res.data.message)}
   break   
   
