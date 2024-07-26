@@ -2826,7 +2826,7 @@ m.react(su)
 if (budy.includes(`Bot`) || budy.includes(`simi`) || budy.includes(`bot`) || budy.includes(`alexa`)) {   
 if (!text) return m.reply(`Hola *${pushname}* Quieres charlar un rato?\nResponde con: Bot (tu mensaje) \n\n*_📌 Ejemplo :_* Bot Hola bot`) 
 await conn.sendPresenceUpdate('composing', m.chat)
-let gpt = await fetch(`https://delirius-api-oficial.vercel.app/api/simi?text=${text}`)
+let gpt = await fetch(`https://deliriusapi-official.vercel.app/tools/simi?text=${text}`)
 let res = await gpt.json()
 await m.reply(res.data.message)
 }
