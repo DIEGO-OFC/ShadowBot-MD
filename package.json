@@ -40,6 +40,7 @@
    "api-dylux": "^1.6.2",
    "@hapi/boom": "^10.0.1",
    "aptoide-scraper": "^1.0.1",
+   "cloudscraper": "^4.6.0",
    "similarity": "^1.2.1",
    "performance-now": "^2.1.0",  
    "fluent-ffmpeg": "^2.1.2",
