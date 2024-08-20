@@ -1782,7 +1782,7 @@ if (!text) return conn.sendMessage(from, { text: `Ejemplo: ${prefix + command} R
 await conn.sendPresenceUpdate('composing', m.chat) 
 let  {key} = await conn.sendMessage(m.chat, {image : { url: "https://telegra.ph/file/10e013d9ae4d9cdf5af14.jpg", }, caption: "𝔏𝔬𝔞𝔡𝔦𝔫𝔤...."}, fkontak);
 let rndid = m.sender.replace(/[^0-9]/g, '')
-let gpt = await fetch(`https://llama.guruapi.tech/user?username=${rndid}&text=${text}`);
+let gpt = await fetch(`https://gpt4.guruapi.tech/user?username=${rndid}&text=${text}`);
 let res = await gpt.json()
 let nigg = res.result;
 await conn.editmsgwithimg(key,nigg,"2")
